@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href='{{ get_url(path="favicon.svg") | safe }}'>
+    <link rel="stylesheet" href='{{ get_url(path="old-style.css") | safe }}'>
+    <meta charset="utf-8">
+    <meta name="description" content="Various experimental tools, toys and resources. Built for fun and educational purposes: have a play around!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://mbruges.com/images/banner-square.png" />
+    <meta property="og:image:width" content="315" />
+    <meta property="og:image:height" content="315" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://mbruges.com/experiments.html" />
+
+    <title>Experiments</title>
+
+</head>
+
+<body>
+    <nav>
+        <link rel="stylesheet" href='{{ get_url(path="nav.css") | safe }}'>
+        <div class="dropdown">
+            <a id="dropdown-icon">&#9776;</a>
+            <div class="dropdown-content">
+                <a href="/" style="font-weight:bolder">🏠 Home </a>
+                <a href="/experiments">🔬 Experiments</a>
+                <a href="/resources">📚 Learn</a>
+                <a href="/blog">📝 Blog</a>
+            </div>
+        </div>
+        <small id="website-name">
+        </small>
+        <a href="javascript:history.back()">↩ Back</a>
+    </nav>
+    <header>
+
+
+    <h1>Experiments</h1>
+    <h3>Some of the things I've made, which you might find useful.</h3>
+    <p>Bear in mind, they are <i>experiments</i>: they may not always work as intended. If you spot something that's notquite right or if you'd like to know more - you can <a href="/cdn-cgi/l/email-protection#6c04090000032c010e1e190b091f420f0301531f190e06090f185124090000034c0a1e03014c1804094c250218091e020918" target="_blank">drop me a line.</a>
+    </p>
+    <main>
+        <h2>📚 Education 🏫</h2>
+        <section id="Education">
+            <style>aside{
+            height:520px}</style>
+        <!--Word of the Week-->
+            <div id="wotd">
+            <aside>
+             <a href="/wotd.html"><img alt="New words daily" src="/images/notebook.svg" height="100" width="auto"></a>
+                <h3>Word of the Week</h3>
+                <sup>HTML</sup>
+                <p>A worksheet to guide students through a new word - complete with definitions, etymology, and activities</p>
+                <p>Built with the help of GPT-3.5, it's an easily printable HTML file, but can have occasional errors.</p>
+                <p><i>Check back weekly for a new word!</i></p>
+                <p><a href="/wotd.html"><b>See the new word</b></a></p>
+            </aside>
+            </div>
+
+            <!--Shakey-->
+            <div id="shakey">
+                <aside>
+                    <a href="/shakey.html"><img alt="shakey" src="/images/1F4D6.svg"
+                            height="100" width="auto"></a>
+                    <h3>Shakespeare by Line</h3>
+                    <sup>HTML</sup><br>
+                    <p>Generate a random line from Shakespeare's complete works, or get all the lines for any given character.</p>
+                    <p>Limited for now, but more functionality to follow...</p>
+                    <p><i>Built from a modified version of <a
+                                href="https://discuss.elastic.co/t/uploading-shakespeare-json-to-index-in-kibana/171554/2" target="_blank">Shakespeare.json</a>, which is still a little janky.</i></p>
+                    <p><a href="/shakey.html"><b>Open the page</b></a></p>
+                </aside>
+            </div>
+
+            <!--Worksheet Generator-->
+            <div id="worksheet">
+                <aside>
+                    <a href="/worksheetGenerator.html"><img alt="Time to make a worksheet" src="/images/1F4D1.svg" height="100" width="auto"></a>
+                    <h3>Worksheet Generator</h3>
+                    <sup>HTML</sup>
+                    <p>Harness the power of LLMs to create quick and beautiful worksheets.</p>
+                    <p>Pick a topic, set your parameters, and let the AI do the rest. Produces a printable worksheet with a range of tasks in seconds.</p>
+                    <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use
+                            it.</i></p>
+                    <p><a href="/worksheetGenerator.html"><b>Make a worksheet</b></a></p>
+                </aside>
+            </div>
+
+            <!--What Am I Doing Wrong-->
+            <div id="waidw">
+                <aside>
+                    <a href="/codefixer.html"><img alt="what am I doing wrong?" src="/images/add.svg" height="100" width="auto"></a>
+                    <h3>What Am I Doing Wrong?</h3>
+                    <sup>HTML</sup>
+                    <p>Code broken? Get some guidance, and learn in the process.</p>
+                    <p>This site takes code and offers advice on how to fix it: both from ChatGPT and Stack Overflow. Pedagogy is elucidated <a href="/blog.html#040523" target="_blank"> here</a>.</p>
+                    <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use
+                            it.</i></p>
+                    <p><a href="/codefixer.html"><b>Go to WAIDW</b></a></p>
+                </aside>
+            </div>
+            <!--Mr Bruges Asks-->
+            <div id="podcast">
+                <aside>
+                    <a href="https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171" target="_blank"><img
+                            alt="Lend me your ears" src="/images/podcast.svg" height="100" width="auto"></a>
+                    <h3>Mr Bruges Asks...</h3>
+                    <sup>AUDIO</sup>
+                    <p>Short episodes answering big questions.</p>
+                    <p>This is a brief collection of essay readings in podcast form; originally recorded to support A-Level Literature students during lockdown.</p>
+                    <p><i>More to follow, once I've found somewhere quiet to record.</i>
+                    </p>
+                    <p><a href="https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171" target="_blank"><b>Listen on Spotify &nearr;</b></a></p>
+                </aside>
+            </div>
+            <!--The Open Library-->
+            <div id="library">
+                <aside>
+                    <a href="https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link"
+                        target="_blank"><img alt="enter the library" src="/images/library.svg" height="100" width="auto"></a>
+                    <h3>The Open Library</h3>
+                    <sup>EPUB</sup>
+                    <p>Great books, out of copyright, in Kindle and eReader format</p>
+                    <p>Tracking down the right ePub files can be a pain. Here's my repository of classic texts for you to browse.</p>
+                    <p><i>Only possible thanks to <a href="https://www.gutenberg.org/donate/">Project Gutenberg</a>.</i></p>
+                    <p><a href="https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link"
+                            target="_blank"><b>Open the library &nearr;</b></a></p>
+                </aside>
+            </div>
+        </section>
+    <h2>🎭 Entertainment 🧌</h2>
+        <section id='Entertainment'>
+<!--Flambards Forever-->
+        <div id="flambards">
+            <aside>
+                <a href="/flambards.html"><img alt="true love stories never die" src="/images/biplane.svg" height="100" width="auto"></a>
+                <h3>Flambards Forever</h3>
+                <sup>HTML</sup>
+                <p>Infinite <a href="https://global.oup.com/education/content/children/series/flambards/?region=international" target="_blank">Flambards</a>, with GPT-3.5.</p>
+                <p>This site generates endless stories in the style of K. M. Peyton's series. Tweak the tragic, pastoral, and aeronautical elements. Also includes an illustration generator.</p>
+                <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i></p>
+                <p><a href="/flambards.html"><b>Generate Flambards</b></a></p>
+            </aside>
+        </div>
+
+        <!--Bard or Bot-->
+        <div id="bardOrBot">
+            <aside>
+                <a href="/bard-or-bot.html"><img alt="what am I doing wrong?" src="/images/1F916.svg" height="100" width="auto"></a>
+                <h3>Bard or Bot?</h3>
+                <sup>HTML</sup><br>
+                <i>'A Chatbot by any other name would sound as sweet.'</i>
+                <p>This silly little page challenges you to spot the AI-generated verses amongst the Shakepearean couplets.</p>
+                <p><i>AI verses from ChatGPT, real verses presented using Sam Dutton's <a href="https://github.com/samdutton/sonnet-search" target="_blank">SonnetSearch</a></i></p>
+                <p><a href="/bard-or-bot.html"><b>Play the game</b></a></p>
+            </aside>
+        </div>
+
+
+            <!--DnD generator-->
+            <div id="dnd">
+                <aside>
+                    <a href="/rpg/dnd.html" target="_blank"><img alt="welcome adventurer" src="/images/1F9CC.svg" height="100" width="auto"></a>
+                    <h3>D&D Character Generator</h3>
+                    <sup>HTML</sup>
+                    <p>Generate new adventurers with GPT.</p>
+                    <p>This little experiment creates playable characters for tabletop RPGs (Dungeon-based or otherwise) complete with backstories, hidden secrets and character portraits.</p>
+                    <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i>
+                    </p>
+                    <p><a href="/rpg/dnd.html"
+                            ><b>Make a character</b></a></p>
+                </aside>
+            </div>
+
+            <!--Quest generator-->
+            <div id="quest">
+                <aside>
+                    <a href="/rpg/quest-generator.html" target="_blank"><img alt="welcome adventurer" src="/images/1F37A.svg"
+                            height="100" width="auto"></a>
+                    <h3>Quest Generator</h3>
+                    <sup>HTML</sup>
+                    <p>Random questlines for your favourite RPG, courtesy of <a href="https://platform.openai.com/account/api-keys" target="_blank">Claude</a>.</p>
+                    <p>Take off your cloak, warm up by the fire, and hear the strange happenings of these parts. Listen to the rumours, then plot your next steps.</p>
+                    <p><i>Pairs nicely with the <a href="/rpg/dnd.html">D&D character generator.</a></i>
+                    </p>
+                    <p><a href="/rpg/quest-generator.html"><b>Ask the innkeeper</b></a></p>
+                </aside>
+            </div>
+            </section>
+
+                <h2>💻 Tools ⚙️</h2>
+            <section>
+                <!--Wet Bulb App-->
+                <div id="wetbulb">
+                    <aside>
+                        <a href="https://app.maxbruges.com/wetbulb"><img alt="wetbulb alert" src="/images/1F321.svg" height="100" width="auto"></a>
+                        <h3>Wet-Bulb Thermometer</h3>
+                        <sup>Flask</sup>
+                        <p>Find out the Wet-Bulb Temperature where you are.</p>
+                        <p>This app will tell you if the combination of heat and humidity will reach dangerous levels in your location, or any other city.</p>
+                        <p><i>This is my first foray into self-hosting a web app, so it may fall over! Learn more about Wet-Bulb Temperatures <a href='https://www.theguardian.com/science/2022/jul/31/why-you-need-to-worry-about-the-wet-bulb-temperature' target='_blank'>here.</a></i></p>
+                        <p><a href="https://app.maxbruges.com/wetbulb"><b>Visit the app</b></a></p>
+                    </aside>
+                </div>
+
+            <!--OpenAI Portal-->
+            <div id="openai">
+                <aside>
+                    <a href="/askGPT.html"><img alt="enter the library" src="/images/firmware.svg" height="100" width="auto"></a>
+                    <h3>OpenAI Portal</h3>
+                    <sup>HTML</sup>
+                    <p>A simple wrapper for GPT-3.5, built on pure JavaScript.</p>
+                    <p>It is a testbed for future GPT-powered projects, and currently offers no more functionality than the native OpenAI site.</p>
+                    <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i></p>
+                    <p><a href="/askGPT.html"><b>Access the portal</b></a></p>
+                </aside>
+            </div>
+
+
+            <!--Claude Portal-->
+            <div id="claude">
+                <aside>
+                    <a href="/claude.html"><img alt="" src="/images/ai.svg" height="100" width="auto"></a>
+                    <h3>Claude Portal</h3>
+                    <sup>HTML</sup>
+                    <p>Another pure JS wrapper, this time for Anthropic's <a href=https://console.anthropic.com/chat" target="_blank">Claude</a>  bot.</p>
+                    <p>This is a substantially more advanced interface, allowing users to upload large text files and discuss them with the LLM.</p>
+                    <p><i>You will need an <a href="https://console.anthropic.com/account/keys" target="_blank">API key</a> to use
+                            it.</i></p>
+                    <p><a href="/claude.html"><b>Access the portal</b></a></p>
+                </aside>
+            </div>
+
+            <!--Project Bloom-->
+            <div id="bloom">
+            <aside>
+                <a href="https://www.icloud.com/shortcuts/674d45a0800a4116b985611c89aee020" target="_blank"><img alt="and yes I said yes I will Yes" src="/images/recordingaudio.svg" height="100" width="auto"></a>
+                <h3>Project Bloom</h3>
+                <sup>iOS</sup>
+                <p>Turn a stream-of-consciousness into something intelligible.</p>
+                <p>This Shortcut for Mac uses GPT-3.5 to sanitise dictated input, generally to pretty good effect.</p>
+                <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i></p>
+                <p><a href="https://www.icloud.com/shortcuts/674d45a0800a4116b985611c89aee020"
+                        target="_blank"><b>Get from iCloud
+                            &nearr;</b></a></p>
+            </aside>
+            </div>
+            <!--Super Focus Mode-->
+            <div id="focus">
+            <aside>
+                <a href="https://www.icloud.com/shortcuts/fb2e35859b4a45c9ad92fe393edbbec5" target="_blank"><img alt="All focussed their attention at the scene exhibited" src="/images/reader.svg" height="100" width="auto"></a>
+                <h3>Super Focus Mode</h3>
+                <sup>iOS</sup>
+                <p>Block distracting apps, not just notifications</p>
+                <p>This Shortcut tries to make the built-in 'Focus' mode a little more effective. Once activated, it  blocks any apps you deem to be distracting.</p>
+                <p><i>A bit janky, but mostly functional.</i>
+                </p>
+                <p><a href="https://www.icloud.com/shortcuts/fb2e35859b4a45c9ad92fe393edbbec5"
+                        target="_blank"><b>Get from iCloud
+                            &nearr;</b></a></p>
+            </aside>
+            </div>
+
+            <!--Code Playground-->
+            <div id="code">
+            <aside>
+                <a href="./codeplayground.html" ><img
+                    alt="Beep boop" src="/images/bugs.svg" height="100" width="auto"></a>
+                <h3>Code Playground</h3>
+                    <sup>HTML</sup>
+                    <p>The best way to learn is by playing, and this is my sandpit.</p>
+                    <p>Having started learning some <i>very rudimentary</i> Javascript, I'm attempting to apply that knowledge in an HTML capacity.</p>
+                    <p><i>This is a living exercise book (to continue mixing metaphors).</i>
+                    </p>
+                    <p><a href="./codeplayground.html"><b>Open the playground</b></a></p>
+
+            </aside>
+            </div>
+        <!--Slideshow-->
+            <div id="slides">
+            <aside>
+                <a href="/lessonarchive/slideshowtemplate.html">
+                    <img alt="Slide away" src="/images/presenting.svg" height="100" width="auto"></a>
+                    <h3>On-Site Slideshow</h3>
+                    <sup>HTML</sup>
+                    <p>A very simple platform to display slides.</p>
+                    <p>This is resolutely a work-in-progress. Hopefully, I'll be able to use it to host slides to live in the <a href="/resources.html">resources</a> section of the site at some point.</p>
+                    <p>Until then, it's just a pretty demo.</p>
+                    <p><a href="/lessonarchive/slideshowtemplate.html" target="_self"><b>Access  demo</b></a></p>
+            </aside>
+            </section>
+            </div>
+        <br>
+
+    </main>
+    </header>
+
+    <footer>
+        <p>© 2023 - <i> Made by <a href="/about.html" target="_blank">me
+                </a> and Agatha </i>🐈‍⬛</p>
+        <p><i>Found this interesting? <a href="/cdn-cgi/l/email-protection#422a272e2e2d022f2030372527316c212d2f7d313720282721367f0a272e2e2d6224302d2f62362a27620b2c3627302c2736">Drop me a line</a>
+                or <a href='https://ko-fi.com/L4L6JR137' target='_blank' aria-label="Ko-Fi tip link">
+                    send coffee ☕️</i>
+            </a>
+        </p>
+    </footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8e8b33389f20dc84","version":"2024.10.5","r":1,"token":"f1febc4f6b14433d97061ccc3d75dc8f","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+</body>
+</html>

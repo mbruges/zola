@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block content %}
+{% if page.extra.icon %}
+{% set icon = page.extra.icon %}
+{% else %}
+{% set icon = "" %}
+{% endif %}
+
+<title>MB Blog // {{ page.title }} {{ icon }}</title>
+
+<h1 class="title">{{ icon }} {{ page.title }}</h1>
+
+<div class="subheading">
+    <p class="subtitle">{{ page.description }}</p>
+    <p hidden id="date">{{ page.date }}</p>
+</div>
+<script>
+    var pub = document.getElementById("date").innerText;
+    console.log(pub);
+    var dateString = pub;
+    var options = {
+        //weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    };
+    pub = new Date(dateString).toLocaleDateString("en-GB", options);
+    document.getElementById("website-name").innerHTML = pub;
+
+    window.onload = () => {
+      var images = document.getElementsByTagName("img");
+      for (let item of images) {
+        item.title = item.alt;
+        //OPTION to insert a caption automatically.
+        // var caption = document.createElement("p");
+        // caption.className = "caption";
+        // caption.innerText = item.alt;
+        // item.parentNode.insertBefore(caption, item.nextSibling);
+      }
+    }
+
+</script>
+{{ page.content | safe }} {% endblock content %}

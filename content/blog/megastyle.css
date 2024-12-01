@@ -1,0 +1,1382 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-hue: 250;
+    --white: #2e3f53;
+    --white-light: #cfe0f4;
+    --white-dark: #6c6a6a;
+    --code: #52576f;
+    --pre: #e1e7ee;
+    --bg-color: #f4f4f4;
+    --text-color: #24292f;
+    --link-color: #005cc5;
+    --visited: #6f42c1;
+    --blockquote: #005cc5;
+    --blockquote-bg: #cfe0f4;
+    --hover: #c11e7a;
+    --grey: #ccc;
+    --grey-light: #6a708e;
+    --shadow: #e8e8e8;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-hue: 250;
+    --white: #f2f2f2;
+    --white-light: #f2f2f2;
+    --white-dark: #e8e8e8;
+    --code: #414558;
+    --pre: #252525;
+    --bg-color: #282a36;
+    --text-color: #f2f2f2;
+    --link-color: #8be9fd;
+    --visited: #bd93f9;
+    --blockquote: #bd93f9;
+    --blockquote-bg: #353548;
+    --hover: #ff80bf;
+    --grey: #414558;
+    --grey-light: #6a708e;
+    --shadow: #252525;
+  }
+}
+
+html {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
+}
+
+code,
+kbd,
+samp {
+  border: 2px solid var(--code);
+}
+
+pre > code {
+  background-color: inherit;
+  padding: 0;
+  border: none;
+}
+
+code {
+  font-size: 90%;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
+}
+
+pre {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  background-color: var(--pre) !important;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0.5rem 0 0 0;
+  border: 0;
+  font-style: normal;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+path {
+  fill: var(--text-color);
+  stroke: var(--text-color);
+}
+
+hr {
+  color: inherit;
+  border: 0;
+  margin: 0;
+  height: 2px;
+  background: var(--grey);
+  margin: 1rem auto;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover,
+a:visited:hover {
+  text-decoration: underline;
+  color: var(--hover);
+}
+
+a:visited {
+  color: var(--visited);
+}
+
+a.link-grey {
+  text-decoration: underline;
+  color: var(--white);
+}
+
+a.link-grey:visited {
+  color: var(--white);
+}
+
+section {
+  margin-bottom: 1.4rem;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+header {
+  margin: 1rem auto;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+article {
+  overflow-wrap: break-word;
+}
+
+blockquote {
+  border-left: 5px solid var(--blockquote);
+  background-color: var(--blockquote-bg);
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+}
+
+blockquote > p {
+  margin: 0;
+}
+
+blockquote code {
+  border: 1px solid var(--blockquote);
+}
+
+ul,
+ol {
+  padding: 0 0 0 1rem;
+  list-style-position: outside;
+}
+
+ul[style*="list-style-type: none;"] {
+  padding: 0;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+li > pre {
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+dd:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+figure {
+  margin: 0;
+}
+
+.container {
+  max-width: 50em;
+  width: 100%;
+}
+
+.container-sm {
+  max-width: 40em;
+  width: 100%;
+}
+
+.container-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
+}
+
+.link-alt-adj,
+.link-alt-adj:visited,
+.link-alt-adj:visited:hover,
+.link-alt-adj:hover {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.link-alt-adj:visited:hover,
+.link-alt-adj:hover {
+  text-decoration: underline;
+}
+
+.link-alt-hover,
+.link-alt-hover:visited,
+.link-alt-hover:visited:hover,
+.link-alt-hover:hover {
+  color: var(--hover);
+  text-decoration: none;
+}
+
+.link-alt-hover:visited:hover,
+.link-alt-hover:hover {
+  text-decoration: underline;
+}
+
+.link-alt,
+.link-alt:visited,
+.link-alt:visited:hover,
+.link-alt:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.link-alt:visited:hover,
+.link-alt:hover {
+  text-decoration: underline;
+}
+
+.text-3xl {
+  font-size: 2.5rem;
+}
+
+.text-2xl {
+  font-size: 1.9rem;
+  line-height: 1.15;
+}
+
+.text-xl {
+  font-size: 1.55rem;
+  line-height: 1.15;
+}
+
+.text-lg {
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.text-md {
+  font-size: 1.15rem;
+  line-height: 1.15;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-xs {
+  font-size: 0.775rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.border {
+  border: 2px solid var(--grey-light);
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-underline {
+  border-bottom: 3px solid var(--text-color);
+  padding-bottom: 3px;
+}
+
+.text-hdr {
+  color: var(--hover);
+}
+
+.text-underline-hdr {
+  border-bottom: 3px solid var(--hover);
+  padding-bottom: 3px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.max-w-half {
+  max-width: 50%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.mt-8 {
+  margin-top: 4rem;
+}
+
+.mb {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.mb-8 {
+  margin-bottom: 4rem;
+}
+
+.mb-16 {
+  margin-bottom: 8rem;
+}
+
+.mr {
+  margin-right: 0.5rem;
+}
+
+.ml-sm {
+  margin-left: 0.25rem;
+}
+
+.ml {
+  margin-left: 0.5rem;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.my {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-8 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.mx {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.m-1 {
+  margin: 0.5rem;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-4 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-8 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap: 1rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.group-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.group-h {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.items-end {
+  align-items: end;
+}
+
+.items-start {
+  align-items: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.font-grey-light {
+  color: var(--grey-light);
+}
+
+.hidden {
+  display: none;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* ==== MARKDOWN ==== */
+
+.md h1,
+.md h2,
+.md h3,
+.md h4 {
+  padding: 0;
+  margin: 1.5rem 0 0.9rem 0;
+  font-weight: bold;
+}
+
+.md h1 a,
+.md h2 a,
+.md h3 a,
+.md h4 a {
+  color: var(--grey-light);
+  text-decoration: none;
+}
+
+.md h1 {
+  font-size: 1.6rem;
+  line-height: 1.15;
+  border-bottom: 2px solid var(--grey);
+  padding-bottom: 0.7rem;
+}
+
+.md h2 {
+  font-size: 1.3rem;
+  line-height: 1.15;
+  color: var(--white-dark);
+}
+
+.md h3 {
+  font-size: 1.2rem;
+  color: var(--white-dark);
+}
+
+.md h4 {
+  font-size: 1rem;
+  color: var(--white-dark);
+}
+
+/* ==== HELPERS ==== */
+
+.logo-header {
+  line-height: 1;
+  display: inline-block;
+  background-color: #FF79C6;
+  background-image: linear-gradient(to right, #FF5555, #FF79C6, #F8F859);
+  color: transparent;
+  background-clip: text;
+  border: 3px solid #FF79C6;
+  padding: 8px 10px 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 0px 0px var(--shadow);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.btn {
+  border: 2px solid var(--link-color);
+  color: var(--link-color);
+  padding: 0.4rem 1rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-link,
+.btn-link:visited {
+  border: 2px solid var(--link-color);
+  color: var(--link-color);
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-link:visited:hover,
+.btn-link:hover {
+  border: 2px solid var(--hover);
+}
+
+.btn-link-alt,
+.btn-link-alt:visited {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.box {
+  border: 2px solid var(--grey-light);
+  padding: 0.5rem 0.75rem;
+}
+
+.box-sm {
+  border: 2px solid var(--grey-light);
+  padding: 0.15rem 0.35rem;
+}
+
+.box-alert {
+  border: 2px solid var(--hover);
+  padding: 0.5rem 0.75rem;
+}
+
+.box-sm-alert {
+  border: 2px solid var(--hover);
+  padding: 0.15rem 0.35rem;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}
+
+.pill {
+  border: 1px solid var(--link-color);
+  color: var(--link-color);
+}
+
+.pill-alert {
+  border: 1px solid var(--hover);
+  color: var(--hover);
+}
+
+.pill-info {
+  border: 1px solid var(--visited);
+  color: var(--visited);
+}
+
+@media only screen and (max-width: 40em) {
+  body {
+    padding: 0 1rem;
+  }
+
+  header {
+    margin: 0;
+  }
+
+  .flex-collapse {
+    flex-direction: column;
+  }
+}
+
+/* was: main.css */
+
+body {
+  max-width: var(--body-max-width, 720px);
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+.post-date {
+  width: 110px;
+}
+
+.layout-aside {
+  max-width: 50rem;
+}
+
+.layout-aside aside {
+  width: 200px;
+}
+
+.layout-aside img {
+  border-radius: 5px;
+}
+
+#readme {
+  display: none;
+}
+
+.albums {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 200px);
+  grid-row-gap: 0.5rem;
+  grid-column-gap: 1rem;
+}
+
+.thumbnail-container {
+  position: relative;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  min-height: 200px;
+}
+
+.thumbnail {
+  z-index: 1;
+  object-fit: contain;
+  max-width: 200px;
+  height: auto;
+}
+
+#toc {
+  margin: 0;
+}
+
+.thumbnail-link {
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .layout-aside main {
+    flex-direction: column;
+  }
+
+  aside {
+    display: none;
+  }
+
+  #readme {
+    display: block;
+  }
+
+  .albums {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+}
+
+
+
+/* _styles.css */
+
+/* A lot of these settings have been found by trial and error. Some defaults are marked !important,
+whilst others won't render from MD at all (most inline HTML is stripped away on conversion). The basics
+are all here - a,p,h,pre etc. - but tags like <caption> don't survive the conversion.
+
+The MD->HTML renderer/parser used by pico.sh is GOLDMARK. It has a lot in common with Jekyll, so if in doubt
+one can always try to use Jekyll docs to crack a problem. */
+
+
+:root {
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-size: 14pt;
+    --font-size-small:0.8em;
+    --border-radius:10px;
+    list-style-type: "✒ ";
+    /*--font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, "Ubuntu", Cantarell, "Helvetica Neue", sans-serif;*/
+}
+
+@media (prefers-color-scheme: light){
+:root {
+    --color-bg: #fffceb;
+    --color-text: #000;
+    --color-text-secondary: #626262;
+    --color-accent: #043898;
+    
+}}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+    --color-bg:#16243d; 
+    --color-text:#eef5ff;
+    --color-text-secondary: #8e8e8e;
+    --color-accent: #8cb2f9;
+    }
+}
+
+@media screen and (max-width:650px) {
+    :root{
+    --font-size:12pt;
+}
+}
+
+/* implementing custom background and font (set at :root) */
+html, body, #post, #blog{
+    height: 100%;
+    background: var(--color-bg);
+    font-size: var(--font-size);
+    color: var(--color-text);
+    font-family: var(--font-family);
+ }
+
+
+ h1, h2, h3 {
+    color: var(--color-text) !important;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ /* bumping up the font size on the landing page*/
+#blog{
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+body#blog{
+  max-width:850px;
+}
+/*centering the list of blogs a little more*/
+#blog main{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*adjusting the <time> marker on the blog list*/
+#blog time {
+    min-width: 9rem;
+}
+#blog time::after{
+    content: " ☛ ";
+}
+
+#blog article:hover {
+  filter:brightness(130%);
+  background-color:var(--color-bg;)
+}
+/* Hiding the Pico.sh footer and file title */
+footer {
+    font-size: 1px;
+    max-height: 1px;
+    overflow-x: hidden;
+}
+#post header h1{
+    font-size: 1px;
+    max-height: 1px;
+    overflow-x: hidden;
+    visibility: hidden;
+}
+
+/* tweaking link style */
+a {
+    color:var(--color-accent);
+    font-weight: bold;
+    text-decoration: underline dotted;
+}
+
+/* tweaking codeblock style */
+pre {
+    border:3px solid black;
+    font-size: 0.9em;
+    border-radius: var(--border-radius);
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+ }
+
+ /* custom footer*/
+#post-footer {
+    display:block; 
+    margin-left:auto; 
+    margin-right:auto;
+    text-align: center;
+    font-size:var(--font-size-small);
+    color: var(--color-text-secondary) !important;
+    font-family: monospace;
+    text-decoration: none !important;
+}
+
+#post-footer a {
+    text-decoration: none !important;
+    text-decoration-line: none;
+}
+
+/* minimising the # by the headings */
+.anchor {
+    font-size: 0.7em;
+    font-weight: 300;
+    margin-left: -0.2em;
+    opacity: 0.9;
+}
+
+.anchor:hover {
+	filter:brightness(150%) !important;
+}
+
+h1 .anchor{
+  display:none;
+}
+/* auto scale images so they don't take up more than a third of the page.
+Also adding a light border */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height:16em;
+    border-radius: var(--border-radius);
+    border: 3px solid var(--color-text);
+}
+
+/* This clever trick catches the 'caption' under images - formatted in markdown as single emphasis text immediately under the image link. (thank you, random post on StackExchange!) */
+article img+em {
+    max-width: 85%;
+    width: fit-content;
+	display: block;
+    margin-top: 3px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	font-size: 0.8em;
+	font-style: italic;
+    text-align: center;
+    opacity: 0.75;
+}
+
+/* Subtitle: automatically selects the first <p> after the title.*/
+article h1+p:has(em) {
+	text-align:center;
+  font-size:1rem;
+	font-family:monospace;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	opacity:0.9;
+	margin-top:-0.5em;
+  margin-bottom:1em;
+}
+blockquote {
+    border-left: 6px solid var(--color-text);
+    font-size: 0.9em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* Adjusting the header of the landing page */
+#blog nav, #blog .text-lg, nav a {
+    font-size: 1em !important;
+    margin:4px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/*Hiding the autogenerated Description text from article pages*/
+
+blockquote.font-italic{
+  display:none !important;
+  max-height:0px;
+}
+
+/*Specifically tweaking the middle link of the link bar (i.e. the cat)*/
+nav .text-lg:nth-child(2) {
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+nav #text{
+    color: var(--color-bg);
+    size: 1px;
+}
+
+.group {
+  gap:1em;
+}
+
+
+
+#post header p, #post .text-lg{
+    font-size: var(--font-size-small) !important;
+    font-family: monospace;
+    margin:4px;
+    font-weight: 500;
+}
+
+/* Adjusting the date tag at the top of the page */
+/* FYI: to manually set the pubdate of a blogpost, add it to the front matter as date:yyyy-mm-dd:
+---
+date:2001-12-25
+draft: true
+---
+and if you set the date in the future... it won't appear on the blog landing page! very clever.
+https://pico.sh/prose
+*/
+#post header p {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    color: var(--color-text-secondary);
+}
+
+#post header p a {
+    font-weight: 600;
+    text-decoration: none !important;
+}
+
+#post h1 {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+	text-align:center;
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+/*h1 .anchor {
+    font-size: 1px;
+    color: var(--color-bg) !important;
+    font-weight: 100;
+    vertical-align: middle;
+    margin-left: -1px;
+}*/
+
+/* attempting to add GFM checkboxes. 
+A strike through in a list will automatically make it a check list!
+*/
+.tick li {
+    list-style-type: "☐ ";
+}
+
+.tick li:has(del), .tick li:has(s) {
+    list-style-type: "☑ ";
+}
+
+li del, li s {
+    opacity: 0.8;
+}
+
+ul:has(li > del) {
+    list-style-type: "☐ " !important;
+} 
+
+li:has(del)::marker, li:has(s)::marker {
+    content: "☑ ";
+}
+
+li del::marker, li s::marker {
+   content: "☑ " !important;
+}
+
+kbd, a > code, .dark-button  {
+    font-size:0.9em;
+    line-height:2em;
+    box-shadow: 0 7px 0 2px rgba(16, 16, 16, 0.959);
+    padding-left: 1em;
+    padding-right:1em;
+    margin: 0.2em;
+    font-weight: bold;
+    max-width: fit-content;
+    border:none;
+    border-radius: 6.5px;
+    color: whitesmoke !important;
+    display: inline-block;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color: rgb(47, 47, 47);
+    text-decoration: none !important;
+    border: 1px solid rgb(44, 44, 44);
+}
+
+/* click effect */
+a:focus > code {
+    box-shadow: 0 1px 0 2px rgba(126, 126, 126, 0.702);
+  transform: translateY(6px);}
+
+  
+blockquote, pre:has(code.language-quote)  {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    width: fit-content;
+    max-width:85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0.4em;
+    border: 3px solid black;
+    box-shadow: 8px 7px 7px rgba(0, 0, 0, 0.552);
+    background-color: rgb(255, 247, 236);
+    border-radius: 0px;
+}
+
+.about header p code, .about header p time {
+  display:none;
+}
+
+p code {
+    background: #282c34d2;
+    border-radius: 3px;
+    padding: 0.1em;
+    color:#fff;
+    font-family:monospace;
+    font-size: 0.9rem;
+    white-space:nowrap;
+}
+
+a code {
+    color:inherit;
+    text-decoration: underline solid 3pt;
+}
+/* CAPTION for QUOTE
+
+By adding a nested quote, a small caption can be positioned at the bottom of the text, for attribution */
+
+blockquote blockquote {
+    padding:0px;
+    border: none;
+    font-style: italic;
+    box-shadow: none;
+    font-size: 0.7em;
+    text-align: right;
+    position: relative;
+    display: flex;
+    margin-right: 1px;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+    padding-bottom: -0px;
+    color: rgba(0, 0, 0, 0.705);
+    height: fit-content;
+    background:transparent;
+}
+
+
+blockquote blockquote p::before {
+    content: "~";
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.2em;
+}
+
+blockquote p {
+	margin:0.2em;
+}
+
+
+/* Attempt at github-flavoured callout boxes*/
+blockquote:has(a[href^="caution"]), blockquote:has(a[href^="challenge"]){
+    font-family: var(--font-family);
+    background-color:rgb(252, 225, 225);
+    color:black;
+    border: none;
+    border-left: 10px solid rgb(166, 0, 0);
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+
+blockquote:has(a[href^="caution"])::before{
+    content: "! Caution";
+    color: rgb(166, 0, 0);
+    font-weight:bold;
+}
+blockquote:has(a[href^="challenge"]){ color: rgb(140, 0, 0); box-shadow: none;}
+blockquote:has(a[href^="challenge"]) p::before{
+    content: "CHALLENGE: ";
+    font-weight:bold;
+}
+
+
+blockquote:has(a[href^="warning"]){
+    font-family: var(--font-family);
+    background-color:rgb(255, 252, 220);
+    color:black;
+    border: none;
+    border-left: 10px solid rgb(207, 173, 0);
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+blockquote:has(a[href^="warning"])::before{
+    content: "⚠ Warning";
+    color: rgb(207, 173, 0);
+    font-weight:bold;
+}
+
+
+blockquote:has(a[href^="note"]){
+    font-family: var(--font-family);
+    background-color:rgb(208, 238, 255);;
+    color:black;
+    border: none;
+    border-left: 10px solid rgb(0, 116, 178);;
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+blockquote:has(a[href^="note"])::before{
+    content: "ℹ Note";
+    color: rgb(0, 116, 178);
+    font-weight:bold;
+}
+
+
+blockquote:has(a[href^="important"]),blockquote:has(a[href^="think"]){
+    font-family: var(--font-family);
+    background-color:rgb(246, 216, 255);
+    color:black;
+    border: none;
+    border-left: 10px solid rgb(119, 0, 152);
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+blockquote:has(a[href^="important"])::before{
+    content: "☛ Important";
+    color: rgb(119, 0, 152);
+    font-weight:bold;
+}
+
+blockquote:has(a[href^="think"])::before{
+    content: "? Think";
+    color: rgb(119, 0, 152);
+    font-weight:bold;
+}
+
+blockquote:has(a[href^="tip"]){
+    font-family: var(--font-family);
+    background-color:rgb(225, 255, 233);
+    color:black;
+    border: none;
+    border-left: 10px solid rgb(0, 130, 35);
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+blockquote:has(a[href^="tip"])::before{
+    content: "✔︎ Tip";
+    color: rgb(0, 130, 35);
+    font-weight:bold;
+}
+
+blockquote:has(a[href^="task"]){
+    font-family: var(--font-family);
+    background-color: #c3dbf8;
+    color: #183150;
+    border: none;
+    border-left: 10px solid #183150;
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+blockquote:has(a[href^="task"]) p::before{
+    content: "TASK: ";
+    font-weight:bold;
+}
+
+a[href^="task"], a[href^="challenge"], a[href^="tip"],a[href^="important"],  a[href^="warning"],a[href^="note"]{
+  display:none;
+  max-height:0px;
+}
+
+
+ blockquote:has(a[href$="aside"]) {
+    width: 25%;
+    padding: 0.5em !important;
+    margin: 1em !important;
+    float: right;
+}
+
+img[alt$="aside"]{
+	width:25%;
+	float:right;
+}

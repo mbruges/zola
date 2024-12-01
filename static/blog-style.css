@@ -108,6 +108,17 @@ textarea {
     font-size: 1.1em;
     text-decoration: none !important;
 }
+.zola-anchor {
+    text-decoration: none !important;
+    opacity: 0.5;
+    font-size: 0.8em;
+    padding-left: 0.5em;
+    visibility: hidden; /* Initially hidden */
+}
+
+h2:hover .zola-anchor {
+    visibility: visible; /* Visible when h2 is hovered */
+}
 
 img {
     max-height: 40vh;
@@ -360,19 +371,24 @@ pre:has(code[class*="language-"]) {
 }
 
 pre:has(code.language-markdown)::before {
-    content: "🔴 🟡 🟢                    #️⃣ markdown.md";
+    content: "🔴 🟡 🟢             #️⃣ markdown.md";
 }
 
 pre:has(code.language-python)::before {
-    content: "🔴 🟡 🟢                     🐍 app.py";
+    content: "🔴 🟡 🟢               🐍 app.py";
 }
 
 pre:has(code.language-html)::before {
-    content: "🔴 🟡 🟢                      🌐 page.html";
+    content: "🔴 🟡 🟢               🌐 page.html";
 }
 
 pre:has(code.language-go)::before {
-    content: "🔴 🟡 🟢                       ⚙️ main.go";
+    content: "🔴 🟡 🟢                ⚙️ main.go";
+}
+
+
+pre:has(code.language-bash)::before {
+    content: "🔴 🟡 🟢                ⚙️ bash.sh";
 }
 
 .language-quote {

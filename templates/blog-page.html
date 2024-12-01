@@ -58,14 +58,18 @@
             {% set icon = "📝" %}
             {% endif %}
       <a class="previous" href="{{ page.lower.permalink }}"><== {{ icon }} {{ page.lower.title }}</a>
-    {% endif %}
+      {% else %}
+      <a class="previous" style="visibility:hidden;" href="/">No more stories for now.</a>
+     {% endif %}
     {% if page.higher %}
-    {% if page.higher.extra.icon %}
-    {% set icon = page.higher.extra.icon %}
-    {% else %}
-    {% set icon = "📝" %}
-    {% endif %}
+        {% if page.higher.extra.icon %}
+        {% set icon = page.higher.extra.icon %}
+        {% else %}
+        {% set icon = "📝" %}
+        {% endif %}
     <a class="next" href="{{ page.higher.permalink }}">{{ icon }} {{ page.higher.title }} ==></a>
+    {% else %}
+     <a class="next" style="visibility:hidden;" href="/">No more stories for now.</a>
     {% endif %}
   </div>
   <br>

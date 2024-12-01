@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+{% set page = get_page(path="about.md") %}
+
+{% if page.extra.icon %}
+{% set icon = page.extra.icon %}
+{% else %}
+{% set icon = "" %}
+{% endif %}
+
+<title>MB // About me {{ icon }}</title>
+
+<h1 class="title">It's nice to meet you</h1>
+
+<div class="subheading">
+    <!-- <p class="subtitle">It's nice to meet you.</p> -->
+    <p hidden id="date"> </p>
+</div>
+{{ page.content | safe }}
+{% endblock content %}

@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+
+{% extends "base.html" %}
+{% block content %}
 
 
 <title>MB // Blog</title>
@@ -51,31 +53,15 @@
         text-align: center;
     }
 
-    .description {
-        font-size: 0.9em;
+    .description,.blurb {
+        font-size: 0.8em;
     }
 </style>
-<script>
-    function convertDate(element) {
-        const dateStr = element.textContent.trim();
-        const date = new Date(dateStr);
-        const options = { day: "2-digit", month: "short", year: "2-digit" };
-        const formattedDate = date.toLocaleDateString("en-GB", options);
-        element.textContent = formattedDate;
-    }
-    document.addEventListener("DOMContentLoaded", function () {
-        const dateElements = document.querySelectorAll(".date");
-        dateElements.forEach((element) => {
-            console.log("loaded date");
-            convertDate(element);
-        });
-    });
-</script>
 <h1 class="title">The Blog</h1>
 <p class="subheading">
     Thoughts on technology, education and what happens when they collide.
 </p>
-<ul>
+<ul style="padding-left: 0.1em;padding-right: 0.1em;">
     {% for page in section.pages %} {% if not page.draft %}
 
     {% if page.extra.icon %}
@@ -85,15 +71,24 @@
     {% set icon = section.extra.icon %}
     {% endif %}
 
+
+    {% if page.description %}
+        {% set description = page.description %}
+        {% set blurb = page.content | striptags | truncate(length=80)  %}
+    {% else %}
+        {% set description = ""  %}
+        {% set blurb = page.content | striptags | truncate(length=150)  %}
+    {% endif %}
+
     <div
         class="blog-card"
         onclick="location.href='{{ page.permalink | safe }}';"
     >
         <p>
             <!-- &#x2712; -->
-            <span class="date">{{ page.date }} </span>
+            <span class="date">{{ page.date | date(format="%-d %b %y", locale="en_GB") }}</span>
             <span class="title">{{ icon }}&nbsp;&nbsp;{{ page.title }}</span><br />
-            <span class="description"> {{ page.description }}</span>
+            <span class="description"> <b>{{ description }}</b> {{ blurb }}</span>
         </p>
     </div>
     <hr class="card-hr" />

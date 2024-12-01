@@ -1,5 +1,5 @@
 /*The New Textbook stylesheet*/
-:root {
+:root, .light-mode {
     --b: #f3f8ff;
     --t: #161b2b;
     --a: #51518a;
@@ -20,7 +20,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root, .dark-mode {
         --t: #f1f7ff;
         --b: #313131;
         /*--b: #161b2b;
@@ -69,13 +69,9 @@ textarea {
 }
 
 .lightswitch {
-    position: fixed;
-    display: block;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: transparent;
-    opacity: 50%;
+    padding-left: 0.5em;
+    opacity:0.9em;
+    cursor: pointer;
 }
 
 .lightswitch:hover {
@@ -83,17 +79,21 @@ textarea {
     filter: brightness(100%) !important;
 }
 
-aside,
-blockquote:has(a[href*="aside"]), img[alt*="aside"] {
-    width: 25%;
-    padding: 0.5em !important;
-    margin: 1em !important;
-    float: right;
-}
-aside > p {
-    border: 2pt dashed var(--t) !important;
-    background-color: rgba(0, 0, 0, 0.085);
-    padding: 0.5em !important;
+@media (min-width: 550px) {
+    aside,
+    blockquote:has(a[href*="aside"]),
+    img[alt*="aside"] {
+        width: 25%;
+        padding: 0.5em !important;
+        margin: 1em !important;
+        float: right;
+        margin-right: -0.2em !important;
+    }
+    aside > p {
+        border: 2pt dashed var(--t) !important;
+        background-color: rgba(0, 0, 0, 0.085);
+        padding: 0.5em !important;
+    }
 }
 
 .footnotes-list {

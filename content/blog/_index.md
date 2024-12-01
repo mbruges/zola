@@ -5,5 +5,5 @@ template = "blog-index.html"
 page_template = "blog-page.html"
 
 [extra]
-icon = "📝"
+icon = "📃"
 +++

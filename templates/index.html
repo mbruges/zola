@@ -182,7 +182,7 @@
             const overlay = document.querySelector(".overlay");
 
             overlay.addEventListener("click", () => {
-                window.open(iframe.src, "_blank"); // Opens the iframe source in a new tab
+                window.open(iframe.src, "_blank");
             });
             var subURL = "wss://socket.maxbruges.com/ws";
             function checkLiveLesson(url) {
@@ -215,7 +215,7 @@
         </script>
 
         <footer>
-            <p>MB 🐈‍⬛ 2024</p>
+            {{ config.extra.footer }}
         </footer>
     </body>
 </html>

@@ -2,6 +2,9 @@
 title: 📻 Turning radio into podcasts
 author: Max Bruges
 date: 2024-09-28
+
+extra:
+  icon: "📻"
 ---
 
 # Making a private radio podcast for fun and (definitely no) profit
@@ -41,7 +44,7 @@ We pipe our stream in to `FFMPEG`, specify an output file, and it'll record away
 $ ffmpeg -i https://a.bbc.stream/live/radio4.m3u8 6-oclock-news.mp3
 
 Opening 'http://a.bbc.stream/live/radio4.m3u8' for reading
-size=     256kB time=00:00:25.64 bitrate=  81.8kbits/s speed=1.99x  
+size=     256kB time=00:00:25.64 bitrate=  81.8kbits/s speed=1.99x
 ```
 
 Great! But I don't particularly want an endless MP3 file of Radio 4, or I may accidentally listen to *Moneybox*.
@@ -64,11 +67,11 @@ ffmpeg -itsoffset 5 -re -reconnect 1 -i https://a.bbc.stream/live/radio4.m3u8 -t
 
 Save the command down into a handy script - something like `get-news.sh` - then set a cronjob to run it at 6pm every day: `0 18 * * * bash get-news.sh`. Obviously, you'll need your computer to be switched on for the duration of the recording. FFMPEG is light enough that it can easily run on a Pi: as good an excuse as any to dig it out from the drawer.
 
-> [](important) The streams tend to have a delay of 20-30 secs on them, so it's worth adding in a `sleep 15` at beginning of the script to account for this.  
+> [](important) The streams tend to have a delay of 20-30 secs on them, so it's worth adding in a `sleep 15` at beginning of the script to account for this.
 
 ## Serving the podcast
 
-> [](tip-aside) Syncthing is super-easy to set up. [Give it a go!](https://docs.syncthing.net/intro/getting-started.html)
+> [](aside-tip) Syncthing is super-easy to set up. [Give it a go!](https://docs.syncthing.net/intro/getting-started.html)
 
 As a quick and dirty way to get the files onto a phone for listening, Syncthing works perfectly; set it up to watch the folder containing the podcast audio files, and make sure Syncthing on the device is set up to receive them.
 

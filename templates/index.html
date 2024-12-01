@@ -13,22 +13,22 @@
     <body>
         <header>
             <img
-                alt="miaow"
-                src="https://maxbruges.com/favicon.svg"
+                alt=""
+                src="{{ get_url(path='favicon.svg') | safe }}"
                 height="75em"
                 width="200em"
             />
 
             <h1>
                 Hello. I'm
-                <a href="/about.html" target="_blank">Max Bruges</a>
+                <a href="{{ get_url(path='@/about.md') | safe }}" target="_blank">Max Bruges</a>
             </h1>
         </header>
         <div style="text-align: center; margin-left: auto; margin-right: auto">
             <p>I teach students lots of things, in lots of places.</p>
             <p>
                 This is where I try to teach
-                <a href="/about.html" target="_blank">myself</a> something new.
+                <a href="{{ get_url(path='@/about.md') | safe }}" target="_blank">myself</a> something new.
             </p>
             <style>
                 :root {

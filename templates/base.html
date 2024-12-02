@@ -16,6 +16,16 @@
 {% set title = config.extra.default_title %}
 {% endif %}
 
+{% if page.content %}
+{% if "blockquote" %}
+{% set blockquotestyle = get_url(path="blockquote-style.css") %}
+{% else %}
+{% set blockquotestyle = "" %}
+{% endif %}
+{% else %}
+{% set blockquotestyle = "" %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,10 +36,16 @@
    <meta property="og:title" content="MB - {{ title }}">
    <meta property="og:description" content="{{ description }}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>{{ config.extra.icon }}</text></svg>">
- <link rel="stylesheet" href="{{ get_url(path="blog-style.css") | safe }}">
+ <link rel="stylesheet" href="{{ get_url(path="blog-style.min.css") | safe }}">
  <link rel="stylesheet" href="{{ get_url(path="nav.css") | safe }}">
  <script>
+ if (localStorage.getItem('nightmode') === 'enabled') {
+   toggleNightmode();
+ }
+
  function toggleNightmode() {
+   const nightmodeEnabled = document.documentElement.style.getPropertyValue('--t') !== document.documentElement.style.getPropertyValue('--b');
+   localStorage.setItem('nightmode', nightmodeEnabled ? 'disabled' : 'enabled');
      const t = getComputedStyle(document.documentElement).getPropertyValue('--t');
      const b = getComputedStyle(document.documentElement).getPropertyValue('--b');
     document.documentElement.style.setProperty('--t', b);
@@ -46,8 +62,7 @@
     <div id="nav-container">
 <nav>
     <div class="dropdown">
-        <a style="opacity: 0.6em; display: flex; align-items: center;" id="dropdown-icon">&#9776;
-            <span style="opacity: 0.6em;font-size: 0.6em;padding-top: 0.1em;">MXB</span>
+        <a id="dropdown-icon">&#9776;
         </a>
         <div class="dropdown-content">
             <a href="/" style="font-weight:bolder">🏠 Home </a>
@@ -56,8 +71,8 @@
             <a href="/blog">📝 Blog</a>
         </div>
     </div>
-    <small id="website-name"> {% if page.date %} {{ page.date | date(format="%-d %B %Y", locale="en_GB") }} {% endif %}</small>
-        <p><a style="font-family: monospace;" href="../">↩ Back</a><span style="color:var(--a) !important; margin-right: 0;padding-right:0;" class="lightswitch" onclick="toggleNightmode()">🌓︎</span></p>
+    <small id="website-name"> {% if page.date %} {{ page.date | date(format="%-d %B %Y", locale="en_GB") }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
+    <p><a id="back" href="../">↩ Back</a><span class="lightswitch" onclick="toggleNightmode()">🌓︎</span></p>
 </nav>
 </div>
   <section class="section">
@@ -69,5 +84,5 @@
     <p>{{ config.extra.footer }}</p>
 </footer>
 </body>
-
+<link rel='stylesheet' href='{{ blockquotestyle }}'>
 </html>

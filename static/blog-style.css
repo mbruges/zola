@@ -1,4 +1,4 @@
-/*The New Textbook stylesheet*/
+/*NB this is not used - only the .min version is referenced.*/
 :root, .light-mode {
     --b: #f3f8ff;
     --t: #161b2b;
@@ -16,7 +16,7 @@
     padding: 0.6em;
     margin: auto;
     font-family: var(--font-family);
-    list-style-type: "✒ ";
+    list-style-type: "\2712 "; /* Unicode for pen nib */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +27,10 @@
          --a: #a2a2e7;*/
         --a: #fcf199;
     }
+}
+
+html,body{
+    overflow-x:hidden;
 }
 
 h1 {
@@ -66,17 +70,6 @@ input,
 textarea {
     border-radius: var(--border-radius);
     padding: 0.4rem;
-}
-
-.lightswitch {
-    padding-left: 0.5em;
-    opacity:0.9em;
-    cursor: pointer;
-}
-
-.lightswitch:hover {
-    opacity: 100%;
-    filter: brightness(100%) !important;
 }
 
 @media (min-width: 550px) {
@@ -209,11 +202,12 @@ td {
 }
 
 ul {
-    list-style-type: inherit;
+    list-style-type: "\2712 \00a0";
 }
 
 li ul {
-    list-style: "✑ ";
+    list-style: "\2711 \00a0";
+    font-size: 0.8em;
 }
 
 ul input {
@@ -467,111 +461,4 @@ a > code,
 a:focus > code {
     box-shadow: 0 1px 0 2px rgba(126, 126, 126, 0.702);
     transform: translateY(6px);
-}
-
-/* Attempt at github-flavoured callout boxes*/
-blockquote:has(a[href$="caution"]),
-blockquote:has(a[href$="challenge"]) {
-    font-family: var(--font-family);
-    background-color: rgb(252, 225, 225);
-    color: black;
-    border: none;
-    border-left: 10px solid rgb(166, 0, 0);
-    border-radius: 0.3em;
-    box-shadow: none;
-}
-
-blockquote:has(a[href$="caution"])::before {
-    content: "! Caution";
-    color: rgb(166, 0, 0);
-    font-weight: bold;
-}
-blockquote:has(a[href$="challenge"]) {
-    color: rgb(140, 0, 0);
-    box-shadow: none;
-}
-blockquote:has(a[href$="challenge"]) p::before {
-    content: "CHALLENGE: ";
-    font-weight: bold;
-}
-
-blockquote:has(a[href$="warning"]) {
-    font-family: var(--font-family);
-    background-color: rgb(255, 252, 220);
-    color: black;
-    border: none;
-    border-left: 10px solid rgb(207, 173, 0);
-    border-radius: 0.3em;
-    box-shadow: none;
-}
-blockquote:has(a[href$="warning"])::before {
-    content: "⚠ Warning";
-    color: rgb(207, 173, 0);
-    font-weight: bold;
-}
-
-blockquote:has(a[href$="note"]) {
-    font-family: var(--font-family);
-    background-color: rgb(208, 238, 255);
-    color: black;
-    border: none;
-    border-left: 10px solid rgb(0, 116, 178);
-    border-radius: 0.3em;
-    box-shadow: none;
-}
-blockquote:has(a[href$="note"])::before {
-    content: "ℹ Note";
-    color: rgb(0, 116, 178);
-    font-weight: bold;
-}
-
-blockquote:has(a[href$="important"]),
-blockquote:has(a[href$="think"]) {
-    font-family: var(--font-family);
-    background-color: rgb(246, 216, 255);
-    color: black;
-    border: none;
-    border-left: 10px solid rgb(119, 0, 152);
-    border-radius: 0.3em;
-    box-shadow: none;
-}
-blockquote:has(a[href$="important"])::before {
-    content: "☛ Important";
-    color: rgb(119, 0, 152);
-    font-weight: bold;
-}
-
-blockquote:has(a[href$="think"])::before {
-    content: "? Think";
-    color: rgb(119, 0, 152);
-    font-weight: bold;
-}
-
-blockquote:has(a[href$="tip"]) {
-    font-family: var(--font-family);
-    background-color: rgb(225, 255, 233);
-    color: black;
-    border: none;
-    border-left: 10px solid rgb(0, 130, 35);
-    border-radius: 0.3em;
-    box-shadow: none;
-}
-blockquote:has(a[href$="tip"])::before {
-    content: "✔︎ Tip";
-    color: rgb(0, 130, 35);
-    font-weight: bold;
-}
-
-blockquote:has(a[href$="task"]) {
-    font-family: var(--font-family);
-    background-color: #c3dbf8;
-    color: #183150;
-    border: none;
-    border-left: 10px solid #183150;
-    border-radius: 0.3em;
-    box-shadow: none;
-}
-blockquote:has(a[href$="task"]) p::before {
-    content: "TASK: ";
-    font-weight: bold;
 }

@@ -1,13 +1,14 @@
 ---
 title: Test Page
-date: 2099-12-31
+date: 20001-12-31
 author: Max Bruges
 description: "Did it work?"
-draft: true
+draft: false
 extra:
   icon: 🧪
 ---
 
+This is just a test page, please **ignore**. 😇
 
 ## Checkboxes
 

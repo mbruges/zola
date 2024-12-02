@@ -1,12 +1,11 @@
 ---
-title: 📝 I ♥ Markdown
+title: I ♥ Markdown
 author: Max Bruges
 date: 2024-03-01
+description: "Let the writing do the talking"
+extra:
+  icon: 📝
 ---
-
-# Why I love Markdown
-
-*Let the writing do the talking*
 
 No matter how often you do it, starting the process of writing is agonising. It is slow and full of false starts. Not because we don't know what to write, but because we could write *anything*. The blank page is infinite, without footholds or signposts.
 

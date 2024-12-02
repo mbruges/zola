@@ -1,13 +1,12 @@
 ---
-title: 🚢 Coding on The Titanic
+title: Coding on The Titanic
 author: Max Bruges
 date: 2023-04-26
+description: "If the robots can do it better, why bother learning at
+all?"
+extra:
+  icon: 🚢
 ---
-
-# Coding on The Titanic
-
-*If the robots can do it better, why bother learning at
-all?*
 
 ![The Titanic goes down; women and coders first](https://live.staticflickr.com/8658/16652891111_f66d108985_z.jpg "The Titanic goes down; women and coders first")
 *Less "rearranging the deckchairs" and more "putting on your white tie, sitting down in the flooded dining room and wondering if there'll be scallops to start."*
@@ -41,7 +40,7 @@ And this is by design! This is how [computing works](https://en.wikipedia.org/wi
 
 So what's different now? Well: The Bots.
 
-Perhaps unsurprisingly - and as a clear vindication of the 'Relentless Googling' school of pedagogy - they have been doing *exactly the same thing*. Day in, day out, they've been doom-scrolling. And they've already digested every single one of those haunted forum posts, manically hoovering it all up in the name of training data before *The Man* shuts off the [API](https://techcrunch.com/2023/04/18/reddit-will-begin-charging-for-access-to-its-api/) [fire-hose](https://www.engadget.com/twitter-shut-off-its-free-api-and-its-breaking-a-lot-of-apps-222011637.html). 
+Perhaps unsurprisingly - and as a clear vindication of the 'Relentless Googling' school of pedagogy - they have been doing *exactly the same thing*. Day in, day out, they've been doom-scrolling. And they've already digested every single one of those haunted forum posts, manically hoovering it all up in the name of training data before *The Man* shuts off the [API](https://techcrunch.com/2023/04/18/reddit-will-begin-charging-for-access-to-its-api/) [fire-hose](https://www.engadget.com/twitter-shut-off-its-free-api-and-its-breaking-a-lot-of-apps-222011637.html).
 
 Obviously, Bots Are Liars Sometimes. Even the [really expensive ones](https://www.theverge.com/2023/4/19/23689554/google-ai-chatbot-bard-employees-criticism-pathological-liar).  But that's only a problem if you treat it as a search engine, a machine for delivering Truth (and even then: come on, didn't you have the 'Beware of Google' lesson in Year 6 ICT?).
 

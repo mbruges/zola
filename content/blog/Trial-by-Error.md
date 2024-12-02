@@ -1,14 +1,14 @@
 ---
-title: 🙈 Trial by Error
+title: Trial by Error
+description: "Learning the hard way, failing the right way"
 author: Max Bruges
 date: 2023-05-04
+extra:
+  icon: 🙈
 ---
 
-# Trial by Error
-
-*Learning the hard way, failing the right way*
-
 ![A trial by ordeal](https://www.counselmagazine.co.uk/images/uploadedfiles/cc-shutterstock_editorial_8760310a.jpg?sfvrsn=e7119442_1 "The blind-folded man is the learner, the bishop the teacher, and the monks are... OFSTED I guess")
+*A trial by ordeal*
 
 This website is a place *about* learning and a place *for* learning: as the [playground](https://maxbruges.com/codeplayground.html) page testifies, this is as much a learning experience for me as it is a resource for anyone else.
 
@@ -43,7 +43,7 @@ Of course, we don't want to fall into the trap of blind-copying the correction t
 Taking that little button out is another small nudge towards the *pause-reflect-digest* cycle that one needs to actually *learn* from a mistake.
 
 ![Me typing SUDO BASH for the first time.](https://maxbruges.com/images/homer.png "Me typing SUDO BASH for the first time.")
-*Me typing SUDO BASH for the first time.*
+*Me typing `sudo bash` for the first time.*
 
 [I've joked before](https://maxbruges.com/blog.html#260423) about the dangers of '[bricking](https://www.howtogeek.com/126665/htg-explains-what-does-bricking-a-device-mean/)' - irreparably breaking something by copying what you don't understand - but it's a potent metaphor. Too often, as teachers, we incentivise the "do as I do" approach, and mistake mirrored compliance for actual understanding. In the worst case, our students end up building their knowledge on non-existent foundations, before some unscaffolded, unmodelled assessment suddenly [liquifies](https://www.britannica.com/video/185615/liquefaction-event-soil-particles-earthquake-combination-water) the ground and it all comes tumbling down.
 

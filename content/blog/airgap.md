@@ -3,13 +3,14 @@ author: Max Bruges
 date: 2024-11-03
 title: The air-gapped classroom
 draft: true
+description: Building a room-wide web, just for you.
+extra:
+  icon: 🔌
 ---
 
-## Building a room-wide web, just for you.
+The unfiltered internet is a dangerous thing.
 
-The unfiltered internet is a dangerous thing. 
-
-Filtering it is big business, particularly in education settings. But where the blocklists used to be clearly defined - naughty videos and time-wasting games - the gatekeepers of the school's internet now have a trickier challenge. 
+Filtering it is big business, particularly in education settings. But where the blocklists used to be clearly defined - naughty videos and time-wasting games - the gatekeepers of the school's internet now have a trickier challenge.
 
 ![coolmathsgames]()
 *Won't somebody think of the children?*

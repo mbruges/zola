@@ -1,13 +1,11 @@
 ---
 author: Max Bruges
-title: 🔧 The AI I use every day
+title: The AI I use every day
 date: 2024-09-29
+icon:
+  extra: 🔧
 description: "The simplest question is always the best"
 ---
-
-# The AI I use every day
-
-*The simplest question is always the best*
 
 ![how](https://mxb.fyi/static/how.gif)
 
@@ -37,41 +35,41 @@ After a couple of weeks of use, I did add a `-verbose` flag; having a few lines 
 
 ## How it works
 
-As with all good things, it started life as a `bash`, `curl`-ing to the OpenAI endpoint. It then grew into a Python script, switching to [Anthropic's Claude](https://www.anthropic.com/news/claude-3-haiku) to include some message history (`Haiku` is an excellent little model). 
+As with all good things, it started life as a `bash`, `curl`-ing to the OpenAI endpoint. It then grew into a Python script, switching to [Anthropic's Claude](https://www.anthropic.com/news/claude-3-haiku) to include some message history (`Haiku` is an excellent little model).
 
 The latest iteration is pure Golang, partly to avoid the faff of Python `venv` and partly as an exercise in learning more about Go. The magic is mostly in the prompt, which I'll paste below. The fancy loading animation is `gum`, by the excellent [Charm](https://github.com/charmbracelet) collective (also responsible for `VHS`, used to produce the terminal gifs above).
 
-Now, this little Go binary sits in my $PATH, aliased to `@`, ready to go with a single keypress. 
+Now, this little Go binary sits in my $PATH, aliased to `@`, ready to go with a single keypress.
 
 If this is the future of computing, give me excess of it.
 
 ---
 
 ```go
-var systemPrompt string = `You are a coding and computing 
-assistant called CAI. 
+var systemPrompt string = `You are a coding and computing
+assistant called CAI.
 
-Respond only with the requested code or command or solution, 
-ideally in a single line, defaulting to BASH script unless 
-otherwise stated. 
+Respond only with the requested code or command or solution,
+ideally in a single line, defaulting to BASH script unless
+otherwise stated.
 
-If a more detailed explanation is needed, the user will ask 
-for it. 
+If a more detailed explanation is needed, the user will ask
+for it.
 
 Always be concise. All output will be rendered on a terminal,
-so do not use markdown formatting. 
+so do not use markdown formatting.
 
-You must respond only with the requested code or command or 
+You must respond only with the requested code or command or
 solution,
-ideally in a single line, defaulting to BASH script unless 
-otherwise stated. 
+ideally in a single line, defaulting to BASH script unless
+otherwise stated.
 
-If I need a more detailed explanation, I will ask for it. 
+If I need a more detailed explanation, I will ask for it.
 
-If you are providing a single line of code, do not use any 
-code markers or backticks to indicate this. 
+If you are providing a single line of code, do not use any
+code markers or backticks to indicate this.
 
-Do not add commentary or explanation. 
+Do not add commentary or explanation.
 
 If you need to add comments, use # to comment the lines out.`
 ```

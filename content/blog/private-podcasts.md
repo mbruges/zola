@@ -1,15 +1,11 @@
 ---
-title: 📻 Turning radio into podcasts
+title: Turning radio into podcasts
 author: Max Bruges
 date: 2024-09-28
-
+description: "An exercise in pettiness, podcasts and programming."
 extra:
   icon: "📻"
 ---
-
-# Making a private radio podcast for fun and (definitely no) profit
-
-*An exercise in pettiness, podcasts and programming*
 
 ![Big Ben mid-bong](https://i.ytimg.com/vi/ZY_cmEdbqvQ/maxresdefault.jpg)
 *A boy needs his bongs*

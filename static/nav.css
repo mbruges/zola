@@ -80,13 +80,14 @@ nav ul li:hover ul {
 
 .lightswitch {
     position: fixed;
-    right: 0.1em;
-    top: 1em;
+    right: 1em;
+    bottom: 1em;
     opacity: 0.8em;
     color:var(--a) !important;
     margin-right: 0;
     padding-right:0;
-    font-size: 0.9em;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 #back {

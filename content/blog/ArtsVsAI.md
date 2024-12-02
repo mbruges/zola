@@ -1,12 +1,11 @@
 ---
-title: 🍴 AI will eat your English Department
+title: AI will eat your English Department
 author: Max Bruges
 date: 2023-05-22
+description: And Humanities will be for pudding.
+extra:
+  icon: 🍴
 ---
-
-# AI will eat your English Department
-
-*And Humanities will be for pudding.*
 
 ![Saturn devouring his son](https://maxbruges.com/images/blog-images/saturn.jpg)
 
@@ -16,7 +15,7 @@ Given all the problems faced by British head teachers - the yawning [gulf](https
 
 Which is why it's even more salutary to see them turn their attention briefly - albeit in the form of an advisory body - to the question of AI in education. From [The Times](https://www.thetimes.co.uk/article/ai-is-clear-and-present-danger-to-education-3sk09ftlf):
 
-> A coalition of leaders of some of the country's top schools have warned of the "very real and present hazards and dangers" being presented by AI [i.e. Large Language Models]…  
+> A coalition of leaders of some of the country's top schools have warned of the "very real and present hazards and dangers" being presented by AI [i.e. Large Language Models]…
 > Head teachers' fears go beyond AI's potential to aid cheating, encompassing the impact on children's mental and physical health and even the future of the teaching profession…
 
 There is a lot to praise here, not least the use of the present tense. Anyone who thinks that ChatGPT isn't already being used by students in their classroom is either naive or in denial; it's gratifying that even the grand old man of education Sir Anthony Seldon recognises that this is something happening *now*, rather than something that can wait 'til the next King's Speech.

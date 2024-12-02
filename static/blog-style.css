@@ -259,7 +259,7 @@ em > strong {
 
 blockquote,
 pre:has(code.language-quote) {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: serif;
     color: black;
     width: fit-content;
     margin-left: auto;
@@ -307,6 +307,12 @@ blockquote blockquote p::before {
 code {
     padding: 0.1em;
     font-size: 0.85rem;
+}
+
+h1 code,
+h2 code,
+h3 code {
+    font-size: 1em;
 }
 
 p code {
@@ -387,7 +393,7 @@ pre:has(code.language-bash)::before {
 
 .language-quote {
     font-size: 1em;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: serif;
     max-height: fit-content;
 }
 

@@ -2,12 +2,12 @@
 author: Max Bruges
 title: The AI I use every day
 date: 2024-09-29
-icon:
-  extra: 🔧
+extra:
+  icon: 🔧
 description: "The simplest question is always the best"
 ---
 
-![how](https://mxb.fyi/static/how.gif)
+![how](/how-do-i.gif)
 
 It's been nearly two years since I started fiddling with LLMs. In many ways, they're the perfect technology to *tinker* with: zero up-front cost, straight-forward documentation, with plaintext input and output.
 
@@ -19,7 +19,7 @@ But the best application I've built - the one I use every day, a dozen times a d
 
 Sometimes, you just want the computer to do The Thing; to turn your fleshy human thoughts into clean coded commands. And that's exactly what I built `cai` to do:
 
-![CAI in action in the terminal](https://mxb.fyi/static/cai1.gif)
+![CAI in action in the terminal](cai.gif)
 
 One question, one actionable answer.
 

@@ -1,6 +1,6 @@
 ---
 title: Test Page
-date: 20001-12-31
+date: 2001-12-31
 author: Max Bruges
 description: "Did it work?"
 draft: false

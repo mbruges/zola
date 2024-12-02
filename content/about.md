@@ -6,7 +6,7 @@ description = "It's nice to meet you."
   icon = "👨‍🏫"
 +++
 
-![A picture of me, Max Bruges aside](https://maxbruges.com/images/headshot-small.png)
+![A picture of me, Max Bruges aside](/headshot.webp)
 
 ...though unless you're *very* tenacious with your Googling, we've probably met already [^1]
 

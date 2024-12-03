@@ -72,7 +72,7 @@
             <a href="/blog">📝 Blog</a>
         </div>
     </div>
-    <small id="website-name"> {% if page.date %} {{ page.date | date(format="%-d %B %Y", locale="en_GB") }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
+    <small id="website-name"> {% if page.date and not page.draft %} {{ page.date | date(format="%-d %B %Y", locale="en_GB") }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
     <p><a id="back" href="../">↩ Back</a><span class="lightswitch" onclick="toggleNightmode()">🌓︎</span></p>
 </nav>
 </div>

@@ -2,6 +2,7 @@
 title: Max Bruges
 description: Curriculum Vitae
 date: 2030-01-01
+draft: true
 extra:
   icon: " "
 ---

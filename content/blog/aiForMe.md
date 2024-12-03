@@ -7,7 +7,7 @@ extra:
   icon: "🎓"
 ---
 
-![Fountain pen on paper](https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1973&auto=format&fit=crop)
+![Fountain pen on paper](/images/pen.webp)
 
 The temptation to 'just get ChatGPT to do it' is as strong for teachers as it is for students. So should we be surprised when pupils reach for the AI to finish their homework, when we do the same with our paperwork?
 

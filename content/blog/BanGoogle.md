@@ -7,7 +7,7 @@ extra:
   icon: 🚫
 ---
 
-![Canute on the beach, engaging in the Saxon world's most poorly communicated PR exercise](https://maxbruges.com/images/canute.jpeg "Canute on the beach, engaging in the Saxon world's most poorly communicated PR exercise")
+![Canute on the beach, engaging in the Saxon world's most poorly communicated PR exercise](/images/canute.webp "Canute on the beach, engaging in the Saxon world's most poorly communicated PR exercise")
 *We can't control the tides, but we can at least stop our students playing on the sandbars*
 
 It seems incredible to say now, but I once received lessons in How To Google. And yesterday, Google [rang the death-knell](https://www.theverge.com/2023/5/10/23717120/google-search-ai-results-generated-experience-io) for that way of traditional searching.
@@ -45,7 +45,7 @@ This is nothing new. Slowly, over the past decade, Google has been chipping away
 
 [Rich snippets and cards](https://developers.google.com/search/blog/2016/05/introducing-rich-cards) were one of the first attempts to turn search away from *indexing* sources of information to *answering users' queries directly*. Rather than giving prominence at the top of the search page to the most relevant web pages, result cards snipped out what the algorithm decided was the relevant information, and plonked it directly in front of the searcher's eyeballs.
 
-![A rich snippet example](https:maxbruges.com/images/macbeth-snippet.png)
+![A rich snippet example](/images/macbeth-snippet.png)
 *This is a rich snippet. Note that this still has a link - a digital paper trail for the diligent student to follow, evaluate and cite.*
 
 It's a subtle shift, but one that marks a fundamental change in how we interact with search engines.  It stops Google being a repository of potential answers - laid out for your to assess for yourself, as a scholar - to simply being the sole source of information in and of itself.  This is the dream of '[zero-click search](https://www.searchenginejournal.com/google-and-the-rise-of-zero-click-searches-what-does-it-mean-for-your-business-podcast/474281/)'.
@@ -58,7 +58,7 @@ Whereas result cards at least had the decency to pull their information from a t
 
 It is no longer a 'search engine', but an answer engine.
 
-![A screenshot of a Bard result](https://maxbruges.com/images/bard-screenshot.png)
+![A screenshot of a Bard result](/images/bard-screenshot.png)
 *…and this is a 'Bard' response. No link, no citation, no paper trail: just pure unfiltered **Information**. There's still a desultory 'Google It' button, of course, because[ how else will they pay for it](https://www.theregister.com/2023/04/21/google_bard_ai/)?*
 
 ## I'm feeling unlucky
@@ -67,7 +67,7 @@ And the problem is: *it will work.* The answers provided will be (already *are*)
 
 There is no value to be found - not for schools, not for students - in a tool that simply gives answers. School is not about returning the right answer. Education is not about the tick-marks. Every perfect score isn't a sign of success, it's a marker of insufficient challenge and poorly scaled learning.
 
-![This is the future Googlers want](https://maxbruges.com/images/blog-images/robot-friend.jpg)
+![This is the future Googlers want](/images/robot-friend.webp)
 *"Well done! You copied and pasted the answer I gave you. Here: have a [Bachelors](https://www.themoscowtimes.com/2023/02/02/russian-student-allowed-to-keep-diploma-for-chatgpt-written-thesis-a80125)."*
 
 All this new product offers is danger; the danger that comes from automating and outsourcing the most important aspect of learning: [getting things wrong](https://mbruges.com/blog.html#040523) and navigating the [pathway](https://mbruges.com/codefixer.html) to right-ness.

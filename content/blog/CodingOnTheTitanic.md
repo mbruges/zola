@@ -54,7 +54,7 @@ Of course, the bullish case is to say the bots can [already code](https://github
 
 But to say that is to miss the point. I won't rehash the argument about the purpose of hand-making that which can be machine-produced: I'm about three hundred years [late](https://en.wikipedia.org/wiki/Luddite) for that one. Nor could these margins contain a worthwhile expounding on the value of creativity in the age of generative content, if only because others have [made the case](https://ianleslie.substack.com/p/the-struggle-to-be-human) far more eloquently already.
 
-But I will happily argue that Learning Is Good, and anything that helps you learn must be good by proxy. It is my [day-job](https://maxbruges.com/about), after all.
+But I will happily argue that Learning Is Good, and anything that helps you learn must be good by proxy. It is my [day-job](/about), after all.
 
 Like any tool: The Bot is only as good as the purpose you put it to. And I cannot think of a better, more worthwhile exercise than learning a new skill that stretches a part of your brain that otherwise sits untouched and atrophying, bar the occasional stab of a 'Fiendish' sudoku.
 

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/style.css">
+
+    <meta charset="utf-8">
+    <meta name="description" content="Word of the Week">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+    
+    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Word of the Week" />
+    
+    <meta prefix="og: http://ogp.me/ns#" property="og:description"
+        content="Etymology & activities to help learn a new word." />
+    
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://mbruges.com/images/banner-square.png" />
+    <meta property="og:image:width" content="315" />
+    <meta property="og:image:height" content="315" />
+    
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://mbruges.com/alssonwotd.html" />
+
+    <title> Word of the Week</title>
+    <script>
+        function dateStampFunc(daysAdjust) {
+                if (daysAdjust == NaN || daysAdjust == undefined) {
+                    daysAdjust = 0
+                } else {
+                    daysAdjust = parseInt(daysAdjust)
+                };
+                var queriedDate = new Date();
+                queriedDate.setDate(queriedDate.getDate() + daysAdjust)
+                var date = queriedDate.getDate();
+                let stringdate = "" + date
+                if (stringdate.length == 1) {
+                    date = "0" + stringdate
+                }
+                var month = queriedDate.getMonth() + 1;
+                let stringmonth = "" + month
+                if (stringmonth.length == 1) {
+                    month = "0" + stringmonth
+                }
+                var year = queriedDate.getFullYear();
+                var dateString = year + '-' + month + '-' + date;
+                return dateString
+            }
+
+        window.onload = () => {
+                dateString = dateStampFunc()
+                document.getElementById("date").innerHTML = dateString;
+                fetch('/wotdarchive/wotd-database.json')
+                    .then((response) => response.json())
+                    .then((json) => {
+                        for (let index = 0; index < json.length; index++) {
+                            let pageDate = json[index].published;
+                            let word = ""
+                            if (dateString == pageDate) {
+                                document.getElementById('worksheet').innerHTML = json[index].content
+                                word = "" + json[index].word
+                                //This section tweaks the meta tags
+                                let desc = `Word of The Day is ${word}`
+                                document.querySelector('meta[property="og:title"]').setAttribute("content", desc);
+                                document.querySelector('meta[name="twitter:title"]').setAttribute("content", desc);
+                                document.getElementById('title').innerHTML = desc
+
+                                //This section will now make the definition easier to read.
+
+                                var styles = `
+    p:first-of-type {
+    font-size:25px;
+	font-weight:500;
+	color:#485cf5;
+}
+`
+                                var styleSheet = document.createElement("style")
+                                styleSheet.innerText = styles
+                                document.head.appendChild(styleSheet)
+                            }
+
+                        }
+                    })
+            }
+    </script>
+</head>
+
+<style>
+    nav button {
+        font-size: larger;
+        background-color:darkblue;
+        border-width: 8px;
+        border-color: gold;
+        color: gold;
+    }
+    
+</style>
+<body style="padding-bottom: 0%;">
+<header style="padding-top: 0.1em;">
+    </html>
+    <nav>
+        <b>📚 English Department</b> 
+        <button style="cursor: default;">DO NOW: Copy down the definition and complete 3 tasks</button>
+        <b>Word of the Week <span id="date"></span></b>
+        
+        </b>
+    </nav>
+</header>
+
+
+<form style="padding-top: 1px;" id = "worksheet">
+</form>
+<footer>
+<small>⚠️ Problem with page? ⚠️</small>
+<a href="mailto:mbruges+wotd@alsson.com?subject=Issue with Word of the Week" target="_blank">Email Mr. Max</a>
+</footer>
+</body>
+</html>

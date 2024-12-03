@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/old-style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="A page to generate worksheets automatically, using GPT-3.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worksheet Generator</title>
+
+<script id="loader-animation">
+    //These are the functions to toggle the loading animation and to hide the request button.
+    function hideLoader() {
+        let loader = document.getElementById('thinking-loader');
+        loader.className = "loader.hidden";
+        let button = document.getElementById('generateButton');
+        button.className = "";
+    }
+    function showLoader() {
+        let loader = document.getElementById('thinking-loader');
+        loader.className = "loader";
+        let button = document.getElementById('generateButton');
+        button.className = "hidden";
+    }
+    function showResponseContainer() {
+            let container = document.getElementById('response-container');
+            container.className = "";
+            container.scrollIntoView();
+        }
+    function hideResponseContainer() {
+        let button = document.getElementById('generateButton');
+        button.className = "hidden";}
+
+</script>
+<script id="saveToken">
+    //This script saves the string entered into "APItokenInput" to local storage
+    function saveToken() {
+        let storedToken = "" + document.getElementById("APItokenInput").value
+        localStorage.setItem("APItoken", storedToken);
+    }
+
+    //...and this script returns that token on page load.
+    function returnAPItoken() {
+        let savedToken = localStorage.getItem("APItoken")
+        console.log("Token saved is: " + savedToken)
+        document.getElementById("APItokenInput").value = savedToken;
+    }
+    //This gives a notification to say it was successful in saving.
+    function saveAlert() {
+            // Get the toastAlert DIV
+            var x = document.getElementById("toastAlert");
+            // Add the "show" class to DIV
+            x.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
+    //This simply converts tokens into dollars for a rough spending guide.
+    function tokenToDollar(tokenVol) {
+            dollarSpend = tokenVol * 0.000002;
+            return dollarSpend
+        }
+</script>
+<script id="name-generator">
+    function nameGenerator() {
+            const adjs = [
+                'academic', 'active', 'bright', 'challenging', 'competitive',
+                'creative', 'curious', 'dedicated', 'determined', 'engaged',
+                'enlightening', 'exciting', 'explorative', 'formative', 'fun',
+                'impactful', 'innovative', 'inspiring', 'intellectual', 'motivating',
+                'practical', 'progressive', 'rigorous', 'stimulating', 'supportive',
+                'thought-provoking', 'transformative', 'welcoming', 'wonderful', 'productive']
+            const nouns = ["book", "teacher", "student", "pen", "desk", "pencil", "paper", "notebook", "class", "attendance", "report", "diploma", "backpack", "library", "lecture", "homework", "test", "curriculum", "degree", "lecture", "whiteboard", "blackboard", "calculator", "pendulum", "vial", "slide", "encyclopedia", "chalk", "language"]
+            var adjRand = Math.floor(Math.random() * 29);
+            var nounRand = Math.floor(Math.random() * 29);
+            adjRand = "" + adjs[adjRand];
+            nounRand = "" + nouns[nounRand];
+            randName = (`${adjRand}-${nounRand}`);
+            console.log(randName);
+            document.getElementById("fileNameStore").innerHTML = randName;
+        }
+</script>
+<script id="copy-download-scripts">
+    function copy() {
+        let content = document.getElementById("AskGPToutput").innerHTML;
+        navigator.clipboard.writeText(content); copyalert();
+    };
+        function downloadFile() {
+            var topic = "" + document.getElementById("topicInput").value;
+            var topicFileName = topic.trim()
+            var generatedContent = "" + document.getElementById("AskGPToutput").innerHTML
+            const link = document.createElement("a");
+            var content = `<!DOCTYPE html> <head> <link rel="icon" href="/favicon.svg"> <link rel="stylesheet" href="/old-style.css"> <meta charset="utf-8"> <meta name="description" content="Worksheet generated on mbruges.com"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head> <title>MB - ${topic}</title> ${generatedContent} <br> <br> <footer style="font-size:6px; color:grey; text-align:center">
+                <small><i>2023 -  Generated on <a href="https://mbruges.com/worksheetGenerator.html" target="_blank">Worksheet Generator</a>, using code by <a href="https://mbruges.com/index.html" target="_blank">Max Bruges</a> </i> 🐈‍⬛ </small></footer></html>`;
+            const file = new Blob([content], {type: 'text/plain' });
+            link.href = URL.createObjectURL(file);
+            topicFileName += ".html"
+            link.download = topicFileName;
+            link.click();
+            URL.revokeObjectURL(link.href);
+        };
+    </script>
+</script>
+<script> function illustrationGenerator() {
+            var imageURL = ""
+            var APItoken = "" + document.getElementById("APItokenInput").value;
+            //var subject = "" + document.getElementById("subjectsInput").value;
+            var topic = "" + document.getElementById("topicInput").value;
+            var prompt = `a simple watercolour illustration on the topic of ${topic}`;
+            var quantity = 1;
+            var format = "url";
+
+            var size = "256x256";
+            console.log("Generating image");
+            var url = "https://api.openai.com/v1/images/generations";
+            var bearer = 'Bearer ' + APItoken
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Authorization': bearer,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "prompt": prompt,
+                    "n": quantity,
+                    "size": size,
+                    "response_format": format,
+                })
+            }).then(response => {
+
+                return response.json()
+
+            }).then(data => {
+                console.log(`Image url is: ${data.data[0].url}`);
+                imageURL = data.data[0].url;
+                document.getElementById("urlStore").value = imageURL
+            })
+                .catch(error => {
+                    console.log('Something went wrong. This is the error: ' + error)
+                });
+    document.getElementById("illustrate").value = "true"
+    }
+</script>
+
+<script id="worksheetGenerator"> function worksheetGenerator() {
+        console.log("AskGPT running")
+        showResponseContainer();
+        var imageURL = '<img alt="illustrationPlaceholder" src="/images/openmoji-color/1F4D1.svg" height="256px" width="256px">'
+        var newresponse = "Something went wrong."
+        // We start by getting the API token - and returning an error if a token-like value is not found in the APItokenInput box.
+        var APItoken = "" + document.getElementById("APItokenInput").value;
+        if (APItoken.length < 35) {
+            document.getElementById("AskGPToutput").innerHTML = `Please enter your <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API token</a> above, then try again.`; return;
+        }
+        //Calling the relevant inputs on the page to get: $subject $topic $year $additions.
+        var subject = document.getElementById("subjectsInput").value
+        var topic = document.getElementById("topicInput").value
+        var year = document.getElementById("yearInput").value
+        var additions = document.getElementById("additionsInput").value;
+             if (additions.length > 4) {
+                 additions = "Also include: " + additions;
+             } + ".";
+
+        //Inputting these variables to the prompt string.
+        var prompt = `Generate a ${subject} worksheet, on the topic of ${topic}, for students in Year ${year}. You should include a range of different activities and content. Some potential ideas include (but are not limited to): a summary of key terms, a series of quick recall questions, some more complex tasks, an open-ended research task etc. ${additions} `
+
+        var tokens = 1000
+        var prevprompt = `You are a teaching assistant at a British school, creating resources.  Always respond in HTML. No <style> needed in code. No other comment needed.`;
+        //Quickly converting the input to an integer, so it works.
+        tokens = parseInt(tokens);
+        console.log(tokens);
+
+        //These variables determine the 'chat' history, and can be updated if that functionality is added.
+        var role = "";
+        var prevresponse = "OK";
+
+        document.getElementById("AskGPToutput").innerHTML = `<center><br>Generating worksheet...<br> <small>This may take up to 3 minutes</small></center>`;
+        showLoader();
+        var url = "https://api.openai.com/v1/chat/completions";
+        var bearer = 'Bearer ' + APItoken
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Authorization': bearer,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "model": "gpt-3.5-turbo",
+                "messages": [
+                    { "role": "system", "content": role },
+                    { "role": "user", "content": prevprompt },
+                    { "role": "assistant", "content": prevresponse },
+                    { "role": "user", "content": prompt }
+                ],
+                "max_tokens": tokens,
+                "temperature": 1,
+                "top_p": 1,
+                "n": 1,
+            })
+
+
+        }).then(response => {
+
+            return response.json()
+
+        }).then(data => {
+            newresponse = "" + data['choices'][0].message.content;
+            let totaltokensused = parseInt(data.usage.total_tokens);
+            console.log("Response is [" + newresponse + "] -- Tokens used in query = " + totaltokensused);
+            hideLoader();
+/*
+            let illustrateOpt = document.getElementById("illustrate").value;
+            if (illustrateOpt == "true") {
+            var imageURL = document.getElementById("urlStore").value;
+            imageURL = `<img style="border-color: black
+            ;border: 3px;border-style:solid;"  alt="illustrationGenerated" src="${imageURL}"height="256px" width="256px">`
+            } else var imageURL = `<img  alt="illustrationPlaceholder" src="/images/openmoji-color/1F4D1.svg" height="256px" width="256px">`;
+*/
+            newresponse =
+            `<body style="width:90%;margin-left:auto;margin-right:auto;">${newresponse}</body>
+            <br> <br> <center>
+            `;
+            document.getElementById("AskGPToutput").innerHTML = newresponse;
+
+            //This extra step keeps track of total tokens used, stored in the local cache. It then displays the dollar value of the tokens so far.
+            console.log(localStorage.getItem("TokensToDate"))
+            if ((localStorage.getItem("TokensToDate")) == null) {localStorage.setItem("TokensToDate", 0)
+            };
+            totaltokensused = parseInt(totaltokensused) + parseInt(localStorage.getItem("TokensToDate"));
+            console.log(`Cache says you've used ${totaltokensused} tokens so far`)
+            localStorage.setItem("TokensToDate", totaltokensused);
+        })
+            .catch(error => {
+                hideLoader();
+                let errormessage = `<center><h1>Tragedy strikes</h1><br><p>Something has gone terribly wrong with the app. Give it a few minutes and try again.</p> <br>  <img style="border-color: black
+            ;border: 3px;border-style:solid;"  alt="illustrationGenerated" src="/images/biplanefire.png"height="150px" width="150px"><details><summary style="font-size:11px">Error message:</summary><code style="font-size:11px"> ${error}</code></details></center> `;
+            document.getElementById("AskGPToutput").innerHTML = errormessage;
+            });
+    }
+</script>
+
+</head>
+
+
+<body onload="returnAPItoken(); nameGenerator()">
+<nav>
+    <div class="dropdown">
+        <a id="catNav"><img alt="miaow" src="/favicon.svg" height="40" width="40"></a>
+        <div class="dropdown-content">
+            <a href="/experiments.html">Experiments</a>
+            <a href="/resources.html">Resources</a>
+            <a href="/blog.html">Blog</a>
+        </div>
+    </div>
+    <ul>
+        <li><a href="/"> Home </a></li>
+    </ul>
+</nav>
+    <header style="padding-left: 5vw;padding-right: 5vw;">
+
+    <h1>Worksheet Generator</h1>
+    <img src="/images/1F4D1.svg"; width="80vw"; display="block";max-height='26vh'>
+<div style=max-width:400px;margin-left:auto;margin-right:auto>
+
+<p style="font-size:140%;"> Generate worksheets for use in the classroom, through the power of AI.</p>
+<head>
+<p>Select your options, add any specific ideas or requests in the box below, then press the <b style="background-color: black; color: var(--color-bg); font-weight: 350;">&nbspGenerate&nbsp</b> button.</p>
+
+<div id="apikey">
+    <details>
+        <summary style="font-size: smaller; color:grey">API token 🔑</summary><input type="text" id="APItokenInput" style="font-size: small;
+            font-family: monospace; text-align: center; max-width: 330px; background-color:lightgrey"><a
+            onclick="saveToken(), saveAlert()"><sup>Save to cache 💾 </sup></a><br>
+            <small>Your key is only saved in your local browser cache, and can only be accessed by you and the OpenAI API</small>
+    </details>
+    <div id="toastAlert">API token saved locally</div>
+</div>
+
+
+<script>
+    function clearText(){
+        if (document.getElementById("topicInput").value == "Specify a topic...") {
+            document.getElementById("topicInput").value = " "
+        }
+    }
+</script>
+
+<label for="topic">What is the worksheet about?</label>
+<small>E.g. 'Macbeth Act 1'</small>
+<input id="topicInput" type="text" name="topic" value="">
+
+<label for="subjects">Select a subject:</label>
+<select id="subjectsInput" name="subjects">
+    <option value=""></option>
+    <option value="English">English</option>
+    <option value="Maths">Maths</option>
+    <option value="Science">Science</option>
+    <option value="History">History</option>
+    <option value="Geography">Geography</option>
+    <option value="Art">Art</option>
+    <option value="Music">Music</option>
+    <option value="Drama">Drama</option>
+</select>
+
+<label for="years">Select a yeargroup:</label>
+<select id="yearInput" name="years">
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+</select>
+
+
+    <h4>Any specifics to include?</h4>
+    <small>E.g. 'A drawing task'</small>
+    <input id="additionsInput" type="text" name="additions" value="" >
+
+</div>
+<!-- Not yielding good results, so removed for now.
+    <aside><code id="urlStore" value="/images/biplane.svg">🧪 Experimental 🧪<br><i style="font-weight: 300;">Add GPT-generated illustration?</i><br>
+                <input onclick="illustrationGenerator()" type="checkbox" id="illustrate" style="margin: 4px 0 0;
+                line-height: normal;
+                width: 20px;
+                height: 20px;"></code>
+    </aside>
+-->
+<button id="generateButton" onclick="worksheetGenerator()">Generate a worksheet 📑</button>
+
+<div id="thinking-loader" class="loader.hidden"></div>
+<br>
+
+<div id="response-container" class="hidden">
+    <form class id="AskGPToutput" style="background-color:whitesmoke;font-family:var(--font-family);font-size:100%;border:3px solid black; border-radius: 0;min-height: 40vh;">
+        <i style="text-align: center;margin-left: auto;margin-right: auto;display: block;"><br><br>Response will appear here</i>
+        <br>
+
+    </form>
+
+    <!--<a id="copyResponseButton" onclick="copy()"><sup> Copy to clipboard hi 🔗 </sup></a>-->
+    <a style="cursor: pointer; text-decoration: none;" id="downloadResponseButton" onclick="downloadFile()"><sup> Download your worksheet 💾 </sup></a><br>
+    <code style="font-size: 9px;" id="fileNameStore"></code>
+
+</div>
+<details style="color:grey; font-size: 70%">
+    <summary style="font-size:100%">Disclaimer</summary> Results may be inaccurate, misleading, or nonsense. Always double-check before using; never trust a robot.
+</details>
+
+</header>
+</body>
+<footer>
+    <p>© 2023 - <i> Made by <a href="/about.html" target="_blank">me
+            </a> and Agatha</i> 🐈‍⬛</p>
+    <p><i>Found this interesting? <a href="mailto:hello@mbruges.com?subject=Hello from the Internet"
+                style="font-style: normal;"> Drop me a line 📮</a>
+    </p>
+</footer>

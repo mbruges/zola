@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/old-style.css">
+
+    <meta charset="utf-8">
+    <meta name="description" content="Code Playground">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <title>MB - Code Playground </title>
+
+    <style>
+        code {
+            font-size:larger;
+        }
+    </style>
+
+    <script>
+
+        function notificationAlert(notificationText) {
+                var alertelement = document.getElementById("toastAlert");
+                alertelement.innerHTML = notificationText
+                alertelement.className = "show";
+                setTimeout(function () { alertelement.className = alertelement.className.replace("show", ""); }, 3000);
+            }
+
+        function viewSource() {
+                ;
+                var source = "<body>";
+                source += document.getElementsByTagName('body')[0].innerHTML;
+                source += "</body>";
+                source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                source = "<pre>" + source + "</pre>";
+                sourceWindow = window.open('', 'Source of page', 'height=800,width=800,scrollbars=1,resizable=1');
+                sourceWindow.document.write(source);
+                sourceWindow.document.close();
+                if (window.focus) sourceWindow.focus();
+            }
+    </script>
+</head>
+    <header>
+    <nav>
+        <div class="dropdown">
+            <a id="catNav"><img alt="miaow" src="/favicon.svg" height="40" width="40"></a>
+            <div class="dropdown-content">
+                <a href="/experiments.html">Experiments</a>
+                <a href="/resources.html">Resources</a>
+                <a href="/blog.html">Blog</a>
+            </div>
+        </div>
+        <ul>
+            <li><a href="/"> Home </a></li>
+        </ul>
+    </nav>
+        <h1>Code Playground</h1>
+        <p> This is where I practice using Javascript. </p><code><a onclick="viewSource()"> Click here to see the code</a></code>
+<body style="margin-left:5%;margin-right:5%">
+<script type="module">
+    import { macbethPlay } from "/wsarchive/macbethPlay.js";
+    document.getElementById("macbethButton").onclick = function () {
+        var randCharacter = Math.floor((macbethPlay.length * Math.random()))
+        var randLine = macbethPlay[randCharacter].text.length
+        randLine = Math.floor(Math.random() * randLine)
+        var lines = ""
+        var line1 = "" + (macbethPlay[randCharacter].text[randLine])
+        var line2 = parseInt(randLine + 1);
+        line2 = (macbethPlay[randCharacter].text[line2]);
+        if (line2 == undefined) {
+            lines = line1
+        } else lines = line1 + `<br>` + line2;
+        randCharacter = macbethPlay[randCharacter].label;
+        randCharacter = randCharacter.toUpperCase();
+        document.getElementById("macbethQuote").innerHTML = `<b>${randCharacter}:</b> ${lines}`;
+    }
+
+</script>
+<div id="quoteGenerator">
+<h2>🗡️ Quote Generator 🏴󠁧󠁢󠁳󠁣󠁴󠁿</h2>
+<p>Press the button to generate a random couple of lines from <b>'Macbeth'</b></p>
+<button id="macbethButton">Generate</button><br>
+
+<br>
+<form style="background-color: lightgrey; text-align: center;"  id="macbethQuote">Quote will appear here</form>
+</div>
+<br>
+<hr>
+
+<div id="sonnetFinder">
+    <script type = "module">
+        import { getSonnet } from "./wsarchive/sonnets.js";
+        document.getElementById("getSonnet").onclick = function () {
+        let sonnetNumber = document.getElementById('sonnetSelect').value;
+        sonnetNumber = parseInt(sonnetNumber);
+        console.log(sonnetNumber)
+        if (isFinite(sonnetNumber) == false) {
+            sonnetNumber = Math.floor(Math.random()*154)
+            console.log(sonnetNumber + "rand")
+        } else if (sonnetNumber > 154 || sonnetNumber < 1) {
+            notificationAlert("Choose a number between 1 and 154, or leave blank for a random sonnet"); return;
+        }
+        var sonnetText = "" + getSonnet(sonnetNumber)
+        document.getElementById('sonnetContainer').innerHTML = sonnetText
+        document.getElementById('sonnetContainer').className = "show";
+    }
+    </script>
+<h2> Sonnet Finder </h2>
+<p>Enter a number to see one of Shakespeare's sonnets, or click <b>'Get Sonnet'</b> for a random one</p>
+<input id="sonnetSelect" type="number" min="1" max="154" placeholder="Which sonnet?" value="" style="text-align: center; width:130px; padding: 5px;">
+<button id="getSonnet">Get Sonnet</button>
+
+<form id="sonnetContainer" class="hidden" style="line-height: 70%;">
+</form>
+
+
+</div>
+<hr>
+<br>
+<div id="caesarCipher">
+    <h2>🏛️ Caesar Cipher 🔐</h2>
+
+    <p>A nifty implementation of one of the best exercises a Javascript novice can do: scrambling messages <a href="https://blogs.lt.vt.edu/classicalcryptographyintheamericanrevolution/2014/02/28/suetonius-and-polybius/#:~:text=Suetonius%E2%80%99s%C2%A0De,DWWDFN%20DW%20GDZQ." target="_blank">the Roman way.</a></p>
+
+    <b>Encode or decode?</b><select id="eVd"
+        onchange="document.getElementById('caesarButton').innerHTML = this.value"><br>
+        <option value=" "> </option>
+        <option value="ENCODE"> Encode </option>
+        <option value="DECODE"> Decode </option>
+    </select>
+
+    <input type="text" id="caesarInput" placeholder="Enter message here...">
+
+    <b>Select key:</b><select id="caesarKey"><br>
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+        <option value="4"> 4 </option>
+        <option value="5"> 5 </option>
+        <option value="6"> 6 </option>
+        <option value="7"> 7 </option>
+        <option value="8"> 8 </option>
+        <option value="9"> 9 </option>
+        <option value="10"> 10 </option>
+        <option value="11"> 11 </option>
+        <option value="12"> 12 </option>
+        <option value="13"> 13 </option>
+    </select>
+    <button id="caesarButton" onclick="caesarDecode()">Select encode or decode</button>
+
+    <script>
+        function caesarDecode() {
+            var string = document.getElementById("caesarInput").value;
+            string = string.toUpperCase()
+            var key = document.getElementById("caesarKey").value;
+            var eVd = document.getElementById("eVd").value;
+            if (string.length == 0) {
+                document.getElementById("caesarOutput").innerHTML = "Please enter a string, and select ENCODE or DECODE from the dropdown.";
+            };
+            if (eVd == "DECODE") {
+                var decodedString = ""
+                const alphabetArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+                //First, we establish the encoded version of the alphabet:
+                const cipherAlphabet = []
+                for (let j = key; j < alphabetArray.length; j++) {
+                    cipherAlphabet.push(alphabetArray[j])
+                }
+                for (let j = 0; j < (alphabetArray.length - key); j++) {
+                    cipherAlphabet.push(alphabetArray[j])
+                }
+                //Now, we use that encoded alphabet to decode the message.
+                for (let index = 0; index < string.length; index++) {
+                    let character = string[index];
+                    //This quick if is there to pass non-characters straight through to the decoded string.
+                    if (alphabetArray.indexOf(character) == -1) {
+                        decodedString += character; continue
+                    }
+                    //Now we decode the characters
+                    else {
+                        let arrayPoint = cipherAlphabet.indexOf(character)
+                        let decodedCharacter = alphabetArray[arrayPoint];
+                        decodedString += decodedCharacter
+                    }
+                }
+                document.getElementById("caesarOutput").innerHTML = decodedString
+            }
+            if (eVd == "ENCODE") {
+                var encodedString = ""
+                const alphabetArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+                //First, we establish the encoded version of the alphabet:
+                const cipherAlphabet = []
+                for (let j = key; j < alphabetArray.length; j++) {
+                    cipherAlphabet.push(alphabetArray[j])
+                }
+                for (let j = 0; j < (alphabetArray.length - key); j++) {
+                    cipherAlphabet.push(alphabetArray[j])
+                }
+                //Now, we use that encoded alphabet to decode the message.
+                for (let index = 0; index < string.length; index++) {
+                    let character = string[index];
+                    //This quick if is there to pass non-characters straight through to the encoded string.
+                    if (alphabetArray.indexOf(character) == -1) {
+                        encodedString += character; continue
+                    }
+                    //Now we encode the characters
+                    else {
+                        let arrayPoint = alphabetArray.indexOf(character)
+                        let encodedCharacter = cipherAlphabet[arrayPoint];
+                        encodedString += encodedCharacter
+                    }
+                }
+                document.getElementById("caesarOutput").innerHTML = encodedString
+            }
+        }
+
+    </script>
+
+    <h4>Decoded message:<br>
+        <style>
+            h4 code {
+                font-size: 20px;
+            }
+        </style>
+        <br>
+        <code>
+        <b id="caesarOutput">YOUR MESSAGE WILL APPEAR HERE</b>
+    </code><br>
+        <button onclick="copy(document.getElementById('caesarOutput').innerHTML)">Copy to Clipboard📋</button>
+
+    </h4>
+</div>
+<hr>
+
+<div id = TextEcho>
+    <!--Simple text field input example-->
+    <!-- Here's the input.
+
+    We identify it by type (text, in this case) and allocate it an id ("textInput") -->
+    <h2>Text Echo</h2>
+    <p>My <i>very first</i> piece of HTML-based Javascript. All it does is show what you write in the box.</p>
+    <small>An exercise in learning DOM</small>
+    <h2>
+    <input type="text" id="textInput"><br>
+
+
+    <!-- This a button which, when submitted, will run the function 'display textEcho' when clicked. The 'onclick' bit indicates that the behaviour only takes place when the button is clicked.
+
+    Not that the button is appearing BEFORE we define the script; that's because HTMl loads everything all at once, so order doesn't really matter.-->
+
+    <button onclick="echoText()">Submit</button>
+    </h2>
+
+    <!-- Here's the actual script itself. Once inside the <script. wrapper, it functions exactly like normal Javascript.-->
+    <script>
+        function echoText() {
+        //First, we call and set the variable textEcho, and allocate it the value of whatever is in the element ID'd as 'textInput'.
+
+        //If we wanted it to take a different, value, we'd put a different ID in the getElementById parentheses.
+            var textEcho = document.getElementById("textInput").value;
+        //Now, we tell the function to allocate a new value to the element ID's as "output". We're going to allocate it the value of the variable 'textEcho'
+            document.getElementById("textEcho").innerHTML = textEcho;
+        }
+
+    </script>
+    <p></p>
+    <h4>Output will go here:
+    <p></p>
+    <aside>
+    <b id="textEcho"></b>
+    </article>
+    </h4>
+</div>
+<hr>
+<div id="lengthCounter">
+    <h2>String Length Counter</h2>
+    <p></p>
+    <h2>
+        <!-- And here's the input section-->
+        <input type="text" id="counterInput"><br>
+        <button onclick="counter()">Count it!</button>
+    </h2>
+    <script>
+            function counter() {
+                var string = document.getElementById("counterInput").value;
+                var length = string.length;
+                document.getElementById("counterOutput").className = "show";
+                document.getElementById("counterOutput").innerHTML = `String length = <b>${length}</b>`;
+            }
+    </script>
+    <code id="counterOutput"></code>
+    </h4>
+</div>
+<hr>
+<!-- 2nd script attempt -->
+<div id="textReverser">
+    <h2>🔄 Text Reverser 🔄</h2>
+    <p></p>
+    <!-- Now to make my script. This is going to return the text entered, but reversed. I'll write the input first-->
+    <p>
+        <!-- And here's the input section-->
+        <input type="text" id="reverseInput" placeholder="Type something..."><br>
+        <button onclick="reverse()">Reverse it!</button>
+
+</p>    <!-- Now, the script:-->
+    <script>
+        function reverse() {
+            //Normally 'string' would be defined in the function brackets, but instead we allocate it as follows:
+            var string = document.getElementById("reverseInput").value;
+            //Then, everything is just the same as it is in the normal code!
+            var reversedString = "";
+            for (let index = (string.length)-1; index > -1; index--) {
+                let addon = string[index];
+                reversedString = reversedString + addon
+            }
+            //This is basically the equivalent of 'return'
+            document.getElementById("reverseOutput").innerHTML = reversedString;
+        }
+    </script>
+    <h4>Output will go here:
+        <aside>
+            <b id="reverseOutput"></b>
+        </aside>
+        </h4>
+</div>
+<hr>
+
+<div id="CopyButton">
+<h1>Click to Copy</h1>
+
+<script id="copy-button-script">
+    function copy(textToCopy) {
+        navigator.clipboard.writeText(textToCopy).then(function () {
+            console.log('Async: Copying to clipboard was successful!');
+            toastAlertFunc();
+        });
+    }
+    function toastAlertFunc() {
+            // Get the toastAlert DIV
+            var x = document.getElementById("toastAlert");
+
+            // Add the "show" class to DIV
+            x.className = "show";
+
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
+</script>
+<input id="textToCopy" placeholder="Type something...">
+<button onclick="copy(document.getElementById('textToCopy').value)">Copy it!</button>
+<div id="toastAlert">Copy successful!</div>
+
+</div>
+<hr>
+<h1>Autocomplete</h1>
+<p>JS to provide an auto-complete answer to a user's query.<br></p>
+
+<div id="autocomplete">
+    <input oninput="countryAutocomplete()"
+    on name="entryBox" id="autocompleteInput" placeholder="Start typing a country...">
+    <p id="autocompleteDisplay"></p>
+
+<script>
+    function countryAutocomplete() {
+            //A script that should return all the elements in an array that match the string
+            console.log("autocomplete is running")
+            var searchString = "" + document.getElementById("autocompleteInput").value
+            var countryListShort = [];
+            var len = searchString.length;
+            if (len < 1) {
+                document.getElementById("autocompleteDisplay").innerHTML = "";
+                return;
+            }
+            const countryList =
+                ["BARBADOS", "SURINAME", "NAMIBIA", "GUINEA", "VANUATU", "SAMOA", "FRANCE", "ANDORRA", "AZERBAIJAN", "MALDIVES", "SAINT LUCIA", "PANAMA", "TIMOR-LESTE", "NORTH MACEDONIA", "DENMARK", "EGYPT", "ESTONIA", "CZECHIA", "BAHAMAS", "URUGUAY", "COMOROS", "COSTA RICA", "TOGO", "SÃO TOMÉ AND PRÍNCIPE", "NETHERLANDS", "AUSTRALIA", "MALAYSIA", "NEPAL", "CUBA", "NORTH KOREA", "MOLDOVA", "ZAMBIA", "DOMINICA", "MARSHALL ISLANDS", "TONGA", "PERU", "CAPE VERDE", "KIRIBATI", "FINLAND", "IVORY COAST", "PAKISTAN", "DJIBOUTI", "MICRONESIA", "SLOVENIA", "KYRGYZSTAN", "SWITZERLAND", "KUWAIT", "SEYCHELLES", "UNITED KINGDOM", "FIJI", "YEMEN", "CENTRAL AFRICAN REPUBLIC", "BELGIUM", "ARGENTINA", "MADAGASCAR", "SOUTH AFRICA", "LATVIA", "ZIMBABWE", "GABON", "ROMANIA", "GERMANY", "BANGLADESH", "JORDAN", "MOZAMBIQUE", "ISRAEL", "ERITREA", "INDONESIA", "JAPAN", "SPAIN", "AFGHANISTAN", "UNITED ARAB EMIRATES", "MALAWI", "TURKEY", "BELARUS", "MONTENEGRO", "BOSNIA AND HERZEGOVINA", "ESWATINI", "LITHUANIA", "TURKMENISTAN", "ETHIOPIA", "HUNGARY", "CHAD", "NIGERIA", "SAN MARINO", "UKRAINE", "HAITI", "BOTSWANA", "PORTUGAL", "GUYANA", "IRELAND", "MAURITIUS", "SAINT KITTS AND NEVIS", "ICELAND", "CHILE", "KAZAKHSTAN", "CHINA", "ARMENIA", "BOLIVIA", "SUDAN", "VIETNAM", "BURUNDI", "CANADA", "COLOMBIA", "LESOTHO", "GUATEMALA", "UZBEKISTAN", "SENEGAL", "GAMBIA", "LIECHTENSTEIN", "TUVALU", "EQUATORIAL GUINEA", "BHUTAN", "PARAGUAY", "GRENADA", "PAPUA NEW GUINEA", "JAMAICA", "REPUBLIC OF THE CONGO", "POLAND", "RUSSIA", "MAURITANIA", "BURKINA FASO", "DR CONGO", "BENIN", "UGANDA", "MONGOLIA", "LAOS", "ALGERIA", "BRUNEI", "KENYA", "SRI LANKA", "DOMINICAN REPUBLIC", "AUSTRIA", "LUXEMBOURG", "GEORGIA", "SLOVAKIA", "NORWAY", "THAILAND", "INDIA", "MOROCCO", "NICARAGUA", "QATAR", "BRAZIL", "NEW ZEALAND", "SINGAPORE", "SYRIA", "BELIZE", "VENEZUELA", "BAHRAIN", "CAMEROON", "CYPRUS", "UNITED STATES", "ANGOLA", "TUNISIA", "MONACO", "RWANDA", "TRINIDAD AND TOBAGO", "MALTA", "MEXICO", "ANTIGUA AND BARBUDA", "SOUTH KOREA", "NIGER", "ALBANIA", "SOMALIA", "LIBERIA", "MYANMAR", "TANZANIA", "IRAQ", "SAINT VINCENT AND THE GRENADINES", "LIBYA", "SIERRA LEONE", "SERBIA", "GHANA", "SOUTH SUDAN", "SWEDEN", "GREECE", "PHILIPPINES", "GUINEA-BISSAU", "SAUDI ARABIA", "PALAU", "BULGARIA", "NAURU", "CAMBODIA", "ITALY", "MALI", "IRAN", "TAJIKISTAN", "OMAN", "EL SALVADOR", "LEBANON", "VATICAN CITY", "ECUADOR", "CROATIA", "SOLOMON ISLANDS", "HONDURAS"];
+            searchString = searchString.toUpperCase()
+            console.log(`Searching for "${searchString}"`)
+            for (let index = 0; index < (countryList.length); index++) {
+                var country = countryList[index];
+                var countryShort = ""
+                for (let charCount = 0; charCount < len; charCount++) {
+                    countryShort += country.charAt(charCount)
+                }
+                if (countryShort == searchString) {
+                    countryListShort.push(country)
+                }
+            }
+            document.getElementById("autocompleteDisplay").innerHTML = `Did you mean: <code> ${countryListShort}</code>`
+        }
+</script>
+
+</div>
+<hr>
+
+<div>
+    <h1>CSV to HTML</h1>
+    <p>A simple piece of JS which will <i>attempt</i> to change some raw CSV into an HTML table</p>
+    <small>At the moment, it generates an extra column on the right hand side when there are more than two rows, and for the life of me I can't work out how to stop it from doing so.<br><br></small>
+
+
+<script type="module">
+    import { csv2html } from "/wotdarchive/csv2html.js";
+    document.getElementById("csv2html").onclick = function () {
+    console.log("button pressed")
+    let input = document.getElementById("csvInput").value
+    if (input.length < 3) {return}
+    let outputelement = document.getElementById("htmlOutput");
+    let resultVal = csv2html(input);
+    outputelement.innerHTML = resultVal;
+    document.getElementById('htmlOutputContainer').className = "show"
+    }
+
+    ;
+</script>
+<textarea id="csvInput" placeholder="Paste your raw CSV here..."></textarea>
+<button id="csv2html">CSV 🔀 HTML</button>
+
+<div id="htmlOutputContainer" class="hidden">
+
+<table style="width: fit-content;margin-left:auto;margin-right:auto;min-height: 30px;background-color: rgb(234, 233, 233);align-content: center;min-width: 30px;max-width: fit-content;border-radius: var(--border-radius);" id="htmlOutput"></table>
+
+<button onclick="copy(document.getElementById('htmlOutput').innerHTML)">Copy raw HTML</button>
+</div>
+
+</div>
+</section>
+</header>
+<footer>
+    <p>© 2023 - <i> Made by <a href="/about.html" target="_blank">me
+            </a> and Agatha</i> 🐈‍⬛</p>
+    <p><i>Found this interesting? <a href="mailto:hello@mbruges.com?subject=Hello from the Internet"
+                style="font-style: normal;"> Drop me a line 📮</a>
+    </p>
+</footer>
+</body>
+
+<script>

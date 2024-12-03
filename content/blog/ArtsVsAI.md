@@ -7,7 +7,7 @@ extra:
   icon: 🍴
 ---
 
-![Saturn devouring his son](https://maxbruges.com/images/blog-images/saturn.jpg)
+![Saturn devouring his son](/images/saturn.webp)
 
 >[](note) TL;DR: The Times has been good enough to publish [my letter](https://www.thetimes.co.uk/article/times-letters-the-implications-of-using-ai-in-education-3f8ggnt7g) on this topic - so just read that if you want. Otherwise: given the infinite space afforded by a personal blog, I thought it worth elaborating my thinking here.**
 
@@ -43,7 +43,7 @@ You may stand a little more luck if you're a small school, with a head of 'digit
 ![The control room of the Chernobyl power station](https://cdn.thespaces.com/wp-content/uploads/2019/06/The-Spaces-feature-Set-design-Chernobyl-CHER_105_062018_LD_00238.jpg)
 *"Have you considered becoming an Apple-accredited school?"*
 
-The truth is, these bots are so far outside our curricula that to expect anyone on your staff to have existing expertise in them is absurd, let alone your 'head of science or digital' (and let's be honest, if they were really into LLMs, do you think they'd still be hanging around on a [U1 payscale](https://www.businessinsider.com/ai-prompt-engineer-jobs-pay-salary-requirements-no-tech-background-2023-3#:~:text=%22Prompt%20engineers%22%20train%20AI%20chatbots,always%20require%20a%20tech%20degree.)? Perhaps they'd just be writing tedious [blogposts](maxbruges.com/blog) instead).
+The truth is, these bots are so far outside our curricula that to expect anyone on your staff to have existing expertise in them is absurd, let alone your 'head of science or digital' (and let's be honest, if they were really into LLMs, do you think they'd still be hanging around on a [U1 payscale](https://www.businessinsider.com/ai-prompt-engineer-jobs-pay-salary-requirements-no-tech-background-2023-3#:~:text=%22Prompt%20engineers%22%20train%20AI%20chatbots,always%20require%20a%20tech%20degree.)? Perhaps they'd just be writing tedious [blogposts](/blog) instead).
 
 ## Don't let the truth get in the way of a good tokenized response
 
@@ -65,7 +65,7 @@ With all this in mind, the decision to focus on Science and Digital departments 
 
 So who *should* be involved?
 
-Well, I am a little [biased](https://maxbruges.com/about.html), but if prose is the name of the game, then English (and our cousins in the Humanities) ought to be top of the list. Implicitly, we use the requirement of prose as a proxy for thought. Fluent essays aren't rewarded just because they sound nice, but because they act as a symptom of organised, complex thinking.
+Well, I am a little [biased](/about), but if prose is the name of the game, then English (and our cousins in the Humanities) ought to be top of the list. Implicitly, we use the requirement of prose as a proxy for thought. Fluent essays aren't rewarded just because they sound nice, but because they act as a symptom of organised, complex thinking.
 
 English Literature and Language are, perhaps, most at risk here. Ours is the subject least rooted in the concrete and factual (beyond plot-points and grammatical rules), and most centred around nebulous and subjective ideas of style and structure. The best English students are those that [read](https://www.gl-assessment.co.uk/press-office/press-releases/new-study-highlights-the-importance-of-reading-to-the-whole-school-curriculum/) the most, and the bots have read [everything](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/#:~:text=We%20trained%20LLaMA%2065B%20and%20LLaMA%2033B%20on%201.4%20trillion%20tokens.%20Our%20smallest%20model%2C%20LLaMA%207B%2C%20is%20trained%20on%20one%20trillion%20tokens.).
 

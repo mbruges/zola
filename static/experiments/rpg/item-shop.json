@@ -1,0 +1,144 @@
+[
+    {
+        "name": "Healing Potion",
+        "cost": 30,
+        "quantity": 1,
+        "description": "A small vial containing a magic red liquid that heals 1d4+1 hit points when imbibed. The liquid fizzes and gives off a fruity aroma.",
+        "stats": "Heals 1d4+1 hit points"
+    },
+    {
+        "name": "Dagger",
+        "cost": 10,
+        "quantity": 1,
+        "description": "A basic steel dagger with a bone handle, about 9 inches long. Drab but trustworthy.",
+        "stats": "1d4 piercing damage"
+    },
+    {
+        "name": "Studded Leather armour",
+        "cost": 45,
+        "quantity": 1,
+        "description": " Well worn studded leather armour that has seen better days but still offers protection.",
+        "stats": "AC 12 + Dex modifier (max 2)"
+    },
+    {
+        "name": "Identify Potion",
+        "cost": 100,
+        "quantity": 1,
+        "description": "A potion that enables the drinker to determine properties and attributes of magic items.",
+        "stats": " Grants Identify spell for 10 minutes  "
+    },
+    {
+        "name": "Candle of Divine Light",
+        "cost": 15,
+        "quantity": 1,
+        "description": "A blessed candle that sheds bright light in a 15 foot radius and will not burn down.",
+        "stats": " Provides bright light in 15 foot radius for 24 hours"
+    },
+{
+    "name": "Healing Potion",
+    "cost": 30,
+    "quantity": 1,
+    "description": "A small vial containing a magic red liquid that heals 1d4+1 hit points when imbibed. The liquid fizzes and gives off a fruity aroma.",
+    "stats": "Heals 1d4+1 hit points"
+},
+{
+    "name": "Studded Leather armour",
+    "cost": 45,
+    "quantity": 1,
+    "description": " Well worn studded leather armour that has seen better days but still offers protection.",
+    "stats": "AC 12 + Dex modifier (max 2)"
+},
+{
+    "name": "Identify Potion",
+    "cost": 100,
+    "quantity": 1,
+    "description": "A potion that enables the drinker to determine properties and attributes of magic items.",
+    "stats": " Grants Identify spell for 10 minutes  "
+},
+{
+    "name": "Candle of Divine Light",
+    "cost": 15,
+    "quantity": 1,
+    "description": "A blessed candle that sheds bright light in a 15 foot radius and will not burn down.",
+    "stats": " Provides bright light in 15 foot radius for 24 hours"
+},
+{
+    "name": "Javelin",
+    "cost": 5,
+    "quantity": 4,
+    "stats": "Can be thrown up to 120 feet as an ranged attack with a +3 bonus",
+    "description": "A bronze javelin topped with leather fletching. Made by the local craftsmen, this simple spear can be a powerful tool in the right hands."
+},
+{
+    "name": "Dagger",
+    "cost": 10,
+    "quantity": 5,
+    "stats": "Melee attack doing 1d4 piercing damage",
+    "description": "A simple but trusty steel dagger with copper accents, use it to defend thyself!"
+},
+{
+    "name": "Backpack",
+    "cost": 2,
+    "quantity": 8,
+    "stats": "Extra 20 pounds of carrying capacity",
+    "description": "A simple canvas backpack to help carry your treasure and gear on your adventures."
+},
+{
+    "name": "Healer's Kit",
+    "cost": 5,
+    "quantity": 3,
+    "stats": "Grants +2 bonus to healing rolls",
+    "description": "A leather pouch containing bandages, salves, and herbs to treat common wounds and ailments."
+},
+{
+    "name": "Crowbar",
+    "cost": 2,
+    "quantity": 10,
+    "stats": "Melee attack dealing 1d6 bludgeoning damage",
+    "description": "A sturdy iron crowbar that could open locks or bust skulls in a pinch."
+},
+{
+    "name": "Shortsword",
+    "cost": "10gp",
+    "stats": {
+        "damage": "1d6 slashing",
+        "weight": " 2 lb.",
+        "properties": "finesse"
+    },
+    "description": "A well balanced short blade good for hacking and slashing against multiple opponents. Shortswords are light and nimble weapons favoured by rogues and fighters just starting their adventuring careers."
+},
+{
+    "name": "Club",
+    "cost": "2sp",
+    "stats": {
+        "damage": "1d4 bludgeoning",
+        "weight": "2  lb.",
+        "properties": "light"
+    },
+    "description": "A simple wooden stick that makes a loud noise and delivers painful blunt force when swung with force. Clubs are inexpensive but highly effective weapons in the hands of skilled warriors."
+},
+{
+    "name": "Leather armour",
+    "description": "Simple leather armour made of hardened leather.",
+    "armourClass": 11,
+    "strengthRequirement": 0,
+    "stealthDisadvantage": true,
+    "cost": 10
+},
+{
+    "name": "Traveller's Clothes",
+    "description": "Simple outfit of a shirt, breeches and cloak for staying warm and reasonably protected on the road.",
+    "armourClass": 11,
+    "cost": 2
+},
+{
+    "name": "Healer's Kit",
+    "description": "Contains bandages, salves and herbs to treat wounds.",
+    "cost": 5
+},
+{
+    "name": "Holy Symbol",
+    "description": "A symbol of your deity to focus your prayers and gain divine inspiration.",
+    "cost": 5
+}
+]

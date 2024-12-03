@@ -10,7 +10,7 @@ description = "It's nice to meet you."
 
 ...though unless you're *very* tenacious with your Googling, we've probably met already [^1]
 
-I built this website largely as a place to practice my coding and to learn new skills (the details of which I will bore you with [here on the blog](/blog)).  What started as some shoddily handcrafted HTML is now a slightly slicker static-site. So poke around and try some of the [experiments](https://maxbruges.com/experiments.html). Feel free to download and use the [resources](https://maxbruges.com/resources.html), too.
+I built this website largely as a place to practice my coding and to learn new skills (the details of which I will bore you with [here on the blog](/blog)).  What started as some shoddily handcrafted HTML is now a slightly slicker static-site. So poke around and try some of the [experiments](/experiments). Feel free to download and use the [resources](https://maxbruges.com/resources.html), too.
 
 I have been Head of English for a few years now, long enough to know that we can always be doing more to experiment and improve. Hopefully, what you find here will help you to do just that.
 

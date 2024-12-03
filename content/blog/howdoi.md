@@ -7,11 +7,11 @@ extra:
 description: "The simplest question is always the best"
 ---
 
-![how](/how-do-i.gif)
+![how](/images/how-do-i.gif)
 
 It's been nearly two years since I started fiddling with LLMs. In many ways, they're the perfect technology to *tinker* with: zero up-front cost, straight-forward documentation, with plaintext input and output.
 
-As with most overhyped start-ups, my tinkering has largely been in the form of writing fancy wrappers around an API. I've tested out a few - some [silly](https://maxbruges.com/bard-or-bot), some [deadly serious](https://maxbruges.com/flambards), and some making use of my [day-job pedagogy](https://maxbruges.com/codefixer) to channel the Magic Talking Computers into something useful.
+As with most overhyped start-ups, my tinkering has largely been in the form of writing fancy wrappers around an API. I've tested out a few - some [silly](/experiments/bard-or-bot.html), some [deadly serious](/experiments/flambards.html), and some making use of my [day-job pedagogy](/experiments/codefixer.html) to channel the Magic Talking Computers into something useful.
 
 ## One question, one answer
 
@@ -19,7 +19,7 @@ But the best application I've built - the one I use every day, a dozen times a d
 
 Sometimes, you just want the computer to do The Thing; to turn your fleshy human thoughts into clean coded commands. And that's exactly what I built `cai` to do:
 
-![CAI in action in the terminal](cai.gif)
+![CAI in action in the terminal](/images/cai.gif)
 
 One question, one actionable answer.
 

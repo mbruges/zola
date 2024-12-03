@@ -9,7 +9,7 @@ extra:
 
 ![A laptop showing 'hello world'](https://images.unsplash.com/photo-1644792863360-40fa85ea52e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=530&q=80)
 
-As it says [on the tin](http://maxbruges.com/index.html): I’m a teacher. It’s an incredible career, and one I’m proud to be part of.
+As it says [on the tin](/about): I’m a teacher. It’s an incredible career, and one I’m proud to be part of.
 
 But a niggling feeling started to at the back of my mind a few months ago.
 
@@ -25,7 +25,7 @@ It’s remarkable, really. It’s as though we experience collective amnesia abo
 
 But ever a glutton for punishment, I have thrown myself back into the unforgiving maw of learning, willingly.
 
-[This website you’re on right now](maxbruges.com) - in all its hacked-together glory  - represents the half-ripened fruits of that process.
+[This website you’re on right now](/) - in all its hacked-together glory  - represents the half-ripened fruits of that process.
 
 ## Fit your own lightbulbs
 
@@ -45,6 +45,6 @@ Knowing that anyone with a Wi-Fi connection and a browser can access what you sh
 
 Having faffed around with Javascript and a little Python, there’s a great deal to be said for solidifying the nebulous world of `monospaced type` on a black screen into something more tangible and designed.
 
-This site is less a [showcase](https://maxbruges.com/codeplayground.html) or portfolio, and more a sketchbook. There are lots of ideas here in various states of completion. Some are [demos at 99% functionality](https://maxbruges.com/wotd.html), some are [projects I've put on ice](https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171) for the foreseeable, and some are [abominations of half-formed code](https://maxbruges.com/codeplayground.html) that really ought to be put out of their misery.
+This site is less a [showcase](/experiments/codeplayground.html) or portfolio, and more a sketchbook. There are lots of ideas here in various states of completion. Some are [demos at 99% functionality](/experiments/wotd.html), some are [projects I've put on ice](https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171) for the foreseeable, and some are [abominations of half-formed code](/experiments/codeplayground.html) that really ought to be put out of their misery.
 
 But each one represents one of those lightbulbs. And even if they only give off a flicker, they’re worth keeping around. 💡

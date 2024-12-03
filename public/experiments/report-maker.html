@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/old-style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="A page for generating school reports">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB - Report Maker</title>
+<div id="toastAlert"></div>
+<script src="/markdown-it.min.js"></script>
+<script>
+    function convertMD() {
+        var md = document.getElementById('report').innerHTML
+        const mdRenderer = window.markdownit();
+        const html = mdRenderer.render(md);
+        document.getElementById('report').innerHTML = html;
+        console.log("Converted to Markdown")
+    }
+</script>
+<script type="module">
+    import {
+        prettifyCode, askGPT, hideLoader, showLoader, showResponseContainer, hideResponseContainer, saveThing, loadThing, downloadHTML, copy, notificationAlert, tokenToDollar
+    } from "/head-functions.js";
+
+    function displayStudent(studentCode, elementToDisplay, whereToDisplay) {
+        let student = window.localStorage.getItem(`${studentCode}`);
+        student = JSON.parse(student)
+        console.log(student.name)
+        document.getElementById(`${whereToDisplay}`).innerHTML = student.name
+    }
+
+   function saveStudent(inputName, inputYear, inputRFL, inputBFL, inputReport, studentCode) {
+
+
+        const student = {
+            name: `${inputName}`,
+            year: `${inputYear}`,
+            rfl: `${inputRFL}`,
+            bfl: `${inputBFL}`,
+            report: `${inputReport}`,
+            code: `${studentCode}`
+        }
+
+        window.localStorage.setItem(`${studentCode}`, JSON.stringify(student));
+        console.log(`Saved student ${inputName}`)
+    }
+
+    //Copy button
+    document.getElementById('copyReport').onclick = () => {
+        let content = document.getElementById('report').innerHTML
+        copy(content)
+    }
+
+    //Saves the inputs to variables
+    /*
+    document.getElementById('inputs').onchange = () => {
+        var name = document.getElementById('name').value;
+        var year = document.getElementById('year').value;
+        var RfL = document.getElementById('RfL').value;
+        var BfL = document.getElementById('BfL').value;
+        var length = document.getElementById('length').value;
+        var comments = document.getElementById('comments').value;
+        var report = document.getElementById('report').innerHTML
+        console.log("inputs updated")
+    }*/
+
+    //Generate the report
+    document.getElementById('AskGPTbutton').onclick = () => {
+
+        var name = document.getElementById('name').value;
+        var year = document.getElementById('year').value;
+        var RfL = document.getElementById('RfL').value;
+        var BfL = document.getElementById('BfL').value;
+        var progress = document.getElementById('progress').value;
+        var length = document.getElementById('length').value;
+        var subject = document.getElementById('subject').value;
+        var tone = document.getElementById("tone").value
+        var comments = document.getElementById('comments').value;
+        var report = document.getElementById('report').innerHTML
+        var topics = document.getElementById('topics').value
+        console.log("inputs updated")
+
+        if (comments.length > 2) {
+           comments = `Also mention: ${comments}`
+        } else {comments = " "};
+
+        var api = document.getElementById('api-input').value
+        if (api < 32) {
+            notificationAlert("Please enter API key"); return;
+        }
+        let prompt = `You are a teacher at a British school, writing end of year reports on students. Comment on progress and behaviour of the student in the subject, with reference to topics covered (${topics}). Provide 2 positive comments 2 suggested actions to improve. You must respond only with the body of the report itself, no other preamble. Do not write a letter.\n Produce a school report for the following student:
+        \n Name: ${name}. Year-group: ${year}. \n Subject: ${subject}.\n  Behavior is ${BfL}. \n Academic progress: ${progress}.\n${comments}. Limit length to ${length} characters. Tone should be ${tone}`
+        const role = ''
+        console.log(`Asking GPT: ${prompt}`);
+        let tokens = (length/2)
+        askGPT(api,prompt,role,tokens,'report')
+    }
+
+document.getElementById('report').onchange = () =>
+{convertMD()}
+
+    //Save key
+    document.getElementById('saveKey').onclick = () => {
+        saveThing('api-input', 'API-key'),
+        notificationAlert("Key saved successfully 🔑")
+    }
+
+    //Load key
+    window.onload = () => {
+        loadThing('api-input','API-key');
+        let api = document.getElementById('api-input').value
+        if (api.length > 31) {
+            notificationAlert("Welcome back. API key loaded successfully 🔑")
+        }
+    }
+   /* //Save Buttons
+    document.getElementById('saveStudent').onclick = () => {
+        saveStudent(name, year, RfL, BfL, report, code);
+        notificationAlert(`Student '${name}' saved!`)
+    }
+
+    document.getElementById('saveStudent').onclick = () => {
+            saveStudent(name, year, RfL, BfL, report, code);
+            notificationAlert(`Student '${name}' saved!`)
+        }
+
+    //Display button
+    document.getElementById('displayStudent').onclick = () => {
+        let displayCode = document.getElementById('displaystudentcode').value;
+        displayStudent(displayCode,'year','displaybox')
+    }
+
+*/
+    //Save topics
+    document.getElementById('save-topics').onclick = () =>{
+        let subject = "" + document.getElementById('subject').value
+        let year = "" + document.getElementById('year').value
+        if (year.length > 2) {
+            year = year[0] + year[1]
+        }
+        if (subject == "generic") {
+            notificationAlert("Select a subject and year-group before saving");
+            return;
+        }
+        let topicKey = "" + subject + year;
+        let topicContent = "" + document.getElementById('topics').value
+        localStorage.setItem(topicKey,topicContent)
+        notificationAlert(`Saved topics for Year ${year} ${subject}`)
+    }
+
+    //Load topics
+    document.getElementById('subject').onchange = () => {
+        console.log("is this thing on?")
+        let subject = "" + document.getElementById('subject').value
+        let year = "" + document.getElementById('year').value
+        if (year.length > 2) {
+            year = year[0] + year[1]
+        }
+        let topicKey = "" + subject + year;
+
+        let topicContent = localStorage.getItem(topicKey)
+        document.getElementById('topics').value = topicContent
+        notificationAlert(`Loaded Year ${year} ${subject} topics from memory`)
+    }
+
+//Initialising the database
+
+//Jesus, this is absolutely the most complicated part. Why did I bother trying to implement save functionality? I think I might give up.
+//Code doesn't seem to be recognising existing Entries at the moment. Oh well.
+
+    window.onload = () => {
+
+        //WHAT ABOUT SUBJECTS
+        var database = JSON.parse(localStorage.getItem('database'))
+        if (database == undefined){
+            console.log("database not defined")
+            var database = [
+                {
+                    name: "Test Student",
+                    code: "TestStudent7",
+                    year: 7,
+                    data: [
+                        ['subject', 'bfl', 'rfl', 'comments', 'progress', 'report-text'],
+                    ],
+                },
+            ]
+        }
+        localStorage.setItem('database', JSON.stringify(database))
+        database = JSON.parse(localStorage.getItem('database'))
+        console.log("Loaded database. Consists of " + database.length + " entries. Last entry is: " + database[(database.length-1)].name)
+    }
+
+//Saving new entry
+document.getElementById('saveStudentButton').onclick = () => {
+var database = JSON.parse(localStorage.getItem('database'))
+
+        var inputName = "" + document.getElementById('name').value;
+        var inputYear = parseInt(document.getElementById('year').value);
+        var inputRfL = "" + document.getElementById('RfL').value;
+        var inputBfL = "" + document.getElementById('BfL').value;
+        var inputProgress = "" + document.getElementById('progress').value;
+        var inputLength = "" + document.getElementById('length').value;
+        var inputSubject = "" + document.getElementById('subject').value;
+        var inputTone = "" + document.getElementById("tone").value
+        var inputComments = "" + document.getElementById('comments').value;
+
+//Quick check to see if name and year have been inputted
+        if (!(inputName.length > 2) || !(Number.isInteger(inputYear))) {notificationAlert("please enter student name and year");
+        return;}
+
+        //allocating student id code
+        var inputReport = document.getElementById('report').innerHTML
+        var studentCode = inputName + "Y" + parseInt(inputYear)
+        studentCode = studentCode.replaceAll(" ","-")
+
+//Here, we check if a student of same name and year already exists
+        let checkExistingStudents = []
+        for (let index = 0; index < database.length; index++) {
+            const element = database[index].code;
+            checkExistingStudents.push(element)
+        }
+            for (var studentIndex = 0; studentIndex < checkExistingStudents.length; studentIndex++) {
+                var element = checkExistingStudents[studentIndex];
+                if (studentCode == element) {
+                    let realName = database[studentIndex].name + ", Year " + database[studentIndex].year;
+                    notificationAlert(`Student ${realName} already exists`);
+                    var newData = [inputSubject, inputBfL, inputRfL, inputComments, inputProgress, inputReport];
+
+                //Now, we check if the SUBJECT has been logged before.
+                    for (let subjIndex = 0; subjIndex < database[studentIndex].data.length; subjIndex++) {
+                            const existingSubject = database[studentIndex].data[index][0];
+                            console.log(existingSubject)
+                            if (newSubject == existingSubject) {
+                                database[studentIndex].data[subjIndex] = newData
+                                console.log('Entry for ' + existingSubject + " has been replaced"); return console.log(database[studentIndex]);
+                            } else {
+                                database[studentIndex].data.push(newData)
+                                }
+
+
+                    }
+
+                //This code is executed if the subject DOESN'T exist
+                    database[index].data.push(newData)
+                    console.log(database[database.length - 1])
+
+                    localStorage.setItem('database', JSON.stringify(database))
+                    notificationAlert(`${inputName} saved`)
+                    return;
+                }
+
+                //This code is executed if the student DOESN'T exist already
+                else
+                {let newStudent = {
+                    name: `${inputName}`,
+                    code: `${studentCode}`,
+                    year: `${inputYear}`,
+                    data: [
+                        [inputSubject, inputBfL, inputRfL, inputComments, inputProgress, inputReport],
+                        ]
+                    }
+                    database.push(newStudent)
+                    console.log(database[database.length - 1])
+
+                    localStorage.setItem('database', JSON.stringify(database))
+                    notificationAlert(`${inputName} saved`)
+                }
+            }
+        }
+
+//Autocomplete
+    function autoComplete() {
+        //A script that should return all the elements in an array that match the string
+        console.log("autocomplete is running")
+        var searchString = "" + document.getElementById("name").value
+        var nameListShort = [];
+        var len = searchString.length;
+        if (len < 2) {
+            document.getElementById("autocompleteDisplay").innerHTML = "";
+            return;
+        }
+        var database = JSON.parse(localStorage.getItem('database'))
+        let list = Object.keys(database)
+        console.log("database loaded successfully " + list)
+        var nameList = []
+        for (let index = 0; index < list.length; index++) {
+            let codeName = list[index];
+            console.log("codeName = " + codeName)
+            let realName = database[codeName][name]
+            nameList = nameList + (realName)
+        }
+        console.log(nameList)
+
+        searchString = searchString.toUpperCase()
+        console.log(`Searching for "${searchString}"`)
+        for (let index = 0; index < (nameList.length); index++) {
+            var autoName = nameList[index];
+            var autoNameShort = " "
+            for (let charCount = 0; charCount < len; charCount++) {
+                autoNameShort += autoName.charAt(charCount)
+            }
+            if (autoNameShort == searchString) {
+                nameListShort.push(`<sup>${autoName}</sup> `)
+            }
+        }
+        document.getElementById("autocompleteDisplay").innerHTML = `${autoNameShort}`
+    }
+    document.getElementById('name').oninput = () =>{
+    autoComplete()}
+</script>
+
+
+</head>
+
+<body>
+    <header>
+       <nav>
+            <div class="dropdown">
+            <a id="catNav"><img alt="miaow" src="/favicon.svg" height="40" width="40"></a>
+            <div class="dropdown-content">
+                    <a href="/experiments.html">Experiments</a>
+                    <a href="/resources.html">Resources</a>
+                    <a href="/blog.html">Blog</a>
+                </div>
+            </div>
+            <ul>
+                <li><a href="/"> Home </a></li>
+            </ul>
+    </nav>
+
+        <!--
+
+This page will generate reports. First we need to set up a way for it to store JSONs for each student.-->
+
+        <h1>Report Writer</h1>
+        <h3>Use GPT3.5 to help write reports.</h3>
+<div id="inputs">
+    <div id="apikey">
+        <details style="padding: 0px; margin: 3px;">
+            <summary style="font-size: smaller; color:grey">API key 🔑</summary><input type="text" id="api-input" style="font-size: 10px;
+                                font-family: monospace; text-align: center; max-width: 318px; background-color:lightgrey"
+                placeholder="sk-someth1ng....."><a id="saveKey"><sup style="cursor: pointer";>Save to cache 💾
+                </sup></a><br>
+            <small>Key is saved to your local browser cache. It can only be accessed by you and OpenAI.<br> Total tokens
+                used are also tracked in the cache.</small>
+
+            <code>Rough spend so far: <b id="spendTrackerDisplay">$0.00</b></code>
+            </script>
+        </details>
+        <div id="toastAlert"></div>
+    </div>
+
+    <input type="text" style="text-align: center;min-width:100px;max-width: fit-content;font-size: large;" id="name" placeholder="Student name?" value="John Smith">
+    <div id="autocompleteDisplay"></div>
+    <input id="displaystudentcode" placeholder="code?" value="" class="hidden">
+</header>
+<br>
+<section style="text-align: center;">
+<aside>
+    <select id="year" placeholder="Year?">
+        <option value="">Year-group?</option>
+        <option value="7">Year 7</option>
+        <option value="8">Year 8</option>
+        <option value="9"> Year 9</option>
+        <option value="10 (1st year of GCSE)">Year 10</option>
+        <option value="11 (GCSE exam year)">Year 11</option>
+        <option value="12">Year 12</option>
+        <option value="13 (A-Level exam year)">Year 13</option>
+    </select>
+    <select id="subject">
+        <option value="generic">Subject?</option>
+        <option value="English">English</option>
+        <option value="Maths">Maths</option>
+        <option value="Science">Science</option>
+        <option value="History">History</option>
+        <option value="Geography">Geography</option>
+        <option value="Languages">MFL</option>
+        <option value="Art">Art</option>
+        <option value="Music_Drama">Music & Drama</option>
+        <option value="Physical education">PE</option>
+        <option value="Arabic">Arabic</option>
+        <option value="Business">Business Studies</option>
+    </select>
+    </aside>
+    <aside>
+    <textarea type="text" id="topics" style="min-height:70%;font-family: var(--font-family);margin-bottom: 8px;" placeholder="Topics covered this term include..."></textarea>
+    <sup id="save-topics" style="margin-top: 0px; margin-block-end: 3px; pointer-events: all;cursor: pointer;">Save 💾</sup>
+
+    </aside>
+
+
+    <aside>
+    <select id="RfL">
+        <option value="ok">Readiness for Learning?</option>
+        <option value="poor">Poor</option>
+        <option value="requires-improvement">Requires Improvement</option>
+        <option value="good">Good</option>
+        <option value="outstanding">Outstanding</option>
+    </select>
+    <br>
+    <select id="BfL">
+        <option value="ok">Behaviour for Learning?</option>
+        <option value="poor">Poor</option>
+        <option value="requires-improvement">Requires Improvement</option>
+        <option value="good">Good</option>
+        <option value="outstanding">Outstanding</option>
+    </select>
+</aside>
+
+<aside>
+        <!--progress slider-->
+<DIV>
+    <i>Academic progress</i>
+
+    <input type="range" id="progressSlider" value="neutral" min="0" max="4" step="1"
+        style="margin-bottom: 1px;">
+    <script>
+        // This script updates the count as the slider is moved
+
+        var progressRating = ["Concerning", "A bit behind", "On-track", "Good", "Excellent"]
+        document.getElementById("progressSlider").oninput = function () {
+            document.getElementById("progress").innerHTML = progressRating[document.getElementById("progressSlider").value];
+            document.getElementById("progress").value = progressRating[document.getElementById("progressSlider").value]
+        };
+    </script>
+    <h3 id="progress" value="on-track">On-track</h3>
+</DIV>
+</aside>
+<aside>
+    <textarea id="comments" placeholder="Any specific comments?" style="min-height:80%;font-family: var(--font-family);"></textarea>
+
+</aside>
+
+<!--Tone slider-->
+<aside>
+    <i>Tone of report</i>
+
+    <input type="range" id="toneSlider" value="neutral" min="0" max="4" step="1" style="margin-bottom: 1px;">
+    <h2 style="padding: 0px; margin: 0px; font-size: 50px;" id="tone" value="neutral">😐</h2>
+    <script>
+        //This script updates the count as the slider is moved
+        var tones = ["stern","mildly disappointed","neutral","warm","enthusiastic"]
+        var face = ["😡","😔","😐","🙂","😀"]
+        document.getElementById("toneSlider").oninput = function () {
+            document.getElementById("tone").innerHTML = face[document.getElementById("toneSlider").value];
+            document.getElementById("tone").value = tones[document.getElementById("toneSlider").value]
+        };
+    </script>
+</aside>
+</section>
+
+<div style="display: block; margin-left: auto; margin-right: auto;text-align: center;">
+<code style="text-align: center;margin-bottom: 0px;" id="lengthTracker"></code>
+<input style="margin-top: 1px;padding: 0px;" type="range" id="length" value="1000" min="100" max="4000" step="100">
+<script>
+    //This script updates the count as the slider is moved
+    document.getElementById("lengthTracker").innerHTML = document.getElementById("length").value + " characters long";
+    document.getElementById("length").oninput = function () {
+        document.getElementById("lengthTracker").innerHTML = `${document.getElementById("length").value} characters long`;
+    };
+</script>
+<sup style="cursor: pointer;" id="saveStudentButton">Save student data 💾</sup><br>
+    <button style="font-size: larger;" id="AskGPTbutton">Generate Report 🤖</button>
+</div>
+</div>
+
+<div id="thinking-loader" class="loader.hidden"></div>
+<div id="response-container">
+    <form id="report" class="hidden" style="max-width: 100;color: aliceblue;background-color: black;font-family: monospace;font-size: larger;" placeholder="Report will appear here">Report will appear here</form>
+
+</div>
+<sup class="hidden" style="display:block;margin-left:auto;margin-right:auto;cursor: pointer;text-align: center;max-width: fit-content;" id="copyReport">Copy text 📋</sup>
+<script>
+    document.getElementById('report').onchange = () => {
+        document.getElementById('copyReport').className = "show"
+    };
+</script>
+
+</header>
+<footer>
+    <p>© 2023 - <i> Made by <a href="/about.html" target="_blank">me
+            </a> and Agatha</i> 🐈‍⬛</p>
+    <p><i>Found this interesting? <a href="mailto:hello@mbruges.com?subject=Hello from the Internet"
+                style="font-style: normal;"> Drop me a line 📮</a>
+    </p>
+</footer>
+</body>
+</html>

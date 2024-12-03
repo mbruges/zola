@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/favicon.svg">
+    <!--<link rel="stylesheet" href="/dnd-style.css">-->
+    <link rel="stylesheet" href="/old-style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="A Dungeons and Dragons character sheet generator, powered by ChatGPT">
+
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://mbruges.com/images/banner-square.png" />
+    <meta property="og:image:width" content="315" />
+    <meta property="og:image:height" content="315" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://mbruges.com/rpg/dnd.html" />
+
+    <title>MB - DnD Character Generator</title>
+<script id="loader-animation">
+    //These are the functions to toggle the loading animation and to hide the request button.
+    function hideLoader() {
+        let loader = document.getElementById('thinking-loader');
+        loader.className = "loader.hidden";
+        let button = document.getElementById('charGenButton');
+        button.className = "";
+    }
+    function showLoader() {
+        let loader = document.getElementById('thinking-loader');
+        loader.className = "loader";
+        let button = document.getElementById('charGenButton');
+        button.className = "hidden";
+    }
+    function showResponseContainer() {
+        let container = document.getElementById('response-container');
+        container.className = "";
+        container.scrollIntoView();
+    }
+    function hideResponseContainer() {
+        let button = document.getElementById('charGenButton');
+        button.className = "hidden";
+    }
+
+</script>
+<script id="saveToken">
+    //This script saves the string entered into "APItokenInput" to local storage
+    function saveToken() {
+        let storedToken = "" + document.getElementById("APItokenInput").value
+        localStorage.setItem("APItoken", storedToken);
+    }
+
+    //...and this script returns that token on page load.
+    function returnAPItoken() {
+        let savedToken = localStorage.getItem("APItoken")
+        console.log("Token saved is: " + savedToken)
+        document.getElementById("APItokenInput").value = savedToken;
+    }
+    //This gives a notification to say it was successful in saving.
+    function saveAlert() {
+        // Get the toastAlert DIV
+        var x = document.getElementById("toastAlert");
+        // Add the "show" class to DIV
+        x.className = "show";
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+    }
+    //This simply converts tokens into dollars for a rough spending guide.
+    function tokenToDollar(tokenVol) {
+        dollarSpend = tokenVol * 0.000002;
+        return dollarSpend
+    }
+</script>
+
+<script id="copy-download-scripts">
+    function copy() {
+        let content = document.getElementById("characterSheetOutput").innerHTML;
+        navigator.clipboard.writeText(content); copyalert();
+    };
+    function downloadFile() {
+        const link = document.createElement("a");
+        const content = `<html><head><link rel="stylesheet" href="https://mbruges.com/style.css">
+<body><header>` + document.getElementById("characterSheetOutput").innerHTML +
+                `</header><footer><small><i>2023 -  Generated <a href="https://mbruges.com/rpg/dnd.html" target="_blank">here</a>, using code by <a href="https://mbruges.com/index.html" target="_blank">Max Bruges</a> </i> 🐈‍⬛ </small></footer></body>`;
+        const file = new Blob([content], { type: 'text/plain' });
+        link.href = URL.createObjectURL(file);
+        let randFileName = document.getElementById("fileNameStore").innerHTML + ".html"
+        link.download = randFileName;
+        link.click();
+        URL.revokeObjectURL(link.href);
+    };
+</script>
+<script id="illustration-generator"> function illustrationGenerator() {
+        var imageURL = ""
+        document.getElementById("urlStore").value = imageURL
+        var APItoken = "" + document.getElementById("APItokenInput").value;
+        var charDetails = document.getElementById("summaryContainer").value
+        var prompt = `An illustration of this Dungeons and Dragons character: ${charDetails}`;
+
+        var quantity = 1;
+
+        var format = "url";
+
+        var size = "256x256";
+        console.log("Generating image");
+        var url = "https://api.openai.com/v1/images/generations";
+        var bearer = 'Bearer ' + APItoken
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Authorization': bearer,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "prompt": prompt,
+                "n": quantity,
+                "size": size,
+                "response_format": format,
+            })
+        }).then(response => {
+
+            return response.json()
+
+        }).then(data => {
+            console.log(`Image url is: ${data.data[0].url}`);
+            imageURL = data.data[0].url;
+            document.getElementById("urlStore").value = imageURL
+        })
+            .catch(error => {
+                console.log('Something went wrong. This is the error: ' + error)
+            });
+    }
+</script>
+
+<script id="Character Generator"> function charGen(){
+    console.log("running charGen")
+    showResponseContainer();
+    showLoader();
+    document.getElementById('characterSheetOutput').innerHTML = `<h1 style="font-family:cursive;">Scouring the tavern...</h1>`
+    var APItoken = "" + document.getElementById("APItokenInput").value;
+                                      if (APItoken.length < 35) {
+                                          console.log("enter your API key");
+                                          document.getElementById('characterSheetOutput').innerHTML = `Please enter your <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API token</a> above, then try again.`
+                                          hideLoader();
+                                        return;
+                                      }
+    const firstNameArray = [[
+    "Alden", "Alaric", "Balthazar", "Bertram", "Cassius", "Cedric", "Darian", "Darius", "Donovan", "Draven", "Eldrick", "Emrys", "Finnegan", "Gareth", "Gideon", "Gregor", "Henrik", "Ignatius", "Lysander", "Magnus", "Malcolm", "Marius", "Neville", "Orlando", "Percival", "Quinlan", "Rafferty", "Soren", "Tiberius", "Ulric",
+],[
+        "Adalyn", "Aria", "Camilla", "Cecilia", "Clarissa", "Dahlia", "Evelyn", "Fiona", "Giselle", "Helena", "Isadora", "Jasmine", "Katarina", "Lilith", "Maeve", "Natalia", "Ophelia", "Raven", "Serena", "Thalia", "Valentina", "Xandra", "Ysabel", "Zaria", "Allegra", "Briar", "Calla", "Davina", "Eira", "Frostine"
+    ]]
+
+    const surnameArray = [
+    "Harkness",
+    "Tallis",
+    "Ashford",
+    "Blackwood",
+    "Crestwood",
+    "Galloway",
+    "Forrester",
+    "Westerling",
+    "Greystone",
+    "Hartwood",
+    "Ironwood",
+    "Brynden",
+    "Targaryen",
+    "Baratheon",
+    "Tyrell",
+    "Lannister",
+    "Stark",
+    "Greyjoy",
+    "Martell",
+    "Arryn",
+    "Tully",
+    "Frey",
+    "Bolton",
+    "Manderly",
+    "Karstark",
+    "Umber",
+    "Clegane",
+    "Tarly",
+    "Dayne",
+    "Qorgyle",
+    "Florent",
+    "Royce",
+    "Redwyne",
+    "Hightower",
+    "Blackfyre",
+    "Crane",
+    "Butterwell",
+    "Vance",
+    "Yronwood",
+    "Dondarrion",
+    "Fossoway"
+]
+
+    const villageArray = [
+  "Bathampton",
+  "Berrow",
+  "Boscastle",
+  "Buckland Monachorum",
+  "Cheddar",
+  "Clovelly",
+  "Dulverton",
+  "Evercreech",
+  "Ilfracombe",
+  "Kingsand",
+  "Lacock",
+  "Lansallos",
+  "Lifton",
+  "Looe",
+  "Mells",
+  "Merriott",
+  "Milverton",
+  "Minehead",
+  "North Petherton",
+  "Pensford",
+  "Plymtree",
+  "Porlock",
+  "Poundbury",
+  "Priston",
+  "Salcombe",
+  "Seaton",
+  "Shaldon",
+  "St Mawgan",
+  "Stoke St Gregory",
+  "Stourhead",
+  "Sutton Montis",
+  "Tintagel",
+  "Uffculme",
+  "Wells",
+  "Weston-super-Mare",
+  "Weymouth",
+  "Winsford",
+  "Withypool",
+  "Wrington",
+  "Yatton",
+  "Yeovil"
+]
+
+    const playerClassArray = [
+    "Barbarian",
+    "Bard",
+    "Cleric",
+    "Druid",
+    "Fighter",
+    "Monk",
+    "Paladin",
+    "Ranger",
+    "Rogue",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+];
+
+    const playerRaceArray = [
+    "Dragonborn",
+    "Dwarf",
+    "Elf",
+    "Gnome",
+    "Half-Elf",
+    "Half-Orc",
+    "Halfling",
+    "Human",
+    "Orc",
+    "Tiefling",
+]
+
+const backgrounds = [
+    "Acolyte",
+    "Charlatan",
+    "Criminal/Spy",
+    "Entertainer/Gladiator",
+    "Folk Hero",
+    "Guild Artisan/Guild Merchant",
+    "Hermit",
+    "Noble/Knight",
+    "Outlander",
+    "Sage",
+    "Sailor/Pirate",
+    "Soldier",
+    "Urchin"
+]
+
+const alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Neutral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'];
+
+const secretsArray = [
+    ` is a murderer, having killed someone close to them in a fit of rage and has been on the run ever since.`, ` is a former cult member who once participated in dark rituals, but has since left the cult and is trying to make amends for their past.`, ` is addicted to a dangerous substance or pleasure and will stop at nothing to indulge in it.`, ` has a secret family or love affair that they will do anything to protect, even if it means committing dark deeds.`, ` is harboring a powerful and dangerous magical artifact that could cause destruction if it falls into the wrong hands.`, ` has a terrible disease or curse that they are hiding from their allies and will do anything to find a cure or keep it secret.`, ` is a spy or double agent, secretly working for an enemy faction and sabotaging their current allies.`, ` is a former member of a thieves' guild, having stolen valuable goods and treasure that they are trying to keep hidden.`, ` is possessed or controlled by a dark entity, which threatens to take over their mind and body unless they take regular precautions.`, ` has memories or experiences that are repressed or altered, causing them to question their own identity and sanity.`]
+//Name and gender
+    let charGender = document.getElementById('genderSelect').value
+    if (charGender == "rand") {
+        charGender = Math.round(Math.random())
+    } else {charGender = parseInt(charGender)}
+
+    let rand1 = Math.floor(Math.random()*30)
+    let rand2 = Math.floor(Math.random()*(surnameArray.length))
+    const charFirstName = "" + firstNameArray[charGender][rand1]
+    const charSurname = "" + surnameArray[rand2]
+    const charName = "" + charFirstName + " " + surnameArray[rand2];
+    console.log(charName)
+    document.getElementById("fileNameStore").innerHTML = `${charFirstName}${charSurname}`
+
+    //document.getElementById('charname').value = charName;
+
+//Class
+    let charClass = document.getElementById('classSelect').value;
+    if (charClass == "RANDOM"){
+        charClass = playerClassArray[Math.floor(Math.random() * 8)]
+    };
+    //document.getElementById('classlevel').value = charClass;
+
+//Race
+    let charRace = document.getElementById('raceSelect').value;
+    if (charRace == "RANDOM") {
+                 charRace = playerRaceArray[Math.floor(Math.random() * 10)]
+             };
+   // document.getElementById('race').value = charRace;
+
+
+//Background
+    let charBackground = document.getElementById('backgroundSelect').value;
+    if (charBackground == "RANDOM") {
+        charBackground = backgrounds[Math.floor(Math.random() * 12)]
+    };
+    let charSecret = secretsArray[Math.floor(Math.random()*9)]
+    //document.getElementById('background').value = charBackground;
+
+//Alignment
+    let charAlignment = document.getElementById('alignmentSelect').value;
+    if (charAlignment == "RANDOM") {
+        charAlignment = alignments[Math.floor(Math.random() * 8)]
+    };
+    //document.getElementById('alignment').value = charAlignment;
+
+    const charSummary = `${charName} is a ${charAlignment} ${charRace} ${charClass}, with a background as a ${charBackground}`;
+    console.log(charSummary);
+    document.getElementById('summaryContainer').value = charSummary;
+    illustrationGenerator();
+
+//Using GPT-3.5 to write the character details;
+
+             var url = "https://api.openai.com/v1/chat/completions";
+             var bearer = 'Bearer ' + APItoken
+             console.log("Calling chatGPT via POST...")
+             fetch(url, {
+                 method: 'POST',
+                 headers: {
+                     'Authorization': bearer,
+                     'Content-Type': 'application/json'
+                 },
+                 body: JSON.stringify({
+                     "model": "gpt-3.5-turbo",
+                     "messages": [
+                         { "role": "system", "content": "" },
+                         { "role": "user", "content": "" },
+                         { "role": "assistant", "content": "" },
+                         { "role": "user", "content": `Write a 70-word backstory discussing the history, personality, ideals, and flaws for this D&D character: ${charSummary}. Respond only with the backstory itself, no commentary. Use <br> for linebreaks.`}
+                     ],
+                     "max_tokens": 500,
+                     "temperature": 1,
+                     "top_p": 1,
+                     "n": 1,
+                 })
+
+
+             }).then(response => {
+
+                 return response.json()
+
+             }).then(data => {
+                 newresponse = data['choices'][0].message.content;
+                 console.log(newresponse);
+                 let imageURL = document.getElementById("urlStore").value;
+                 if (imageURL.length < 10) {
+                    imageURL = './images/flambardsPlaceholder.png'
+                 }
+                 characterSheet =
+                    `<h1 style="font-family:cursive;text-align:center;">${charName}</h1><br>
+        <section>
+        <aside style="border-style: groove;border-radius: 0;text-align: left;border-color: black;border-width: 6px;background-color: var(--color-bg);">
+        <b>RACE: </b>${charRace} <br>
+        <b>CLASS: </b>${charClass}<br>
+        <b>BACKGROUND: </b>${charBackground}<br>
+        <b>ALIGNMENT: </b>${charAlignment}
+        </aside>
+        <aside style="width:144px;height:144px; border-style: groove;border-radius: 0;border-color: black;border-width: 6px;background-color: var(--color-bg); padding:1px;">
+            <img src="${imageURL}" width="143px" height="143px" style="padding:1px;">
+        </aside>
+        <p>${newresponse}</p>
+        <details style="margin:3px;background:grey;color:white"><summary>Darkest secret</summary>
+        ${charFirstName}${charSecret}
+        </details>
+        </section>`
+                 document.getElementById('characterSheetOutput').innerHTML = characterSheet;
+
+            hideLoader();
+
+            }).catch(error => {
+                     hideLoader();
+                     let errormessage = 'Something went wrong. This is the error: ' + error;
+                     console.log(errormessage)
+                 });}
+</script>
+<body>
+    <header>
+        <nav>
+            <div class="dropdown">
+                <a id="catNav"><img alt="miaow" src="/favicon.svg" height="40" width="40"></a>
+                <div class="dropdown-content">
+                    <a href="/experiments.html">Experiments</a>
+                    <a href="/resources.html">Resources</a>
+                    <a href="/blog.html">Blog</a>
+                </div>
+            </div>
+            <ul>
+                <li><a href="/"> Home </a></li>
+            </ul>
+        </nav>
+
+
+            <h1>D&D Character Generator</h1>
+            <p>Create a random D&D character sheet, using GPT-3.5 and Javascript</p>
+
+            <details>
+                <summary style="font-size: small">Enter your API key 🔑</summary><input type="text" id="APItokenInput" style="font-size: small;
+                        font-family: monospace; text-align: center; max-width: 330px; background-color:lightgrey"><a
+                    onclick="saveToken(), saveAlert()"><sup>Save to cache 💾 </sup></a>
+            </details>
+            <div id="toastAlert">API token saved locally</div>
+
+<details id="advanced"><summary>Advanced options</summary>
+<b>Select gender</b>
+    <select id="genderSelect">
+        <option value="rand">RANDOM</option>
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+        <option value="rand">N/A</option>
+        </select>
+
+<b>Select a race</b>
+            <select id="raceSelect">
+                <option value="RANDOM">RANDOM</option>
+                <option value="Dragonborn">Dragonborn</option>
+                <option value="Dwarf">Dwarf</option>
+                <option value="Elf">Elf</option>
+                <option value="Gnome">Gnome</option>
+                <option value="Half-Elf">Half-Elf</option>
+                <option value="Half-Orc">Half-Orc</option>
+                <option value="Halfling">Halfling</option>
+                <option value="Human">Human</option>
+                <option value="Tiefling">Tiefling</option>
+                <option value="Half-Orc">Orc</option>
+                <!--<option value="Aasimar">Aasimar</option>
+                <option value="Firbolg">Firbolg</option>
+                <option value="Goliath">Goliath</option>
+                <option value="Kenku">Kenku</option>
+                <option value="Lizardfolk">Lizardfolk</option>
+                <option value="Tabaxi">Tabaxi</option>
+                <option value="Tortle">Tortle</option>
+                <option value="Triton">Triton</option>
+                <option value="Yuan-Ti Pureblood">Yuan-Ti Pureblood</option>-->
+            </select>
+
+<b>Select a class</b>
+    <select id="classSelect">
+        <option value="RANDOM">RANDOM</option>
+        <option value="barbarian">Barbarian</option>
+        <option value="bard">Bard</option>
+        <option value="cleric">Cleric</option>
+        <option value="druid">Druid</option>
+        <option value="fighter">Fighter</option>
+        <option value="monk">Monk</option>
+        <option value="paladin">Paladin</option>
+        <option value="ranger">Ranger</option>
+        <option value="rogue">Rogue</option>
+        <option value="sorcerer">Sorcerer</option>
+        <option value="warlock">Warlock</option>
+        <option value="wizard">Wizard</option>
+    </select>
+
+<b>Select a background</b>
+    <select id="backgroundSelect">
+        <option value="RANDOM">RANDOM</option>
+        <option value="acolyte">Acolyte</option>
+        <option value="charlatan">Charlatan</option>
+        <option value="criminal">Criminal</option>
+        <option value="entertainer">Entertainer</option>
+        <option value="folk-hero">Folk Hero</option>
+        <option value="guild-artisan">Guild Artisan</option>
+        <option value="hermit">Hermit</option>
+        <option value="noble">Noble</option>
+        <option value="outlander">Outlander</option>
+        <option value="sage">Sage</option>
+        <option value="sailor">Sailor</option>
+        <option value="soldier">Soldier</option>
+        <option value="urchin">Urchin</option>
+    </select>
+
+<b>Select alignment</b>
+<select id="alignmentSelect">
+        <option value="RANDOM">RANDOM</option>
+        <option value="lawful-good">Lawful Good</option>
+        <option value="neutral-good">Neutral Good</option>
+        <option value="chaotic-good">Chaotic Good</option>
+        <option value="lawful-neutral">Lawful Neutral</option>
+        <option value="true-neutral">True Neutral</option>
+        <option value="chaotic-neutral">Chaotic Neutral</option>
+        <option value="lawful-evil">Lawful Evil</option>
+        <option value="neutral-evil">Neutral Evil</option>
+        <option value="chaotic-evil">Chaotic Evil</option>
+</select>
+</details>
+
+    <button id="charGenButton" onclick="charGen()" class="">⚔️ Create a new adventurer 🐉</button>
+
+    <div id="thinking-loader" class="loader.hidden"></div>
+    <br>
+    </section>
+</header>
+<div id="summaryContainer" value=""></div>
+<div id="urlStore" value=""></div>
+<div id="response-container" class="hidden">
+<form id="characterSheetOutput" style="border-style: groove; border-radius: 8px; border-width: 3px; border-color: black; background-color: antiquewhite; width:600px;">
+</form>
+
+<center>
+        <a style="cursor: pointer; text-decoration: none;" id="downloadResponseButton" onclick="downloadFile()"><sup>
+                Download your character sheet 📜 </sup></a><br>
+
+        <code style="font-size: 9px;" id="fileNameStore"></code>
+    </center>
+    </div>
+    <details style="color:grey; font-size: 70%;text-align: center; margin: 10%;">
+        <summary style="font-size:100%;">Disclaimer</summary> <p>Results may be inaccurate, misleading, or nonsense. Always
+        double-check before using; never trust a robot.</p> <p>In no way affiliated with the litigious organisation that rhymes with 'Lizards of the Boast'</p>
+    </details>
+    <footer>
+        <p>© 2023 - <i> Made by <a href="/about.html" target="_blank">me
+                </a> and Agatha</i> 🐈‍⬛</p>
+        <p><i>Found this interesting? <a href="mailto:hello@mbruges.com?subject=Hello from the Internet"
+                    style="font-style: normal;"> Drop me a line 📮</a>
+        </p>
+    </footer>
+</body>
+
+</html>
+
+<!--
+
+This is the full character sheet. It's a LOT of work to link it all up, so I'll use the simple version for now.
+
+
+<form id="characterSheetOutput"
+            style="background-color:whitesmoke;font-family: Arial, Helvetica, sans-serif;"  class="charsheet">
+                <header>
+                    <section class="charname">
+                        <label for="charname">Character Name</label><input id="charname"  value="">
+                    </section>
+                    <section class="misc">
+                        <ul>
+                            <li>
+                                <label for="classlevel">Class & Level</label><input id="classlevel" placeholder="Paladin 2" />
+                            </li>
+                            <li>
+                                <label for="background">Background</label><input id="background" placeholder="Acolyte" />
+                            </li>
+                            <li>
+                                <label for="playername">Player Name</label><input id="playerRealName"
+                                    placeholder="Player McPlayerface">
+                            </li>
+                            <li>
+                                <label for="race">Race</label><input id="race" placeholder="Half-elf" />
+                            </li>
+                            <li>
+                                <label for="alignment">Alignment</label><input id="alignment" placeholder="Lawful Good" />
+                            </li>
+                            <li>
+                                <label for="experiencepoints">Experience Points</label><input id="experiencepoints"
+                                    value=" " />
+                            </li>
+                        </ul>
+                    </section>
+                </header>
+                <main>
+                    <section>
+                        <section class="attributes">
+                            <div class="scores">
+                                <ul>
+                                    <li>
+                                        <div class="score">
+                                            <label for="Strengthscore">Strength</label><input id="Strengthscore"
+                                                placeholder="10" />
+                                        </div>
+                                        <div class="modifier">
+                                            <input id="Strengthmod" placeholder="+0" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="score">
+                                            <label name="Dexterityscore">Dexterity</label><input id="Dexterityscore"
+                                                placeholder="10" />
+                                        </div>
+                                        <div class="modifier">
+                                            <input id="Dexteritymod" placeholder="+0" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="score">
+                                            <label for="Constitutionscore">Constitution</label><input id="Constitutionscore"
+                                                placeholder="10" />
+                                        </div>
+                                        <div class="modifier">
+                                            <input id="Constitutionmod" placeholder="+0" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="score">
+                                            <label for="Wisdomscore">Wisdom</label><input id="Wisdomscore" placeholder="10" />
+                                        </div>
+                                        <div class="modifier">
+                                            <input id="Wisdommod" placeholder="+0" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="score">
+                                            <label for="Intelligencescore">Intelligence</label><input id="Intelligencescore"
+                                                placeholder="10" />
+                                        </div>
+                                        <div class="modifier">
+                                            <input id="Intelligencemod" placeholder="+0" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="score">
+                                            <label for="Charismascore">Charisma</label><input id="Charismascore"
+                                                placeholder="10" />
+                                        </div>
+                                        <div class="modifier">
+                                            <input id="Charismamod" placeholder="+0" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="attr-applications">
+                                <div class="inspiration box">
+                                    <div class="label-container">
+                                        <label for="inspiration">Inspiration</label>
+                                    </div>
+                                    <input name="inspiration" type="checkbox" />
+                                </div>
+                                <div class="proficiencybonus box">
+                                    <div class="label-container">
+                                        <label for="proficiencybonus">Proficiency Bonus</label>
+                                    </div>
+                                    <input name="proficiencybonus" placeholder="+2" />
+                                </div>
+                                <div class="saves list-section box">
+                                    <ul>
+                                        <li>
+                                            <label for="Strength-save">Strength</label><input name="Strength-save" placeholder="+0"
+                                                type="text" /><input name="Strength-save-prof" type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Dexterity-save">Dexterity</label><input name="Dexterity-save"
+                                                placeholder="+0" type="text" /><input name="Dexterity-save-prof" type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Constitution-save">Constitution</label><input name="Constitution-save"
+                                                placeholder="+0" type="text" /><input name="Constitution-save-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Wisdom-save">Wisdom</label><input name="Wisdom-save" placeholder="+0"
+                                                type="text" /><input name="Wisdom-save-prof" type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Intelligence-save">Intelligence</label><input name="Intelligence-save"
+                                                placeholder="+0" type="text" /><input name="Intelligence-save-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Charisma-save">Charisma</label><input name="Charisma-save" placeholder="+0"
+                                                type="text" /><input name="Charisma-save-prof" type="checkbox" />
+                                        </li>
+                                    </ul>
+                                    <div class="label">
+                                        Saving Throws
+                                    </div>
+                                </div>
+                                <div class="skills list-section box">
+                                    <ul>
+                                        <li>
+                                            <label for="Acrobatics">Acrobatics <span class="skill">(Dex)</span></label><input
+                                                name="Acrobatics" placeholder="+0" type="text" /><input name="Acrobatics-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Animal Handling">Animal Handling <span
+                                                    class="skill">(Wis)</span></label><input name="Animal Handling" placeholder="+0"
+                                                type="text" /><input name="Animal Handling-prof" type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Arcana">Arcana <span class="skill">(Int)</span></label><input name="Arcana"
+                                                placeholder="+0" type="text" /><input name="Arcana-prof" type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Athletics">Athletics <span class="skill">(Str)</span></label><input
+                                                name="Athletics" placeholder="+0" type="text" /><input name="Athletics-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Deception">Deception <span class="skill">(Cha)</span></label><input
+                                                name="Deception" placeholder="+0" type="text" /><input name="Deception-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="History">History <span class="skill">(Int)</span></label><input
+                                                name="History" placeholder="+0" type="text" /><input name="History-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Insight">Insight <span class="skill">(Wis)</span></label><input
+                                                name="Insight" placeholder="+0" type="text" /><input name="Insight-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Intimidation">Intimidation <span class="skill">(Cha)</span></label><input
+                                                name="Intimidation" placeholder="+0" type="text" /><input name="Intimidation-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Investigation">Investigation <span class="skill">(Int)</span></label><input
+                                                name="Investigation" placeholder="+0" type="text" /><input name="Investigation-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Medicine">Medicine <span class="skill">(Wis)</span></label><input
+                                                name="Medicine" placeholder="+0" type="text" /><input name="Medicine-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Nature">Nature <span class="skill">(Int)</span></label><input name="Nature"
+                                                placeholder="+0" type="text" /><input name="Nature-prof" type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Perception">Perception <span class="skill">(Wis)</span></label><input
+                                                name="Perception" placeholder="+0" type="text" /><input name="Perception-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Performance">Performance <span class="skill">(Cha)</span></label><input
+                                                name="Performance" placeholder="+0" type="text" /><input name="Performance-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Persuasion">Persuasion <span class="skill">(Cha)</span></label><input
+                                                name="Persuasion" placeholder="+0" type="text" /><input name="Persuasion-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Religion">Religion <span class="skill">(Int)</span></label><input
+                                                name="Religion" placeholder="+0" type="text" /><input name="Religion-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Sleight of Hand">Sleight of Hand <span
+                                                    class="skill">(Dex)</span></label><input name="Sleight of Hand" placeholder="+0"
+                                                type="text" /><input name="Sleight of Hand-prof" type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Stealth">Stealth <span class="skill">(Dex)</span></label><input
+                                                name="Stealth" placeholder="+0" type="text" /><input name="Stealth-prof"
+                                                type="checkbox" />
+                                        </li>
+                                        <li>
+                                            <label for="Survival">Survival <span class="skill">(Wis)</span></label><input
+                                                name="Survival" placeholder="+0" type="text" /><input name="Survival-prof"
+                                                type="checkbox" />
+                                        </li>
+                                    </ul>
+                                    <div class="label">
+                                        Skills
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="passive-perception box">
+                            <div class="label-container">
+                                <label for="passiveperception">Passive Wisdom (Perception)</label>
+                            </div>
+                            <input name="passiveperception" placeholder="10" />
+                        </div>
+                        <div class="otherprofs box textblock">
+                            <label for="otherprofs">Other Proficiencies and Languages</label><textarea name="otherprofs"></textarea>
+                        </div>
+                    </section>
+                    <section>
+                        <section class="combat">
+                            <div class="armorclass">
+                                <div>
+                                    <label for="ac">Armor Class</label><input name="ac" placeholder="10" type="text" />
+                                </div>
+                            </div>
+                            <div class="initiative">
+                                <div>
+                                    <label for="initiative">Initiative</label><input name="initiative" placeholder="+0"
+                                        type="text" />
+                                </div>
+                            </div>
+                            <div class="speed">
+                                <div>
+                                    <label for="speed">Speed</label><input name="speed" placeholder="30" type="text" />
+                                </div>
+                            </div>
+                            <div class="hp">
+                                <div class="regular">
+                                    <div class="max">
+                                        <label for="maxhp">Hit Point Maximum</label><input name="maxhp" placeholder="10"
+                                            type="text" />
+                                    </div>
+                                    <div class="current">
+                                        <label for="currenthp">Current Hit Points</label><input name="currenthp" type="text" />
+                                    </div>
+                                </div>
+                                <div class="temporary">
+                                    <label for="temphp">Temporary Hit Points</label><input name="temphp" type="text" />
+                                </div>
+                            </div>
+                            <div class="hitdice">
+                                <div>
+                                    <div class="total">
+                                        <label for="totalhd">Total</label><input name="totalhd" placeholder="2d10" type="text" />
+                                    </div>
+                                    <div class="remaining">
+                                        <label for="remaininghd">Hit Dice</label><input name="remaininghd" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="deathsaves" >
+                                <div>
+                                    <div class="label">
+                                        <label>Death Saves</label>
+                                    </div>
+                                    <div class="marks">
+                                        <div class="deathsuccesses">
+                                            <label>Successes</label>
+                                            <div class="bubbles">
+                                                <input name="deathsuccess1" type="checkbox" />
+                                                <input name="deathsuccess2" type="checkbox" />
+                                                <input name="deathsuccess3" type="checkbox" />
+                                            </div>
+                                        </div>
+                                        <div class="deathfails">
+                                            <label>Failures</label>
+                                            <div class="bubbles">
+                                                <input name="deathfail1" type="checkbox" />
+                                                <input name="deathfail2" type="checkbox" />
+                                                <input name="deathfail3" type="checkbox" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="attacksandspellcasting">
+                            <div>
+                                <label>Attacks & Spellcasting</label>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Name
+                                            </th>
+                                            <th>
+                                                Atk Bonus
+                                            </th>
+                                            <th>
+                                                Damage/Type
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input name="atkname1" type="text" />
+                                            </td>
+                                            <td>
+                                                <input name="atkbonus1" type="text" />
+                                            </td>
+                                            <td>
+                                                <input name="atkdamage1" type="text" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input name="atkname2" type="text" />
+                                            </td>
+                                            <td>
+                                                <input name="atkbonus2" type="text" />
+                                            </td>
+                                            <td>
+                                                <input name="atkdamage2" type="text" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input name="atkname3" type="text" />
+                                            </td>
+                                            <td>
+                                                <input name="atkbonus3" type="text" />
+                                            </td>
+                                            <td>
+                                                <input name="atkdamage3" type="text" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <textarea></textarea>
+                            </div>
+                        </section>
+                        <section class="equipment">
+                            <div>
+                                <label>Equipment</label>
+                                <div class="money">
+                                    <ul>
+                                        <li>
+                                            <label for="cp">cp</label><input name="cp" />
+                                        </li>
+                                        <li>
+                                            <label for="sp">sp</label><input name="sp" />
+                                        </li>
+                                        <li>
+                                            <label for="ep">ep</label><input name="ep" />
+                                        </li>
+                                        <li>
+                                            <label for="gp">gp</label><input name="gp" />
+                                        </li>
+                                        <li>
+                                            <label for="pp">pp</label><input name="pp" />
+                                        </li>
+                                    </ul>
+                                </div>
+                                <textarea placeholder="Equipment list here"></textarea>
+                            </div>
+                        </section>
+                    </section>
+                    <section>
+                        <section class="flavor">
+                            <div class="personality">
+                                <label for="personality">Personality</label><textarea id="personality"></textarea>
+                            </div>
+                            <div class="ideals">
+                                <label for="ideals">Ideals</label><textarea name="ideals"></textarea>
+                            </div>
+                            <div class="bonds">
+                                <label for="bonds">Bonds</label><textarea name="bonds"></textarea>
+                            </div>
+                            <div class="flaws">
+                                <label for="flaws">Flaws</label><textarea name="flaws"></textarea>
+                            </div>
+                        </section>
+                        <section class="features">
+                            <div>
+                                <label for="features">Features & Traits</label><textarea name="features"></textarea>
+                            </div>
+                        </section>
+                    </section>
+                </main>
+            </form>
+        </form>
+        <a id="copyResponseButton" onclick="copy()"><sup> Copy to clipboard hi 🔗 </sup></a>
+-->

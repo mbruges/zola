@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+    <meta name="color-scheme" content="light dark" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.zinc.min.css"
+    />
+    <title>Hangman</title>
+    <style>
+        main{
+            margin: 10px;
+        }
+
+        table,tr,th,td{
+            border-width: 0px;
+        }
+
+        .letter {
+            font-size: 1.2em;
+            color: white;
+            background-color: black;
+            border: 6px solid white;
+            text-align: center;
+        
+        }
+    </style>
+    <script>
+        const poetry = ["Metaphor","Simile","Alliteration","Rhyme","Imagery","Personification","Hyperbole","Onomatopoeia","Protagonist","Antagonist","Theme","Plot","Characterization","Dialogue","Narrative","Exposition","Climax","Resolution","Foreshadowing","Irony","Tone","Mood","Syntax","Diction","Connotation","Denotation","Stanza","Verse","Meter","Rhythm","Allegory","Analogy","Assonance","Consonance","Euphony","Cacophony","Allusion","Symbolism","Motif","Archetype","Juxtaposition","Paradox","Oxymoron","Metonymy","Synecdoche"]
+        var chosenWord = (poetry[Math.floor(Math.random() * poetry.length)]).toUpperCase()
+        const gibbets = [`
+    ______
+    |    |
+    |  (x x)
+    | >--|--<  
+    |    |
+    |  _/ \\_
+ ___|___ 
+
+`,`
+    ______
+    |    |
+    |   ( )
+    | >--|--<  
+    |    |
+    |  _/ \\_
+ ___|___ 
+
+`,`
+    ______
+    |    |
+    |   ( )
+    | >--|--<  
+    |    |
+    |  _/ 
+ ___|___ 
+
+`,`
+    ______
+    |    |
+    |   ( )
+    | >--|--<  
+    |    |
+    |   
+ ___|___ 
+
+`,`
+    ______
+    |    |
+    |   ( )
+    |    |--<  
+    |    |
+    |   
+ ___|___ 
+
+`,`
+    ______
+    |    |
+    |   ( )
+    |    |  
+    |    |
+    |   
+ ___|___ 
+
+`,`
+    ______
+    |    |
+    |   ( )
+    |      
+    |    
+    |   
+ ___|___ 
+
+`,`
+    ______
+    |    |
+    |  
+    |      
+    |    
+    |   
+ ___|___ 
+
+`
+
+
+]
+    //Getting random word from words list    
+
+window.addEventListener('load', () => {
+    const url = window.location.href;
+    if (url.includes('?')){
+        const encodedWord = url.split('?')[1]; 
+        chosenWord = atob(encodedWord).toUpperCase()
+        chosenWord = chosenWord.replace(/[^a-zA-Z]/g, '')
+    }
+
+    //console.log(chosenWord)
+    document.getElementById('guessTracker').innerHTML = ('_'.repeat(chosenWord.length))
+    document.getElementById('wordDisplay').innerHTML = document.getElementById('guessTracker').innerHTML
+    const gibbet = document.getElementById('gibbet')
+    gibbet.innerHTML = gibbets[7]
+        });
+    
+    function submitLetter(letter) {
+       document.getElementById("userInput").value = letter;
+       userSubmit()
+    }
+
+    function userSubmit(){
+        const wordDisplay = document.getElementById('wordDisplay')
+        const guessTracker = document.getElementById('guessTracker')
+        incorrectCount = parseInt(document.getElementById("guessCounter").value)
+            var userInput = document.getElementById('userInput') 
+            userString = (userInput.value).toUpperCase()
+            if ((userString.length < 1) || !(userString >= 'A' && userString <= 'Z')){
+                userInput.setAttribute('aria-invalid','true')
+                userInput.value = ''
+            return
+            }
+        // code for if the input is a valid letter
+
+        if (chosenWord.includes(userString)){
+            let currentGuess = guessTracker.innerText
+            
+// Loop to check all occurrences 
+            var indices = [];
+            currentGuess = currentGuess.split('')
+            for(var i=0; i<chosenWord.length;i++) {
+                if (chosenWord[i] == userString){
+                    console.log("letter in string")
+                    console.log(i)
+                    indices.push(i);}
+                }
+            indices.forEach(letterIndex => {
+                
+                currentGuess[letterIndex] = userString
+            });
+            currentGuess = currentGuess.join('')
+            if (currentGuess == chosenWord){
+                perfect = ''
+                if (incorrectCount == 0){
+                    perfect = '<br><i id="perfect">✨Perfect✨</i>'
+                }
+                wordDisplay.innerHTML = `<a data-tooltip="Click to research" href=https://en.wikipedia.org/wiki/Special:Search?&search=${chosenWord}&ns0=1' target='_blank'> ${chosenWord} </a>` + "<br><small>You win!</small>" + perfect
+                document.getElementById('input-container').hidden = "true"
+                return
+            }
+            guessTracker.innerText = currentGuess
+            wordDisplay.innerHTML = guessTracker.innerHTML
+        }
+        else {
+            //and for incorrect guess
+            incorrectCount += 1
+            document.getElementById('guessCounter').value = incorrectCount
+            console.log(incorrectCount)
+            document.getElementById(`guess${incorrectCount}`).innerHTML = userString
+            document.getElementById(`counter`).innerHTML = `${incorrectCount}/7`
+            
+            //when limit is reached
+            if (incorrectCount >= 7) {
+                document.getElementById('gibbet').innerHTML = gibbets[incorrectCount]
+                wordDisplay.innerHTML = `<a data-tooltip="Click to research" href=https://en.wikipedia.org/wiki/Special:Search?&search=${chosenWord}&ns0=1' target='_blank'> ${chosenWord} </a>` + "<br><small>You lose!</small>" 
+                document.getElementById('input-container').hidden = "true"
+            }
+
+            document.getElementById('gibbet').innerHTML = gibbets[7-incorrectCount]
+        }
+
+        userInput.setAttribute('aria-invalid','')
+        userInput.value = ''
+        }
+
+    function makeLink() {
+        linkButton = document.getElementById('linkButton')
+        linkButton.ariaBusy="true"
+        linkBox = document.getElementById('linkBox')
+        wordToEncode = linkBox.value
+        if (wordToEncode.includes('.')){
+            return
+        }
+        if (wordToEncode.length > 15){
+            linkBox.value = ""
+            linkBox.placeholder = "Too long, try another word."
+            return
+        }
+        var url = window.location.href;
+        if (url.includes('?')){
+            var url = url.split('?')[0];
+        } 
+        code = btoa(wordToEncode)
+        linkBox.value = `${url}?${code}`
+        linkButton.ariaBusy="false"
+        navigator.clipboard.writeText(linkBox.value)
+        linkButton.innerHTML = "<i>Link copied!</i>"
+        setTimeout(() => {
+            linkButton.innerHTML = "Get link 🌐"
+        }, 2000);
+    }
+ </script>
+    </script>
+  </head>
+    <body style="max-height: 90dvh;">
+        <main style="max-width: 800px;margin-left: auto;margin-right: auto;text-align: center;font-family: monospace !important;">
+        <h1 style="font-family: monospace;">Hangman</h1>
+        <i>Guess the term, then search the definition</i>
+            <table style="max-width: fit-content;min-width: 20em;display: block;margin-left: auto;margin-right: auto;"><tr>
+                <td><pre id ="gibbet" style="max-width: fit-content; min-width: 9em; font-weight: 700; color: inherit; font-size: 1.2em; background-color: transparent;">Assembling gibbet...</pre></td>
+            <td style="text-align: center;">
+                <h3 id="wordDisplay" style="padding-right: 1em;font-family: monospace;letter-spacing: 0.2em;">_ _ _ _ _ _</h3><br>
+            </td>
+    </tr></table>
+    <table id="guesses" style="max-width: 200px;margin-left: auto;margin-right: auto;">
+        <tr>
+            <td id="guess1">_</td>
+            <td id="guess2">_</td>
+            <td id="guess3">_</td>
+            <td id="guess4">_</td>
+        </tr>
+        <tr>
+            <td id="guess5">_</td>
+            <td id="guess6">_</td>
+            <td id="guess7">_</td>
+            <td id="counter">0/7</td>
+        </tr>
+        </table>
+        <pre id="guessTracker" hidden></pre>
+        <input type="number" value="0" id="guessCounter" hidden>
+    <fieldset id="input-container">
+        <input id="userInput" maxlength="1" style="max-width: 5em;margin-left: auto;text-align: left;text-transform: capitalize;font-size: larger;" type="text" id="userInput"  onkeydown = "if (event.keyCode == 13) userSubmit()" autofocus autocomplete="off">
+        <button class="contrast" type="button" value="➤" style="text-align: center;padding-left: 1em;padding-right: 1em;" id="button" onclick="userSubmit()">GUESS</button>
+
+        <table hidden>
+            <tr>
+              <td class="letter" id="a" onclick="submitLetter(this.innerHTML)">a</td>
+              <td class="letter" id="b" onclick="submitLetter(this.innerHTML)">b</td>
+              <td class="letter" id="c" onclick="submitLetter(this.innerHTML)">c</td>
+              <td class="letter" id="d" onclick="submitLetter(this.innerHTML)">d</td>
+              <td class="letter" id="e" onclick="submitLetter(this.innerHTML)">e</td>
+              <td class="letter" id="f" onclick="submitLetter(this.innerHTML)">f</td>
+              <td class="letter" id="g" onclick="submitLetter(this.innerHTML)">g</td>
+              <td class="letter" id="h" onclick="submitLetter(this.innerHTML)">h</td>
+              <td class="letter" id="i" onclick="submitLetter(this.innerHTML)">i</td>
+              <td class="letter" id="j" onclick="submitLetter(this.innerHTML)">j</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="letter" id="k" onclick="submitLetter(this.innerHTML)">k</td>
+              <td class="letter" id="l" onclick="submitLetter(this.innerHTML)">l</td>
+              <td class="letter" id="m" onclick="submitLetter(this.innerHTML)">m</td>
+              <td class="letter" id="n" onclick="submitLetter(this.innerHTML)">n</td>
+              <td class="letter" id="o" onclick="submitLetter(this.innerHTML)">o</td>
+              <td class="letter" id="p" onclick="submitLetter(this.innerHTML)">p</td>
+              <td class="letter" id="q" onclick="submitLetter(this.innerHTML)">q</td>
+              <td class="letter" id="r" onclick="submitLetter(this.innerHTML)">r</td>
+              <td class="letter" id="s" onclick="submitLetter(this.innerHTML)">s</td>
+    
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="letter" id="t" onclick="submitLetter(this.innerHTML)">t</td>
+              <td class="letter" id="u" onclick="submitLetter(this.innerHTML)">u</td>
+              <td class="letter" id="v" onclick="submitLetter(this.innerHTML)">v</td>
+              <td class="letter" id="w" onclick="submitLetter(this.innerHTML)">w</td>
+              <td class="letter" id="x" onclick="submitLetter(this.innerHTML)">x</td>
+              <td class="letter" id="y" onclick="submitLetter(this.innerHTML)">y</td>
+              <td class="letter" id="z" onclick="submitLetter(this.innerHTML)">z</td>
+            </tr>
+          </table>
+        </fieldset>
+        <button class="outline contrast" style="padding: 0.2em;" onclick="window.location.reload()">Reset</button>
+        <button class="contrast" style="padding: 0.2em;" onclick="document.getElementById('dialog').open=true">Custom</button>
+        <dialog id="dialog">
+            <article>
+              <header>
+                <button aria-label="Close" rel="prev" onclick="document.getElementById('dialog').open=false"></button>
+                <p>
+                  <strong>Become the HANGMAN 💀</strong>
+                </p>
+              </header>
+              <p>
+                Enter your chosen word into the box below and you'll get an <i>encoded </i> link for it. No peaking!
+              </p>
+              <input id="linkBox" type="text" style="text-align: center;">
+              <button class="contrast" id="linkButton" onclick="makeLink()" onmouseleave="this.innerHTML='Get link 🌐'">Get link 🌐</button>
+            </article>
+          </dialog>
+      </main>
+    </body>
+</html>

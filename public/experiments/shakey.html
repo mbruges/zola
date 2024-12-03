@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/old-style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="A page for generating lists of characters' lines from Shakespeare's complete works, and fetching lines at random.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB - Shakespeare by Line</title>
+
+    <!--SHARE TAGS-->
+    <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Shakespeare by Line" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:description" content="A page for generating quotations from Shakespeare's complete works " />
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://mbruges.com/images/banner-square.png" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://mbruges.com/" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Shakespeare by Line">
+    <meta name="twitter:site" content="@max_bruges">
+    <meta name="twitter:description" content="A page for generating lists of characters' lines, and fetching lines at random.">
+    <meta name="twitter:image" content="https://mbruges.com/images/banner-square.png">
+
+    <div id="toastAlert"></div>
+
+<script>
+
+    function getWiki(topic) {
+            var fixedTopic = ""
+            for (let index = 0; index < topic.length; index++) {
+                var char = topic[index];
+                if (char == " ") {
+                    char = "_"
+                }
+                fixedTopic += char
+            };
+
+
+            fetch(`https://en.wikipedia.org/w/api.php?action=opensearch&format=json&origin=*&search=${fixedTopic}&formatversion=2`)
+                .then((response) => response.json())
+                .then((json) => {
+                    urls = json[3]
+                    console.log(urls[0])
+                    document.getElementById('wikiContainer').innerHTML = `<a href="${urls[0]}" target="_blank">Click to learn more!</a>`
+                })
+        }
+
+    function getAllLines(chosenCharacter,chosenPlay) {
+        var lineArray = []
+        var lineCount = 0
+        fetch('/experiments/shakespeare.json')
+            .then((response) => response.json())
+            .then((json) => {
+                console.log('getting lines for ' + chosenCharacter + " in " + chosenPlay)
+
+                json.forEach(element => {
+                    if ((element.speaker == chosenCharacter) && (element.play == chosenPlay) && (element.type == 'line'))
+                    {let line = element.text;
+                    lineArray.push(line);
+                    lineCount += 1}
+                });
+           console.log(lineArray)
+                var printableLines = ""
+           lineArray.forEach(element => {
+                printableLines += `<p>${element}</p>`
+           });
+
+            document.getElementById('randomLineContainer').innerHTML = `<h3> ${chosenCharacter}, <i> ${chosenPlay}</i></h3>
+            <code> Total lines: ${lineCount} </code>
+            <br>
+            ${printableLines}`
+                document.getElementById('randButton').className = ''
+                document.getElementById('loader').className = 'hidden'
+                document.getElementById('randomLineContainer').className = 'show'
+            })
+    }
+
+    function randomLine() {
+        var foundLine = "ERROR: Something's rotten in the state of this code."
+        console.log('running script with shakespeare.json')
+        document.getElementById('randButton').className = 'hidden'
+        document.getElementById('loader').className= 'loader'
+        fetch('/experiments/shakespeare.json')
+        .then((response) => response.json())
+        .then((json) => {
+
+            let rand = Math.floor(Math.random()* 111396)
+
+            for (let index = rand; index < 111396; index++) {
+                //This IF checks if it's a spoken line, rather than a stage direction. If it isn't, then the index ticks up one and tries again.
+                if(json[index].type != "line")
+                {rand = index
+                continue;}
+                else {break}
+            }
+            foundLine = json[rand].text;
+
+            //This gets the preceding lines, if it's been cut off mid sentence
+            for (let index = 1; index < 4; index++) {
+                let firstChar = foundLine.charAt(0)
+                if (firstChar == firstChar.toLowerCase()) {
+                    foundLine = json[rand - index].text + '<br>' + foundLine;
+                } else {break}
+
+            }
+
+            //and this checks that it finishes with punctuation.
+            var acceptablePunc = [`.`,`,`,`!`,`?`,`;`]
+
+            for (let index = 1; index < 7; index++) {
+                let lastChar = foundLine.charAt(foundLine.length - 1)
+                if (acceptablePunc.includes(lastChar)) {
+                   break
+                } else {  foundLine = foundLine + '<br>' + json[rand + index].text; }
+
+            }
+
+
+            let speaker = json[rand].speaker;
+            let play = json[rand].play;
+            let act = json[rand].line_no;
+
+            //This section of code also retrieves the Wiki link for the specified play.
+
+            var fixedTopic = ""
+            for (let index = 0; index < play.length; index++) {
+                var char = play[index];
+                if (char == " ") {
+                    char = "_"
+                }
+                fixedTopic += char
+            };
+
+            fetch(`https://en.wikipedia.org/w/api.php?action=opensearch&format=json&origin=*&search=${fixedTopic}&formatversion=2`)
+                .then((response) => response.json())
+                .then((json) => {
+                    urls = json[3]
+                    playUrl = urls[0]
+                    console.log(playUrl)
+
+                 document.getElementById('randomLineContainer').innerHTML = `<p>${foundLine}</p>
+            <br>
+            <small>-- ${speaker} <br> <a href='${playUrl}' target="_blank"> ${play} </a>, ${act}</small>`
+                    document.getElementById('randButton').className = ''
+                    document.getElementById('loader').className = 'hidden'
+                    document.getElementById('randomLineContainer').className = 'show'
+
+                })
+
+
+
+        })
+    }
+
+    function getPlays() {
+        var playArray = []
+
+        fetch('/experiments/shakespeare.json')
+        .then((response) => response.json())
+        .then((json) => {
+            for (let index = 0; index < json.length; index++) {
+                const element = json[index].play;
+                if (playArray.includes(element)){
+                    continue
+                } else {playArray.push(element); console.log(element)}
+            }
+            console.log(playArray)
+            let selector = `<select>
+                `
+            playArray.forEach(element => {
+                selector += `<option value="${element}">${element}</option>
+                `
+            })
+            selector += `</selector>`;
+            console.log(selector)
+        })
+    }
+
+    function getCharacters(inputID) {
+        document.getElementById('randomLineContainer').innerHTML = ''
+        const play = document.getElementById(inputID).value
+        console.log(play)
+        var characterList = []
+        fetch('/experiments/shakespeare.json')
+        .then((response) => response.json())
+        .then((json) => {
+
+        var status = false
+
+        //we start by checking for the name of each entry
+        for (let index = 0; index < json.length; index++) {
+            let elementPlay = json[index].play;
+
+            //This for loop will go through the full JSON. As lines are all grouped together by play, we can stop the loop once we reach the end of the group of lines. The 'status' variable tells us if we've reached the play in the JSON  or not.
+
+            if (json[index].type != 'line'){continue}
+            // if the name does NOT match, and the status is set as TRUE, the loop should stop.
+            else if ((elementPlay != play) && (status == true)){console.log('stopped'); break}
+
+            //If the play does not match and status is FALSE, we keep going
+            else if ((elementPlay != play) && (status == false)){
+                continue}
+
+            //If the play DOES match what we're looking for, then we start processing the data
+            else if ((elementPlay == play) && (json[index].type == 'line')){
+                status = true
+
+                let character = "" + json[index].speaker
+
+                //Now, we check if the character is listed in the array characterList already, moving on if it is. If it isn't, it gets added.
+                    if (characterList.includes(character))
+                        { continue }
+                        else {characterList.push(character)}
+
+                }
+        }
+
+    let display = `<h2>${play}</h2>
+    <i>Dramatis Personae</i>
+    <ul>
+        `
+    characterList.forEach(element => {
+        display += `<li>${element}</li>
+        `
+    });
+    document.getElementById('randomLineContainer').innerHTML = display
+    document.getElementById('randomLineContainer').className = 'show'
+    })}
+
+    function characterSelection(playInputID){
+    const play = document.getElementById(playInputID).value
+        console.log(play)
+        var characterList = []
+        fetch('/experiments/shakespeare.json')
+            .then((response) => response.json())
+            .then((json) => {
+                var status = false
+
+                //we start by checking for the name of each entry
+                for (let index = 0; index < json.length; index++) {
+                    let elementPlay = json[index].play;
+
+                    //This for loop will go through the full JSON. As lines are all grouped together by play, we can stop the loop once we reach the end of the group of lines. The 'status' variable tells us if we've reached the play in the JSON  or not.
+
+                    if (json[index].type != 'line') { continue }
+                    // if the name does NOT match, and the status is set as TRUE, the loop should stop.
+                    else if ((elementPlay != play) && (status == true)) { console.log('stopped'); break }
+
+                    //If the play does not match and status is FALSE, we keep going
+                    else if ((elementPlay != play) && (status == false)) {
+                        continue
+                    }
+
+                    //If the play DOES match what we're looking for, then we start processing the data
+                    else if ((elementPlay == play) && (json[index].type == 'line')) {
+                        status = true
+
+                        let character = "" + json[index].speaker
+
+                        //Now, we check if the character is listed in the array characterList already, moving on if it is. If it isn't, it gets added.
+                        if (characterList.includes(character)) { continue }
+                        else { characterList.push(character) }
+                    }
+                }
+            var selector = `<select  onclick="document.getElementById('getLinesButton').className = ''" style="max-width: 150px;" id="characterSelector">
+            <option disabled selected>Select character...</option>
+            `
+
+            characterList.forEach(element => {
+                selector += `<option value="${element}">${element}</option>`
+            });
+            selector += '</select>'
+            document.getElementById('characterSelect').innerHTML = selector
+            })}
+
+</script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="dropdown">
+                <a id="catNav"><img alt="miaow" src="/favicon.svg" height="40" width="40"></a>
+                <div class="dropdown-content">
+                    <a href="/experiments.html">Experiments</a>
+                    <a href="/resources.html">Resources</a>
+                    <a href="/blog.html">Blog</a>
+                </div>
+            </div>
+            <ul>
+                <li><a href="/"> Home </a></li>
+            </ul>
+        </nav>
+        <style>
+            form {
+                margin-top: 10px;
+                width: fit-content;
+                min-width: 100px;
+                max-width: 400px;
+                text-align: center;
+            }
+
+            form small {
+                font-style: oblique;
+            }
+        </style>
+
+
+        <h1>Shakespeare by Line</h1>
+        <p>Generate a random line from Shakespeare's complete works, or fetch all the lines for a given character.</p>
+        <small> (The <a href="https://discuss.elastic.co/t/uploading-shakespeare-json-to-index-in-kibana/171554/2"
+                target="_blank">JSON</a> seems to have stripped out most of the apostrophes, so watch out for grammatical errors.)</small>
+    </header>
+
+<section>
+    <form id="randomLineContainer">
+        <p>All the world's a stage</p>
+                    <br>
+                    <small>-- JACQUES <br> <a href="https://en.wikipedia.org/wiki/As_You_Like_It" target="_blank"> As You Like It</a>, 2.7.142</small>
+    </form>
+</section>
+
+
+<br>
+
+
+
+
+<aside style="display: block;text-align: center;">
+    <div style="height: 60px;">
+        <button style="padding: 12px;" id="randButton" onclick="randomLine()">Random 🔀</button>
+        <br>
+        <div id="loader" class="hidden"></div>
+    </div>
+    <details><summary>Or, select a play and character to get all their lines.</summary>
+        <select style="max-width: 150px;" id="playSelector" oninput="characterSelection(this.id);">
+            <option disabled selected>Select play...</option>
+            <option value="Henry IV">Henry IV</option>
+            <option value="Henry VI Part 1">Henry VI Part 1</option>
+            <option value="Henry VI Part 2">Henry VI Part 2</option>
+            <option value="Henry VI Part 3">Henry VI Part 3</option>
+            <option value="Alls well that ends well">All's Well That Ends Well</option>
+            <option value="As you like it">As you like it</option>
+            <option value="Antony & Cleopatra">Antony and Cleopatra</option>
+            <option value="A Comedy of Errors">A Comedy of Errors</option>
+            <option value="Coriolanus">Coriolanus</option>
+            <option value="Cymbeline">Cymbeline</option>
+            <option value="Hamlet">Hamlet</option>
+            <option value="Henry V">Henry V</option>
+            <option value="Henry VIII">Henry VIII</option>
+            <option value="King John">King John</option>
+            <option value="Julius Caesar">Julius Caesar</option>
+            <option value="King Lear">King Lear</option>
+            <option value="Loves Labours Lost">Love's Labours Lost</option>
+            <option value="macbeth">Macbeth</option>
+            <option value="Measure for measure">Measure for measure</option>
+            <option value="Merchant of Venice">Merchant of Venice</option>
+            <option value="Merry Wives of Windsor">Merry Wives of Windsor</option>
+            <option value="A Midsummer nights dream">A Midsummer Night's Dream</option>
+            <option value="Much Ado about nothing">Much Ado about nothing</option>
+            <option value="Othello">Othello</option>
+            <option value="Pericles">Pericles</option>
+            <option value="Richard II">Richard II</option>
+            <option value="Richard III">Richard III</option>
+            <option value="Romeo and Juliet">Romeo and Juliet</option>
+            <option value="Taming of the Shrew">Taming of the Shrew</option>
+            <option value="The Tempest">The Tempest</option>
+            <option value="Timon of Athens">Timon of Athens</option>
+            <option value="Titus Andronicus">Titus Andronicus</option>
+            <option value="Troilus and Cressida">Troilus and Cressida</option>
+            <option value="Twelfth Night">Twelfth Night</option>
+            <option value="Two Gentlemen of Verona">Two Gentlemen of Verona</option>
+            <option value="A Winters Tale">A Winter's Tale</option>
+        </select>
+        <div id="characterSelect">
+
+        </div>
+
+        <button class="hidden" style="padding: 12px;" id="getLinesButton"
+        onclick="let character = document.getElementById('characterSelector').value;
+        let play = document.getElementById('playSelector').value;
+        getAllLines(character,play)">Get lines 🗃️</button>
+
+        <br>
+        <div id="loader" class="hidden"></div>
+    </details>
+</aside>
+<p></p>
+    <footer style="display: block;margin-top: 10vh;">
+        <p>© 2023 - <i> Made by <a href="/about.html" target="_blank">me
+                </a> and Agatha</i> 🐈‍⬛</p>
+        <p><i>Found this interesting? <a href="mailto:hello@mbruges.com?subject=Hello from the Internet"
+                    style="font-style: normal;"> Drop me a line 📮</a>
+        </p>
+    </footer>
+</body>
+
+</html>

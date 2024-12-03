@@ -57,12 +57,27 @@
         font-size: 0.8em;
     }
 </style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const blogCards = document.querySelectorAll('.blog-card');
+        const currentDate = new Date();
+
+        blogCards.forEach(card => {
+            const pubDate = new Date(card.getAttribute('data-pubdate'));
+            if (pubDate > currentDate) {
+                card.style.display = 'none';
+            }
+        });
+    });
+</script>
 <h1 class="title">The Blog</h1>
 <p class="subheading">
     Thoughts on technology, education and what happens when they collide.
 </p>
 <ul style="padding-left: 0.1em;padding-right: 0.1em;">
-    {% for page in section.pages %} {% if not page.draft %}
+    {% for page in section.pages %}
+
+    {% if not page.draft %}
 
     {% if page.extra.icon %}
     {% set icon = page.extra.icon %}
@@ -70,7 +85,6 @@
     <!-- {% set icon = "📃" %} -->
     {% set icon = section.extra.icon %}
     {% endif %}
-
 
     {% if page.description %}
         {% set description = page.description %}
@@ -83,6 +97,7 @@
     <div
         class="blog-card"
         onclick="location.href='{{ page.permalink | safe }}';"
+        data-pubdate="{{ page.date }}"
     >
         <p>
             <!-- &#x2712; -->
@@ -91,7 +106,7 @@
             <span class="description"> <b>{{ description }}</b> {{ blurb }}</span>
         </p>
     </div>
-    <hr class="card-hr" />
+
 
     {% endif %} {% endfor %}
 </ul>

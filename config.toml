@@ -5,7 +5,7 @@ base_url = "https://maxbruges.pages.dev/"
 compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
+build_search_index = true
 
 [markdown]
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola

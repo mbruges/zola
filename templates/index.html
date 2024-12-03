@@ -161,7 +161,7 @@
                 <b> Experiments 🔬</b>
             </a>
             <br />
-            <a id="learn-button-link" href="https://learn.maxbruges.com/" role="button">
+            <a id="learn-button-link" href="/learn" role="button">
                 <b>
                     <span id="learn-button"> Learn 👨‍🏫</span>
                     <div class="iframe-container">
@@ -201,7 +201,7 @@
                     liveURL = event.data;
                     if (liveURL.includes("abort") || liveURL.length == 0) {
                         console.log("no lesson currently live");
-                        document.getElementById('learn-button-link').href = 'https://learn.maxbruges.com/list.html';
+                        document.getElementById('learn-button-link').href = '/learn';
                     } else {
                         var preview = document.getElementById("live-preview");
                         var button = document.getElementById("learn-button");

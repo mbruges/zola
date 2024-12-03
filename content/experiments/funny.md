@@ -17,7 +17,7 @@ document.getElementById('roll').addEventListener('click', function() {
     const output = document.getElementById('output');
     output.innerHTML = '<span class="load">😂</span>'; // Show loading symbol
 
-    fetch('https://flask.mxb.fyi/jokes')
+    fetch('https://api.mxb.fyi/jokes')
       .then(response => {
           if (response.status === 429) {
               output.innerText = 'Too many requests! Wait a minute.'; // Update output for 429 status

@@ -26,7 +26,7 @@ My dutiful I.C.T. teachers had grown up without the Internet: they were equal pa
 
 Without the proper training, it'll drive you off an intellectual cliff, into a ravine of misinformation and misunderstanding. So each Thursday after lunch we sat in the computer lab, carefully typing search strings into the plain white box, scrolling down the page of blue linked search results.
 
-![A child with a robot](https://thumbs.dreamstime.com/b/happy-child-toy-robot-funny-kid-playing-home-success-creative-innovation-technology-concept-happy-child-toy-robot-164159086.jpg "A child with a robot")
+![A child with a robot](/images/child-and-robot.webp "A child with a robot")
 *An image from a happier time, when man and machine lived in perfect harmony and stock image providers were completely deranged.*
 
 Those lessons mattered because our teachers knew that, given half a chance, we'd simply click the first result we were given.
@@ -70,7 +70,7 @@ There is no value to be found - not for schools, not for students - in a tool th
 ![This is the future Googlers want](/images/robot-friend.webp)
 *"Well done! You copied and pasted the answer I gave you. Here: have a [Bachelors](https://www.themoscowtimes.com/2023/02/02/russian-student-allowed-to-keep-diploma-for-chatgpt-written-thesis-a80125)."*
 
-All this new product offers is danger; the danger that comes from automating and outsourcing the most important aspect of learning: [getting things wrong](https://mbruges.com/blog.html#040523) and navigating the [pathway](https://mbruges.com/codefixer.html) to right-ness.
+All this new product offers is danger; the danger that comes from automating and outsourcing the most important aspect of learning: [getting things wrong](/blog/Trial-by-Error) and navigating the [pathway](/experiments/codefixer.html) to right-ness.
 
 Imperfection is needed to trigger the learning journey, to enable thought. This idea is anathema to Google. Search will only ever move in one direction: whichever way removes the friction between user and product. 'Thinking' is just another piece of friction, grit in the gears of their [well-oiled advertising machine](https://www.wsj.com/articles/alphabet-google-googl-q4-earnings-report-2022-11675306621).
 

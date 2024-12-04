@@ -8,7 +8,7 @@ extra:
   icon: 🚢
 ---
 
-![The Titanic goes down; women and coders first](https://live.staticflickr.com/8658/16652891111_f66d108985_z.jpg "The Titanic goes down; women and coders first")
+![The Titanic goes down; women and coders first](/images/titanic-sinks.webp "The Titanic goes down; women and coders first")
 *Less "rearranging the deckchairs" and more "putting on your white tie, sitting down in the flooded dining room and wondering if there'll be scallops to start."*
 
 You can't move for the doom-laden coding headlines at the moment:
@@ -33,7 +33,7 @@ I cannot count the number of times - callow-eyed youth as I was - that I almost 
 
 And this is by design! This is how [computing works](https://en.wikipedia.org/wiki/History_of_programming_languages)! Piece by obscure piece, the corpus, the Canon, has been built by often-nameless men and women in computer labs and basements  and [Nebraska](https://xkcd.com/2347/). And if you want to learn it properly, sometimes you've got to go to the source.
 
-![The School of Athens](https://cdn.britannica.com/65/237365-138-03A2AF7F/did-you-know-The-School-of-Athens-Raphael.jpg?w=800&h=450&c=crop)
+![The School of Athens](/images/school-of-athens.webp)
 *It's like the Academy, except Plato is some anonymous Eastern European computer science student with a profile pic of Shadow the Hedgehog*
 
 ## Drinking from the hosepipe

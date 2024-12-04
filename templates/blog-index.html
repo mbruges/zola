@@ -22,7 +22,7 @@
     }
 
     .blog-card:hover hr.card-hr {
-        visibility: hidden; 
+        visibility: hidden;
     }
 
     .blog-card p {
@@ -37,9 +37,8 @@
         height: 0;
         margin: 0em 0;
         opacity: 0.5;
-        visibility: visible; 
+        visibility: visible;
     }
-
 
     .title {
         margin: 0.1em;
@@ -86,7 +85,7 @@
     {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
     set description = page.description %} {% set blurb = page.content |
     striptags | truncate(length=110) %} {% else %} {% set description = "" %} {%
-    set blurb = page.content | striptags | truncate(length=150) %} {% endif %}
+    set blurb = page.content | striptags | truncate(length=160) %} {% endif %}
 
     <div
         class="blog-card"
@@ -103,7 +102,8 @@
                 <span class="date"
                     >{{ page.date | date(format="%-d %b %y", locale="en_GB") }}
                     ~ </span
-                ><b>{{ description }}</b> {{ blurb }}</span
+                ><b>{{ description }}</b> {{ blurb }}
+                <i style="opacity: 0.7">read on ⇝</i></span
             >
         </p>
         <hr class="card-hr" />

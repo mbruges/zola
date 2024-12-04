@@ -7,7 +7,7 @@ extra:
   icon: 🚬
 ---
 
-![Just what the doctor ordered](https://tobacco-img.stanford.edu/wp-content/uploads/cigarettes/filter-safety-myths/doctor-ordered/ordered_12a.jpg)
+![Just what the doctor ordered](/images/filtered-cigs.webp)
 
 This [Hacker News comment](https://news.ycombinator.com/item?id=41994567) started turning a cog in my brain: are we going about LLMs all wrong, by plonking them straight in the hands of the end user?
 

@@ -7,7 +7,7 @@ extra:
   icon: 💡
 ---
 
-![A laptop showing 'hello world'](https://images.unsplash.com/photo-1644792863360-40fa85ea52e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=530&q=80)
+![A laptop showing 'hello world'](/images/hello-world-pc.webp)
 
 As it says [on the tin](/about): I’m a teacher. It’s an incredible career, and one I’m proud to be part of.
 

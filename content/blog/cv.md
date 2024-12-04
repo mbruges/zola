@@ -64,7 +64,7 @@ table th a {
 }
 </style>
 
-| **Outstanding teacher and leader in the British curriculum, experienced in improving outcomes at student, department and whole-school levels through data-driven practice.** <hr>🌍 Dubai Marina, United Arab Emirates <br> 📧  [hello@maxbruges.com](mailto:hello@maxbruges.com)<br> 📞 *[on request]*<br> 💻 [maxbruges.com](https://maxbruges.com/)  | ![mb-headshot](https://maxbruges.com/images/headshot-small.png) |
+| **Outstanding teacher and leader in the British curriculum, experienced in improving outcomes at student, department and whole-school levels through data-driven practice.** <hr>🌍 Dubai Marina, United Arab Emirates <br> 📧  [hello@maxbruges.com](mailto:hello@maxbruges.com)<br> 📞 *[on request]*<br> 💻 [maxbruges.com](https://maxbruges.com/)  | ![mb-headshot](/images/headshot.webp) |
 | :----- | :----: |
 
 ## Employment

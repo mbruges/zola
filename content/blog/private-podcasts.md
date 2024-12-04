@@ -7,7 +7,7 @@ extra:
   icon: "📻"
 ---
 
-![Big Ben mid-bong](https://i.ytimg.com/vi/ZY_cmEdbqvQ/maxresdefault.jpg)
+![Big Ben mid-bong](/images/bigben.webp)
 *A boy needs his bongs*
 
 I love the BBC. But I do not love [BBC Sounds](https://www.bbc.co.uk/sounds).

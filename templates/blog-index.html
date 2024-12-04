@@ -1,13 +1,12 @@
-
-{% extends "base.html" %}
-{% block content %}
-<meta property="og:title" content="Blog - {{ config.extra.default_title }}">
+{% extends "base.html" %} {% block content %}
+<meta property="og:title" content="Blog - {{ config.extra.default_title }}" />
 
 <title>Blog - {{ config.extra.default_title }}</title>
 <style>
     .blog-card {
         padding: 0.3em;
-        margin: 0.7em;
+        margin: 0.5em;
+        margin-top: 0.3em;
         border: 2px dashed transparent;
         border-radius: 1em;
         background: var(--b);
@@ -22,6 +21,10 @@
         border: 2px solid var(--a) !important;
     }
 
+    .blog-card:hover hr.card-hr {
+        visibility: hidden; 
+    }
+
     .blog-card p {
         margin: 0.5em;
     }
@@ -29,13 +32,14 @@
     p span {
         vertical-align: middle;
     }
-
     hr.card-hr {
         border: 1px dashed var(--a);
         height: 0;
         margin: 0em 0;
         opacity: 0.5;
+        visibility: visible; 
     }
+
 
     .title {
         margin: 0.1em;
@@ -53,19 +57,20 @@
         text-align: center;
     }
 
-    .description,.blurb {
+    .description,
+    .blurb {
         font-size: 0.8em;
     }
 </style>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const blogCards = document.querySelectorAll('.blog-card');
+    document.addEventListener("DOMContentLoaded", function () {
+        const blogCards = document.querySelectorAll(".blog-card");
         const currentDate = new Date();
 
-        blogCards.forEach(card => {
-            const pubDate = new Date(card.getAttribute('data-pubdate'));
+        blogCards.forEach((card) => {
+            const pubDate = new Date(card.getAttribute("data-pubdate"));
             if (pubDate > currentDate) {
-                card.style.display = 'none';
+                card.style.display = "none";
             }
         });
     });
@@ -74,37 +79,35 @@
 <p class="subheading">
     Thoughts on technology, education and what happens when they collide.
 </p>
-<ul style="padding-left: 0.1em;padding-right: 0.1em;">
-    {% for page in section.pages | filter(attribute="draft", value=false) %}
-
-    {% if page.extra.icon %}
-    {% set icon = page.extra.icon %}
-    {% else %}
+<ul style="padding-left: 0.1em; padding-right: 0.1em">
+    {% for page in section.pages | filter(attribute="draft", value=false) %} {%
+    if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
     <!-- {% set icon = "📃" %} -->
-    {% set icon = section.extra.icon %}
-    {% endif %}
-
-    {% if page.description %}
-        {% set description = page.description %}
-        {% set blurb = page.content | striptags | truncate(length=80)  %}
-    {% else %}
-        {% set description = ""  %}
-        {% set blurb = page.content | striptags | truncate(length=150)  %}
-    {% endif %}
+    {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
+    set description = page.description %} {% set blurb = page.content |
+    striptags | truncate(length=110) %} {% else %} {% set description = "" %} {%
+    set blurb = page.content | striptags | truncate(length=150) %} {% endif %}
 
     <div
         class="blog-card"
         onclick="location.href='{{ page.permalink | safe }}';"
         data-pubdate="{{ page.date }}"
+        onmouseenter=""
     >
         <p>
             <!-- &#x2712; -->
-            <span class="date">{{ page.date | date(format="%-d %b %y", locale="en_GB") }}</span>
-            <span class="title">{{ icon }}&nbsp;&nbsp;{{ page.title }}</span><br />
-            <span class="description"> <b>{{ description }}</b> {{ blurb }}</span>
-        </p>
-    </div>
 
+            <span class="title">{{ icon }}&nbsp;&nbsp;{{ page.title }}</span
+            ><br />
+            <span class="description">
+                <span class="date"
+                    >{{ page.date | date(format="%-d %b %y", locale="en_GB") }}
+                    ~ </span
+                ><b>{{ description }}</b> {{ blurb }}</span
+            >
+        </p>
+        <hr class="card-hr" />
+    </div>
 
     {% endfor %}
 </ul>

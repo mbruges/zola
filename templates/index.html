@@ -18,10 +18,11 @@
     <body>
         <header>
             <img
-                alt=""
                 src="/images/favicon.svg"
                 height="75em"
                 width="200em"
+                title="Built by Zola at {{ now() | date(format='%H:%M:%S %Z, %a %d %b') }}"
+                alt="Miaow"
             />
 
             <h1>
@@ -101,7 +102,8 @@
             };
         </script>
 
-        <footer>
+        <footer title="Built by Zola at {{ now() | date(format='%H:%M:%S UTC%:::z, %a %d %b') }}"
+        alt="Footer">
             {{ config.extra.footer }}
         </footer>
     </body>

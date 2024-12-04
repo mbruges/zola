@@ -4,14 +4,15 @@ nav {
     display: flex;
     font-weight: bold;
     justify-content: space-between;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
     margin-left: auto;
     margin-right: auto;
     color: var(--t);
     min-width: 100%;
-    margin-top: -1.5em;
+    margin-top: 0;
     font-family: monospace !important;
     text-decoration:none;
+    height: 2em;
 }
 
 .dropdown {

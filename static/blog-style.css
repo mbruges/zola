@@ -18,6 +18,10 @@
     list-style-type: "\2712 "; /* Unicode for pen nib */
 }
 
+body, html {
+    padding-top: 0em !important;
+}
+
 @media (prefers-color-scheme: dark) {
     :root, .dark-mode {
         --t: #fffce4;

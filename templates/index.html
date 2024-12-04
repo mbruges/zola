@@ -88,6 +88,8 @@
                         button.innerHTML =
                             "Join the lesson now! <span id='live-icon'>LIVE 🔴</span>";
                         preview.src = "https://learn.maxbruges.com/" + liveURL;
+                        document.getElementById('learn-button-link').href = 'https://learn.maxbruges.com/';
+                        button.href = 'https://learn.maxbruges.com/';
                     }
                     let now = new Date().toLocaleTimeString();
                     console.log("Disconnected websocket at " + now);

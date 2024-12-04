@@ -1,5 +1,5 @@
 +++
-title = "learn"
+title = "Learn"
 sort_by = "date"
 template = "learn-index.html"
 page_template = "learn-page.html"

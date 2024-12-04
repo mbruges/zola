@@ -1,6 +1,6 @@
 
 /* Attempt at github-flavoured callout boxes*/
-blockquote:has(a[href$="caution"]),
+blockquote:has(a[href$="caution"]),.caution,
 blockquote:has(a[href$="challenge"]) {
     font-family: var(--font-family);
     background-color: rgb(252, 225, 225);
@@ -11,7 +11,7 @@ blockquote:has(a[href$="challenge"]) {
     box-shadow: none;
 }
 
-blockquote:has(a[href$="caution"])::before {
+blockquote:has(a[href$="caution"])::before, .caution::before {
     content: "! Caution";
     color: rgb(166, 0, 0);
     font-weight: bold;
@@ -25,7 +25,7 @@ blockquote:has(a[href$="challenge"]) p::before {
     font-weight: bold;
 }
 
-blockquote:has(a[href$="warning"]) {
+blockquote:has(a[href$="warning"]),.warning {
     font-family: var(--font-family);
     background-color: rgb(255, 252, 220);
     color: black;
@@ -34,7 +34,7 @@ blockquote:has(a[href$="warning"]) {
     border-radius: 0.3em;
     box-shadow: none;
 }
-blockquote:has(a[href$="warning"])::before {
+blockquote:has(a[href$="warning"])::before, .warning::before {
     content: "⚠ Warning";
     color: rgb(207, 173, 0);
     font-weight: bold;

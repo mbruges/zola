@@ -8,7 +8,6 @@ nav {
     margin-left: auto;
     margin-right: auto;
     color: var(--t);
-    min-width: 100%;
     margin-top: 0;
     font-family: monospace !important;
     text-decoration:none;
@@ -18,7 +17,7 @@ nav {
 .dropdown {
     float: left;
     overflow: hidden;
-    background: var(--b);
+    background: none;
     font-size: 16px;
     border: none;
     outline: none;
@@ -36,6 +35,7 @@ nav {
     max-height: 1em;
     display: flex;
     align-items: center;
+    background: none;
 }
 
 /* Dropdown content (hidden by default) */

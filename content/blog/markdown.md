@@ -11,7 +11,7 @@ No matter how often you do it, starting the process of writing is agonising. It 
 
 So we start doodling in the margins.
 
-![page with an ornate THE written on it, and nothing else](http://img1.wikia.nocookie.net/__cb20140504152558/spongebob/images/e/e3/The_spongebob.jpg)
+![page with an ornate THE written on it, and nothing else](/images/the-sponge.webp)
 
 ## Death to *.docx*
 
@@ -30,7 +30,7 @@ Visit any consultancy or agency producing reports and decks for a living and I w
 
 Why? Because content is the valuable part, not the colour.
 
-![Alan Partridge speaking into his dictaphone](https://i0.wp.com/batflipsandnerds.com/wp-content/uploads/2018/05/DbyhepwWkAEc-hl.jpg?w=592&ssl=1)
+![Alan Partridge speaking into his dictaphone](/images/alan-dictaphone.webp)
 *You may not like it, but this is what peak creativity looks like.*
 
 If that's the case, when we really need to write, why use tools that distract us from the core purpose?

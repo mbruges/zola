@@ -7,7 +7,7 @@ extra:
   icon: 🙈
 ---
 
-![A trial by ordeal](https://www.counselmagazine.co.uk/images/uploadedfiles/cc-shutterstock_editorial_8760310a.jpg?sfvrsn=e7119442_1 "The blind-folded man is the learner, the bishop the teacher, and the monks are... OFSTED I guess")
+![A trial by ordeal](/images/trial-illustration.webp "The blind-folded man is the learner, the bishop the teacher, and the monks are... OFSTED I guess")
 *A trial by ordeal*
 
 This website is a place *about* learning and a place *for* learning: as the [playground](/experiments/codeplayground.html) page testifies, this is as much a learning experience for me as it is a resource for anyone else.

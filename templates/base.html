@@ -68,7 +68,7 @@
         <div class="dropdown-content">
             <a href="/" style="font-weight:bolder">🏠 Home </a>
             <a href="/experiments">🔬 Experiments</a>
-            <a href="/resources">📚 Learn</a>
+            <a href="/learn">📚 Learn</a>
             <a href="/blog">📝 Blog</a>
         </div>
     </div>
@@ -81,8 +81,9 @@
       {% block content %} {% endblock %}
     </div>
   </section>
-<footer>
-    <p>{{ config.extra.footer }}</p>
+<footer >
+    <p title="Built by Zola at {{ now() | date(format='%H:%M:%S UTC%:::z, %a %d %b') }}"
+    alt="Footer">{{ config.extra.footer }}</p>
 </footer>
 </body>
 <link rel='stylesheet' href='{{ blockquotestyle }}'>

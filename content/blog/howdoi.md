@@ -39,7 +39,7 @@ As with all good things, it started life as a `bash`, `curl`-ing to the OpenAI e
 
 The latest iteration is pure Golang, partly to avoid the faff of Python `venv` and partly as an exercise in learning more about Go. The magic is mostly in the prompt, which I'll paste below. The fancy loading animation is `gum`, by the excellent [Charm](https://github.com/charmbracelet) collective (also responsible for `VHS`, used to produce the terminal gifs above).
 
-Now, this little Go binary sits in my $PATH, aliased to `@`, ready to go with a single keypress.
+Now, this little Go binary sits in my `$PATH`, aliased to `@`, ready to go with a single keypress.
 
 If this is the future of computing, give me excess of it.
 

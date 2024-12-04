@@ -59,11 +59,12 @@ extra:
 
 <style>
 table th a {
-    color:#000099;
+    filter: brightness(170%);
+    color:#51518a;
 }
 </style>
 
-| **Outstanding teacher and leader in the British curriculum, experienced in improving outcomes at student, department and whole-school levels through data-driven practice.** <hr><ul><li> Dubai Marina, United Arab Emirates<li>  [hello@maxbruges.com](mailto:hello@maxbruges.com)<li> *[on request]*<li> [maxbruges.com](https://maxbruges.com/) </ul>| ![mb-headshot](https://maxbruges.com/images/headshot-small.png) |
+| **Outstanding teacher and leader in the British curriculum, experienced in improving outcomes at student, department and whole-school levels through data-driven practice.** <hr>🌍 Dubai Marina, United Arab Emirates <br> 📧  [hello@maxbruges.com](mailto:hello@maxbruges.com)<br> 📞 *[on request]*<br> 💻 [maxbruges.com](https://maxbruges.com/)  | ![mb-headshot](https://maxbruges.com/images/headshot-small.png) |
 | :----- | :----: |
 
 ## Employment
@@ -72,7 +73,7 @@ table th a {
 
 #### Head of English, *August 2023 - **Present***
 
-I have worked to prepare our first GCSE cohort and lay the foundations for the next phase of expansion into A-Level, whilst improving the spiral curriculum up from Key Stage 3. I have integrated quickly and effectively with senior leadership, providing value-add beyond my department and affecting positive change across the school.
+I have prepared our first GCSE cohort and laid the foundations for the next phase of expansion into A-Level, whilst improving the spiral curriculum up from Key Stage 3. I have integrated quickly and effectively with senior leadership, providing value-add beyond my department and affecting positive change across the school.
 
 - Attained departmental Very Good rating in 2024 KHDA inspection
 - Built interactive online portal to provide cross-phase data insights ahead of inspection

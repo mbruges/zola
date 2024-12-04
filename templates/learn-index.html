@@ -1,5 +1,4 @@
-{% extends "base.html" %} {% block content %}
-{% set icon = "👨‍🏫" %}
+{% extends "base.html" %} {% block content %} {% set icon = "👨‍🏫" %}
 
 <title>Learn 👨‍🏫 {{ config.extra.default_title }}</title>
 
@@ -7,9 +6,30 @@
     <p class="subtitle">Browse some of my lessons</p>
 </div>
 
-<div style="display: flex; justify-content: center; width: 100%;">
-
-    <iframe src="https://learn.maxbruges.com/list.html" style="border: none; width: 100%;height:70vh"></iframe>
+<div
+    style="
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    "
+>
+    <button
+        onclick="document.querySelector('iframe').src = 'https://learn.maxbruges.com/list.html'"
+        style="
+            position: absolute;
+            top: 0em;
+            right: 0em;
+            z-index: 1000;
+            font-size: 0.6em;
+        "
+    >
+        Back to list
+    </button>
+    <iframe
+        src="https://learn.maxbruges.com/list.html"
+        style="border: none; width: 100%; height: 70vh"
+    ></iframe>
 </div>
 
 {% endblock content %}

@@ -13,13 +13,7 @@
 <div class="subheading">
     <p class="subtitle">{{ page.description }}</p>
 </div>
-
-
-<div
-    {% if page.extra.center %}
-    class="center"
-    {% endif %}
->
+<div id="content" {% if page.extra.center %} class="center" {% endif %}>
 
 
 {{ page.content | safe }}

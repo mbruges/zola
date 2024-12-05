@@ -1,6 +1,6 @@
 ---
 title: Funny Bot
-description: Ask the bot for some jokes
+description: Ask the bot for some jokes. Mostly very poor.
 extra:
   icon: 😂
   center: true

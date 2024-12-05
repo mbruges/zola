@@ -1,13 +1,13 @@
 ---
 title: One-Shot
-description: Send a single query to GPT 4o-mini
+description: Send a single query to GPT 4o-mini. No API required - mostly an exercise in testing out `Flask` forwarding.
 extra:
   icon: 🤖
   center: true
 date: 2024-12-03
 ---
 
-<div><input placeholder="Ask a question..." id=input type=text-area></input> <button id=roll class=center>Ask</button></div>
+<input placeholder="Ask a question..." id=input type=text-area></input> <button id=roll class=center>Ask</button>
 
 <blockquote style="visibility:hidden;max-width:50ch" id=output></blockquote>
 

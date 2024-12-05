@@ -1,6 +1,6 @@
 ---
 title: Roll the Dice
-description: Are you feeling lucky?
+description: Are you feeling lucky? (Really just to test if the Flask API is functioning properly.)
 extra:
   icon: 🎲
   center: true

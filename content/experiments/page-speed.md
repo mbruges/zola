@@ -1,11 +1,11 @@
 ---
-title: Page Speed
+title: PageSpeed
 draft: false
 date: 2024-12-05
 extra:
   icon: 🏎️
   center: true
-description: Check loading of site with PageInsight API
+description: Check the loading speed of any site, with Google's PageSpeed Insights API.
 ---
 
 
@@ -32,12 +32,10 @@ function run() {
       // };
       // showCruxContent(cruxMetrics);
       const lighthouse = json.lighthouseResult;
-      console.log(lighthouse)
       const lighthouseMetrics = {
         'Performance Score': lighthouse.categories.performance['score'] ? (lighthouse.categories.performance['score'] * 100).toFixed(0) + '%' : 'N/A',
-        'First Contentful Paint': lighthouse.audits['first-contentful-paint'] ? lighthouse.audits['first-contentful-paint'].displayValue : 'N/A',
-        'Speed Index': lighthouse.audits['speed-index'] ? lighthouse.audits['speed-index'].displayValue : 'N/A',
-        'Time To Interactive': lighthouse.audits['interactive'] ? lighthouse.audits['interactive'].displayValue : 'N/A'
+        'First Contentful Paint (<2s)': lighthouse.audits['first-contentful-paint'] ? lighthouse.audits['first-contentful-paint'].displayValue : 'N/A',
+        'Speed Index (<3.4s)': lighthouse.audits['speed-index'] ? lighthouse.audits['speed-index'].displayValue : 'N/A'
       };
       showLighthouseContent(lighthouseMetrics);
     });
@@ -78,8 +76,8 @@ function showCruxContent(cruxMetrics) {
 }
 
 function showLighthouseContent(lighthouseMetrics) {
-  const lighthouseHeader = document.createElement('h2');
-  lighthouseHeader.textContent = "Lighthouse Results";
+  const lighthouseHeader = document.createElement('h3');
+  lighthouseHeader.innerHTML = "Results";
   contentDiv.appendChild(lighthouseHeader);
   for (key in lighthouseMetrics) {
     const p = document.createElement('p');

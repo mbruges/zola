@@ -17,7 +17,9 @@ document.getElementById('roll').addEventListener('click', function() {
     output.style.visibility = ""
     output.innerHTML = '<span class="load">🤖</span>';
     query = document.getElementById('input');
-    fetch(`https://api.mxb.fyi/gpt-mini?query=${query.value}`)
+    prompt = encodeURIComponent(query.value);
+
+    fetch(`https://api.mxb.fyi/gpt-mini?query=${prompt}`)
       .then(response => {
         if (response.status === 429) {
           output.innerText = 'Too many requests! Wait a minute.';

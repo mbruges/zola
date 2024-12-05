@@ -83,7 +83,7 @@
     if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
     <!-- {% set icon = "📃" %} -->
     {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
-    set description = page.description %} {% set blurb = page.content |
+    set description = page.description | markdown | safe %} {% set blurb = page.content |
     striptags | truncate(length=110) %} {% else %} {% set description = "" %} {%
     set blurb = page.content | striptags | truncate(length=160) %} {% endif %}
 
@@ -102,7 +102,7 @@
                 <span class="date"
                     >{{ page.date | date(format="%-d %b %y", locale="en_GB") }}
                     ~ </span
-                ><b>{{ description }}</b> {{ blurb }}
+                ><b>{{ description | markdown | safe }}</b> {{ blurb | safe }}
                 <i style="opacity: 0.7">read on ⇝</i></span
             >
         </p>

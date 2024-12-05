@@ -1,24 +1,23 @@
 ---
-title: Funny Bot
-description: Ask the bot for some jokes.
-draft: true
+title: Fortune Cookie
+description: Seek cryptic wisdom from the digital sage.
 extra:
-  icon: 😂
+  icon: 🥠
   center: true
 date: 2024-12-03
 ---
 
 
-<button id=roll class=center>Tell me a joke</button>
+<button id=roll class=center>Read my fortune</button>
 
 <blockquote id=output></blockquote>
 
 <script>
 document.getElementById('roll').addEventListener('click', function() {
     const output = document.getElementById('output');
-    output.innerHTML = '<span class="load">😂</span>'; // Show loading symbol
+    output.innerHTML = '<span class="load">🥠</span>';
 
-    fetch('https://api.mxb.fyi/jokes')
+    fetch('https://api.mxb.fyi/fortune')
       .then(response => {
           if (response.status === 429) {
               output.innerText = 'Too many requests! Wait a minute.'; // Update output for 429 status
@@ -27,10 +26,10 @@ document.getElementById('roll').addEventListener('click', function() {
           return response.text();
       })
       .then(result => {
-          output.innerText = ` ${result}`; // Display the joke
+          output.innerText = ` ${result}`;
       })
       .catch(error => {
-          output.innerText = 'Error: ' + error.message; // Display error message
+          output.innerText = 'Error: ' + error.message;
       });
 });
 </script>

@@ -19,13 +19,7 @@
             <p class="subtitle"></p>
         {% endif %}
 </div>
-
-
-<div
-    {% if page.extra.center %}
-    class="center"
-    {% endif %}
->
+<div id="content" {% if page.extra.center %} class="center" {% endif %}>
 
 
 {{ page.content | safe }}

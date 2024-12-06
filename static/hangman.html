@@ -25,97 +25,89 @@
             background-color: black;
             border: 6px solid white;
             text-align: center;
-        
+
         }
     </style>
     <script>
         const poetry = ["Metaphor","Simile","Alliteration","Rhyme","Imagery","Personification","Hyperbole","Onomatopoeia","Protagonist","Antagonist","Theme","Plot","Characterization","Dialogue","Narrative","Exposition","Climax","Resolution","Foreshadowing","Irony","Tone","Mood","Syntax","Diction","Connotation","Denotation","Stanza","Verse","Meter","Rhythm","Allegory","Analogy","Assonance","Consonance","Euphony","Cacophony","Allusion","Symbolism","Motif","Archetype","Juxtaposition","Paradox","Oxymoron","Metonymy","Synecdoche"]
         var chosenWord = (poetry[Math.floor(Math.random() * poetry.length)]).toUpperCase()
-        const gibbets = [`
-    ______
+        const gibbets = [`    ______
     |    |
     |  (x x)
-    | >--|--<  
+    | >--|--<
     |    |
     |  _/ \\_
- ___|___ 
-
-`,`
-    ______
+ ___|___
+`,`    ______
     |    |
     |   ( )
-    | >--|--<  
+    | >--|--<
     |    |
     |  _/ \\_
- ___|___ 
-
-`,`
-    ______
+ ___|___
+`,`    ______
     |    |
     |   ( )
-    | >--|--<  
+    | >--|--<
     |    |
-    |  _/ 
- ___|___ 
-
-`,`
-    ______
+    |  _/
+ ___|___
+`,`    ______
     |    |
     |   ( )
-    | >--|--<  
+    | >--|--<
     |    |
-    |   
- ___|___ 
-
-`,`
-    ______
+    |
+ ___|___
+`,`    ______
     |    |
     |   ( )
-    |    |--<  
+    |    |--<
     |    |
-    |   
- ___|___ 
-
-`,`
-    ______
+    |
+ ___|___
+`,`    ______
     |    |
     |   ( )
-    |    |  
     |    |
-    |   
- ___|___ 
-
-`,`
-    ______
+    |    |
+    |
+ ___|___
+`,`    ______
     |    |
     |   ( )
-    |      
-    |    
-    |   
- ___|___ 
-
-`,`
-    ______
+    |
+    |
+    |
+ ___|___
+`,`    ______
     |    |
-    |  
-    |      
-    |    
-    |   
- ___|___ 
-
+    |
+    |
+    |
+    |
+ ___|___
 `
 
 
 ]
-    //Getting random word from words list    
+    //Getting random word from words list
 
 window.addEventListener('load', () => {
-    const url = window.location.href;
+    let url = window.location.href;
+    if (url.includes("#embed")){
+      console.log(document)
+      document.getElementById('header').style.display = 'none';
+      url = url.replace("#embed","")
+      document.body.style.backgroundColor = '';
+    }
     if (url.includes('?')){
-        const encodedWord = url.split('?')[1]; 
+        const encodedWord = url.split('?')[1];
         chosenWord = atob(encodedWord).toUpperCase()
         chosenWord = chosenWord.replace(/[^a-zA-Z]/g, '')
     }
+
+
 
     //console.log(chosenWord)
     document.getElementById('guessTracker').innerHTML = ('_'.repeat(chosenWord.length))
@@ -123,7 +115,7 @@ window.addEventListener('load', () => {
     const gibbet = document.getElementById('gibbet')
     gibbet.innerHTML = gibbets[7]
         });
-    
+
     function submitLetter(letter) {
        document.getElementById("userInput").value = letter;
        userSubmit()
@@ -133,7 +125,7 @@ window.addEventListener('load', () => {
         const wordDisplay = document.getElementById('wordDisplay')
         const guessTracker = document.getElementById('guessTracker')
         incorrectCount = parseInt(document.getElementById("guessCounter").value)
-            var userInput = document.getElementById('userInput') 
+            var userInput = document.getElementById('userInput')
             userString = (userInput.value).toUpperCase()
             if ((userString.length < 1) || !(userString >= 'A' && userString <= 'Z')){
                 userInput.setAttribute('aria-invalid','true')
@@ -144,8 +136,8 @@ window.addEventListener('load', () => {
 
         if (chosenWord.includes(userString)){
             let currentGuess = guessTracker.innerText
-            
-// Loop to check all occurrences 
+
+// Loop to check all occurrences
             var indices = [];
             currentGuess = currentGuess.split('')
             for(var i=0; i<chosenWord.length;i++) {
@@ -155,7 +147,7 @@ window.addEventListener('load', () => {
                     indices.push(i);}
                 }
             indices.forEach(letterIndex => {
-                
+
                 currentGuess[letterIndex] = userString
             });
             currentGuess = currentGuess.join('')
@@ -178,11 +170,11 @@ window.addEventListener('load', () => {
             console.log(incorrectCount)
             document.getElementById(`guess${incorrectCount}`).innerHTML = userString
             document.getElementById(`counter`).innerHTML = `${incorrectCount}/7`
-            
+
             //when limit is reached
             if (incorrectCount >= 7) {
                 document.getElementById('gibbet').innerHTML = gibbets[incorrectCount]
-                wordDisplay.innerHTML = `<a data-tooltip="Click to research" href=https://en.wikipedia.org/wiki/Special:Search?&search=${chosenWord}&ns0=1' target='_blank'> ${chosenWord} </a>` + "<br><small>You lose!</small>" 
+                wordDisplay.innerHTML = `<a data-tooltip="Click to research" href=https://en.wikipedia.org/wiki/Special:Search?&search=${chosenWord}&ns0=1' target='_blank'> ${chosenWord} </a>` + "<br><small>You lose!</small>"
                 document.getElementById('input-container').hidden = "true"
             }
 
@@ -207,9 +199,10 @@ window.addEventListener('load', () => {
             return
         }
         var url = window.location.href;
+        url = url.replace("#embed",'')
         if (url.includes('?')){
             var url = url.split('?')[0];
-        } 
+        }
         code = btoa(wordToEncode)
         linkBox.value = `${url}?${code}`
         linkButton.ariaBusy="false"
@@ -223,15 +216,19 @@ window.addEventListener('load', () => {
     </script>
   </head>
     <body style="max-height: 90dvh;">
-        <main style="max-width: 800px;margin-left: auto;margin-right: auto;text-align: center;font-family: monospace !important;">
+        <div style="max-width: 800px;margin-left: auto;margin-right: auto;text-align: center;font-family: monospace !important;">
+        <div id="header">
         <h1 style="font-family: monospace;">Hangman</h1>
         <i>Guess the term, then search the definition</i>
-            <table style="max-width: fit-content;min-width: 20em;display: block;margin-left: auto;margin-right: auto;"><tr>
+        </div>
+            <table id="main" style="max-width: fit-content;min-width: 20em;display: block;margin-left: auto;margin-right: auto;margin-bottom: 0px;"><tr>
                 <td><pre id ="gibbet" style="max-width: fit-content; min-width: 9em; font-weight: 700; color: inherit; font-size: 1.2em; background-color: transparent;">Assembling gibbet...</pre></td>
             <td style="text-align: center;">
-                <h3 id="wordDisplay" style="padding-right: 1em;font-family: monospace;letter-spacing: 0.2em;">_ _ _ _ _ _</h3><br>
+                <br>
             </td>
+
     </tr></table>
+
     <table id="guesses" style="max-width: 200px;margin-left: auto;margin-right: auto;">
         <tr>
             <td id="guess1">_</td>
@@ -246,13 +243,14 @@ window.addEventListener('load', () => {
             <td id="counter">0/7</td>
         </tr>
         </table>
+        <h3 id="wordDisplay" style="padding-right: 1em;font-family: monospace;letter-spacing: 0.2em;">_ _ _ _ _ _</h3>
         <pre id="guessTracker" hidden></pre>
         <input type="number" value="0" id="guessCounter" hidden>
     <fieldset id="input-container">
         <input id="userInput" maxlength="1" style="max-width: 5em;margin-left: auto;text-align: left;text-transform: capitalize;font-size: larger;" type="text" id="userInput"  onkeydown = "if (event.keyCode == 13) userSubmit()" autofocus autocomplete="off">
         <button class="contrast" type="button" value="➤" style="text-align: center;padding-left: 1em;padding-right: 1em;" id="button" onclick="userSubmit()">GUESS</button>
 
-        <table hidden>
+        <!-- <table>
             <tr>
               <td class="letter" id="a" onclick="submitLetter(this.innerHTML)">a</td>
               <td class="letter" id="b" onclick="submitLetter(this.innerHTML)">b</td>
@@ -276,7 +274,7 @@ window.addEventListener('load', () => {
               <td class="letter" id="q" onclick="submitLetter(this.innerHTML)">q</td>
               <td class="letter" id="r" onclick="submitLetter(this.innerHTML)">r</td>
               <td class="letter" id="s" onclick="submitLetter(this.innerHTML)">s</td>
-    
+
             </tr>
             <tr>
                 <td></td>
@@ -289,9 +287,9 @@ window.addEventListener('load', () => {
               <td class="letter" id="y" onclick="submitLetter(this.innerHTML)">y</td>
               <td class="letter" id="z" onclick="submitLetter(this.innerHTML)">z</td>
             </tr>
-          </table>
+          </table> -->
         </fieldset>
-        <button class="outline contrast" style="padding: 0.2em;" onclick="window.location.reload()">Reset</button>
+        <button class="outline contrast" style="padding: 0.2em;" onclick="window.location.reload()">New Word</button>
         <button class="contrast" style="padding: 0.2em;" onclick="document.getElementById('dialog').open=true">Custom</button>
         <dialog id="dialog">
             <article>

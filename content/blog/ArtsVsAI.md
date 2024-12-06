@@ -40,7 +40,7 @@ I have worked with some exceptional heads of science in my career: teachers capa
 
 You may stand a little more luck if you're a small school, with a head of 'digital' who doubles as head of IT, but even then: do you seriously expect them to have built a working understanding of these brand new tools, whilst still trying to fend off waves of ransomware attacks on your Windows NT-powered school mainframe?
 
-![The control room of the Chernobyl power station](/images/cherbonyl-room.webp)
+![The control room of the Chernobyl power station](/images/chernobyl-room.webp)
 *"Have you considered becoming an Apple-accredited school?"*
 
 The truth is, these bots are so far outside our curricula that to expect anyone on your staff to have existing expertise in them is absurd, let alone your 'head of science or digital' (and let's be honest, if they were really into LLMs, do you think they'd still be hanging around on a [U1 payscale](https://www.businessinsider.com/ai-prompt-engineer-jobs-pay-salary-requirements-no-tech-background-2023-3#:~:text=%22Prompt%20engineers%22%20train%20AI%20chatbots,always%20require%20a%20tech%20degree.)? Perhaps they'd just be writing tedious [blogposts](/blog) instead).

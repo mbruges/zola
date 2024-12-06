@@ -7,21 +7,21 @@ extra:
   icon: 🚬
 ---
 
-![Just what the doctor ordered](/images/filtered-cigs.webp)
-
 This [Hacker News comment](https://news.ycombinator.com/item?id=41994567) started turning a cog in my brain: are we going about LLMs all wrong, by plonking them straight in the hands of the end user?
 
 > I'm of the mind that AI, in it's current state, really isn't a tool meant for an end user to interact with.
 > It feels like it's the most useful when it's transparent and you -- as an end user -- don't know that there's an LLM in the process. The best use cases seem to be those that don't require an end consumer to directly interact with an AI, but their journey through some process is assisted by an AI instead.
 >> [CharlieDigital, 30/10/24](https://news.ycombinator.com/user?id=CharlieDigital)
 
-The raw input/output pipeline has the broadest possible surface for hallucination and minimal error correction; a few too many mad pledges of love and the user will quickly assume the whole technology is bad (or worse, requite the love right back).
+The raw input/output pipeline has the broadest possible surface for hallucination and minimal error correction; a few too many [mad pledges of love](https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html) and the user will quickly assume the whole technology is bad (or worse, requite the love right back).
+
+![Just what the doctor ordered aside](/images/filtered-cigs.webp)
 
 I can't comment on 'grown-up' usage of chat LLMs - I think most (even tech-unsavvy) users are pretty comfortable with text-prompts as an input - but do think there's something to be said for filtering our students' usage of them.
 
 ## Wrappers don't kill people, prompts do
 
-Take the most prevalent (viz pervasive) use-cases of LLMs in schools today: generating written responses to homework tasks. Obviously, we don't *want* students to do this; it's just plagiarism with fewer steps. But we've got a doubled-up problem of unfiltered LLM output here: no wrapper means the bot can go buck-wild with its answer, and no work-ethic/morals/care from the student means minimal error-checking on their end.
+Take the most prevalent (*viz* pervasive) use-cases of LLMs in schools today: generating written responses to homework tasks. Obviously, we don't *want* students to do this; it's just plagiarism with fewer steps. But we've got a doubled-up problem of unfiltered LLM output here: no wrapper means the bot can go buck-wild with its answer, and no work-ethic/morals/care from the student means minimal error-checking on their end.
 
 We live in a world where this happens anyway, and Google isn't getting banned anytime soon.
 
@@ -37,7 +37,7 @@ They plonk in their homework task as before, though rather than the LLM spitting
 
 Sentence starters are often the most effective form of scaffolding we can employ, tricking the brain into working a little like an LLM to test out what it *thinks* might be the right answer.
 
-And what they end up writing might be wrong, but that's fine! Because they're little learning humans, not inscrutable monolithic software stacks allocating life-saving care.
+And what they end up writing might be wrong, but that's fine! Because they're little learning humans, not inscrutable monolithic software stacks [allocating life-saving care](https://arstechnica.com/ai/2024/10/hospitals-adopt-error-prone-ai-transcription-tools-despite-warnings/).
 
 ## A man can dream
 

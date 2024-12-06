@@ -87,6 +87,7 @@
     striptags | truncate(length=110) %} {% else %} {% set description = "" %} {%
     set blurb = page.content | striptags | truncate(length=160) %} {% endif %}
 
+
     <div
         class="blog-card"
         onclick="location.href='{{ page.permalink | safe }}';"
@@ -98,11 +99,11 @@
 
             <span class="title">{{ icon }}&nbsp;&nbsp;{{ page.title }}</span
             ><br />
-            <span class="description">
+            <span class="description" >
                 <span class="date"
                     >{{ page.date | date(format="%-d %b %y", locale="en_GB") }}
                     ~ </span
-                ><b>{{ description | markdown | safe }}</b> {{ blurb | safe }}
+                    ><b style="white-space: nowrap;">{{ description | replace(from="<p>", to="") | replace(from="</p>", to="") | safe }}</b> {{ blurb }}
                 <i style="opacity: 0.7">read on ⇝</i></span
             >
         </p>

@@ -8,8 +8,9 @@ fi
 if [[ "$url" =~ \.(jpg|jpeg|png|gif|webp)$ ]]; then
     filename=$(basename "$url")
 else
-    echo "The provided URL does not refer to a valid image format."
-    exit 1
+    echo "The provided URL does not refer to a valid image format, but we'll give it a go."
+    #exit 1
+    filename=$(basename "$url")
 fi
 
 read -p "Enter image name (or press enter for default): " filename_input
@@ -22,6 +23,8 @@ else
     new_filename="$(echo "${filename_input%.*}" | tr -cd '[:alnum:]_-').webp"
 fi
 
+
+
 # Download the image
 if command -v wget &> /dev/null; then
     wget -q "$url" -O "$filename"
@@ -32,9 +35,12 @@ else
     exit 1
 fi
 
-old_size=$(stat --printf="%s" "$filename")
-# Convert to webp format
-#
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    old_size=$(stat -f "%z" "$filename")
+else
+    old_size=$(stat --printf="%s" "$filename")
+fi
+
 
 if command -v magick &> /dev/null; then
     magick "$filename" -strip -quality 72 "$new_filename"
@@ -45,6 +51,12 @@ fi
 
 # Remove the original file
 rm "$filename"
-new_size=$(stat --printf="%s" "$new_filename")
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    new_size=$(stat -f "%z" "$new_filename")
+else
+    new_size=$(stat --printf="%s" "$new_filename")
+fi
+
 mv $new_filename static/images/
 echo "Saved to   /images/$new_filename     Size reduction: $(((old_size - new_size) / 1024)) KB"

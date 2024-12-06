@@ -97,7 +97,7 @@ function FlambardsGenerator() {
           })
           .catch(error => {
                 let errormessage = `<center><h2 id=title>Tragedy strikes</h2><br><p>Something has gone terribly wrong.<br> Give it a few minutes and try again.</p> <br>  <img style="border-color: black
-            ;border: 3px;border-style:solid;"  alt="illustrationGenerated" src="/images/biplanefire.png" height="150px" width="150px" title="${error}"></center> `;
+            ;border: 3px;border-style:solid;"  alt="illustrationGenerated" src="/images/biplanefire.webp" height="150px" width="150px" title="${error}"></center> `;
             document.getElementById("output").innerHTML = errormessage;
             });
         document.getElementById("title").scrollIntoView({ behavior: 'smooth' });

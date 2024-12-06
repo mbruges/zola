@@ -12,8 +12,8 @@ The unfiltered internet is a dangerous thing.
 
 Filtering it is big business, particularly in education settings. But where the blocklists used to be clearly defined - naughty videos and time-wasting games - the gatekeepers of the school's internet now have a trickier challenge.
 
-![coolmathsgames]()
-*Won't somebody think of the children?*
+![Screenshot of the old 'Cool Math Games' website](/images/cool-math-games.webp)
+*Behold: the bane of every Primary School IT Manager*
 
 Fortinet et al were great when all one wanted to do was stop Year accidentally receiving a *very* detailed biology lesson. But what do you do when the world's defacto homepage becomes an engine for undetectable plagiarism? Or when the blue links on the results page lead only to error-strewn, AI-generated slop?
 

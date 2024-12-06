@@ -105,3 +105,5 @@ function FlambardsGenerator() {
 
 document.getElementById("submit").addEventListener("click", FlambardsGenerator);
 </script>
+
+<a href="mailto:max@mbruges.com?subject=Flambards%20Feedback&body=Dear%20Sir%2C%0A%0AI%20was%20shocked%2Foverjoyed%2Fdisappointed%2Fdisturbed%2Fconfused%2Felated%20by%20your%20delightful%2Fmaddening%2Fsacrilegious%20Flambards%20Generator.%0A%0APlease%20desist%2Fcontinue%2Freconsider%20your%20life%20choices.%0A%0AYours%2C%0A%0A%20" style="font-size:0.6em"><button>Send feedback 📧</button></a>

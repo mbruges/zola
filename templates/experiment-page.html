@@ -23,7 +23,7 @@
 {{ page.content | safe }}
 
 <hr>
-{% if (page.lower or page.higher) and page.draft != true %}
+    {% if (page.lower or page.higher) and page.draft != true %}
   <div class="post-nav" style="display: flex; justify-content: space-between;">
       <style>
       .previous, .next {

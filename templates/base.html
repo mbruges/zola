@@ -41,6 +41,7 @@
  <link rel="stylesheet" href="{{ get_url(path="nav.min.css") | safe }}">
 </head>
 <body>
+<div id="main" style="min-height: 92vh;">
     <div id="nav-container">
 <nav>
     <div class="dropdown">
@@ -62,6 +63,7 @@
       {% block content %} {% endblock %}
     </div>
   </section>
+</div>
 <footer >
     <p title="Built by Zola at {{ now() | date(format='%H:%M:%S UTC%:::z, %a %d %b') }}"
     alt="Footer">{{ config.extra.footer }}</p>

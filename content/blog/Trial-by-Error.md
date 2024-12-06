@@ -42,7 +42,7 @@ Of course, we don't want to fall into the trap of blind-copying the correction t
 
 Taking that little button out is another small nudge towards the *pause-reflect-digest* cycle that one needs to actually *learn* from a mistake.
 
-![Me typing SUDO BASH for the first time.](/images/homer.png "Me typing SUDO BASH for the first time.")
+![Me typing SUDO BASH for the first time.](/images/homer.webp "Me typing SUDO BASH for the first time.")
 *Me typing `sudo bash` for the first time.*
 
 [I've joked before](/blog/Trial-by-Error) about the dangers of '[bricking](https://www.howtogeek.com/126665/htg-explains-what-does-bricking-a-device-mean/)' - irreparably breaking something by copying what you don't understand - but it's a potent metaphor. Too often, as teachers, we incentivise the "do as I do" approach, and mistake mirrored compliance for actual understanding. In the worst case, our students end up building their knowledge on non-existent foundations, before some unscaffolded, unmodelled assessment suddenly [liquifies](https://www.britannica.com/video/185615/liquefaction-event-soil-particles-earthquake-combination-water) the ground and it all comes tumbling down.

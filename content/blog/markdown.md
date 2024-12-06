@@ -17,7 +17,7 @@ So we start doodling in the margins.
 
 Children are most susceptible to this trap. Students will often be thrown into the blazing white `.docx`  quadrangle before they have even the most basic understanding of computers, drafting, or the formalities of writing.  They can be overwhelmed by the profundity of formatting options - the colours, the WordArt, the clipart (oh God, the [clipart](https://clipart-library.com/clipart/1578505.htm)) - so much so that the words themselves seem less important.
 
-![some classic examples of Noughties wordart](https://filestore.community.support.microsoft.com/api/images/f1ee3b61-7f71-40cd-8858-25766afb8d66?upload=true)
+![some classic examples of Noughties wordart](/images/word-art.webp)
 *What a thing of beauty.*
 
 And who can blame them? Formatting is fun! Unlike crafting prose, the feedback loop is instantaneous, the results immediately visible. Click this button and look: it's bigger! There's no equivalent for writing, no "click here to increase pathos by 20%." At least, [not yet](https://www.folger.edu/blogs/shakespeare-and-beyond/by-false-intelligence-ai-chatgpt-and-the-bard/). There isn't a primary teacher in the world who hasn't let their students work on computers for a lesson, only for the hour to produce nothing more than 30 documents with a single, brightly coloured heading of ***My StOrY***.

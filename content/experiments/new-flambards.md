@@ -7,6 +7,9 @@ extra:
   center: true
 ---
 
+
+<blockquote id=output style="visibility:hidden;text-align:left;text-align: justify;"></blockquote>
+
 <input type=text id=promptInput placeholder='A tragic story of...'><button id=submit>Generate a Flambard</button>
 
 <style>
@@ -15,11 +18,15 @@ extra:
     padding: 0.2em;
     text-align: center;
     background:rgb(0,0,0,0.2);
-    border-radius:var(--border-radius)
+    border-radius:var(--border-radius);
+    max-height:fit-content;
+    padding:1em;
 }
 h4 {
     padding:0.1em;
+    margin:0.1em;
 }
+
 </style>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
@@ -46,17 +53,13 @@ h4 {
 </div>
 </div>
 
-
-<blockquote id=output style="visibility:hidden;text-align:left;text-align: justify;">
-</blockquote>
-
 <script>
 function FlambardsGenerator() {
         console.log("running generator")
 
         var imageURL = "https://mbruges.com/images/biplane.svg"
         var newresponse = "Something went wrong."
-        var prompt = `You are the novelist K. M. Peyton, author of the 'Flambards' series. You will write in her style. Respond in plain text. \nUsing everything you know about the 'Flambards' series of books, write a 200-word, two paragraph short story about the characters. You must split your two paragraphs with two <br> tags`
+        var prompt = `You are the novelist K. M. Peyton, author of the 'Flambards' series. You will write in her style. Respond in plain text.\n Here is a brief overview of the key plot points of 'Flambards': The orphaned Christina Parsons is sent to live at Flambards estate in Essex with her mother's half-brother, the crippled Russell. Her Aunt Grace speculates that Russell plans for Christina to marry his son Mark to restore Flambards to its former glory using the money that she will inherit on her twenty-first birthday. Mark is as brutish as his father, with a great love for hunting, whereas the younger son William is terrified of horses after a hunting accident and aspires to be an aviator. Christina soon finds friendship with the injured William, who challenges her ideas on class boundaries, as well as her love for horses and hunting. William and Christina eventually fall in love. \nUsing everything you know about the 'Flambards' series of books, write a 120-word, two paragraph short story about the characters. You must split your two paragraphs with two <br> tags`
 
         //Adding on any specifics that the user requests
         var additions = document.getElementById("promptInput").value;
@@ -85,7 +88,7 @@ function FlambardsGenerator() {
           .then(result => {
               newresponse  = ` ${result}`;
             newresponse =
-            `<h2 style="text-align:center !important"><i>Chapter 94:</i>
+            `<h2 id=title style="text-align:center !important"><i>Chapter 94:</i>
             <br>Flambards Forever</h2>
             <br>
             <p style="width:88%;margin-left:auto;margin-right:auto;">${newresponse}</p>`;
@@ -93,10 +96,11 @@ function FlambardsGenerator() {
 
           })
           .catch(error => {
-                let errormessage = `<center><h1>Tragedy strikes</h1><br><p>Something has gone terribly wrong with the app. Give it a few minutes and try again.</p> <br>  <img style="border-color: black
-            ;border: 3px;border-style:solid;"  alt="illustrationGenerated" src="/images/biplanefire.png"height="150px" width="150px"><details><summary style="font-size:11px">Error message:</summary><code style="font-size:11px"> ${error}</code></details></center> `;
+                let errormessage = `<center><h2 id=title>Tragedy strikes</h2><br><p>Something has gone terribly wrong.<br> Give it a few minutes and try again.</p> <br>  <img style="border-color: black
+            ;border: 3px;border-style:solid;"  alt="illustrationGenerated" src="/images/biplanefire.png" height="150px" width="150px" title="${error}"></center> `;
             document.getElementById("output").innerHTML = errormessage;
             });
+        document.getElementById("title").scrollIntoView({ behavior: 'smooth' });
         }
 
 document.getElementById("submit").addEventListener("click", FlambardsGenerator);

@@ -10,10 +10,8 @@
 <title>{{ page.title }} - {{ config.extra.default_title }} </title>
 <h1 class="title">{{ icon }} {{ page.title }}</h1>
 
-
-
 <div class="subheading">
-        {% if page.description %}
+        {% if page.description and not page.extra.nosub %}
             <p class="subtitle">{{ page.description | markdown | safe }}</p>
         {% else %}
             <p class="subtitle"></p>

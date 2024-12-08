@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#f1f2f3;display:block;z-index:1;position:relative;border-radius:1em;background:transparent;" width="1440" height="602" preserveAspectRatio="xMidYMid" viewBox="0 0 1440 602">
+<g transform="translate(720,301) scale(1,1) translate(-720,-301)"><defs>
+  <linearGradient id="lg-0" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#0055a5" offset="0"></stop>
+  <stop stop-color="#45aee7" offset="1"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 -225.75 c59 451.5 1381 -451.5 1440 0
+L1440 827.75 c661 -451.5 -2101 451.5 -1440 0Z" fill="url(#lg-0)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="6s" begin="0s" calcMode="spline" keySplines="1 0 1 2;1 0 1 2" keyTimes="0;0.5;1" values="M0 -225.75 c59 451.5 1381 -451.5 1440 0
+L1440 827.75 c661 -451.5 -2101 451.5 -1440 0Z;M0 -225.75 c661 451.5 779 -451.5 1440 0
+L1440 827.75 c59 -451.5 -1499 451.5 -1440 0Z;M0 -225.75 c59 451.5 1381 -451.5 1440 0
+L1440 827.75 c661 -451.5 -2101 451.5 -1440 0Z"></animate>
+</path><defs>
+  <linearGradient id="lg-1" x1="0" x2="1" y1="0" y2="0">
+  <stop stop-color="#bda0b2" offset="0"></stop>
+  <stop stop-color="#45aee7" offset="1"></stop>
+  </linearGradient>
+</defs>
+<path d="M0 301 c661 451.5 779 -451.5 1440 0
+L1440 1354.5 c59 -451.5 -1499 451.5 -1440 0Z" fill="url(#lg-1)" stroke="none">
+ <animate attributeName="d" repeatCount="indefinite" dur="6s" begin="-1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1" values="M0 301 c661 451.5 779 -451.5 1440 0
+L1440 1354.5 c59 -451.5 -1499 451.5 -1440 0Z;M0 301 c59 451.5 1381 -451.5 1440 0
+L1440 1354.5 c661 -451.5 -2101 451.5 -1440 0Z;M0 301 c661 451.5 779 -451.5 1440 0
+L1440 1354.5 c59 -451.5 -1499 451.5 -1440 0Z"></animate>
+</path></g>
+</svg>

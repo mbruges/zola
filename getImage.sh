@@ -4,6 +4,11 @@ if [ -z "$url" ]; then
     read -p "Enter image URL: " url
 fi
 
+if [[ ! "$url" == http* ]]; then
+    LOCAL=true
+    filename=$(basename "$url")
+    cp $url $filename
+fi
 
 if [[ "$url" =~ \.(jpg|jpeg|png|gif|webp)$ ]]; then
     filename=$(basename "$url")
@@ -26,13 +31,15 @@ fi
 
 
 # Download the image
-if command -v wget &> /dev/null; then
-    wget -q "$url" -O "$filename"
-elif command -v curl &> /dev/null; then
-    curl -s -o "$filename" "$url"
-else
-    echo "Neither wget nor curl is installed. Please install one of them to proceed."
-    exit 1
+if [ "$LOCAL" != true ]; then
+    if command -v wget &> /dev/null; then
+        wget -q "$url" -O "$filename"
+    elif command -v curl &> /dev/null; then
+        curl -s -o "$filename" "$url"
+    else
+        echo "Neither wget nor curl is installed. Please install one of them to proceed."
+        exit 1
+    fi
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]]; then

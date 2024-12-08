@@ -79,12 +79,29 @@ textarea {
     aside,
     blockquote:has(a[href*="aside"]),
     img[alt*="aside"] {
-        width: 25%;
+        width: 30%;
         padding: 0.5em !important;
         margin: 1em !important;
         float: right;
         margin-right: -0.2em !important;
     }
+
+    p > img[alt*="aside"] ~ em, .caption {
+        clear:both;
+        min-width: 30%;
+        float: right;
+        width: fit-content;
+        margin-top: -1.5em; /* Adjusting margin to ensure it appears directly underneath the img */
+        margin-left: auto;
+        margin-right: auto; /* Center align under image */
+        padding: 0;
+        font-size: 0.8em;
+        font-style: italic;
+        text-align: center;
+        opacity: 0.75;
+    }
+
+
     aside > p {
         border: 2pt dashed var(--t) !important;
         background-color: rgba(0, 0, 0, 0.085);
@@ -157,6 +174,28 @@ a {
     text-decoration: underline solid 1px;
     font-family: monospace;
     font-size: 0.99em;
+}
+
+#date-bar {
+    width: 100%;
+    height: 0.7em;
+    border-bottom:  2px solid var(--a);
+    text-align: center;
+    margin: none;
+    padding: none;
+}
+
+#date-tag {
+    font-size: 0.7em;
+    font-family:monospace;
+    border-radius:0.2em;
+    background-color:var(--a);
+    color:var(--b);
+    border: 2px solid var(--a);
+    margin:none;
+    padding: 0.1em;
+    padding-left: 1em;padding-right: 1em;
+    vertical-align:middle;
 }
 
 button {

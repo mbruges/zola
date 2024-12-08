@@ -84,7 +84,7 @@
             <span class="icon-image center">{{ icon }}</span>
         <h3 >{{ page.title }}</h3>
         <sup >New</sup>
-        <p>{{ description | markdown | safe }}</p>
+        <p>{{ description | markdown(inline=true) | safe }}</p>
         <p>{{ blurb }}</p>
         <p><a href='{{ page.permalink | safe }}'><button class=center>Try experiment</button></a></p>
     </div></div>

@@ -52,6 +52,7 @@ export const addNavShadow = (triggered) =>{
   const nav = document.querySelector('.nav');
   if (window.scrollY > 0) {
       nav.classList.add("add-shadow");
+      document.getElementById('website-name').style.visibility = "visible";
       console.log("triggered");
       window.removeEventListener('scroll', addNavShadow);
   } else {

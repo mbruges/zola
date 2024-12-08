@@ -4,7 +4,7 @@ title: The AI I use every day
 date: 2024-09-29
 extra:
   icon: 🔧
-description: "The simplest question is always the best"
+description: "The simplest question is *always* the best"
 ---
 
 ![how](/images/how-do-i.gif)

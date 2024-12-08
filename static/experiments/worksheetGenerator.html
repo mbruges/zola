@@ -3,7 +3,7 @@
 
 <head>
     <link rel="icon" href="/favicon.svg">
-    <link rel="stylesheet" href="/old-style.css">
+    <link rel="stylesheet" href="/old-style.min.css">
     <meta charset="utf-8">
     <meta name="description" content="A page to generate worksheets automatically, using GPT-3.5">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +90,7 @@
             var topicFileName = topic.trim()
             var generatedContent = "" + document.getElementById("AskGPToutput").innerHTML
             const link = document.createElement("a");
-            var content = `<!DOCTYPE html> <head> <link rel="icon" href="/favicon.svg"> <link rel="stylesheet" href="/old-style.css"> <meta charset="utf-8"> <meta name="description" content="Worksheet generated on mbruges.com"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head> <title>MB - ${topic}</title> ${generatedContent} <br> <br> <footer style="font-size:6px; color:grey; text-align:center">
+            var content = `<!DOCTYPE html> <head> <link rel="icon" href="/favicon.svg"> <link rel="stylesheet" href="/old-style.min.css"> <meta charset="utf-8"> <meta name="description" content="Worksheet generated on mbruges.com"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head> <title>MB - ${topic}</title> ${generatedContent} <br> <br> <footer style="font-size:6px; color:grey; text-align:center">
                 <small><i>2023 -  Generated on <a href="https://mbruges.com/worksheetGenerator.html" target="_blank">Worksheet Generator</a>, using code by <a href="https://mbruges.com/index.html" target="_blank">Max Bruges</a> </i> 🐈‍⬛ </small></footer></html>`;
             const file = new Blob([content], {type: 'text/plain' });
             link.href = URL.createObjectURL(file);

@@ -4,22 +4,22 @@
         <meta charset="utf-8">
         <meta name="description" content="Min Test Page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="1kb.min.css">
+        <link rel="stylesheet" href="/experiments/1kb.min.css">
         <link rel="icon" type="image/svg" href="https://openmoji.org/data/color/svg/1F408-200D-2B1B.svg">
         <title>1Kb CSS</title>
         <script>
             function toggleDark(elem) {
                 if (elem.value == "true") {
                 //dark
-                document.documentElement.style.setProperty('--t', '#e1dfd4');
-                document.documentElement.style.setProperty('--b', '#1c2131');
+                document.documentElement.style.setProperty('--t', '#fffce4');
+                document.documentElement.style.setProperty('--b', '#161b2b');
                 document.documentElement.style.setProperty('--a', '#a2a2e7');
                 elem.value = 'false'
             }
             else {
                 //light
-                document.documentElement.style.setProperty('--b', '#e6e4dc');
-                document.documentElement.style.setProperty('--t', '#1c2131');
+                document.documentElement.style.setProperty('--b', '#fffce4');
+                document.documentElement.style.setProperty('--t', '#161b2b');
                 document.documentElement.style.setProperty('--a', '#51518a');
                 elem.value="true"
             }
@@ -32,7 +32,6 @@
     <small>25<sup>th</sup> March 2024</small>
     <hr>
 </header>
-<p class="center"><i>This page is powered by a stylesheet <b>exactly </b> 1 kilobyte in size: <code>1kb.css</code>.</i></p>
 <h2>Why bother?</h2>
 <p>This is an exercise in simplicity and clarity: cutting down <del>extraneous</del> fluff to make sure the <b>content</b> stands out clearly. It has also been an <i>excellent</i> way to learn a little more about <code>.css</code>.</p>
 <p>The stylesheet is designed to be used for blog posts, mainly, but has features one needs for a more <a href="https://maxbruges.com/">interactive site</a> too.</p>
@@ -63,7 +62,7 @@
 </div>
 
 <p>It can handle images nicely, scaling to the screen.</p>
-<img src="abstract.svg" alt="Some abstract waves">
+<img src="/images/abstract.svg" alt="Some abstract waves">
 <p> And it renders blockquotes sensibly, in the serifed Wikipedia style.</p>
     <blockquote><p>And though she be but <strong>little,</strong> she is <u>fierce!</u></p>
     <p style="text-align:right;padding-right: 0.5em;"><i>-- HELENA, Act 2 Scene 2  </i></p>
@@ -91,108 +90,107 @@
     <p>Here is the full code, de-minified. Feel free to use and adapt!</p>
     <a class="center" href="/1kb.css" download><button>Download ↧</button></a>
     <pre><code>
-    :root {
-        --b: #e6e4dc; 
-        --t: #1c2131;
-        --a: #51518a;
-        --s: #80808034;
-    }
-    
-    @media (prefers-color-scheme: dark) {
-        :root{
-            --t: #e6e4dc;
-            --b: #1c2131;
-            --a: #a2a2e7;
-    }}
-    
+/*The 1kb stylesheet*/
+:root {
+    --b: #fffce4;
+    --t: #161b2b;
+    --a: #51518a;
+    --s: #80808034;
+}
+
+@media (prefers-color-scheme: dark) {
     :root{
-        font: 13pt sans-serif;
-        line-height: 1.3; 
-        background:var(--b);
-        color: var(--t);
-        max-width: 80ch;
-        padding: 0.6em;
-        margin: auto;
-    }
-    
-    h1,h2,h3{
-        font-family: serif;
-        margin: 1.4em 0 0.1em;
-    }
-    
-    button,pre,img,input,textarea {
-        border-radius: 0.5rem;
-        padding: 0.4rem;
-    }
-    
-    img{
-        max-height: 40vh;
-        max-width: 95%;
-    }
-    
-    img, .center{
-        display: block;
-        text-align: center;
-        margin:auto;
-    }
-    
-    a:hover,button:hover{
-        filter:brightness(130%);
-        cursor:pointer;
-    }
-    
-    a{
-        color: var(--a);
-    }
-    
-    button{
-        background:var(--t);
-        color:var(--b);
-        font-weight:bold;
-        font-size: 1em;
-    }
-    
-    input,textarea{
-        background: var(--s);
-        font-size: 1em;
-        color:  var(--t);
-        border: 2px solid var(--t);
-        margin-right: -0.7em;
-        padding-right: 1em;
-    }
-    
-    small, sup {
-        font-size: 0.6em;
-    }
-    
-    pre{
-        background:#222;
-        color: #fff;
-        overflow-x: scroll;
-        border: 2px solid #fff;
-    }
-    
-    blockquote, p code,table{
-        background: var(--s);
-        padding:0.2em;
-        font-size: 0.9em;
-    }
-    
-    blockquote{
-        border-left: 3pt solid;
-        padding: 1px 0.3em 1px 1em ;
-        font-family: serif;
-    }
-    
-    table {
-        text-align: center;
-        margin: auto;
-    }
-    
-    td {
-        padding:0.35rem;
-        background: var(--b);
-    }
+        --t: #fffce4;
+        --b: #161b2b;
+        --a: #a2a2e7;
+}}
+
+:root{
+    font: 13pt sans-serif;
+    line-height: 1.3;
+    background:var(--b);
+    color: var(--t);
+    max-width: 80ch;
+    padding: 0.6em;
+    margin: auto;
+}
+
+h1,h2,h3{
+    font-family: serif;
+    margin: 1.4em 0 0.1em;
+}
+
+button,pre,img,input,textarea {
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+}
+
+img{
+    max-height: 40vh;
+    max-width: 95%;
+}
+
+img, .center{
+    display: block;
+    text-align: center;
+    margin:auto;
+}
+
+a:hover,button:hover{
+    filter:brightness(130%);
+    cursor:pointer;
+}
+
+a{
+    color: var(--a);
+}
+
+button{
+    background:var(--t);
+    color:var(--b);
+    font-size: 1em;
+}
+
+input,textarea{
+    background: var(--s);
+    font-size: 1em;
+    color:  var(--t);
+    border: 2px solid var(--t);
+    margin-right: -0.7em;
+    padding-right: 1em;
+}
+
+small, sup {
+    font-size: 0.6em;
+}
+
+pre{
+    background:#222;
+    color: #fff;
+    overflow-x: scroll;
+    border: 2px solid #fff;
+}
+
+blockquote, p code,table{
+    background: var(--s);
+    padding:0.2em;
+}
+
+blockquote{
+    border-left: 3pt solid;
+    padding: 1px 0.3em 1px 1em ;
+    font-family: serif;
+}
+
+table {
+    text-align: center;
+    margin: auto;
+}
+
+td {
+    padding:0.35rem;
+    background: var(--b);
+}
 
 </code></pre>
 <sup>*<i><b>everywhere</b> == my entirely subjective use-case</i></sup>

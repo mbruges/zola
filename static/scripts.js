@@ -47,3 +47,14 @@ export const toggleNightmode = () => {
      document.documentElement.style.setProperty('--a', "#fcf199");
    }
 }
+
+export const addNavShadow = (triggered) =>{
+  const nav = document.querySelector('.nav');
+  if (window.scrollY > 0) {
+      nav.classList.add("add-shadow");
+      console.log("triggered");
+      window.removeEventListener('scroll', addNavShadow);
+  } else {
+      nav.classList.remove("add-shadow");
+  }
+}

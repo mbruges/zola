@@ -8,8 +8,14 @@
 
 <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23f0f8ff;stop-opacity:1' /><stop offset='100%' style='stop-color:%23ffffe0;stop-opacity:1' /></linearGradient></defs><rect width='100' height='100' fill='url(%23grad1)'/><text y='1.75em' x='0.85em' font-size='37'>{{ icon }}</text></svg>">
 <title>{{ page.title }} - {{ config.extra.default_title }} </title>
-<h1 class="title">{{ icon }} {{ page.title }}</h1>
-
+<h1 class="title" style="padding-bottom: 0.3rem;
+border-bottom: none;">{{ icon }} {{ page.title }}</h1>
+<div id="date-bar">
+      {% if page.date and not page.draft %}
+     <span id="date-tag"> {{ page.date | date(format="%-d %B %Y", locale="en_GB") }}
+         {% else %} {% endif %}
+     </span>
+</div>
 <div class="subheading">
         {% if page.description and not page.extra.nosub %}
             <p class="subtitle">{{ page.description | markdown | safe }}</p>

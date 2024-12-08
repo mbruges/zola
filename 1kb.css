@@ -1,21 +1,21 @@
 /*The 1kb stylesheet*/
 :root {
-    --b: #e6e4dc; 
-    --t: #1c2131;
+    --b: #fffce4;
+    --t: #161b2b;
     --a: #51518a;
     --s: #80808034;
 }
 
 @media (prefers-color-scheme: dark) {
     :root{
-        --t: #e6e4dc;
-        --b: #1c2131;
+        --t: #fffce4;
+        --b: #161b2b;
         --a: #a2a2e7;
 }}
 
 :root{
     font: 13pt sans-serif;
-    line-height: 1.3; 
+    line-height: 1.3;
     background:var(--b);
     color: var(--t);
     max-width: 80ch;
@@ -56,7 +56,6 @@ a{
 button{
     background:var(--t);
     color:var(--b);
-    font-weight:bold;
     font-size: 1em;
 }
 
@@ -83,7 +82,6 @@ pre{
 blockquote, p code,table{
     background: var(--s);
     padding:0.2em;
-    font-size: 0.9em;
 }
 
 blockquote{

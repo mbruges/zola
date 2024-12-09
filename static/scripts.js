@@ -48,14 +48,29 @@ export const toggleNightmode = () => {
    }
 }
 
-export const addNavShadow = (triggered) =>{
+let lastScrollY = window.scrollY; // Declare at the top level
+let ticking = false;
+
+export function addNavShadow(){
   const nav = document.querySelector('.nav');
-  if (window.scrollY > 0) {
+  if (lastScrollY !== 0) {
       nav.classList.add("add-shadow");
       document.getElementById('website-name').style.visibility = "visible";
       console.log("triggered");
-      window.removeEventListener('scroll', addNavShadow);
   } else {
       nav.classList.remove("add-shadow");
+      document.getElementById('website-name').style.visibility = "hidden";
   }
+}
+
+export function handleScroll() {
+    lastScrollY = window.scrollY; // Update the last scroll position
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            addNavShadow(); // Call changeNav function
+            ticking = false; // Reset ticking
+        });
+
+        ticking = true; // Set ticking to true to prevent further calls
+    }
 }

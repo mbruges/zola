@@ -54,7 +54,7 @@
             <a href="/blog">📝 Blog</a>
         </div>
     </div>
-    <small id="website-name"> {% if page.title %} {{ page.title }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
+    <small id="website-name"> {{ icon }} {% if page.title %} {{ page.title }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
     <p><a id="back" href="../">↩ Back</a></p>
 </nav>
 </div>
@@ -69,12 +69,12 @@
     alt="Footer">{{ config.extra.footer }}</p>
 </footer>
 <script type="module">
-        import { toggleNightmode,addNavShadow } from '/scripts.js';
+        import { toggleNightmode,handleScroll,addNavShadow } from '/scripts.js';
         if (localStorage.getItem('nightmode') === 'enabled') {
             toggleNightmode();
         }
         document.getElementById('lightswitch').onclick = toggleNightmode;
-        window.addEventListener('scroll', addNavShadow);
+        window.addEventListener('scroll', handleScroll);
         window.onload = addNavShadow;
 </script>
 <span class="lightswitch" id="lightswitch">🌓︎</span>

@@ -4,6 +4,7 @@ description: Are you feeling lucky? (Really just to test if the Flask API is fun
 extra:
   icon: 🎲
   center: true
+  nosub: true
 date: 2024-12-03
 ---
 

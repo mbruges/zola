@@ -14,16 +14,20 @@ export const toggleNightmode = () => {
 
 let lastScrollY = window.scrollY; // Declare at the top level
 let ticking = false;
+let shadowActive = false
 
 export function addNavShadow(){
   const nav = document.querySelector('.nav');
-  if (lastScrollY !== 0) {
+  if ((lastScrollY !== 0) && (!shadowActive)) {
       nav.classList.add("add-shadow");
+      shadowActive = true
       document.getElementById('website-name').style.visibility = "visible";
-      console.log("triggered");
-  } else {
+      console.log("shadow on");
+  } else if ((shadowActive) && (lastScrollY === 0)) {
       nav.classList.remove("add-shadow");
+      shadowActive = false
       document.getElementById('website-name').style.visibility = "hidden";
+      console.log("shadow off");
   }
 }
 
@@ -34,7 +38,6 @@ export function handleScroll() {
             addNavShadow(); // Call changeNav function
             ticking = false; // Reset ticking
         });
-
         ticking = true; // Set ticking to true to prevent further calls
     }
 }

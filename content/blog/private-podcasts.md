@@ -73,8 +73,6 @@ As a quick and dirty way to get the files onto a phone for listening, Syncthing 
 
 My preferred listening app is [AntennaPod](https://antennapod.org/): open-source and very snappy. For our purposes, it also has an easy method for adding local files: tap `Add podcast` then `Add local folder` to select the Syncthing folder containing the audio files. As soon as the files appear in the folder, they'll populate into your Episode feed (with the added bonus of being listenable offline).
 
-![pods](https://mxb.fyi/static/personalpods.webp)
-
 And *voila*: your own, FM-standard, *Sounds*-free **6 O'Clock News**, with auto-downloads, immediately after broadcast. Just as Lord Reith intended.
 
 > "...in view of the widespread interest which is taken by Our People in

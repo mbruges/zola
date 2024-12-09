@@ -1,5 +1,8 @@
 {% if page.extra.icon %}
 {% set icon = page.extra.icon %}
+
+{% elif section.extra.icon %}
+{% set icon = section.extra.icon %}
 {% else %}
 {% set icon = config.extra.icon %}
 {% endif %}
@@ -12,6 +15,8 @@
 
 {% if page.title %}
 {% set title = page.title ~ " - " ~ config.extra.default_title %}
+{% elif config.title %}
+{% set title = config.title ~ " - " ~ config.extra.default_title %}
 {% else %}
 {% set title = config.extra.default_title %}
 {% endif %}
@@ -49,12 +54,12 @@
         </a>
         <div class="dropdown-content">
             <a href="/" style="font-weight:bolder">🏠 Home </a>
-            <a href="/experiments">🔬 Experiments</a>
-            <a href="/learn">📚 Learn</a>
-            <a href="/blog">📝 Blog</a>
+            <a href="/blog">🗞️ Blog</a>
+            <a href="/learn">👨‍🏫 Learn</a>
+            <a href="/experiments">🧪 Experiments</a>
         </div>
     </div>
-    <small id="website-name"> {{ icon }} {% if page.title %} {{ page.title }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
+    <small id="website-name"> {{ icon }} {% if page.title %} {{ page.title }} {% elif section.title %} {{ section.title }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
     <p><a id="back" href="../">↩ Back</a></p>
 </nav>
 </div>

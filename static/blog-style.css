@@ -15,7 +15,7 @@
     padding: 0.6em;
     margin: auto;
     font-family: var(--font-family);
-    list-style-type: "\2712 "; /* Unicode for pen nib */
+    list-style-type: "\2712 ";
 }
 
 body, html {
@@ -195,6 +195,8 @@ a {
     padding-left: 1em;padding-right: 1em;
     vertical-align:middle;
 }
+
+
 
 button {
     background: var(--t);

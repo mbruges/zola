@@ -27,6 +27,22 @@
 
     .blog-card p {
         margin: 0.5em;
+
+    }
+
+
+    /* For truncating text to specific lines */
+    .truncate {
+        display: -webkit-box;
+          -webkit-line-clamp: var(--line-clamp, 2);
+          -webkit-box-orient: vertical;
+          word-break: var(--word-break, 'none');
+          overflow: hidden;
+          hyphens: auto;
+    }
+
+    .truncate::after {
+        content:"read on ⇝"
     }
 
     p span {
@@ -59,6 +75,8 @@
     .description,
     .blurb {
         font-size: 0.8em;
+        overflow: hidden;
+        line-height: 1.4em;
     }
 </style>
 <script>
@@ -84,8 +102,8 @@
     <!-- {% set icon = "📃" %} -->
     {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
     set description = page.description | markdown(inline=true) %} {% set blurb = page.content |
-    striptags | truncate(length=110) %} {% else %} {% set description = "" %} {%
-    set blurb = page.content | striptags | truncate(length=160) %} {% endif %}
+    striptags | truncate(length=250) %} {% else %} {% set description = "" %} {%
+    set blurb = page.content | striptags | truncate(length=250) %} {% endif %}
 
 
     <div
@@ -94,17 +112,17 @@
         data-pubdate="{{ page.date }}"
         onmouseenter=""
     >
-        <p>
+        <p class="">
             <!-- &#x2712; -->
 
             <span class="title">{{ icon }}&nbsp;&nbsp;{{ page.title }}</span
             ><br />
-            <span class="description" >
-                <span class="date"
+        <div class="description">
+                <p class="truncate"><span class="date"
                     >{{ page.date | date(format="%-d %b %y", locale="en_GB") }}
                     ~</span
-                    ><b>{{ description | safe }}</b>{{ blurb }}
-                <i style="opacity: 0.7">read on ⇝</i></span
+                    ><b>{{ description | safe }} </b>{{ blurb }}
+                <i style="opacity: 0.7">read on ⇝</i></p></div
             >
         </p>
         <hr class="card-hr" />

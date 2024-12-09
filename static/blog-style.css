@@ -188,7 +188,7 @@ a {
 #date-tag {
     font-size: 0.7em;
     font-family:monospace;
-    border-radius:0.2em;
+    border-radius:var(--border-radius);
     background-color:var(--a);
     color:var(--b);
     border: 2px solid var(--a);

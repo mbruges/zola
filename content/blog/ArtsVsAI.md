@@ -9,20 +9,22 @@ extra:
 
 ![Saturn devouring his son](/images/saturn.webp)
 
->[](note) TL;DR: The Times has been good enough to publish [my letter](https://www.thetimes.co.uk/article/times-letters-the-implications-of-using-ai-in-education-3f8ggnt7g) on this topic - so just read that if you want. Otherwise: given the infinite space afforded by a personal blog, I thought it worth elaborating my thinking here.**
+>[](note) TL;DR: The Times has been good enough to publish [my letter](https://www.thetimes.co.uk/article/times-letters-the-implications-of-using-ai-in-education-3f8ggnt7g) on this topic - so just read that if you want. Otherwise: given the infinite space afforded by a personal blog, I thought it worth elaborating my thinking here.
 
 Given all the problems faced by British head teachers - the yawning [gulf](https://ifs.org.uk/articles/what-has-happened-teacher-pay-england) between pay and inflation, opaque inspection [frameworks](https://www.bbc.co.uk/news/education-65013919), cratering teacher [training](https://www.theguardian.com/education/2022/dec/01/number-graduates-teacher-training-england-catastrophic-level) and [retention](https://www.theguardian.com/education/2023/jan/09/third-of-englands-teachers-who-qualified-in-last-decade-have-left-profession) rates - one could forgive them for choosing to focus on the current fire-fighting, rather than the looming pall of smoke on the horizon.
 
 Which is why it's even more salutary to see them turn their attention briefly - albeit in the form of an advisory body - to the question of AI in education. From [The Times](https://www.thetimes.co.uk/article/ai-is-clear-and-present-danger-to-education-3sk09ftlf):
 
-> A coalition of leaders of some of the country's top schools have warned of the "very real and present hazards and dangers" being presented by AI [i.e. Large Language Models]…
-> Head teachers' fears go beyond AI's potential to aid cheating, encompassing the impact on children's mental and physical health and even the future of the teaching profession…
+> "A coalition of leaders of some of the country's top schools have warned of the "very real and present hazards and dangers" being presented by AI [i.e. Large Language Models]…
+> Head teachers' fears go beyond AI's potential to aid cheating, encompassing the impact on children's mental and physical health and even the future of the teaching profession…"
+>> ['AI is a clear and present danger to education', 19/05/23](https://www.thetimes.co.uk/article/ai-is-clear-and-present-danger-to-education-3sk09ftlf)
 
 There is a lot to praise here, not least the use of the present tense. Anyone who thinks that ChatGPT isn't already being used by students in their classroom is either naive or in denial; it's gratifying that even the grand old man of education Sir Anthony Seldon recognises that this is something happening *now*, rather than something that can wait 'til the next King's Speech.
 
 But one line stood out to me (not mentioned in the coalition's original [letter](https://www.thetimes.co.uk/article/times-letters-green-belt-building-and-affordable-homes-zcmzll2tw), but elaborated in the subsequent Times article):
 
-> The group will create a website *led by heads of science or digital* at 15 state and private schools. it will offer guidance on the latest developments in AI and what schools should use and avoid.
+> "The group will create a website *led by heads of science or digital* at 15 state and private schools. it will offer guidance on the latest developments in AI and what schools should use and avoid."
+>> ['AI is a clear and present danger to education', 19/05/23](https://www.thetimes.co.uk/article/ai-is-clear-and-present-danger-to-education-3sk09ftlf)
 
 The natural question to ask is: why these subjects specifically? I've not spoken with the coalition, and have little more to go on than a [letter](https://www.thetimes.co.uk/article/times-letters-green-belt-building-and-affordable-homes-zcmzll2tw), two [Times](https://www.thetimes.co.uk/article/ai-is-clear-and-present-danger-to-education-3sk09ftlf) [articles](https://www.thetimes.co.uk/article/the-times-view-on-ai-regulation-missing-guardrails-3hnp8znln) and some cursory Googling, but if the threat is as serious as they suggest (and it is), it is a valid question to ask.
 
@@ -57,7 +59,8 @@ Now, for the first time, we have a technology that does the very opposite. This 
 
 As I've put it more succinctly [here](https://www.thetimes.co.uk/article/times-letters-the-implications-of-using-ai-in-education-3f8ggnt7g):
 
-> What makes these new large language models such as ChatGPT so exceptional is their ability to produce fluent and plausible prose: they are far better suited to writing essays on Coleridge than calculating covalent bonds. It is the literature student who reaches for AI first, not the chemist.
+> "What makes these new large language models such as ChatGPT so exceptional is their ability to produce fluent and plausible prose: they are far better suited to writing essays on Coleridge than calculating covalent bonds. It is the literature student who reaches for AI first, not the chemist."
+>> [Letters, 22/05/23](https://www.thetimes.co.uk/article/times-letters-the-implications-of-using-ai-in-education-3f8ggnt7g)
 
 With all this in mind, the decision to focus on Science and Digital departments suggests a lack of understanding of the nature of the technology, or indeed the dangers posed.
 

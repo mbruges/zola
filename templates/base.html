@@ -40,6 +40,12 @@
    <meta name="theme-color" content="#fbff5cc">
    <meta property="og:type" content="website">
    <meta property="og:title" content="{{ title }}">
+{% if current_url  %}
+   <link rel="canonical" href="{{ current_url | safe }}" />
+   <meta property="og:url" content="{{ current_url | safe }}">
+{% endif %}
+   <meta property="og:site_name" content="MaxBruges.com">
+   <meta property="og:locale" content="en_GB">
    <meta property="og:description" content="{{ description | striptags }}">
    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>{{ icon }}</text></svg>">
  <link rel="stylesheet" href="{{ get_url(path="blog-style.min.css") | safe }}">

@@ -10,6 +10,8 @@
     margin-right: auto;
     z-index: 1000;
     background: var(--b);
+    /* background: rgba(var(--b),0.4);
+    backdrop-filter: blur(12px); */
 }
 
 .add-shadow {

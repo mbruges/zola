@@ -1,6 +1,4 @@
 cd static
-
-
 for file in *.css; do
     if [[ ! $file == *".min."* ]] && git diff --name-only HEAD -- "$file" | grep -q "$file"; then
         curl -X POST -s --data-urlencode "input=$(cat $file)" "https://www.toptal.com/developers/cssminifier/api/raw" -o "${file%.css}.min.css"

@@ -21,12 +21,12 @@ export function addNavShadow(){
   if ((lastScrollY !== 0) && (!shadowActive)) {
       nav.classList.add("add-shadow");
       shadowActive = true
-      document.getElementById('website-name').style.visibility = "visible";
+      document.getElementById('website-name').classList.add("visible")
       console.log("shadow on");
   } else if ((shadowActive) && (lastScrollY === 0)) {
       nav.classList.remove("add-shadow");
       shadowActive = false
-      document.getElementById('website-name').style.visibility = "hidden";
+      document.getElementById('website-name').classList.remove("visible")
       console.log("shadow off");
   }
 }

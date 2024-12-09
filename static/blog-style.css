@@ -286,7 +286,7 @@ hr {
     opacity: 0.8;
 }
 
-strong > em,
+/* strong > em,
 em > strong {
     color: var(--text) !important;
     background-color: var(--highlight);
@@ -295,7 +295,7 @@ em > strong {
     padding: 0.15em;
     border-radius: 0.3em;
     border-right: 4px;
-}
+} */
 
 blockquote,
 pre:has(code.language-quote) {
@@ -411,24 +411,24 @@ pre:has(code[class*="language-"]) {
 }
 
 pre:has(code.language-markdown)::before {
-    content: "🔴 🟡 🟢             #️⃣ markdown.md";
+    content: "🔴 🟡 🟢      #️⃣ markdown.md";
 }
 
 pre:has(code.language-python)::before {
-    content: "🔴 🟡 🟢               🐍 app.py";
+    content: "🔴 🟡 🟢      🐍 app.py";
 }
 
 pre:has(code.language-html)::before {
-    content: "🔴 🟡 🟢               🌐 page.html";
+    content: "🔴 🟡 🟢      🌐 page.html";
 }
 
 pre:has(code.language-go)::before {
-    content: "🔴 🟡 🟢                ⚙️ main.go";
+    content: "🔴 🟡 🟢      ⚙️ main.go";
 }
 
 
 pre:has(code.language-bash)::before {
-    content: "🔴 🟡 🟢                ⚙️ bash.sh";
+    content: "🔴 🟡 🟢      ⚙️ bash.sh";
 }
 
 .language-quote {

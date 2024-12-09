@@ -73,13 +73,45 @@
     </body>
     <link rel="icon" href="/images/favicon.svg" />
     <script type="module">
-            import { connectToLiveLesson, toggleNightmode } from '/scripts.js';
+            import { toggleNightmode } from '/scripts.js';
             if (localStorage.getItem('nightmode') === 'enabled') {
                 toggleNightmode();
             }
-            window.onload = () => {
-                connectToLiveLesson();
-            };
+
         </script>
 
+    <script>
+    window.onload = () =>{
+      console.log("running ConnectToLiveLesson")
+      const iframe = document.querySelector("iframe");
+        const overlay = document.querySelector(".overlay");
+        overlay.addEventListener("click", () => {
+            window.open(iframe.src, "_blank");
+        });
+        var subURL = "wss://socket.maxbruges.com/ws";
+          webSocket = new WebSocket(subURL);
+          webSocket.onopen = () => {
+              let now = new Date().toLocaleTimeString();
+          };
+          webSocket.onmessage = (event) => {
+              console.log(event.data);
+              liveURL = event.data;
+              if (liveURL.includes("abort") || liveURL.length == 0) {
+                  document.getElementById('learn-button-link').href = '/learn';
+              } else {
+                  var preview = document.getElementById("live-preview");
+                  var button = document.getElementById("learn-button");
+                  preview.style.display = "block";
+                  button.innerHTML =
+                      "Join the lesson now! <span id='live-icon'>LIVE 🔴</span>";
+                  preview.src = "https://learn.maxbruges.com/" + liveURL;
+                  document.getElementById('learn-button-link').href = 'https://learn.maxbruges.com/';
+                  button.href = 'https://learn.maxbruges.com/';
+              }
+              let now = new Date().toLocaleTimeString();
+              webSocket.close();
+      }
+    }
+
+    </script>
 </html>

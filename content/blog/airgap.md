@@ -10,7 +10,7 @@ extra:
 
 The unfiltered internet is a dangerous thing.
 
-Filtering it is big business, particularly in education settings. But where the blocklists used to be clearly defined - naughty videos and time-wasting games - the gatekeepers of the school's internet now have a trickier challenge.
+Filtering it is _*big*_ business, particularly in education settings. But where the blocklists used to be clearly defined - naughty videos and time-wasting games - the gatekeepers of the school's internet now have a trickier challenge.
 
 ![Screenshot of the old 'Cool Math Games' website](/images/cool-math-games.webp)
 *Behold: the bane of every Primary School IT Manager*

@@ -17,7 +17,7 @@ border-bottom: none;">{{ icon }} {{ page.title }}</h1>
 </div>
 <div class="subheading">
         {% if page.description %}
-            <p class="subtitle">{{ page.description | markdown(inline=true) }}</p>
+            <p class="subtitle">{{ page.description | markdown(inline=true) | safe }}</p>
         {% else %}
             <p class="subtitle"></p>
         {% endif %}

@@ -41,10 +41,6 @@
           hyphens: auto;
     }
 
-    .truncate::after {
-        content:"read on ⇝"
-    }
-
     p span {
         vertical-align: middle;
     }
@@ -77,6 +73,26 @@
         font-size: 0.8em;
         overflow: hidden;
         line-height: 1.4em;
+        position: relative;
+    }
+
+    .read-on-container {
+        position: absolute;
+            bottom: 0.5em;
+            right: 0;
+            pointer-events: none;
+            margin: none;
+            padding: none;
+            min-width: fit content;
+            background: linear-gradient(to right, transparent, var(--b) 50%);
+
+            padding-left: 7em;
+    }
+
+    .read-on {
+        opacity:0.7em;
+        font-weight: 600;
+        color:var(--a)
     }
 </style>
 <script>
@@ -102,8 +118,8 @@
     <!-- {% set icon = "📃" %} -->
     {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
     set description = page.description | markdown(inline=true) %} {% set blurb = page.content |
-    striptags | truncate(length=250) %} {% else %} {% set description = "" %} {%
-    set blurb = page.content | striptags | truncate(length=250) %} {% endif %}
+    striptags | truncate(length=360) %} {% else %} {% set description = "" %} {%
+    set blurb = page.content | striptags | truncate(length=360) %} {% endif %}
 
 
     <div
@@ -122,7 +138,7 @@
                     >{{ page.date | date(format="%-d %b %y", locale="en_GB") }}
                     ~</span
                     ><b>{{ description | safe }} </b>{{ blurb }}
-                <i style="opacity: 0.7">read on ⇝</i></p></div
+                <span class="read-on-container"><i class="read-on">read more ⇝</i></span></p></div
             >
         </p>
         <hr class="card-hr" />

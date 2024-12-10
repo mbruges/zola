@@ -20,10 +20,11 @@ If you'd like to chat, you can [drop me an email 📬](mailto:hello@maxbruges.co
 
 ---
 
-*Special, open-source thanks go to:*
+### Special, open-source thanks go to:
 
-- **HfG's** talented design students building the [OpenMoji](https://openmoji.org/) project, specifically for the gorgeous SVG rendering of Agatha that graces this homepage.
 - **Team Zola** for the best [Static Site Generator](https://github.com/getzola/zola) in the game.
+- **HfG's** talented design students building the [OpenMoji](https://openmoji.org/) project, specifically for the gorgeous SVG rendering of Agatha that graces this homepage.
 - **Katerina Limpitsouni** at [unDraw](https://undraw.co/), which provides the illustrations you can see on a few of the pages.
 
 > "Nanos gigantum humeris insidentes."
+>> [🪙](https://www.royalmint.com/faqs/collectors/where-did-the-edge-inscription-standing-on-the-shoulders-of-giants-come-from/#:~:text=if%20I%20have)

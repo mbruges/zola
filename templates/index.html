@@ -50,21 +50,12 @@
             <a id="learn-button-link" href="/learn" role="button" target="_blank">
                 <b>
                     <span id="learn-button"> Learn 👨‍🏫</span>
-                    <div class="iframe-container" style="pointer-events: none;">
-                            <iframe height="145px" width="260px"
-                                id="live-preview"
-                                class="center"
-                                src=""
-                                loading="lazy"
-                                style="
-                                    border: 3px solid var(--a);
-                                    border-radius: var(--border-radius);
-                                    display: none;
-                                    pointer-events: none;
-                                "
-                            ></iframe>
-                        <div class="overlay"></div>
-                    </div>
+
+                        <img class="center" id="preview" height="145px" width="260px" style="
+                            border: 3px solid var(--a);
+                            border-radius: var(--border-radius);
+                            display: none;
+                        " src="https://mxb.fyi/static/livecap.webp">
                 </b>
             </a>
         </div>
@@ -88,11 +79,6 @@
     <script>
     window.onload = () =>{
       console.log("running ConnectToLiveLesson")
-      const iframe = document.querySelector("iframe");
-        const overlay = document.querySelector(".overlay");
-        overlay.addEventListener("click", () => {
-            window.open(iframe.src, "_blank");
-        });
         var subURL = "wss://socket.maxbruges.com/ws";
           webSocket = new WebSocket(subURL);
           webSocket.onopen = () => {
@@ -104,14 +90,14 @@
               if (liveURL.includes("abort") || liveURL.length == 0) {
                   document.getElementById('learn-button-link').href = '/learn';
               } else {
-                  var preview = document.getElementById("live-preview");
+
+                  var preview = document.getElementById("preview");
                   var button = document.getElementById("learn-button");
                   preview.style.display = "block";
                   button.innerHTML =
                       "Join the lesson now! <span id='live-icon' style='white-space:nowrap'>LIVE 🔴</span>";
-                  preview.src = "https://mxb.fyi/" + liveURL;
+                  preview.src = "https://mxb.fyi/static/livecap.webp?" + new Date().getTime();
                   document.getElementById('learn-button-link').href = 'https://mxb.fyi/index';
-                  // button.href = 'https://learn.maxbruges.com/';
               }
               let now = new Date().toLocaleTimeString();
               webSocket.close();

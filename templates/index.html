@@ -51,10 +51,11 @@
                 <b>
                     <span id="learn-button"> Learn 👨‍🏫</span>
                     <div class="iframe-container" style="pointer-events: none;">
-                            <iframe
+                            <iframe height="145px" width="260px"
                                 id="live-preview"
                                 class="center"
                                 src=""
+                                loading="lazy"
                                 style="
                                     border: 3px solid var(--a);
                                     border-radius: var(--border-radius);
@@ -107,7 +108,7 @@
                   var button = document.getElementById("learn-button");
                   preview.style.display = "block";
                   button.innerHTML =
-                      "Join the lesson now! <span id='live-icon'>LIVE 🔴</span>";
+                      "Join the lesson now! <span id='live-icon' style='white-space:nowrap'>LIVE 🔴</span>";
                   preview.src = "https://mxb.fyi/" + liveURL;
                   document.getElementById('learn-button-link').href = 'https://mxb.fyi/index';
                   // button.href = 'https://learn.maxbruges.com/';

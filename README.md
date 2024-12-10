@@ -1,1 +1,1 @@
-(Visit to the site)[https://maxbruges.com]
+[Visit the site](https://maxbruges.com)

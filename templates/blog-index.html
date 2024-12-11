@@ -1,20 +1,9 @@
 {% extends "base.html" %} {% block content %}
 <meta property="og:title" content="Blog - {{ config.extra.default_title }}" />
-<link rel="stylesheet" href="/blog-index.min.css" />
+<rewrite_this>
+<link rel="stylesheet" href="{{ get_url(path='blog-index.min.css') }}" />
+</rewrite_this>
 <title>Blog - {{ config.extra.default_title }}</title>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const blogCards = document.querySelectorAll(".blog-card");
-        const currentDate = new Date();
-
-        blogCards.forEach((card) => {
-            const pubDate = new Date(card.getAttribute("data-pubdate"));
-            if (pubDate > currentDate) {
-                card.style.display = "none";
-            }
-        });
-    });
-</script>
 <h1 class="title">The Blog</h1>
 <p class="subheading">
     Thoughts on technology, education and what happens when they collide.
@@ -27,8 +16,6 @@
     set description = page.description | markdown(inline=true) %} {% set blurb = page.content |
     striptags | truncate(length=360) %} {% else %} {% set description = "" %} {%
     set blurb = page.content | striptags | truncate(length=360) %} {% endif %}
-
-
     <div
         class="blog-card"
         onclick="location.href='{{ page.permalink | safe }}';"

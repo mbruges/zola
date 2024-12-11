@@ -7,16 +7,17 @@
         <meta name="description" content="Teacher // Maker // Learner" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#fffce4" />
-        <meta property="og:type" content="website">
+        <link rel="icon" href="/images/icon.svg">
+        <link rel="stylesheet" href="/homepage.css" />
      {% if current_url  %}
         <link rel="canonical" href="{{ current_url | safe }}" />
         <meta property="og:url" content="{{ current_url | safe }}">
      {% endif %}
     <meta property="og:site_name" content="MaxBruges.com">
     <meta property="og:locale" content="en_GB">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>{{ config.extra.icon }}</text></svg>">
-    <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23f0f8ff;stop-opacity:1' /><stop offset='100%' style='stop-color:%23ffffe0;stop-opacity:1' /></linearGradient></defs><rect width='100' height='100' fill='url(%23grad1)'/><text y='1.75em' x='0.85em' font-size='37'>{{ config.extra.icon }}</text></svg>">
-    <link rel="stylesheet" href="/homepage.css" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/og.svg">
+
     </head>
 
     <body>
@@ -50,17 +51,33 @@
             <a id="learn-button-link" href="/learn" role="button" target="_blank">
                 <b>
                     <span id="learn-button"> Learn 👨‍🏫</span>
-
-                        <img class="center" id="preview" height="145px" width="260px" style="
-                            border: 3px solid var(--a);
+                    <div style="position: relative; display: block;">
+                        <script>
+                        window.onload = () =>{
+                        var d = new Date();
+                            document.getElementById("preview").src =
+                              "https://mxb.fyi/static/livecap.webp?ver=" + d.getTime();}
+                        function showLiveCap() {
+                                console.log("connected, livecap is present");
+                                var preview = document.getElementById("preview");
+                                var button = document.getElementById("learn-button");
+                                preview.style.display = "block";
+                                button.innerHTML ="Join the lesson 👨‍🏫";
+                                document.getElementById('live-icon').style.display = "block"
+                                document.getElementById('learn-button-link').href = 'https://mxb.fyi/index';}
+                        </script>
+                        <img class="center" id="preview" height="135px" width="260px" style="
+                            border: 3px solid black;
                             border-radius: var(--border-radius);
                             display: none;
-                        " src="https://mxb.fyi/static/livecap.webp">
+                        "
+                        src=""
+                        onload="showLiveCap()" onerror="console.log('lesson not live')">
+                        <span id='live-icon' style='white-space:nowrap; position: absolute; bottom: 1.5em; left: 50%; transform: translateX(-50%);display: none;'>LIVE 🔴</span>
+                    </div>
                 </b>
             </a>
         </div>
-
-
         </div>
         <footer title="Built by Zola at {{ now() | date(format='%H:%M:%S UTC%:::z, %a %d %b') }}"
         alt="Footer">
@@ -73,36 +90,5 @@
             if (localStorage.getItem('nightmode') === 'enabled') {
                 toggleNightmode();
             }
-
         </script>
-
-    <script>
-    window.onload = () =>{
-      console.log("running ConnectToLiveLesson")
-        var subURL = "wss://socket.maxbruges.com/ws";
-          webSocket = new WebSocket(subURL);
-          webSocket.onopen = () => {
-              let now = new Date().toLocaleTimeString();
-          };
-          webSocket.onmessage = (event) => {
-              console.log(event.data);
-              liveURL = event.data;
-              if (liveURL.includes("abort") || liveURL.length == 0) {
-                  document.getElementById('learn-button-link').href = '/learn';
-              } else {
-
-                  var preview = document.getElementById("preview");
-                  var button = document.getElementById("learn-button");
-                  preview.style.display = "block";
-                  button.innerHTML =
-                      "Join the lesson now! <span id='live-icon' style='white-space:nowrap'>LIVE 🔴</span>";
-                  preview.src = "https://mxb.fyi/static/livecap.webp?" + new Date().getTime();
-                  document.getElementById('learn-button-link').href = 'https://mxb.fyi/index';
-              }
-              let now = new Date().toLocaleTimeString();
-              webSocket.close();
-      }
-    }
-
-    </script>
 </html>

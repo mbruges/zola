@@ -43,8 +43,8 @@
                 This is where I try to teach
                 <a href="{{ get_url(path='@/about.md') | safe }}" target="_blank">myself</a> something new.
             </p>
-            <a href="/blog"><b>Blog 🗞️</b> </a>
-            <a href="/experiments">
+            <a href="/blog" alt="Link to the blog page, where I share my ramblings."><b>Blog 🗞️</b> </a>
+            <a alt="Link to the experiments page, where half-formed abominations of code shamble about." href="/experiments">
                 <b> Experiments 🧪</b>
             </a>
             <br />
@@ -72,6 +72,8 @@
                             display: none;
                         "
                         src=""
+                        alt="Preview of the current Live Lesson"
+                        title="Click to join this live lesson!"
                         onload="showLiveCap()" onerror="console.log('lesson not live')">
                         <span id='live-icon' style='white-space:nowrap; position: absolute; bottom: 1.5em; left: 50%; transform: translateX(-50%);display: none;'>LIVE 🔴</span>
                     </div>

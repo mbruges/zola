@@ -13,3 +13,5 @@ for file in *.css; do
         echo "Reduction for $file: $reduction bytes"
     fi
 done
+
+exit

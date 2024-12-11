@@ -21,8 +21,15 @@ jobs:
       - name: Sync HTML files
         run: |
             mkdir -p static/lessons
-            rsync -avz --delete -e "ssh -p5222 -o StrictHostKeyChecking=no"   max@46.38.243.226:/home/max/marp_live/ static/lessons/
-            ls -R static/lessons/
+            rsync -avz --delete \
+              --exclude 'admin/' \
+              --exclude 'blog/' \
+              --exclude 'podcast/' \
+              --exclude 'files/' \
+              --exclude 'static.bak/' \
+              --max-size=25m \
+              -e "ssh -p5222 -o StrictHostKeyChecking=no" \
+              max@46.38.243.226:/home/max/marp_live/ static/lessons/
 
       - name: Commit lesson files
         run: |

@@ -243,6 +243,10 @@ td {
     background: var(--b);
 }
 
+li {
+    padding-bottom: 0.5em;
+}
+
 ul {
     list-style-type: "\2712 \00a0";
 }
@@ -357,11 +361,13 @@ h3 code {
     font-size: 1em;
 }
 
-p code {
+p code, li code {
     /*border: 1px solid var(--a);*/
     color: whitesmoke;
     background: black;
     border-radius: 0.3em;
+    margin-bottom: 0.2;
+    display:inline-flex;
 }
 
 a code {

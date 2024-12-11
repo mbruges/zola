@@ -3,16 +3,27 @@
 
 <title>Blog - {{ config.extra.default_title }}</title>
 <style>
-    .blog-card {
+.blog-card {
         padding: 0.3em;
         margin: 0.5em;
         margin-top: 0.3em;
         border: 2px dashed transparent;
         border-radius: 1em;
         background: var(--b);
-        display: grid;
-        max-width: 600pt;
+        display: flex;
         align-items: center; /* Vertically aligns items */
+        max-width: 600pt;
+    }
+
+    .blog-icon {
+        font-size: 70px;
+        width: 72px; /* Fixed width for blog-icon */
+        overflow: hidden;
+    }
+
+    .blog-details {
+        flex: 1; /* Takes up the remaining space */
+        padding-left: 0.7em; /* Optional spacing */
     }
 
     .blog-card:hover {
@@ -128,10 +139,12 @@
         data-pubdate="{{ page.date }}"
         onmouseenter=""
     >
+        <div class="blog-icon">{{ icon }}</div>
+        <div class="blog-details">
         <p class="">
             <!-- &#x2712; -->
 
-            <span class="title">{{ icon }}&nbsp;&nbsp;{{ page.title }}</span
+            <span class="title">{{ page.title }}</span
             ><br />
         <div class="description">
                 <p class="truncate"><span class="date"
@@ -141,8 +154,10 @@
                 <span class="read-on-container"><i class="read-on">read more ⇝</i></span></p></div
             >
         </p>
-        <hr class="card-hr" />
+        </div>
+
     </div>
+    <hr class="card-hr" />
 
     {% endfor %}
 </ul>

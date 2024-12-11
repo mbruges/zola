@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#Script for watching files in given folders then converting to HTML
+
+WATCHDIRECTORY="/home/max/blog"
+
+while true; do
+	cd $WATCHDIRECTORY
+	echo "Watching $WATCHDIRECTORY"
+	inotifywait -m -e close_write -e moved_to --format %f --include "\.md$" . |
+	while read -r FILENAME event; do
+		FILENAME=${FILENAME%???}
+		echo "Converting $FILENAME.md..."
+		# gomark here
+		# process name and date for contents?
+		mv $output ~/home/max/marp_live/blog/
+	done
+done

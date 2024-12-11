@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="theme-color" content="#2a3140">
+        <meta name="color-scheme" content="light dark">
+        <link
+        rel="stylesheet"
+        href="https://maxbruges.com/1kb.min.css">
+    <style>
+        @media (min-width: 1024px) {
+            .grid {
+            grid-template-columns: 1fr 1fr;
+            }}
+
+        button {
+            min-width: 150px;
+            margin: 1em;
+            background:#2a3140;
+        }
+
+        button a {
+            text-decoration: none !important;
+            color: aliceblue;
+        }
+
+        h1:hover {
+            font-family: monospace;
+            content: attr(data-alt);
+        }
+    </style>
+    </head>
+    <body>
+        <main class="container" style="text-align: center;">
+   
+            <h1 onmouseenter="this.innerHTML = `<a href='https:\/\/mxb.fyi'>mxb.fyi</a>`" onmouseleave="this.innerHTML='Mr Bruges'">Mr Bruges</h1>
+            <div class="grid" style="align-items: center; text-align: center;">
+                <button><a href="/index">
+                    <p>🔴</p>
+                    <p>Live</p> 
+                </a></button>
+                <button><a href="/list">
+                    <p>📜</p>
+                    <p>Lessons</p>
+                </a></button>
+                <br>    
+                <button><a href="https://maxbruges.com/">
+                    <p>🏠</p>
+                    <p>Home</p>
+                </a></button>
+                <button><a href="mailto:mbruges@reptonalbarsha.org">
+                    <p>📧</p>
+                    <p>Help</p>
+                </a></button>
+            </div>
+        </main>
+    </body>
+</html>

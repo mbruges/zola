@@ -52,24 +52,11 @@
                 <b>
                     <span id="learn-button"> Learn 👨‍🏫</span>
                     <div style="position: relative; display: block;">
-                        <script>
-                        window.onload = () =>{
-                        var d = new Date();
-                            document.getElementById("preview").src =
-                              "https://mxb.fyi/static/livecap.webp?ver=" + d.getTime();}
-                        function showLiveCap() {
-                                console.log("connected, livecap is present");
-                                var preview = document.getElementById("preview");
-                                var button = document.getElementById("learn-button");
-                                preview.style.display = "block";
-                                button.innerHTML ="Join the lesson 👨‍🏫";
-                                document.getElementById('live-icon').style.display = "block"
-                                document.getElementById('learn-button-link').href = 'https://mxb.fyi/index';}
-                        </script>
-                        <img class="center" id="preview" height="135px" width="260px" style="
+                        <img class="center" id="preview" style="
                             border: 3px solid black;
                             border-radius: var(--border-radius);
                             display: none;
+                            width:250px;
                         "
                         src=""
                         alt="Preview of the current Live Lesson"
@@ -92,5 +79,19 @@
             if (localStorage.getItem('nightmode') === 'enabled') {
                 toggleNightmode();
             }
+        </script>
+        <script>
+        window.onload = () =>{
+        var d = new Date();
+            document.getElementById("preview").src =
+              "https://mxb.fyi/static/livecap.webp?ver=" + d.getTime();}
+        function showLiveCap() {
+                console.log("connected, livecap is present");
+                var preview = document.getElementById("preview");
+                var button = document.getElementById("learn-button");
+                preview.style.display = "block";
+                button.innerHTML ="Join the lesson 👨‍🏫";
+                document.getElementById('live-icon').style.display = "block"
+                document.getElementById('learn-button-link').href = 'https://mxb.fyi/index';}
         </script>
 </html>

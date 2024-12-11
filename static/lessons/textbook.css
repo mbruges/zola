@@ -1,0 +1,531 @@
+
+/*The New Textbook stylesheet*/
+:root,body {
+    --b: #f3f8ff; 
+    --t: #161b2b;
+    --a: #51518a;
+    --s: #80808034;
+    --border-radius:0.5em;
+    --highlight: rgba(255, 243, 74, 0.57);
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, "Ubuntu", Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 13.5pt;
+    line-height: 1.3; 
+    background:var(--b);
+    color: var(--t);
+    max-width: 80ch;
+    padding: 0.6em;
+    margin: auto;
+    font-family: var(--font-family);
+    list-style-type: "✒ ";
+}
+
+@media (prefers-color-scheme: dark) {
+    :root,body{
+        --t: #f1f7ff;
+        --b: #161b2b;
+        --a: #a2a2e7;
+}}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 1.4em 0 0.1em;
+    text-align: center;
+    text-decoration: underline solid;
+}
+
+h3,h4 {
+    font-family:var(--font-family) 
+}
+
+button,pre,img,input,textarea {
+    border-radius: var(--border-radius);
+    padding: 0.4rem;
+}
+
+.lightswitch {
+    position:fixed;
+    display:block;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border:transparent;
+    opacity: 50%;
+}
+
+.lightswitch:hover{
+    opacity: 100%;
+    filter:brightness(100%) !important;
+}
+
+img{
+    max-height: 40vh;
+    max-width: 95%;
+    border-radius: 15px;
+    padding: -1em;
+    margin:-1em;
+}
+
+img, .center{
+    display: block;
+    text-align: center;
+    margin:auto;
+}
+
+a:hover,button:hover {
+    filter:brightness(130%);
+    cursor:pointer;
+}
+
+a {
+    color: var(--a);
+}
+
+button{
+    background:var(--t);
+    color:var(--b);
+    font-weight:bold;
+    font-size: 1em;
+}
+
+input,textarea{
+    background: var(--s);
+    font-size: 1em;
+    color:  var(--t);
+    border: 2px solid var(--t);
+    margin-right: -0.7em;
+    padding-right: 1em;
+}
+
+small, sup {
+    font-size: 0.6em;
+}
+
+
+table{
+    background: var(--t);
+    padding:0.2em;
+    font-size: 0.9em;
+    text-align: center;
+    margin: auto;
+    min-width: 20%;
+    border-radius: var(--border-radius);
+}
+
+th {
+    color:var(--b);
+    padding-left:0.5em;
+    padding-right:0.5em;
+}
+
+td {
+    padding:0.35rem;
+    background: var(--b);
+}
+
+
+ul {
+    list-style-type: inherit;
+}
+
+li ul {
+    list-style: "✑ ";
+}
+
+
+a:hover {
+    text-decoration: underline solid 2pt;
+}
+
+
+columns, .columns {
+    padding-top: 0.1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  /*  padding-bottom: 0.1rem;
+    max-height: fit-content;
+}
+
+.columns > :nth-child(odd) {
+    padding-right: 2.2rem;
+    border-right: solid 5px ;
+*/}
+
+
+/*  TASK and CHALLENGE 
+
+These two custom elements will automatically add 'Task: ' and 'Challenge: ' when used, and 'Do Now:' if on a title
+
+*/
+
+task, .task {
+    background-color: #c3dbf8;;
+    color: #183150;
+    border: solid 5px;
+    border-radius: var(--border-radius);
+    margin: 1px;
+    padding:0.5em;
+    margin-bottom: 1%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: var(--width-card-wide);
+    text-align: left;
+    width: fit-content;
+}
+
+task::before {
+    content:"TASK: ";
+    font-weight: 800;
+}
+
+section.title task::before, section:has(h1) task::before {
+    content:"DO NOW: ";
+    font-weight: 800;
+}
+
+challenge, .challenge {
+    background-color: rgb(255, 211, 211);
+    color:rgb(149, 2, 2);
+    border: solid 5px;
+    border-radius: var(--border-radius);    
+    padding:0.5em;
+    margin-bottom: 1%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: var(--width-card-wide);
+    text-align: left;
+    width: fit-content;
+}
+
+challenge::before {
+    content:"CHALLENGE: ";
+    font-weight: 800;
+}
+
+stretch, .stretch {
+    background-color: rgba(254, 232, 210);
+    color:rgb(159, 82, 0);
+    border: solid 5px rgb(159, 82, 0);
+    border-radius: var(--border-radius);    
+    padding:0.5em;
+    margin-bottom: 1%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: var(--width-card-wide);
+}
+
+stretch::before {
+    content:"STRETCH: ";
+    font-weight: 800;
+}
+
+
+box, .box {
+    background-color: rgb(220, 220, 220);
+    color:rgb(58, 58, 58);
+    border: solid 5px rgb(58, 58, 58);
+    border-radius: var(--border-radius);    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 0.1%;
+    margin-bottom: 1%;    
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: var(--width-card-wide);
+    line-height: 1.1em;
+    /*font-family: monospace;*/
+}
+
+footer {
+    text-align: center;
+    font-size: x-small;
+    padding-bottom: 0.2em;
+    display:block;
+    width:100%;
+    margin-left:auto;
+    margin-right:autp;
+    opacity:0.8;
+}
+
+
+/* Italicising and bolding (using ***text***) text highlights it in var(--highlight) */
+
+strong > em, em > strong {
+    color: var(--text) !important;
+    /*text-decoration: underline wavy 0.2pt;*/
+    background-color: var(--highlight);
+    font-style: normal;
+    margin:-0.2em;
+    padding:0.15em;
+    border-radius: 0.3em;
+    border-right: 4px;
+}
+
+/* PAGE QUOTE
+
+This is a redesign of the blockquote, displaying quoted text in serifed font and with a shadow effect, like a page. 
+*/
+
+blockquote {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding:1em;
+    border: 3px solid black;
+    box-shadow: 8px 7px 7px rgba(0, 0, 0, 0.552);
+    background-color: rgb(255, 252, 248);
+    white-space: pre-wrap;
+    height:fit-content;
+}
+
+blockquote p, blockquote h2, blockquote h3 {
+    padding:0em;
+    margin-top:-10px;
+    margin-bottom:-10px;
+}
+
+blockquote ul {
+    margin-top:-10pt;
+    margin-bottom: -10pt;
+    line-height: 1em;
+}
+
+/* CAPTION for QUOTE
+
+By adding a nested quote, a small caption can be positioned at the bottom of the text, for attribution */
+
+blockquote blockquote {
+    padding:0px;
+    border: none;
+    font-style: italic;
+    box-shadow: none;
+    font-size: 0.7em;
+    text-align: right;
+    position: relative;
+    display: flex;
+    margin-right: 1px;
+    margin-bottom: -30px;
+    margin-top: 0.5em;
+    padding-bottom: -0px;
+    color: rgba(0, 0, 0, 0.705);
+    height: fit-content;
+}
+
+
+blockquote blockquote p::before {
+    content: "~";
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.2em;
+}
+
+
+code {
+    background: #282c34;
+    border-radius: var(--border-radius);
+    padding: 0.2em;
+    color:#fff;
+}
+
+
+a code {
+    color:inherit;
+    text-decoration: underline solid 3pt;
+}
+
+pre {
+    position: relative;
+    color: #fff;
+    background: #282c34;
+    border: 2px solid #fff;
+    max-height: 60dvh;
+    overflow: auto;
+    padding-top: 1.3em;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  pre:has(code) {
+    border: 5px solid #282c34;
+    border-radius: var(--border-radius);
+    box-shadow: 8px 7px 7px rgba(0, 0, 0, 0.552);
+    text-align: left;
+    padding-top: 1.3em;
+  }
+  
+  pre:has(code)::before {
+    content: "🔴 🟡 🟢";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #282c34;
+    color: white;
+    padding: 2px 8px;
+    font-size: 0.6rem;
+  }
+  
+/* Some tweaks to make it fit exactly 80chars without scrolling on max-width. */
+
+  pre code {
+    display: block;
+    font-size: 0.98em;
+    overflow-y: auto;
+    max-height: calc(60dvh - 1.3em);
+    padding-left: 5pt !important;
+    padding-right:1pt !important
+  }
+
+pre:has(code.language-markdown)::before {
+    content: "🔴 🟡 🟢         #️⃣ markdown.md";
+}
+
+pre:has(code.language-python)::before {
+    content: "🔴 🟡 🟢          🐍 app.py";
+}
+
+pre:has(code.language-html)::before {
+    content: "🔴 🟡 🟢          🌐 page.html";
+}
+
+pre:has(code.language-css)::before {
+    content: "🔴 🟡 🟢          🎨 style.css";
+}
+
+pre:has(code.language-php)::before {
+    content: "🔴 🟡 🟢          ⌨️ page.php";
+}
+
+pre:has(code.language-go)::before {
+    content: "🔴 🟡 🟢        ⚙️ main.go";
+}
+
+pre:has(code.language-quote){
+    border: 5px solid rgb(46, 46, 46);
+    border-radius: 0.5em;
+    background: rgb(226, 226, 226);
+    padding-top: 15px;
+    box-shadow: 8px 7px 7px rgba(0, 0, 0, 0.552);
+    text-align: left;
+    height: fit-content;
+    padding-top: 0px;
+    font-size:unset;
+}
+
+pre:has(code.language-quote)::before {content: "";}
+pre:has(code.language-quote)::after {content: "";}
+
+
+pre:has(code.language-pre){
+    border: none;
+    border-radius: 0.5em;
+    background:transparent;
+    padding-top: 15px;
+    box-shadow: none;
+    text-align: left;
+    height: fit-content;
+    padding-top: 0px;
+    font-size:1.1rem;
+    font-family: monospace;
+}
+
+pre:has(code.language-quote)::before,pre:has(code.language-pre)::before {content: none;}
+pre:has(code.language-quote)::after, pre:has(code.language-pre)::after {content: none;}
+
+
+@counter-style macbeth {
+    system: cyclic;
+    symbols:  👑 🗡️ 🩸 🏰 ⚔️ 🧙‍♀️ 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🤴 🪶 📖 ;
+    suffix: "  ";
+}
+
+@counter-style numbers {
+    system: numeric;
+    symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+    suffix: ") ";
+  }
+
+@counter-style emojiNum {
+    system: cyclic;
+    suffix: "  ";
+    symbols: '1️⃣' '2️⃣' '3️⃣' '4️⃣' '5️⃣' '6️⃣' '7️⃣' '8️⃣' '9️⃣' '🔟';
+}
+
+ol > li::marker {
+    font-weight: bold;
+    font-size: 1.1em;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+ol {
+    list-style: numbers;
+}
+
+
+section.macbeth li {
+    list-style-type: macbeth;
+}
+.light-button {
+    font-size:0.9em;
+    line-height:2em;
+    box-shadow: 0 7px 0 2px rgba(126, 126, 126, 0.702);
+    padding-left: 1em;
+    padding-right:1em;
+    margin: 0.2em;
+    font-weight: bold;
+    max-width: fit-content;
+    border:none;
+    border-radius: 6px;
+    color: var(--color-fg-default);
+    display: inline-block;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    vertical-align: middle;
+    background-color: rgb(238, 235, 222);
+    text-decoration: none;
+    border: 1px solid rgb(222, 219, 207);
+}
+
+/* Black keyboard effect*/
+kbd, a > code, .dark-button  {
+    font-size:0.9em;
+    line-height:2em;
+    box-shadow: 0 7px 0 2px rgba(16, 16, 16, 0.959);
+    padding-left: 1em;
+    padding-right:1em;
+    margin: 0.2em;
+    font-weight: bold;
+    max-width: fit-content;
+    border:none;
+    border-radius: 6.5px;
+    color: whitesmoke;
+    display: inline-block;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color: rgb(47, 47, 47);
+    text-decoration: none;
+    border: 1px solid rgb(44, 44, 44);
+}
+
+/*kbd, a > code::after {
+    content: " 🌐";
+}*/
+/* click effect */
+a:focus > code {
+    box-shadow: 0 1px 0 2px rgba(126, 126, 126, 0.702);
+  transform: translateY(6px);}
+
+  

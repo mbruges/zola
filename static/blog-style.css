@@ -321,6 +321,13 @@ blockquote a {
     color: #51518a;
 }
 
+
+blockquote p br {
+    display: block;
+    margin: 0.6em 0;
+    content: " ";
+}
+
 /* CAPTION for QUOTE
 
 By adding a nested quote, a small caption can be positioned at the bottom of the text, for attribution */

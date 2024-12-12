@@ -1,129 +1,14 @@
 {% extends "base.html" %} {% block content %}
 <meta property="og:title" content="Blog - {{ config.extra.default_title }}" />
-
+<rewrite_this>
+<link rel="stylesheet" href="{{ get_url(path='blog-index.min.css') }}" />
+</rewrite_this>
 <title>Blog - {{ config.extra.default_title }}</title>
-<style>
-.blog-card {
-        padding: 0.3em;
-        margin: 0.5em;
-        margin-top: 0.3em;
-        border: 2px dashed transparent;
-        border-radius: 1em;
-        background: var(--b);
-        display: flex;
-        align-items: center; /* Vertically aligns items */
-        max-width: 600pt;
-    }
-
-    .blog-icon {
-        font-size: 70px;
-        width: 72px; /* Fixed width for blog-icon */
-        overflow: hidden;
-    }
-
-    .blog-details {
-        flex: 1; /* Takes up the remaining space */
-        padding-left: 0.7em; /* Optional spacing */
-    }
-
-    .blog-card:hover {
-        cursor: pointer;
-        filter: brightness(1.3);
-        border: 2px solid var(--a) !important;
-    }
-
-    .blog-card:hover hr.card-hr {
-        visibility: hidden;
-    }
-
-    .blog-card p {
-        margin: 0.5em;
-
-    }
-
-
-    /* For truncating text to specific lines */
-    .truncate {
-        display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          word-break: var(--word-break, 'none');
-          overflow: hidden;
-          hyphens: auto;
-    }
-
-    p span {
-        vertical-align: middle;
-    }
-    hr.card-hr {
-        border: 1px dashed var(--a);
-        height: 0;
-        margin: 0em 0;
-        opacity: 0.5;
-        visibility: visible;
-    }
-
-    .title {
-        margin: 0.1em;
-        font-weight: bold;
-        font-size: 1.2em;
-    }
-
-    .date {
-        font-size: 0.8em;
-        font-family: monospace;
-        opacity: 0.8;
-        padding-right: 1em;
-        min-width: 12em;
-        overflow: hidden;
-        text-align: center;
-    }
-
-    .description,
-    .blurb {
-        font-size: 0.8em;
-        overflow: hidden;
-        line-height: 1.4em;
-        position: relative;
-    }
-
-    .read-on-container {
-        position: absolute;
-            bottom: 0.5em;
-            right: 0;
-            pointer-events: none;
-            margin: none;
-            padding: none;
-            min-width: fit content;
-            background: linear-gradient(to right, transparent, var(--b) 50%);
-
-            padding-left: 7em;
-    }
-
-    .read-on {
-        opacity:0.7em;
-        font-weight: 600;
-        color:var(--a)
-    }
-</style>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const blogCards = document.querySelectorAll(".blog-card");
-        const currentDate = new Date();
-
-        blogCards.forEach((card) => {
-            const pubDate = new Date(card.getAttribute("data-pubdate"));
-            if (pubDate > currentDate) {
-                card.style.display = "none";
-            }
-        });
-    });
-</script>
 <h1 class="title">The Blog</h1>
 <p class="subheading">
     Thoughts on technology, education and what happens when they collide.
 </p>
-<ul style="padding-left: 0.1em; padding-right: 0.1em">
+<ul id="list-of-posts">
     {% for page in section.pages | filter(attribute="draft", value=false) %} {%
     if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
     <!-- {% set icon = "📃" %} -->
@@ -131,8 +16,6 @@
     set description = page.description | markdown(inline=true) %} {% set blurb = page.content |
     striptags | truncate(length=360) %} {% else %} {% set description = "" %} {%
     set blurb = page.content | striptags | truncate(length=360) %} {% endif %}
-
-
     <div
         class="blog-card"
         onclick="location.href='{{ page.permalink | safe }}';"

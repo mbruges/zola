@@ -1,0 +1,770 @@
+/**
+* @theme rab
+* @author Max Bruges
+* @auto-scaling code
+*/
+
+@import 'default';
+
+:root {
+    --border-radius: 13px;
+    --bg:  #f0f8ff;
+    --text: #183150;
+    --highlight: rgba(255, 241, 49, 0.57);
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, "Ubuntu", Cantarell, "Helvetica Neue", sans-serif;
+    --hover-brightness: brightness(130%);
+    --line-height: 1.3;
+    --width-card-wide: 800px;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family:var(--font-family);
+    list-style-type: "✒ ";
+    line-height: 1.25em;
+    touch-action: none !important;
+    font-size:21pt;
+}
+
+a {
+    text-decoration: underline solid;
+}
+
+section::backdrop {
+    background-color: #183150;
+  }
+
+
+/* HEADER IMAGE WATERMARK */
+
+section::before {
+    content: url('https://upload.wikimedia.org/wikipedia/en/1/16/Repton-School.png');
+    transform: scale(.15);
+    position:absolute;
+    margin: -100px;
+    top:1px;
+    right:1px;
+}
+
+
+/* TITLE SLIDES - auto formatting any section with an <h1>
+
+I THINK I've fixed the issue - using data-marpit attribute to select slides that have an image as the background, automatically placing a transluscent var(--text) coloured layer over the image so text is readable. 
+
+Older browsers still struggle with :has(), but can't really help that.
+
+*/
+
+section[data-marpit-advanced-background="content"]:has(h1){
+    background-color: color-mix(in srgb, var(--text) 70%, transparent) !important;
+}
+
+section.title, section:has(h1), section[data-marpit-advanced-background-split="right"]:has(h1),section[data-marpit-advanced-background-split="left"]:has(h1){
+    color: var(--bg) !important;
+    text-align: center !important;
+    background-color: var(--text) !important;
+}
+
+section.title pre:has(code.language-pre), section:has(h1) pre:has(code.language-pre){
+    color:var(--bg) !important;
+}
+
+section.title img, section:has(h1) img {
+    max-height: 300px;
+    max-width: 400px;
+    overflow: hidden;    
+}
+img {
+    background: transparent;
+}
+
+/*section.title a, section:has(h1) a {
+    border:0pt;
+    padding: 0.3em;
+    border-radius: var(--border-radius);
+    background: var(--bg)
+}
+section.title a:hover, section:has(h1) a:hover {
+    border: 4pt groove var(--highlight);
+}
+
+*/
+
+/* Handling the 'keyboard' buttons effect.*/
+
+
+section.title a:has(code), section:has(h1) a:has(code) {
+    background: none;
+    padding: none;
+    border: none !important;
+}
+
+
+
+section.title .columns > :nth-child(odd){
+    padding-right: 0.1rem;
+}
+
+section.title li, section:has(h1) li {
+    text-align: left;
+}
+
+
+code {
+    background: var(--text);
+    color: var(--bg);
+    padding: 0.1em;
+}
+
+
+header {
+    color:inherit;
+    font-weight:200;
+    font-size:1em;
+    top:2em;
+}
+
+header.date{
+    top:0.5em !important;
+    text-underline-offset: 3px;
+    text-decoration: underline solid 2px;
+    -webkit-text-decoration: underline solid 2px;
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: -20px;
+    text-align: center;
+    text-underline-position: below;
+    text-decoration: underline solid;
+    -webkit-text-decoration: underline solid;
+    border-bottom:none;
+    /*text-shadow: 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text), 0 0 4px var(--text);*/
+
+}
+
+
+
+h1, h2, h3, p, li {
+    color: inherit;
+}
+
+/* Italicising and bolding (using ***text***) text highlights it in var(--highlight) */
+
+strong > em, em > strong, h1 strong {
+    color: inherit;
+    /*text-decoration: underline wavy 0.2pt;*/
+    background-color: var(--highlight);
+    font-style: normal;
+    margin:-0.2em;
+    padding:0.15em;
+    border-radius: 0.3em;
+    border-right: 4px;
+    font-style: inherit;
+    font-weight:inherit;
+}
+
+/* Adding a slight gap between paras */
+
+p > br {
+    content: ' ' !important;
+    display: block;
+    margin: 0.4em 0;
+  }
+
+ul {
+    list-style-type: inherit;
+}
+
+ul ul {
+    margin-top: 0.5em !important;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+li ul {
+    list-style: "✑ ";
+    font-size: 0.9em;
+}
+
+
+
+a code {
+    color:inherit;
+    text-decoration: underline solid 3pt;
+    -webkit-text-decoration: underline solid 3pt;
+}
+
+a:hover {
+    filter: var(--hover-brightness);
+    text-decoration: underline wavy 2pt;
+}
+
+
+columns, .columns {
+    padding-top: 0.1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+
+/*  TASK and CHALLENGE 
+
+These two custom elements will automatically add 'Task: ' and 'Challenge: ' when used, and 'Do Now:' if on a title
+
+*/
+
+task, .task {
+    font-family: var(--font-family);
+    background-color: #c3dbf8;;
+    color: #183150;
+    border: solid 5px var(--text);
+    border-radius: var(--border-radius);
+    margin: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 0.1%;
+    margin-bottom: 1%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: var(--width-card-wide);
+    text-align: left;
+    width: fit-content;
+}
+
+task::before {
+    content:"TASK: ";
+    font-weight: 800;
+}
+
+section.title task::before, section:has(h1) task::before,section:has(h1) blockquote:has(a[href="task"]) p::before {
+    content:"DO NOW: ";
+    font-weight: 800;
+}
+
+
+challenge, .challenge {
+    font-family: var(--font-family);
+    background-color: rgb(255, 211, 211);
+    color:rgb(149, 2, 2);
+    border: solid 5px rgb(171, 0, 0);
+    border-radius: var(--border-radius);    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 0.1%;
+    margin-bottom: 1%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: var(--width-card-wide);
+    text-align: left;
+    width: fit-content;
+}
+
+challenge::before {
+    content:"CHALLENGE: ";
+    font-weight: 800;
+}
+
+stretch {
+    background-color: rgba(254, 232, 210);
+    color:rgb(159, 82, 0);
+    border: solid 5px rgb(159, 82, 0);
+    border-radius: var(--border-radius);    
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 0.1%;
+    margin-bottom: 1%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: var(--width-card-wide);
+    width: fit-content;
+}
+
+stretch::before {
+    content:"STRETCH: ";
+    font-weight: 800;
+}
+
+
+s {
+    text-decoration: rgb(113, 1, 1) wavy line-through;
+}
+
+footer {
+    text-align: left;
+    font-size: x-small;
+    padding-bottom: 0.1em;
+    right: 0;
+    left: 0.5;
+    bottom:1;
+    position: fixed;
+    width:fit-content;
+}
+
+footer::before {
+    content: "MB 🐈‍⬛ 2024";
+}
+
+footer a {
+    color: grey;
+    position: fixed;
+}
+
+section::after {
+        content: attr(data-marpit-pagination) ' of ' attr(data-marpit-pagination-total);
+        font-size: x-small;
+        padding-bottom: 0.1em;
+    }
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+/* PAGE QUOTE
+
+This is a redesign of the blockquote, displaying quoted text in serifed font and with a shadow effect, like a page. 
+
+FIX SCROLLING!
+I have, but making a new tag called 'scroll' which will scroll the box inside
+*/
+
+
+.scroll, scroll * {
+    max-height: 90%;
+    overflow: scroll;
+    scrollbar-color: var(--text);
+}
+
+
+.fullscreen-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: fit-content;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+
+}
+
+pre {
+    font-size: 20pt;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    min-width: 11em;
+    width: 30em;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text);
+}
+
+pre code {
+    color: var(--text);
+}
+
+pre:has(code){
+    border: 5px solid rgb(46, 46, 46);
+    border-top: 1.3em solid rgb(46, 46, 46);
+    border-radius: 0.5em;
+    background: rgb(226, 226, 226);
+    padding-top: 15px;
+    box-shadow: 8px 7px 7px rgba(0, 0, 0, 0.552);
+    text-align: left;
+    height: fit-content;
+    padding-top: 0px;
+    max-width: 100%;
+}
+
+pre:has(code)::before {
+    
+    content: "🔴 🟡 🟢";
+    position: relative;
+    display: block;
+    top:-25px;
+    right: 1px;
+    padding: 0px;
+    color: white;
+    margin-left: auto;
+    font-size: 10pt;
+    margin-right: -4.3em;
+    padding-bottom: 1;
+    font-family: monospace;
+}
+
+pre:has(code.language-markdown)::before {
+    content: "🔴 🟡 🟢                #️⃣ markdown.md";
+}
+
+pre:has(code.language-python)::before {
+    content: "🔴 🟡 🟢                 🐍 app.py";
+}
+
+pre:has(code.language-html)::before {
+    content: "🔴 🟡 🟢                 🌐 page.html";
+}
+
+pre:has(code.language-css)::before {
+    content: "🔴 🟡 🟢                 🎨 style.css";
+}
+
+pre:has(code.language-php)::before {
+    content: "🔴 🟡 🟢                 ⌨️ page.php";
+}
+
+pre:has(code.language-go)::before {
+    content: "🔴 🟡 🟢               ⚙️ main.go";
+}
+
+pre:has(code.language-url)::before {
+    content: "🔴 🟡 🟢          New tab";
+} 
+
+pre:has(code.language-url) code::before {
+    content: " 🌐 ";
+    opacity:0.7;
+}
+
+pre:has(code.language-url) {
+    width: fit-content;
+    min-width: 7em;
+
+}
+
+
+.language-quote {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    max-height: fit-content;
+    color:#000;
+    font-size:2em;
+}
+
+
+blockquote, pre:has(code.language-quote) {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    min-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px;
+    height:fit-content;
+    border: 3px solid black;
+    box-shadow: 8px 7px 7px rgba(0, 0, 0, 0.552);
+    background-color: rgb(255, 252, 248);
+    border-radius: 0px;
+    text-align: left;
+}
+
+blockquote {
+    width: fit-content;
+    max-width: fit-content;
+}
+
+pre:has(code.language-quote) code {
+    font-size-adjust: 20px !important;
+}
+
+
+pre:has(code.language-pre){
+    border: none;
+    border-radius: 0.5em;
+    background:transparent;
+    padding-top: 15px;
+    box-shadow: none;
+    text-align: left;
+    height: fit-content;
+    padding-top: 0px;
+    font-size:1.1rem;
+}
+
+
+pre:has(code.language-quote)::before,pre:has(code.language-pre)::before {content: none;}
+pre:has(code.language-quote)::after, pre:has(code.language-pre)::after {content: none;}
+
+/* TABLES */
+
+table {
+    align-self: center;
+}
+
+th {
+    background-color: var(--text);
+    color: var(--bg);
+    font-size: 110%;
+}
+
+tr {
+    font-size: 95%;
+}
+
+@counter-style numbers {
+    system: numeric;
+    symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+    suffix: ") ";
+}
+
+ol > li::marker {
+    font-weight: bold;
+    font-size: 1.1em;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+ol {
+    list-style: numbers;
+}
+
+/* Selecting fragmented lists (appearing one by one)*/
+
+*[data-marpit-fragments] {
+    color:red;
+}
+
+
+section.macbeth li {
+    list-style-type: macbeth;
+}
+
+section:has(h1) kbd, section:has(h1) a > code, .light-button {
+    font-size:0.9em;
+    line-height:2em;
+    box-shadow: 0 7px 0 2px rgba(126, 126, 126, 0.702);
+    padding-left: 1em;
+    padding-right:1em;
+    margin: 0.2em;
+    font-weight: bold;
+    max-width: fit-content;
+    border:none;
+    border-radius: 6px;
+    color: var(--color-fg-default);
+    display: inline-block;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    vertical-align: middle;
+    background-color: rgb(238, 235, 222);
+    text-decoration: none;
+    border: 1px solid rgb(222, 219, 207);
+}
+
+/* Black keyboard effect*/
+kbd, a > code, .dark-button  {
+    font-size:0.9em;
+    line-height:2em;
+    box-shadow: 0 9px 0 3px rgba(16, 16, 16, 0.959);
+    padding-left: 1em;
+    padding-right:1em;
+    margin: 0.2em;
+    font-weight: bold;
+    max-width: fit-content;
+    border:none;
+    border-radius: 6.5px;
+    color: whitesmoke;
+    display: inline-block;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color: rgb(60, 60, 60);
+    text-decoration: none;
+    border: 1px solid rgb(44, 44, 44);
+}
+
+/*kbd, a > code::after {
+    content: " 🌐";
+}*/
+/* click effect */
+a:focus > code{
+    box-shadow: 0 1px 0 2px rgba(126, 126, 126, 0.702);
+  transform: translateY(8px);}
+
+
+iframe[title*="video"] {
+    min-height: 50dvh;
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    border: 5px solid var(--text);
+}
+
+/* Attempt at github-flavoured callout boxes*/
+
+.caution, blockquote:has(a[href="caution"]), blockquote:has(a[href="challenge"]){
+    font-family: var(--font-family);
+    background-color:rgb(252, 225, 225);
+    color:black;
+    border: none;
+    border-left: 10px solid rgb(166, 0, 0);
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+
+.caution::before, blockquote:has(a[href="caution"])::before{
+    content: "! Caution";
+    color: rgb(166, 0, 0);
+    font-weight:bold;
+}
+blockquote:has(a[href="challenge"]){ color: rgb(140, 0, 0); box-shadow: none;}
+blockquote:has(a[href="challenge"]) p::before{
+    content: "CHALLENGE: ";
+    font-weight:800;
+}
+
+
+.warning, blockquote:has(a[href="warning"]), blockquote:has(a[href="stretch"]){
+    font-family: var(--font-family);
+    background-color:rgb(255, 252, 220);
+    color:rgb(91, 77, 7);
+    border: none;
+    border-left: 10px solid rgb(207, 173, 0);
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+.warning::before, blockquote:has(a[href="warning"])::before{
+    content: "⚠ Warning";
+    color: rgb(207, 173, 0);
+    font-weight:bold;
+}
+
+
+.note, blockquote:has(a[href="note"]){
+    font-family: var(--font-family);
+    background-color:rgb(208, 238, 255);;
+    color:black;
+    border: none;
+    border-left: 10px solid rgb(0, 116, 178);;
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+.note::before, blockquote:has(a[href="note"])::before{
+    content: "ℹ Note";
+    color: rgb(0, 116, 178);
+    font-weight:bold;
+}
+
+
+.important, blockquote:has(a[href="important"]){
+    font-family: var(--font-family);
+    background-color:rgb(246, 216, 255);
+    color:black;
+    border: none;
+    border-left: 10px solid rgb(119, 0, 152);
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+.important::before, blockquote:has(a[href="important"])::before{
+    content: "☛ Important";
+    color: rgb(119, 0, 152);
+    font-weight:bold;
+}
+
+
+.tip, blockquote:has(a[href="tip"]){
+    font-family: var(--font-family);
+    background-color:rgb(225, 255, 233);
+    color:black;
+    border: none;
+    border-left: 10px solid rgb(0, 130, 35);
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+.tip::before, blockquote:has(a[href="tip"])::before{
+    content: "✔︎ Tip";
+    color: rgb(0, 130, 35);
+    font-weight:bold;
+}
+
+
+.task, blockquote:has(a[href="task"]){
+    font-family: var(--font-family);
+    background-color: #c3dbf8;;
+    color: #183150;
+    border: none;
+    border-left: 10px solid #183150;
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+
+
+.task::before, blockquote:has(a[href="task"]) p::before {
+    content: "TASK: ";
+    font-weight:800;
+}
+
+
+blockquote:has(a[href="stretch"]) p::before{
+    content: "STRETCH: ";
+    color: rgb(152, 128, 11);
+    font-weight:800;}
+    
+
+.example, blockquote:has(a[href="example"]), blockquote:has(a[href="eg"]){
+    font-family: var(--font-family);
+    background-color: #e7e7e7;;
+    color: #494949;
+    border: none;
+    border-left: 10px solid #494949;
+    border-radius: 0.3em;
+    box-shadow: none;
+}
+
+
+.example::before, blockquote:has(a[href="example"]) p::before , blockquote:has(a[href="eg"]) p::before {
+    content: "E.g. ";
+    font-weight:800;
+}
+
+
+/* CAPTION for QUOTE
+
+By adding a nested quote, a small caption can be positioned at the bottom of the text, for attribution */
+
+blockquote blockquote {
+    padding:0px;
+    border: none;
+    font-style: italic;
+    box-shadow: none;
+    font-size: 0.7em;
+    text-align: right;
+    position: relative;
+    display: flex;
+    margin-right: 1px;
+    margin-bottom: -30px;
+    margin-top: -20px;
+    padding-bottom: -0px;
+    color: rgba(0, 0, 0, 0.705);
+    height: fit-content;
+    background:transparent;
+}
+
+
+blockquote blockquote p::before {
+    content: "~" !important;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.2em;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://learn.maxbruges.com/textbook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <title>MB Textbook</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+    function changeTitle() {
+        console.log('running onload')
+        pageTitle = document.getElementsByTagName('h1')[0].innerText
+        console.log('Inner text = ' + pageTitle)
+        if (pageTitle) {
+            document.title = pageTitle
+        }
+    }
+
+function toggleDark(elem) {
+                if (elem.value == "true") {
+                //light
+                document.documentElement.style.setProperty('--t', '#161b2b');
+                document.documentElement.style.setProperty('--b', '#f3f8ff');
+                document.documentElement.style.setProperty('--a', '#51518a');
+                elem.value = "false"
+            }
+            else {
+                //dark
+                document.documentElement.style.setProperty('--t', '#f1f7ff');
+                document.documentElement.style.setProperty('--b', '#161b2b');
+                document.documentElement.style.setProperty('--a', '#a2a2e7');
+                elem.value="true"
+            }
+            }
+    </script>
+</head>
+<body onload="changeTitle();">
+<button onclick="toggleDark(this)" class="lightswitch" title="Switch dark/light mode" value="">🌗</button>
+<!-- _class: title -->
+<h1 id="introducing-transactional-writing">Introducing Transactional Writing</h1>
+<p><img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1Njk0Mzh8MHwxfHNlYXJjaHw0fHx3cml0aW5nJTJGfGVufDB8MHx8fDE3MTg3NzM5OTJ8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" alt="bg cover brightness:0.3" /></p>
+<p><strong>LO:</strong> To consider how we can approach a transactional writing task.</p>
+<p><task> What does <strong>transactional</strong> mean? How is it different from <em>descriptive</em> or narrative? </task></p>
+<p><challenge> Have you written anything transactional recently? </challenge></p>
+<blockquote>
+<p><strong>FYI:</strong> Ms. Rahman &amp; Mr. Bruges are marking and moderating your exams now - we will aim to give feedback next week.</p>
+</blockquote>
+<hr />
+<blockquote>
+<h2 id="transactional--adjective-relating-to-exchange-or-interaction-between-people">Transactional = (adjective) <em>relating to exchange or interaction between people.</em></h2>
+</blockquote>
+<hr />
+<p><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1Njk0Mzh8MHwxfHNlYXJjaHw5fHxpbmZvcm1hdGlvbiUyRnxlbnwwfDB8fHwxNzE4Nzc5NjUxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" alt="bg right:50%" /></p>
+<h2 id="writing-with-purpose">Writing with purpose</h2>
+<p>We write for many reasons:</p>
+<ul>
+<li>To entertain</li>
+<li>To express</li>
+<li>To inform</li>
+<li>To persuade</li>
+</ul>
+<p>When we write <strong>transactionally,</strong> we are aiming to <strong>communicate information.</strong></p>
+<p><task> List as many forms of <strong>transactional</strong> writing as you can think of. </task></p>
+<p><challenge> Why might this be the most <em>useful</em> thing you learn at school? </challenge></p>
+<hr />
+<columns>
+<div>
+<h2 id="what-does-it-look-like">What does it look like?</h2>
+<p>This is a <strong>real</strong> email, sent by a <strong>real</strong> teacher to a <strong>real</strong> parent <small>(not of someone in this class!)</small>.</p>
+<p>Teachers send dozens of these every day.</p>
+<task>
+<p>Summarise the <em>purpose</em> of each sentence in this email. Why has it been included?</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left">Sentence</th>
+<th style="text-align:left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:left">&quot;Dear Mr Smith,&quot;</td>
+<td style="text-align:left">To greet the parent</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:left">&quot;Thank you...&quot;</td>
+<td style="text-align:left">....</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:left">&quot;In answer...&quot;</td>
+<td style="text-align:left">....</td>
+</tr>
+</tbody>
+</table>
+</task>
+</div>
+<blockquote>
+<p>Dear Mr. Smith,<br />
+Thank you for your email – I hope you are keeping well.
+In answer to your question, students will be completing a creative writing task for the summer assessment.
+To aid your child's revision, I have uploaded our recent sequence of lessons to our Teams page.
+Please let me know when your child has accessed the information, and I will follow up with him.
+Best wishes, <em>Mr Bruges</em></p>
+</blockquote>
+</columns>
+<hr />
+<h2 id="plenary-writing-replies">Plenary: writing replies</h2>
+<columns>
+<task>
+<p>Imagine you are Mr. Smith. You would like to <em>persuade</em> Mr. Bruges to provide some extra homework for your child.</p>
+<p><strong>Write a reply to the email.</strong></p>
+<p>Think:</p>
+<ul>
+<li>Are you following the rules of politeness?</li>
+<li>What is the purpose of each of your sentences?</li>
+<li>What sort of language would be appropriate?</li>
+</ul>
+ </task>
+<blockquote>
+<p>Dear Mr. Smith,<br />
+Thank you for your email – I hope you are keeping well.
+In answer to your question, students will be completing a creative writing task for the summer assessment.
+To aid your child's revision, I have uploaded our recent sequence of lessons to our Teams page.
+Please let me know when your child has accessed the information, and I will follow up with him.
+Best wishes, <em>Mr Bruges</em></p>
+</blockquote>
+</columns>
+<hr />
+<h1 id="addressing-and-engaging">Addressing and engaging</h1>
+<p><task> You've just received this email. Write a <strong>polite</strong> response, declining the offer of extra homework.. </task></p>
+<style scoped>
+
+blockquote {
+    text-align: left;
+    max-width:80%;
+}
+
+</style>
+<blockquote>
+<p>Dear Student,</p>
+<p>Reviewing your recent work in the end-of-term assessments, we are recommending that you receive additional homework to complete over the Summer Break.
+This work will be provided to you on Teams.
+Please respond to this email confirming your receipt.
+Best wishes,</p>
+</blockquote>
+<p><challenge> Rewrite the above email to be more persuasive. </challenge></p>
+<hr />
+<h2 id="different-tones-different-types">Different Tones, Different Types</h2>
+<p>Transactional writing is all about <strong>relationships:</strong> between the writer and the reader. We write transactionally because we want to communicate something, and receive something in return <em>(even if that something is just 'acknowledgement' or 'understanding')</em>.</p>
+<p>So the <strong>way</strong> we write depends on <strong>who</strong> we're writing to.</p>
+<columns>
+<blockquote>
+<p>🅰️ Hi Ms Rahman,
+When you get a min, could you send me that Y10 data?
+It's the stuff we talked about the other day. Need it ASAP.
+Thanks</p>
+</blockquote>
+<blockquote>
+<p>🅱️ Dear Ms. Misra,
+I hope you're having a good afternoon.
+When time allows, would you be able to share the previously-discussed Year 10 data-sheet?
+Many thanks,</p>
+</blockquote>
+</columns>
+<p><task> 🅰️ and 🅱️ ask for the same thing; how do they differ? </task></p>
+<hr />
+<h2 id="scenario-the-lost-laptop">Scenario: The Lost Laptop</h2>
+<blockquote>
+<p>You, stupidly, have left your laptop somewhere.<br />
+There are only three places it could be:</p>
+<ol>
+<li>Your best friend's house</li>
+<li>The Principal's Office</li>
+<li>The local McDonald's</li>
+</ol>
+<p>How will you get it back?</p>
+</blockquote>
+<task>
+<p>Write three emails - one to each place - asking for the laptop to be returned. <strong>Remember to tailor your tone to the person you're writing to!</strong>
+Your email should be no more than five sentences long. </task></p>
+<hr />
+<p><img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1Njk0Mzh8MHwxfHNlYXJjaHwyfHxsYXB0b3AlMkZ8ZW58MHwwfHx8MTcxODg3NjA2NHww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" alt="bg right:60%" /></p>
+<h2 id="the-lost-laptop">The Lost Laptop</h2>
+<p><task> Compare your responses to your partner's. What sort of language have they used? </task></p>
+<p><stretch> Which was the most difficult email to write, which was the easiest?</p>
+<hr />
+<p><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1Njk0Mzh8MHwxfHNlYXJjaHwxfHx3cml0ZSUyRnxlbnwwfDB8fHwxNzE4ODc3MDUyfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" alt="bg opacity:20%" /></p>
+<h2 id="plenary">Plenary</h2>
+<task>
+<p>How do we determine how <em>formal</em> to make our writing?</p>
+<p>Who might we be writing to? Draw this spectrum line into your books and add names/organisations/people to it.</p>
+</task>
+<pre><code class="language-pre">
+🩳 INFORMAL &lt;-------------------------&gt; FORMAL 👔
+                                              
+</code></pre>
+<p><stretch> Write <strong>two</strong> invitations to your birthday party: one to the most <em>formal</em> recipient on your line, and one to the most <em>informal</em>.</p>
+<hr />
+<p><img src="https://images.unsplash.com/photo-1473186505569-9c61870c11f9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1Njk0Mzh8MHwxfHNlYXJjaHwyfHxsZXR0ZXIlMkZ8ZW58MHwwfHx8MTcxODg3ODM1MXww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" alt="bg brightness:40%" /></p>
+<h1 id="transactional-tasks">Transactional Tasks</h1>
+<p>LO: To consider how the exam-board frame the transactional writing questions</p>
+<task>
+<p>Think back to your last lesson. Write down three ways we determine the level of <em>formality</em> in our writing.</p>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</task>
+<!-- Purpose, audience and context --->
+<p><challenge> How might formality change the attitude of the person you're communicating with? </challenge></p>
+<hr />
+<p><img src="https://i.extremetech.com/imagery/content-types/06PybiqeyFXGu4m6u4eVt55/hero-image.fill.size_994x559.v1678673186.jpg" alt="bg opacity:15%" /></p>
+<h2 id="purpose-audience-context-ᗧ">Purpose, Audience, Context <code>ᗧ···👻</code></h2>
+<columns>
+<div>
+<p><strong>Why</strong> we're writing is important, as is <strong>who</strong> we are writing to, and for <strong>what</strong> reason.</p>
+<p>The easy way to remember this is:</p>
+<ul>
+<li><strong>P</strong>URPOSE: why we're writing</li>
+<li><strong>A</strong>UDIENCE: who we're writing to</li>
+<li><strong>C</strong>ONTEXT: what extra information</li>
+</ul>
+<p>...whenever you start writing, <strong>always</strong> check you know what these are</p>
+</div>
+<div>
+<blockquote>
+<p>1️⃣ A letter to your boss, asking for some extra holiday time</p>
+</blockquote>
+<blockquote>
+<p>2️⃣ A text to your friend, suggesting a film to watch later</p>
+</blockquote>
+<blockquote>
+<p>3️⃣ A speech to be delivered to parents at the school's open day</p>
+</blockquote>
+</div>
+</columns>
+<p><task> Write the <strong>P/A/C</strong> for each of the scenarios on the right, and how <em>formal</em> it should be </task></p>
+<hr />
+<h2 id="example-task">Example Task</h2>
+</body>
+</html>

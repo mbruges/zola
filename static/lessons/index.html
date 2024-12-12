@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-Equiv="Cache-Control" Content="no-cache" />
+    <meta http-Equiv="Pragma" Content="no-cache" />
+    <meta http-Equiv="Expires" Content="0" />    
+    <title>🔴 Live Lesson with Mr. Bruges</title>
+    <meta name="keywords" content="RAB, Learn, Live, Bruges, Lesson, Slides">
+    <meta name="title" content="🔴 Live Lesson">
+    <meta name="description" content="Live Lesson with Mr. Bruges">
+    <meta name="author" content="Max Bruges">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script>
+var slideNum = 1
+var subURL = "wss://socket.maxbruges.com/ws"
+
+const dateOptions = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const currentDate = new Date().toLocaleDateString("en-GB", dateOptions)
+
+const hangmanCodes = ['YWJ1bmRhbnQ=', 'Y29oZXJlbnQ=', 'ZGl2ZXJnZW50', 'ZW1waXJpY2Fs', 'ZmFjaWxpdGF0ZQ==', 'aGllcmFyY2h5', 'aW50ZWdyaXR5', 'anV4dGFwb3Nl', 'a2luZXRpYw==', 'bGV2ZXJhZ2U=', 'bW9tZW50dW0=', 'bnVhbmNl', 'cGFyYWRpZ20=', 'cXVhbGl0YXRpdmU=', 'cmVzaWxpZW50', 'c3ludGhlc2lz', 'dGFuZ2libGU=', 'dW5pdmVyc2Fs', 'dmlhYmxl', 'eGVub2RvY2hpYWw=', 'eWllbGRpbmc=', 'emVwaHly', 'YWJlcnJhbnQ=', 'Y2F0YWx5emU=', 'ZGVsaW5lYXRl', 'ZWxvcXVlbmNl', 'Zmx1Y3R1YXRl', 'Z3JhZGllbnQ=', 'aHlwb3RoZXNpemU=', 'aW1wbGljaXQ=', 'a2luZW1hdGlj', 'bGltaW5hbA==', 'bW9kYWxpdHk=', 'bm9ybWF0aXZl', 'b3NjaWxsYXRl', 'cGFuYWNlYQ==', 'cXVhbGl0YXRpdmU=', 'cmVmcmFjdGl2ZQ==', 'c3VjY2luY3Q=', 'dHJhbnNpZW50', 'dmVzdGlnZQ==', 'd2FuaW5n', 'eGVuYWdvZ3Vl', 'eWllbGRpbmc=', 'enltdXJneQ==']
+
+function refreshIframe(interval)
+{
+    setInterval(() => {
+        console.log('refreshing iframe')
+    document.getElementById('live-frame').contentWindow.location.reload();
+    }, interval);
+}
+
+    let liveURL = 'abort'
+
+    function changeTitle() {
+        const iframe = document.getElementById('live-frame')
+        let iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        //console.log(iframeDoc)
+        let iframeTitle = iframeDoc.title;
+        document.title = '🔴 [LIVE] ' + iframeTitle
+    }
+
+    function noLesson(){
+        console.log("No live lesson currently")
+        document.getElementById('live-frame').src = ""
+        document.getElementById('live-frame').hidden = true
+        document.getElementById('live-icon').hidden = true
+        document.getElementById('loadingTag').innerHTML = '<h3>No live lesson at the moment, try again later. 😴</h3><p> But while you wait...</p><iframe id="hangman" scrolling="no"></iframe><br><button onclick="getHangmanUrl()">Play again ☠️</button><a href="./list.html"><button>🏠 View lessons</button></a>'
+        getHangmanUrl()
+        document.getElementById('loadingTag').hidden = false
+
+        //
+    }
+
+    //Trying to prevent scrolling - quite complicated. Actually, the keypress on the iframe isn't blocked, but rather immediately reverted to a URL stored in a param (liveURL-store) and recalled every time the key is pressed. 
+    function revertIframe() {
+        //console.log('blocking to iframe from changing')
+        document.getElementById('live-frame').src = "./" + document.getElementById('liveURL-store').value
+    }
+
+    function iframeLock(){
+        //Still scrolls when swiping left and right on touch device! No idea why
+
+        var iframe = document.getElementById('live-frame').contentDocument
+        iframe.addEventListener('keydown', revertIframe, false);
+        iframe.addEventListener('mousewheel', revertIframe, false);
+        iframe.addEventListener('wheel', revertIframe, false);
+    }
+
+//UPDATE 10/06 -- using liveURL to keep track.
+    function setupWebSocket(url){
+
+        webSocket = new WebSocket(url);
+        webSocket.onopen = () =>{
+            let now = new Date().toLocaleTimeString()
+            console.log("Connected websocket at " + now)
+        }
+
+        webSocket.onmessage = (event) => {
+            console.log(event.data)
+            liveURL = event.data
+            if ((liveURL.includes("abort")) || liveURL.length == 0) {
+                    noLesson()
+            } else if (liveURL == 'refresh') {
+                console.log('Refresh request')
+                document.getElementById('live-frame').contentWindow.location.reload();
+            }
+            else {
+             //SUCCESS
+             document.getElementById('live-frame').src = "./" + liveURL
+            document.getElementById('liveURL-store').value = liveURL
+            document.getElementById('live-frame').hidden = false
+            document.getElementById('loadingTag').innerHTML = ''
+            document.getElementById('loadingTag').hidden = true 
+            document.getElementById('loadingTag').innerHTML = ''
+            setTimeout(() => {
+                console.log('Delayed iframe changes')
+                changeDate();
+                changeTitle();
+            }, 2000); //This is very hacky solution to there being no 'onload' event for iframes (in Chromium): waiting two seconds assuming most of the src will have loaded in that time, enough to run the changeDate and ChangeTitle functions.
+            }
+            //document.getElementById('container').innerText += `(currently have ${sockets.length} open)\n`
+        }
+
+        webSocket.onclose = () => {
+                let now = new Date().toLocaleTimeString()
+                console.log("Reconnecting " + now)
+                { //adding this to handle repeated errors
+                    setTimeout(
+                        setupWebSocket(subURL), 1000);}
+            };
+
+        webSocket.onerror = () => {
+            let now = new Date().toLocaleTimeString()
+            console.log( "Error making connection at " + now )
+            document.getElementById('loadingTag').innerHTML = 'Connection error 😵 <br><a onclick="window.reload()"><button>Refresh ♻️</button></a><br><a href="/list.html"><button>See lessons</button></a>'
+        }
+    }
+    function changeDate(){
+        var iframe = document.getElementById('live-frame').contentDocument
+        dates = iframe.getElementsByClassName('date')
+        for (dateHead of dates){
+            dateHead.innerText = currentDate}
+        }
+
+    function getHangmanUrl() {
+        document.getElementById('hangman').src = ''
+        url = 'https://maxbruges.com/hangman?'
+        let randomIndex = Math.floor(Math.random() * hangmanCodes.length);
+        let randomItem = hangmanCodes[randomIndex];
+        url += randomItem
+        document.getElementById('hangman').src = url
+    }
+
+window.onload = () =>{
+        console.log("window loaded")
+        setupWebSocket(subURL)
+        //refreshIframe(15000)
+      }
+    </script>
+</head>
+<body style="margin:0;padding:0;overflow: hidden;background:black;border:black;" id="body">
+    <style>
+        
+        body {
+            touch-action: none;
+        }
+        #live-frame {
+            min-width: 100dvw;
+            min-height: 100dvh;
+            overflow: hidden;
+            position: fixed;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><text width="100%" height="100%" fill="white" text-anchor="middle" y="25%" x="50%"  font-weight="bold" font-family="monospace" font-size="1px">Loading slide...</text></svg>');
+            background-size:50% 50%;
+            -o-background-size: 100% 100%;
+            -webkit-background-size: 100% 100%;
+            background-size:cover;
+        }
+
+       	.live-icon {
+       		 animation: pulse-animation 2s infinite;
+       		 position:absolute;
+       		 bottom:3.2em;
+       		 right:1.5em;
+       		 font-size:1em;
+       		 border:none;
+       		 background:black;
+       		 border-radius:10px;
+       		 padding:0.5em;
+       		 color:white;
+       		 font-family:monospace;
+             z-index: 99;
+       	}
+       	
+       	@keyframes pulse-animation {
+       	  0% {
+       	    box-shadow: 0 0 0 0px rgba(109, 0, 0, 0.5);
+       	  }
+       	  100% {
+       	    box-shadow: 0 0 0 20px rgba(102, 0, 0, 0);
+       	  }
+        }
+
+		h1, .loading {
+				margin-left: auto;
+				margin-right:auto;
+                top:30%;
+
+				text-align:center;
+                
+				color:white !important;
+				min-width:100%;
+				opacity:1;
+                font-family:monospace;
+		}
+
+        button{
+            background:white;
+            color:black;
+            font-weight:bold;
+            font-size: 1em;
+            border-radius: 0.5em;
+            padding: 0.4rem;
+            filter:brightness(130%);
+            cursor:pointer;
+            margin-top:1em;
+        }
+
+
+.loading-icon,
+.loading-icon:after {
+  box-sizing: border-box;
+}
+.loading-icon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.loading-icon:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6.4px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: loading-icon 1.2s linear infinite;
+}
+@keyframes loading-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#hangman {
+    width: 450px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid white;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><text width="100%" height="100%" fill="white" text-anchor="middle" y="25%" x="50%"  font-weight="bold" font-family="monospace" font-size="2px">Assembling new gibbet...</text></svg>');
+    border-radius:1em;
+    overflow:hidden !important;
+    max-width:100%;
+}
+    </style>
+    <p class="live-icon" id='live-icon'>🔴 LIVE</p>
+    <iframe hidden src='' id="live-frame" name="live-frame" scrolling="no" frameBorder="0" hidden onload="iframeLock();" onscroll="console.log('catching scroll'); this.src = document.getElementById('liveURL-store').value" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">iFrame ERROR 🫠</iframe>
+    <h1 class='loading' id='loadingTag'>
+    <div class="loading-icon" hidden></div>
+
+    </div><br>Connecting...</h1>
+    
+    <param id="liveURL-store" value="loading.html">
+ </body>
+ 
+</html>

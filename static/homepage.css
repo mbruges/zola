@@ -82,13 +82,14 @@ a b {
     font-size: 1em;
     font-weight: bold;
     line-height: var(--line-height);
-    margin: 0.5rem 0;
     padding: 1rem 2rem;
     background-color: var(--a);
     border: 2px solid var(--a);
     color: var(--b);
     min-width: 10em;
+    margin: 0.3em;
 }
+
 
 .iframe-container {
     position: relative;

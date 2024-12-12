@@ -43,12 +43,12 @@
                 This is where I try to teach
                 <a href="{{ get_url(path='@/about.md') | safe }}" target="_blank">myself</a> something new.
             </p>
-            <a href="/blog" alt="Link to the blog page, where I share my ramblings."><b>Blog 🗞️</b> </a>
-            <a alt="Link to the experiments page, where half-formed abominations of code shamble about." href="/experiments">
+            <a href="/blog"><b>Blog 🗞️</b> </a>
+            <a href="/experiments">
                 <b> Experiments 🧪</b>
             </a>
             <br />
-            <a id="learn-button-link" href="/learn" role="button" target="_blank">
+            <a class="button" id="learn-button-link" href="/learn" role="button" target="_blank">
                 <b>
                     <span id="learn-button"> Learn 👨‍🏫</span>
                     <div style="position: relative; display: block;">
@@ -69,7 +69,6 @@
             {{ config.extra.footer }}
         </footer>
     </body>
-    <link rel="icon" href="/images/favicon.svg" />
         <script>
         window.onload = () =>{
         var d = new Date();
@@ -77,10 +76,8 @@
               "https://mxb.fyi/static/livecap.webp?ver=" + d.getTime();}
         function showLiveCap() {
                 console.log("connected, livecap is present");
-                var preview = document.getElementById("preview");
-                var button = document.getElementById("learn-button");
-                preview.style.display = "block";
-                button.innerHTML ="Join the lesson 👨‍🏫";
+                document.getElementById("preview").style.display = "block";
+                document.getElementById("learn-button").innerHTML ="Join the lesson 👨‍🏫";
                 document.getElementById('live-icon').style.display = "block"
                 document.getElementById('learn-button-link').href = 'https://mxb.fyi/index';}
         </script>

@@ -12,6 +12,10 @@ for file in *.css; do
         reduction=$((original_size - minified_size))
         echo "Reduction for $file: $reduction bytes"
     fi
+    if [[ $file == *"homepage.min"* ]]; then
+        echo "updating homepage-style snippet"
+        cat "homepage.min.css" | sed '1s/^/<style>\n/' | sed '$s/$/\n<\/style>/' > ../templates/snippets/homepage-style.html
+    fi
 done
 
 exit

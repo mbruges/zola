@@ -1,6 +1,6 @@
 +++
 title = "Learn"
-sort_by = "date"
+sort_by = "title"
 template = "learn-index.html"
 page_template = "learn-page.html"
 description = "Browse some of my lessons."
@@ -8,3 +8,38 @@ description = "Browse some of my lessons."
 [extra]
 icon = "👨‍🏫"
 +++
+
+<style>
+.center,footer,img{display:block}.center,:root,img{margin:auto;text-align:center}.center,:root,footer,h1,img{text-align:center}#live-icon,a,footer,h1{font-family:monospace}:root{--b:#fffce4;--t:#161b2b;--a:#51518a;--s:#80808034;--border-radius:0.5em;font-size:13pt;line-height:1.3;background:var(--b);color:var(--t);max-width:80ch;padding:.6em;font-family:sans-serif;overflow-x:none}@media (prefers-color-scheme:dark){:root{--t:#fffce4;--b:#313131;--a:#fcf199}}footer{font-size:.7rem;width:100%;margin-left:auto;margin-right:auto;opacity:.8}a,a b{display:inline-block;font-weight:700}#preview{border:3px solid #000;border-radius:var(--border-radius);display:none;width:250px}h1{margin:1.4em 0 .1em;padding-bottom:1rem}a{color:var(--a);text-decoration:underline solid inherit;overflow-wrap:break-word}p>a{font-size:.9em}a:hover{filter:brightness(120%);text-decoration:underline wavy 1pt}a b{border-radius:var(--border-radius);font-size:1em;line-height:var(--line-height);padding:1rem 2rem;background-color:var(--a);border:2px solid var(--a);color:var(--b);min-width:10em;margin:.3em}.iframe-container{position:relative;width:100%;height:100%}.overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0);cursor:pointer}@keyframes pulse-animation{0%{box-shadow:0 0 0 0 rgba(109,0,0,.5)}100%{box-shadow:0 0 0 20px rgba(102,0,0,0)}}#live-icon{animation:2s infinite pulse-animation;background:#000;font-size:.8em;color:#fff;border-radius:var(--border-radius);padding:.2em;margin-bottom:-2.3em;z-index:99;position:absolute;bottom:1.5em;left:50%;transform:translateX(-50%);display:none}
+</style>
+
+
+<script>
+window.onload = () =>{
+  console.log('loaded')
+  var d = new Date();
+      document.getElementById("preview").src =
+        "https://mxb.fyi/static/livecap.webp?ver=" + d.getTime();}
+  function showLiveCap() {
+          console.warn()
+          console.log("connected, livecap is present");
+          document.getElementById("preview").style.display = "block";
+          document.getElementById("learn-button").innerHTML ="Join the lesson 👨‍🏫";
+          document.getElementById('live-icon').style.display = "block"
+          document.getElementById('learn-button-link').href = 'https://mxb.fyi/index';}
+</script>
+
+<a style="display:none;" class="button" id="learn-button-link" href="/learn" role="button" target="_blank">
+    <b>
+        <span id="learn-button"> Learn 👨‍🏫</span>
+        <div style="position: relative; display: block;">
+            <img id="preview"
+            src="https://mxb.fyi/static/livecap.webp"
+            width="250"
+            alt="Preview of the current Live Lesson"
+            title="Click to join this live lesson!"
+            onload="showLiveCap();document.getElementById('learn-button-link').style.display = '" onerror="console.clear();console.log('No live lesson underway, preview not loaded')">
+            <span id='live-icon'>LIVE 🔴</span>
+        </div>
+    </b>
+</a>

@@ -1,6 +1,5 @@
 # The URL the site will be built for
 base_url = "https://maxbruges.com/"
-
 compile_sass = false
 build_search_index = true
 minify_html = true
@@ -10,7 +9,7 @@ minify_html = true
 highlight_code = true
 bottom_footnotes = true
 smart_punctuation = true
-lazy_async_image = false
+lazy_async_image = true
 
 [extra]
 # Put all your custom variables here

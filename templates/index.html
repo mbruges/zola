@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#fffce4" />
         <link rel="icon" href="/images/icon.svg">
-        <link rel="stylesheet" href="/homepage.css" />
+        <link rel="stylesheet" href="{{ get_url(path="homepage.min.css") | safe }}" />
      {% if current_url  %}
         <link rel="canonical" href="{{ current_url | safe }}" />
         <meta property="og:url" content="{{ current_url | safe }}">
@@ -37,7 +37,7 @@
                 <a href="{{ get_url(path='@/about.md') | safe }}" target="_blank">Max Bruges</a>
             </h1>
         </header>
-        <div style="text-align: center; margin-left: auto; margin-right: auto">
+        <div>
             <p>I teach students lots of things, in lots of places.</p>
             <p>
                 This is where I try to teach
@@ -52,18 +52,13 @@
                 <b>
                     <span id="learn-button"> Learn 👨‍🏫</span>
                     <div style="position: relative; display: block;">
-                        <img class="center" id="preview" style="
-                            border: 3px solid black;
-                            border-radius: var(--border-radius);
-                            display: none;
-                            width:250px;
-                        "
+                        <img id="preview"
                         src=""
                         width="250"
                         alt="Preview of the current Live Lesson"
                         title="Click to join this live lesson!"
                         onload="showLiveCap()" onerror="console.log('lesson not live')">
-                        <span id='live-icon' style='white-space:nowrap; position: absolute; bottom: 1.5em; left: 50%; transform: translateX(-50%);display: none;'>LIVE 🔴</span>
+                        <span id='live-icon'>LIVE 🔴</span>
                     </div>
                 </b>
             </a>
@@ -75,12 +70,6 @@
         </footer>
     </body>
     <link rel="icon" href="/images/favicon.svg" />
-    <script type="module">
-            import { toggleNightmode } from '/scripts.js';
-            if (localStorage.getItem('nightmode') === 'enabled') {
-                toggleNightmode();
-            }
-        </script>
         <script>
         window.onload = () =>{
         var d = new Date();

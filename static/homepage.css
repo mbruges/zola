@@ -12,8 +12,10 @@
     padding: 0.6em;
     margin: auto;
     font-family: sans-serif;
-    list-style-type: "✒ ";
     overflow-x: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +42,13 @@ img,
     display: block;
     text-align: center;
     margin: auto;
+}
+
+#preview {
+border: 3px solid black;
+border-radius: var(--border-radius);
+display: none;
+width:250px;
 }
 
 h1 {
@@ -111,10 +120,14 @@ a b {
     background: black;
     font-size: 0.8em;
     color: white;
-    border-radius: 0.3em;
-    padding: 0.1em;
+    border-radius: var(--border-radius);
+    padding: 0.2em;
     font-family: monospace;
     margin-bottom: -2.3em;
     z-index: 99;
-    position: relative;
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
 }

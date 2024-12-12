@@ -17,10 +17,10 @@
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
     <meta property="og:image" content="/images/og.svg">
-
     </head>
     {% include "snippets/homepage-style.html" %}
     <body>
+
         <div id="main" style="min-height: 93vh;">
         <header>
             <img
@@ -57,7 +57,7 @@
                         width="250"
                         alt="Preview of the current Live Lesson"
                         title="Click to join this live lesson!"
-                        onload="showLiveCap()" onerror="console.clear();console.log('No live lesson underway, preview not loaded')">
+                        onload="showLiveCap()" onerror="console.clear();console.log('No live lesson underway, preview not loaded');">
                         <span id='live-icon'>LIVE 🔴</span>
                     </div>
                 </b>
@@ -76,6 +76,7 @@
             document.getElementById("preview").src =
               "https://mxb.fyi/static/livecap.webp?ver=" + d.getTime();}
         function showLiveCap() {
+                console.warn()
                 console.log("connected, livecap is present");
                 document.getElementById("preview").style.display = "block";
                 document.getElementById("learn-button").innerHTML ="Join the lesson 👨‍🏫";

@@ -1,37 +1,72 @@
 {% extends "base.html" %} {% block content %} {% set icon = "👨‍🏫" %}
 
 <title>Learn - {{ config.extra.default_title }}</title>
-
+<link rel="stylesheet" href="{{ get_url(path='blog-index.min.css') }}" />
+<h1 class="title">Lesson Archive</h1>
 <div class="subheading">
-    <p class="subtitle">Browse some of my lessons</p>
+    <!-- <p class="subtitle">Browse some of my lessons</p> -->
 </div>
 
 {{ section.content | safe }}
 
-<div
-    style="
-        position: relative;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    "
->
-    <button
-        onclick="document.querySelector('iframe').src = 'https://learn.maxbruges.com/list.html'"
-        style="
-            position: absolute;
-            top: 0em;
-            right: 0em;
-            z-index: 1000;
-            font-size: 0.6em;
-        "
+<style>
+.description {
+    text-align: left;
+    font-size: 1em;
+}
+
+.tag {
+    font-size: 6pt !important;
+    background: var(--t);
+    color:var(--b);
+    border-radius: 0.3em;
+    opacity: 0.7;
+    font-family: monospace;
+    padding: 0.2em;
+}
+</style>
+
+<ul id="list-of-posts">
+    {% for page in section.pages | filter(attribute="draft", value=false) %} {%
+    if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
+    <!-- {% set icon = "📃" %} -->
+    {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
+    set description = page.description | markdown(inline=true) %} {% endif %}
+
+    <div
+        class="blog-card"
+        onclick="location.href='{{ page.permalink | safe }}';"
+        data-pubdate="{{ page.date }}"
+        onmouseenter=""
     >
-        Back to list
-    </button>
-    <iframe
-        src="https://learn.maxbruges.com/list.html"
-        style="border: none; width: 100%; height: 70vh"
-    ></iframe>
-</div>
+        <div class="blog-icon">{{ icon }}</div>
+        <div class="blog-details">
+        <p class="">
+            <span class="title">{{ page.title }}</span
+            ></p>
+        <!-- <div id="date-bar" style="margin-bottom: 0.4em;">
+              {% if page.extra.ks and not page.draft %}
+             <span style="font-weight: bolder; font-size: 0.8em;padding: 0.1em;" id="date-tag"> KS{{ page.extra.ks }}
+                 {% else %} {% endif %}
+             </span>
+
+        </div> -->
+        <div class="description">
+                <p class="">{{ description | safe }}
+
+                </p>
+        </div>
+
+     </div>
+     <div class="blog-icon" id="date-tag" style="font-size: 1.2em;font-weight: bold;max-width: 3em;margin-left:-0.1em">KS{{ page.extra.ks }}</div>
+    <!-- <div class="blog-icon" style=";"> {% if page.extra.tags %}
+    {% for tag in page.extra.tags %}
+    <span class="tag">{{ tag }} </span>
+    {% endfor %}
+    {% endif %} </div> -->
+    </div>
+    <hr class="card-hr" />
+    {% endfor %}
+</ul>
 
 {% endblock content %}

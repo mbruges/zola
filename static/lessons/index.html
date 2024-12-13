@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-Equiv="Cache-Control" Content="no-cache" />
     <meta http-Equiv="Pragma" Content="no-cache" />
-    <meta http-Equiv="Expires" Content="0" />
+    <meta http-Equiv="Expires" Content="0" />    
     <title>🔴 Live Lesson with Mr. Bruges</title>
     <meta name="keywords" content="RAB, Learn, Live, Bruges, Lesson, Slides">
     <meta name="title" content="🔴 Live Lesson">
     <meta name="description" content="Live Lesson with Mr. Bruges">
     <meta name="author" content="Max Bruges">
-    <link rel="icon" type="image/x-icon" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <script>
 var slideNum = 1
 var subURL = "wss://socket.maxbruges.com/ws"
@@ -56,7 +56,7 @@ function refreshIframe(interval)
         //
     }
 
-    //Trying to prevent scrolling - quite complicated. Actually, the keypress on the iframe isn't blocked, but rather immediately reverted to a URL stored in a param (liveURL-store) and recalled every time the key is pressed.
+    //Trying to prevent scrolling - quite complicated. Actually, the keypress on the iframe isn't blocked, but rather immediately reverted to a URL stored in a param (liveURL-store) and recalled every time the key is pressed. 
     function revertIframe() {
         //console.log('blocking to iframe from changing')
         document.getElementById('live-frame').src = "./" + document.getElementById('liveURL-store').value
@@ -95,7 +95,7 @@ function refreshIframe(interval)
             document.getElementById('liveURL-store').value = liveURL
             document.getElementById('live-frame').hidden = false
             document.getElementById('loadingTag').innerHTML = ''
-            document.getElementById('loadingTag').hidden = true
+            document.getElementById('loadingTag').hidden = true 
             document.getElementById('loadingTag').innerHTML = ''
             setTimeout(() => {
                 console.log('Delayed iframe changes')
@@ -145,7 +145,7 @@ window.onload = () =>{
 </head>
 <body style="margin:0;padding:0;overflow: hidden;background:black;border:black;" id="body">
     <style>
-
+        
         body {
             touch-action: none;
         }
@@ -175,7 +175,7 @@ window.onload = () =>{
        		 font-family:monospace;
              z-index: 99;
        	}
-
+       	
        	@keyframes pulse-animation {
        	  0% {
        	    box-shadow: 0 0 0 0px rgba(109, 0, 0, 0.5);
@@ -191,7 +191,7 @@ window.onload = () =>{
                 top:30%;
 
 				text-align:center;
-
+                
 				color:white !important;
 				min-width:100%;
 				opacity:1;
@@ -259,8 +259,8 @@ window.onload = () =>{
     <div class="loading-icon" hidden></div>
 
     </div><br>Connecting...</h1>
-
+    
     <param id="liveURL-store" value="loading.html">
  </body>
-
+ 
 </html>

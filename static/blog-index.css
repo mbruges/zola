@@ -5,21 +5,24 @@
         border: 2px dashed transparent;
         border-radius: 1em;
         background: var(--b);
-        display: flex;
         align-items: center; /* Vertically aligns items */
         max-width: 600pt;
     }
 
+    .flex {
+         display: flex;
+    }
+
     .blog-icon {
         font-size: 66px;
-        width: 80px; /* Fixed width for blog-icon */
+        width: 80px;
         overflow: hidden;
         text-align: center;
     }
 
     .blog-details {
-        flex: 1; /* Takes up the remaining space */
-        padding-left: 0.7em; /* Optional spacing */
+        flex: 1;
+        padding-left: 0.7em;
     }
 
     .blog-card:hover {

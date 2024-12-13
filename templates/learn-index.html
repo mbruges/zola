@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block content %} {% set icon = "👨‍🏫" %}
+{% extends "base.html" %} {% block content %} {% set icon = section.extra.icon %}
 
 <title>Learn - {{ config.extra.default_title }}</title>
 <link rel="stylesheet" href="{{ get_url(path='blog-index.min.css') }}" />
@@ -54,36 +54,30 @@
     {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
     set description = page.description | markdown(inline=true) %} {% endif %}
 
-    <div
+<div
         class="blog-card"
         onclick="location.href='{{ page.permalink | safe }}';"
         data-pubdate="{{ page.date }}"
         onmouseenter=""
+        style="border: 2px solid var(--a) !important;margin-bottom: 1em;"
     >
+    <p class="title">{% if page.extra.ks and not page.draft %}
+    <span style="font-weight: bolder; font-size: 0.7em;padding: 0.1em;margin:none;color:black;" id="date-tag" data-keystage="{{ page.extra.ks }}"> KS{{ page.extra.ks }}{% endif %}</span> {{ page.title }} </p>
 
-        <div class="blog-icon">{{ icon }}</div>
-
+    <div class="flex">
+        <div class="blog-icon" style="margin-top: -0.5em;">{{ icon }}</div>
         <div class="blog-details">
-        <p class="title">{{ page.title }}</p>
-        <div id="date-bar" style="margin-bottom: 0.4em;">
-              {% if page.extra.ks and not page.draft %}
-             <span style="font-weight: bolder; font-size: 0.9em;padding: 0.1em;color:black;" id="date-tag" data-keystage="{{ page.extra.ks }}"> KS{{ page.extra.ks }}
-                 {% else %} {% endif %}
-             </span>
-
+            <div class="description">
+                    <p class="">{{ description | safe }}</p>
+                    <!-- <div class=tag-container>Tags: {% if page.extra.tags %}
+                    {% for tag in page.extra.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                    {% endif %}</div> -->
+            </div>
         </div>
-        <div class="description">
-                <p class="">{{ description | safe }}</p>
-                <!-- <div class=tag-container>Tags: {% if page.extra.tags %}
-                {% for tag in page.extra.tags %}
-                <span class="tag">{{ tag }}</span>
-                {% endfor %}
-                {% endif %}</div> -->
-        </div>
-
-     </div>
     </div>
-    <hr class="card-hr" />
+</div>
     {% endfor %}
 </ul>
 

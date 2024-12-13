@@ -15,16 +15,37 @@
     font-size: 1em;
 }
 
+.tag-container {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7em;
+}
+
 .tag {
-    font-size: 6pt !important;
     background: var(--t);
     color:var(--b);
-    border-radius: 0.3em;
+    border-radius: var(--border-radius);
     opacity: 0.7;
+    max-height: fit-content;
     font-family: monospace;
-    padding: 0.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+[data-keystage="3"] {
+    background-color:lightcyan !important;
+}
+
+[data-keystage="4"] {
+    background-color:lightyellow!important;
+}
+
+[data-keystage="5"] {
+    background-color:lightpink !important;
 }
 </style>
+
+
 
 <ul id="list-of-posts">
     {% for page in section.pages | filter(attribute="draft", value=false) %} {%
@@ -39,31 +60,28 @@
         data-pubdate="{{ page.date }}"
         onmouseenter=""
     >
+
         <div class="blog-icon">{{ icon }}</div>
+
         <div class="blog-details">
-        <p class="">
-            <span class="title">{{ page.title }}</span
-            ></p>
-        <!-- <div id="date-bar" style="margin-bottom: 0.4em;">
+        <p class="title">{{ page.title }}</p>
+        <div id="date-bar" style="margin-bottom: 0.4em;">
               {% if page.extra.ks and not page.draft %}
-             <span style="font-weight: bolder; font-size: 0.8em;padding: 0.1em;" id="date-tag"> KS{{ page.extra.ks }}
+             <span style="font-weight: bolder; font-size: 0.9em;padding: 0.1em;color:black;" id="date-tag" data-keystage="{{ page.extra.ks }}"> KS{{ page.extra.ks }}
                  {% else %} {% endif %}
              </span>
 
-        </div> -->
+        </div>
         <div class="description">
-                <p class="">{{ description | safe }}
-
-                </p>
+                <p class="">{{ description | safe }}</p>
+                <!-- <div class=tag-container>Tags: {% if page.extra.tags %}
+                {% for tag in page.extra.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+                {% endif %}</div> -->
         </div>
 
      </div>
-     <div class="blog-icon" id="date-tag" style="font-size: 1.2em;font-weight: bold;max-width: 3em;margin-left:-0.1em">KS{{ page.extra.ks }}</div>
-    <!-- <div class="blog-icon" style=";"> {% if page.extra.tags %}
-    {% for tag in page.extra.tags %}
-    <span class="tag">{{ tag }} </span>
-    {% endfor %}
-    {% endif %} </div> -->
     </div>
     <hr class="card-hr" />
     {% endfor %}

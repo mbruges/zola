@@ -48,7 +48,7 @@
                 <b> Experiments 🧪</b>
             </a>
             <br />
-            <a class="button" id="learn-button-link" href="/learn" role="button" target="_blank">
+            <a class="button" id="learn-button-link" href="/learn" role="button">
                 <b>
                     <span id="learn-button"> Learn 👨‍🏫</span>
                     <div style="position: relative; display: block;">
@@ -57,11 +57,12 @@
                         width="250"
                         alt="Preview of the current Live Lesson"
                         title="Click to join this live lesson!"
-                        onload="showLiveCap()" onerror="console.clear();console.log('No live lesson underway, preview not loaded');">
+                        onload="showLiveCap();document.getElementById('archive-link').style.visibility = 'visible'" onerror="console.clear();console.log('No live lesson underway, preview not loaded');">
                         <span id='live-icon'>LIVE 🔴</span>
                     </div>
                 </b>
             </a>
+            <p id="archive-link" style="visibility:hidden;">Or view the <a href="/learn">lesson archive</a>📚</p>
         </div>
         </div>
         <footer title="Built by Zola at {{ now() | date(format='%H:%M:%S UTC%:::z, %a %d %b') }}"

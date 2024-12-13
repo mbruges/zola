@@ -1,32 +1,8 @@
-<!-- START XMASMODE -->
-<style>
-.lightswitch {
-    position: fixed;
-    right: 1em;
-    bottom: 1em;
-    opacity: 0.6;
-    color:var(--a) !important;
-    margin-right: 0;
-    padding-right:0;
-    font-size: 1.2em;
-    cursor: pointer;
-    z-index: 99;
-}
-</style>
-    <script type="module">
-            import { toggleNightmode,handleScroll,addNavShadow } from '/scripts.js';
-
-            if (localStorage.getItem('nightmode') === 'enabled') {
-                        toggleNightmode();
-                    }
-            document.getElementById('lightswitch').onclick = toggleNightmode;
-            window.addEventListener('scroll', handleScroll);
-            window.onload = addNavShadow
-    </script>
-    <span class="lightswitch" id="lightswitch">🌓︎</span>
     <script>
+    const music = '/files/sussex_carol.m4a'
+    const onIcon = '🎄'
     function xmasMode(elem) {
-      if (elem.innerText == '🎄'){
+      if (elem.innerText == onIcon){
         console.log('on!');
         localStorage.setItem('xmasmode', 'disabled');
         location.reload();
@@ -36,8 +12,8 @@
       document.documentElement.style.setProperty('--t', "#fffce4");
       document.documentElement.style.setProperty('--b', "#161b2b");
       document.documentElement.style.setProperty('--a', "#fcf199");
-      new Audio('/files/sussex_carol.m4a').play();
-      elem.innerText = '🎄';
+      new Audio(music).play();
+      elem.innerText = onIcon;
       document.querySelectorAll('.snowflake').forEach(function(snowflake) {
           snowflake.style.visibility = 'visible';
       });
@@ -114,4 +90,11 @@
         <div class="inner">❅</div>
       </div>
     </div>
-    <span class="lightswitch" id="xmas" style="left:1em !important;font-size: 2em;" onclick="xmasMode(this)">🌲</span>
+    <span id="xmas" style="position: fixed;
+    opacity: 0.6;
+    color:var(--a) !important;
+    margin: 0;
+    padding:0;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 99;left:1em;bottom:1.5em;font-size: 1.5em;" onclick="xmasMode(this)">🌲</span>

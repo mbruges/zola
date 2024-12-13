@@ -91,9 +91,11 @@
             pointer-events: none;
             margin: none;
             padding: none;
-            min-width: fit content;
+            display: inline-block;
+            min-width: 12em;
             background: linear-gradient(to right, transparent, var(--b) 50%);
             padding-left: 7em;
+            text-align: right;
     }
 
     .read-on {

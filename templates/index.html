@@ -65,6 +65,7 @@
             <p id="archive-link" style="visibility:hidden;">Or view the <a href="/learn">lesson archive</a>📚</p>
         </div>
         </div>
+        {% include "snippets/xmasmode.html" %}
         <footer title="Built by Zola at {{ now() | date(format='%H:%M:%S UTC%:::z, %a %d %b') }}"
         alt="Footer">
             {{ config.extra.footer }}

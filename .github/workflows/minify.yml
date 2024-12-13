@@ -17,6 +17,7 @@ jobs:
 
       - name: Minify CSS files
         run: |
+          which bash
           bash .github/scripts/minify.sh
 
       - name: Commit minified CSS files

@@ -23,8 +23,8 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add
-          git commit -m "Minified CSS" || echo "No changes to commit"
+          git add .
+          git commit -a -m "Minified CSS" || echo "No changes to commit"
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0

@@ -18,7 +18,19 @@ for file in *.css; do
             echo "updating homepage-style snippet"
             cat "homepage.min.css" | sed '1s/^/<style>\n/' | sed '$s/$/\n<\/style>/' > ../templates/snippets/homepage-style.html
         fi
+
     fi
 done
+
+echo "Issuing purge command to Cloudflare..."
+
+curl https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache \
+    -H 'Content-Type: application/json' \
+    -H "X-Auth-Email: $CF_EMAIL" \
+    -H "X-Auth-Key: $CF_API_KEY_PURGE" \
+    -d '{
+      "purge_everything": true
+    }' && echo "Succeeded in purge!"
+
 
 exit

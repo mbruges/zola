@@ -19,11 +19,11 @@ window.onload = () => {
 
 <script>
   var countDownDate = new Date();
-  if (countDownDate.getUTCHours() >= 13 && countDownDate.getUTCMinutes() > 40 || countDownDate.getUTCHours() > 13) {
+  if (countDownDate.getUTCHours() >= 13 && countDownDate.getUTCMinutes() > 30 || countDownDate.getUTCHours() > 13) {
     countDownDate.setDate(countDownDate.getDate() + 1);
   }
   countDownDate.setUTCHours(13);
-  countDownDate.setUTCMinutes(40);
+  countDownDate.setUTCMinutes(30);
   countDownDate.setUTCSeconds(0);
   var x = setInterval(function() {
     var now = new Date().getTime();
@@ -44,4 +44,6 @@ window.onload = () => {
   Scheduled to land: <span id=countdown></span>
 </h3>
 
-<img class=center src="https://mxb.fyi/static/flight-screenshot.webp" width=400 height=800 style="min-height:500px">
+[🌐 Click here for more info](https://g.co/kgs/84g6H2t)
+
+<img class=center src="https://mxb.fyi/static/flight-screenshot.webp" width=400 height=500 style="min-height:500px">

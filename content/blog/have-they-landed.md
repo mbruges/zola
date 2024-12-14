@@ -8,8 +8,7 @@ date: 2024-12-14
 ---
 
 <div class=center>
-<h3>
-  Scheduled to land, Heathrow T3:<br><span id=countdown></span>
+<h3>Landing at Heathrow T3:<br><span id=countdown></span>
 </h3>
 
 ```
@@ -21,7 +20,8 @@ date: 2024-12-14
 - 0827 heading to gates 🚃
 - 0830 sitting down to breakfast 🍳 
 - 0935 boarded flight
--  NOW waiting on the tarmac 🛫
+- 1016 Take off! 🛫
+-  NOW Airborne 
 ```
 
 [🌐 Click here for more info](https://g.co/kgs/84g6H2t)
@@ -38,7 +38,7 @@ date: 2024-12-14
 window.onload = () => {
   setTimeout(function(){
     location.reload();
-  }, 300000);}
+  }, 100000);}
 </script>
 
 <script>

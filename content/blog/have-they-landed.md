@@ -19,7 +19,9 @@ date: 2024-12-14
 - 0747 Bags checked in
 - 0810 Cleared security
 - 0827 heading to gates 🚃
-- *CURRENTLY*:  sitting down to breakfast 🍳
+- 0830 sitting down to breakfast 🍳 
+- 0935 boarded flight
+-  NOW waiting on the tarmac 🛫
 ```
 
 [🌐 Click here for more info](https://g.co/kgs/84g6H2t)

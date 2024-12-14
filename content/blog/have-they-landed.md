@@ -18,7 +18,8 @@ date: 2024-12-14
 - 0727 Changed first nappy 
 - 0747 Bags checked in
 - 0810 Cleared security
-- *CURRENTLY*: heading to gates 🚃
+- 0827 heading to gates 🚃
+- *CURRENTLY*:  sitting down to breakfast 🍳
 ```
 
 [🌐 Click here for more info](https://g.co/kgs/84g6H2t)

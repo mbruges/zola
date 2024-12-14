@@ -44,6 +44,11 @@ window.onload = () => {
   Scheduled to land, Heathrow T3:<br><span id=countdown></span>
 </h3>
 
+- Left the Torch 0630
+- Arrived at DXB 0725
+- Changed first nappy 0727
+- *CURRENTLY*: Queuing for bag check-in
+
 [🌐 Click here for more info](https://g.co/kgs/84g6H2t)
 
 <img  src="https://mxb.fyi/static/flight-screenshot.webp" width=400 height=500 style="min-height:500px">

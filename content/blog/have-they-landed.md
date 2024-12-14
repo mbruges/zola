@@ -17,7 +17,8 @@ date: 2024-12-14
 - 0725 Arrived at DXB 
 - 0727 Changed first nappy 
 - 0747 Bags checked in
-- *CURRENTLY*: queuing for security 
+- 0810 Cleared security
+- *CURRENTLY*: heading to gates 🚃
 ```
 
 [🌐 Click here for more info](https://g.co/kgs/84g6H2t)

@@ -39,11 +39,13 @@ window.onload = () => {
     }
   }, 1000);
 </script>
-
-<h3 class=center>
-  Scheduled to land: <span id=countdown></span>
+<div class=center>
+<h3>
+  Scheduled to land, Heathrow T3:<br><span id=countdown></span>
 </h3>
 
 [🌐 Click here for more info](https://g.co/kgs/84g6H2t)
 
-<img class=center src="https://mxb.fyi/static/flight-screenshot.webp" width=400 height=500 style="min-height:500px">
+<img  src="https://mxb.fyi/static/flight-screenshot.webp" width=400 height=500 style="min-height:500px">
+
+</div>

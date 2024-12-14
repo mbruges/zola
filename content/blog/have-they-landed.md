@@ -6,6 +6,26 @@ extra:
   icon: ✈️
 date: 2024-12-14
 ---
+
+<div class=center>
+<h3>
+  Scheduled to land, Heathrow T3:<br><span id=countdown></span>
+</h3>
+
+```
+- 0630 Left the Torch 
+- 0725 Arrived at DXB 
+- 0727 Changed first nappy 
+- 0747 Bags checked in
+- *CURRENTLY*: queuing for security 
+```
+
+[🌐 Click here for more info](https://g.co/kgs/84g6H2t)
+
+<img  src="https://mxb.fyi/static/flight-screenshot.webp" width=400 height=500 style="min-height:500px">
+
+</div>
+
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
@@ -39,18 +59,3 @@ window.onload = () => {
     }
   }, 1000);
 </script>
-<div class=center>
-<h3>
-  Scheduled to land, Heathrow T3:<br><span id=countdown></span>
-</h3>
-
-- Left the Torch 0630
-- Arrived at DXB 0725
-- Changed first nappy 0727
-- *CURRENTLY*: Queuing for bag check-in
-
-[🌐 Click here for more info](https://g.co/kgs/84g6H2t)
-
-<img  src="https://mxb.fyi/static/flight-screenshot.webp" width=400 height=500 style="min-height:500px">
-
-</div>

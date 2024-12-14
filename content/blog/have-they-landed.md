@@ -8,7 +8,7 @@ date: 2024-12-14
 ---
 
 <div class=center>
-<h3>Landing at Heathrow T3:<br><span id=countdown></span>
+<h3>Landed!</h3>
 </h3>
 
 ```
@@ -21,7 +21,8 @@ date: 2024-12-14
 - 0830 sitting down to breakfast 🍳 
 - 0935 boarded flight
 - 1016 Take off! 🛫
--  NOW Airborne 
+- 1340 LANDED
+-  NOW Waiting for bags and security
 ```
 
 [🌐 Click here for more info](https://g.co/kgs/84g6H2t)

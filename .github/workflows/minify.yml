@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '**/*.css'
+      - "**/*.css"
   workflow_dispatch:
 jobs:
   minify_css:
@@ -36,3 +36,20 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
+
+      - name: Purge Cloudflare Cache
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE_ID }}/purge_cache" \
+            -H 'Content-Type: application/json' \
+            -H "X-Auth-Email: ${{ secrets.CF_EMAIL }}" \
+            -H "X-Auth-Key: ${{ secrets.CF_API_KEY_PURGE }}" \
+            -d '{
+              "purge_everything": true
+            }')
+
+          if [ "$response" -eq 200 ]; then
+            echo "Succeeded in purge!"
+          else
+            echo "Purge failed with response code: $response"
+            exit 1
+          fi

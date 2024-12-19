@@ -1,8 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% set icon = section.extra.icon %}
 <meta property="og:title" content="Blog - {{ config.extra.default_title }}" />
-<rewrite_this>
 <link rel="stylesheet" href="{{ get_url(path='blog-index.min.css') }}" />
-</rewrite_this>
 <title>Blog - {{ config.extra.default_title }}</title>
 <h1 class="title">The Blog</h1>
 <p class="subheading">
@@ -11,7 +9,6 @@
 <ul id="list-of-posts">
     {% for page in section.pages | filter(attribute="draft", value=false) %} {%
     if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
-    <!-- {% set icon = "📃" %} -->
     {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
     set description = page.description | markdown(inline=true) %} {% set blurb = page.content |
     striptags | truncate(length=360) %} {% else %} {% set description = "" %} {%

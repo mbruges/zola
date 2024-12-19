@@ -1,83 +1,105 @@
-{% extends "base.html" %} {% block content %} {% set icon = section.extra.icon %}
-
+{% extends "base.html" %} {% block content %} {% set icon = section.extra.icon
+%}
+<meta property="og:title" content="Learn - {{ config.extra.default_title }}" />
 <title>Learn - {{ config.extra.default_title }}</title>
 <link rel="stylesheet" href="{{ get_url(path='blog-index.min.css') }}" />
-<h1 class="title">Lesson Archive</h1>
-<div class="subheading">
-    <!-- <p class="subtitle">Browse some of my lessons</p> -->
-</div>
 
-{{ section.content | safe }}
+<h1 class="title">Lesson Archive</h1>
+<p class="subheading">Ready-to-go lessons on Literature and Language</p>
 
 <style>
-.description {
-    text-align: left;
-    font-size: 1em;
-}
+    .description {
+        text-align: left;
+        font-size: 1em;
+    }
 
-.tag-container {
-    min-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.7em;
-}
+    .tag-container {
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7em;
+    }
 
-.tag {
-    background: var(--t);
-    color:var(--b);
-    border-radius: var(--border-radius);
-    opacity: 0.7;
-    max-height: fit-content;
-    font-family: monospace;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-[data-keystage="3"] {
-    background-color:lightcyan !important;
-}
+    #date-tag {
+        font-weight: bolder;
+        font-size: 0.7em;
+        padding: 0.1em;
+        margin: none;
+        color: black;
+    }
 
-[data-keystage="4"] {
-    background-color:lightyellow!important;
-}
+    .tag {
+        background: var(--t);
+        color: var(--b);
+        border-radius: var(--border-radius);
+        opacity: 0.7;
+        max-height: fit-content;
+        font-family: monospace;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    [data-keystage="3"] {
+        background-color: lightcyan !important;
+    }
 
-[data-keystage="5"] {
-    background-color:lightpink !important;
-}
+    [data-keystage="4"] {
+        background-color: lightyellow !important;
+    }
+
+    [data-keystage="5"] {
+        background-color: lightpink !important;
+    }
+
+    .title {
+        text-align: center;
+    }
 </style>
-
-
 
 <ul id="list-of-posts">
     {% for page in section.pages | filter(attribute="draft", value=false) %} {%
-    if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
-    <!-- {% set icon = "📃" %} -->
-    {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
-    set description = page.description | markdown(inline=true) %} {% endif %}
+    if page.extra.icon %} {% set icon = page.extra.icon %} {% else %} {% set
+    icon = section.extra.icon %} {% endif %} {% if page.description %} {% set
+    description = page.description | markdown(inline=true) %} {% endif %}
 
-<div
+    <div
         class="blog-card"
         onclick="location.href='{{ page.permalink | safe }}';"
         data-pubdate="{{ page.date }}"
         onmouseenter=""
-        style="border: 2px solid var(--a) !important;margin-bottom: 1em;"
+        style="border: 2px solid var(--a) !important; margin-bottom: 1em"
     >
-    <p class="title">{% if page.extra.ks and not page.draft %}
-    <span style="font-weight: bolder; font-size: 0.7em;padding: 0.1em;margin:none;color:black;" id="date-tag" data-keystage="{{ page.extra.ks }}"> KS{{ page.extra.ks }}{% endif %}</span> {{ page.title }} </p>
+        <p class="title">
+            {% if page.extra.ks and not page.draft %}
+            <span
+                style="
+                    font-weight: bolder;
+                    font-size: 0.7em;
+                    padding: 0.1em;
+                    margin: none;
+                    color: black;
+                "
+                id="date-tag"
+                data-keystage="{{ page.extra.ks }}"
+            >
+                KS{{ page.extra.ks }}{% endif %}</span
+            >
+            {{ page.title }}
+        </p>
 
-    <div class="flex">
-        <div class="blog-icon" style="margin-top: -0.1em;">{{ icon }}</div>
-        <div class="blog-details">
-            <div class="description">
+        <div class="flex">
+            <div class="blog-icon" style="margin-top: -0.1em">{{ icon }}</div>
+            <div class="blog-details">
+                <div class="description">
                     <p class="">{{ description | safe }}</p>
                     <!-- <div class=tag-container>Tags: {% if page.extra.tags %}
                     {% for tag in page.extra.tags %}
                     <span class="tag">{{ tag }}</span>
                     {% endfor %}
                     {% endif %}</div> -->
+                </div>
             </div>
         </div>
     </div>
-</div>
     {% endfor %}
 </ul>
 

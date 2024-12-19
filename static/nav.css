@@ -15,10 +15,9 @@
 }
 
 .add-shadow {
-    color:black;
-    box-shadow: 0 5px 2px -2px rgba(0, 0, 0, 0.3)
+    color: black;
+    box-shadow: 0 5px 2px -2px rgba(0, 0, 0, 0.3);
 }
-
 
 body {
     margin-top: 2.3em !important;
@@ -38,7 +37,6 @@ nav {
     text-decoration: none;
     height: 2em;
     top: 0;
-
 }
 
 .dropdown {
@@ -75,7 +73,6 @@ nav {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     padding: 0em;
-
 }
 
 /* Links inside the dropdown */
@@ -110,7 +107,9 @@ nav ul li:hover ul {
     visibility: hidden;
     text-align: center;
     padding-left: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
     transform: translateY(20px);
 }
 
@@ -125,9 +124,9 @@ nav ul li:hover ul {
     right: 1em;
     bottom: 1.5em;
     opacity: 0.6;
-    color:var(--a) !important;
+    color: var(--a) !important;
     margin-right: 0;
-    padding-right:0;
+    padding-right: 0;
     font-size: 1.2em;
     cursor: pointer;
     z-index: 99;
@@ -138,4 +137,10 @@ nav ul li:hover ul {
     font-weight: normal;
     margin-right: 0.5em;
     white-space: nowrap;
+}
+@media (min-width: 450px) {
+    #back::after {
+        content: " Back";
+        display: inline;
+    }
 }

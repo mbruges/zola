@@ -44,7 +44,7 @@
    <!-- <link rel="icon" type="image/svg" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>{{ icon }}</text></svg>"> -->
  <link rel="stylesheet" href="{{ get_url(path="nav.min.css") | safe }}">
  <link rel="stylesheet" href="{{ get_url(path="blog-style.min.css") | safe }}">
- <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+ <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
 <div id="main" style="min-height: 80vh;">
@@ -61,7 +61,7 @@
         </div>
     </div>
     <small id="website-name"> {{ icon }} {% if page.title %} {{ page.title }} {% elif section.title %} {{ section.title }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
-    <p><a id="back" href="../">↩ Back</a></p>
+    <p><a id="back" href="../">↩</a></p>
 </nav>
 </div>
   <section class="section">

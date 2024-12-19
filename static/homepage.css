@@ -79,7 +79,7 @@ p > a {
 
 a:hover {
     filter: brightness(120%);
-    text-decoration: underline wavy 1pt;
+    text-decoration: underline wavy 2pt;
 }
 
 a b {

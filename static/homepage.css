@@ -28,6 +28,10 @@
     }
 }
 
+body {
+    min-height: 85vh;
+}
+
 footer {
     text-align: center;
     font-size: 0.7rem;
@@ -47,17 +51,17 @@ img,
 }
 
 #preview {
-border: 3px solid black;
-border-radius: var(--border-radius);
-display: none;
-width:250px;
+    border: 3px solid black;
+    border-radius: var(--border-radius);
+    display: none;
+    width: 250px;
 }
 
 h1 {
     margin: 1.4em 0 0.1em;
     text-align: center;
     padding-bottom: 1rem;
-    font-family:monospace;
+    font-family: monospace;
 }
 
 a {
@@ -66,11 +70,11 @@ a {
     color: var(--a);
     text-decoration: underline solid inherit;
     overflow-wrap: break-word;
-    font-family:monospace;
+    font-family: monospace;
 }
 
 p > a {
-    font-size: 0.9em
+    font-size: 0.9em;
 }
 
 a:hover {
@@ -91,7 +95,6 @@ a b {
     min-width: 10em;
     margin: 0.3em;
 }
-
 
 .iframe-container {
     position: relative;

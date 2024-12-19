@@ -9,80 +9,104 @@
         <meta name="theme-color" content="#fffce4" />
         <!-- <link rel="icon" href="/favicon.svg"> -->
         <!-- <link rel="stylesheet" href="{{ get_url(path="homepage.min.css") | safe }}" /> -->
-     {% if current_url  %}
+        {% if current_url %}
         <link rel="canonical" href="{{ current_url | safe }}" />
-        <meta property="og:url" content="{{ current_url | safe }}">
-     {% endif %}
-    <meta property="og:site_name" content="MaxBruges.com">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/images/og.svg">
+        <meta property="og:url" content="{{ current_url | safe }}" />
+        {% endif %}
+        <meta property="og:site_name" content="MaxBruges.com" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/og.svg" />
     </head>
     {% include "snippets/homepage-style.html" %}
     <body>
+        <div id="main">
+            <header>
+                <img
+                    src="/images/favicon.svg"
+                    height="75em"
+                    width="200em"
+                    title="Built by Zola at {{ now() | date(format='%H:%M:%S %Z, %a %d %b') }}"
+                    alt="Miaow"
+                    style="padding-top: 2em"
+                />
 
-        <div id="main" style="min-height: 93vh;">
-        <header>
-            <img
-                src="/images/favicon.svg"
-                height="75em"
-                width="200em"
-                title="Built by Zola at {{ now() | date(format='%H:%M:%S %Z, %a %d %b') }}"
-                alt="Miaow"
-                style="padding-top: 2em;"
-            />
-
-            <h1>
-                Hello. I'm
-                <a href="{{ get_url(path='@/about.md') | safe }}" target="_blank">Max Bruges</a>
-            </h1>
-        </header>
-        <div>
-            <p>I teach students lots of things, in lots of places.</p>
-            <p>
-                This is where I try to teach
-                <a href="{{ get_url(path='@/about.md') | safe }}" target="_blank">myself</a> something new.
-            </p>
-            <a href="/blog"><b>Blog 🗞️</b> </a>
-            <a href="/experiments">
-                <b> Experiments 🧪</b>
-            </a>
-            <br />
-            <a class="button" id="learn-button-link" href="/learn" role="button">
-                <b>
-                    <span id="learn-button"> Learn 👨‍🏫</span>
-                    <div style="position: relative; display: block;">
-                        <img id="preview"
-                        src=""
-                        width="250"
-                        alt="Preview of the current Live Lesson"
-                        title="Click to join this live lesson!"
-                        onload="showLiveCap();document.getElementById('archive-link').style.visibility = 'visible'" onerror="console.clear();console.log('No live lesson underway, preview not loaded');">
-                        <span id='live-icon'>LIVE 🔴</span>
-                    </div>
-                </b>
-            </a>
-            <p id="archive-link" style="visibility:hidden;">Or view the <a href="/learn">lesson archive</a>📚</p>
-        </div>
+                <h1>
+                    Hello. I'm
+                    <a
+                        href="{{ get_url(path='@/about.md') | safe }}"
+                        target="_blank"
+                        >Max Bruges</a
+                    >
+                </h1>
+            </header>
+            <div>
+                <p>I teach students lots of things, in lots of places.</p>
+                <p>
+                    This is where I try to teach
+                    <a
+                        href="{{ get_url(path='@/about.md') | safe }}"
+                        target="_blank"
+                        >myself</a
+                    >
+                    something new.
+                </p>
+                <a href="/blog"><b>Blog 🗞️</b> </a>
+                <a href="/experiments">
+                    <b> Experiments 🧪</b>
+                </a>
+                <br />
+                <a
+                    class="button"
+                    id="learn-button-link"
+                    href="/learn"
+                    role="button"
+                >
+                    <b>
+                        <span id="learn-button"> Learn 👨‍🏫</span>
+                        <div style="position: relative; display: block">
+                            <img
+                                id="preview"
+                                src=""
+                                width="250"
+                                alt="Preview of the current Live Lesson"
+                                title="Click to join this live lesson!"
+                                onload="showLiveCap();document.getElementById('archive-link').style.visibility = 'visible'"
+                                onerror="console.clear();console.log('No live lesson underway, preview not loaded');"
+                            />
+                            <span id="live-icon">LIVE 🔴</span>
+                        </div>
+                    </b>
+                </a>
+                <p id="archive-link" style="visibility: hidden">
+                    Or view the <a href="/learn">lesson archive</a>📚
+                </p>
+            </div>
         </div>
         {% include "snippets/xmasmode.html" %}
-        <footer title="Built by Zola at {{ now() | date(format='%H:%M:%S UTC%:::z, %a %d %b') }}"
-        alt="Footer">
+        <footer
+            title="Built by Zola at {{ now() | date(format='%H:%M:%S UTC%:::z, %a %d %b') }}"
+            alt="Footer"
+        >
             {{ config.extra.footer }}
         </footer>
     </body>
 
-        <script>
-        window.onload = () =>{
-        var d = new Date();
+    <script>
+        window.onload = () => {
+            var d = new Date();
             document.getElementById("preview").src =
-              "https://mxb.fyi/static/livecap.webp?ver=" + d.getTime();}
+                "https://mxb.fyi/static/livecap.webp?ver=" + d.getTime();
+        };
         function showLiveCap() {
-                console.warn()
-                console.log("connected, livecap is present");
-                document.getElementById("preview").style.display = "block";
-                document.getElementById("learn-button").innerHTML ="Join the lesson 👨‍🏫";
-                document.getElementById('live-icon').style.display = "block"
-                document.getElementById('learn-button-link').href = 'https://mxb.fyi/index';}
-        </script>
+            console.warn();
+            console.log("connected, livecap is present");
+            document.getElementById("preview").style.display = "block";
+            document.getElementById("learn-button").innerHTML =
+                "Join the lesson 👨‍🏫";
+            document.getElementById("live-icon").style.display = "block";
+            document.getElementById("learn-button-link").href =
+                "https://mxb.fyi/index";
+        }
+    </script>
 </html>

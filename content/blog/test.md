@@ -10,6 +10,15 @@ extra:
 
 This is just a test page, please **ignore**. 😇
 
+![dithered](/output.png)
+*PNG version*
+
+![dithered](/output.gif)
+*GIF version*
+
+![dithered](/output.webp)
+*WEBP version*
+
 ## Checkboxes
 
 - [ ] normal

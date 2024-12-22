@@ -50,7 +50,7 @@ fi
 
 
 if command -v magick &> /dev/null; then
-    magick "$filename" -strip -quality 72 "$new_filename"
+    magick "$filename" -strip -resize 700 -quality 40 "$new_filename"
 else
     echo "Install image-magick to proceed."
     exit 1

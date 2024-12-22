@@ -93,10 +93,12 @@ nav {
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:active .dropdown-content {
     display: block;
 }
-nav ul li:hover ul {
+nav ul li:hover ul,
+nav ul li:active ul {
     display: block;
 }
 

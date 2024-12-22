@@ -14,8 +14,7 @@
 }
 
 .blog-icon {
-    font-size: 63px;
-    width: 80px;
+    font-size: 5vh;
     overflow: hidden;
     text-align: center;
 }
@@ -24,14 +23,15 @@
     flex: 1;
     padding-left: 0.7em;
 }
-
-.blog-card:hover {
+.blog-card:hover,
+.blog-card:active {
     cursor: pointer;
     filter: brightness(1.3);
     border: 2px solid var(--a) !important;
 }
 
-.blog-card:hover hr.card-hr {
+.blog-card:hover hr.card-hr,
+.blog-card:active hr.card-hr {
     visibility: hidden;
 }
 

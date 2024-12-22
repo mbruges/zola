@@ -4,6 +4,7 @@ description: "Build on what you've learnt in *Julius Caesar* by exploring life A
 draft: false
 extra:
   ks: 3
+  year: 7
   icon: 🏛️
   html: "7-TT-project"
   tags: ["shakespeare","rome","history","project","non-fiction"]

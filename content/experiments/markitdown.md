@@ -7,10 +7,21 @@ extra:
   center: true
 ---
 
+<script>
+function sendDoc(element){
+  let output = document.getElementById('output');
+  output.style.visibility = 'visible';
+  output.innerHTML = '<span class=load>⏳</span>';
+  let formData = new FormData(element);
+  fetch(element.action, { method: 'POST', body: formData })
+  .then(response =>response.json())
+  .then(data =>{
+    console.log(data);
+    document.getElementById('output').innerText = data['text']});}
+</script>
+
 <form action = "https://api.mxb.fyi/mdown" method = "POST"
-   enctype = "multipart/form-data" onsubmit="event.preventDefault(); let output = document.getElementById('output'); output.style.visibility = 'visible'; output.innerHTML = '<span class=load>⏳</span>';  let formData = new FormData(this); fetch(this.action, { method: 'POST', body: formData })
-   .then(response => response.text())
-   .then(data => document.getElementById('output').innerText = data);">
+   enctype = "multipart/form-data" onsubmit="event.preventDefault(); sendDoc(this)">
        <input type = "file" name = "file" accept=".pdf" onchange="document.getElementById('submit').click()"/>
   <input id=submit type = "submit" hidden/>
 </form>

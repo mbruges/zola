@@ -45,7 +45,7 @@ This is nothing new. Slowly, over the past decade, Google has been chipping away
 
 [Rich snippets and cards](https://developers.google.com/search/blog/2016/05/introducing-rich-cards) were one of the first attempts to turn search away from *indexing* sources of information to *answering users' queries directly*. Rather than giving prominence at the top of the search page to the most relevant web pages, result cards snipped out what the algorithm decided was the relevant information, and plonked it directly in front of the searcher's eyeballs.
 
-![A rich snippet example](/images/macbeth-snippet.png)
+![A rich snippet example](/images/macbeth-snippet.webp)
 *This is a rich snippet. Note that this still has a link - a digital paper trail for the diligent student to follow, evaluate and cite.*
 
 It's a subtle shift, but one that marks a fundamental change in how we interact with search engines.  It stops Google being a repository of potential answers - laid out for your to assess for yourself, as a scholar - to simply being the sole source of information in and of itself.  This is the dream of '[zero-click search](https://www.searchenginejournal.com/google-and-the-rise-of-zero-click-searches-what-does-it-mean-for-your-business-podcast/474281/)'.
@@ -58,7 +58,7 @@ Whereas result cards at least had the decency to pull their information from a t
 
 It is no longer a 'search engine', but an answer engine.
 
-![A screenshot of a Bard result](/images/bard-screenshot.png)
+![A screenshot of a Bard result](/images/bard-screenshot.webp)
 *…and this is a 'Bard' response. No link, no citation, no paper trail: just pure unfiltered **Information**. There's still a desultory 'Google It' button, of course, because[ how else will they pay for it](https://www.theregister.com/2023/04/21/google_bard_ai/)?*
 
 ## I'm feeling unlucky

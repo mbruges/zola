@@ -15,7 +15,7 @@ This website is a place *about* learning and a place *for* learning: as the [pla
 Based on my [previous musings](/blog/HelloWorld), I've tried to put the principle into practice. Allow me to introduce my latest experiment in GPT and JS:
 *[What Am I Doing Wrong?](/experiments/codefixer.html)*
 
-![A screenshot of the page in action](/images/waidw-screenshot.png "I wish I could say I invented this error.")
+![A screenshot of the page in action](/images/waidw-screenshot.webp "I wish I could say I invented this error.")
 
 Simply put: it's a wrapper for ChatGPT that gives you feedback on your code. Philosophically, it's a deliberate nudge away from the "fire-and-forget" approach to LLMs that their design (and decades of Google habits) tend towards. Rather than demand "make me a script to do this thing" (which The Bot is perfectly capable of doing!), this puts the impetus on the user to *attempt the problem first*, before seeking the help of the omniscient chatbot overlord.
 

@@ -7,6 +7,18 @@ extra:
   icon: 🏗️
 ---
 
+## Adventures in dithering and webpeeing - 22/12/24
+
+Had a fiddle about trying to cut down image sizes, _stylistically_. Read that article about dithering and gave it a go.
+
+Reasonably good script cobbled together using image magick to convert images into 1bit dithered versions, with `--b` and `--t` as the two colours. Resized, compressed a little, spat out into a `.png`, and... the resulting file was ten times the size of the `.webp` original. Hmm.
+
+Tweaked the script a little more after some StackOverflowing - apparently *Ordered* dithering can be compressed more efficiently, etc. Yet even with this, *and* converting the end result to `.webp`, the monochromatic version was regularly 30-50% *larger* than the normal version. Bizarre. Perhaps there exists a special compression incantation of Image Magick that shrinks 1bit images down to nothing, but I've not found it. Til then, I'll stick with `.webp`.
+
+In that spirit: have added a git hook to automatically convert all images added to `static/images` to `.webp` format, 800px wide. These will never look good on a hoarding, but look *Good Enough* on a laptop or phone, for a fraction of the memory footprint.
+
+---
+
 ## Fixing the Live Lesson Preview - 11/12/24
 
 - Homepage originally had a little `iframe`, showing the 'live lesson' (ie [learn.maxbruges.com](learn.maxbruges.com))
@@ -28,7 +40,7 @@ extra:
 1. Now, instead of connecting the websocket, the script simply watches `lastmsg`, and fires off a screenshot when a change is made.
 1. Screenshot goes straight to the image server, homepage checks it, and all is well.
 
-Overall: cut down multi-megabyte background loading of the Live Preview to just 5kb, enough for the low res `livecap.webp`. And without a websocket connection to make, it's even faster and more compatible with dodgy networks and old browsers.
+Overall: cut down multi-megabyte background loading of the Live Preview to just 5kb, enough for the low res `livecap.webp`. And without a websocket connection to make, it's even faster and more compatible with dodgy networks and older browsers.
 
 Very satisfying.
 

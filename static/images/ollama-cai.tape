@@ -1,9 +1,10 @@
 Output ollama-cai.gif
 
 Set Shell "bash"
-Set FontSize 32
-Set Width 1200
-Set Height 600
-Require "ollama"
+Set FontSize 22
+Set Width 1150
+Set Height 225
 
-Type "ollama run cai 'how do I list all the files in the current directory?'" Sleep 200ms  Enter
+Type "cai 'how do I list all hidden files in the current directory?'" Sleep 200ms
+Enter
+Sleep 5

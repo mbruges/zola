@@ -14,7 +14,7 @@ But can we get another version to run *locally*? No APIs, no tech companies [lea
 
 In short: yes. But we need to be clever about it.
 
-[**🛠 Click here to jump straight to the how-to 🛠**](#how-it-works)
+[**🛠 Click here to jump straight to the how-to 🛠**](#how)
 
 ## Super Models
 
@@ -43,11 +43,10 @@ The thinking here is that lots of AI tasks can actually be handled using smaller
 
 And they're getting pretty good.
 
-## Yes We Qwen
+## Yes We Qwen {#qwen}
 
 
-
-## How-To
+## How To {#how}
 
 ### 1) Install Ollama
 
@@ -57,7 +56,7 @@ You can [download the latest version here](https://ollama.com/download).
 
 ### 2) Pulling our model
 
-There are plenty of small language models to choose from. My [current preference](#yes-we-qwen) is for Alibaba's [Qwen2.5 Coder](https://ollama.com/library/qwen2.5-coder:0.5b) model, clocking in at a tiddly 0.5b parameters. Your mileage may vary, so do poke around the catalogue, and perhaps try Gemma or Phi.
+There are plenty of small language models to choose from. My [current preference](#qwen) is for Alibaba's [Qwen2.5 Coder](https://ollama.com/library/qwen2.5-coder:0.5b) model, clocking in at a tiddly 0.5b parameters. Your mileage may vary, so do poke around the catalogue, and perhaps try Gemma or Phi.
 
 To download the model, run:
 
@@ -69,7 +68,7 @@ ollama pull qwen2.5-coder:0.5b
 
 This Qwen model is already weighted towards coding queries, but we want to further refine it to suit our use-case of generating `Bash` commands.
 
-To do this we make a `Modelfile`, a set of instructions to tweak the model towards our needs. My Modelfile is here, which you can copy and paste. First, we specify which model we're basing our tweaked version on:
+To do this we make a `Modelfile`, a set of instructions to tweak the model towards our needs. My [Modelfile is here](/files/Modelfile_cai), which you can copy and paste. First, we specify which model we're basing our tweaked version on:
 
 ```
 FROM qwen2.5-coder:0.5b

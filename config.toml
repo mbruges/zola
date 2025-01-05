@@ -10,6 +10,9 @@ highlight_code = true
 bottom_footnotes = true
 smart_punctuation = true
 lazy_async_image = true
+slugify.anchors = true
+slugify.paths = "safe"
+
 
 [extra]
 # Put all your custom variables here

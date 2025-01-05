@@ -87,7 +87,7 @@ ollama pull qwen2.5-coder:0.5b
 
 This Qwen model is already weighted towards coding queries, but we want to further refine it to suit our use-case of generating `Bash` commands.
 
-To do this we make a `Modelfile`, a set of instructions to tweak the model towards our needs. My [Modelfile is here](/files/Modelfile_cai), which you can copy and paste. First, we specify which model we're basing our tweaked version on:
+To do this we make a `Modelfile`, a set of instructions to tweak the model towards our needs (my [Modelfile is here](/files/Modelfile_cai.txt), which you can copy and paste). First, we specify which model we're basing our tweaked version on:
 
 ```
 FROM qwen2.5-coder:0.5b

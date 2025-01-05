@@ -39,6 +39,11 @@ nav {
     top: 0;
 }
 
+/*Off-setting the anchor for scroll*/
+html {
+    scroll-padding-top: 2.2em;
+}
+
 .dropdown {
     float: left;
     overflow: hidden;

@@ -9,10 +9,12 @@ minify_html = true
 highlight_code = true
 bottom_footnotes = true
 smart_punctuation = true
-lazy_async_image = true
-slugify.anchors = true
-slugify.paths = "safe"
+lazy_async_image = false
+external_links_target_blank = true
 
+[slugify]
+anchors = "on"
+paths = "safe"
 
 [extra]
 # Put all your custom variables here

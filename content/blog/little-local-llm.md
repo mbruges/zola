@@ -8,7 +8,6 @@ extra:
  icon: 🔬
 ---
 
-
 I've been using [my nifty terminal helper](@/blog/howdoi.md) to write the `bash` commands that my brain refuses to remember. It's quick and accurate (enough); the best tool yet I've built using an LLM.
 
 ![The Little Engine That Could aside](/images/little-engine-could.webp)
@@ -29,7 +28,7 @@ A quick refresher on the basics, first.
 
 These predictions are made based on *parameters* drawn from massive bodies of text. Us internet-connected humans have been merrily churning out text to the Web for decades, and the LLMs ingest this to 'learn' what words usually come after each other.
 
-![NYT frontpage aside](https://static.hospitalityinside.com/image/convert/hos/2024/01/11/nyt-screenshot-openai-lawsuit-16-9-1920-659fe5eaeafe2024108041.jpg?s=72af4a7554a1b6c0467d0421da0224ce)
+![NYT frontpage aside](/images/nyt-frontpage.webp)
 *Hoover fast and break [copyright](https://www.bbc.com/news/technology-67826601).*
 
 Models differ from one another in their training data and their weightings: what stuff the LLM has read and what it attaches importance to. Some models lean more towards coding-related data, others are trained on specialist material to suit their use-case.
@@ -54,14 +53,14 @@ And they're getting [pretty good](https://www.technologyreview.com/2025/01/03/11
 
 ## Yes We Qwen {#qwen}
 
-I've tinkered with Phi and Gemma. While both are fairly capable, they're still a little on the large side. My poor X1 isn't overflowing with RAM, and every MB counts.
+I've tinkered with Phi and Gemma. While both are fairly capable, they're still a little on the large side. My poor X1 isn't overflowing with RAM - and lacks any discrete GPU - so every MB counts.
 
 The [latest and smallest Qwen-coder model](https://huggingface.co/Qwen/Qwen2.5-0.5B), on the other hand, is positively *minute*: a mere 500MB! That's half the size of GPT-2, but massively more coherent and capable.
 
 ![qwen logo aside](/images/qwenlogo.webp)
 *Just [don't ask](/images/xi.gif) about [Winnie The Pooh](https://en.wikipedia.org/wiki/Censorship_of_Winnie-the-Pooh_in_China)*
 
-It won't write beautiful sonnets or [fall in love with journalists](https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html), but it will pump out passable commands at a snappy pace.
+It won't write beautiful sonnets or [fall in love with journalists](https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html), but it will pump out passable commands at a snappy pace, with a minimal RAM footprint.
 
 Let's give it a whirl.
 

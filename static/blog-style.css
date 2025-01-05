@@ -84,9 +84,8 @@ textarea {
     img[alt*="aside"] {
         width: 30%;
         padding: 0.5em !important;
-        margin: 1em !important;
+        margin: 0.1em -0.2em 1em 1em !important;
         float: right;
-        margin-right: -0.2em !important;
     }
 
     p > img[alt*="aside"] ~ em,
@@ -433,23 +432,23 @@ pre:has(code[class*="language-"]) {
 }
 
 pre:has(code.language-markdown)::before {
-    content: "🔴 🟡 🟢      #️⃣ markdown.md";
+    content: "🔴 🟡 🟢      #️⃣ markdown";
 }
 
 pre:has(code.language-python)::before {
-    content: "🔴 🟡 🟢      🐍 app.py";
+    content: "🔴 🟡 🟢      🐍 python3";
 }
 
 pre:has(code.language-html)::before {
-    content: "🔴 🟡 🟢      🌐 page.html";
+    content: "🔴 🟡 🟢      🌐 <HTML>";
 }
 
 pre:has(code.language-go)::before {
-    content: "🔴 🟡 🟢      ⚙️ main.go";
+    content: "🔴 🟡 🟢      ⚙️ Golang";
 }
 
 pre:has(code.language-bash)::before {
-    content: "🔴 🟡 🟢      ⚙️ bash.sh";
+    content: "🔴 🟡 🟢      ⚙️ bash";
 }
 
 .language-quote {

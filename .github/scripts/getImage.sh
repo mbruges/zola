@@ -1,3 +1,5 @@
+#!/bin/bash
+
 url="$1"
 
 if [ -z "$url" ]; then
@@ -33,9 +35,9 @@ fi
 # Download the image
 if [ "$LOCAL" != true ]; then
     if command -v wget &> /dev/null; then
-        wget -q "$url" -O "$filename"
+        gum spin --title="Downloading image..." -- wget -q "$url" -O "$filename"
     elif command -v curl &> /dev/null; then
-        curl -s -o "$filename" "$url"
+        gum spin --title="Downloading image..." -- curl -s -o "$filename" "$url"
     else
         echo "Neither wget nor curl is installed. Please install one of them to proceed."
         exit 1
@@ -50,7 +52,7 @@ fi
 
 
 if command -v magick &> /dev/null; then
-    magick "$filename" -strip -resize 700 -quality 40 "$new_filename"
+    gum spin --title="Converting image..." -- magick "$filename" -strip -resize 700 -quality 40 "$new_filename"
 else
     echo "Install image-magick to proceed."
     exit 1
@@ -65,5 +67,9 @@ else
     new_size=$(stat --printf="%s" "$new_filename")
 fi
 
-mv $new_filename static/images/
-echo "Saved to   /images/$new_filename     Size reduction: $(((old_size - new_size) / 1024)) KB"
+if [[ "$PWD" == *"/zola"* ]]; then
+    mv $new_filename ~/zola/static/images/
+    echo "Saved to /images/$new_filename    Size: $((new_size / 1024))KB, reduced by $(((old_size - new_size) / 1024))KB"
+else
+    echo "Saved to $new_filename    Size: $((new_size / 1024))KB, reduced by $(((old_size - new_size) / 1024))KB"
+fi

@@ -24,19 +24,6 @@ body,
 html {
     padding-top: 0em !important;
 }
-@media print {
-    html,
-    body {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-    nav,
-    footer,
-    #xmas,
-    .lightswitch {
-        display: none !important;
-    }
-}
 
 @media (prefers-color-scheme: dark) {
     :root,
@@ -554,5 +541,19 @@ a:focus > code {
     }
     to {
         transform: rotate(360deg); /* Rotate to 360 degrees */
+    }
+}
+
+@media print {
+    html,
+    body {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    nav,
+    footer,
+    #xmas,
+    .lightswitch {
+        display: none;
     }
 }

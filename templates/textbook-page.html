@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %} {% if page.extra.icon %} {% set
+icon = page.extra.icon %} {% else %} {% set icon = section.extra.icon %} {%
+endif %}
+
+<meta
+    property="og:image"
+    content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23f0f8ff;stop-opacity:1' /><stop offset='100%' style='stop-color:%23ffffe0;stop-opacity:1' /></linearGradient></defs><rect width='100' height='100' fill='url(%23grad1)'/><text y='1.75em' x='0.85em' font-size='37'>{{ icon }}</text></svg>"
+/>
+<title>{{ page.title }} - {{ config.extra.default_title }}</title>
+<h1 class="title" style="padding-bottom: 0.3rem; border-bottom: none">
+    {{ icon }} {{ page.title }}
+</h1>
+<div id="date-bar">
+    {% if page.authors %}
+    <span id="date-tag"> by {{ page.authors[0] }} {% else %} {% endif %} </span>
+</div>
+<div class="subheading">
+    {% if page.description %}
+    <p class="subtitle">
+        {{ page.description | markdown(inline=true) | safe }}
+    </p>
+    {% else %}
+    <p class="subtitle"></p>
+    {% endif %}
+</div>
+
+{{ page.content | safe }} {% if page.authors %}
+<small
+    style="opacity: 0.7; font-family: monospace"
+    id="copyright"
+    class="center"
+    >© {{ page.authors[0] }}</small
+>
+{% endif %}
+<hr />
+{% endblock content %}

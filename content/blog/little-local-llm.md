@@ -68,9 +68,9 @@ Let's give it a whirl.
 
 ### 1) Install Ollama
 
-[Ollama](https://ollama.com/) is the go-to software for quickly downloading and running different models. They've an [extensive catalogue](https://ollama.com/search) of pre-packaged LLMs that can be pulled with a single command, and a rudimentary chat interface on the command line. I tend to stick with the CLI version, but the GUI is very straightforward.
+[Ollama](https://ollama.com/) is the go-to software for quickly downloading and running different models. They've an [extensive catalogue](https://ollama.com/search) of pre-packaged LLMs that can be pulled with a single command, and a rudimentary chat interface on the command line. I tend to stick with the CLI version, but you can also set up [OpenWebUI](https://github.com/open-webui/open-webui) for a nice front-end.
 
-You can [download the latest version here](https://ollama.com/download).
+You can [download the latest version of Ollama here](https://ollama.com/download).
 
 ### 2) Download the model
 

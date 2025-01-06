@@ -24,6 +24,19 @@ body,
 html {
     padding-top: 0em !important;
 }
+@media print {
+    html, body {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+}
+    nav,
+    footer,
+    #xmas,
+    .lightswitch {
+        display: none !important;
+    }
+}
 
 @media (prefers-color-scheme: dark) {
     :root,

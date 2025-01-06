@@ -1,11 +1,11 @@
 {% extends "base.html" %} {% block content %} {% set icon = section.extra.icon
 %}
 <meta property="og:title" content="Learn - {{ config.extra.default_title }}" />
-<title>Learn - {{ config.extra.default_title }}</title>
+<title>{{ section.title }} - {{ config.extra.default_title }}</title>
 <link rel="stylesheet" href="{{ get_url(path='blog-index.min.css') }}" />
 
-<h1 class="title">Lesson Archive</h1>
-<p class="subheading">Ready-to-go lessons on Literature and Language</p>
+<h1 class="title">{{ section.title }}</h1>
+<p class="subheading">{{ section.description }}</p>
 
 <style>
     .description {
@@ -101,6 +101,35 @@
         </div>
     </div>
     {% endfor %}
+    <div
+        class="blog-card"
+        onclick="location.href='/learn/textbook';"
+        onmouseenter=""
+        style="
+            border: 2px solid var(--a) !important;
+            margin-bottom: 1em;
+            background: var(--a);
+            color: var(--b);
+            max-height: fit-content;
+            font-size: 0.8em;
+        "
+    >
+        <p class="title">Textbook Pages</p>
+
+        <div class="flex">
+            <div class="blog-icon" style="margin-top: -0.5em; font-size: 3em">
+                📚
+            </div>
+            <div class="blog-details">
+                <div class="description">
+                    <p class="">
+                        Extracts, essays and guides to accompany the lessons.
+                        Updated periodically.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </ul>
 
 <p class="center"><i>More coming soon...</i></p>

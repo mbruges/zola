@@ -22,3 +22,9 @@ icon = "🐈‍⬛"
 default_title = 'MaxBruges.com'
 default_description = 'More stuff from Max Bruges'
 footer = "MB 🐈‍⬛ 2024"
+
+[search]
+include_title = true
+include_description = true
+include_content = true
+include_path = true

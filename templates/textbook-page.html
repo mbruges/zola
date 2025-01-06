@@ -24,7 +24,8 @@ endif %}
     {% endif %}
 </div>
 
-{{ page.content | safe }} {% if page.authors %}
+<div class="textbook-content">{{ page.content | safe }}</div>
+{% if page.authors %}
 <small
     style="opacity: 0.7; font-family: monospace"
     id="copyright"

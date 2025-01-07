@@ -58,16 +58,28 @@ date: 2025-01-01
                         break;
                 }
                 element.innerHTML = `
-                  <div class="blog-card flex" style="text-align:left" onclick="location.href='${item.id}';" onmouseenter=""><div class="blog-details"><p> <span class="title">${item.title}  </span><span style="font-family:monospace;background:var(--a);color:var(--b);font-size:0.8em;border-radius:0.2em;padding:0.3em">${section}</span><br></p><div class="description"><p class="truncate" style="-webkit-line-clamp: 1;"><b> ${item.description}</b>${item.body.slice(0,300)} <span class="read-on-container" style="padding-left:2em;"><i class="read-on">click to read ⇝</i></span></p></div></div></div>`;
+                  <div class="blog-card flex" style="text-align:left" onclick="location.href='${item.id}';" onmouseenter=""><div class="blog-details"><p> <span class="title">${item.title}  </span><span style="font-family:monospace;background:var(--a);color:var(--b);font-size:0.8em;border-radius:0.2em;padding:0.3em">${section}</span><br></p><div class="description"><p class="truncate" style="-webkit-line-clamp: 1;"><b> ${item.description} </b> ${item.body.slice(0,300)} <span class="read-on-container" style="padding-left:2em;"><i class="read-on">click to read ⇝</i></span></p></div></div></div>`;
                 resultsDiv.appendChild(element);
             });
         });
     });
 </script>
 
+<style>
+.search-results {
+--mask: linear-gradient(to bottom, 
+      rgba(0,0,0, 0) 0,   rgba(0,0,0, 1) 7%,   rgba(0,0,0, 1) 80%, 
+      rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+  ) 100% 50% / 100% 100% repeat-x;
+  mask: var(--mask);
+}
+
+
+</style>
+
 <div class="searchContainer">
             <input class="form-control" type="search" id="search-input" name="search" placeholder="Search posts..." autofocus>
-            <div id="search-results" class="search-results" style="max-height:60vh;min-height:60vh;overflow-y:scroll; scrollbar-color: var(--a) var(--b);">
+            <div id="search-results" class="search-results" style="max-height:57vh;min-height:57vh;overflow-y:scroll; scrollbar-color: var(--a) var(--b); position: relative;padding-bottom:6em;padding-top:2em;">
                 <style>
                     .search-results::-webkit-scrollbar {
                         width: 8px;

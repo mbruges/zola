@@ -31,7 +31,7 @@
                     height="75em"
                     width="200em"
                     title="Built by Zola at {{ now() | date(format='%H:%M:%S %Z, %a %d %b') }}"
-                    alt="Miaow"
+                    alt="The Cat"
                     style="padding-top: 2em"
                 />
 
@@ -77,7 +77,7 @@
                                 alt="Preview of the current Live Lesson"
                                 title="Click to join this live lesson!"
                                 onload="showLiveCap();document.getElementById('archive-link').style.visibility = 'visible';document.getElementById('live-break').style.display = 'block';"
-                                onerror="console.clear();console.log('No live lesson underway, preview not loaded');"
+                                onerror="console.clear();"
                             />
                             <span id="live-icon">LIVE 🔴</span>
                         </div>
@@ -88,13 +88,21 @@
                 </p>
             </div>
         </div>
-        {% include "snippets/xmasmode.html" %}
         <footer
             title="Built by Zola at {{ now() | date(format='%H:%M:%S UTC%:::z, %a %d %b') }}"
             alt="Footer"
         >
             {{ config.extra.footer }}
         </footer>
+        <script type="module">
+                import { toggleNightmode } from '/scripts.js';
+                if (localStorage.getItem('nightmode') === 'enabled') {
+                            toggleNightmode();
+                        }
+                document.getElementById('lightswitch').onclick = toggleNightmode;
+        </script>
+        <link rel="stylesheet" href="{{ get_url(path='nav.min.css') | safe }}" />
+        <span class="lightswitch" id="lightswitch">🌓︎</span>
     </body>
 
     <script>

@@ -1,6 +1,6 @@
 ---
 title: 'Of Mice & Men: Analysis'
-description: "Analysis of the main themes, caharacters and events of Steinbeck's novel."
+description: "Analysis of the main themes, characters and events of Steinbeck's novel."
 draft: false
 extra:
   ks: 4

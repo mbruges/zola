@@ -14,8 +14,11 @@ date: 2025-01-01
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const idx = elasticlunr.Index.load(window.searchIndex);
+        const searchIcon = document.getElementById('search')
+        searchIcon.innerHTML = `<a id="back" href="javascript:history.back()">↩</a>`;
+        document.getElementById('date-tag').style.visibility = "hidden"
 
-        document.getElementById('search').addEventListener('input', function() {
+        document.getElementById('search-input').addEventListener('input', function() {
             const query = this.value;
             const results = idx.search(query, {
                 fields: {
@@ -43,6 +46,19 @@ date: 2025-01-01
 </script>
 
 <div class="searchContainer">
-            <input class="form-control" type="search" id="search" name="search" placeholder="Search posts..." autofocus>
-            <div id="search-results" class="search-results" style="max-height:50vh;min-height:50vh;overflow-y:scroll;"></div>
+            <input class="form-control" type="search" id="search-input" name="search" placeholder="Search posts..." autofocus>
+            <div id="search-results" class="search-results" style="max-height:50vh;min-height:50vh;overflow-y:scroll; scrollbar-color: var(--a) var(--b);">
+                <style>
+                    .search-results::-webkit-scrollbar {
+                        width: 8px;
+                    }
+                    .search-results::-webkit-scrollbar-track {
+                        background: var(--b);
+                    }
+                    .search-results::-webkit-scrollbar-thumb {
+                        background: var(--a);
+                        border-radius: 4px;
+                    }
+                </style>
+            </div>
         </div>

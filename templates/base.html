@@ -73,6 +73,11 @@
     <div class="container">
       {% block content %} {% endblock %}
     </div>
+    {% if page.extra.tags %}
+       <p id="tag-container" style="color:var(--b);font-size: 1px;"> TAGS:
+           {% for tag in page.extra.tags %}{{ tag }},{% endfor %}
+       </p>
+    {% endif %}
   </section>
 </div>
 <footer >

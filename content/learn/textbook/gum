@@ -1,0 +1,9 @@
+---
+title: "Remember me"
+authors: ["Christina Rossetti"]
+extra:
+    icon: 👋
+    keystage: ["4"]
+    tags: ["poetry", "pearson"]
+---
+ write --header=Enter to confirm

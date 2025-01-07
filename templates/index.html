@@ -44,10 +44,10 @@
                     >
                 </h1>
             </header>
-            <div>
-                <p>I teach students lots of things, in lots of places.</p>
+            <p>
                 <p>
-                    This is where I teach
+                    I teach students lots of things, in lots of places.</p><p> This is
+                    where I teach
                     <a
                         href="{{ get_url(path='@/about.md') | safe }}"
                         target="_blank"
@@ -59,7 +59,8 @@
                 <a href="/experiments">
                     <b> Experiments 🧪</b>
                 </a>
-                <br />
+                <a href="/experiments/search"><b>Search 🔎</b> </a>
+                <br hidden id="live-break" />
                 <a
                     class="button"
                     id="learn-button-link"
@@ -75,7 +76,7 @@
                                 width="250"
                                 alt="Preview of the current Live Lesson"
                                 title="Click to join this live lesson!"
-                                onload="showLiveCap();document.getElementById('archive-link').style.visibility = 'visible'"
+                                onload="showLiveCap();document.getElementById('archive-link').style.visibility = 'visible';document.getElementById('live-break').style.display = 'block';"
                                 onerror="console.clear();console.log('No live lesson underway, preview not loaded');"
                             />
                             <span id="live-icon">LIVE 🔴</span>

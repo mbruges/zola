@@ -4,6 +4,7 @@ description: Dig through the posts and resources of this site, using [elasticlun
 extra:
   icon: 🔎
   center: true
+  nosub: true
 date: 2025-01-01
 ---
 
@@ -15,7 +16,13 @@ date: 2025-01-01
     document.addEventListener('DOMContentLoaded', function() {
         const idx = elasticlunr.Index.load(window.searchIndex);
         const searchIcon = document.getElementById('search')
-        searchIcon.innerHTML = `<a id="back" href="javascript:history.back()">↩</a>`;
+        document.getElementById('post-nav').style.display = "none"
+        document.getElementById('footer-bar').style.display = "none"
+        document.getElementById('footer').style.position = "absolute"
+        document.getElementById('footer').style.bottom = "2em"
+        document.getElementById('footer').style.left = "0%"
+        prevPage = document.referrer ? document.referrer.split('/').pop() : "";
+        searchIcon.innerHTML = `<a id="back" href="javascript:history.back()" alt="Back to ${prevPage}" title="Back to ${prevPage}">↩</a>`;
         document.getElementById('date-tag').style.visibility = "hidden"
 
         document.getElementById('search-input').addEventListener('input', function() {
@@ -35,10 +42,23 @@ date: 2025-01-01
             results.forEach(result => {
                 const item = idx.documentStore.getDoc(result.ref);
                 const element = document.createElement('div');
-
-                const section = item.path.substring(item.path.indexOf('/') + 1, item.path.indexOf('/', item.path.indexOf('/') + 1));
+                let section = item.path.substring(item.path.indexOf('/') + 1, item.path.indexOf('/', item.path.indexOf('/') + 1));
+                switch (section) {
+                    case 'experiments':
+                        section += " 🧪";
+                        break;
+                    case 'blog':
+                    section += " 🗞️";
+                        break;
+                    case 'learn':
+                    section += " 👨‍🏫";
+                        break;
+                    default:
+                        section += " 👓";
+                        break;
+                }
                 element.innerHTML = `
-                  <div class="blog-card flex" style="text-align:left" onclick="location.href='${item.id}';" onmouseenter=""><div class="blog-details"><p> <span class="title">${item.title}  </span><span style="font-family:monospace;background:var(--a);color:var(--b);font-size:0.8em;border-radius:0.2em;padding:0.3em">${section}</span><br></p><div class="description"><p class="truncate" style="-webkit-line-clamp: 1;"><b> ${item.description}</b>${item.body.slice(0,300)} <span class="read-on-container"><i class="read-on">click to read ⇝</i></span></p></div></div></div>`;
+                  <div class="blog-card flex" style="text-align:left" onclick="location.href='${item.id}';" onmouseenter=""><div class="blog-details"><p> <span class="title">${item.title}  </span><span style="font-family:monospace;background:var(--a);color:var(--b);font-size:0.8em;border-radius:0.2em;padding:0.3em">${section}</span><br></p><div class="description"><p class="truncate" style="-webkit-line-clamp: 1;"><b> ${item.description}</b>${item.body.slice(0,300)} <span class="read-on-container" style="padding-left:2em;"><i class="read-on">click to read ⇝</i></span></p></div></div></div>`;
                 resultsDiv.appendChild(element);
             });
         });
@@ -47,7 +67,7 @@ date: 2025-01-01
 
 <div class="searchContainer">
             <input class="form-control" type="search" id="search-input" name="search" placeholder="Search posts..." autofocus>
-            <div id="search-results" class="search-results" style="max-height:50vh;min-height:50vh;overflow-y:scroll; scrollbar-color: var(--a) var(--b);">
+            <div id="search-results" class="search-results" style="max-height:60vh;min-height:60vh;overflow-y:scroll; scrollbar-color: var(--a) var(--b);">
                 <style>
                     .search-results::-webkit-scrollbar {
                         width: 8px;

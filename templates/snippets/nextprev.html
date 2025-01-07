@@ -1,33 +1,39 @@
-  {% if page.lower or page.higher %}
-  <div class="post-nav" style="display: flex; justify-content: space-between;">
-      <style>
-      .previous, .next {
-          max-width:35%;
-      }
-      .next {
-          text-align:right;
-      }
-      </style>
-    {% if page.lower and not page.lower.draft %}
-            {% if page.lower.extra.icon %}
-            {% set previcon = page.lower.extra.icon %}
-            {% else %}
-            {% set previcon = section.extra.icon %}
-            {% endif %}
-      <a class="previous" href="{{ page.lower.permalink }}"><== {{ previcon }} {{ page.lower.title }}</a>
-      {% else %}
-      <a class="previous" style="visibility:hidden;" href="/">No more stories for now.</a>
-     {% endif %}
-    {% if page.higher and not page.higher.draft %}
-        {% if page.higher.extra.icon %}
-        {% set nexticon = page.higher.extra.icon %}
-        {% else %}
-        {% set nexticon = section.extra.icon %}
-        {% endif %}
-    <a class="next" href="{{ page.higher.permalink }}">{{ nexticon }} {{ page.higher.title }} ==></a>
+{% if page.lower or page.higher %}
+<div
+    class="post-nav"
+    id="post-nav"
+    style="display: flex; justify-content: space-between"
+>
+    <style>
+        .previous,
+        .next {
+            max-width: 35%;
+        }
+        .next {
+            text-align: right;
+        }
+    </style>
+    {% if page.lower and not page.lower.draft %} {% if page.lower.extra.icon %}
+    {% set previcon = page.lower.extra.icon %} {% else %} {% set previcon =
+    section.extra.icon %} {% endif %}
+    <a class="previous" href="{{ page.lower.permalink }}"
+        ><== {{ previcon }} {{ page.lower.title }}</a
+    >
     {% else %}
-     <a class="next" style="visibility:hidden;" href="/">No more entries for now.</a>
+    <a class="previous" style="visibility: hidden" href="/"
+        >No more stories for now.</a
+    >
+    {% endif %} {% if page.higher and not page.higher.draft %} {% if
+    page.higher.extra.icon %} {% set nexticon = page.higher.extra.icon %} {%
+    else %} {% set nexticon = section.extra.icon %} {% endif %}
+    <a class="next" href="{{ page.higher.permalink }}"
+        >{{ nexticon }} {{ page.higher.title }} ==></a
+    >
+    {% else %}
+    <a class="next" style="visibility: hidden" href="/"
+        >No more entries for now.</a
+    >
     {% endif %}
-  </div>
-  <br>
+</div>
+<br />
 {% endif %}

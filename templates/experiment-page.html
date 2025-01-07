@@ -18,7 +18,7 @@
     </span>
 </div>
 <div class="subheading">
-    {% if page.description %}
+    {% if page.description and not page.extra.nosub %}
     <p class="subtitle">
         {{ page.description | markdown(inline=true) | safe }}
     </p>
@@ -29,7 +29,7 @@
 <div id="content" {% if page.extra.center %} class="center" {% endif %}>
     {{ page.content | safe }}
 
-    <hr />
+    <hr id="footer-bar" />
 
     {% include "snippets/nextprev.html" %} {% endblock content %}
 </div>

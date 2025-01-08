@@ -1,56 +1,57 @@
-{% extends "base.html" %} {% block content %}
-{% if page.extra.icon %}
-{% set icon = page.extra.icon %}
-{% else %}
-{% set icon = section.extra.icon %}
-{% endif %}
+{% extends "base.html" %} {% block content %} {% if page.extra.icon %} {% set
+icon = page.extra.icon %} {% else %} {% set icon = section.extra.icon %} {%
+endif %}
 
-<meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23f0f8ff;stop-opacity:1' /><stop offset='100%' style='stop-color:%23ffffe0;stop-opacity:1' /></linearGradient></defs><rect width='100' height='100' fill='url(%23grad1)'/><text y='1.75em' x='0.85em' font-size='37'>{{ icon }}</text></svg>">
-<title>{{ page.title }} - {{ config.extra.default_title }} </title>
-<h1 class="title" style="padding-bottom: 0.3rem;
-border-bottom: none;">{{ icon }} {{ page.title }}</h1>
+<meta
+    property="og:image"
+    content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23f0f8ff;stop-opacity:1' /><stop offset='100%' style='stop-color:%23ffffe0;stop-opacity:1' /></linearGradient></defs><rect width='100' height='100' fill='url(%23grad1)'/><text y='1.75em' x='0.85em' font-size='37'>{{ icon }}</text></svg>"
+/>
+<title>{{ page.title }} - {{ config.extra.default_title }}</title>
+<h1 class="title" style="padding-bottom: 0.3rem; border-bottom: none">
+    {{ icon }} {{ page.title }}
+</h1>
 <div id="date-bar">
-      {% if page.extra.ks and not page.draft %}
-     <span id="date-tag"> KS{{ page.extra.ks }}
-         {% else %} {% endif %}
-     </span>
+    {% if page.extra.ks and not page.draft %}
+    <span id="date-tag"> KS{{ page.extra.ks }} {% else %} {% endif %} </span>
 </div>
 <div class="subheading">
-        {% if page.description %}
-            <p class="subtitle">{{ page.description | markdown(inline=true) | safe }}</p>
-        {% else %}
-            <p class="subtitle"></p>
-        {% endif %}
+    {% if page.description %}
+    <p class="subtitle">
+        {{ page.description | markdown(inline=true) | safe }}
+    </p>
+    {% else %}
+    <p class="subtitle"></p>
+    {% endif %}
 </div>
 
 <style>
-iframe {
-    border: 4px solid var(--a);
-    width: 95%;
-    aspect-ratio: 16 / 9;
-}
+    iframe {
+        border: 4px solid var(--a);
+        width: 95%;
+        aspect-ratio: 16 / 9;
+    }
 
-button {
-    min-width: 3em;
-    overflow: hidden;
-}
+    button {
+        min-width: 3em;
+        overflow: hidden;
+    }
 </style>
 
 <script>
-function loadLesson(iframe){
-    console.log('loading lesson')
-    {% if page.extra.html %}
-    let lessonPath = "{{ page.extra.html }}"
-    {% else %}
-    let path = window.location.pathname;
-    let lessonPath = path.substring(path.indexOf('/learn/') + 7);
-    if (lessonPath.endsWith('/')) {
-        lessonPath = lessonPath.slice(0, -1);
+    function loadLesson(iframe){
+        console.log('loading lesson')
+        {% if page.extra.html %}
+        let lessonPath = "{{ page.extra.html }}"
+        {% else %}
+        let path = window.location.pathname;
+        let lessonPath = path.substring(path.indexOf('/learn/') + 7);
+        if (lessonPath.endsWith('/')) {
+            lessonPath = lessonPath.slice(0, -1);
+        }
+        {% endif %}
+        iframe.src = "/lessons/" + lessonPath + '.html'
+            iframe.contentWindow.focus()
     }
-    {% endif %}
-    iframe.src = "/lessons/" + lessonPath + '.html'
-        iframe.contentWindow.focus()
-}
 </script>
 <iframe
     id="lesson-view"
@@ -61,22 +62,25 @@ function loadLesson(iframe){
 >
 </iframe>
 <script>
-const iframe = document.getElementById('lesson-view');
-function simulateKeyPress(key) {
-  console.log('key pressed: ' + key);
-  iframe.contentWindow.focus();
-  iframe.contentWindow.document.dispatchEvent(new KeyboardEvent('keydown', {'key': key}));
-}
+    const iframe = document.getElementById("lesson-view");
+    function simulateKeyPress(key) {
+        console.log("key pressed: " + key);
+        iframe.contentWindow.focus();
+        iframe.contentWindow.document.dispatchEvent(
+            new KeyboardEvent("keydown", { key: key }),
+        );
+    }
 
-function toggleFullscreen() {
-    let iframe = document.getElementById('lesson-view');
-    let toast = iframe.contentWindow.document.getElementById('toast');
-    if (!document.fullscreenElement) {
-        if (iframe.requestFullscreen) {
-            iframe.requestFullscreen();
-            iframe.contentWindow.focus();
-
-}}}
+    function toggleFullscreen() {
+        let iframe = document.getElementById("lesson-view");
+        let toast = iframe.contentWindow.document.getElementById("toast");
+        if (!document.fullscreenElement) {
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+                iframe.contentWindow.focus();
+            }
+        }
+    }
 </script>
 <div class="center">
     <button onclick="simulateKeyPress('PageUp')"><</button>
@@ -84,8 +88,6 @@ function toggleFullscreen() {
     <button onclick="simulateKeyPress('PageDown')">></button>
 </div>
 
-
-<hr>
-<div style="font-size:0.7em">
-{% include "snippets/nextprev.html" %}</div>
-{% endblock content %}
+<hr />
+<div style="font-size: 0.7em">{% include "snippets/nextprev.html" %}</div>
+{% include "snippets/cursor-party.html" %} {% endblock content %}

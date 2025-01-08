@@ -7,7 +7,9 @@ extra:
   tags: ["poetry","pearson","literature"]
 ---
 
-That’s my last Duchess painted on the wall,  
+
+**FERRARA:**  
+That’s my[^my] last Duchess painted on the wall,  
 Looking as if she were alive. I call  
 That piece a wonder, now; Fra Pandolf’s hands  
 Worked busily a day, and there she stands.  
@@ -65,5 +67,11 @@ Taming a sea-horse, thought a rarity,
 Which Claus of Innsbruck cast in bronze for me!
 
 
+munificence
+: Noun
+: Wealth, riches
+
 ![Lucrezia de' Medici by Bronzino](/images/the-duchess.webp)
 *[Lucrezia de' Medici by Bronzino](https://en.wikipedia.org/wiki/My_Last_Duchess), generally believed to be the subject of the poem*
+
+[^my]: Possessive, suggesting ownership and obsession

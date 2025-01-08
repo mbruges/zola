@@ -9,7 +9,7 @@ defaultTAGS='["none"]'
 if [[ "$(pwd)" != *"/zola/" ]]; then
     cd content/learn/textbook
 elif [[ "$(pwd)" != *"/zola/content/learn/textbook" ]]; then
-    echo "Error: You are not in the correct directory. Please navigate to ~/zola/content/learn/textbook."
+    echo "Error: You are not in the correct directory. Please navigate to ..zola/content/learn/textbook."
     exit 1
 fi
 

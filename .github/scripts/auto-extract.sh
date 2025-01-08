@@ -1,13 +1,25 @@
 #!/bin/bash
-cd ~/zola/content/learn/textbook
+#cd ~/zola/content/learn/textbook
 defaultTITLE="New Textbook"
 defaultAUTHOR="First Last"
 defaultICON="📔"
 defaultKEYSTAGE="3"
 defaultTAGS='["none"]'
 
-micro temp.md
-sed -i ':a;N;$!ba;s/\n/  \n/g' temp.md
+if [[ "$(pwd)" != *"/zola/" ]]; then
+    cd content/learn/textbook
+elif [[ "$(pwd)" != *"/zola/content/learn/textbook" ]]; then
+    echo "Error: You are not in the correct directory. Please navigate to ~/zola/content/learn/textbook."
+    exit 1
+fi
+
+micro temp.md || exit 1
+if [[ $(wc -c < temp.md) -le 5 ]]; then
+    rm temp.md
+    exit 1
+fi
+
+sed -i '' 's/$/  /' temp.md
 
 TITLE=$(head -n 1 temp.md)
 
@@ -41,7 +53,7 @@ extra:
 ---
 "
 
-FRONTMATTER_CHECKED=$(echo -e "$FRONTMATTER" > gum write --header="Enter to confirm")
+FRONTMATTER_CHECKED=$(echo -e "$FRONTMATTER" | gum write --header="Enter to confirm")
 
 if [[ -z "$FRONTMATTER_CHECKED" ]]; then
     echo -e "$FRONTMATTER" > $SLUG.md

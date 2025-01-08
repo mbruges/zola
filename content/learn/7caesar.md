@@ -6,5 +6,7 @@ extra:
   ks: 3
   icon: 🔪
   html: "7caesar"
+taxonomies:
   tags: ["shakespeare","tragedy","play","literature"]
+  keystage: ["3"]
 ---

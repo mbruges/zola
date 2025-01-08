@@ -6,5 +6,7 @@ extra:
   ks: 4
   icon: 🌇
   html: "10-descriptive-narrative"
+taxonomies:
   tags: ["gcse","language","descriptive","writing","narrative"]
+  keystage: ["4"]
 ---

@@ -3,8 +3,10 @@ authors: ["Helen Dunmore"]
 title: To My Nine-Year Old Self
 extra:
   icon: 👧
-  ks: 5
-  tags: ["poetry","poems-of-the-decade","literature"]
+
+taxonomies:
+  keystage: ["5"]
+  tags: ["poetry","poems of the decade","literature"]
 --- 
   
 You must forgive me. Don't look so surprised,  

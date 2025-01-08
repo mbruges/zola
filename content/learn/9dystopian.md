@@ -5,5 +5,7 @@ draft: false
 extra:
   ks: 3
   icon: 🤖
+taxonomies:  
   tags: ["dystopia","fiction","anthology","literature","prose"]
+  keystage: ["3"]
 ---

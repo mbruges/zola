@@ -463,8 +463,10 @@ pre:has(code.language-bash)::before {
     max-height: fit-content;
 }
 
-pre:has(code.language-pre) {
-    border: none;
+pre:has(code.language-pre),
+pre:has(code.language-quote),
+pre:has(code.language-blank) {
+    border: none !important;
     border-radius: 0.5em;
     background: transparent;
     padding-top: 15px;
@@ -473,16 +475,20 @@ pre:has(code.language-pre) {
     height: fit-content;
     padding-top: 0px;
     font-size: 1.1rem;
+    border
 }
 
 code.language-pre {
     color: var(--text);
 }
 
+pre:has(code.language-blank)::before,
 pre:has(code.language-quote)::before,
 pre:has(code.language-pre)::before {
     content: none;
 }
+
+pre:has(code.language-blank)::after,
 pre:has(code.language-quote)::after,
 pre:has(code.language-pre)::after {
     content: none;

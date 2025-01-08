@@ -3,6 +3,11 @@ title: "The Furthest Distances I've Travelled"
 authors: ["Leontia Flynn"]
 extra:
   icon: 🎒
+
+taxonomies:
+  keystage: ["5"]
+  tags: ["poetry","poems of the decade","literature"]
+
 --- 
 
 Like many folk, when first I saddled a rucksack,  

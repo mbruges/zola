@@ -6,5 +6,7 @@ extra:
   ks: 4
   icon: 🇺🇸
   html: "11omam-context"
-  tags: ["gcse","literature","omam","context","steinbeck","11"]
+taxonomies:
+  tags: ["gcse","literature","omam","context","novel"]
+  keystage: ["4"]
 ---

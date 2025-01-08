@@ -3,6 +3,10 @@ base_url = "https://maxbruges.com/"
 compile_sass = false
 build_search_index = true
 minify_html = true
+taxonomies = [
+    { name = "tags", feed = false, render = false},
+    { name = "keystage", feed = false, render = false},
+]
 
 [markdown]
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola

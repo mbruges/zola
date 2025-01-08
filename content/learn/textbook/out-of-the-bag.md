@@ -3,8 +3,11 @@ authors: ["Seamus Heaney"]
 title: "Out Of The Bag"
 extra:
   icon: 👩‍🍼
-  ks: 5
-  tags: ["poetry","poems-of-the-decade","literature"]
+
+taxonomies:
+  keystage: ["5"]
+  tags: ["poetry","poems of the decade","literature"]
+
 ---
 
   

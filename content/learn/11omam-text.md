@@ -6,5 +6,8 @@ extra:
   ks: 4
   icon: 🐭
   html: "11omam-text"
-  tags: ["gcse","literature","omam","analysis","steinbeck","11"]
+taxonomies:
+  tags: ["gcse","literature","omam","analysis","novel"]
+  keystage: ["4"]
+
 ---

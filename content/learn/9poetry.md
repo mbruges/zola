@@ -5,5 +5,7 @@ draft: false
 extra:
   ks: 3
   icon: ⚔
-  tags: ["poetry","9","analysis","literature","conflict"]
+taxonomies:
+  tags: ["poetry","literature","conflict"]
+  keystage: ["3"]
 ---

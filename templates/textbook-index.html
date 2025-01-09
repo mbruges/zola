@@ -60,6 +60,7 @@ function toggleFilter(buttonElem){
     selectedKSElements.forEach(element => {
         element.style.display = 'flex';
     });
+    window.history.replaceState({}, '', window.location.pathname);
   }
 }
 

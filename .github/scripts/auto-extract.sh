@@ -37,9 +37,14 @@ fi
 
 KEYSTAGE=$( gum filter 3 4 5 --prompt="KEYSTAGE: " --limit="1" )
 
-#TAGS=$( gum input --prompt="TAGS: " --placeholder="Separate with spaces" )
+if [[ "$KEYSTAGE" == "5" ]]; then
+    TAGS="poems-of-the-decade poetry"
+elif [[ "$KEYSTAGE" == "4" ]]; then
+    TAGS="pearson anthology poetry"
+else
+    TAGS=$( gum input --prompt="TAGS: " --placeholder="Separate with spaces" )
+fi
 
-TAGS="poems-of-the-decade poetry"
 
 TAGS=$(echo "$TAGS" | tr ' ' ',' | sed 's/\([^,]*\)/"\1"/g' | sed 's/,/, /g' | sed 's/^/[/' | sed 's/$/]/')
 

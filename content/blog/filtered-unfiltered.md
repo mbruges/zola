@@ -8,12 +8,12 @@ extra:
   icon: 🛵
 ---
 
->[](note) [Try **Kickstart** 🛵 here](@/experiments/kickstart.md), the app that goes with this post (which I've *finally* got around to building.)
+>[](note) [Try **Kickstart** 🛵 here](/experiments/kickstart/?q=How+does+Shakespeare+present+Lady+Macbeth), the app that goes with this post.
 
 This [Hacker News comment](https://news.ycombinator.com/item?id=41994567) started turning a cog in my brain: are we going about LLMs all wrong, by plonking them straight in the hands of the end user?
 
-> I'm of the mind that AI, in its current state, really isn't a tool meant for an end user to interact with.  
-> It feels like it's the most useful when it's transparent and you -- as an end user -- don't know that there's an LLM in the process. The best use cases seem to be those that don't require an end consumer to directly interact with an AI, but their journey through some process is assisted by an AI instead.
+> AI, in its current state, really isn't a tool meant for an end user to interact with...  
+> The best use cases seem to be those that don't require an end consumer to directly interact with an AI, but their journey through some process is assisted by an AI instead.
 >> [CharlieDigital, 30/10/24](https://news.ycombinator.com/user?id=CharlieDigital)
 
 The raw input/output pipeline has the broadest possible surface for hallucination and minimal error correction; a few too many [mad pledges of love](https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html) and the user will quickly assume the whole technology is bad (or worse, requite the love right back).

@@ -3,6 +3,8 @@ title: "The Furthest Distances I've Travelled"
 authors: ["Leontia Flynn"]
 extra:
   icon: 🎒
+  keystage: ["5"]
+  tags: ["poetry","poems of the decade","literature"]
 
 taxonomies:
   keystage: ["5"]

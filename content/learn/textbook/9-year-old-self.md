@@ -3,6 +3,8 @@ authors: ["Helen Dunmore"]
 title: To My Nine-Year Old Self
 extra:
   icon: 👧
+  keystage: ["5"]
+  tags: ["poetry","poems of the decade","literature"]
 
 taxonomies:
   keystage: ["5"]

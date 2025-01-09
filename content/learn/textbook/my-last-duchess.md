@@ -2,7 +2,7 @@
 title: "My Last Duchess"
 authors: ["Robert Browning"]
 extra:
-  icon: 💃
+  icon: 🎨
   keystage: ["4"]
   tags: ["poetry","pearson","literature"]
 ---

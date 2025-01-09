@@ -2,7 +2,7 @@
 title: "Remember me"
 authors: ["Christina Rossetti"]
 extra:
-    icon: 👋
+    icon: 🌅
     keystage: ["4"]
     tags: ["poetry", "pearson"]
 ---

@@ -21,7 +21,52 @@ div.blog-card {
     margin-top:1px !important;
 }
 
+button[aria-selected="false"] {
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[aria-selected="false"]:hover {
+    background-color: #e0e0e0;
+}
+
+button {
+    margin-left: 1em;
+}
+
 </style>
+<script>
+
+function toggleFilter(buttonElem){
+  const buttons = document.querySelectorAll('#filter-bar button');
+  const selectedKSElements = document.querySelectorAll('div.blog-card[data-keystage], hr[data-keystage]');
+  if (buttonElem.getAttribute('aria-selected')=='false'){
+    buttons.forEach(btn => btn.setAttribute('aria-selected', 'false'));
+    buttonElem.setAttribute('aria-selected','true')
+    selectedKS = buttonElem.getAttribute('data-keystage')
+    selectedKSElements.forEach(element => {
+      if (element.getAttribute('data-keystage').trim() !== selectedKS.trim()) {
+        element.style.display = 'none';
+      } else {
+        element.style.display = 'flex';
+      }
+    });
+  }
+  else {
+    buttons.forEach(btn => btn.setAttribute('aria-selected', 'false'));
+    selectedKSElements.forEach(element => {
+        element.style.display = 'flex';
+    });
+  }
+}
+
+</script>
+
+<div id="filter-bar">
+<p>Filter by: <button data-keystage="3" aria-selected="false" onclick="toggleFilter(this)">KS3</button><button data-keystage="4" aria-selected="false" onclick="toggleFilter(this)">KS4</button><button data-keystage="5" aria-selected="false" onclick="toggleFilter(this)">KS5</button></p>
+</div>
 <ul id="list-of-posts">
 
     {% for page in section.pages | filter(attribute="draft", value=false) %}
@@ -35,6 +80,12 @@ div.blog-card {
         class="blog-card flex"
         onclick="location.href='{{ page.permalink | safe }}';"
         onmouseenter=""
+        {% if page.extra.tags %}
+        data-tags="{% for tag in page.extra.tags%}{{tag}} {% endfor %}"
+        {% endif %}
+        {% if page.extra.keystage %}
+        data-keystage="{% for keystage in page.extra.keystage%}{{keystage}} {% endfor %}"
+        {% endif %}
     >
         <div class="blog-icon">{{ icon }}</div>
         <div class="blog-details">
@@ -48,7 +99,10 @@ div.blog-card {
         </p>
         </div>
     </div>
-    <hr class="card-hr" />
+    <hr class="card-hr" {% if page.extra.keystage %}
+    data-keystage="{% for keystage in page.extra.keystage%}{{keystage}} {% endfor %}"
+    {% endif %}
+    />
     {% endfor %}
 </ul>
 {% endblock content %}

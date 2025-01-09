@@ -2,7 +2,9 @@
 title: "La Belle Dame Sans Merci"
 authors: ["John Keats"]
 extra:
-  icon: ♘
+  icon: 🧝‍♀️
+  keystage: ["4"]
+  tags: ["poetry","anthology","literature","romantic","pearson"]
 
 taxonomies:
   keystage: ["4"]

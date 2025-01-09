@@ -26,6 +26,7 @@ function sendToAPI(event) {
   button.setAttribute('aria-busy', 'true');
   button.innerText = ""
   input.setAttribute('aria-busy', 'true');
+  let index = 0;
 
   setTimeout(() => {
   fetch(`https://api.mxb.fyi/kickstart?query=${encodeURIComponent(input.value)}`)
@@ -37,16 +38,19 @@ function sendToAPI(event) {
               starterCard.className = 'starter-card';
               starterCard.innerHTML = `<p>${answer}</p>`;
               container.appendChild(starterCard);
+              if (index === data.response.length - 1) {
+                button.setAttribute('aria-busy', 'false');
+                input.setAttribute('aria-busy', 'false');
+                button.innerText = button.getAttribute('aria-label')
+              }
           }, index * 300);
         });
       }).catch(error => {
-        toast("⚠ Connection error, try again in a minute")
-      })
-      .finally(() => {
+        toast("⚠ Connection error, try again in a minute");
         button.setAttribute('aria-busy', 'false');
         input.setAttribute('aria-busy', 'false');
-        button.innerText = button.getAttribute('aria-label');
-      });
+        button.innerText = button.getAttribute('aria-label')
+      })
 }, 10);
 }
 

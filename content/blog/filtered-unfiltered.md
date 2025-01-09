@@ -1,11 +1,14 @@
 ---
 author: Max Bruges
-date: 2024-10-30
-title: Filters, for the children
+date: 2024-12-30
+title: Kickstarting, not controlling
 draft: false
+description: Using AI to start the creative process - not consume it
 extra:
-  icon: 🚬
+  icon: 🛵
 ---
+
+>[](note) [Try **Kickstart** 🛵 here](@/experiments/kickstart.md), the app that goes with this post (which I've *finally* got around to building.)
 
 This [Hacker News comment](https://news.ycombinator.com/item?id=41994567) started turning a cog in my brain: are we going about LLMs all wrong, by plonking them straight in the hands of the end user?
 
@@ -16,8 +19,9 @@ This [Hacker News comment](https://news.ycombinator.com/item?id=41994567) starte
 The raw input/output pipeline has the broadest possible surface for hallucination and minimal error correction; a few too many [mad pledges of love](https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html) and the user will quickly assume the whole technology is bad (or worse, requite the love right back).
 
 ![Just what the doctor ordered aside](/images/filtered-cigs.webp)
+*So close to 'LLM'*
 
-I can't comment on 'grown-up' usage of chat LLMs - I think most (even tech-unsavvy) users are pretty comfortable with [text-prompts as an input](https://chat.com) - but do think there's something to be said for filtering our students' usage of them.
+I can't comment on 'grown-up' usage of chat LLMs - I think most (even tech-unsavvy) users are pretty comfortable with [text-prompts as an input](https://chat.com) - but do think there's something to be said for *filtering* our students' usage of them.
 
 ## Wrappers don't kill people, prompts do
 
@@ -29,11 +33,21 @@ But what if we could nudge them towards a *filtered* version of the bot, one tha
 
 ## Sentenced to life
 
-In my wonderful fantasy world, our students - when given an essay homework[^1] - reach not for the raw chatbox but our carefully prepped light wrapper. Let's call it `Kickstart`.
+In my wonderful fantasy world, our students - when given an essay homework[^1] - reach not for the raw chatbox but our carefully prepped light wrapper. They reach for...
+[`Kickstart 🛵`](@/experiments/kickstart.md)
 
 They plonk in their homework task as before, though rather than the LLM spitting out a full essay, it returns something a little more carefully considered: sentence starters and ideas for what to write.
 
-`Kickstart` isn't going to write their essay for them, but what it will do is get them *going*, overcoming the initial activation energy of thought.
+<style>
+img[alt*='Kickstart'] {
+    border: 2px solid var(--t);
+    padding:0px;
+}
+</style>
+
+![the Kickstart app in action](/images/kickstart-demo.webp)
+
+[Kickstart](@/experiments/kickstart.md) isn't going to write their essay for them, but what it will do is get them *going*, overcoming the initial activation energy of thought.
 
 Sentence starters are often the most effective form of scaffolding we can employ, tricking the brain into working a little like an LLM to test out what it *thinks* might be the right answer.
 

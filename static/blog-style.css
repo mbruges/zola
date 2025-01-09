@@ -463,24 +463,24 @@ pre:has(code.language-bash)::before {
     font-family: serif;
     max-height: fit-content;
 }
-
 pre:has(code.language-pre),
 pre:has(code.language-quote),
 pre:has(code.language-blank) {
     border: none !important;
     border-radius: 0.5em;
-    background: transparent;
+    background: transparent !important;
     padding-top: 15px;
     box-shadow: none;
     text-align: left;
     height: fit-content;
-    padding-top: 0px;
-    font-size: 1.1rem;
-    border
+    padding-top: 1em;
+    font-size: 1rem;
+    color: var(--t) !important;
 }
 
-code.language-pre {
-    color: var(--text);
+.language-pre {
+    font-family: var(--font-family) !important;
+    font-size: 1rem;
 }
 
 pre:has(code.language-blank)::before,
@@ -571,22 +571,22 @@ a:focus > code {
     }
 }
 
-[aria-busy=true]:not(input, select, textarea, html) {
-  white-space: nowrap;
+[aria-busy="true"]:not(input, select, textarea, html) {
+    white-space: nowrap;
 }
 
-[aria-busy=true]:not(input, select, textarea, html)::before {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background-image: var(--load-icon);
-  background-size: 1em auto;
-  background-repeat: no-repeat;
-  content: "";
-  vertical-align: -0.125em;
+[aria-busy="true"]:not(input, select, textarea, html)::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: var(--load-icon);
+    background-size: 1em auto;
+    background-repeat: no-repeat;
+    content: "";
+    vertical-align: -0.125em;
 }
 
-[aria-busy=true] {
-  pointer-events: none;
-  text-align: center;
+[aria-busy="true"] {
+    pointer-events: none;
+    text-align: center;
 }

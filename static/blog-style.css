@@ -9,6 +9,7 @@
     --border-radius: 0.5em;
     --highlight: rgba(255, 243, 74, 0.57);
     --font-family: sans-serif;
+    --load-icon: url("/images/load-icon.svg");
     font-size: 13.5pt;
     line-height: 1.35;
     background: var(--b);
@@ -568,4 +569,24 @@ a:focus > code {
     .lightswitch {
         display: none;
     }
+}
+
+[aria-busy=true]:not(input, select, textarea, html) {
+  white-space: nowrap;
+}
+
+[aria-busy=true]:not(input, select, textarea, html)::before {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: var(--load-icon);
+  background-size: 1em auto;
+  background-repeat: no-repeat;
+  content: "";
+  vertical-align: -0.125em;
+}
+
+[aria-busy=true] {
+  pointer-events: none;
+  text-align: center;
 }

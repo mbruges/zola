@@ -7,27 +7,59 @@ extra:
   center: true
 ---
 
+
+<script type="module">
+import {toast} from "/scripts.js";
+
+const urlParams = new URLSearchParams(window.location.search);
+const query = urlParams.get('q');
+if (query) {
+    document.getElementById('question-input').value = query;
+}
+
+function sendToAPI(event) {
+  if (event) event.preventDefault(); 
+  const input = document.getElementById('question-input');
+  const button = document.getElementById('button');
+  const container = document.getElementById('card-container')
+  container.innerHTML = ""
+  button.setAttribute('aria-busy', 'true');
+  button.innerText = ""
+  input.setAttribute('aria-busy', 'true');
+
+  setTimeout(() => {
+  fetch(`https://api.mxb.fyi/kickstart?query=${encodeURIComponent(input.value)}`)
+      .then(response => response.json())
+      .then(data => {
+        data.response.forEach((answer, index) => {
+          setTimeout(() => {
+              var starterCard = document.createElement('div');
+              starterCard.className = 'starter-card';
+              starterCard.innerHTML = `<p>${answer}</p>`;
+              container.appendChild(starterCard);
+          }, index * 300);
+        });
+      }).catch(error => {
+        toast("⚠ Connection error, try again in a minute")
+      })
+      .finally(() => {
+        button.setAttribute('aria-busy', 'false');
+        input.setAttribute('aria-busy', 'false');
+        button.innerText = button.getAttribute('aria-label');
+      });
+}, 10);
+}
+
+document.getElementById('button').addEventListener('click', sendToAPI);
+</script>
+
 <input type=text id="question-input" placeholder="Enter the question..." style="min-width:80%;text-align:center">
 <br>
-<button type="button" id="button" onclick="sendToAPI(event)" style="min-width:7em">Kickstart!</button><p id=loader>⏳</p>
+<button aria-label="Kickstart!" aria-busy=false type="button" id="button" style="min-width:7em" >Kickstart!</button>
 
-<div id=card-container></div>
+<div id=card-container style="min-height: 18em"></div>
 
 <style>
-
-#loader {
-    display: none;
-    animation: rotate 1s linear infinite;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 .starter-card {
     background-color: var(--a);
@@ -59,39 +91,3 @@ extra:
 }
 
 </style>
-
-<script>
-function sendToAPI(event) {
-  if (event) event.preventDefault(); 
-  const input = document.getElementById('question-input');
-  const button = document.getElementById('button');
-  const container = document.getElementById('card-container')
-  const loader = document.getElementById('loader')
-  container.innerHTML = ""
-  button.style.display = "none";
-  loader.style.display = "block";
-  input.disabled = true;
-  button.disabled = true;
-  setTimeout(() => {
-  fetch(`https://api.mxb.fyi/kickstart?query=${encodeURIComponent(input.value)}`)
-      .then(response => response.json())
-      .then(data => {
-        data.response.forEach((answer, index) => {
-          setTimeout(() => {
-              var starterCard = document.createElement('div');
-              starterCard.className = 'starter-card';
-              starterCard.innerHTML = `<p>${answer}</p>`;
-              container.appendChild(starterCard);
-          }, index * 300);
-        });
-      }).catch(error => console.error('Error:', error))
-      .finally(() => {
-          input.disabled = false;
-          button.disabled = false;
-          button.style.display = "initial";
-          loader.style.display = "none";
-          button.innerText = "Kickstart!";
-      });
-}, 10);
-}
-</script>

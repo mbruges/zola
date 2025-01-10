@@ -47,10 +47,7 @@
    <meta property="og:description" content="{{ page.description | default(value=config.extra.default_description) | striptags }}">
  <link rel="stylesheet" href="{{ get_url(path="nav.min.css") | safe }}">
  <link rel="stylesheet" href="{{ get_url(path="blog-style.min.css") | safe }}">
- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
- <link rel="manifest" href="/site.webmanifest">
+ <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
 <div id="main" style="min-height: 80vh;">
@@ -64,10 +61,11 @@
             <a href="/blog">🗞️ Blog</a>
             <a href="/learn">👨‍🏫 Learn</a>
             <a href="/experiments">🧪 Experiments</a>
+            <a style="text-align: center;" title="Toggle dark mode" alt="Toggle dark mode" id="lightswitch">🌓︎</a>
         </div>
     </div>
     <small id="website-name"> {{ icon }} {% if page.title %} {{ page.title }} {% elif section.title %} {{ section.title }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
-    <p><a id="search" style="font-size: 1.7em;margin-bottom: -0.8em;" href="/experiments/search">⌕</a>
+    <p><a id="search" title="search" alt="search" style="font-size: 1.7em;margin-bottom: -0.8em;" href="/search">⌕</a>
         <!-- <a id="back" href="../">↩</a></p> -->
 </nav>
 </div>
@@ -96,7 +94,6 @@
         window.addEventListener('scroll', handleScroll);
         window.onload = addNavShadow
 </script>
-<span class="lightswitch" id="lightswitch">🌓︎</span>
 </body>
 <link rel='stylesheet' href='{{ blockquotestyle }}'>
 <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23f0f8ff;stop-opacity:1' /><stop offset='100%' style='stop-color:%23fff5cb;stop-opacity:1' /></linearGradient></defs><rect width='100' height='100' fill='url(%23grad1)'/><text y='1.75em' x='0.85em' font-size='37'>{{ icon }}</text></svg>">

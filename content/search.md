@@ -1,6 +1,7 @@
 ---
 title: Search
 description: Dig through the posts and resources of this site, using [elasticlunr.js](http://elasticlunr.com/).
+template: "search.html"
 extra:
   icon: 🔎
   center: true
@@ -16,14 +17,11 @@ date: 2025-01-01
     document.addEventListener('DOMContentLoaded', function() {
         const idx = elasticlunr.Index.load(window.searchIndex);
         const searchIcon = document.getElementById('search')
-        document.getElementById('post-nav').style.display = "none"
-        document.getElementById('footer-bar').style.display = "none"
         document.getElementById('footer').style.position = "absolute"
         document.getElementById('footer').style.bottom = "2em"
         document.getElementById('footer').style.left = "0%"
         prevPage = document.referrer ? document.referrer.split('/').pop() : "";
         searchIcon.innerHTML = `<a id="back" href="javascript:history.back()" alt="Back to ${prevPage}" title="Back to ${prevPage}">↩</a>`;
-        document.getElementById('date-tag').style.visibility = "hidden"
 
         document.getElementById('search-input').addEventListener('input', function() {
             const query = this.value;

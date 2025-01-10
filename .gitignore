@@ -1,3 +1,4 @@
 .zed/
 public/
 *.tape
+temp.*

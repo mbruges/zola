@@ -6,6 +6,8 @@ extra:
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]
 ---
+
+```pre
 Let me not to the marriage of true minds  
 Admit impediments; love is not love  
 Which alters when it alteration finds,  
@@ -20,3 +22,4 @@ Love alters not with his brief hours and weeks,
 But bears it out even to the edge of doom:  
 If this be error and upon me proved,  
 I never writ, nor no man ever loved.  
+```

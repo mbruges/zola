@@ -482,6 +482,8 @@ pre:has(code.language-blank) {
     font-family: var(--font-family) !important;
     font-size: 1rem;
     color: var(--t) !important;
+    overflow-x: visible !important;
+    word-wrap: none !important;
 }
 
 pre:has(code.language-blank)::before,

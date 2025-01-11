@@ -82,7 +82,7 @@ h3 {
 button,
 pre,
 img,
-input,
+input,select,
 textarea {
     border-radius: var(--border-radius);
     padding: 0.4rem;

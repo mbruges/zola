@@ -24,7 +24,6 @@
 {% if page.extra.tags %}
    <meta name="keywords" content="{% for tag in page.extra.tags %}{{ tag }}, {% endfor %}">
 {% endif %}
-
    <meta property="og:type" content="website">
    <meta property="og:title" content="{{ title }}">
 {% if current_url  %}
@@ -54,7 +53,6 @@
     </div>
     <small id="website-name"> {{ icon }} {% if page.title %} {{ page.title }} {% elif section.title %} {{ section.title }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
     <p><a id="search" alt="search" href="/search">⌕</a>
-        <!-- <a id="back" href="../">↩</a></p> -->
 </nav>
 </div>
   <section class="section">
@@ -74,7 +72,6 @@
 </footer>
 <script type="module">
         import { toggleNightmode,handleScroll,addNavShadow } from '/scripts.js';
-
         if (localStorage.getItem('nightmode') === 'enabled') {
                     toggleNightmode();
                 }

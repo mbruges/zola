@@ -39,6 +39,11 @@ nav {
     top: 0;
 }
 
+#search {
+    font-size: 1.7em;
+    margin-bottom: -0.8em;
+}
+
 /*Off-setting the anchor for scroll*/
 html {
     scroll-padding-top: 2.2em;
@@ -126,17 +131,9 @@ nav ul li:active ul {
     transform: translateY(0);
 }
 
-.lightswitch {
-    position: fixed;
-    right: 1em;
-    bottom: 1.5em;
-    opacity: 0.6;
-    color: var(--a) !important;
-    margin-right: 0;
-    padding-right: 0;
+#lightswitch {
     font-size: 1.2em;
-    cursor: pointer;
-    z-index: 99;
+    text-align: center;
 }
 
 #back,

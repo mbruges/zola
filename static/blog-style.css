@@ -26,6 +26,10 @@ html {
     padding-top: 0em !important;
 }
 
+.main {
+    min-height: 80vh;
+}
+
 @media (prefers-color-scheme: dark) {
     :root,
     .dark-mode {
@@ -68,6 +72,11 @@ h3 {
     text-align: center !important;
     font-style: italic !important;
     opacity: 0.9 !important;
+}
+
+.tag-container {
+    font-size: 1px;
+    opacity:0;
 }
 
 button,
@@ -299,6 +308,10 @@ footer {
     margin-right: auto;
     opacity: 0.8;
     font-family: monospace;
+}
+
+footer a {
+    text-decoration:none;
 }
 
 hr {

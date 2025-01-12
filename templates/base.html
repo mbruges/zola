@@ -70,6 +70,11 @@
     <a title="About Max Bruges"
     alt="Footer" href="/about">{{ config.extra.footer }}</a>
 </footer>
+{% if page.content %}
+{% if page.content is containing("blockquote") %}
+<link rel='stylesheet' href='{{ get_url(path="blockquote-style.min.css") }}'>
+{% endif %}
+{% endif %}
 <script type="module">
         import { toggleNightmode,handleScroll,addNavShadow } from '/scripts.js';
         if (localStorage.getItem('nightmode') === 'enabled') {
@@ -80,9 +85,4 @@
         window.onload = addNavShadow
 </script>
 </body>
-{% if page.content %}
-{% if "blockquote" %}
-<link rel='stylesheet' href='get_url(path="blockquote-style.min.css"'>
-{% endif %}
-{% endif %}
 </html>

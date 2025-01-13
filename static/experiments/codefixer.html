@@ -3,7 +3,7 @@
 
 <head>
     <link rel="icon" href="/favicon.svg">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/old-style.css">
     <meta charset="utf-8">
     <meta name="description" content="What Am I Doing Wrong? An automated learning tool, to help you fix broken code using ChatGPT">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,6 @@
             hideResponseContainer();
             //DEFINE the inputs & output here:
             var language = document.getElementById('languageSelect').value
-            var openAiToken = document.getElementById('api-input').value
             var code = document.getElementById('codeInput').value
             var specifics = document.getElementById('promptInput').value
             var prompt = `My ${language} code isn't working. ${specifics}. What am I doing wrong? \n CODE: ${code}`
@@ -30,11 +29,11 @@
                     ; return;
             }
 
-            if (openAiToken.length < 32) {
-                console.log("API key required")
-                showResponseContainer();
-                document.getElementById(`${outputElement}`).innerHTML = `Please enter your <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API key</a> above, then try again.`; return;
-            }
+            // if (openAiToken.length < 32) {
+            //     console.log("API key required")
+            //     showResponseContainer();
+            //     document.getElementById(`${outputElement}`).innerHTML = `Please enter your <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API key</a> above, then try again.`; return;
+            // }
 
 
             if (prompt.length < 3 || prompt == undefined) {
@@ -43,71 +42,82 @@
                 document.getElementById(`${outputElement}`).innerHTML = "Please enter a prompt"; return;
             }
 
-            maxTokens = parseInt(maxTokens)
-            if (maxTokens == undefined || maxTokens == NaN) {
-                maxTokens = 100
-            }
+            // maxTokens = parseInt(maxTokens)
+            // if (maxTokens == undefined || maxTokens == NaN) {
+            //     maxTokens = 100
+            // }
 
-            var url = "https://api.openai.com/v1/chat/completions";
-            var bearer = 'Bearer ' + openAiToken;
+            // var url = "https://api.openai.com/v1/chat/completions";
+            // var bearer = 'Bearer ' + openAiToken;
             var loadingMessage = `Thinking as ${role}...`
-
             document.getElementById(`${outputElement}`).innerHTML = loadingMessage
 
             showLoader();
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Authorization': bearer,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    "model": "gpt-3.5-turbo",
-                    "messages": [
-                        { "role": "system", "content": `Respond as ${role}` },
-                        /* These can be filled with convo history
-                        { "role": "user", "content": "" },
-                        { "role": "assistant", "content": "" },*/
-                        { "role": "user", "content": prompt }
-                    ],
-                    "max_tokens": maxTokens,
-                    "temperature": 1,
-                    "top_p": 1,
-                    "n": 1,
-                })
+            // fetch(url, {
+            //     method: 'POST',
+            //     headers: {
+            //         'Authorization': bearer,
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({
+            //         "model": "gpt-3.5-turbo",
+            //         "messages": [
+            //             { "role": "system", "content": `Respond as ${role}` },
+            //             /* These can be filled with convo history
+            //             { "role": "user", "content": "" },
+            //             { "role": "assistant", "content": "" },*/
+            //             { "role": "user", "content": prompt }
+            //         ],
+            //         "max_tokens": maxTokens,
+            //         "temperature": 1,
+            //         "top_p": 1,
+            //         "n": 1,
+            //     })
+            // }).then(data => {
+        //         newresponse = data['choices'][0].message.content;
+        //         console.log(newresponse)
+        //         console.log(data.usage.total_tokens)
+        //         document.getElementById(`${outputElement}`).innerHTML = newresponse;
 
+        //         //Token tracking
+        //         let totaltokensused = parseInt(data.usage.total_tokens);
+        //         console.log(localStorage.getItem("TokensToDate"))
+        //         if ((localStorage.getItem("TokensToDate")) == null) {
+        //             localStorage.setItem("TokensToDate", 0)
+        //         };
+        //         totaltokensused = parseInt(totaltokensused) + parseInt(localStorage.getItem("TokensToDate"));
+        //         console.log(`Cache says you've used ${totaltokensused} tokens so far`)
+        //         localStorage.setItem("TokensToDate", totaltokensused);
 
-            }).then(response => {
+        //         //StackExchange search!
+        //         searchStack(specifics)
+        //         console.log(url)
+        //     })
+        //         .catch(error => {
+        //             console.log('Something went wrong. This is the error: ' + error)
+        //             document.getElementById(`${outputElement}`).innerHTML = ('Something went wrong. This is the error: ' + error);
+        //         });
+        //     //END OF ASKGPT SCRIPT
+        // };
+        prompt = encodeURIComponent(prompt);
+        fetch(`https://api.mxb.fyi/gpt-mini?query=${prompt}`)
+              .then(response => {
+                if (response.status === 429) {
+                  output.innerText = 'Too many requests! Wait a minute.';
+                  throw new Error('Too many requests! Wait a minute.');
+                }
+                console.log(response)
                 hideLoader()
-                showResponseContainer()
-                return response.json()
-
-            }).then(data => {
-                newresponse = data['choices'][0].message.content;
-                console.log(newresponse)
-                console.log(data.usage.total_tokens)
-                document.getElementById(`${outputElement}`).innerHTML = newresponse;
-
-                //Token tracking
-                let totaltokensused = parseInt(data.usage.total_tokens);
-                console.log(localStorage.getItem("TokensToDate"))
-                if ((localStorage.getItem("TokensToDate")) == null) {
-                    localStorage.setItem("TokensToDate", 0)
-                };
-                totaltokensused = parseInt(totaltokensused) + parseInt(localStorage.getItem("TokensToDate"));
-                console.log(`Cache says you've used ${totaltokensused} tokens so far`)
-                localStorage.setItem("TokensToDate", totaltokensused);
-
-                //StackExchange search!
+                document.getElementById(`${outputElement}`).innerHTML = response.text;
+                showResponseContainer();
                 searchStack(specifics)
-                console.log(url)
-            })
-                .catch(error => {
-                    console.log('Something went wrong. This is the error: ' + error)
-                    document.getElementById(`${outputElement}`).innerHTML = ('Something went wrong. This is the error: ' + error);
-                });
-            //END OF ASKGPT SCRIPT
-        };
+              })
+              .catch(error => {
+                  document.getElementById(`${outputElement}`).innerHTML = ('Something went wrong. This is the error: ' + error);
+                  showResponseContainer();
+              })
+        }
+
 
 
         //These are the functions to toggle the loading animation and to hide the request button.
@@ -134,42 +144,28 @@
             }
             let url = `https://stackoverflow.com/search?q=isaccepted%3Ayes+%${language}%5D+${newString}`
             document.getElementById('stackURL').href = url;}
+
         function showLoader() {
             let loader = document.getElementById('thinking-loader');
             loader.className = "loader";
             let button = document.getElementById('AskGPTbutton');
             button.className = "hidden";
         }
+
         function showResponseContainer() {
             let container = document.getElementById('responseArea');
             container.className = "show";
             container.scrollIntoView();
             let button = document.getElementById('AskGPTbutton');
+            document.getElementById('stackURL').style.display = "block"
             button.className = "show";
         }
+
         function hideResponseContainer() {
             let button = document.getElementById('AskGPTbutton');
             button.className = "hidden";
             let container = document.getElementById('responseArea');
             container.className = "hidden";
-        }
-        //This script saves the string entered into "APItokenInput" to local storage
-        function saveThing(elementIdToSave, thingToSave) {
-            let storedItem = "" + document.getElementById(elementIdToSave).value
-            if (storedItem.length < 1) {
-                notificationAlert("Nothing to save!");
-                console.log("Nothing to save!")
-                return;
-            }
-            localStorage.setItem(thingToSave, storedItem)
-            console.log(`${thingToSave} has saved successfully`);
-        }
-
-        //...and this script returns that token on page load.
-        function loadThing(elementIdToDisplay, thingToSave) {
-            let savedThing = localStorage.getItem(thingToSave)
-            console.log(`Your ${thingToSave} has loaded successfully: ${savedThing}`)
-            document.getElementById(elementIdToDisplay).value = savedThing;
         }
 
         //This gives a notification to the 'toastAlert' element. Param defines the message.
@@ -178,20 +174,6 @@
             alertelement.innerHTML = notificationText
             alertelement.className = "show";
             setTimeout(function () { alertelement.className = alertelement.className.replace("show", ""); }, 3000);
-        }
-
-        //Checks used OpenAI tokens and converts into dollars for a rough spending guide at GPT3.5-turbo rates.
-        function tokenToDollar(outputElement) {
-            if ((localStorage.getItem("TokensToDate")) == null) {
-                localStorage.setItem("TokensToDate", 0)
-            };
-            let dollarSpend = 0;
-            let totaltokensused = localStorage.getItem("TokensToDate")
-            dollarSpend = totaltokensused * 0.000002;
-            //Here we round the dollarSpend to four decimal places.
-            dollarSpend = (Math.floor(dollarSpend * 100)) / 100;
-            console.log(`${totaltokensused} = $${dollarSpend}`)
-            document.getElementById(outputElement).innerHTML = `$${dollarSpend}`
         }
 
         //This function will copy the contents of the defined param to the clipboard
@@ -222,9 +204,10 @@
             <div class="dropdown">
                 <a id="catNav"><img alt="miaow" src="/favicon.svg" height="40" width="40"></a>
                 <div class="dropdown-content">
-                    <a href="/experiments.html">Experiments</a>
-                    <a href="/resources.html">Resources</a>
-                    <a href="/blog.html">Blog</a>
+                    <a href="/">Home</a>
+                    <a href="/experiments">Experiments</a>
+                    <a href="/learn">Resources</a>
+                    <a href="/blog">Blog</a>
                 </div>
             </div>
             <ul>
@@ -236,16 +219,6 @@
             <h2>Fix your broken code, with the help of AI</h2>
             <p>Use OpenAI's ChatGPT model to help spot and correct errors in your code.</p>
     </header>
-    <div id="apikey" style="text-align: center;">
-            <details>
-                <summary style="font-size: smaller; color:grey;">API key 🔑</summary><input type="text" id="api-input" style="font-size: 10px;
-                                    font-family: monospace; text-align: center; max-width: 318px; background-color:lightgrey"
-                    placeholder="sk-someth1ng....."><a onclick="saveThing('api-input','API-key')"><sup st>Save to cache 💾
-                    </sup></a><br>
-                <small>Key is saved to your local browser cache. It can only be accessed by you and OpenAI</small>
-            </details>
-            <div id="toastAlert"></div>
-    </div>
 
 <section>
 <select id="languageSelect" class="code" style="max-height:60px;background-color: darkslategrey;font: 400;border-radius: 0; font-family: monospace; color: greenyellow;font-size: larger;font-weight: 600; margin:0%; margin-left: auto; max-width: 152px;padding-right: 1px;padding-left: 1px;text-align: center;" >
@@ -270,18 +243,19 @@
 <center>
     <button id="AskGPTbutton" onclick="askGPT()">Ask GPT 🤖</button>
     <div id="thinking-loader" class="loader.hidden"></div>
-</center>
 
         <section id="responseArea" class="hidden">
             <zero-md style="border-radius:var(--border-radius); border-style: solid;border-width: 5px;border-color: darkgray; background-color: white;padding: 9px; max-width: 600px;">
                 <script id="gptOutput" type="text/markdown" data-dedent>
             </script>
             </zero-md>
+        </section>
+
 <br>
 <p></p>
-    <a id="stackURL" href="" target="_blank"><i style="background:hsl(27,90%,55%); color:black;font-weight: 400;">Check answers on <div style="font-weight: 700;">Stack Overflow &nearr;</div></i></a>
+    <a id="stackURL" href="" target="_blank"><i style="background:hsl(27,90%,55%); color:black;font-weight: 400;display:none;">Check answers on <div style="font-weight: 700;">Stack Overflow &nearr;</div></i></a>
+</center>
 
-</section>
 
 
 

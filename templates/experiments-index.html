@@ -1,211 +1,418 @@
-{% extends "base.html" %}
-{% block content %}
-<meta property="og:title" content="Experiments - {{ config.extra.default_title }}" />
+{% extends "base.html" %} {% block content %}
+<meta
+    property="og:title"
+    content="Experiments - {{ config.extra.default_title }}"
+/>
 <title>Experiments - {{ config.extra.default_title }}</title>
 
 <h1 class="title">Experiments</h1>
 <p class="subheading">
     Some of the things I've made, which you might find useful.
 </p>
-<p>Bear in mind, they are <i>experiments</i>: they may not always work as intended. If you spot something that's not quite right or if you'd like to know more - you can <a href="mailto:hello@maxbruges.com" target="_blank">drop me a line.</a></p>
+<p>
+    Bear in mind, they are <i>experiments</i>: they may not always work as
+    intended. If you spot something that's not quite right or if you'd like to
+    know more - you can
+    <a href="mailto:hello@maxbruges.com" target="_blank">drop me a line.</a>
+</p>
 
 <main>
     <style>
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns that fill available space */
-        gap: 20px; /* Add space between grid items */
-        margin: 20px 0; /* Margin around the grid */
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fill,
+                minmax(300px, 1fr)
+            ); /* Responsive columns that fill available space */
+            gap: 20px; /* Add space between grid items */
+            margin: 20px 0; /* Margin around the grid */
+        }
 
-    .item {
-        background: rgba(128, 128, 128, 0.2); /* Change to a grey background */
-        padding: 20px;
-        border-radius: var(--border-radius);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        /* transition: transform 0.2s; */
-    }
+        .item {
+            background: rgba(
+                128,
+                128,
+                128,
+                0.2
+            ); /* Change to a grey background */
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* transition: transform 0.2s; */
+        }
 
-    /* .item:hover {
+        /* .item:hover {
         transform: scale(1.02);
     }*/
 
-    a:has(button) {
-        text-decoration: none !important;
-    }
+        a:has(button) {
+            text-decoration: none !important;
+        }
 
-    sup {
-        background:var(--a);
-        color:var(--b);
-        max-width: fit-content;
-        border-radius: 0.6em;
-        padding:0.2em;
-        margin-top:0.6em;
-    }
+        sup {
+            background: var(--a);
+            color: var(--b);
+            max-width: fit-content;
+            border-radius: 0.6em;
+            padding: 0.2em;
+            margin-top: 0.6em;
+        }
 
-    .sticky, #nav-containernone {
-        position: fixed; /* Make it fixed when sticky */
-        background: var(--b); /* Add a background color to cover content beneath */
-        top: 0; /* Stick to the top */
-        width: 100%; /* Ensure it takes the full width */
-        left:0;
-        z-index: 1; /* Ensure it covers other content */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    }
+        .sticky,
+        #nav-containernone {
+            position: fixed; /* Make it fixed when sticky */
+            background: var(
+                --b
+            ); /* Add a background color to cover content beneath */
+            top: 0; /* Stick to the top */
+            width: 100%; /* Ensure it takes the full width */
+            left: 0;
+            z-index: 1; /* Ensure it covers other content */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+        }
 
-    navnone {
-        max-width: 80ch !important;
-        min-width: fit-content !important;
-        margin: auto;
-    }
+        navnone {
+            max-width: 80ch !important;
+            min-width: fit-content !important;
+            margin: auto;
+        }
 
-    .icon-image {
-        font-size: 40pt;
-        text-decoration: none !important;
-    }
-
+        .icon-image {
+            font-size: 40pt;
+            text-decoration: none !important;
+        }
     </style>
     <h2 class="center">💡 Latest 🆕</h2>
     <section id="Latest" class="grid">
-
-        {% for page in section.pages | filter(attribute="draft", value=false) %} {%
-        if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
+        {% for page in section.pages | filter(attribute="draft", value=false) %}
+        {% if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
         <!-- {% set icon = "📃" %} -->
-        {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
-        set description = page.description %}
-        {% if page.extra.blurb %} {% set blurb = page.extra.blurb %}
-        {% else %}
-        {% set blurb = "" %}
-        {% endif %}
-        {% endif %}
+        {% set icon = section.extra.icon %} {% endif %} {% if page.description
+        %} {% set description = page.description %} {% if page.extra.blurb %} {%
+        set blurb = page.extra.blurb %} {% else %} {% set blurb = "" %} {% endif
+        %} {% endif %}
 
-    <div class="item" data-pubdate="{{ page.date }}">
-        <div class="center">
-            <span class="icon-image center">{{ icon }}</span>
-        <h3 >{{ page.title }}</h3>
-        <sup >New</sup>
-        <p>{{ description | markdown(inline=true) | safe }}</p>
-        <p>{{ blurb }}</p>
-        <p><a href='{{ page.permalink | safe }}'><button class=center>Try experiment</button></a></p>
-    </div></div>
- {% endfor %}
+        <div class="item" data-pubdate="{{ page.date }}">
+            <div class="center">
+                <span class="icon-image center">{{ icon }}</span>
+                <h3>{{ page.title }}</h3>
+                <sup>New</sup>
+                <p>{{ description | markdown(inline=true) | safe }}</p>
+                <p>{{ blurb }}</p>
+                <p>
+                    <a href="{{ page.permalink | safe }}"
+                        ><button class="center">Try experiment</button></a
+                    >
+                </p>
+            </div>
+        </div>
+        {% endfor %}
     </section>
-
 
     <h2 class="center">📚 Education 🏫</h2>
 
     <section id="Education" class="grid">
         <!--Word of the Week-->
         <div class="item">
-            <a href="/experiments/wotd.html"><img alt="New words daily" src="/images/notebook.svg" height="100" width="auto"></a>
-            <h3 class=center>Word of the Week</h3>
-            <sup class=center>HTML</sup>
-            <p>A worksheet to guide students through a new word - complete with definitions, etymology, and activities</p>
-            <p>Built with the help of GPT-3.5, it's an easily printable HTML file, but can have occasional errors.</p>
+            <a href="/experiments/wotd.html"
+                ><img
+                    alt="New words daily"
+                    src="/images/notebook.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Word of the Week</h3>
+            <sup class="center">HTML</sup>
+            <p>
+                A worksheet to guide students through a new word - complete with
+                definitions, etymology, and activities
+            </p>
+            <p>
+                Built with the help of GPT-3.5, it's an easily printable HTML
+                file, but can have occasional errors.
+            </p>
             <p><i>Check back weekly for a new word!</i></p>
-            <p><a href="/experiments/wotd.html"><button class=center>See the new word</button></a></p>
+            <p>
+                <a href="/experiments/wotd.html"
+                    ><button class="center">See the new word</button></a
+                >
+            </p>
         </div>
 
         <!--Shakey-->
         <div class="item">
-            <a href="/experiments/shakey.html"><img alt="shakey" src="/images/1F4D6.svg" height="100" width="auto"></a>
-            <h3 class=center>Shakespeare by Line</h3>
-            <sup class=center>HTML</sup><br>
-            <p>Generate a random line from Shakespeare's complete works, or get all the lines for any given character.</p>
+            <a href="/experiments/shakey.html"
+                ><img
+                    alt="shakey"
+                    src="/images/1F4D6.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Shakespeare by Line</h3>
+            <sup class="center">HTML</sup><br />
+            <p>
+                Generate a random line from Shakespeare's complete works, or get
+                all the lines for any given character.
+            </p>
             <p>Limited for now, but more functionality to follow...</p>
-            <p><i>Built from a modified version of <a href="https://discuss.elastic.co/t/uploading-shakespeare-json-to-index-in-kibana/171554/2" target="_blank">Shakespeare.json</a>, which is still a little janky.</i></p>
-            <p><a href="/experiments/shakey.html"><button class=center>Open the page</button></a></p>
+            <p>
+                <i
+                    >Built from a modified version of
+                    <a
+                        href="https://discuss.elastic.co/t/uploading-shakespeare-json-to-index-in-kibana/171554/2"
+                        target="_blank"
+                        >Shakespeare.json</a
+                    >, which is still a little janky.</i
+                >
+            </p>
+            <p>
+                <a href="/experiments/shakey.html"
+                    ><button class="center">Open the page</button></a
+                >
+            </p>
         </div>
 
         <!--Worksheet Generator-->
         <div class="item">
-            <a href="/experiments/worksheetGenerator.html"><img alt="Time to make a worksheet" src="/images/1F4D1.svg" height="100" width="auto"></a>
-            <h3 class=center>Worksheet Generator</h3>
-            <sup class=center>HTML</sup>
-            <p>Harness the power of LLMs to create quick and beautiful worksheets.</p>
-            <p>Pick a topic, set your parameters, and let the AI do the rest. Produces a printable worksheet with a range of tasks in seconds.</p>
-            <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i></p>
-            <p><a href="/experiments/worksheetGenerator.html"><button class=center>Make a worksheet</button></a></p>
+            <a href="/experiments/worksheetGenerator.html"
+                ><img
+                    alt="Time to make a worksheet"
+                    src="/images/1F4D1.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Worksheet Generator</h3>
+            <sup class="center">HTML</sup>
+            <p>
+                Harness the power of LLMs to create quick and beautiful
+                worksheets.
+            </p>
+            <p>
+                Pick a topic, set your parameters, and let the AI do the rest.
+                Produces a printable worksheet with a range of tasks in seconds.
+            </p>
+            <p>
+                <i
+                    >You will need an
+                    <a
+                        href="https://platform.openai.com/account/api-keys"
+                        target="_blank"
+                        >API key</a
+                    >
+                    to use it.</i
+                >
+            </p>
+            <p>
+                <a href="/experiments/worksheetGenerator.html"
+                    ><button class="center">Make a worksheet</button></a
+                >
+            </p>
         </div>
 
         <!--What Am I Doing Wrong-->
         <div class="item">
-            <a href="/experiments/codefixer.html"><img alt="what am I doing wrong?" src="/images/add.svg" height="100" width="auto"></a>
-            <h3 class=center>What Am I Doing Wrong?</h3>
-            <sup class=center>HTML</sup>
+            <a href="/experiments/codefixer.html"
+                ><img
+                    alt="what am I doing wrong?"
+                    src="/images/add.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">What Am I Doing Wrong?</h3>
+            <sup class="center">HTML</sup>
             <p>Code broken? Get some guidance, and learn in the process.</p>
-            <p>This site takes code and offers advice on how to fix it: both from ChatGPT and Stack Overflow. Pedagogy is elucidated <a href="/blog.html#040523" target="_blank"> here</a>.</p>
-            <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i></p>
-            <p><a href="/experiments/codefixer.html"><button class=center>Go to WAIDW</button></a></p>
+            <p>
+                This site takes code and offers advice on how to fix it: both
+                from ChatGPT and Stack Overflow. Pedagogy is elucidated
+                <a href="/blog/Trial-by-Error" target="_blank"> here</a>.
+            </p>
+            <p>
+                <a href="/experiments/codefixer.html"
+                    ><button class="center">Go to WAIDW</button></a
+                >
+            </p>
         </div>
 
         <!--Mr Bruges Asks-->
         <div class="item">
-            <a href="https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171" target="_blank"><img alt="Lend me your ears" src="/images/podcast.svg" height="100" width="auto"></a>
-            <h3 class=center>Mr Bruges Asks...</h3>
-            <sup class=center>AUDIO</sup>
+            <a
+                href="https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171"
+                target="_blank"
+                ><img
+                    alt="Lend me your ears"
+                    src="/images/podcast.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Mr Bruges Asks...</h3>
+            <sup class="center">AUDIO</sup>
             <p>Short episodes answering big questions.</p>
-            <p>This is a brief collection of essay readings in podcast form; originally recorded to support A-Level Literature students during lockdown.</p>
-            <p><i>More to follow, once I've found somewhere quiet to record.</i></p>
-            <p><a href="https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171" target="_blank"><button class=center>Listen on Spotify &nearr;</button></a></p>
+            <p>
+                This is a brief collection of essay readings in podcast form;
+                originally recorded to support A-Level Literature students
+                during lockdown.
+            </p>
+            <p>
+                <i
+                    >More to follow, once I've found somewhere quiet to
+                    record.</i
+                >
+            </p>
+            <p>
+                <a
+                    href="https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171"
+                    target="_blank"
+                    ><button class="center">
+                        Listen on Spotify &nearr;
+                    </button></a
+                >
+            </p>
         </div>
 
         <!--The Open Library-->
         <div class="item">
-            <a href="https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link" target="_blank"><img alt="enter the library" src="/images/library.svg" height="100" width="auto"></a>
-            <h3 class=center>The Open Library</h3>
-            <sup class=center>EPUB</sup>
+            <a
+                href="https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link"
+                target="_blank"
+                ><img
+                    alt="enter the library"
+                    src="/images/library.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">The Open Library</h3>
+            <sup class="center">EPUB</sup>
             <p>Great books, out of copyright, in Kindle and eReader format</p>
-            <p>Tracking down the right ePub files can be a pain. Here's my repository of classic texts for you to browse.</p>
-            <p><i>Only possible thanks to <a href="https://www.gutenberg.org/donate/">Project Gutenberg</a>.</i></p>
-            <p><a href="https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link" target="_blank"><button class=center>Open the library &nearr;</button></a></p>
+            <p>
+                Tracking down the right ePub files can be a pain. Here's my
+                repository of classic texts for you to browse.
+            </p>
+            <p>
+                <i
+                    >Only possible thanks to
+                    <a href="https://www.gutenberg.org/donate/"
+                        >Project Gutenberg</a
+                    >.</i
+                >
+            </p>
+            <p>
+                <a
+                    href="https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link"
+                    target="_blank"
+                    ><button class="center">Open the library &nearr;</button></a
+                >
+            </p>
         </div>
     </section>
 
     <h2 class="center">🎭 Entertainment 🧌</h2>
-    <section id='Entertainment' class="grid">
-        <!--Flambards Forever-->
-        <div class="item">
-            <a href="/experiments/flambards.html"><img alt="true love stories never die" src="/images/biplane.svg" height="100" width="auto"></a>
-            <h3 class=center>Flambards Forever</h3>
-            <sup class=center>HTML</sup>
-            <p>Infinite <a href="https://global.oup.com/education/content/children/series/flambards/?region=international" target="_blank">Flambards</a>, with GPT-3.5.</p>
-            <p>This site generates endless stories in the style of K. M. Peyton's series. Tweak the tragic, pastoral, and aeronautical elements. Also includes an illustration generator.</p>
-            <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i></p>
-            <p><a href="/experiments/flambards.html"><button class=center>Generate Flambards</button></a></p>
-        </div>
-
+    <section id="Entertainment" class="grid">
         <!--Bard or Bot-->
         <div class="item">
-            <a href="/experiments/bard-or-bot.html"><img alt="what am I doing wrong?" src="/images/1F916.svg" height="100" width="auto"></a>
-            <h3 class=center>Bard or Bot?</h3>
-            <sup class=center>HTML</sup><br>
+            <a href="/experiments/bard-or-bot.html"
+                ><img
+                    alt="what am I doing wrong?"
+                    src="/images/1F916.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Bard or Bot?</h3>
+            <sup class="center">HTML</sup><br />
             <i>'A Chatbot by any other name would sound as sweet.'</i>
-            <p>This silly little page challenges you to spot the AI-generated verses amongst the Shakespearean couplets.</p>
-            <p><i>AI verses from ChatGPT, real verses presented using Sam Dutton's <a href="https://github.com/samdutton/sonnet-search" target="_blank">SonnetSearch</a></i></p>
-            <p><a href="/experiments/bard-or-bot.html"><button class=center>Play the game</button></a></p>
+            <p>
+                This silly little page challenges you to spot the AI-generated
+                verses amongst the Shakespearean couplets.
+            </p>
+            <p>
+                <i
+                    >AI verses from ChatGPT, real verses presented using Sam
+                    Dutton's
+                    <a
+                        href="https://github.com/samdutton/sonnet-search"
+                        target="_blank"
+                        >SonnetSearch</a
+                    ></i
+                >
+            </p>
+            <p>
+                <a href="/experiments/bard-or-bot.html"
+                    ><button class="center">Play the game</button></a
+                >
+            </p>
         </div>
 
         <!--D&D Character Generator-->
         <div class="item">
-            <a href="/experiments/rpg/dnd.html" target="_blank"><img alt="welcome adventurer" src="/images/1F9CC.svg" height="100" width="auto"></a>
-            <h3 class=center>D&D Character Generator</h3>
-            <sup class=center>HTML</sup>
+            <a href="/experiments/rpg/dnd.html" target="_blank"
+                ><img
+                    alt="welcome adventurer"
+                    src="/images/1F9CC.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">D&D Character Generator</h3>
+            <sup class="center">HTML</sup>
             <p>Generate new adventurers with GPT.</p>
-            <p>This little experiment creates playable characters for tabletop RPGs (Dungeon-based or otherwise) complete with backstories, hidden secrets and character portraits.</p>
-            <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i></p>
-            <p><a href="/experiments/rpg/dnd.html"><button class=center>Make a character</button></a></p>
+            <p>
+                This little experiment creates playable characters for tabletop
+                RPGs (Dungeon-based or otherwise) complete with backstories,
+                hidden secrets and character portraits.
+            </p>
+            <p>
+                <i
+                    >You will need an
+                    <a
+                        href="https://platform.openai.com/account/api-keys"
+                        target="_blank"
+                        >API key</a
+                    >
+                    to use it.</i
+                >
+            </p>
+            <p>
+                <a href="/experiments/rpg/dnd.html"
+                    ><button class="center">Make a character</button></a
+                >
+            </p>
         </div>
 
         <!--Quest Generator-->
         <div class="item">
-            <a href="/experiments/rpg/quest-generator.html" target="_blank"><img alt="welcome adventurer" src="/images/1F37A.svg" height="100" width="auto"></a>
-            <h3 class=center>Quest Generator</h3>
-            <sup class=center>HTML</sup>
-            <p>Random questlines for your favourite RPG, courtesy of <a href="https://platform.openai.com/account/api-keys" target="_blank">Claude</a>.</p>
-            <p>Take off your cloak, warm up by the fire, and hear the strange happenings of these parts. Listen to the rumours, then plot your next steps.</p>
-            <p><i>Pairs nicely with the <a href="/experiments/rpg/dnd.html">D&D character generator.</a></i></p>
-            <p><a href="/experiments/rpg/quest-generator.html"><button class=center>Ask the innkeeper</button></a></p>
+            <a href="/experiments/rpg/quest-generator.html" target="_blank"
+                ><img
+                    alt="welcome adventurer"
+                    src="/images/1F37A.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Quest Generator</h3>
+            <sup class="center">HTML</sup>
+            <p>
+                Random questlines for your favourite RPG, courtesy of
+                <a
+                    href="https://platform.openai.com/account/api-keys"
+                    target="_blank"
+                    >Claude</a
+                >.
+            </p>
+            <p>
+                Take off your cloak, warm up by the fire, and hear the strange
+                happenings of these parts. Listen to the rumours, then plot your
+                next steps.
+            </p>
+            <p>
+                <i
+                    >Pairs nicely with the
+                    <a href="/experiments/rpg/dnd.html"
+                        >D&D character generator.</a
+                    ></i
+                >
+            </p>
+            <p>
+                <a href="/experiments/rpg/quest-generator.html"
+                    ><button class="center">Ask the innkeeper</button></a
+                >
+            </p>
         </div>
     </section>
 
@@ -213,79 +420,202 @@
     <section class="grid">
         <!--Wet Bulb App-->
         <div class="item">
-            <a href="https://app.maxbruges.com/wetbulb"><img alt="wetbulb alert" src="/images/1F321.svg" height="100" width="auto"></a>
-            <h3 class=center>Wet-Bulb Thermometer</h3>
-            <sup class=center>Flask</sup>
+            <a href="https://app.maxbruges.com/wetbulb"
+                ><img
+                    alt="wetbulb alert"
+                    src="/images/1F321.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Wet-Bulb Thermometer</h3>
+            <sup class="center">Flask</sup>
             <p>Find out the Wet-Bulb Temperature where you are.</p>
-            <p>This app will tell you if the combination of heat and humidity will reach dangerous levels in your location, or any other city.</p>
-            <p><i>This is my first foray into self-hosting a web app, so it may fall over! Learn more about Wet-Bulb Temperatures <a href='https://www.theguardian.com/science/2022/jul/31/why-you-need-to-worry-about-the-wet-bulb-temperature' target='_blank'>here.</a></i></p>
-            <p><a href="https://app.maxbruges.com/wetbulb"><button class=center>Visit the app</button></a></p>
+            <p>
+                This app will tell you if the combination of heat and humidity
+                will reach dangerous levels in your location, or any other city.
+            </p>
+            <p>
+                <i
+                    >This is my first foray into self-hosting a web app, so it
+                    may fall over! Learn more about Wet-Bulb Temperatures
+                    <a
+                        href="https://www.theguardian.com/science/2022/jul/31/why-you-need-to-worry-about-the-wet-bulb-temperature"
+                        target="_blank"
+                        >here.</a
+                    ></i
+                >
+            </p>
+            <p>
+                <a href="https://app.maxbruges.com/wetbulb"
+                    ><button class="center">Visit the app</button></a
+                >
+            </p>
         </div>
 
         <!--OpenAI Portal-->
         <div class="item">
-            <a href="/experiments/askGPT.html"><img alt="enter the library" src="/images/firmware.svg" height="100" width="auto"></a>
-            <h3 class=center>OpenAI Portal</h3>
-            <sup class=center>HTML</sup>
+            <a href="/experiments/askGPT.html"
+                ><img
+                    alt="enter the library"
+                    src="/images/firmware.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">OpenAI Portal</h3>
+            <sup class="center">HTML</sup>
             <p>A simple wrapper for GPT-3.5, built on pure JavaScript.</p>
-            <p>It is a testbed for future GPT-powered projects, and currently offers no more functionality than the native OpenAI site.</p>
-            <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i></p>
-            <p><a href="/experiments/askGPT.html"><button class=center>Access the portal</button></a></p>
+            <p>
+                It is a testbed for future GPT-powered projects, and currently
+                offers no more functionality than the native OpenAI site.
+            </p>
+            <p>
+                <i
+                    >You will need an
+                    <a
+                        href="https://platform.openai.com/account/api-keys"
+                        target="_blank"
+                        >API key</a
+                    >
+                    to use it.</i
+                >
+            </p>
+            <p>
+                <a href="/experiments/askGPT.html"
+                    ><button class="center">Access the portal</button></a
+                >
+            </p>
         </div>
 
         <!--Claude Portal-->
         <div class="item">
-            <a href="/experiments/claude.html"><img alt="" src="/images/ai.svg" height="100" width="auto"></a>
-            <h3 class=center>Claude Portal</h3>
-            <sup class=center>HTML</sup>
-            <p>Another pure JS wrapper, this time for Anthropic's <a href="https://console.anthropic.com/chat" target="_blank">Claude</a> bot.</p>
-            <p>This is a substantially more advanced interface, allowing users to upload large text files and discuss them with the LLM.</p>
-            <p><i>You will need an <a href="https://console.anthropic.com/account/keys" target="_blank">API key</a> to use it.</i></p>
-            <p><a href="/experiments/claude.html"><button class=center>Access the portal</button></a></p>
+            <a href="/experiments/claude.html"
+                ><img alt="" src="/images/ai.svg" height="100" width="auto"
+            /></a>
+            <h3 class="center">Claude Portal</h3>
+            <sup class="center">HTML</sup>
+            <p>
+                Another pure JS wrapper, this time for Anthropic's
+                <a href="https://console.anthropic.com/chat" target="_blank"
+                    >Claude</a
+                >
+                bot.
+            </p>
+            <p>
+                This is a substantially more advanced interface, allowing users
+                to upload large text files and discuss them with the LLM.
+            </p>
+            <p>
+                <i
+                    >You will need an
+                    <a
+                        href="https://console.anthropic.com/account/keys"
+                        target="_blank"
+                        >API key</a
+                    >
+                    to use it.</i
+                >
+            </p>
+            <p>
+                <a href="/experiments/claude.html"
+                    ><button class="center">Access the portal</button></a
+                >
+            </p>
         </div>
 
         <!--Project Bloom-->
         <div class="item">
-            <a href="https://www.icloud.com/shortcuts/674d45a0800a4116b985611c89aee020" target="_blank"><img alt="and yes I said yes I will Yes" src="/images/recordingaudio.svg" height="100" width="auto"></a>
-            <h3 class=center>Project Bloom</h3>
-            <sup class=center>iOS</sup>
+            <a
+                href="https://www.icloud.com/shortcuts/674d45a0800a4116b985611c89aee020"
+                target="_blank"
+                ><img
+                    alt="and yes I said yes I will Yes"
+                    src="/images/recordingaudio.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Project Bloom</h3>
+            <sup class="center">iOS</sup>
             <p>Turn a stream-of-consciousness into something intelligible.</p>
-            <p>This Shortcut for Mac uses GPT-3.5 to sanitise dictated input, generally to pretty good effect.</p>
-            <p><i>You will need an <a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a> to use it.</i></p>
-            <p><a href="https://www.icloud.com/shortcuts/674d45a0800a4116b985611c89aee020" target="_blank"><button class=center>Get from iCloud &nearr;</button></a></p>
+            <p>
+                This Shortcut for Mac uses GPT-3.5 to sanitise dictated input,
+                generally to pretty good effect.
+            </p>
+            <p>
+                <i
+                    >You will need an
+                    <a
+                        href="https://platform.openai.com/account/api-keys"
+                        target="_blank"
+                        >API key</a
+                    >
+                    to use it.</i
+                >
+            </p>
+            <p>
+                <a
+                    href="https://www.icloud.com/shortcuts/674d45a0800a4116b985611c89aee020"
+                    target="_blank"
+                    ><button class="center">Get from iCloud &nearr;</button></a
+                >
+            </p>
         </div>
 
         <!--Super Focus Mode-->
         <div class="item">
-            <a href="https://www.icloud.com/shortcuts/fb2e35859b4a45c9ad92fe393edbbec5" target="_blank"><img alt="All focussed their attention at the scene exhibited" src="/images/reader.svg" height="100" width="auto"></a>
-            <h3 class=center>Super Focus Mode</h3>
-            <sup class=center>iOS</sup>
+            <a
+                href="https://www.icloud.com/shortcuts/fb2e35859b4a45c9ad92fe393edbbec5"
+                target="_blank"
+                ><img
+                    alt="All focussed their attention at the scene exhibited"
+                    src="/images/reader.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Super Focus Mode</h3>
+            <sup class="center">iOS</sup>
             <p>Block distracting apps, not just notifications</p>
-            <p>This Shortcut tries to make the built-in 'Focus' mode a little more effective. Once activated, it blocks any apps you deem to be distracting.</p>
+            <p>
+                This Shortcut tries to make the built-in 'Focus' mode a little
+                more effective. Once activated, it blocks any apps you deem to
+                be distracting.
+            </p>
             <p><i>A bit janky, but mostly functional.</i></p>
-            <p><a href="https://www.icloud.com/shortcuts/fb2e35859b4a45c9ad92fe393edbbec5" target="_blank"><button class=center>Get from iCloud &nearr;</button></a></p>
+            <p>
+                <a
+                    href="https://www.icloud.com/shortcuts/fb2e35859b4a45c9ad92fe393edbbec5"
+                    target="_blank"
+                    ><button class="center">Get from iCloud &nearr;</button></a
+                >
+            </p>
         </div>
 
         <!--Code Playground-->
         <div class="item">
-            <a href="./codeplayground.html"><img alt="Beep boop" src="/images/bugs.svg" height="100" width="auto"></a>
-            <h3 class=center>Code Playground</h3>
-            <sup class=center>HTML</sup>
+            <a href="./codeplayground.html"
+                ><img
+                    alt="Beep boop"
+                    src="/images/bugs.svg"
+                    height="100"
+                    width="auto"
+            /></a>
+            <h3 class="center">Code Playground</h3>
+            <sup class="center">HTML</sup>
             <p>The best way to learn is by playing, and this is my sandpit.</p>
-            <p>Having started learning some <i>very rudimentary</i> Javascript, I'm attempting to apply that knowledge in an HTML capacity.</p>
-            <p><i>This is a living exercise book (to continue mixing metaphors).</i></p>
-            <p><a href="/experiments/codeplayground.html"><button class=center>Open the playground</button></a></p>
-        </div>
-
-        <!--Slideshow-->
-        <div class="item">
-            <a href="/lessonarchive/slideshowtemplate.html"><img alt="Slide away" src="/images/presenting.svg" height="100" width="auto"></a>
-            <h3 class=center>On-Site Slideshow</h3>
-            <sup class=center>HTML</sup>
-            <p>A very simple platform to display slides.</p>
-            <p>This is resolutely a work-in-progress. Hopefully, I'll be able to use it to host slides to live in the <a href="/resources.html">resources</a> section of the site at some point.</p>
-            <p>Until then, it's just a pretty demo.</p>
-            <p><a href="/lessonarchive/slideshowtemplate.html" target="_self"><button class=center>Access demo</button></a></p>
+            <p>
+                Having started learning some <i>very rudimentary</i> Javascript,
+                I'm attempting to apply that knowledge in an HTML capacity.
+            </p>
+            <p>
+                <i
+                    >This is a living exercise book (to continue mixing
+                    metaphors).</i
+                >
+            </p>
+            <p>
+                <a href="/experiments/codeplayground.html"
+                    ><button class="center">Open the playground</button></a
+                >
+            </p>
         </div>
     </section>
 </main>

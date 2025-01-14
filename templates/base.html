@@ -60,7 +60,7 @@
       {% block content %} {% endblock %}
     </div>
     {% if page.extra.tags %}
-       <p id="tag-container"> TAGS:
+       <p id="tag-container" hidden> TAGS:
            {% for tag in page.extra.tags %}{{ tag }},{% endfor %}
        </p>
     {% endif %}

@@ -7,6 +7,20 @@ extra:
   icon: 🏗️
 ---
 
+## *15/01/25* - Annotations and aggravations
+
+Trying to implement live/accessible annotations to the textbook pages; quixotically it seems.
+
+Settled on the Hypothes.is service - achieves the functionality I want, but is quite heavy (1MB js) and reliant on an external database. Can potential self-host, but that's an adventure for a later date.
+
+Adding the raw Hypothesis system was very easy, a single JS script. What I wanted, though was to just pull annotations from the API and display them in my own nice formatting, without the heavy sidebar etc. THAT has been an exercise in madness. 
+
+The difficulty, simply put, is working out _where_ to put an annotation on a page. The API provides a `start index`, but my extensive fiddling seems to indicate no relationship between this number and the page's raw text or its HTML (when using `indexOf()`)
+
+Have just seen one can put the sidebar into a specific container. Shall try that.
+
+---
+
 ## *22/12/24* - Adventures in dithering and webpeeing
 
 Had a fiddle about trying to cut down image sizes, _stylistically_. [Read that article](https://endtimes.dev/why-you-should-dither-images/) about dithering and gave it a go.

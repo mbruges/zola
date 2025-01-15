@@ -1,0 +1,296 @@
+<script>
+    function indexOfAll(str, substring) {
+        let indices = [];
+        let index = str.indexOf(substring);
+
+        while (index !== -1) {
+            indices.push(index);
+            index = str.indexOf(substring, index + 1);
+        }
+
+        return indices;
+    }
+
+    function replaceNthOccurrence(search, replacement, n) {
+        let count = 0;
+        document.body.innerHTML = document.body.innerHTML.replace(
+            new RegExp(search, "g"),
+            (match) => {
+                count++;
+                return count === n ? replacement : match;
+            },
+        );
+    }
+    async function fetchAnnotations() {
+        const pageUrl = encodeURIComponent(
+            window.location.origin + window.location.pathname,
+        );
+        const fullRawText = document.body.innerText;
+        const htmlText = document.body.innerHTML;
+        console.log(htmlText);
+        console.log(fullRawText);
+        const response = await fetch(
+            `https://hypothes.is/api/search?uri=${pageUrl}`,
+            {
+                headers: {
+                    Accept: "application/vnd.hypothesis.v1+json",
+                },
+            },
+        );
+
+        if (response.ok) {
+            const data = await response.json();
+            const annotationsArray = data.rows
+                .map((annotation) => {
+                    const textQuote =
+                        annotation.target
+                            .find(
+                                (t) =>
+                                    t.selector &&
+                                    t.selector.some(
+                                        (s) => s.type === "TextQuoteSelector",
+                                    ),
+                            )
+                            ?.selector.find(
+                                (s) => s.type === "TextQuoteSelector",
+                            )?.exact || "";
+
+                    const startPosition =
+                        annotation.target
+                            .find(
+                                (t) =>
+                                    t.selector &&
+                                    t.selector.some(
+                                        (s) =>
+                                            s.type === "TextPositionSelector",
+                                    ),
+                            )
+                            ?.selector.find(
+                                (s) => s.type === "TextPositionSelector",
+                            )?.start || null;
+
+                    return {
+                        targetText: textQuote,
+                        annotationText: annotation.text,
+                        author: annotation.user.split(":")[1],
+                        startPosition: startPosition + 130, //offsetting
+                        rawPosition: indexOfAll(fullRawText, textQuote),
+                        htmlPosition: indexOfAll(htmlText, textQuote),
+                    };
+                })
+                .filter((item) => item.startPosition !== null);
+
+            // Sort by start position
+            annotationsArray.sort((a, b) => a.startPosition - b.startPosition);
+
+            console.log("annotations collected:" + annotationsArray.length);
+
+            // console.log(fullRawText)
+            for (let i = 0; i < annotationsArray.length; i++) {
+                const annotation = annotationsArray[i];
+                console.log(annotation);
+                console.log(
+                    `Checking for targetText: ${annotation.targetText}`,
+                );
+                if (fullRawText.includes(annotation.targetText)) {
+                    const indexes = [
+                        ...fullRawText.matchAll(
+                            new RegExp(annotation.targetText, "g"),
+                        ),
+                    ].map((m) => m.index);
+                    console.log(`Indexes found: ${indexes}`);
+                    console.log(`Annotation found: ${annotation.targetText}`);
+                    const regex = new RegExp(annotation.targetText, "g");
+                    const matches = [...fullRawText.matchAll(regex)];
+                    console.log(matches);
+                    let match = null;
+                    for (let i = 0; i < matches.length; i++) {
+                        if (
+                            Math.abs(
+                                matches[i].index - annotation.startPosition,
+                            ) <= 30
+                        ) {
+                            console.log("matched!");
+                            match = matches[i];
+                            correctIndex = i + 1;
+                            break;
+                        }
+                    }
+                    if (match) {
+                        console.log("fixing match " + correctIndex);
+                        newTag = `<a href="#" class="highlight-link" data-tooltip="${annotation.annotationText}">${annotation.targetText}</a>`;
+                        replaceNthOccurrence(match, newTag, correctIndex);
+                    }
+                } else {
+                    console.log(
+                        `Annotation not found: ${annotation.targetText}`,
+                    );
+                }
+            }
+        } else {
+            console.error("Error fetching annotations:", response.statusText);
+            return []; // Return an empty array if there's an error
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", fetchAnnotations);
+</script>
+
+<style>
+    hypothesis-highlight,
+    .highlight-link {
+        background-color: rgba(var(--a), 0.5);
+        background-color: color-mix(in srgb, var(--a), transparent 70%);
+        border-radius: var(--border-radius);
+        font-family: sans-serif !important;
+        text-decoration: none !important;
+        color: var(--t) !important;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+        margin-left: -0.2em;
+        margin-right: -0.2em;
+    }
+
+    /**
+* Tooltip ([data-tooltip])
+*/
+
+    [data-tooltip] {
+        position: relative;
+    }
+    [data-tooltip]:not(a, button, input) {
+        border-bottom: 1px dotted;
+        text-decoration: none;
+        cursor: help;
+    }
+    [data-tooltip][data-placement="top"]::before,
+    [data-tooltip][data-placement="top"]::after,
+    [data-tooltip]::before,
+    [data-tooltip]::after {
+        display: block;
+        z-index: 99;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        padding: 0.25rem 0.5rem;
+        overflow: hidden;
+        transform: translate(-50%, -0.25rem);
+        border-radius: var(--border-radius);
+        background: var(--t);
+        content: attr(data-tooltip);
+        color: var(--b);
+        font-style: normal;
+        font-size: 0.875rem;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    [data-tooltip][data-placement="top"]::after,
+    [data-tooltip]::after {
+        padding: 0;
+        transform: translate(-50%, 0rem);
+        border-top: 0.3rem solid;
+        border-right: 0.3rem solid transparent;
+        border-left: 0.3rem solid transparent;
+        border-radius: 0;
+        background-color: transparent;
+        content: "";
+        color: var(--t);
+    }
+    [data-tooltip][data-placement="bottom"]::before,
+    [data-tooltip][data-placement="bottom"]::after {
+        top: 100%;
+        bottom: auto;
+        transform: translate(-50%, 0.25rem);
+    }
+    [data-tooltip][data-placement="bottom"]:after {
+        transform: translate(-50%, -0.3rem);
+        border: 0.3rem solid transparent;
+        border-bottom: 0.3rem solid;
+    }
+    [data-tooltip][data-placement="left"]::before,
+    [data-tooltip][data-placement="left"]::after {
+        top: 50%;
+        right: 100%;
+        bottom: auto;
+        left: auto;
+        transform: translate(-0.25rem, -50%);
+    }
+    [data-tooltip][data-placement="left"]:after {
+        transform: translate(0.3rem, -50%);
+        border: 0.3rem solid transparent;
+        border-left: 0.3rem solid;
+    }
+    [data-tooltip][data-placement="right"]::before,
+    [data-tooltip][data-placement="right"]::after {
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        left: 100%;
+        transform: translate(0.25rem, -50%);
+    }
+    [data-tooltip][data-placement="right"]:after {
+        transform: translate(-0.3rem, -50%);
+        border: 0.3rem solid transparent;
+        border-right: 0.3rem solid;
+    }
+    [data-tooltip]:focus::before,
+    [data-tooltip]:focus::after,
+    [data-tooltip]:hover::before,
+    [data-tooltip]:hover::after {
+        opacity: 1;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        [data-tooltip]:focus::before,
+        [data-tooltip]:focus::after,
+        [data-tooltip]:hover::before,
+        [data-tooltip]:hover::after {
+            --pico-tooltip-slide-to: translate(-50%, -0.25rem);
+            transform: translate(-50%, 0.75rem);
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            animation-name: tooltip-slide;
+            opacity: 0;
+        }
+        [data-tooltip]:focus::after,
+        [data-tooltip]:hover::after {
+            --pico-tooltip-caret-slide-to: translate(-50%, 0rem);
+            transform: translate(-50%, -0.25rem);
+            animation-name: tooltip-caret-slide;
+        }
+    }
+    @keyframes tooltip-slide {
+        to {
+            transform: var(--pico-tooltip-slide-to);
+            opacity: 1;
+        }
+    }
+    @keyframes tooltip-caret-slide {
+        50% {
+            opacity: 0;
+        }
+        to {
+            transform: var(--pico-tooltip-caret-slide-to);
+            opacity: 1;
+        }
+    }
+    .highlighted {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .tooltip {
+        display: none; /* Default hidden until hovered */
+        position: absolute;
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        z-index: 1000; /* Ensure it's on top */
+        white-space: nowrap; /* Prevent line break */
+        font-size: 1rem;
+    }
+</style>

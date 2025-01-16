@@ -3,7 +3,8 @@
 
     function addAnnotationToPage(annotation) {
         // console.log(annotation)
-        const { target, text } = annotation;
+        const { target, text: rawText } = annotation;
+        const text = rawText.replace(/"/g, "&quot;");
         var startContainer = target[0].selector[0].startContainer;
         startContainer = "/" + startContainer;
         const exactText = annotation.target[0].selector.find(
@@ -97,7 +98,7 @@
     [data-tooltip]::before,
     [data-tooltip]::after {
         display: block;
-        z-index: 99;
+        z-index: 999;
         position: absolute;
         bottom: 100%;
         left: 50%;

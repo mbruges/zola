@@ -32,7 +32,7 @@
             console.log(container.innerHTML);
             container.innerHTML = container.innerHTML.replace(
                 exactText,
-                `<a href="#" class="highlight-link" data-tooltip="${text}">${exactText}</a>`,
+                `<a href="#" class="highlight-link" data-tooltip="${text}" title="${text}">${exactText}</a>`,
             );
         }
     }
@@ -72,6 +72,7 @@
 </script>
 
 <style>
+    /* <abbr> option... https://stackoverflow.com/questions/9150796/change-how-fast-title-attributes-tooltip-appears#:~:text=i%20am%20using%20the%20following */
     .highlight-link {
         background-color: rgba(var(--a), 0.5);
         background-color: color-mix(in srgb, var(--a), transparent 70%);
@@ -98,7 +99,7 @@
     [data-tooltip]::before,
     [data-tooltip]::after {
         display: block;
-        z-index: 999;
+        z-index: 9999;
         position: absolute;
         bottom: 100%;
         left: 50%;
@@ -120,7 +121,7 @@
 
     [data-tooltip]::before {
         min-width: fit-content;
-        width: 11em;
+        width: 13em;
         text-align: center;
     }
 

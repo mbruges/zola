@@ -2,3 +2,5 @@
 public/
 *.tape
 temp.*
+*.command
+.DS*

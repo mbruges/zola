@@ -1,7 +1,7 @@
 ---
 title: Making a little, local LLM
 date: 2025-01-04
-author: Max Bruges
+authors: ["Max Bruges"]
 description: 'How to set up a tiny and useful AI on the most knackered of hardware.'
 draft: false
 extra:

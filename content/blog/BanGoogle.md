@@ -1,5 +1,5 @@
 ---
-author: Max Bruges
+authors: ["Max Bruges"]
 title: The case for banning Google
 description: You're Bard, sunshine.
 date: 2023-05-13

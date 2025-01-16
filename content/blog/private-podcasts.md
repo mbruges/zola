@@ -1,6 +1,6 @@
 ---
 title: Turning radio into podcasts
-author: Max Bruges
+authors: ["Max Bruges"]
 date: 2024-09-28
 description: "An exercise in pettiness, podcasts and programming."
 extra:

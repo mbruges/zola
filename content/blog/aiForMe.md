@@ -1,6 +1,6 @@
 ---
 title: AI for Me, but not for Thee
-author: Max Bruges
+authors: ["Max Bruges"]
 date: 2024-06-30
 description: When it comes to using LLMs, educators need to lead by example.
 extra:

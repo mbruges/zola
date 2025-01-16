@@ -1,7 +1,7 @@
 ---
 title: Trial by Error
 description: "Learning the hard way, failing the right way"
-author: Max Bruges
+authors: ["Max Bruges"]
 date: 2023-05-04
 extra:
   icon: 🙈

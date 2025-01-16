@@ -1,7 +1,7 @@
 ---
 title: Schools' labours lost
 date: 2020-05-20
-author: Max Bruges
+authors: ["Max Bruges"]
 description: "Rebuilding routines will be the hardest and most important job of schools after the pandemic."
 extra:
   icon: 🏫

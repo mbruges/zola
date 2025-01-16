@@ -1,5 +1,5 @@
 ---
-author: Max Bruges
+authors: ["Max Bruges"]
 date: 2024-12-30
 title: Kickstarting, not controlling
 draft: false

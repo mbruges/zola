@@ -1,6 +1,6 @@
 ---
 title: Coding on The Titanic
-author: Max Bruges
+authors: ["Max Bruges"]
 date: 2023-04-26
 description: "If the robots can do it better, why bother learning at
 all?"

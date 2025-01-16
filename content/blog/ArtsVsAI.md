@@ -1,6 +1,6 @@
 ---
 title: AI will eat your English Department
-author: Max Bruges
+authors: ["Max Bruges"]
 date: 2023-05-22
 description: And Humanities will be for pudding.
 extra:

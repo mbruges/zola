@@ -1,5 +1,5 @@
 ---
-author: Max Bruges
+authors: ["Max Bruges"]
 date: 2025-10-03
 title: The air-gapped classroom
 draft: true

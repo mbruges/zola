@@ -1,6 +1,6 @@
 ---
 title: I ♥ Markdown
-author: Max Bruges
+authors: ["Max Bruges"]
 date: 2024-03-01
 description: "Let the writing do the talking"
 extra:

@@ -1,5 +1,5 @@
 ---
-author: Max Bruges
+authors: ["Max Bruges"]
 title: The AI I use every day
 date: 2024-09-29
 extra:

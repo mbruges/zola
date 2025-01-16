@@ -1,7 +1,7 @@
 ---
 title: Test Page
 date: 2091-12-31
-author: Max Bruges
+authors: ["Max Bruges"]
 description: "Did it work?"
 draft: true
 extra:

@@ -1,6 +1,6 @@
 ---
 title:  Hello World
-author: Max Bruges
+authors: ["Max Bruges"]
 date: 2023-04-18
 description: "You have to start somewhere."
 extra:

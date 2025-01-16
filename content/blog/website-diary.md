@@ -17,7 +17,27 @@ Adding the raw Hypothesis system was very easy, a single JS script. What I wante
 
 The difficulty, simply put, is working out _where_ to put an annotation on a page. The API provides a `start index`, but my extensive fiddling seems to indicate no relationship between this number and the page's raw text or its HTML (when using `indexOf()`)
 
-Have just seen one can put the sidebar into a specific container. Shall try that.
+Have just seen one can put the sidebar into a specific container. Shall try that...
+
+_Some time later_
+
+Got it! After going on a crash course in XPath selection with GPT, managed to build a decent-enough selector based on the path provided in the API. This was the key to finally ditch the massively chunky Hypothesis panel: I can now pull highlights AND place them on the page using only the API endpoint. Fanastic!
+
+Compare and contrast:
+
+| | Old method | New method |
+| ---: | :---: | :---: |
+| Size | 1,300kb | 28kb |
+| Loading | 6000 ms | 37ms |
+| Rendering | 7300 ms | 800ms |
+| External calls | 24 | 1 |
+| Satisfaction | Begrudging | *Immeasurable* |
+
+The script and the accompanying CSS are now tied up in an HTML snippet, added to those pages that could benefit from annotation (just textbook pages for now).
+
+To add annotations, I (and future approved users!) can use the very nifty [Hypothesis browser extension](https://web.hypothes.is/start/#:~:text=to%20your%20browser.-,install%20the%20hypothesis,-Chrome%20extension%20from).
+
+Next step is self-hosting my own Hypothesis instance, but that can wait.
 
 ---
 

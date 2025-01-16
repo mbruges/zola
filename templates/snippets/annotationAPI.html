@@ -32,7 +32,7 @@
             console.log(container.innerHTML);
             container.innerHTML = container.innerHTML.replace(
                 exactText,
-                `<a href="#" class="highlight-link" data-tooltip="${text}" title="${text}">${exactText}</a>`,
+                `<abbr href="#" class="highlight-link" title="${text}">${exactText}</abbr>`,
             );
         }
     }
@@ -73,31 +73,27 @@
 
 <style>
     /* <abbr> option... https://stackoverflow.com/questions/9150796/change-how-fast-title-attributes-tooltip-appears#:~:text=i%20am%20using%20the%20following */
-    .highlight-link {
+    .highlight-link,
+    abbr {
         background-color: rgba(var(--a), 0.5);
-        background-color: color-mix(in srgb, var(--a), transparent 70%);
+        background-color: color-mix(in srgb, var(--a), transparent 80%);
         border-radius: var(--border-radius);
-        font-family: sans-serif !important;
-        text-decoration: none !important;
-        color: var(--t) !important;
+        font-family: sans-serif;
+        text-decoration: none;
+        color: var(--t);
         padding-left: 0.2em;
         padding-right: 0.2em;
         margin-left: -0.2em;
         margin-right: -0.2em;
     }
 
-    [data-tooltip] {
+    abbr[title] {
         position: relative;
-    }
-    [data-tooltip]:not(a, button, input) {
-        border-bottom: 1px dotted;
-        text-decoration: none;
         cursor: help;
     }
-    [data-tooltip][data-placement="top"]::before,
-    [data-tooltip][data-placement="top"]::after,
-    [data-tooltip]::before,
-    [data-tooltip]::after {
+
+    abbr[title]::before,
+    abbr[title]::after {
         display: block;
         z-index: 9999;
         position: absolute;
@@ -108,7 +104,7 @@
         transform: translate(-50%, -0.25rem);
         border-radius: var(--border-radius);
         background: var(--t);
-        content: attr(data-tooltip);
+        content: attr(title);
         color: var(--b);
         font-style: normal;
         font-size: 0.875rem;
@@ -119,14 +115,13 @@
         pointer-events: none;
     }
 
-    [data-tooltip]::before {
+    abbr[title]::before {
         min-width: fit-content;
         width: 13em;
         text-align: center;
     }
 
-    [data-tooltip][data-placement="top"]::after,
-    [data-tooltip]::after {
+    abbr[title]::after {
         padding: 0;
         transform: translate(-50%, 0rem);
         border-top: 0.3rem solid;
@@ -138,17 +133,9 @@
         color: var(--t);
     }
 
-    [data-tooltip]:focus::before,
-    [data-tooltip]:focus::after,
-    [data-tooltip]:hover::before,
-    [data-tooltip]:hover::after {
-        opacity: 1;
-    }
     @media (hover: hover) and (pointer: fine) {
-        [data-tooltip]:focus::before,
-        [data-tooltip]:focus::after,
-        [data-tooltip]:hover::before,
-        [data-tooltip]:hover::after {
+        abbr[title]:hover::before,
+        abbr[title]:hover::after {
             --pico-tooltip-slide-to: translate(-50%, -0.25rem);
             transform: translate(-50%, 0.75rem);
             animation-duration: 0.2s;
@@ -156,8 +143,8 @@
             animation-name: tooltip-slide;
             opacity: 0;
         }
-        [data-tooltip]:focus::after,
-        [data-tooltip]:hover::after {
+        abbr[title]:focus::after,
+        abbr[title]:hover::after {
             --pico-tooltip-caret-slide-to: translate(-50%, 0rem);
             transform: translate(-50%, -0.25rem);
             animation-name: tooltip-caret-slide;

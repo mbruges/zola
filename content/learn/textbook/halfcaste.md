@@ -2,7 +2,7 @@
 title: "Half-Caste"
 authors: ["John Agard"]
 extra:
-    icon: 🇬
+    icon: 🇬🇾
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]
 ---
@@ -15,7 +15,7 @@ I'm half-caste
 Explain yuself  
 Wha yu mean  
 When yu say half-caste  
-Yu mean when picasso  
+Yu mean when <abbr title="Pablo Picasso, renowned C20th painter">picasso</abbr>  
 Mix red an green  
 Is a half-caste canvas?  
 Explain yuself  
@@ -34,7 +34,7 @@ Ah rass
 Explain yuself  
 Wha yu mean  
 When yu say half-caste?  
-Yu mean tchaikovsky  
+Yu mean <abbr title="Pytor Tchaikovsky, great Russian composer of late C19th">tchaikovsky</abbr>
 Sit down at dah piano  
 An mix a black key  
 Wid a white key  

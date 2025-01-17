@@ -7,7 +7,7 @@ extra:
     tags: ["pearson", "anthology", "poetry"]
 ---
   
-```pre  
+
 Excuse me  
 Standing on one leg  
 I'm half-caste  
@@ -63,5 +63,4 @@ And de whole of yu mind
 An I will tell yu  
 De other half  
 Of my story  
-```  
   

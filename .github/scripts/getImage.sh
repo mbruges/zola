@@ -9,7 +9,7 @@ fi
 if [[ ! "$url" == http* ]]; then
     LOCAL=true
     filename=$(basename "$url")
-    cp $url $filename
+    cp "$url" "$filename"
 fi
 
 if [[ "$url" =~ \.(jpg|jpeg|png|gif|webp)$ ]]; then

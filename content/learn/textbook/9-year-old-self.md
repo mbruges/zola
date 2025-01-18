@@ -47,3 +47,10 @@ I have fears enough for us both -
 I leave you in an ecstasy of concentration  
 slowly peeling a ripe scab from your knee  
 to taste it on your tongue.
+
+- DEFINITIONS:
+  - perplexed: (adj) confused, puzzled  
+  - ambition: (n) strong desire to succeed  
+  - ecstasy: (n) overwhelming joy or delight  
+  - concentrated: (adj) focused, attentive  
+  - scars: (n) marks from healed wounds

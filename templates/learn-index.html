@@ -55,6 +55,33 @@
 </style>
 
 <ul id="list-of-posts">
+    <div
+        class="blog-card"
+        onclick="location.href='/learn/textbook';"
+        onmouseenter=""
+        style="
+            border: 2px solid var(--a) !important;
+            margin-bottom: 1em;
+            background: var(--a);
+            color: var(--b);
+            max-height: fit-content;
+        "
+    >
+        <p class="title">Extracts</p>
+        <div class="flex">
+            <div class="blog-icon" style="margin-top: -0.5em; font-size: 3em">
+                📚
+            </div>
+            <div class="blog-details">
+                <div class="description">
+                    <p class="">
+                        Poems, prose, essays and guides to accompany the
+                        lessons.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     {% for page in section.pages | filter(attribute="draft", value=false) %} {%
     if page.extra.icon %} {% set icon = page.extra.icon %} {% else %} {% set
     icon = section.extra.icon %} {% endif %} {% if page.description %} {% set
@@ -100,33 +127,6 @@
         </div>
     </div>
     {% endfor %}
-    <div
-        class="blog-card"
-        onclick="location.href='/learn/textbook';"
-        onmouseenter=""
-        style="
-            border: 2px solid var(--a) !important;
-            margin-bottom: 1em;
-            background: var(--a);
-            color: var(--b);
-            max-height: fit-content;
-        "
-    >
-        <p class="title">Extracts</p>
-        <div class="flex">
-            <div class="blog-icon" style="margin-top: -0.5em; font-size: 3em">
-                📚
-            </div>
-            <div class="blog-details">
-                <div class="description">
-                    <p class="">
-                        Poems, prose, essays and guides to accompany the
-                        lessons.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
 </ul>
 
 <p class="center" style="opacity: 0.8"><i>More coming soon...</i></p>

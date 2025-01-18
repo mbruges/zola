@@ -83,4 +83,11 @@ but tissues and uncertainty:
 and she would say, should I complain  
 of the scratchy and disposable,  
 that this is your material  
-to do with, daughter, what you will.  
+to do with, daughter, what you will.
+
+- DEFINITIONS:
+  - hanky: (n) a cloth handkerchief  
+  - nostalgia: (n) sentimental longing for the past  
+  - tissue: (n) a soft paper used for wiping  
+  - embarrassed: (adj) feeling self-conscious or ashamed  
+  - certainty: (n) full confidence or assurance

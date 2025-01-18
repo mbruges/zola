@@ -51,3 +51,12 @@ and, from these crushed valentines, this unravelled
 sports sock, that the furthest distances I’ve travelled  
 have been those between people. And what survives  
 of holidaying briefly in their lives.
+
+- DEFINITIONS:
+  - rucksack: (n) a backpack for carrying 
+  - meridian: (n) an imaginary line around the Earth
+  - anonymity: (n) the state of being unknown
+  - delirium: (n) a disturbed state of mind  
+  - souvenirs: (n) items kept for memories
+  - Larium: (n) medicine to treat malaria 
+  - giro: (n) money transfer paperwork

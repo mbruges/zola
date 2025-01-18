@@ -43,4 +43,11 @@ a silver anklet and the five neat shimmering-
 oyster-painted toenails of an outstretched foot  
 which catch the sunlight briefly like the  
 flash of armaments before  
-dropping gracefully into the shade of the house.  
+dropping gracefully into the shade of the house.
+
+- DEFINITIONS:
+  - crouched: (v) to bend down low  
+  - flank: (n) side of an object  
+  - petrified: (adj) hardened, preserved  
+  - omens: (n) signs of future events  
+  - armaments: (n) military weapons, gear

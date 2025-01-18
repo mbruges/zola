@@ -19,4 +19,11 @@ And hymns in the cosy parlour, the tinkling piano our guide.
 So now it is vain for the singer to burst into clamour   
 With the great black piano appassionato. The glamour   
 Of childish days is upon me, my manhood is cast   
-Down in the flood of remembrance, I weep like a child for the past.   
+Down in the flood of remembrance, I weep like a child for the past.
+
+- DEFINITIONS:
+  - insidious: (adj) subtly harmful, deceitful  
+  - mastery: (n) great skill or control  
+  - clamour: (n) loud, confused noise  
+  - appassionato: (adj) passionate, intense  
+  - glamour: (n) alluring beauty or charm

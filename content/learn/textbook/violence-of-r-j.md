@@ -10,9 +10,9 @@ The story of *Romeo & Juliet* is surely as old as time.
 >[](aside-note)
 > Taken from the British Library's abb on Shakespeare. [Read more.](https://www.britishlibrary.cn/en/articles/the-violence-of-romeo-and-juliet/)
 
-The play’s first audiences, perhaps at the Curtain Theatre in Shoreditch, seem to have responded powerfully to this story of  <abbr title="dangerous, likely to explode">volatile</abbr> emotions and passions lived to the extreme: the first quarto of 1597 refers to it being ‘often (with great applause) played publically'.'
+The play’s first audiences, perhaps at the Curtain Theatre in Shoreditch, seem to have responded powerfully to this story of volatile emotions and passions lived to the extreme: the first quarto of 1597 refers to it being ‘often (with great applause) played publicly'.
 
-It is not hard to see why. The play is set in Verona, but – as so often with Shakespeare – the streets we hear described on stage are also those of the bustling, overcrowded, pestilent, noisy and noisome city in which he lived and worked. London was a young city in the 1590s, and the crowds who took their chances with prostitutes and pickpockets in the entertainment districts were even younger; <abbr title="Made at the time">contemporary</abbr> reports suggest audiences at the open-air theatres were predominantly male, and (unlike ‘private’ indoor playhouses, where admission cost at least six times as much) were drawn from all ranks of society. 
+It is not hard to see why. The play is set in Verona, but – as so often with Shakespeare – the streets we hear described on stage are also those of the bustling, overcrowded, pestilent, noisy and noisome city in which he lived and worked. London was a young city in the 1590s, and the crowds who took their chances with prostitutes and pickpockets in the entertainment districts were even younger; contemporary reports suggest audiences at the open-air theatres were predominantly male, and (unlike ‘private’ indoor playhouses, where admission cost at least six times as much) were drawn from all ranks of society. 
 
 ![Illustration from Vincentio Saviolo his Practise, showing how to fight with rapier and dagger. BRITISH LIBRARY](/images/fencing-elizabethans.webp)
 
@@ -35,3 +35,10 @@ Audiences at early performances of *Romeo & Juliet* must have watched the openin
 5. How does this scene set the tone for the rest of the play?
 
 >[](challenge) Why do you think masculinity is easy to connect with violence?
+
+- DEFINITIONS:
+  - volatile: (adj) likely to change suddenly  
+  - pestilent: (adj) harmful, dangerous  
+  - contemporary: (adj) belonging to the same period  
+  - mayhem: (n) chaos, disorder  
+  - martial: (adj) related to military forces

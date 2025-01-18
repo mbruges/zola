@@ -7,7 +7,7 @@ extra:
     tags: ["pearson", "anthology", "poetry"]
 ---
 
-```pre
+<pre class="language-pre">
 If you can keep your head when all about you     
     Are losing theirs and blaming it on you,     
 If you can trust yourself when all men doubt you,  
@@ -43,4 +43,11 @@ If you can fill the unforgiving minute
     With sixty seconds’ worth of distance run,     
 Yours is the Earth and everything that’s in it,     
     And—which is more—you’ll be a Man, my son!  
-```
+</pre>
+
+- DEFINITIONS:
+  - impostors: (n) deceptive pretenders, fakes  
+  - virtue: (n) moral excellence, goodness  
+  - unforgiving: (adj) harsh, relentless  
+  - knaves: (n) dishonest men, rogues  
+  - sinew: (n) strength, toughness

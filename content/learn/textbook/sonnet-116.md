@@ -7,7 +7,7 @@ extra:
     tags: ["pearson", "anthology", "poetry"]
 ---
 
-```pre
+<pre class="language-pre">
 Let me not to the marriage of true minds  
 Admit impediments; love is not love  
 Which alters when it alteration finds,  
@@ -20,6 +20,16 @@ Love's not time's fool, though rosy lips and cheeks
 Within his bending sickle's compass come.  
 Love alters not with his brief hours and weeks,  
 But bears it out even to the edge of doom:  
-If this be error and upon me proved,  
-I never writ, nor no man ever loved.  
-```
+    If this be error and upon me proved,  
+    I never writ, nor no man ever loved.  
+</pre>
+
+- DEFINITIONS:
+  - impediments: (n) obstacles, hindrances  
+  - alters: (v) changes, modifies  
+  - tempests: (n) violent storms  
+  - wand'ring: (adj) wandering, roaming  
+  - compass: (n) boundary, limits  
+  - doom: (n) fate, judgment
+  - sickle: (n) tool for harvesting
+  - writ: (v) wrote

@@ -126,9 +126,7 @@ And to be visited in the very eye of the day
 By Hygeia, his daughter, her name still clarifying  
 The haven of light she was, the undarkening door.  
   
-  
 ## IV  
-  
   
 The room I came from and the rest of us all came from  
 Stays pure reality where I stand alone,  
@@ -149,3 +147,13 @@ In that hoarsened whisper of triumph,
 "And what do you think  
 Of the new wee baby the doctor brought for us all  
 When I was asleep?"
+
+- DEFINITIONS:
+  - nosy: (adj) overly inquisitive, curious  
+  - hypnotist: (n) a person who uses hypnosis  
+  - hyperborean: (adj) extremely cold, frigid  
+  - sanatorium: (n) health facility for patients  
+  - epiphany: (n) sudden realization or insight  
+  - miraculum: (n) a miraculous event or phenomenon
+  - Hygeia: (n) goddess of cleanliness, hygiene
+  - Asclepius: (n) god of medicine & doctors

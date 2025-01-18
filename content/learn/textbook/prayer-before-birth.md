@@ -6,6 +6,8 @@ extra:
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]
 ---
+
+<pre class="language-pre">
 I am not yet born; O hear me.  
 Let not the bloodsucking bat or the rat or the stoat or the  
 club-footed ghoul come near me.  
@@ -50,4 +52,12 @@ like water held in the
 hands would spill me.  
   
 Let them not make me a stone and let them not spill me.  
-Otherwise kill me.  
+Otherwise kill me.
+</pre>
+
+- DEFINITIONS:
+  - lethal: (adj) deadly, causing death  
+  - dragoon: (v) to coerce, force  
+  - automaton: (n) a mechanical figure, robot  
+  - dissipate: (v) to scatter, disperse  
+  - bloodsucking: (adj) feeding on blood, parasitic

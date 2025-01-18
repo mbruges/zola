@@ -6,6 +6,8 @@ extra:
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]
 ---
+
+<pre class="language-pre">
 Remember me when I am gone away,   
          Gone far away into the silent land;   
          When you can no more hold me by the hand,   
@@ -20,3 +22,10 @@ Yet if you should forget me for a while
          A vestige of the thoughts that once I had,   
 Better by far you should forget and smile   
          Than that you should remember and be sad.
+</pre>
+
+- DEFINITIONS:
+  - vestige: (n) a trace or remainder  
+  - counsel: (n) advice or guidance  
+  - grieve: (v) to feel deep sorrow  
+  - corruption: (n) decay, dishonesty

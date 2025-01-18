@@ -35,3 +35,12 @@ Tyger Tyger burning bright,
 In the forests of the night:  
 What immortal hand or eye,  
 Dare frame thy fearful symmetry?
+
+- DEFINITIONS:
+  - immortal: (adj) living forever  
+  - symmetry: (n) matching pattern of stripes  
+  - sinews: (n) tendons, muscles  
+  - dread: (adj) great fear  
+  - terrors: (n) intense fears
+  - frame: (v) create, build
+  - anvil: (n) tool for working metal

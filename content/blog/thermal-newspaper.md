@@ -13,12 +13,13 @@ Reading things on paper is [better for your brain](https://phys.org/news/2024-02
 Rather than blearily scrolling through BBC News first thing, why not get the news from a miniature newspaper, freshly printed each morning?  It's not quite ["sky before screens"](https://www.cyclingweekly.com/news/sky-before-screens-has-made-me-a-better-cyclist-could-it-work-for-you), but *"paper before pixels"* has a ring to it.
 
 ![The finished product, a newspaper printed on thermal paper showing the date, weather and news headlines](/images/nano-paper.webp)
+*Behold, a literal [doom scroll](https://en.wikipedia.org/wiki/Doomscrolling)*
 
-Here's a guide to make it work: we'll go through setting up the [printer](#heating-up-the-press), formatting the [text](#fun-with-formatting), and using AI to generate our s[ummarised headlines](#the-news-digested).
+In this post, we'll go through setting up the [printer](#heating-up-the-press), formatting the [text](#fun-with-formatting), and finally using AI to generate our [summarised headlines](#the-news-digested).
 
 ## Heating up the press
 
-The first step is <sup>re-</sup>learning[^1] how to operate the printer itself. It's a fairly standard model from our friends at the great electronics bazaar of Shenzen; one of hundreds that can be found on Amazon or Ali Express. I *think* [this](https://amazon.com) is the model, but frankly they're so commoditised that these steps ought to work regardless.
+The first step is <sup>re-</sup>learning[^1] how to operate the printer itself. It's a fairly standard model from our friends at the great electronics bazaar of Shenzen; one of hundreds that can be found on Amazon or Ali Express. [This](https://aliexpress.com/item/1005005900329185.html?gatewayAdapt=glo2ara) is my model, but frankly they're so commoditised that these steps ought to work regardless.
 
 Start by connecting the printer directly over USB.[^2] On Linux[^3] we can run this command to see if it shows up in USB directory...
 
@@ -103,15 +104,19 @@ This prompt consistently yields a condensed summary of the big stories:
 QUERY="Here is today's news, summarise it in five bullet-points: $NEWS. Respond with a five bullet-point summary of today's news. You can ignore stories that are less newsworthy or important. Keep each summary to no more than 18 words. Follow this format: '//  BRIEF HEADLINE: More details about the story, summarising the key events, location etc.' "
 ```
 
+## The finished product
+
 Assuming all goes well and GPT-4o-mini delivers the goods, we're ready to go to press.
 
-`Echo` it all into `/dev/usb/lp0`, and...
+`Echo` the output - plus the title and weather - all into `/dev/usb/lp0`, and...
 
-![The finished product, a newspaper printed on thermal paper showing the date, weather and news headlines](/images/nano-paper.webp)
+![The finished product, a newspaper printed on thermal paper showing the date, weather and news headlines](/images/tprinter.gif)
 
-Wonderful. All that's left is to schedule a `cron` job to run the script every morning, so we can wake up to our latest *Nano Newspaper*
+Wonderful. All that's left is to check we're full loaded with thermal paper, and to schedule a `cron` job to run the script every morning.
+
+Now, we can wake up to our latest *Nano Newspaper*. Ideal with an equally tiny cup of espresso (though maybe [wash your hands first](https://www.pca.state.mn.us/business-with-us/bpa-and-bps-in-thermal-paper)). ☕
 
 [^1]: My Github repo tells me I started a similar project nearly two years ago, but have clearly forgotten all the fiddly bits. If only I'd written notes on *paper*.
 [^2]: This printer also proudly advertises Bluetooth connectivity, which requires an Android app installed via an `.apk` from [baidu.com](https://baidu.com). No thanks.
-[^3]: If you're trying this on Windows: may God go with thee, and follow Mike's [guide here](https://mike42.me/blog/2015-04-getting-a-usb-receipt-printer-working-on-windows).
+[^3]: If you're trying this on Windows: may God go with thee, follow Mike's [guide here](https://mike42.me/blog/2015-04-getting-a-usb-receipt-printer-working-on-windows).
 [^4]: If this isn't on your system - as was the case with my Pi Zero - you can install it with the [libxml2-utils](https://manpages.debian.org/buster/libxml2-utils/xmllint.1.en.html) package.

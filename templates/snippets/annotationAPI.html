@@ -1,5 +1,43 @@
 <script>
     const approvedUsers = ["acct:mbruges@hypothes.is"];
+    function showDefinitions(){
+      console.log("running defs")
+      var defContainer = false
+      lists = document.getElementsByTagName('ul')
+      for (var i =0; i < lists.length; i++) {
+        if (lists[i].innerText.includes("DEFINITIONS")) {
+          defContainer = lists[i]
+          lists[i].style.display = "none"
+          break
+        }
+      }
+      if (!defContainer){
+        console.log("no definitions found")
+        return
+      }
+      console.log("definitions found, replacing")
+      defList = defContainer.getElementsByTagName('li')
+      let word =''
+      let def =''
+      let container = document.getElementById('container')
+      for (var i=0; i < defList.length; i++){
+        word = defList[i].innerText.split(':')[0].trim()
+        def = defList[i].innerText.split(':')[1].trim()
+        if (document.getElementById('container').innerText.toUpperCase().includes(word.toUpperCase())){
+          console.log("attempting replace")
+          container.innerHTML = container.innerHTML.replace(new RegExp(`(${word})`,'ig'),`<abbr class=def data-title="${def}">${word}</abbr>`)
+        }
+      }
+    }
+
+    function setTabIndex() {
+      let tabIndex = 3;
+      const abbrElements = document.querySelectorAll('abbr');
+      abbrElements.forEach(abbr => {
+          abbr.setAttribute('tabindex', tabIndex);
+          tabIndex++;
+      });
+    }
 
     function addAnnotationToPage(annotation) {
         // console.log(annotation)
@@ -27,12 +65,11 @@
             XPathResult.FIRST_ORDERED_NODE_TYPE,
             null,
         ).singleNodeValue;
-        // console.log(container ? container.outerHTML : 'Container not found');
         if (container) {
             console.log(container.innerHTML);
             container.innerHTML = container.innerHTML.replace(
                 exactText,
-                `<abbr href="#" class="highlight-link" title="${text}">${exactText}</abbr>`,
+                `<abbr href="#" class="note" data-title="${text}">${exactText}</abbr>`,
             );
         }
     }
@@ -60,24 +97,24 @@
                     console.log("Unapproved user: " + annotation.user);
                 }
             });
+        console.log("finished loading annotations")
+        setTabIndex()
         } else {
             console.error("Failed to fetch annotations", response.status);
         }
     }
 
+
     window.addEventListener("load", () => {
         console.log("window loaded");
         fetchAnnotations();
+        showDefinitions()
     });
 </script>
 
 <style>
-    /* <abbr> option... https://stackoverflow.com/questions/9150796/change-how-fast-title-attributes-tooltip-appears#:~:text=i%20am%20using%20the%20following */
-    .highlight-link,
     abbr {
-        background-color: rgba(var(--a), 0.5);
         background-color: color-mix(in srgb, var(--a), transparent 80%);
-        border-radius: var(--border-radius);
         font-family: sans-serif;
         text-decoration: none;
         color: var(--t);
@@ -85,84 +122,51 @@
         padding-right: 0.2em;
         margin-left: -0.2em;
         margin-right: -0.2em;
-    }
-
-    abbr[title] {
         position: relative;
         cursor: help;
+        border: 1px solid transparent;
     }
 
-    abbr[title]::before,
-    abbr[title]::after {
-        display: block;
-        z-index: 9999;
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        padding: 0.25rem 0.5rem;
-        overflow: hidden;
-        transform: translate(-50%, -0.25rem);
-        border-radius: var(--border-radius);
-        background: var(--t);
-        content: attr(title);
-        color: var(--b);
-        font-style: normal;
-        font-size: 0.875rem;
-        text-decoration: none;
-        text-overflow: ellipsis;
-        /* white-space: wrap; */
-        opacity: 0;
-        pointer-events: none;
+    .def {
+        background-color: transparent !important;
+        border-bottom: 1pt dashed var(--a) !important;
+        border-radius: 0px;
+    }
+    abbr:hover, abbr:focus {
+        border: 1px solid var(--a) !important;
     }
 
-    abbr[title]::before {
-        min-width: fit-content;
-        width: 13em;
-        text-align: center;
+    abbr:hover::after,
+    abbr:focus::after {
+      content: attr(data-title);
+      font-size: 0.85em;
+      padding-bottom: 3em;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -0.25rem);
+      bottom: 82%;
+      min-width: 15em;
+      text-overflow: ellipsis;
+      text-align: center;
+      background-color: var(--a);
+      color: var(--b);
+      box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+      font-size: 14px;
+      padding: 3px 5px;
+      z-index: 999;
     }
 
-    abbr[title]::after {
-        padding: 0;
-        transform: translate(-50%, 0rem);
-        border-top: 0.3rem solid;
-        border-right: 0.3rem solid transparent;
-        border-left: 0.3rem solid transparent;
-        border-radius: 0;
-        background-color: transparent;
-        content: "";
+    .def:hover::after,
+    .def:focus::after{
+        background-color: var(--b);
         color: var(--t);
+        font-style: italic;
+        bottom: -1.55rem;
+        border: 1pt dashed var(--a) !important;
+        max-height: 1.1rem;
+        line-height: 0.9em;
+        height:1.1em;
+        overflow-y:auto;
     }
 
-    @media (hover: hover) and (pointer: fine) {
-        abbr[title]:hover::before,
-        abbr[title]:hover::after {
-            --pico-tooltip-slide-to: translate(-50%, -0.25rem);
-            transform: translate(-50%, 0.75rem);
-            animation-duration: 0.2s;
-            animation-fill-mode: forwards;
-            animation-name: tooltip-slide;
-            opacity: 0;
-        }
-        abbr[title]:focus::after,
-        abbr[title]:hover::after {
-            --pico-tooltip-caret-slide-to: translate(-50%, 0rem);
-            transform: translate(-50%, -0.25rem);
-            animation-name: tooltip-caret-slide;
-        }
-    }
-    @keyframes tooltip-slide {
-        to {
-            transform: var(--pico-tooltip-slide-to);
-            opacity: 1;
-        }
-    }
-    @keyframes tooltip-caret-slide {
-        50% {
-            opacity: 0;
-        }
-        to {
-            transform: var(--pico-tooltip-caret-slide-to);
-            opacity: 1;
-        }
-    }
 </style>

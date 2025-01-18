@@ -12,7 +12,7 @@ taxonomies:
 
 --- 
 
-```quote
+<pre class="language-pre">
 O what can ail thee, knight-at-arms,
        Alone and palely loitering?
 The sedge has withered from the lake,
@@ -72,4 +72,15 @@ And this is why I sojourn here,
        Alone and palely loitering,
 Though the sedge is withered from the lake,
        And no birds sing.
-```
+</pre>
+
+- DEFINITIONS
+  - sedge: plants - reeds etc - found around water
+  - loitering: waiting without purpose
+  - manna: bread from heaven
+  - sojourn: travel, journey
+  - meads: meadows, fields
+  - haggard: exhausted
+  - garland: ring of flowers to be worn
+  - grot: small cave or home
+  - anguish: sadness and anger

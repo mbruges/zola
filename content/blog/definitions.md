@@ -132,4 +132,10 @@ The beauty of this approach? It differentiates by design. The student isn't *obl
 
 A good vocabulary list should allow struggling readers to walk, and able readers to fly. No more stumbling, just reading and - eventually - understanding.
 
+## What next?
+
+Time to put the tool to use. You ought to start seeing definitions appearing on [Extracts](@/learn/textbook/_index.md) over the next few days. There may also be some *annotations* showing up, but that's a post for later.
+
+I'll see if I can get the tool working as a web [experiment](@/experiments/_index.md), too. Watch this space!
+
 [^1]: In the spirit of the [earlier experiment](@/blog/filtered-unfiltered.md), of course.

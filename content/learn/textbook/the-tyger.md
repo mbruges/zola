@@ -37,7 +37,7 @@ What immortal hand or eye,
 Dare frame thy fearful symmetry?
 
 - DEFINITIONS:
-  - immortal: (adj) living forever  
+  - immortal: (adj) god-like 
   - symmetry: (n) matching pattern of stripes  
   - sinews: (n) tendons, muscles  
   - dread: (adj) great fear  

@@ -8,6 +8,7 @@
         if (lists[i].innerText.includes("DEFINITIONS")) {
           defContainer = lists[i]
           lists[i].style.display = "none"
+          lists[i].setAttribute('id','defContainer') = "none"
           break
         }
       }
@@ -176,4 +177,9 @@
         }
     }
 
+    @media print {
+        li, ul {
+            display: block !important;
+        }
+    }
 </style>

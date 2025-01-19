@@ -1,6 +1,6 @@
 ---
 authors: ["Max Bruges"]
-date: 2025-10-03
+#date: 2025-10-03
 title: The air-gapped classroom
 draft: true
 description: Building a room-wide web, just for you.

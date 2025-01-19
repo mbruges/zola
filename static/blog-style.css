@@ -302,7 +302,7 @@ marker columns,
 
 footer {
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     display: block;
     width: 100%;
     margin-left: auto;
@@ -312,23 +312,12 @@ footer {
 }
 
 footer a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 hr {
     opacity: 0.8;
 }
-
-/* strong > em,
-em > strong {
-    color: var(--text) !important;
-    background-color: var(--highlight);
-    font-style: normal;
-    margin: -0.2em;
-    padding: 0.15em;
-    border-radius: 0.3em;
-    border-right: 4px;
-} */
 
 blockquote,
 pre:has(code.language-quote) {

@@ -38,3 +38,4 @@ over their small bones.
   - congregation: (n) group assembled for worship  
   - frantic: (adj) wildly excited or anxious  
   - bless: (v) to give well-being or happiness
+  - perfection: ideal, flawless, unimprovable

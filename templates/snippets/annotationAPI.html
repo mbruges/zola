@@ -19,11 +19,11 @@
       defList = defContainer.getElementsByTagName('li')
       let word =''
       let def =''
-      let container = document.getElementById('container')
+      let container = document.getElementById('content')
       for (var i=0; i < defList.length; i++){
         word = defList[i].innerText.split(':')[0].trim()
         def = defList[i].innerText.split(':')[1].trim()
-        if (document.getElementById('container').innerText.toUpperCase().includes(word.toUpperCase())){
+        if (document.getElementById('content').innerText.toUpperCase().includes(word.toUpperCase())){
           console.log("attempting replace")
           container.innerHTML = container.innerHTML.replace(new RegExp(`(${word})`,'ig'),`<abbr class=def data-title="${def}">${word}</abbr>`)
         }
@@ -167,6 +167,13 @@
         line-height: 0.9em;
         height:1.1em;
         overflow-y:auto;
+    }
+
+    @media screen and (max-width: 500px) {
+        abbr:hover::after,
+        abbr:focus::after {
+            left:110%
+        }
     }
 
 </style>

@@ -8,12 +8,12 @@ extra:
   icon: 💬
 ---
 
-Decoding vocabulary is often the first stumbling block for a developing reader. 
+Decoding vocabulary is often the first stumbling block for a developing reader.
 
-But with some help from GPT-4o and some trusty HTML, we can give our learners a chance to vault these blocks and stay in the flow. 
+But with some help from GPT-4o and some trusty HTML, we can give our learners a chance to vault these blocks and stay in the flow.
 
 ![A tiger](/images/tiger-forest.webp)
-*What immortal LLM could thy fearful symmetry?*
+*What immortal LLM could frame thy fearful symmetry?*
 
 ## Preempt, pre-teach, prepare
 
@@ -50,10 +50,6 @@ The digital space affords us much more freedom to choose how and when the new vo
 <center>
 
 <style>
-    #snippet {
-        font-size: 1.2em;
-    }
-
     abbr {
         background-color: color-mix(in srgb, var(--a), transparent 80%);
         font-family: sans-serif;

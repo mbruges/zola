@@ -13,10 +13,11 @@ elif [[ "$(pwd)" != *"/zola/content/learn/textbook" ]]; then
     exit 1
 fi
 
-echo "
-\`\`\`pre
+echo "<pre class='language-pre'>
 
-\`\`\`
+
+
+</pre>
 " > temp.md && micro -parsecursor true temp.md:3:0
 
 if [[ $(wc -c < temp.md) -le 5 ]]; then

@@ -5,3 +5,4 @@ temp.*
 *.command
 .DS*
 .vscode
+cspell.json

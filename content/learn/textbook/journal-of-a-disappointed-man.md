@@ -58,4 +58,11 @@ he turned on his heels and walked away.
 With this eclipse of interest, the incident  
 was suddenly closed. First in ones and twos,  
 then altogether, the men followed. That left  
-the pile still in mid-air, and me of course.  
+the pile still in mid-air, and me of course.
+
+- DEFINITIONS:
+  - paraphernalia: (n) equipment, special items  
+  - ruminative: (adj) thoughtful, reflective  
+  - monosyllables: (n) words of one syllable  
+  - baffled: (adj) confused, puzzled  
+  - trajectory: (n) path, course of movement

@@ -569,6 +569,10 @@ a:focus > code {
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
         background-color: transparent !important;
+        --b: #fffce4;
+        --t: #313131;
+        --a: #51518a;
+        --s: #80808034;
     }
     nav,
     footer,

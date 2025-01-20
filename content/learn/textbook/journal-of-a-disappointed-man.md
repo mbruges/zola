@@ -61,8 +61,14 @@ then altogether, the men followed. That left
 the pile still in mid-air, and me of course.
 
 - DEFINITIONS:
+  - pile: (n) large post used to hold up piers
+  - pier: (n) wooden platform over sea
+  - crack of Doom: (n) the end of time
   - paraphernalia: (n) equipment, special items  
-  - ruminative: (adj) thoughtful, reflective  
+  - ruminative: (adj) thoughtful, reflective
+  - foreman: (n) leader of workmen
+  - baffled: (n) confused
   - monosyllables: (n) words of one syllable  
   - baffled: (adj) confused, puzzled  
   - trajectory: (n) path, course of movement
+  - hawser: (n) cable used for building

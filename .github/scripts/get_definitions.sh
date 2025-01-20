@@ -3,7 +3,7 @@
 FILE_PATH="$1"
 
 TEXT=$( cat $FILE_PATH )
-
+touch temp.txt
 
 if [ ${#TEXT} -lt 2 ]; then
     echo "No text provided from $FILE_PATH, check filepath"
@@ -25,12 +25,16 @@ OUTPUT=$(curl -s "https://api.mxb.fyi/gpt-mini?query=$QUERY")
 echo $OUTPUT
 
 if [ ${#ADDITIONAL} -gt 4 ]; then
-    echo -e "\n- DEFINITIONS:" >> $FILE_PATH
+    echo -e "\n- DEFINITIONS:" >> temp.txt
 fi
 
-IFS="~" read -r -a list <<< "$( echo $OUTPUT | sed 's|- | ~ |g' )"
+IFS="~" read -r -a list <<< "$( echo "$OUTPUT" | sed 's|- | ~ |g' )"
+echo $list
 for element in "${list[@]}"; do
 if [[ ${#element} -gt 3 ]] && [[ ! $element =~ "decimate" ]] && [[ ! $element =~ "fastidious" ]]; then
-        echo "  -$element" | sed 's| \n||g' >> $FILE_PATH
+        echo "  -$element" | sed 's| \n||g' >> temp.txt
     fi
 done
+
+cat temp.txt >> $FILE_PATH
+rm temp.txt

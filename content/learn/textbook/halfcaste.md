@@ -62,5 +62,4 @@ And de whole of yu mind
   
 An I will tell yu  
 De other half  
-Of my story  
-  
+Of my story

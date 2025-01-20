@@ -1,43 +1,51 @@
 <script>
     const approvedUsers = ["acct:mbruges@hypothes.is"];
-    function showDefinitions(){
-      console.log("running defs")
-      var defContainer = false
-      lists = document.getElementsByTagName('ul')
-      for (var i =0; i < lists.length; i++) {
-        if (lists[i].innerText.includes("DEFINITIONS")) {
-          defContainer = lists[i]
-          lists[i].style.display = "none"
-          lists[i].setAttribute('id','defContainer')
-          break
+    function showDefinitions() {
+        console.log("running defs");
+        var defContainer = false;
+        lists = document.getElementsByTagName("ul");
+        for (var i = 0; i < lists.length; i++) {
+            if (lists[i].innerText.includes("DEFINITIONS")) {
+                defContainer = lists[i];
+                lists[i].style.display = "none";
+                lists[i].setAttribute("id", "defContainer");
+                break;
+            }
         }
-      }
-      if (!defContainer){
-        console.log("no definitions found")
-        return
-      }
-      console.log("definitions found, replacing")
-      defList = defContainer.getElementsByTagName('li')
-      let word =''
-      let def =''
-      let container = document.getElementById('content')
-      for (var i=0; i < defList.length; i++){
-        word = defList[i].innerText.split(':')[0].trim()
-        def = defList[i].innerText.split(':')[1].trim()
-        if (document.getElementById('content').innerText.toUpperCase().includes(word.toUpperCase())){
-          console.log("attempting replace")
-          container.innerHTML = container.innerHTML.replace(new RegExp(`(${word})`,'ig'),`<abbr class=def data-title="${def}">${word}</abbr>`)
+        if (!defContainer) {
+            console.log("no definitions found");
+            return;
         }
-      }
+        console.log("definitions found, replacing");
+        defList = defContainer.getElementsByTagName("li");
+        let word = "";
+        let def = "";
+        let container = document.getElementById("content");
+        for (var i = 0; i < defList.length; i++) {
+            word = defList[i].innerText.split(":")[0].trim();
+            def = defList[i].innerText.split(":")[1].trim();
+            if (
+                document
+                    .getElementById("content")
+                    .innerText.toUpperCase()
+                    .includes(word.toUpperCase())
+            ) {
+                console.log("attempting replace");
+                container.innerHTML = container.innerHTML.replace(
+                    new RegExp(`(${word})`, "ig"),
+                    `<abbr class=def data-title="${def}">${word}</abbr>`,
+                );
+            }
+        }
     }
 
     function setTabIndex() {
-      let tabIndex = 3;
-      const abbrElements = document.querySelectorAll('abbr');
-      abbrElements.forEach(abbr => {
-          abbr.setAttribute('tabindex', tabIndex);
-          tabIndex++;
-      });
+        let tabIndex = 3;
+        const abbrElements = document.querySelectorAll("abbr");
+        abbrElements.forEach((abbr) => {
+            abbr.setAttribute("tabindex", tabIndex);
+            tabIndex++;
+        });
     }
 
     function addAnnotationToPage(annotation) {
@@ -98,18 +106,17 @@
                     console.log("Unapproved user: " + annotation.user);
                 }
             });
-        console.log("finished loading annotations")
-        setTabIndex()
+            console.log("finished loading annotations");
+            setTabIndex();
         } else {
             console.error("Failed to fetch annotations", response.status);
         }
     }
 
-
     window.addEventListener("load", () => {
         console.log("window loaded");
         fetchAnnotations();
-        showDefinitions()
+        showDefinitions();
     });
 </script>
 
@@ -133,32 +140,33 @@
         border-bottom: 1pt dashed var(--a) !important;
         border-radius: 0px;
     }
-    abbr:hover, abbr:focus {
+    abbr:hover,
+    abbr:focus {
         border: 1px solid var(--a) !important;
     }
 
     abbr:hover::after,
     abbr:focus::after {
-      content: attr(data-title);
-      font-size: 0.85em;
-      padding-bottom: 3em;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -0.25rem);
-      bottom: 82%;
-      min-width: 15em;
-      text-overflow: ellipsis;
-      text-align: center;
-      background-color: var(--a);
-      color: var(--b);
-      box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
-      font-size: 14px;
-      padding: 3px 5px;
-      z-index: 999;
+        content: attr(data-title);
+        font-size: 0.85em;
+        padding-bottom: 3em;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -0.25rem);
+        bottom: 82%;
+        min-width: 15em;
+        text-overflow: ellipsis;
+        text-align: center;
+        background-color: var(--a);
+        color: var(--b);
+        box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.4);
+        font-size: 14px;
+        padding: 3px 5px;
+        z-index: 999;
     }
 
     .def:hover::after,
-    .def:focus::after{
+    .def:focus::after {
         background-color: var(--b);
         color: var(--t);
         font-style: italic;
@@ -166,19 +174,20 @@
         border: 1pt dashed var(--a) !important;
         max-height: 1.1rem;
         line-height: 0.9em;
-        height:1.1em;
-        overflow-y:auto;
+        height: 1.1em;
+        overflow-y: auto;
     }
 
     @media screen and (max-width: 500px) {
         abbr:hover::after,
         abbr:focus::after {
-            left:110%
+            left: 110%;
         }
     }
 
     @media print {
-        li, ul {
+        li,
+        ul {
             display: block !important;
         }
     }

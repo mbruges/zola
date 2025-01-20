@@ -6,6 +6,8 @@ extra:
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]
 ---
+
+<pre class="language-pre">
 I discovered these men driving a new pile into the pier.  
 There was all the paraphernalia  
 of chains, pulleys, cranes, ropes and, as I said,  
@@ -59,9 +61,10 @@ With this eclipse of interest, the incident
 was suddenly closed. First in ones and twos,  
 then altogether, the men followed. That left  
 the pile still in mid-air, and me of course.
+</pre>
 
 - DEFINITIONS:
-  - pile: (n) large post used to hold up piers
+  - pile: (n) large post used to hold up p.iers
   - pier: (n) wooden platform over sea
   - crack of Doom: (n) the end of time
   - paraphernalia: (n) equipment, special items  

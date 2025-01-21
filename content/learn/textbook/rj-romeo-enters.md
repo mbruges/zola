@@ -3,7 +3,7 @@ authors: ["William Shakespeare"]
 title: "Enter Romeo"
 draft: false
 extra:
-  icon: 📚
+  icon: 💔
   ks: 4
   tags: ["drama"]
 ---

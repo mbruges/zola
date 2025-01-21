@@ -1,6 +1,7 @@
 <script>
     const approvedUsers = ["acct:mbruges@hypothes.is"];
     function showDefinitions() {
+        //maybe move the defContainer out of the body?
         console.log("running defs");
         var defContainer = false;
         lists = document.getElementsByTagName("ul");
@@ -9,6 +10,8 @@
                 defContainer = lists[i];
                 lists[i].style.display = "none";
                 lists[i].setAttribute("id", "defContainer");
+                var definitionsDiv = document.getElementById("definitions");
+                definitionsDiv.appendChild(lists[i]);
                 break;
             }
         }
@@ -18,24 +21,55 @@
         }
         console.log("definitions found, replacing");
         defList = defContainer.getElementsByTagName("li");
+        defContainer.parentNode.removeChild(defContainer);
         let word = "";
         let def = "";
         let container = document.getElementById("content");
+        wordDefPairs = [];
         for (var i = 0; i < defList.length; i++) {
             word = defList[i].innerText.split(":")[0].trim();
             def = defList[i].innerText.split(":")[1].trim();
+            wordDefPairs.push([word, def]);
             if (
                 document
                     .getElementById("content")
                     .innerText.toUpperCase()
                     .includes(word.toUpperCase())
             ) {
-                console.log("attempting replace");
+                console.log(`attempting replace of ${word}`);
                 container.innerHTML = container.innerHTML.replace(
                     new RegExp(`(${word})`, "ig"),
-                    `<abbr class=def data-title="${def}">${word}</abbr>`,
+                    `<abbr class=def data-title="">${word}</abbr>`,
                 );
             }
+        }
+        //adding title data AFTER inserting, to avoid breaking HTML.
+        for (var i = 0; i < wordDefPairs.length; i++) {
+            word = wordDefPairs[i][0];
+            def = wordDefPairs[i][1];
+            const abbrElements = document.getElementsByTagName("abbr");
+            Array.from(abbrElements).forEach((element) => {
+                if (element.innerText.includes(word)) {
+                    element.setAttribute("data-title", def);
+                }
+                var defLength = element.getAttribute("data-title").length;
+                //automatically setting width
+                element.style.setProperty(
+                    "--min-width",
+                    `${defLength * 0.5}em`,
+                );
+
+                // Create a rule for this specific abbr element's hover and focus states
+                const style = document.createElement("style");
+                style.type = "text/css";
+                style.innerHTML = `
+                        abbr:hover::after,
+                        abbr:focus::after {
+                            min-width: var(--min-width) !important;
+                        }
+                    `;
+                document.head.appendChild(style);
+            });
         }
     }
 
@@ -147,6 +181,7 @@
 
     abbr:hover::after,
     abbr:focus::after {
+        --abbr-width: 10em;
         content: attr(data-title);
         font-size: 0.85em;
         padding-bottom: 3em;
@@ -154,7 +189,7 @@
         left: 50%;
         transform: translate(-50%, -0.25rem);
         bottom: 82%;
-        min-width: 15em;
+        min-width: var(--abbr-width);
         text-overflow: ellipsis;
         text-align: center;
         background-color: var(--a);

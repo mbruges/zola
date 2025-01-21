@@ -3,7 +3,7 @@ authors: ["William Shakespeare"]
 title: "Romeo & Juliet: Scene 1"
 draft: false
 extra:
-  icon: 📚
+  icon: ⚔️
   ks: 3
   tags: ["drama"]
 ---

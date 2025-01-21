@@ -8,6 +8,7 @@ extra:
 ---
 
 <pre class="language-pre">
+
 If I should die, think only this of me:  
       That there’s some corner of a foreign field  
 That is for ever England. There shall be  
@@ -23,9 +24,10 @@ And think, this heart, all evil shed away,
 Her sights and sounds; dreams happy as her day;  
       And laughter, learnt of friends; and gentleness,  
             In hearts at peace, under an English heaven.  
-<pre>
+            
+</pre>
 
-- DEFINITIONS:
+- DEFINITIONS
   - concealed: (v) hidden from view  
   - blest: (adj) blessed, made holy  
   - pulse: (n) heartbeat, rhythm  

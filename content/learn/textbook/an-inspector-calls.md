@@ -216,6 +216,7 @@ extra:
 **ERIC:** *(sitting down)* Yes, please. *(takes decanter and helps himself.)* mother says we mustn't stay too long. But I don't think it matters. I left 'em talking about clothes again. You'd think a girl had never any clothes before she gets married. Women are potty about 'em.
 
 **BIRLING:** Yes, but you've got to remember, my boy, that clothes mean something quite different to a woman. Not just something to wear – and not only something to make 'em look prettier – but – well, a sort of sign or token of their self-respect.
+
 **GERALD:** That's true.
 
 **ERIC:** *(eagerly)* Yes, I remember – *(but he checks himself.)*
@@ -1556,7 +1557,7 @@ and if you'd take some steps to find this young man and then make sure that he's
 **BIRLING:** Neither do I. If you'd had any sense of loyalty-
 
 **INSPECTOR:** *(cutting in, smoothly)* Just a minute, Mr Birling. There be plenty of time, when I've gone, for you all to adjust your family relationships. But now I must hear what your son has to tell me. *( sternly, to the three of them.)* And I'll be obliged if you'll let us get on without any further interruptions. *(turning to Eric.)* Now then.
-{{REWRITTEN_CODE}}
+
 **ERIC:** *(miserably)* Could I have a drink first?
 
 **BIRLING:** *(explosively)* No.
@@ -1726,7 +1727,7 @@ Come on, don't just look like that. Tell me – tell me – what happened?
 **ERIC:** *(almost threatening her)* You don't understand anything. You never did. You never even tried – you—
 
 **SHEILA:** *(frightened)* Eric, don't – don't—
-{{REWRITTEN_CODE}}
+
 **BIRLING:** *(furious, intervening)* Why, you hysterical young fool – get back – or I'll—
 
 **INSPECTOR:** *(taking charge, masterfully)* Stop!  
@@ -1746,7 +1747,7 @@ And be quiet for a moment and listen to me. I don't need to know any more. Neith
 **INSPECTOR:** You're offering the money at the wrong time, Mr Birling. *(He makes a move as if concluding the session, possibly shutting up notebook, etc. Then surveys them sardonically.)* No, I don't think any of you will forget. Nor that young man, Croft, though he at least had some affection for her and made her happy for a time. Well, Eva Smith's gone. You can't do her any more harm. And you can't do her any good now, either. You can't even say “I'm sorry, Eva Smith.”
 
 **SHEILA:** *(who is crying quietly)* That's the worst of it.
-{{REWRITTEN_CODE}}
+
 **INSPECTOR:** But just remember this. One Eva Smith has gone – but there are millions and millions and millions of Eva Smiths and John Smiths still left with us, with their lives, their hopes and fears, their suffering and chance of happiness, all intertwined with our lives, and what we think and say and do. We don't live alone. We are members of one body. We are responsible for each other. And I tell you that the time will soon come when, if men will not learn that lesson, then they will be taught it in fire and blood and anguish. Good night.
 
 *He walks straight out, leaving them staring, subdued and wondering. SHEILA is still quietly crying. MRS BIRLING has collapsed into a chair. ERIC is brooding desperately. BIRLING, the only active one, hears the front door slam, moves hesitatingly towards the door, stops, looks gloomily at the other three, then pours himself out a drink, which he hastily swallows.*
@@ -1840,7 +1841,7 @@ And be quiet for a moment and listen to me. I don't need to know any more. Neith
 **BIRLING:** *(angrily)* That's comic, that is, coming from you. You're the one it makes most difference to. You've confessed to theft, and now he knows all about it, and he can bring it out at the inquest, and then if necessary carry it to court. He can't do anything to your mother and Sheila and me – except perhaps make us look a bit ashamed of ourselves in public – but as for you, he can ruin you. You know.
 
 **SHEILA:** *(slowly)* We hardly ever told him anything he didn't know. Did you notice that?
-{{REWRITTEN_CODE}}
+
 **BIRLING:** That's nothing. He had a bit of information, left by the girl, and made a few smart guesses – but the fact remains that if we hadn't talked so much, he'd have had little to go on. *(looks angrily at them.)* And really, when I come to think of it, why you all had to go letting everything come out like that, beats me.
 
 **SHEILA:** It's all right talking like that now. But he made us confess.
@@ -1960,7 +1961,7 @@ Now who's this? Had I better go?
 **MRS BIRLING:** *(warningly)* Arthur – careful!
 
 **BIRLING:** *(hastily)* Yes, yes.
-{{REWRITTEN_CODE}}
+
 **SHEILA:** You see, Gerald, you haven't to know the rest of our crimes and idiocies.
 
 **GERALD:** That's all right, I don't want to. *(To Birling.)* What do you make of this business now? Was it a hoax?
@@ -2062,7 +2063,7 @@ Look here, Mr Birling. You sack a girl called Eva Smith. You've forgotten, but h
 **GERALD:** Well, then he happens to know that Sheila once had a girl sacked from Milward's shop. He tells us that it's this same Eva Smith. And he shows her a photograph that she recognizes.
 
 **SHEILA:** Yes. The same photograph.
-{{REWRITTEN_CODE}}
+
 **GERALD:** How do you know it's the same photograph? Did you see the one your father looked at?
 
 **SHEILA:** No, I didn't.
@@ -2136,7 +2137,7 @@ Look here, Mr Birling. You sack a girl called Eva Smith. You've forgotten, but h
 **GERALD:** *(decisively)* We can settle that at once.
 
 **SHEILA:** How?
-{{REWRITTEN_CODE}}
+
 **GERALD:** By ringing up the Infirmary. Either there's a dead girl there or there isn't.
 
 **BIRLING:** *(uneasily)* It will look a bit queer, won't it – ringing up at this time of night?
@@ -2214,3 +2215,25 @@ Yes? . . . Mr Birling speaking. . . . What? - here—
 **BIRLING:** That was the police. A girl has just died – on her way to the Infirmary – after swallowing some disinfectant. And a police inspector is on his way here – to ask some – questions -----
 
 *As they stare guiltily and dumbfounded, the curtain falls.*
+
+---
+
+- DEFINITIONS:
+  - bluff: (v) trick through lying
+  - pretence: (n) pretending
+  - evidence: (n) proof of something
+  - impact: (n) effect or influence
+  - engage : (v) to take part in
+  - inquiry: (n) asking questions
+  - pleasant: (adj) nice or enjoyable
+  - scandal: (n) bad event that shocks people, damages reputation
+  - hoax: (n) a trick, joke
+  - officious: (n) focussed on doing job
+  - Pitiful: (adj) very sad, weak
+  - shilling: (n) money, about $5 today
+  - Infirmary: (n) emergency room of hospital
+  - Honours List: (n) awards given to honourable people by Government
+  - knighthood: (n) special title, 'Sir', for honourable people
+  - prejudice: (n) judging people by appearances, class, status etc.
+  - impertinent: (adj) without respect for status
+  - public school: (n) expensive, elite private boarding school

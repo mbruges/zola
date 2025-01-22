@@ -295,7 +295,7 @@ I’m still on the bench. It may be something about a warrant.
 
 **INSPECTOR:** Yes, sir. Only recently transferred.
 
-**BIRLING:** I thought you must be. I was an alderman for years – and lord mayor two years ago – and I’m still on the bench – so I know the brumley police offices pretty well – and I thought I’d never seen you before.
+**BIRLING:** I thought you must be. I was an alderman for years – and lord mayor two years ago – and I’m still on the bench – so I know the Brumley police offices pretty well – and I thought I’d never seen you before.
 
 **INSPECTOR:** Quite so.
 
@@ -447,7 +447,7 @@ I’m still on the bench. It may be something about a warrant.
 
 **INSPECTOR:** I don't see much of him.
 
-**BIRLING:** Perhaps I ought to warn you that he's an old friend of mine, and that I see him fairly frequently. We play golf together sometimes up at the west brumley.
+**BIRLING:** Perhaps I ought to warn you that he's an old friend of mine, and that I see him fairly frequently. We play golf together sometimes up at the west Brumley.
 
 **INSPECTOR:** *(dryly)* I don't play golf.
 
@@ -2216,14 +2216,11 @@ Yes? . . . Mr Birling speaking. . . . What? - here—
 
 *As they stare guiltily and dumbfounded, the curtain falls.*
 
----
-
 - DEFINITIONS:
   - bluff: (v) trick through lying
   - pretence: (n) pretending
   - evidence: (n) proof of something
   - impact: (n) effect or influence
-  - engage : (v) to take part in
   - inquiry: (n) asking questions
   - pleasant: (adj) nice or enjoyable
   - scandal: (n) bad event that shocks people, damages reputation
@@ -2245,7 +2242,9 @@ Yes? . . . Mr Birling speaking. . . . What? - here—
   - guffaw: (v) laugh loudly
   - pessimistic: (adj) negative, expecting bad things
   - capital: (n) money, investements
-  - fiddlesticks: (n) nonsense! Ridiculous!
+  - fiddlesticks: (n) Nonsense! Ridiculous!
   - Balkans: (n) Eastern Europe, starting point of First World War
   - prosperity: (n) wealth, success
   - Bernard Shaws and H.G.Wells: famous, socialist-leaning writers
+  - hysterical: (n) over-emotional
+  - reproach: (v) tell off

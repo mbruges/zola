@@ -18,7 +18,7 @@ extra:
 
 *At rise of curtain, the four Birling's and Gerald are seated at the table, with Arthur Birling at one end, his wife at the other, Eric downstage and Sheila and Gerald seated upstage.*
 
-*EDNA, the parlourmaid, is just clearing the table, which has no cloth, of the dessert plates and champagne glasses,etc, and then replacing them with decanter of port, cigar box and cigarettes. Port glasses are already on the table. All five are in evening dress of the period, the men in tails and white ties, not dinner-jackets. Arthur Birling is a heavy-looking, rather portentous man in this middle fifties with fairly easy manners but rather provincial in this speech. His wife is about fifty, a rather cold woman and her husband's social superior. Sheila is a pretty girl in her early twenties, very pleased with life and rather excited. Gerald croft is a attractive chap about thirty, rather too manly to be a dandy but very much the well-bred young man-about-town. Eric is in his early twenties, not quite at ease, half shy, half assertive. At the moment they have all had a good dinner, are celebrating a special occasion, and are pleased with themselves.*
+*EDNA, the parlourmaid, is just clearing the table, which has no cloth, of the dessert plates and champagne glasses,etc, and then replacing them with decanter of port, cigar box and cigarettes. Port glasses are already on the table. All five are in evening dress of the period, the men in tails and white ties, not dinner-jackets. Arthur Birling is a heavy-looking, rather portentous man in this middle fifties with fairly easy manners but rather provincial in this speech. His wife is about fifty, a rather cold woman and her husband's social superior. Sheila is a pretty girl in her early twenties, very pleased with life and rather excited. Gerald Croft is a attractive chap about thirty, rather too manly to be a dandy but very much the well-bred young man-about-town. Eric is in his early twenties, not quite at ease, half shy, half assertive. At the moment they have all had a good dinner, are celebrating a special occasion, and are pleased with themselves.*
 
 **ARTHUR BIRLING:** Giving us the port, Edna? That’s right. *(he pushes it towards Eric.)* You ought to like this port, Gerald, as a matter of fact, Finchley told me it's exactly the same port your father gets from him.
 
@@ -185,7 +185,7 @@ extra:
 
 *(Birling lights his cigar and Gerald, who had lit a cigarette, helps himself to port, then pushes the decanter to Birling.)*
 
-**BIRLING:** Thanks. *(confidentially.)* by the way, there's something I’d like to mention – in strict confidence – while we're by ourselves. I have an idea that your mother – lady croft – while she doesn't object to my girl – feels you might have done better for yourself socially -
+**BIRLING:** Thanks. *(confidentially.)* by the way, there's something I’d like to mention – in strict confidence – while we're by ourselves. I have an idea that your mother – lady Croft – while she doesn't object to my girl – feels you might have done better for yourself socially -
 
 *(Gerald, rather embarrassed, begins to murmur some dissent, but Birling checks him.)*
 
@@ -363,13 +363,13 @@ I’m still on the bench. It may be something about a warrant.
 
 **GERALD:** Look here, sir. Wouldn't you rather I was out of this?
 
-**BIRLING:** I don't mind your being here, Gerald. And I’m sure you've no objection, have you, inspector? Perhaps I ought to explain first that this is Mr Gerald croft – the son of sir George croft – you know, crofts limited.
+**BIRLING:** I don't mind your being here, Gerald. And I’m sure you've no objection, have you, inspector? Perhaps I ought to explain first that this is Mr Gerald Croft – the son of sir George Croft – you know, Crofts limited.
 
-**INSPECTOR:** Mr Gerald croft, eh?
+**INSPECTOR:** Mr Gerald Croft, eh?
 
 **BIRLING:** Yes. Incidentally we've been modestly celebrating his engagement to my daughter, Sheila.
 
-**INSPECTOR:** I see. Mr croft is going to marry miss Sheila Birling?
+**INSPECTOR:** I see. Mr Croft is going to marry miss Sheila Birling?
 
 **GERALD:** *(smiling)* I hope so.
 
@@ -1396,7 +1396,7 @@ In fact, I heard that name for the first time tonight. What she did let slip –
 
 **INSPECTOR:** it was because she was going to have a child that she went for assistance to your mother's committee.
 
-**BIRLING:** Look here, this wasn't Gerald croft-
+**BIRLING:** Look here, this wasn't Gerald Croft-
 
 **INSPECTOR:** *(cutting in, sharply)* No, no. nothing to do with him.
 
@@ -2237,3 +2237,15 @@ Yes? . . . Mr Birling speaking. . . . What? - here—
   - prejudice: (n) judging people by appearances, class, status etc.
   - impertinent: (adj) without respect for status
   - public school: (n) expensive, elite private boarding school
+  - evening dress: (n) smart, formal clothes
+  - dandy: (n) fashionable man
+  - portentous: (adj) pompous, full of himself
+  - prominent: (adj) important
+  - provincial: (adj) slightly unsophisticated, lower-class
+  - guffaw: (v) laugh loudly
+  - pessimistic: (adj) negative, expecting bad things
+  - capital: (n) money, investements
+  - fiddlesticks: (n) nonsense! Ridiculous!
+  - Balkans: (n) Eastern Europe, starting point of First World War
+  - prosperity: (n) wealth, success
+  - Bernard Shaws and H.G.Wells: famous, socialist-leaning writers

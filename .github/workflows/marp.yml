@@ -23,7 +23,9 @@ jobs:
               --exclude 'blog/' \
               --exclude 'podcast/' \
               --exclude 'files/' \
+              --exclude 'secure/' \
               --exclude 'static.bak/' \
+              --exclude 'private/' \
               --max-size=25m \
               -e "ssh -p5222 -o StrictHostKeyChecking=no" \
               max@46.38.243.226:/home/max/marp_live/ static/lessons/

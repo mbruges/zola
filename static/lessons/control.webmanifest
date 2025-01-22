@@ -3,17 +3,25 @@
     "short_name": "Controls",
     "description": "PWA to control Live Lesson slides at learn.maxbruges.com",
     "icons": [
-        {
-            "src": "/control.svg",
-            "sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512",
-            "type": "image/svg+xml",
-            "purpose": "any"
-        }
+      {
+        "src": "/control.svg",
+        "sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512",
+        "type": "image/svg+xml",
+        "purpose": "any"
+      }
     ],
     "start_url": "/control.html",
     "display": "standalone",
     "theme_color": "#2A415F",
     "background_color": "#2A415F",
-    "prefer_related_applications":"false"
+    "prefer_related_applications": false,
+    "id": "mb-learn-live-controls",
+    "dir": "ltr",
+    "scope": "https://learn.maxbruges.com",
+    "lang": "en",
+    "orientation": "any",
+    "categories": [
+      "education",
+      "productivity"
+    ]
   }
-  

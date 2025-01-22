@@ -658,7 +658,7 @@ blockquote:has(a[href="stretch"]) p::before{
 
 
 blockquote:has(a[href="keyword"]) p::before{
-    content: "Keyword 🔑 ";
+    content: "🔑 ";
     color: rgb(152, 128, 11);
     font-weight:800;}
     

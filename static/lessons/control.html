@@ -1,9 +1,3 @@
-<!--THIS IS THE LATEST AND GREATEST VERSION - 20/11/2024
-
-This is the reference, and has been encrypted to /control.html
-
--->
-
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -25,6 +19,9 @@ var finalSlide = 1
 var nowControlling = false
 var subURL = "wss://socket.maxbruges.com/ws?key=Martha111"
 let liveURL = 'abort'
+var currentURL = ""
+let reconnectAttempts = 0;
+const maxReconnectAttempts = 2;
 
 function loadLessonList() {
     var lessonMenu = `<select onchange="changeLesson(this.value);" id="lessonName" value="" name="menu">\n<option value="" disabled selected>&#9776;</option>`
@@ -57,6 +54,7 @@ function loadLessonList() {
 
         webSocket = new WebSocket(url);
         webSocket.onopen = () =>{
+            isConnected = true
             let now = new Date().toLocaleTimeString()
             console.log("Connected websocket at " + now)
         }
@@ -72,8 +70,9 @@ function loadLessonList() {
               console.log('Refresh request')
               document.getElementById('live-frame').contentWindow.location.reload();
             }
-            else {
+            else if (liveURL != currentURL) {
               //SUCCESS
+              currentURL = liveURL
               document.getElementById('live-frame').hidden = false
               document.getElementById('loadingTag').innerHTML = ''
               document.getElementById('loadingTag').hidden = true
@@ -81,15 +80,23 @@ function loadLessonList() {
               if (nowControlling == false) {
                 document.getElementById('live-frame').src = "./" + liveURL
               }
+            } else {
+              console.log("new URL matches old, no refresh required.")
             }
         }
 
         webSocket.onclose = () => {
-                let now = new Date().toLocaleTimeString()
-                console.log("Reconnecting " + now)
-                { //adding this to handle repeated errors
-                    setTimeout(
-                        setupWebSocket(subURL), 1000);}
+          isConnected = false;
+              console.log("Connection lost, attempting to reconnect...");
+              if (reconnectAttempts < maxReconnectAttempts) {
+                  reconnectAttempts++;
+                  setTimeout(() => {
+                      setupWebSocket(subURL);
+                  }, 1000);
+              } else {
+                  console.log("Max reconnect attempts reached. Refreshing page...");
+                  location.reload();
+              }
             };
 
         webSocket.onerror = () => {
@@ -97,7 +104,12 @@ function loadLessonList() {
             console.log( "Error making connection at " + now )
             document.getElementById('loadingTag').innerHTML = 'Connection error 😵 <br><a onclick="window.reload()"><button>Refresh ♻️</button></a><br><a href="/list.html"><button>See lessons</button></a>'
         }
-
+        setInterval(() => {
+            if (!isConnected) {
+                console.log("Connection is lost. Refreshing page...");
+                location.reload();
+            }
+        }, 5000); // Check every 5 seconds
     }
 
     function changeLesson(rawUrl){
@@ -192,6 +204,7 @@ const logScrollPosition = () => {
              z-index: 99;
        	}
 
+
         #button-holder {
             position:fixed;
        		bottom:1em;
@@ -207,6 +220,19 @@ const logScrollPosition = () => {
             max-width:6em;
             opacity:0.5;
             font-size:1.5em;
+        }
+
+
+        @media screen and (max-width: 500px){
+        	 #lessonName, #skip-button, #abort-button {
+                    padding:0.3em;
+                    max-width:30vw;
+                    opacity:1;
+                    font-size:2.2em;
+                }
+               #lessonName {
+               	max-width:70vw;
+               }
         }
 
 
@@ -271,7 +297,8 @@ h1, .loading {
         function updateTime() {
             const now = new Date();
             const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            document.getElementById('currentTime').textContent = now.toLocaleTimeString('en-GB', options);
+            if (document.getElementById('currentTime')){
+              document.getElementById('currentTime').textContent = now.toLocaleTimeString('en-GB', options);}
         }
         setInterval(updateTime, 1000);
         updateTime(); // initial call to display time immediately

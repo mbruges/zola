@@ -49,31 +49,31 @@
             word = wordDefPairs[i][0];
             def = wordDefPairs[i][1];
             const abbrElements = document.getElementsByTagName("abbr");
-            Array.from(abbrElements).forEach((element) => {
-                if (element.innerText.includes(word)) {
-                    element.setAttribute("data-title", def);
+            Array.from(abbrElements).forEach((abbr) => {
+                if (abbr.innerText.includes(word)) {
+                    abbr.setAttribute("data-title", def);
                 }
-                var defLength = element.getAttribute("data-title").length;
-                //automatically setting width
-                newWidth = defLength * 0.5;
-                element.style.setProperty("--min-height", `initial`);
-                if (newWidth > 17) {
-                    newWidth = 16;
-                    element.style.setProperty("--min-height", `2em`);
-                }
-                element.style.setProperty("--min-width", `${newWidth}em`);
+                // var defLength = element.getAttribute("data-title").length;
+                // //automatically setting width
+                // newWidth = defLength * 0.5;
+                // abbr.style.setProperty("--min-height", `initial`);
+                // if (newWidth > 17) {
+                //     newWidth = 16;
+                //     element.style.setProperty("--min-height", `2em`);
+                // }
+                // abbr.style.setProperty("--min-width", `${newWidth}em`);
 
-                // Create a rule for this specific abbr element's hover and focus states
-                const style = document.createElement("style");
-                style.type = "text/css";
-                style.innerHTML = `
-                        abbr:hover::after,
-                        abbr:focus::after {
-                            min-width: var(--min-width) !important;
-                            min-height: var(--min-height) !important;
-                        }
-                    `;
-                document.head.appendChild(style);
+                // // Create a rule for this specific abbr element's hover and focus states
+                // const style = document.createElement("style");
+                // style.type = "text/css";
+                // style.innerHTML = `
+                //         abbr:hover::after,
+                //         abbr:focus::after {
+                //             min-width: var(--min-width) !important;
+                //             min-height: var(--min-height) !important;
+                //         }
+                //     `;
+                // document.head.appendChild(style);
             });
         }
     }
@@ -154,8 +154,17 @@
 
     window.addEventListener("load", () => {
         console.log("window loaded");
-        fetchAnnotations();
         showDefinitions();
+        fetchAnnotations();
+    });
+
+    let hasFetched = false;
+
+    window.addEventListener("click", () => {
+        if (!hasFetched) {
+            console.log("fetching annotaitons");
+            hasFetched = true;
+        }
     });
 </script>
 
@@ -187,7 +196,7 @@
 
     abbr:hover::after,
     abbr:focus::after {
-        --abbr-width: 10em;
+        --abbr-width: 15em;
         content: attr(data-title);
         font-size: 0.85em;
         padding-bottom: 3em;

@@ -55,10 +55,10 @@
                 }
                 var defLength = element.getAttribute("data-title").length;
                 //automatically setting width
-                newWidth = defLength * 0.4;
+                newWidth = defLength * 0.5;
                 element.style.setProperty("--min-height", `initial`);
                 if (newWidth > 17) {
-                    newWidth = 17;
+                    newWidth = 16;
                     element.style.setProperty("--min-height", `2em`);
                 }
                 element.style.setProperty("--min-width", `${newWidth}em`);

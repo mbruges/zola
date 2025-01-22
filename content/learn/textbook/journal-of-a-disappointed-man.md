@@ -64,7 +64,7 @@ the pile still in mid-air, and me of course.
 </pre>
 
 - DEFINITIONS:
-  - pile: (n) large post used to hold up piers and buildings
+  - pile: (n) large post used to hold up piers, buildings
   - pier: (n) wooden platform over sea
   - crack of Doom: (n) the end of time
   - paraphernalia: (n) equipment, special items  

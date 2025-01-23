@@ -60,7 +60,18 @@ date: 2025-01-01
                 resultsDiv.appendChild(element);
             });
         });
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('load', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            
+            if (query) {
+                searchInput.value = decodeURIComponent(query);
+                searchInput.dispatchEvent(new Event('input'));
+            }
+        })
     });
+    
 </script>
 
 <style>

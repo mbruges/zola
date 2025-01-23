@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <title>Hello World - MaxBruges.com</title>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta property="description" content="You have to start somewhere.. From the website of Max Bruges.">
+
+   <meta property="og:type" content="website">
+   <meta property="og:title" content="Hello World - MaxBruges.com">
+   <link rel="canonical" href="https://maxbruges.com/blog/HelloWorld/" />
+   <meta property="og:url" content="https://maxbruges.com/blog/HelloWorld/">
+   <meta property="og:site_name" content="MaxBruges.com">
+   <meta property="og:description" content="You have to start somewhere.">
+   <meta name="author" content="Max Bruges">
+ <link rel="stylesheet" href="https://maxbruges.com/blog-style.min.css">
+ <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <style>
+
+    body {
+        margin-top: 2em !important;
+    }
+    nav {
+        width:100vw;
+        max-width:100vw;
+        left: 0px;
+        margin-right: 0px;
+        position:fixed;
+        top:0px;
+        height:2.5em;
+        z-index:210;
+        border-bottom: 2px solid var(--a);
+        margin-bottom;0em;
+        background:var(--b);
+        padding: 0px;
+    }
+
+    nav .center-el {
+        margin: 0 auto;
+        color:var(--a);
+        font-size:0.8em;
+        text-decoration:none !important;
+    }
+    .dropdown {
+        float: left;
+        overflow: hidden;
+        background: none;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        margin: 0;
+        text-align: left;
+        margin-left: -10px;
+        min-width:12em;
+    }
+
+    #dropdown-icon {
+        text-decoration: none !important;
+        font-size: 2.5em;
+        margin: 4px;
+        padding: 0;
+        font-weight: 100;
+        overflow: visible;
+        max-height: 1em;
+        display: flex;
+        align-items: center;
+        background: none;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--b);
+        margin-top:-6px;
+        min-width: 12em;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        padding: 0em;
+        border: 2px solid var(--a);
+        border-top: 8px solid var(--b);
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: var(--color-text);
+        background: var(--b);
+        padding: 12px 16px;
+        text-decoration: none !important;
+        display: block;
+        text-align: left;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        color: var(--a);
+        filter: brightness(1.3);
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:focus .dropdown-content,
+    .dropdown:active .dropdown-content {
+        display: block;
+    }
+
+    #search-container {
+        text-align:right;
+        text-decoration:none !important;
+        width:12em;
+        padding:0.1em;
+    }
+
+    #lightswitch {
+        text-align:center;
+    }
+
+    #maxwidth {
+        width:95%;
+        max-width:80ch;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    #search-container:focus-within #search-dropdown {
+            display: block;
+        }
+
+    #search-input {
+        border:none;
+        outline: none !important;
+        background:transparent;
+        width:95%;
+        margin-left:-1em;
+        font-size:0.8em;
+        font-family:monospace
+    }
+
+    </style>
+
+<div id="main" style="position:relative">
+    <nav>
+        <div id="maxwidth">
+        <div tabindex="1"  class="dropdown">
+            <a id="dropdown-icon">&#8801;
+            </a>
+            <div class="dropdown-content">
+                <a href="/">🏠 Home </a>
+                <a href="/blog">🗞️ Blog</a>
+                <a href="/learn">👨‍🏫 Learn</a>
+                <a href="/experiments">🧪 Experiments</a>
+                <a alt="Toggle dark mode" id="lightswitch">🌓︎</a>
+            </div></div>
+        <a href="/" class="center-el"> MaxBruges.com </a>
+        <div tabindex="2"  id="search-container">
+
+        <a id="search-icon"  alt="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg></a>
+        <div id="search-dropdown" class="dropdown-content" style="margin-top:7px;postion:relative;">
+            <form onsubmit="window.location='/search?q=' + encodeURIComponent(document.getElementById('search-input').value); return false;">
+                <input id="search-input" placeholder="Search..">
+            </form>
+        </div>
+        </div>
+    </nav>
+  <section class="section">
+    <div class="container" id="container">
+<title>Hello World - MaxBruges.com</title>
+<h1 class="title" style="padding-bottom: 0.3rem; border-bottom: none">
+    💡 Hello World
+</h1>
+<div id="date-bar">
+
+    <span id="date-tag">
+        18 April 2023
+    </span>
+</div>
+<div class="subheading">
+
+    <p class="subtitle">
+        You have to start somewhere.
+    </p>
+
+</div>
+<div id="content">
+<p><img src="/images/hello-world-pc.webp" alt="A laptop showing ‘hello world’" /></p>
+<p>As it says <a href="/about">on the tin</a>: I’m a teacher. It’s an incredible career, and one I’m proud to be part of.</p>
+<p>But a niggling feeling started to at the back of my mind a few months ago.</p>
+<p><em>Teachers don’t do much learning.</em></p>
+<p>That’s perhaps unfair - hardly anyone, really, does much learning <a rel="noopener" target="_blank" href="https://www.tes.com/magazine/analysis/general/why-better-cpd-could-be-answer-teacher-retention">past the age of 25</a>. I don’t mean in the self-knowledge, incremental gains kind of way; I mean in the taking on of a fundamentally new skill or new domain, something you don’t already do.</p>
+<p>Certainly, we sit through plenty of CPD (of varying quality). But this is often either something we know already, something we’ve forgotten and need to be (legally) reminded of on a periodic basis, or some system that changes something we were doing already.</p>
+<p>The rarity of genuinely new experiences is, I think, one of the things that hampers us from truly understanding the mind-bendingly difficult process our students go through 5 times a day, every day: being confronted with something you don’t know yet, and being unsure quite how you’ll ever get to the stage of fully understanding it.</p>
+<p>It’s remarkable, really. It’s as though we experience collective amnesia about those horrendous few terms in Year 9 when first confronted with algebraic equations, or that torturous double period on a Thursday as a well-meaning <em>madame</em> patiently explained the past participle for the <em>soixante-dix</em> time. As though we’ve agreed to never speak of them again, and certainly not re-live the emotions.</p>
+<p>But ever a glutton for punishment, I have thrown myself back into the unforgiving maw of learning, willingly.</p>
+<p><a href="/">This website you’re on right now</a> - in all its hacked-together glory  - represents the half-ripened fruits of that process.</p>
+<h2 id="fit-your-own-lightbulbs">Fit your own lightbulbs<a class="zola-anchor" href="#fit-your-own-lightbulbs" aria-label="Anchor link for: fit-your-own-lightbulbs">🔗</a></h2>
+<p>My first, and over-riding feeling? Satisfaction. My god is it satisfying to get something, to go from clueless to clue-full. In that one brief moment (before you see the Dunning-Kruger pit gaping ahead of you) the fabric of space and time opens up and you are master of the universe. You have, through your own fleshy grey matter, taken something that was meaningless and rendered it meaningful. Where that was darkness, light; where there was fear, understanding.</p>
+<p>The second feeling, hot on satisfaction’s heels: worry. Because one must then ask the question: how often do my students feel this? This burning, satisfied pride that comes from accumulating another brick of knowledge on their little pyramid of progress? Do they ever? Do I celebrate it when I see it? Can <em>I</em> see it?</p>
+<p>When interviewing teachers, one of the most best questions you can ask is: what’s been your favourite moment in the classroom? Ninety-nine times out of a hundred, the answer will be this. The ‘light-bulb’ moment of understanding, going off in the student (usually recalcitrant, usually male), which briefly illuminates the narrow path ahead of them and makes it seem achievable.</p>
+<p>Perhaps we can all benefit from living a moment like this ourselves. Fit your own lightbulbs; remember what it feels like.</p>
+<h2 id="just-do-it-check-mark">Just do it ✔️<a class="zola-anchor" href="#just-do-it-check-mark" aria-label="Anchor link for: just-do-it-check-mark">🔗</a></h2>
+<p>The best way to learn is to do. One can read, highlight, bulletpoint, mind-map in a beautifully <a rel="noopener" target="_blank" href="https://www.vox.com/the-goods/22538703/tiktok-productivity-hacks-gen-z">Pinterest-able notebook</a>, but if you want to form and solidifying those synaptic connections, you need to actually practice. And practice that produces something is even better.</p>
+<p>Knowing that anyone with a Wi-Fi connection and a browser can access what you show is another excellent motivator.</p>
+<p>Having faffed around with Javascript and a little Python, there’s a great deal to be said for solidifying the nebulous world of <code>monospaced type</code> on a black screen into something more tangible and designed.</p>
+<p>This site is less a <a href="/experiments/codeplayground.html">showcase</a> or portfolio, and more a sketchbook. There are lots of ideas here in various states of completion. Some are <a href="/experiments/wotd.html">demos at 99% functionality</a>, some are <a rel="noopener" target="_blank" href="https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171">projects I’ve put on ice</a> for the foreseeable, and some are <a href="/experiments/codeplayground.html">abominations of half-formed code</a> that really ought to be put out of their misery.</p>
+<p>But each one represents one of those lightbulbs. And even if they only give off a flicker, they’re worth keeping around. 💡</p>
+
+</div>
+<hr />
+
+<div
+    class="post-nav"
+    id="post-nav"
+    style="display: flex; justify-content: space-between"
+>
+    <style>
+        .previous,
+        .next {
+            max-width: 35%;
+        }
+        .next {
+            text-align: right;
+        }
+    </style>
+
+
+    <a class="previous" href="https:&#x2F;&#x2F;maxbruges.com&#x2F;blog&#x2F;CodingOnTheTitanic&#x2F;"
+        ><== 🚢 Coding on The Titanic</a
+    >
+
+    <a class="next" href="https:&#x2F;&#x2F;maxbruges.com&#x2F;blog&#x2F;rebuilding-relearning&#x2F;"
+        >🏫 Schools&#x27; labours lost ==></a
+    >
+
+</div>
+<br />
+
+
+    </div>
+
+  </section>
+</div>
+<footer id="footer">
+    <a title="Email: hello@maxbruges.com" href="/cdn-cgi/l/email-protection#375f525b5b58775a564f5545425052441954585a"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+    </svg></a>
+    <a title="About Max Bruges"
+    alt="Footer" href="/about">MB 🐈‍⬛ 2024</a>
+    <a title="RSS Feed" alt="RSS Feed" href="/blog/rss.xml"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" fill="currentColor" class="bi bi-rss" viewBox="0 0 16 16">
+      <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+      <path d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1m0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1"/>
+    </svg></a>
+</footer>
+<script type="module">
+        import { toggleNightmode } from '/scripts.js';
+        if (localStorage.getItem('nightmode') === 'enabled') {
+                    toggleNightmode();
+                }
+        document.getElementById('lightswitch').onclick = toggleNightmode;
+</script>
+</body>
+</html>

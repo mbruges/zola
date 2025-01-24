@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://maxbruges.com/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/about/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/blog/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/search/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/learn/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/about</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.65</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/kickstart/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/markitdown/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/hangman/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/new-flambards/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/fortune/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/one-shot/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/roll/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/page-speed/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/1kb/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/wotd</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/shakey</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/worksheetGenerator</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/codefixer</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/blog/Trial-by-Error/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/bard-or-bot</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/rpg/dnd</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/rpg/quest-generator</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/codeplayground</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/hangman</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/experiments/1kb</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://maxbruges.com/blog/HelloWorld/</loc>
+  <lastmod>2025-01-24T10:40:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>

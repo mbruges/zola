@@ -27,7 +27,7 @@ paths = "safe"
 icon = "🐈‍⬛"
 default_title = 'MaxBruges.com'
 default_description = 'More stuff from Max Bruges'
-footer = "MB 🐈‍⬛ 2024"
+footer = "MB 🐈‍⬛ 2025"
 
 [search]
 include_title = true

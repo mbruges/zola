@@ -12,6 +12,7 @@ nav {
     border-bottom: 2px solid var(--a);
     background: var(--b);
     padding: 0px;
+    overscroll-behavior: none !important;
 }
 
 nav .center-el {

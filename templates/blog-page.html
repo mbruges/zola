@@ -26,9 +26,6 @@ endif %}
     <p class="subtitle"></p>
     {% endif %}
 </div>
-<div id="content">
-{{ page.content | safe }}
-</div>
+<div id="content">{{ page.content | safe }}</div>
 <hr />
-{% include "snippets/nextprev.html"
-%} {% endblock content %}
+{% include "snippets/nextprev.html" %} {% endblock content %}

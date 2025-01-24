@@ -14,63 +14,72 @@ date: 2025-01-01
 <script src="/elasticlunr.min.js"></script>
 <script src="/search_index.en.js"></script>
 <script>
+function makeSearch(element) {
+      var idx = elasticlunr.Index.load(window.searchIndex);
+      const query = element.value;
+      const results = idx.search(query, {
+          fields: {
+              title: {boost: 2},
+              description: {boost: 2},
+              body: {boost: 1},
+          },
+          expand: true,
+      });
+
+      const resultsDiv = document.getElementById('search-results');
+      resultsDiv.innerHTML = '';
+      index = 1
+      results.forEach(result => {
+          const item = idx.documentStore.getDoc(result.ref);
+          const element = document.createElement('div');
+          element.tabIndex = index + 3;
+          element.className = 'blog-card flex';
+          element.style.textAlign = 'left';
+          element.onclick = () => location.href = item.id;
+          let section = item.path.substring(item.path.indexOf('/') + 1, item.path.indexOf('/', item.path.indexOf('/') + 1));
+          switch (section) {
+              case 'experiments':
+                  section += " 🧪";
+                  break;
+              case 'blog':
+              section += " 🗞️";
+                  break;
+              case 'learn':
+              section += " 👨‍🏫";
+                  break;
+              default:
+                  section += " 🔎";
+                  break;
+          }
+          element.innerHTML = `
+            <div class="blog-details"><p> <span class="title">${item.title}  </span><span style="font-family:monospace;background:var(--a);color:var(--b);font-size:0.8em;border-radius:0.2em;padding:0.3em">${section}</span><br></p><div class="description"><p class="truncate" style="-webkit-line-clamp: 1;"><b> ${item.description} </b> ${item.body.slice(0,300)} <span class="read-on-container" style="padding-left:2em;"><i class="read-on">click to read ⇝</i></span></p></div></div>`;
+          resultsDiv.appendChild(element);
+          index++
+      });
+}
     document.addEventListener('DOMContentLoaded', function() {
-        const idx = elasticlunr.Index.load(window.searchIndex);
+        
         const searchIcon = document.getElementById('search')
         document.getElementById('footer').style.position = "absolute"
         document.getElementById('footer').style.bottom = "2em"
         document.getElementById('footer').style.left = "0%"
         prevPage = document.referrer ? document.referrer.split('/').pop() : "";
         searchIcon.innerHTML = `<a id="back" href="javascript:history.back()" alt="Back to ${prevPage}" title="Back to ${prevPage}">↩</a>`;
-
-        document.getElementById('search-input').addEventListener('input', function() {
-            const query = this.value;
-            const results = idx.search(query, {
-                fields: {
-                    title: {boost: 2},
-                    description: {boost: 2},
-                    body: {boost: 1},
-                },
-                expand: true,
-            });
-
-            const resultsDiv = document.getElementById('search-results');
-            resultsDiv.innerHTML = '';
-
-            results.forEach(result => {
-                const item = idx.documentStore.getDoc(result.ref);
-                const element = document.createElement('div');
-                let section = item.path.substring(item.path.indexOf('/') + 1, item.path.indexOf('/', item.path.indexOf('/') + 1));
-                switch (section) {
-                    case 'experiments':
-                        section += " 🧪";
-                        break;
-                    case 'blog':
-                    section += " 🗞️";
-                        break;
-                    case 'learn':
-                    section += " 👨‍🏫";
-                        break;
-                    default:
-                        section += " 👓";
-                        break;
-                }
-                element.innerHTML = `
-                  <div class="blog-card flex" style="text-align:left" onclick="location.href='${item.id}';" onmouseenter=""><div class="blog-details"><p> <span class="title">${item.title}  </span><span style="font-family:monospace;background:var(--a);color:var(--b);font-size:0.8em;border-radius:0.2em;padding:0.3em">${section}</span><br></p><div class="description"><p class="truncate" style="-webkit-line-clamp: 1;"><b> ${item.description} </b> ${item.body.slice(0,300)} <span class="read-on-container" style="padding-left:2em;"><i class="read-on">click to read ⇝</i></span></p></div></div></div>`;
-                resultsDiv.appendChild(element);
-            });
+        var searchInput = document.getElementById('search-input')
+        
+        searchInput.addEventListener('input', function() {
+            makeSearch(searchInput);
         });
-        const searchInput = document.getElementById('search-input');
-        searchInput.addEventListener('load', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('q');
-            
-            if (query) {
-                searchInput.value = decodeURIComponent(query);
-                searchInput.dispatchEvent(new Event('input'));
-            }
-        })
-    });
+        console.log("looking for query")
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+        if (query) {
+          console.log("running search with query")
+            searchInput.value = decodeURIComponent(query);
+            searchInput.dispatchEvent(new Event('input'));
+        }
+      })
+        
     
 </script>
 

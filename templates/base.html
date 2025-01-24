@@ -25,25 +25,33 @@
  <link rel="stylesheet" href="{{ get_url(path="blog-style.min.css") | safe }}">
  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
-<body>
-<div id="main">
-<div id="nav-container" class="nav">
-<nav>
-    <div class="dropdown">
-        <a id="dropdown-icon">&#8801;
-        </a>
-        <div class="dropdown-content">
-            <a href="/">🏠 Home </a>
-            <a href="/blog">🗞️ Blog</a>
-            <a href="/learn">👨‍🏫 Learn</a>
-            <a href="/experiments">🧪 Experiments</a>
-            <a alt="Toggle dark mode" id="lightswitch">🌓︎</a>
-        </div>
-    </div>
-    <small id="website-name"> {{ icon }} {% if page.title %} {{ page.title }} {% elif section.title %} {{ section.title }} {% else %} {{ config.extra.default_title }} {% endif %}</small>
-    <p><a id="search" alt="search" href="/search">⌕</a>
-</nav>
-</div>
+<body style="margin-top: 2em !important;">
+    <div id="main" style="position:relative">
+        <nav>
+            <div id="maxwidth">
+            <div tabindex="1"  class="dropdown">
+                <a id="dropdown-icon">&#8801;
+                </a>
+                <div id="menu" class="dropdown-content">
+                    <a tabindex="1" href="/">🏠 Home </a>
+                    <a tabindex="2" href="/blog">🗞️ Blog</a>
+                    <a  tabindex="3" href="/learn">👨‍🏫 Learn</a>
+                    <a tabindex="4" href="/experiments">🧪 Experiments</a>
+                    <a alt="Toggle dark mode" id="lightswitch">🌓︎</a>
+                </div></div>
+            <a href="/" class="center-el">MaxBruges.com</a>
+            <div tabindex="5"  id="search-container">
+            <a id="search-icon"  onclick="document.getElementById('search-input').focus()" alt="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg></a>
+            <div id="search-dropdown" class="dropdown-content" style="margin-top:8px;postion:relative;">
+                <form id="search-form" onsubmit="window.location='/search?q=' + encodeURIComponent(document.getElementById('search-input').value); return false;">
+                    <input id="search-input" placeholder="Search.." autofocus>
+                    <button id="submit-search" type="submit">&#9166;</button>
+                </form>
+            </div>
+            </div>
+        </nav>
   <section class="section">
     <div class="container" id="container">
       {% block content %} {% endblock %}
@@ -71,14 +79,21 @@
 <link rel='stylesheet' href='{{ get_url(path="blockquote-style.min.css") }}'>
 {% endif %}
 {% endif %}
-<script type="module">
-        import { toggleNightmode,handleScroll,addNavShadow } from '/scripts.js';
-        if (localStorage.getItem('nightmode') === 'enabled') {
-                    toggleNightmode();
-                }
-        document.getElementById('lightswitch').onclick = toggleNightmode;
-        window.addEventListener('scroll', handleScroll);
-        window.onload = addNavShadow
+<script>
+function toggleNightmode() {
+  const nightmodeEnabled =
+    document.documentElement.style.getPropertyValue("--t") !==
+    document.documentElement.style.getPropertyValue("--b");
+  localStorage.setItem("nightmode", nightmodeEnabled ? "disabled" : "enabled");
+  const rootStyle = document.documentElement.style;
+  const t = getComputedStyle(document.documentElement).getPropertyValue("--t");
+  rootStyle.setProperty("--t", getComputedStyle(document.documentElement).getPropertyValue("--b"));
+  rootStyle.setProperty("--b", t);
+  const currentA = getComputedStyle(document.documentElement).getPropertyValue("--a");
+    rootStyle.setProperty("--a", currentA === "#fcf199" ? "#51518a" : "#fcf199");
+};
+if (localStorage.getItem('nightmode') === 'enabled') toggleNightmode();
+document.getElementById('lightswitch').onclick = toggleNightmode;
 </script>
 </body>
 </html>

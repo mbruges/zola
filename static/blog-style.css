@@ -45,7 +45,7 @@ body {
 }
 
 h1 {
-    margin: 1.4em 0 0.1em;
+    margin: 1.4em 0 0.1em !important;
     text-align: center;
     padding-bottom: 1rem;
     border-bottom: 2px solid var(--a);
@@ -446,15 +446,11 @@ pre:has(code.language-markdown)::before {
 }
 
 pre:has(code.language-python)::before {
-    content: "🔴 🟡 🟢      🐍 python3";
+    content: "🔴 🟡 🟢      🐍 python";
 }
 
 pre:has(code.language-html)::before {
     content: "🔴 🟡 🟢      🌐 <HTML>";
-}
-
-pre:has(code.language-go)::before {
-    content: "🔴 🟡 🟢      ⚙️ Golang";
 }
 
 pre:has(code.language-bash)::before {

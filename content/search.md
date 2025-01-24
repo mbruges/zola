@@ -59,13 +59,14 @@ function makeSearch(element) {
 }
     document.addEventListener('DOMContentLoaded', function() {
         
-        const searchIcon = document.getElementById('search')
+        // const searchIcon = document.getElementById('search')
+        // searchIcon.innerHTML = `<a id="back" href="javascript:history.back()" alt="Back to ${prevPage}" title="Back to ${prevPage}">↩</a>`;
+
         document.getElementById('footer').style.position = "absolute"
         document.getElementById('footer').style.bottom = "2em"
         document.getElementById('footer').style.left = "0%"
         prevPage = document.referrer ? document.referrer.split('/').pop() : "";
-        searchIcon.innerHTML = `<a id="back" href="javascript:history.back()" alt="Back to ${prevPage}" title="Back to ${prevPage}">↩</a>`;
-        var searchInput = document.getElementById('search-input')
+        var searchInput = document.getElementById('page-search-input')
         
         searchInput.addEventListener('input', function() {
             makeSearch(searchInput);
@@ -96,7 +97,7 @@ function makeSearch(element) {
 </style>
 
 <div class="searchContainer">
-            <input class="form-control" type="search" id="search-input" name="search" placeholder="Search posts..." autofocus>
+            <input class="form-control" type="search" id="page-search-input" name="search" placeholder="Search posts..." autofocus>
             <div id="search-results" class="search-results" style="max-height:57vh;min-height:57vh;overflow-y:scroll; scrollbar-color: var(--a) var(--b); position: relative;padding-bottom:6em;padding-top:2em;">
                 <style>
                     .search-results::-webkit-scrollbar {

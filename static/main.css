@@ -148,6 +148,8 @@ textarea {
     .post-nav {
         justify-content: space-between !important;
         }
+    #back {
+        display:block !important;
     }
 }
 
@@ -239,7 +241,6 @@ a {
 #date-tag {
     font-size: 0.7em;
     font-family: monospace;
-    border-radius: var(--border-radius);
     background-color: var(--a);
     color: var(--b);
     border: 2px solid var(--a);

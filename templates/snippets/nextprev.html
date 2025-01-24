@@ -2,22 +2,8 @@
 <div
     class="post-nav"
     id="post-nav"
-    style="display: flex; justify-content: space-between"
->
-    <style>
-        .previous,
-        .next {
-            max-width: 35%;
-        }
-        .next {
-            text-align: right;
-        }
-    </style>
-    {% if page.lower and not page.lower.draft %} {% if page.lower.extra.icon %}
-    {% set previcon = page.lower.extra.icon %} {% else %} {% set previcon =
-    section.extra.icon %} {% endif %}
-    <a class="previous" href="{{ page.lower.permalink }}"
-        ><== {{ previcon }} {{ page.lower.title }}</a
+>{% if page.lower and not page.lower.draft %} {% if page.lower.extra.icon %}{% set previcon = page.lower.extra.icon %} {% else %} {% set previcon = section.extra.icon %} {% endif %}<a class="prev" href="{{ page.lower.permalink }}"
+    <span class="arrow"> <==&emsp;</span> <span>{{ previcon }} {{ page.lower.title }}</span></a
     >
     {% else %}
     <a class="previous" style="visibility: hidden" href="/"
@@ -27,7 +13,7 @@
     page.higher.extra.icon %} {% set nexticon = page.higher.extra.icon %} {%
     else %} {% set nexticon = section.extra.icon %} {% endif %}
     <a class="next" href="{{ page.higher.permalink }}"
-        >{{ nexticon }} {{ page.higher.title }} ==></a
+        ><span>{{ nexticon }} {{ page.higher.title }}</span><span style="white-space:nowrap" >&emsp;==></span></a
     >
     {% else %}
     <a class="next" style="visibility: hidden" href="/"

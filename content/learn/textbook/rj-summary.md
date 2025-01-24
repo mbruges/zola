@@ -1,5 +1,5 @@
 ---
-authors: [""]
+authors: ["William Shakespeare"]
 title: "Romeo & Juliet - Plot Summary"
 draft: false
 extra:

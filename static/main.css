@@ -315,6 +315,30 @@ footer a {
     text-decoration: none !important;
 }
 
+[id*="-icon"] {
+    background: var(--a);
+    min-width: 100px;
+    min-height: 20px;
+    display: inline-block;
+}
+
+#email-icon {
+    -webkit-mask-image: url("/icons/email.svg");
+    mask-image: url("/icons/email.svg");
+}
+
+#rss-icon {
+    -webkit-mask-image: url("/icons/rss.svg");
+    mask-image: url("/icons/rss.svg");
+}
+
+#search-icon {
+    -webkit-mask-image: url("/icons/search.svg");
+    mask-image: url("/icons/search.svg");
+    min-width: 16px !important;
+    min-height: 16px !important;
+}
+
 hr {
     opacity: 0.8;
 }

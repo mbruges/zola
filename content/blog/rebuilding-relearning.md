@@ -4,7 +4,7 @@ date: 2020-05-20
 authors: ["Max Bruges"]
 description: "Rebuilding routines will be the hardest and most important job of schools after the pandemic."
 extra:
-  icon: 🏫
+  icon: 🩹
 ---
 
 In the aftermath of the 2011 Christchurch earthquake, schools in the city faced an unthinkable challenge: how do you return to normal? 15,000 pupils had been wrenched from their usual routines overnight - how do you bring them back?

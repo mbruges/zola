@@ -1,26 +1,31 @@
 {% if page.lower or page.higher %}
+<style>
+span.arrow {
+    white-space:nowrap;
+    font-size:1.7em !important;
+}
+</style>
 <div
     class="post-nav"
     id="post-nav"
->{% if page.lower and not page.lower.draft %} {% if page.lower.extra.icon %}{% set previcon = page.lower.extra.icon %} {% else %} {% set previcon = section.extra.icon %} {% endif %}<a class="prev" href="{{ page.lower.permalink }}"
-    <span class="arrow"> <==&emsp;</span> <span>{{ previcon }} {{ page.lower.title }}</span></a
+>{% if page.lower and not page.lower.draft %} {% if page.lower.extra.icon %}{% set previcon = page.lower.extra.icon %} {% else %} {% set previcon = section.extra.icon %} {% endif %}<a class="prev" href="{{ page.lower.permalink }}">
+    <span class="arrow" >🠴&emsp;</span> <span>{{ previcon }} {{ page.lower.title }}</span></a
     >
     {% else %}
-    <a class="previous" style="visibility: hidden" href="/"
-        >No more stories for now.</a
+    <a class="prev" style="visibility: hidden" href="/"
+        ><span class="arrow"> X== &emsp;</span> <span>No more stories for now</span></a
     >
     {% endif %}
-
-    <a style="font-size:0.8em;display:none;margin-top:-0.1em;;background:var(--a);color:var(--b);" class="center" id="back" href='/{{ page.path | split(pat="/") | nth(n=1)}}'>Back to <b>{{ page.path | split(pat="/") | nth(n=1) | capitalize }} ⮌</b></a>
+    <a style="font-size:0.8em;display:none;margin-top:-0em;background:var(--b);color:var(--a);border:3px solid var(--a);border-top:none;text-decoration: none;" class="center" id="back" href='/{{ page.path | split(pat="/") | nth(n=1)}}'>Back to <b>{{ page.path | split(pat="/") | nth(n=1) | capitalize }} ⮐</b></a>
     {% if page.higher and not page.higher.draft %} {% if
     page.higher.extra.icon %} {% set nexticon = page.higher.extra.icon %} {%
     else %} {% set nexticon = section.extra.icon %} {% endif %}
     <a class="next" href="{{ page.higher.permalink }}"
-        ><span>{{ nexticon }} {{ page.higher.title }}</span><span style="white-space:nowrap" >&emsp;==></span></a
+        ><span>{{ nexticon }} {{ page.higher.title }}</span><span class="arrow">&emsp;🠶</span></a
     >
     {% else %}
     <a class="next" style="visibility: hidden" href="/"
-        >No more entries for now.</a
+        ><span>No more stories for now</span><span class="arrow">&emsp;==X</span> </a
     >
     {% endif %}
 </div>

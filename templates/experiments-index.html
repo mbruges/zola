@@ -58,31 +58,11 @@
             margin-top: 0.6em;
         }
 
-        .sticky,
-        #nav-containernone {
-            position: fixed; /* Make it fixed when sticky */
-            background: var(
-                --b
-            ); /* Add a background color to cover content beneath */
-            top: 0; /* Stick to the top */
-            width: 100%; /* Ensure it takes the full width */
-            left: 0;
-            z-index: 1; /* Ensure it covers other content */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-        }
-
-        navnone {
-            max-width: 80ch !important;
-            min-width: fit-content !important;
-            margin: auto;
-        }
-
         .icon-image {
             font-size: 40pt;
             text-decoration: none !important;
         }
     </style>
-    <h2 class="center">💡 Latest 🆕</h2>
     <section id="Latest" class="grid">
         {% for page in section.pages | filter(attribute="draft", value=false) %}
         {% if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
@@ -96,12 +76,12 @@
             <div class="center">
                 <span class="icon-image center">{{ icon }}</span>
                 <h3>{{ page.title }}</h3>
-                <sup>New</sup>
+                <!-- <sup>New</sup> -->
                 <p>{{ description | markdown(inline=true) | safe }}</p>
                 <p>{{ blurb }}</p>
                 <p>
-                    <a href="{{ page.permalink | safe }}"
-                        ><button class="center">Try experiment</button></a
+                    <a href="{% if page.extra.link %}{{ page.extra.link | safe }}" target="_blank" {% else %}{{ page.permalink | safe }}"{% endif %}
+                        ><button class="center">{% if page.extra.buttontext %}{{ page.extra.buttontext }}{% else %}Try experiment{% endif %}</button></a
                     >
                 </p>
             </div>
@@ -109,7 +89,9 @@
         {% endfor %}
     </section>
 
-    <h2 class="center">📚 Education 🏫</h2>
+<hr>
+    <h2 class="center">🚧 Old Projects 🚧</h2>
+    <p class="center">Not quite abandoned, but in need of some tidying up. Functional in places.</p>
 
     <section id="Education" class="grid">
         <!--Word of the Week-->
@@ -232,80 +214,7 @@
                 >
             </p>
         </div>
-
-        <!--Mr Bruges Asks-->
-        <div class="item">
-            <a
-                href="https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171"
-                target="_blank"
-                ><img
-                    alt="Lend me your ears"
-                    src="/images/podcast.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">Mr Bruges Asks...</h3>
-            <sup class="center">AUDIO</sup>
-            <p>Short episodes answering big questions.</p>
-            <p>
-                This is a brief collection of essay readings in podcast form;
-                originally recorded to support A-Level Literature students
-                during lockdown.
-            </p>
-            <p>
-                <i
-                    >More to follow, once I've found somewhere quiet to
-                    record.</i
-                >
-            </p>
-            <p>
-                <a
-                    href="https://open.spotify.com/show/1s44mmlysg8G7lLW5QvGb5?si=5889d05e4c8a4171"
-                    target="_blank"
-                    ><button class="center">
-                        Listen on Spotify &nearr;
-                    </button></a
-                >
-            </p>
-        </div>
-
-        <!--The Open Library-->
-        <div class="item">
-            <a
-                href="https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link"
-                target="_blank"
-                ><img
-                    alt="enter the library"
-                    src="/images/library.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">The Open Library</h3>
-            <sup class="center">EPUB</sup>
-            <p>Great books, out of copyright, in Kindle and eReader format</p>
-            <p>
-                Tracking down the right ePub files can be a pain. Here's my
-                repository of classic texts for you to browse.
-            </p>
-            <p>
-                <i
-                    >Only possible thanks to
-                    <a href="https://www.gutenberg.org/donate/"
-                        >Project Gutenberg</a
-                    >.</i
-                >
-            </p>
-            <p>
-                <a
-                    href="https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link"
-                    target="_blank"
-                    ><button class="center">Open the library &nearr;</button></a
-                >
-            </p>
-        </div>
     </section>
-
-    <h2 class="center">🎭 Entertainment 🧌</h2>
     <section id="Entertainment" class="grid">
         <!--Bard or Bot-->
         <div class="item">
@@ -340,8 +249,7 @@
                 >
             </p>
         </div>
-
-        <!--D&D Character Generator-->
+<!--
         <div class="item">
             <a href="/experiments/rpg/dnd.html" target="_blank"
                 ><img
@@ -374,9 +282,8 @@
                     ><button class="center">Make a character</button></a
                 >
             </p>
-        </div>
+        </div> -->
 
-        <!--Quest Generator-->
         <div class="item">
             <a href="/experiments/rpg/quest-generator.html" target="_blank"
                 ><img
@@ -415,11 +322,8 @@
             </p>
         </div>
     </section>
-
-    <h2 class="center">💻 Tools ⚙️</h2>
     <section class="grid">
-        <!--Wet Bulb App-->
-        <div class="item">
+        <!-- <div class="item">
             <a href="https://app.maxbruges.com/wetbulb"
                 ><img
                     alt="wetbulb alert"
@@ -450,79 +354,8 @@
                     ><button class="center">Visit the app</button></a
                 >
             </p>
-        </div>
+        </div> -->
 
-        <!--OpenAI Portal-->
-        <div class="item">
-            <a href="/experiments/askGPT.html"
-                ><img
-                    alt="enter the library"
-                    src="/images/firmware.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">OpenAI Portal</h3>
-            <sup class="center">HTML</sup>
-            <p>A simple wrapper for GPT-3.5, built on pure JavaScript.</p>
-            <p>
-                It is a testbed for future GPT-powered projects, and currently
-                offers no more functionality than the native OpenAI site.
-            </p>
-            <p>
-                <i
-                    >You will need an
-                    <a
-                        href="https://platform.openai.com/account/api-keys"
-                        target="_blank"
-                        >API key</a
-                    >
-                    to use it.</i
-                >
-            </p>
-            <p>
-                <a href="/experiments/askGPT.html"
-                    ><button class="center">Access the portal</button></a
-                >
-            </p>
-        </div>
-
-        <!--Claude Portal-->
-        <div class="item">
-            <a href="/experiments/claude.html"
-                ><img alt="" src="/images/ai.svg" height="100" width="auto"
-            /></a>
-            <h3 class="center">Claude Portal</h3>
-            <sup class="center">HTML</sup>
-            <p>
-                Another pure JS wrapper, this time for Anthropic's
-                <a href="https://console.anthropic.com/chat" target="_blank"
-                    >Claude</a
-                >
-                bot.
-            </p>
-            <p>
-                This is a substantially more advanced interface, allowing users
-                to upload large text files and discuss them with the LLM.
-            </p>
-            <p>
-                <i
-                    >You will need an
-                    <a
-                        href="https://console.anthropic.com/account/keys"
-                        target="_blank"
-                        >API key</a
-                    >
-                    to use it.</i
-                >
-            </p>
-            <p>
-                <a href="/experiments/claude.html"
-                    ><button class="center">Access the portal</button></a
-                >
-            </p>
-        </div>
-
-        <!--Project Bloom-->
         <div class="item">
             <a
                 href="https://www.icloud.com/shortcuts/674d45a0800a4116b985611c89aee020"
@@ -560,7 +393,6 @@
             </p>
         </div>
 
-        <!--Super Focus Mode-->
         <div class="item">
             <a
                 href="https://www.icloud.com/shortcuts/fb2e35859b4a45c9ad92fe393edbbec5"
@@ -588,8 +420,7 @@
                 >
             </p>
         </div>
-
-        <!--Code Playground-->
+<!--
         <div class="item">
             <a href="./codeplayground.html"
                 ><img
@@ -616,7 +447,7 @@
                     ><button class="center">Open the playground</button></a
                 >
             </p>
-        </div>
+        </div> -->
     </section>
 </main>
 

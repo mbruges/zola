@@ -18,9 +18,7 @@
         <meta property="og:locale" content="en_GB" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/images/og.svg" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
     </head>
     {% include "snippets/homepage-style.html" %}
@@ -28,11 +26,11 @@
         <div id="main">
             <header>
                 <img
-                    src="/images/favicon.svg"
+                    src="/images/agatha.svg"
                     height="75em"
                     width="200em"
                     title="Built by Zola at {{ now() | date(format='%H:%M:%S %Z, %a %d %b') }}"
-                    alt="The Cat"
+                    alt=""
                     style="padding-top: 2em"
                 />
 
@@ -95,13 +93,6 @@
         >
             {{ config.extra.footer }}
         </footer>
-        <script type="module">
-                import { toggleNightmode } from '/scripts.js';
-                if (localStorage.getItem('nightmode') === 'enabled') {
-                            toggleNightmode();
-                        }
-                document.getElementById('lightswitch').onclick = toggleNightmode;
-        </script>
         <link rel="stylesheet" href="{{ get_url(path='nav.min.css') | safe }}" />
         <!-- <span class="lightswitch" id="lightswitch">🌓︎</span> -->
     </body>

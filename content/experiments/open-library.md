@@ -4,6 +4,7 @@ description: "A curated repository of classic texts to download freely to Kindle
 date: 2022-06-10
 extra:
   icon: 📚
+  center: true
   buttontext: Browse the collection ↗
   link: https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link
 ---
@@ -11,6 +12,5 @@ extra:
 
 [Browse the collection ↗](https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link)
 
-<head>
+
   <meta http-equiv="refresh" content="0; URL='https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link'" />
-</head>

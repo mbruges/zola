@@ -13,7 +13,7 @@ span.arrow {
     >
     {% else %}
     <a class="prev" style="visibility: hidden" href="/"
-        ><span class="arrow"> X== &emsp;</span> <span>No more stories for now</span></a
+        ><span class="arrow"> X &emsp;</span> <span>None</span></a
     >
     {% endif %}
     <a style="font-size:0.8em;display:none;margin-top:-0em;background:var(--b);color:var(--a);border:3px solid var(--a);border-top:none;text-decoration: none;" class="center" id="back" href='/{{ page.path | split(pat="/") | nth(n=1)}}'>Back to <b>{{ page.path | split(pat="/") | nth(n=1) | capitalize }} ↰</b></a>
@@ -25,7 +25,7 @@ span.arrow {
     >
     {% else %}
     <a class="next" style="visibility: hidden" href="/"
-        ><span>No more stories for now</span><span class="arrow">&emsp;==X</span> </a
+        ><span>None</span><span class="arrow">&emsp: X</span> </a
     >
     {% endif %}
 </div>

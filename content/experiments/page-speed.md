@@ -5,11 +5,11 @@ date: 2024-11-05
 extra:
   icon: 🏎️
   center: true
-description: Check the loading speed of any site, with Google's PageSpeed Insights API.
+description: Check the loading speed of any site with Google's PageSpeed Insights API.
 ---
 
 
-<input placeholder="Enter site to test..." id=input placeholder="maxbruges.pages.dev" value="maxbruges.pages.dev" type=text><button id=roll>Check</button>
+<input placeholder="Enter site to test..." id=input placeholder="maxbruges.com" type=text><button id=roll>Check</button>
 
 <blockquote style="visibility:hidden;max-width:50ch" id=output></blockquote>
 
@@ -84,6 +84,9 @@ function showLighthouseContent(lighthouseMetrics) {
     p.textContent = `${key}: ${lighthouseMetrics[key]}`;
     contentDiv.appendChild(p);
   }
+  const small = document.createElement('small');
+  small.innerHTML = "<a href='https://developers.google.com/speed/docs/insights/v5/about'>Learn more</a>"
+  contentDiv.appendChild(small);
   document.getElementById('load').style.visibility = 'hidden'
 }
 

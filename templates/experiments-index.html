@@ -23,9 +23,9 @@
             grid-template-columns: repeat(
                 auto-fill,
                 minmax(300px, 1fr)
-            ); /* Responsive columns that fill available space */
-            gap: 20px; /* Add space between grid items */
-            margin: 20px 0; /* Margin around the grid */
+            );
+            gap: 20px;
+            margin: 20px 0;
         }
 
         .item {
@@ -34,17 +34,11 @@
                 128,
                 128,
                 0.2
-            ); /* Change to a grey background */
+            );
             padding: 20px;
             border-radius: var(--border-radius);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            /* transition: transform 0.2s; */
         }
-
-        /* .item:hover {
-        transform: scale(1.02);
-    }*/
-
         a:has(button) {
             text-decoration: none !important;
         }
@@ -63,22 +57,16 @@
             text-decoration: none !important;
         }
     </style>
-    <section id="Latest" class="grid">
+    <section class="grid">
         {% for page in section.pages | filter(attribute="draft", value=false) %}
         {% if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
-        <!-- {% set icon = "📃" %} -->
         {% set icon = section.extra.icon %} {% endif %} {% if page.description
-        %} {% set description = page.description %} {% if page.extra.blurb %} {%
-        set blurb = page.extra.blurb %} {% else %} {% set blurb = "" %} {% endif
-        %} {% endif %}
-
+        %} {% set description = page.description %}{% endif %}
         <div class="item" data-pubdate="{{ page.date }}">
             <div class="center">
                 <span class="icon-image center">{{ icon }}</span>
                 <h3>{{ page.title }}</h3>
-                <!-- <sup>New</sup> -->
                 <p>{{ description | markdown(inline=true) | safe }}</p>
-                <p>{{ blurb }}</p>
                 <p>
                     <a href="{% if page.extra.link %}{{ page.extra.link | safe }}" target="_blank" {% else %}{{ page.permalink | safe }}"{% endif %}
                         ><button class="center">{% if page.extra.buttontext %}{{ page.extra.buttontext }}{% else %}Try experiment{% endif %}</button></a
@@ -94,32 +82,6 @@
     <p class="center">Not quite abandoned, but in need of some tidying up. Functional in places.</p>
 
     <section id="Education" class="grid">
-        <!--Word of the Week-->
-        <div class="item">
-            <a href="/experiments/wotd.html"
-                ><img
-                    alt="New words daily"
-                    src="/images/notebook.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">Word of the Week</h3>
-            <sup class="center">HTML</sup>
-            <p>
-                A worksheet to guide students through a new word - complete with
-                definitions, etymology, and activities
-            </p>
-            <p>
-                Built with the help of GPT-3.5, it's an easily printable HTML
-                file, but can have occasional errors.
-            </p>
-            <p><i>Check back weekly for a new word!</i></p>
-            <p>
-                <a href="/experiments/wotd.html"
-                    ><button class="center">See the new word</button></a
-                >
-            </p>
-        </div>
 
         <!--Shakey-->
         <div class="item">
@@ -190,30 +152,6 @@
                 >
             </p>
         </div>
-
-        <!--What Am I Doing Wrong-->
-        <div class="item">
-            <a href="/experiments/codefixer.html"
-                ><img
-                    alt="what am I doing wrong?"
-                    src="/images/add.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">What Am I Doing Wrong?</h3>
-            <sup class="center">HTML</sup>
-            <p>Code broken? Get some guidance, and learn in the process.</p>
-            <p>
-                This site takes code and offers advice on how to fix it: both
-                from ChatGPT and Stack Overflow. Pedagogy is elucidated
-                <a href="/blog/Trial-by-Error" target="_blank"> here</a>.
-            </p>
-            <p>
-                <a href="/experiments/codefixer.html"
-                    ><button class="center">Go to WAIDW</button></a
-                >
-            </p>
-        </div>
     </section>
     <section id="Entertainment" class="grid">
         <!--Bard or Bot-->
@@ -249,41 +187,6 @@
                 >
             </p>
         </div>
-<!--
-        <div class="item">
-            <a href="/experiments/rpg/dnd.html" target="_blank"
-                ><img
-                    alt="welcome adventurer"
-                    src="/images/1F9CC.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">D&D Character Generator</h3>
-            <sup class="center">HTML</sup>
-            <p>Generate new adventurers with GPT.</p>
-            <p>
-                This little experiment creates playable characters for tabletop
-                RPGs (Dungeon-based or otherwise) complete with backstories,
-                hidden secrets and character portraits.
-            </p>
-            <p>
-                <i
-                    >You will need an
-                    <a
-                        href="https://platform.openai.com/account/api-keys"
-                        target="_blank"
-                        >API key</a
-                    >
-                    to use it.</i
-                >
-            </p>
-            <p>
-                <a href="/experiments/rpg/dnd.html"
-                    ><button class="center">Make a character</button></a
-                >
-            </p>
-        </div> -->
-
         <div class="item">
             <a href="/experiments/rpg/quest-generator.html" target="_blank"
                 ><img
@@ -321,134 +224,7 @@
                 >
             </p>
         </div>
-    </section>
-    <section class="grid">
-        <!-- <div class="item">
-            <a href="https://app.maxbruges.com/wetbulb"
-                ><img
-                    alt="wetbulb alert"
-                    src="/images/1F321.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">Wet-Bulb Thermometer</h3>
-            <sup class="center">Flask</sup>
-            <p>Find out the Wet-Bulb Temperature where you are.</p>
-            <p>
-                This app will tell you if the combination of heat and humidity
-                will reach dangerous levels in your location, or any other city.
-            </p>
-            <p>
-                <i
-                    >This is my first foray into self-hosting a web app, so it
-                    may fall over! Learn more about Wet-Bulb Temperatures
-                    <a
-                        href="https://www.theguardian.com/science/2022/jul/31/why-you-need-to-worry-about-the-wet-bulb-temperature"
-                        target="_blank"
-                        >here.</a
-                    ></i
-                >
-            </p>
-            <p>
-                <a href="https://app.maxbruges.com/wetbulb"
-                    ><button class="center">Visit the app</button></a
-                >
-            </p>
-        </div> -->
-
-        <div class="item">
-            <a
-                href="https://www.icloud.com/shortcuts/674d45a0800a4116b985611c89aee020"
-                target="_blank"
-                ><img
-                    alt="and yes I said yes I will Yes"
-                    src="/images/recordingaudio.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">Project Bloom</h3>
-            <sup class="center">iOS</sup>
-            <p>Turn a stream-of-consciousness into something intelligible.</p>
-            <p>
-                This Shortcut for Mac uses GPT-3.5 to sanitise dictated input,
-                generally to pretty good effect.
-            </p>
-            <p>
-                <i
-                    >You will need an
-                    <a
-                        href="https://platform.openai.com/account/api-keys"
-                        target="_blank"
-                        >API key</a
-                    >
-                    to use it.</i
-                >
-            </p>
-            <p>
-                <a
-                    href="https://www.icloud.com/shortcuts/674d45a0800a4116b985611c89aee020"
-                    target="_blank"
-                    ><button class="center">Get from iCloud &nearr;</button></a
-                >
-            </p>
-        </div>
-
-        <div class="item">
-            <a
-                href="https://www.icloud.com/shortcuts/fb2e35859b4a45c9ad92fe393edbbec5"
-                target="_blank"
-                ><img
-                    alt="All focussed their attention at the scene exhibited"
-                    src="/images/reader.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">Super Focus Mode</h3>
-            <sup class="center">iOS</sup>
-            <p>Block distracting apps, not just notifications</p>
-            <p>
-                This Shortcut tries to make the built-in 'Focus' mode a little
-                more effective. Once activated, it blocks any apps you deem to
-                be distracting.
-            </p>
-            <p><i>A bit janky, but mostly functional.</i></p>
-            <p>
-                <a
-                    href="https://www.icloud.com/shortcuts/fb2e35859b4a45c9ad92fe393edbbec5"
-                    target="_blank"
-                    ><button class="center">Get from iCloud &nearr;</button></a
-                >
-            </p>
-        </div>
-<!--
-        <div class="item">
-            <a href="./codeplayground.html"
-                ><img
-                    alt="Beep boop"
-                    src="/images/bugs.svg"
-                    height="100"
-                    width="auto"
-            /></a>
-            <h3 class="center">Code Playground</h3>
-            <sup class="center">HTML</sup>
-            <p>The best way to learn is by playing, and this is my sandpit.</p>
-            <p>
-                Having started learning some <i>very rudimentary</i> Javascript,
-                I'm attempting to apply that knowledge in an HTML capacity.
-            </p>
-            <p>
-                <i
-                    >This is a living exercise book (to continue mixing
-                    metaphors).</i
-                >
-            </p>
-            <p>
-                <a href="/experiments/codeplayground.html"
-                    ><button class="center">Open the playground</button></a
-                >
-            </p>
-        </div> -->
-    </section>
+    </section
 </main>
 
 {% endblock content %}

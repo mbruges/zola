@@ -1,7 +1,6 @@
 <script>
     const approvedUsers = ["acct:mbruges@hypothes.is"];
     function showDefinitions() {
-        //maybe move the defContainer out of the body?
         console.log("running defs");
         var defContainer = false;
         lists = document.getElementsByTagName("ul");
@@ -19,9 +18,7 @@
             console.log("no definitions found");
             return;
         }
-        console.log("definitions found, replacing");
         defList = defContainer.getElementsByTagName("li");
-        // defContainer.parentNode.removeChild(defContainer);
         document.body.appendChild(defContainer);
         let word = "";
         let def = "";
@@ -53,27 +50,6 @@
                 if (abbr.innerText.includes(word)) {
                     abbr.setAttribute("data-title", def);
                 }
-                // var defLength = element.getAttribute("data-title").length;
-                // //automatically setting width
-                // newWidth = defLength * 0.5;
-                // abbr.style.setProperty("--min-height", `initial`);
-                // if (newWidth > 17) {
-                //     newWidth = 16;
-                //     element.style.setProperty("--min-height", `2em`);
-                // }
-                // abbr.style.setProperty("--min-width", `${newWidth}em`);
-
-                // // Create a rule for this specific abbr element's hover and focus states
-                // const style = document.createElement("style");
-                // style.type = "text/css";
-                // style.innerHTML = `
-                //         abbr:hover::after,
-                //         abbr:focus::after {
-                //             min-width: var(--min-width) !important;
-                //             min-height: var(--min-height) !important;
-                //         }
-                //     `;
-                // document.head.appendChild(style);
             });
         }
     }
@@ -88,7 +64,6 @@
     }
 
     function addAnnotationToPage(annotation) {
-        // console.log(annotation)
         const { target, text: rawText } = annotation;
         const text = rawText.replace(/"/g, "&quot;");
         var startContainer = target[0].selector[0].startContainer;
@@ -96,7 +71,6 @@
         const exactText = annotation.target[0].selector.find(
             (sel) => sel.type === "TextQuoteSelector",
         ).exact;
-        //console.log(exactText)
 
         // Locate the specific container in the DOM
         const xpathResult = document.evaluate(
@@ -145,7 +119,6 @@
                     console.log("Unapproved user: " + annotation.user);
                 }
             });
-            console.log("finished loading annotations");
             setTabIndex();
         } else {
             console.error("Failed to fetch annotations", response.status);
@@ -162,7 +135,7 @@
 
     window.addEventListener("click", () => {
         if (!hasFetched) {
-            console.log("fetching annotaitons");
+            console.log("fetching annotations");
             hasFetched = true;
         }
     });

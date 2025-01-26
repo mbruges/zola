@@ -1,0 +1,25 @@
+{% macro get_defs(content, type="text") %}
+    {% set data = load_data(path="/dictionary.toml") -%}
+    {% for entry in data.words %}
+        {% if content is containing(entry.word) %}
+            {% set abbr = "<abbr class=def data-title='" ~ entry.word ~ "_DEF_HERE'>" ~ entry.word ~ "</abbr>" %}
+            {% set_global content = content | safe | replace(from=entry.word, to=abbr) %}
+        {% endif %}
+    {% endfor %}
+    {% for entry in data.words %}
+        {% if content is containing(entry.word) %}
+            {% set_global content = content | safe | replace(from=entry.word ~ "_DEF_HERE", to=entry.def) %}
+        {% endif %}
+    {% endfor %}
+
+    {% set_global def_list = "<div id='definitions'><h3>DEFINITIONS: </h3><ul>" %}
+        {% for entry in data.words %}
+            {% if content is containing(entry.word) %}
+                {% set_global def_list = def_list ~ "<li><b>" ~ entry.word ~ "</b>: " ~ entry.def ~ "</li>" %}
+            {% endif %}
+        {% endfor %}
+    {% if def_list is ending_with("</li>") %}
+        {% set_global content = content ~ def_list ~ "</ul>" %}
+    {% endif %}
+    {{ content | safe }}
+{% endmacro get_defs %}

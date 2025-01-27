@@ -1,6 +1,6 @@
-{% extends "base.html" %} {% block content %} {% if page.extra.icon %} {% set
-icon = page.extra.icon %} {% else %} {% set icon = section.extra.icon %} {%
-endif %}
+{% extends "base.html" %}{% import "macros.html" as macros %}{% block content %}
+{% if page.extra.icon %} {% set icon = page.extra.icon %} {% else %} {% set icon
+= section.extra.icon %} {% endif %}
 <style>
     body {
         overflow: visible !important;
@@ -40,9 +40,11 @@ endif %}
     style="opacity: 0.7; font-family: monospace"
     id="copyright"
     class="center"
->© {{ page.authors[0] }}</small>
+    >© {{ page.authors[0] }}</small
+>
 {% endif %}
 <hr />
-<a style="font-size:0.8em" class="center" id="back" href="/learn">Back to Learn 👨‍🏫</a>
-{% include "snippets/annotationAPI.min.html" %}
-{% endblock content %}
+<a style="font-size: 0.8em" class="center" id="back" href="/learn"
+    >Back to Learn 👨‍🏫</a
+>
+{% include "snippets/annotationAPI.min.html" %} {% endblock content %}

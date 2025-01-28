@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Project Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f4a261; color: white; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            let y = 10;
+
+            doc.text("Team Project Form", 10, y);
+            y += 10;
+
+            document.querySelectorAll('table').forEach(table => {
+                table.querySelectorAll('tr').forEach(row => {
+                    let rowData = [];
+                    row.querySelectorAll('td, th').forEach(cell => {
+                        rowData.push(cell.innerText + ' ' + (cell.querySelector('input') ? cell.querySelector('input').value : ''));
+                    });
+                    doc.text(rowData.join(' | '), 10, y);
+                    y += 10;
+                });
+            });
+
+            doc.save("Team_Project_Form.pdf");
+        }
+    </script>
+</head>
+<body>
+    <h2>Team Project (Team Element)</h2>
+    <form onsubmit="event.preventDefault(); downloadPDF();">
+        <table>
+            <tr>
+                <th>Topic</th>
+                <td><input type="text" name="topic" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <th>Local issue</th>
+                <td><input type="text" name="local_issue" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <th>Local action</th>
+                <td><input type="text" name="local_action" style="width: 100%;"></td>
+            </tr>
+        </table>
+
+        <h3>Does our local issue allow us to:</h3>
+        <table>
+            <tr>
+                <th>Question</th>
+                <th>Yes</th>
+                <th>No</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Work as a team to create an Explanation of Research and Planning?</td>
+                <td><input type="radio" name="q1" value="Yes"></td>
+                <td><input type="radio" name="q1" value="No"></td>
+                <td><input type="text" name="notes1" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td>Research the issue and different perspectives on it?</td>
+                <td><input type="radio" name="q2" value="Yes"></td>
+                <td><input type="radio" name="q2" value="No"></td>
+                <td><input type="text" name="notes2" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td>Develop, plan and carry out a local action that can be evidenced and evaluated?</td>
+                <td><input type="radio" name="q3" value="Yes"></td>
+                <td><input type="radio" name="q3" value="No"></td>
+                <td><input type="text" name="notes3" style="width: 100%;"></td>
+            </tr>
+        </table>
+
+        <h3>In our Team Element:</h3>
+        <table>
+            <tr>
+                <td>Does the Explanation of Research and Planning identify the different perspectives and aspects of the local issue that will be researched, and who will do this work?</td>
+                <td><input type="text" name="team1" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td>Does the Explanation of Research and Planning contain an outline of the action and steps taken to plan it?</td>
+                <td><input type="text" name="team2" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td>Does the Explanation of Research and Planning contain details about the roles and responsibilities of each team member, how the action will be evidenced and how the success of the action will be measured?</td>
+                <td><input type="text" name="team3" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td>Does the explanation of Research and Planning contain notes of any parts of planning that had to be changed?</td>
+                <td><input type="text" name="team4" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td>Have we worked as active and committed team members throughout the team project? What have I done to evidence my part in this teamwork?</td>
+                <td><input type="text" name="team5" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td>Is the Explanation of Research and Planning less than the maximum of 400 words?</td>
+                <td><input type="text" name="team6" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td>Does our Evidence of Action show an aspect of our action?</td>
+                <td><input type="text" name="team7" style="width: 100%;"></td>
+            </tr>
+        </table>
+
+        <br>
+        <button type="submit">Submit & Download PDF</button>
+    </form>
+</body>
+</html>

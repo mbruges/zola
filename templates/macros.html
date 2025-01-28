@@ -24,3 +24,34 @@
     {% endif %}
     {{- content | safe -}}
 {% endmacro get_defs %}
+
+{% macro toc(page) %}
+{% if page.toc %}
+<style>
+#toc li {
+    list-style-type: none;
+}
+
+</style>
+<div id="toc">
+<p style="min-width:100%;font-family:monospace; text-align: center;margin:0em;padding:0em;background:var(--a);color:var(--b);">Table of Contents</p>
+    <ol style="margin-top:0px;border:2pt solid var(--a); background: rgba(240, 240, 240, 0.4);">
+    {% for h2 in page.toc %}
+
+        <li>
+            <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+            {% if h2.children %}
+                <ul>
+                    {% for h3 in h2.children %}
+                        <li>
+                            <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ol>
+</div>
+{% endif %}
+{% endmacro toc %}

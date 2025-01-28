@@ -12,7 +12,7 @@
 {% else %}<p class="subtitle"></p>{% endif %}
 </div>
 <div id="content" class="textbook-content">
-    {{- macros::get_defs(content=page.content, type="text") | trim | safe -}}
+    {{- macros::get_defs(content=page.content, type="text") | trim | safe | replace(from="<!-- toc -->", to=macros::toc(page=page)) | safe -}}
 </div>
 {% if page.authors %}<small id="copyright" class="center">© {{ page.authors[0] }}</small>{% endif %}
 <hr />

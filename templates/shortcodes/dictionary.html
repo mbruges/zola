@@ -1,0 +1,8 @@
+<dl id='definitions'>
+{% set data = load_data(path="/dictionary.yaml") %}{% for word, def in data %}
+    <dt>{{ word }}</dt><dd>{{ def }}</dd>
+    {% endfor %}
+</dl>
+<style>
+dl{dt{font-weight:700;grid-column-start:1}dt::after{content:": "}dd{margin-bottom:1em;}
+</style>

@@ -1,5 +1,6 @@
 {% macro get_defs(content, type="text") %}
     {% set data = load_data(path="/dictionary.yaml") -%}
+    {% set_global inc_words = [] %}
     {% for word, def in data %}
         {% if content is containing(word) %}
             {% set abbr = "<abbr class=def data-title='" ~ word ~ "_DEF_HERE'>" ~ word ~ "</abbr>" %}
@@ -7,13 +8,14 @@
         {% endif %}
     {% endfor %}
     {% for word, def in data %}
-        {% if content is containing(word) %}
+        {% if content is containing(word ~ "_DEF_HERE") %}
+            {%- set_global inc_words = inc_words | concat(with=word) %}
             {%- set_global content = content | safe | replace(from=word ~ "_DEF_HERE", to=def) -%}
         {% endif %}
     {% endfor %}
     {% set_global def_list = "<dl id='definitions'>" %}
         {% for word, def in data %}
-            {% if content is containing(word) %}
+            {% if inc_words is containing(word) %}
                 {% set_global def_list = def_list ~ "<dt>" ~ word ~ "</dt><dd>" ~ def ~ "</dd>" %}
             {% endif %}
         {% endfor %}

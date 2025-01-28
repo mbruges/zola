@@ -1,18 +1,24 @@
-{% extends "base.html" %} {% block content %} {% set icon = section.extra.icon %}
+{% extends "base.html" %} {% block content %} {% set icon = section.extra.icon %}{% set now = now() | date(format="%s") | int %}
 <meta property="og:title" content="{{ section.title }} - {{ config.extra.default_title }}" />
 <link rel="stylesheet" href="{{ get_url(path='blog-index.min.css') }}" />
+<style>
+.tag {
+    background: var(--a);
+    color: var(--b);
+    max-width: fit-content;
+    border-radius: 0.6em;
+    padding: 0.2em;
+    margin-top: 0.6em;
+    font-size:0.7em;
+}
+</style>
 <title>Blog - {{ config.extra.default_title }}</title>
 <h1 class="title">{{ section.title }}</h1>
 <p class="subheading">
     {{ section.description }}
 </p>
 <ul id="list-of-posts">
-    {% for page in section.pages | filter(attribute="draft", value=false) %} {%
-    if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
-    {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {%
-    set description = page.description | markdown(inline=true) %} {% set blurb = page.content |
-    striptags | truncate(length=360) %} {% else %} {% set description = "" %} {%
-    set blurb = page.content | striptags | truncate(length=360) %} {% endif %}
+    {% for page in section.pages | filter(attribute="draft", value=false) %} {% if page.extra.icon %} {% set icon = page.extra.icon %} {% else %} {% set icon = section.extra.icon %} {% endif %} {% if page.description %} {% set description = page.description | markdown(inline=true) %} {% set blurb = page.content | striptags | truncate(length=360) %} {% else %} {% set description = "" %} {% set blurb = page.content | striptags | truncate(length=360) %} {% endif %}{% set pub = page.date | date(format="%s") | int %}
     <div
         class="blog-card flex"
         onclick="location.href='{{ page.permalink | safe }}';"
@@ -22,23 +28,17 @@
         <div class="blog-icon">{{ icon }}</div>
         <div class="blog-details">
         <p class="">
-            <!-- &#x2712; -->
-
-            <span class="title">{{ page.title }}</span
-            ><br />
+            <span class="title">{{ page.title }} </span
+            >{% if  now - pub  < 1200000 %} <span class="tag">New</span>{% endif %}<br />
         <div class="description">
                 <p class="truncate"><span class="date"
                     >{{ page.date | date(format="%-d %b %y", locale="en_GB") }}
                     ~</span
                     ><b>{{ description | safe }} </b>{{ blurb }}
-                <span class="read-on-container"><i class="read-on">read more ⇝</i></span></p></div
-            >
+                <span class="read-on-container"><i class="read-on">read more ⇝</i></span></p></div>
         </p>
         </div>
-
     </div>
     <hr class="card-hr" />
-
-    {% endfor %}
-</ul>
+    {% endfor %}</ul>
 {% endblock content %}

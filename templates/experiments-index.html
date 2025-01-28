@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% set now = now() | date(format="%s") | int %}
 <meta
     property="og:title"
     content="Experiments - {{ config.extra.default_title }}"
@@ -43,7 +43,7 @@
             text-decoration: none !important;
         }
 
-        sup {
+        .tag {
             background: var(--a);
             color: var(--b);
             max-width: fit-content;
@@ -58,14 +58,16 @@
         }
     </style>
     <section class="grid">
-        {% for page in section.pages | filter(attribute="draft", value=false) %}
-        {% if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
-        {% set icon = section.extra.icon %} {% endif %} {% if page.description
-        %} {% set description = page.description %}{% endif %}
+    {% for page in section.pages | filter(attribute="draft", value=false) %}
+    {% if page.extra.icon %} {% set icon = page.extra.icon %} {% else %}
+    {% set icon = section.extra.icon %} {% endif %} {% if page.description
+    %} {% set description = page.description %}{% endif %}
+     {% set pub = page.date | date(format="%s") | int %}
         <div class="item" data-pubdate="{{ page.date }}">
-            <div class="center">
+            <div name="experiment-card" class="center">
                 <span class="icon-image center">{{ icon }}</span>
                 <h3>{{ page.title }}</h3>
+                {% if  now - pub  < 2600000 %} <sup class="tag">New</sup>{% endif %}
                 <p>{{ description | markdown(inline=true) | safe }}</p>
                 <p>
                     <a href="{% if page.extra.link %}{{ page.extra.link | safe }}" target="_blank" {% else %}{{ page.permalink | safe }}"{% endif %}

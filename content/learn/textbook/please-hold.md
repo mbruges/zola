@@ -7,8 +7,10 @@ extra:
   tags: ["pearson","ia-level","poetry"]
 ---
 
-<pre class="language-pre">
+<audio class=center loop preload=metadata controls src="/files/mozart.mp3" type="audio/mpeg" id="audioPlayer">
+</audio>
 
+<pre class="language-pre">
 This is the future, my wife says.
 We are already there, and it’s the same
 as the present. Your future, here, she says.
@@ -62,12 +64,3 @@ Please hold. Please grow old. Please grow cold.
 Please do what you’re told. Grow old. Grow cold.
 This is the future. Please hold.
 </pre>
-
-
-<button onclick="document.getElementById('audioPlayer').play()">
-  🔊</button>
-
-<audio id="audioPlayer">
-  <source src="/files/mozart.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>

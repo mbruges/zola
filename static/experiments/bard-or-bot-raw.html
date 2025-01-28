@@ -10,8 +10,7 @@
     <title>MB - Bard or Bot?</title>
 
 </head>
-
-<body>
+<body style="background:transparent">
     <script type="module">
         //import { prettifyCode, askGPT, hideLoader, showLoader, showResponseContainer, hideResponseContainer, downloadHTML, copy, notificationAlert, tokenToDollar } from "/head-functions.js";
         import { getSonnet, aiSonnets } from "/experiments/sonnets.js";
@@ -30,7 +29,7 @@
             couplet = aiSonnets[rand]}
         else {bOrB = "bard";
             couplet = getSonnet(sonnetNumber, true)}
-            document.getElementById('couplet').innerHTML = `<h3>${couplet}</h3>`
+            document.getElementById('couplet').innerHTML = `<p>${couplet}</p>`
         }
 
             //...and this script returns that token on page load.
@@ -65,7 +64,7 @@
             } else if ((parseInt(attempts) > 5) && ((score / attempts > 0.9))){
                 additionalMessage = "You're a bot-spotting expert"
             }
-            message = `<H1 style="color:${colour};"> ${message} </H1> <a onclick="window.location.reload();" style=" cursor: pointer;"><i>Try again?</i></a> <p>Current score is ${score} out of ${attempts}</p><br>${additionalMessage}`
+            message = `<h2 style="color:${colour};"> ${message} </h2> <a onclick="window.location.reload();" style=" cursor: pointer;"><button>Try again</button></a> <p>Current score is ${score} out of ${attempts}</p><br>${additionalMessage}`
             document.getElementById('answer').innerHTML = message
             document.getElementById('answer').style = `background:none;`
             document.getElementById('answer').className = 'show'
@@ -92,31 +91,12 @@
     </script>
     <div id="toastAlert"></div>
     <header>
-        <nav>
-            <div class="dropdown">
-                <a id="catNav"><img alt="miaow" src="/favicon.svg" height="40" width="40"></a>
-                <div class="dropdown-content">
-                    <a href="/experiments.html">Experiments</a>
-                    <a href="/resources.html">Resources</a>
-                    <a href="/blog.html">Blog</a>
-                </div>
-            </div>
-            <ul>
-                <li><a href="/"> Home </a></li>
-            </ul>
-        </nav>
 
-        <!--
-
-CONTENT STARS HERE. Copy and change file to HTML to use
-
--->
-<h1><a class="tooltipdata" data-tooltip="NOT the Google Bard, but the Stratford one!">Bard</a> or Bot?</h1>
-<small>Can you spot the AI verses amongst the Shakespeare sonnets? </small>
-<p></p>
-<form id="couplet" style="max-width: 500px;font-family: 'Times New Roman', Times, serif;text-align: center;"></form>
-        <br>
+<form id="couplet" style="font-size:1.3em;padding:0.5em;margin-top: 0.1em;max-width: 500px;font-family: 'Times New Roman', Times, serif;text-align: center;"></form>
     <section>
+        <style>
+        button{
+            border:3pt solid black}</style>
         <div style="margin-left:auto;margin-right:auto;display: flex;" id="buttons">
             <button id="bard">🪶 BARD </button>
             <h3>&nbsp &nbsp or &nbsp &nbsp</h3> <button id='bot' >BOT 🤖</button>
@@ -126,14 +106,6 @@ CONTENT STARS HERE. Copy and change file to HTML to use
 
     </div>
     </header>
-
-    <footer>
-        <p>© 2023 - <i> Made by <a href="/about.html" target="_blank">me
-                </a> and Agatha</i> 🐈‍⬛</p>
-        <p><i>Found this interesting? <a href="mailto:hello@mbruges.com?subject=Hello from the Internet"
-                    style="font-style: normal;"> Drop me a line 📮</a>
-        </p>
-    </footer>
 </body>
 
 </html>

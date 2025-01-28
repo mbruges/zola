@@ -132,14 +132,3 @@ BENVOLIO: I’ll pay that doctrine, or else die in debt.
 
 </pre>
 
-- DEFINITIONS:
-  - transgression: (n) an act violating a law 
-  - vanity: (n) silly, foolish, meaningless
-  - tyrannous: (adj) cruel, oppressive 
-  - melancholy: (n) deep sadness, sorrow
-  - oppression: (n) being controlled, put down
-  - assailing: (v) attacking 
-  - posterity: (n) the future
-  - spark: (n) small flash of light or a hint of something
-  - chastity: (n) the state of refraining from relationships
-  - doctrine: (n) something to believe in

@@ -33,9 +33,3 @@ flashing light,
 as the blessing sings  
 over their small bones.
 
-- DEFINITIONS:
-  - municipal: (adj) relating to city services  
-  - congregation: (n) group assembled for worship  
-  - frantic: (adj) wildly excited or anxious  
-  - bless: (v) to give well-being or happiness
-  - perfection: ideal, flawless, unimprovable

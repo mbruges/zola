@@ -55,9 +55,3 @@ Let them not make me a stone and let them not spill me.
 Otherwise kill me.
 </pre>
 
-- DEFINITIONS:
-  - lethal: (adj) deadly, causing death  
-  - dragoon: (v) to coerce, force  
-  - automaton: (n) a mechanical figure, robot  
-  - dissipate: (v) to scatter, disperse  
-  - bloodsucking: (adj) feeding on blood, parasitic

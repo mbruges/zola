@@ -36,12 +36,3 @@ with tears between the bath and pre-lunch beers.
 From the aeroplane he stares impassively at where  
 he earns his living and they do not care.
 
-- DEFINITIONS:
-  - dark room: (n) where photos are developed 
-  - agonies: (n) intense pain, suffering  
-  - impassively: (adv) without emotion, calmly  
-  - supplement: (n) additional material, extra  
-  - intone: (v) to say in a singing voice  
-  - tremble: (v) to shake, quiver
-  - Phnom Penh: (n) capital of Cambodia, site of war
-  - Belfast: (n) focus of the Troubles in N. Ireland

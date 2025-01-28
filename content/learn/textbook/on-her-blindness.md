@@ -72,9 +72,3 @@ in the coffin; it was up to us to believe
   
 she was watching, somewhere, in the end.
 
-- DEFINITIONS:
-  - catastrophic: (adj) causing great damage, disaster  
-  - inadequacy: (n) lack of quality, insufficient  
-  - dignity: (n) being worthy, honourable
-  - void: (n) empty space, nothingness  
-  - oblivious: (adj) unaware, unmindful

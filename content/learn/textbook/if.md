@@ -45,9 +45,3 @@ Yours is the Earth and everything that’s in it,
     And—which is more—you’ll be a Man, my son!  
 </pre>
 
-- DEFINITIONS:
-  - impostors: (n) deceptive pretenders, fakes  
-  - virtue: (n) moral excellence, goodness  
-  - unforgiving: (adj) harsh, relentless  
-  - knaves: (n) dishonest men, rogues  
-  - sinew: (n) strength, toughness

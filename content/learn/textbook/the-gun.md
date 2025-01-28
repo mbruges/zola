@@ -40,9 +40,3 @@ out of winters woods,
 his black mouth  
 sprouting golden crocuses.
 
-- DEFINITIONS:
-  - perforating: (v) to pierce, penetrate  
-  - entrails: (n) internal organs, intestines  
-  - reek: (v) to have a strong smell  
-  - jointing: (v) to cut meat into joints  
-  - gleam: (v) to shine brightly, sparkle

@@ -32,9 +32,3 @@ Curse, bless, me now with your fierce tears, I pray.
 Do not go gentle into that good night.  
 Rage, rage against the dying of the light.
 
-- DEFINITIONS:
-  - rave: (v) to talk wildly, complain  
-  - frail: (adj) weak, delicate  
-  - grieve: (v) to feel deep sorrow  
-  - blaze: (v) to burn brightly, shine  
-  - fierce: (adj) intense, passionate

@@ -3,11 +3,7 @@
     {% for word, def in data %}
         {% if content is containing(word) %}
             {% set abbr = "<abbr class=def data-title='" ~ word ~ "_DEF_HERE'>" ~ word ~ "</abbr>" %}
-            {% set_global content = content | safe | replace(from=' ' ~ word ~ ' ', to=' ' ~ abbr ~ ' ') %}
-            {% set_global content = content | safe | replace(from=' ' ~ word ~ '\n', to=' ' ~ abbr ~ '\n') %}
-            {% set_global content = content | safe | replace(from=' ' ~ word ~ '!', to=' ' ~ abbr ~ '!') %}
-            {% set_global content = content | safe | replace(from=' ' ~ word ~ '.', to=' ' ~ abbr ~ '.') %}
-            {% set_global content = content | safe | replace(from=" " ~ word ~ ",", to=" " ~ abbr ~ ",") %}
+            {% set_global content = content | regex_replace(pattern='\b' ~ word ~ '\b', rep=abbr) %}
         {% endif %}
     {% endfor %}
     {% for word, def in data %}
@@ -15,15 +11,14 @@
             {%- set_global content = content | safe | replace(from=word ~ "_DEF_HERE", to=def) -%}
         {% endif %}
     {% endfor %}
-
-    {% set_global def_list = "<div id='definitions'><h3>DEFINITIONS: </h3><ul>" %}
+    {% set_global def_list = "<dl id='definitions'>" %}
         {% for word, def in data %}
             {% if content is containing(word) %}
-                {% set_global def_list = def_list ~ "<li><b>" ~ word ~ "</b>: " ~ def ~ "</li>" %}
+                {% set_global def_list = def_list ~ "<dt>" ~ word ~ "</dt><dd>" ~ def ~ "</dd>" %}
             {% endif %}
         {% endfor %}
-    {% if def_list is ending_with("</li>") %}
-        {%- set_global content = content ~ def_list ~ "</ul>" -%}
+    {% if def_list is ending_with("</dd>") %}
+        {%- set_global content = content ~ def_list ~ "</dl>" -%}
     {% endif %}
     {{- content | safe -}}
 {% endmacro get_defs %}

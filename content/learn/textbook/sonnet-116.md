@@ -24,12 +24,3 @@ But bears it out even to the edge of doom:
     I never writ, nor no man ever loved.  
 </pre>
 
-- DEFINITIONS:
-  - impediments: (n) obstacles, hindrances  
-  - alters: (v) changes, modifies  
-  - tempests: (n) violent storms  
-  - wand'ring: (adj) wandering, roaming  
-  - compass: (n) boundary, limits  
-  - doom: (n) fate, judgment
-  - sickle: (n) tool for harvesting
-  - writ: (v) wrote

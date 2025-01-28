@@ -36,9 +36,3 @@ Audiences at early performances of *Romeo & Juliet* must have watched the openin
 
 >[](challenge) Why do you think masculinity is easy to connect with violence?
 
-- DEFINITIONS:
-  - volatile: (adj) likely to change suddenly  
-  - pestilent: (adj) harmful, dangerous  
-  - contemporary: (adj) belonging to the same period  
-  - mayhem: (n) chaos, disorder  
-  - martial: (adj) related to military forces

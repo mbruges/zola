@@ -148,12 +148,3 @@ In that hoarsened whisper of triumph,
 Of the new wee baby the doctor brought for us all  
 When I was asleep?"
 
-- DEFINITIONS:
-  - nosy: (adj) overly inquisitive, curious  
-  - hypnotist: (n) a person who uses hypnosis  
-  - hyperborean: (adj) extremely cold, frigid  
-  - sanatorium: (n) health facility for patients  
-  - epiphany: (n) sudden realization or insight  
-  - miraculum: (n) a miraculous event or phenomenon
-  - Hygeia: (n) goddess of cleanliness, hygiene
-  - Asclepius: (n) god of medicine & doctors

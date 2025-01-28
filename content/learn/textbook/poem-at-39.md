@@ -61,10 +61,3 @@ staring into the fire.
 
 </pre>
 
-- DEFINITIONS:
-  - grieved: (v) feel great sadness, loss
-  - voluptuous: (adj) pleasing, luxurious 
-  - meditate: (v) think deeply 
-  - season: (v) add flavor 
-  - admire: (v) respect, look up to
-  - deposit: (n) a sum for safekeeping

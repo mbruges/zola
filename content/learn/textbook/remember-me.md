@@ -24,8 +24,3 @@ Better by far you should forget and smile
          Than that you should remember and be sad.
 </pre>
 
-- DEFINITIONS:
-  - vestige: (n) a trace or remainder  
-  - counsel: (n) advice or guidance  
-  - grieve: (v) to feel deep sorrow  
-  - corruption: (n) decay, dishonesty

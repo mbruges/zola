@@ -41,14 +41,3 @@ my uncle, the aquarium keeper, said,
 but couldn’t look me in the eye,  
 for which I thank God.
 
-- DEFINITIONS:
-  - captive: (adj) kept confined or restrained  
-  - mermaid: (n) mythical sea creature, woman-fish  
-  - butchered: (v) to kill and prepare for food  
-  - throat: (n) front part of the neck  
-  - roe: (n) fish eggs, considered a delicacy  
-  - proof: (n) evidence or demonstration of truth  
-  - burial: (n) act of placing a dead body in the ground  
-  - wedding ring: (n) symbolic ring of marriage  
-  - starvation: (n) suffering due to insufficient food  
-  - forgive: (v) to stop feeling angry or resentful

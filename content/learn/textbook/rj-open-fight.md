@@ -87,9 +87,3 @@ Part, fools! put up your swords, you know not what you do.
 
 ---
 
-- DEFINITIONS:
-  - quarreling: (v) engaging in a fight  
-  - kinsmen: (n) relatives, family members  
-  - disgrace: (n) loss of honor or respect  
-  - draw: (v) to unsheathe a weapon  
-  - part: (v) to separate, end a conflict

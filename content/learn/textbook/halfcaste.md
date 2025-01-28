@@ -63,7 +63,3 @@ An I will tell yu
 De other half  
 Of my story
 
-- DEFINITIONS:
-  - Tchaikovsky: great Russian composer and pianist
-  - Picasso: Pablo Picasso, famous painter
-  - Consequently: 'because of this...'

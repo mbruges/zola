@@ -64,13 +64,3 @@ plugged into the sky all nerve and line
 patient; be afraid; but still, through everything  
 attentive to the irredeemable.
 
-- DEFINITIONS:
-  - apprehend: (v) to understand, grasp  
-  - driftwork: (n) debris washed ashore  
-  - insomnia: (n) prolonged inability to sleep  
-  - transitive: (adj) relating to change or movement  
-  - tether: (v) to tie, secure
-  - cambered: (adj) curved, arched  
-  - quail-grey: (adj) pale grey, resembling a quail  
-  - insatiable: (adj) impossible to satisfy  
-  - cherished: (adj) valued, beloved

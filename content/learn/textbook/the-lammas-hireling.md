@@ -34,9 +34,3 @@ but spend my nights casting ball from half-crowns
 and my days here. Bless me Father for I have sinned.  
 It has been an hour since my last confession.
 
-- DEFINITIONS:
-  - dote: (v) to show excessive love  
-  - stark-naked: (adj) completely bare, exposed  
-  - muckle: (adj) much, a large amount  
-  - elf-shot: (n) supernatural illness, often a curse  
-  - confession: (n) admitting sins, telling truths

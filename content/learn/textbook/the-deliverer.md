@@ -53,8 +53,3 @@ Toss the baby to the heap of others,
   
 Trudge home to lie down for their men again.
 
-- DEFINITIONS:
-  - crippled: (adj) disabled, unable to walk  
-  - tradition: (n) customs, practices  
-  - fetish: (n) strong obsession, fixation  
-  - desolate: (adj) deserted, empty

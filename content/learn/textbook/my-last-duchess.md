@@ -69,12 +69,3 @@ Which Claus of Innsbruck cast in bronze for me!
 ![Lucrezia de' Medici by Bronzino](/images/the-duchess.webp)
 *[Lucrezia de' Medici by Bronzino](https://en.wikipedia.org/wiki/My_Last_Duchess), generally believed to be the subject of the poem*
 
-- DEFINITIONS:
-  - munificence: (n) great generosity  
-  - trifling: (adj) unimportant, insignificant  
-  - countenance: (n) facial expression  
-  - approbation: (n) approval, praise  
-  - stoop: (v) to bend down, lower oneself
-  - earnest: (adj) sincere, serious  
-  - officious: (adj) excessively eager to help  
-  - nuance: (n) subtle difference, detail

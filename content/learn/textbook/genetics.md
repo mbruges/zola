@@ -31,9 +31,3 @@ for mirroring in bodies of the future.
 I’ll bequeath my fingers, if you bequeath your palms.  
 We know our parents make us by our hands.
 
-- DEFINITIONS:
-  - repelled: (v) be driven away, separated  
-  - quarry: (v) search for, seek  
-  - demure: (adj) modest, reserved  
-  - reciting: (v) say aloud from memory  
-  - bequeath: (v) give, pass on

@@ -2216,35 +2216,3 @@ Yes? . . . Mr Birling speaking. . . . What? - here—
 
 *As they stare guiltily and dumbfounded, the curtain falls.*
 
-- DEFINITIONS:
-  - bluff: (v) trick through lying
-  - pretence: (n) pretending
-  - evidence: (n) proof of something
-  - impact: (n) effect or influence
-  - inquiry: (n) asking questions
-  - pleasant: (adj) nice or enjoyable
-  - scandal: (n) bad event that shocks people, damages reputation
-  - hoax: (n) a trick, joke
-  - officious: (n) focussed on doing job
-  - Pitiful: (adj) very sad, weak
-  - shilling: (n) money, about $5 today
-  - Infirmary: (n) emergency room of hospital
-  - Honours List: (n) awards given to honourable people by Government
-  - knighthood: (n) special title, 'Sir', for honourable people
-  - prejudice: (n) judging people by appearances, class, status etc.
-  - impertinent: (adj) without respect for status
-  - public school: (n) expensive, elite private boarding school
-  - evening dress: (n) smart, formal clothes
-  - dandy: (n) fashionable man
-  - portentous: (adj) pompous, full of himself
-  - prominent: (adj) important
-  - provincial: (adj) slightly unsophisticated, lower-class
-  - guffaw: (v) laugh loudly
-  - pessimistic: (adj) negative, expecting bad things
-  - capital: (n) money, investements
-  - fiddlesticks: (n) Nonsense! Ridiculous!
-  - Balkans: (n) Eastern Europe, starting point of First World War
-  - prosperity: (n) wealth, success
-  - Bernard Shaws and H.G.Wells: famous, socialist-leaning writers
-  - hysterical: (n) over-emotional
-  - reproach: (v) tell off

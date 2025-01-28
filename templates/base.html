@@ -70,6 +70,9 @@ function toggleNightmode() {
 };
 if (localStorage.getItem('nightmode') === 'enabled') toggleNightmode();
 document.getElementById('lightswitch').onclick = toggleNightmode;
+if (window.self !== window.top) {
+    document.querySelector('nav').style.display = "none";
+}
 </script>
 </body>
 </html>

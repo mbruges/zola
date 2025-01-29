@@ -2,6 +2,13 @@
 title: "Do not go gentle into that good night"
 authors: ["Dylan Thomas"]
 extra:
+    vocab:
+        blaze:  (v) to burn brightly, shine
+        bless:  (v) to give well-being or happiness
+        fierce:  (adj) intense, passionate
+        frail:  (adj) weak, delicate
+        rave:  (v) to talk wildly, complain
+
     icon: 🔥
     keystage: ["4"]
     tags: ["poetry", "pearson"]
@@ -31,4 +38,3 @@ And you, my father, there on the sad height,
 Curse, bless, me now with your fierce tears, I pray.  
 Do not go gentle into that good night.  
 Rage, rage against the dying of the light.
-

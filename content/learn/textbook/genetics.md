@@ -2,6 +2,12 @@
 title: "Genetics"
 authors: ["Sinead Morrissey"]
 extra:
+    vocab:
+        bequeath:  (v) give, pass on
+        demure:  (adj) modest, reserved
+        quarry:  (v) search for, seek
+        reciting:  (v) say aloud from memory
+        repelled:  (v) be driven away, separated
     icon: 🤚
     keystage: ["5"]
     tags: ["", "poems-of-the-decade", "poetry"]
@@ -30,4 +36,3 @@ So take me with you, take up the skin’s demands
 for mirroring in bodies of the future.  
 I’ll bequeath my fingers, if you bequeath your palms.  
 We know our parents make us by our hands.
-

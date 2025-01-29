@@ -2,9 +2,14 @@
 title: "Blessing"
 authors: ["Imtiaz Dharker"]
 extra:
-    icon: 💧
-    keystage: ["4"]
-    tags: ["pearson", "anthology", "poetry"]
+  vocab:
+    perfection: (adj)  ideal, flawless, unimprovable
+    municipal: (adj) relating to city services
+    frantic: (adj) wildly excited or anxious
+    congregation: (n) group assembled for worship
+  icon: 💧
+  keystage: ["4"]
+  tags: ["pearson", "anthology", "poetry"]
 ---
 The skin cracks like a pod.  
 There never is enough water.  
@@ -32,4 +37,3 @@ their highlights polished to perfection,
 flashing light,  
 as the blessing sings  
 over their small bones.
-

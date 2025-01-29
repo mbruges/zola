@@ -5,6 +5,16 @@ extra:
   icon: 🧝‍♀️
   keystage: ["4"]
   tags: ["poetry","anthology","literature","romantic","pearson"]
+  vocab:
+    sedge: plants, reeds etc found around water
+    loitering: waiting without purpose
+    manna: bread from heaven
+    sojourn: travel, journey
+    meads: meadows, fields
+    haggard: exhausted
+    garland: ring of flowers to be worn
+    grot: small cave or home
+    anguish: sadness and anger
 
 taxonomies:
   keystage: ["4"]
@@ -73,14 +83,3 @@ And this is why I sojourn here,
 Though the sedge is withered from the lake,
        And no birds sing.
 </pre>
-
-- DEFINITIONS
-  - sedge: plants - reeds etc - found around water
-  - loitering: waiting without purpose
-  - manna: bread from heaven
-  - sojourn: travel, journey
-  - meads: meadows, fields
-  - haggard: exhausted
-  - garland: ring of flowers to be worn
-  - grot: small cave or home
-  - anguish: sadness and anger

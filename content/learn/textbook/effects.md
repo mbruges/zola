@@ -2,6 +2,8 @@
 title: "Effects"
 authors: ["Alan Jenkins"]
 extra:
+    vocab:
+        disdain:  (v) ignore
     icon: 💍
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]
@@ -56,4 +58,4 @@ The last words she had said were
 Please don’t leave  
 But of course I left; now I was back, though she  
 Could not know that, or turn her face to see  
-A nurse bring the little bag of her effects to me.  
+A nurse bring the little bag of her effects to me.

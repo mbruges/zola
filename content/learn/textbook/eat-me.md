@@ -2,6 +2,8 @@
 title: "Eat Me"
 authors: ["Patience Agbadi"]
 extra:
+    vocab:
+        juggernaut: (n) massive machine, (allegedly) used for human sacrifices
     icon: 🎂
     keystage: ["5"]
     tags: ["", "poems-of-the-decade", "poetry"]

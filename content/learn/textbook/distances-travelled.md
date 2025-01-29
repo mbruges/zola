@@ -2,6 +2,14 @@
 title: "The Furthest Distances I've Travelled"
 authors: ["Leontia Flynn"]
 extra:
+  vocab:
+    Larium:  (n) medicine to treat malaria
+    delirium:  (n) a disturbed state of mind
+    giro:  (n) money transfer paperwork
+    meridian:  (n) an imaginary line around the Earth
+    rucksack:  (n) a backpack for carrying
+    souvenirs:  (n) items kept for memories
+
   icon: 🎒
   keystage: ["5"]
   tags: ["poetry","poems of the decade","literature"]
@@ -51,4 +59,3 @@ and, from these crushed valentines, this unravelled
 sports sock, that the furthest distances I’ve travelled  
 have been those between people. And what survives  
 of holidaying briefly in their lives.
-

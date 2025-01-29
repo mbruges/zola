@@ -1,5 +1,7 @@
 {% macro get_defs(content, type="text") %}
-    {% set data = load_data(path="/dictionary.yaml") -%}
+    {% if page.extra.vocab %} {% set data = page.extra.vocab -%}
+    {% else %}{% set data = load_data(path="/dictionary.yaml") -%}
+    {% endif %}
     {% set_global inc_words = [] %}
     {% for word, def in data %}
         {% if content is containing(word) %}
@@ -24,6 +26,8 @@
     {% endif %}
     {{- content | safe -}}
 {% endmacro get_defs %}
+
+
 
 {% macro toc(page) %}
 {% if page.toc %}

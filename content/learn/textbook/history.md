@@ -2,6 +2,19 @@
 title: "History"
 authors: ["John Burnside"]
 extra:
+    vocab:
+        apprehend:  (v) to understand, grasp
+        cambered:  (adj) curved, arched
+        captive:  (adj) kept confined or restrained
+        cherished:  (adj) valued, beloved
+        dread:  (adj) great fear
+        driftwork:  (n) debris washed ashore
+        evidence:  (n) proof of something
+        insomnia:  (n) prolonged inability to sleep
+        quail-grey:  (adj) pale grey, resembling a quail
+        tether:  (v) to tie, secure
+        transitive:  (adj) relating to change or movement
+
     icon: 🐚
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]
@@ -63,4 +76,3 @@ his parents on the dune slacks with a kite
 plugged into the sky all nerve and line  
 patient; be afraid; but still, through everything  
 attentive to the irredeemable.
-

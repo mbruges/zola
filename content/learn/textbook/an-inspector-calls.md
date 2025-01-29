@@ -6,6 +6,38 @@ extra:
   icon: 🕵️‍♂️
   keystage: ["4"]
   tags: ["drama"]
+  vocab:
+      Balkans:  (n) Eastern Europe, starting point of First World War
+      Honours List:  (n) awards given to honourable people by Government
+      Infirmary:  (n) emergency room of hospital
+      Pitiful:  (adj) very sad, weak
+      bluff:  (v) trick through lying
+      capital:  (n) money, investments
+      confession:  (n) admitting sins, telling truths
+      dandy:  (n) fashionable man
+      dignity:  (n) being worthy, honourable
+      draw:  (v) to unsheathe a weapon
+      embarrassed:  (adj) feeling self-conscious or ashamed
+      evening dress:  (n) smart, formal clothes
+      evidence:  (n) proof of something
+      fiddlesticks:  (n) Nonsense! Ridiculous!
+      foreman:  (n) leader of workmen
+      hoax:  (n) a trick, joke
+      hysterical:  (n) over-emotional
+      impertinent:  (adj) without respect for status
+      inquiry:  (n) asking questions
+      knighthood:  (n) special title, 'Sir', for honourable people
+      officious:  (adj) overly-focussed on doing job
+      part:  (v) to separate, end a conflict
+      pessimistic:  (adj) negative, expecting bad things
+      pile:  (n) large post used to hold up piers, buildings
+      portentous:  (adj) pompous, full of himself
+      prominent:  (adj) important
+      proof:  (n) evidence or demonstration of truth
+      prosperity:  (n) wealth, success
+      provincial:  (adj) slightly unsophisticated, lower-class
+      scandal:  (n) bad event that shocks people, damages reputation
+      throat:  (n) front part of the neck
 ---
 
 ## Act One
@@ -2215,4 +2247,3 @@ Yes? . . . Mr Birling speaking. . . . What? - here—
 **BIRLING:** That was the police. A girl has just died – on her way to the Infirmary – after swallowing some disinfectant. And a police inspector is on his way here – to ask some – questions -----
 
 *As they stare guiltily and dumbfounded, the curtain falls.*
-

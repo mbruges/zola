@@ -1,7 +1,6 @@
 ---
 authors: ["Daljit Nagra"]
 title: "Look We Have Coming to Dover!"
-draft: false 
 extra:
   icon: ⛴️
   keystage: ["5"]

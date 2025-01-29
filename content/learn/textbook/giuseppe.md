@@ -2,6 +2,16 @@
 title: "Giuseppe"
 authors: ["Roderick Ford"]
 extra:
+    vocab:
+        burial:  (n) act of placing a dead body in the ground
+        butchered:  (v) to kill and prepare for food
+        captive:  (adj) kept confined or restrained
+        mermaid:  (n) mythical sea creature, woman-fish
+        proof:  (n) evidence or demonstration of truth
+        roe:  (n) fish eggs, considered a delicacy
+        throat:  (n) front part of the neck
+        wedding ring:  (n) symbolic ring of marriage
+
     icon: 🧜
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]

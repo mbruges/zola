@@ -5,6 +5,9 @@ extra:
     icon: 🌱
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]
+    vocab:
+      keg: (n) barrel, containing gunpowder
+      seethed: (v) full of angry energy
 ---
 It seemed an unlikely match. All winter unplugged,  
 grinding its teeth in a plastic sleeve, the chainsaw swung  
@@ -77,4 +80,4 @@ from the upstairs window like the midday moon.
 Back below stairs on its hook, the chainsaw seethed.  
 I left it a year, to work back through its man-made dreams,  
 to try to forget.  
-The seamless urge to persist was as far as it got.  
+The seamless urge to persist was as far as it got.

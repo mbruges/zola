@@ -2,9 +2,15 @@
 title: "An Easy Passage"
 authors: ["Julia Copus"]
 extra:
-    icon: 🪟
-    keystage: ["5"]
-    tags: ["poems-of-the-decade", "poetry"]
+  vocab:
+    petrified:  (adj) hardened, preserved
+    omens:  (n) signs of future events
+    flank:  (n) side of an object
+    crouched:  (v) to bend down low
+    armaments:  (n) military weapons, gear
+  icon: 🪟
+  keystage: ["5"]
+  tags: ["poems-of-the-decade", "poetry"]
 ---
 Once she is halfway up there, crouched in her bikini  
 on the porch roof of her family's house, trembling,  
@@ -44,4 +50,3 @@ oyster-painted toenails of an outstretched foot
 which catch the sunlight briefly like the  
 flash of armaments before  
 dropping gracefully into the shade of the house.
-

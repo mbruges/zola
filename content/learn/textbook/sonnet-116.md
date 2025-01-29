@@ -2,6 +2,16 @@
 title: "Sonnet 116"
 authors: ["William Shakespeare"]
 extra:
+    vocab:
+        alters: (v) changes, modifies
+        compass: (n) boundary, limits
+        doom: (n) fate, judgment
+        impediments: (n) obstacles, hindrances
+        sickle: (n) tool for harvesting
+        tempests: (n) violent storms
+        wand'ring: (adj) wandering, roaming
+        writ: (v) wrote
+
     icon: 💒
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]

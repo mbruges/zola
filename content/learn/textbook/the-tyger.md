@@ -2,6 +2,14 @@
 title: "The Tyger"
 authors: ["William Blake"]
 extra:
+    vocab:
+        anvil: (n) tool for working metal
+        dread: (adj) great fear
+        frame: (v) create, build
+        immortal: (adj) god-like
+        sinews: (n) tendons, muscles
+        symmetry: (n) matching pattern of stripes
+        terrors: (n) intense fears
     icon: 🐅
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]
@@ -35,4 +43,3 @@ Tyger Tyger burning bright,
 In the forests of the night:  
 What immortal hand or eye,  
 Dare frame thy fearful symmetry?
-

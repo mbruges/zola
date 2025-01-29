@@ -2,6 +2,10 @@
 title: "Material"
 authors: ["Ros Barber"]
 extra:
+    vocab:
+        hanky:  (n) a cloth handkerchief
+        cardi: (n) cardigan, old-fashioned jumper
+
     icon: 🤧
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]
@@ -84,4 +88,3 @@ and she would say, should I complain
 of the scratchy and disposable,  
 that this is your material  
 to do with, daughter, what you will.
-

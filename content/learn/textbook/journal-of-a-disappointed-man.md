@@ -2,6 +2,18 @@
 title: "Journal of a Disappointed Man"
 authors: ["Andrew Motion"]
 extra:
+    vocab:
+        baffled:  (adj) confused, puzzled
+        crack of Doom:  (n) the end of time
+        foreman:  (n) leader of workmen
+        hawser:  (n) cable used for building
+        monosyllables:  (n) words of one syllable
+        paraphernalia:  (n) equipment, special items
+        pier:  (n) wooden platform over sea
+        pile:  (n) large post used to hold up piers, buildings
+        ruminative:  (adj) thoughtful, reflective
+        trajectory:  (n) path, course of movement
+
     icon: 🏗
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]

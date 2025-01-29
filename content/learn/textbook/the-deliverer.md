@@ -2,6 +2,12 @@
 title: "The Deliverer"
 authors: ["Tishani Joshi"]
 extra:
+    vocab:
+        crippled: (adj) disabled, unable to walk
+        desolate: (adj) deserted, empty
+        fetish: (n) strong obsession, fixation
+        tradition: (n) customs, practices
+
     icon: 🇮🇳
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]

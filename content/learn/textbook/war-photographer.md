@@ -2,6 +2,16 @@
 title: "War Photographer"
 authors: ["Carol Ann Duffy"]
 extra:
+    vocab:
+        Belfast: (n) focus of the Troubles in N. Ireland
+        Phnom Penh: (n) capital of Cambodia, site of war
+        agonies: (n) intense pain, suffering
+        dark room: (n) where photos are developed
+        impassively: (adv) without emotion, calmly
+        intone: (v) to say in a singing voice
+        supplement: (n) additional material, extra
+        tremble: (v) to shake, quiver
+
     icon: 📷
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]

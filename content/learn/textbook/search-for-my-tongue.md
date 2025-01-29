@@ -53,8 +53,3 @@ it pushes the other tongue aside.
 Everytime I think I've forgotten,  
 I think I've lost the mother tongue,  
 it blossoms out of my mouth.
-
-
-- DEFINITIONS
-  - blossom: to flower, emerge
-  - mother tongue: the first language you speak

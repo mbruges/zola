@@ -2,6 +2,9 @@
 title: "Ode to a Grayson Perry Urn"
 authors: ["Tim Turnbull"]
 extra:
+    vocab:
+        ecstasy:  (n) overwhelming joy or delight
+
     icon: 🏺
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]

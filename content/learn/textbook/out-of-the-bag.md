@@ -2,6 +2,17 @@
 authors: ["Seamus Heaney"]
 title: "Out Of The Bag"
 extra:
+  vocab:
+    Asclepius:  (n) god of medicine, doctors
+    Hygeia:  (n) goddess of cleanliness, hygiene
+    draw:  (v) to unsheathe a weapon
+    epiphany:  (n) sudden realization or insight
+    gleam:  (v) to shine brightly, sparkle
+    hypnotist:  (n) a person who uses hypnosis
+    miraculum:  (n) a miraculous event or phenomenon
+    nosy:  (adj) overly inquisitive, curious
+    sanatorium:  (n) health facility for patients
+
   icon: 👩‍🍼
   keystage: ["5"]
   tags: ["poetry","poems of the decade","literature"]
@@ -147,4 +158,3 @@ In that hoarsened whisper of triumph,
 "And what do you think  
 Of the new wee baby the doctor brought for us all  
 When I was asleep?"
-

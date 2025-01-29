@@ -2,6 +2,63 @@
 authors: ["William Shakespeare"]
 title: "Macbeth"
 extra:
+  vocab:
+      Behold:  (v) look!
+      Bellona:  (n) goddess of war
+      Golgotha:  (n) the hill Jesus was crucified on
+      Thane:  (n) a lord
+      Whither:  (adv) where?
+      ambition:  (n) strong desire to succeed
+      attire:  (n) clothing
+      bless:  (v) to give well-being or happiness
+      broil:  (n) fight
+      burial:  (n) act of placing a dead body in the ground
+      capital:  (adj) deserving of execution
+      clamour:  (n) loud, confused noise
+      compass:  (n) boundary, limits
+      composition:  (n) peace, agreement
+      corporal:  (adj) physical, with a body
+      countenance:  (n) facial expression
+      desolate:  (adj) deserted, empty
+      dignity:  (n) being worthy, honourable
+      disgrace:  (n) loss of honor or respect
+      doom:  (n) fate, judgment
+      dread:  (adj) great fear
+      earnest:  (adj) sincere, serious
+      ecstasy:  (n) overwhelming joy or delight
+      entrails:  (n) internal organs, intestines
+      fantastical:  (adj) imaginary
+      fiend:  (n) demon, monster
+      forgive:  (v) to stop feeling angry or resentful
+      grieve:  (v) to feel deep sorrow
+      heath:  (n) wild, open place
+      herald:  (v) call, summon
+      hurlyburly:  (n) chaos, confusion
+      impediments:  (n) obstacles, hindrances
+      ingratitude:  (n) thanklessness
+      invest:  (v) give power, status
+      kerns and gallowglasses:  (n) foot soldiers
+      metaphysical:  (adj) supernatural
+      oblivious:  (adj) unaware, unmindful
+      peerless:  (adj) excellent, without equal
+      pleasant:  (adj) nice or enjoyable
+      plight:  (n) struggle, suffering
+      posterity:  (n) the future
+      pretence:  (n) pretending
+      proof:  (n) evidence or demonstration of truth
+      prophetic:  (adj) seeing into the future
+      quarry:  (v) search for, seek
+      rapt:  (adj) absorbed, hypnotised
+      repent:  (v) apologise, admit sins
+      treason:  (n) act of betraying king/country
+      tremble:  (v) to shake, quiver
+      trifles:  (n) gifts
+      tyrant:  (n) cruel, unfair ruler
+      valiant:  (adj) brave
+      virtue:  (n) moral excellence, goodness
+      wrack:  (n) ruin, destruction
+      yield:  (v) give in, surrender
+
   icon: 🏴󠁧󠁢󠁳󠁣󠁴󠁿
   keystage: ["4"]
   tags: ["drama"]
@@ -5697,5 +5754,3 @@ Whom we invite to see us crown’d at Scone.
 <p class="right">[<i>Flourish. Exeunt.</i>]</p>
 
 </div>
-
-

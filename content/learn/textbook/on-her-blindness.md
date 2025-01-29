@@ -2,6 +2,13 @@
 title: "On Her Blindness"
 authors: ["Adam Thorpe"]
 extra:
+    vocab:
+        admire:  (v) respect, look up to
+        catastrophic:  (adj) causing great damage, disaster
+        compass:  (n) boundary, limits
+        dignity:  (n) being worthy, honourable
+        void:  (n) empty space, nothingness
+
     icon: 🦯
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]

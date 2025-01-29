@@ -2,6 +2,14 @@
 title: "If-"
 authors: ["Rudyard Kipling"]
 extra:
+    vocab:
+        impostors:  (n) deceptive pretenders, fakes
+        knaves:  (n) dishonest men, rogues
+        sinew:  (n) strength, toughness
+        stoop:  (v) to bend down, lower oneself
+        unforgiving:  (adj) harsh, relentless
+        virtue:  (n) moral excellence, goodness
+
     icon: 👦
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]

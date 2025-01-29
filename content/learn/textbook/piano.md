@@ -2,6 +2,13 @@
 title: "Piano"
 authors: ["D H Lawrence"]
 extra:
+    vocab:
+        appassionato:  (adj) passionate, intense
+        clamour:  (n) loud, confused noise
+        glamour:  (n) alluring beauty or charm
+        insidious:  (adj) subtly harmful, deceitful
+        mastery:  (n) great skill or control
+
     icon: 🎹
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]

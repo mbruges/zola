@@ -2,6 +2,11 @@
 authors: ["Alice Walker"]
 title: "Poem at Thirty-Nine"
 extra:
+  vocab:
+      admire:  (v) respect, look up to
+      deposit:  (n) money saved
+      voluptuous:  (adj) pleasing, luxurious
+
   icon: 👩‍🍳
   keystage: ["4"]
   tags: ["pearson", "anthology", "poetry"]
@@ -60,4 +65,3 @@ cooking, writing, chopping wood,
 staring into the fire.
 
 </pre>
-

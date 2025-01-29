@@ -2,6 +2,10 @@
 title: "Half-Caste"
 authors: ["John Agard"]
 extra:
+    vocab:
+        Consequently:  "because of this..."
+        Picasso: Pablo Picasso, famous painter
+        Tchaikovsky: great Russian composer and pianist
     icon: 🇬🇾
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]
@@ -62,4 +66,3 @@ And de whole of yu mind
 An I will tell yu  
 De other half  
 Of my story
-

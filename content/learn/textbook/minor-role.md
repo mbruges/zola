@@ -1,7 +1,7 @@
 ---
 authors: ["U A Fanthorpe"]  
 title: "A Minor Role"  
-extra:  
+extra:
   icon: 🎭  
   keystage: ["5"]  
   tags: ["anthology","poetry"]  

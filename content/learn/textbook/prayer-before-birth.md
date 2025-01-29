@@ -2,6 +2,17 @@
 title: "Prayer Before Birth"
 authors: ["Louis MacNeice"]
 extra:
+    vocab:
+        automaton:  (n) a mechanical figure, robot
+        bloodsucking:  (adj) feeding on blood, parasitic
+        dissipate:  (v) to scatter, disperse
+        ghoul:  (v) monster, demon
+        doom:  (n) fate, judgment
+        dragoon:  (v) to coerce, force
+        forgive:  (v) to stop feeling angry or resentful
+        lethal:  (adj) deadly, causing death
+        treason:  (n) act of betraying king/country
+
     icon: 🦇
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]
@@ -54,4 +65,3 @@ hands would spill me.
 Let them not make me a stone and let them not spill me.  
 Otherwise kill me.
 </pre>
-

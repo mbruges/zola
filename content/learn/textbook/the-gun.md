@@ -2,6 +2,13 @@
 title: "The Gun"
 authors: ["Vicki Feaver"]
 extra:
+    vocab:
+        entrails: (n) internal organs, intestines
+        gleam: (v) to shine brightly, sparkle
+        jointing: (v) to cut meat into joints
+        perforating: (v) to pierce, penetrate
+        reek: (v) to have a strong smell
+
     icon: 🔫
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]

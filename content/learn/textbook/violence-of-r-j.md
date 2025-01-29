@@ -2,6 +2,13 @@
 title: The Violence of Romeo and Juliet
 author: Andrew Dickinson
 extra:
+  vocab:
+    contemporary: (adj) belonging to the same period
+    martial: (adj) related to military forces
+    mayhem: (n) chaos, disorder
+    pestilent: (adj) harmful, dangerous
+    volatile: (adj) likely to change suddenly
+
   icon: 🩸
 ---
 
@@ -35,4 +42,3 @@ Audiences at early performances of *Romeo & Juliet* must have watched the openin
 5. How does this scene set the tone for the rest of the play?
 
 >[](challenge) Why do you think masculinity is easy to connect with violence?
-

@@ -2,6 +2,12 @@
 title: "Remember Me"
 authors: ["Christina Rossetti"]
 extra:
+    vocab:
+        corruption: (n) decay, dishonesty
+        counsel: (n) advice or guidance
+        grieve: (v) to feel deep sorrow
+        vestige: (n) a trace or remainder
+
     icon: 🌅
     keystage: ["4"]
     tags: ["pearson", "anthology", "poetry"]

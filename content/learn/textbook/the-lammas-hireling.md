@@ -2,6 +2,12 @@
 title: "The Lammas Hireling"
 authors: ["Ian Duhig"]
 extra:
+    vocab:
+        confession: (n) admitting sins, telling truths
+        elf-shot: (n) supernatural illness, often a curse
+        muckle: (adj) much, a large amount
+        stark-naked: (adj) completely bare, exposed
+
     icon: 🐮
     keystage: ["5"]
     tags: ["poems-of-the-decade", "poetry"]

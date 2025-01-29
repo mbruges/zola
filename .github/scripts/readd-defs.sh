@@ -26,9 +26,10 @@ while IFS=$'\n' read -r line; do
   if grep -q "\<$word\>" "$markdown_file"; then
     definition=$(echo $line | cut -d ':' -f 2-)
     # Add the word and definition to the words section
-    words_section+="        $word: $definition\n"
+    words_section+="        $word:$definition\n"
+    echo "adding $word"
   fi
 done <<< "$dictionary"
 
 # Update the markdown file with the words section
-sed -i "s/extra:/&\n$words_section/" "$markdown_file"
+sed -i "s|extra:|&\n$words_section|" "$markdown_file"

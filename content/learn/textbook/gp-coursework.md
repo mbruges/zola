@@ -10,6 +10,40 @@ extra:
 
 <!-- toc -->
 
+## Individual project
+
+### Planning document
+
+![](/images/gp-individual.png)
+*[Download sheet](/images/gp-individual.png)*
+
+### Suggested structure
+
+1. Question as a title.
+2. Introduction to the global issue.
+3. Analysis of the [issue](#list-of-topics) from different perspectives.
+4. Analysis of the causes and consequences of the issue.
+5. Proposal of courses of action to address the issue and selection of the one preferred.
+6. Evaluation of sources of information.
+7. Conclusion and reflection on how the research have influenced the learner’s personal perspective.
+
+### Guidance
+
+The Individual Report should be coherent and clearly structured, with arguments, evidence and perspectives presented clearly:
+
+- engage with a range of perspectives
+- analyse the causes and consequences of the issue
+- consider different courses of action to improve or resolve the issue
+- reflect on how their personal perspective on the issue has changed/developed.
+
+Learners are expected to use sources and information to provide evidence for the arguments presented, to explain any points made and to support their conclusion answering their question.
+
+The conclusion should be clear and concise and give the learner’s personal perspective, reflecting on the impact of their research, learning and others’ perspectives on their personal perspective(s). Learners should justify their personal perspective using evidence from their research and make direct links between the conclusion they draw, and the evidence contained in their report.
+
+In their planning, learners should select the information and sources they are going to use and note the strengths and weaknesses of each. Learners should try to use different types of sources and must refer to these in the body of their work.
+
+Learners must cite and reference all sources used and when quoting directly they must use quotation marks. They should avoid quoting extensively. Quotes count towards the word count. Learners’ own words are preferable. Learners should be advised to find a range of sources to add depth to their work. These should come from different perspectives.
+
 ## Team Project/Element
 
 ### Step-by-step
@@ -23,30 +57,6 @@ extra:
 7. The team also collaborates to write a planning document – the Explanation of Research and Planning, which explains their decisions and planned actions.
 8. They collaborate to produce the Evidence of Action.
 9. Each **individual** team member also produces a Reflective Paper, in which they reflect on the whole project and their experiences and learning, and evaluate their teamwork and the action taken.
-
-### List of Topics
-
-- Arts in society
-- Change in culture and communities
-- Climate change, energy and resources
-- Conflict and peace
-- Development, trade and aid
-- Digital world
-- Education for all
-- Employment
-- Environment, pollution and conservation
-- Globalisation
-- Health and wellbeing
-- Law and criminality
-- Media and communication
-- Migration and urbanisation
-- Political power and action
-- Poverty and inequality
-- Social identity and inclusion
-- Sport and recreation
-- Technology, industry and innovation Transport, travel and tourism
-- Values and beliefs
-- Water, food and agriculture
 
 ### Example issues
 
@@ -151,3 +161,28 @@ Collaboration marks are awarded based on observation throughout the project. The
 Learners should be made aware of what is meant by collaboration in this syllabus.  
 
 Table D has a single strand for marking. For 5 marks, the individual learner consistently demonstrated the characteristics of an effective team-worker throughout the project, contributing, being flexible, supporting and being supported, and completing own tasks as agreed with the team.
+
+
+## List of Topics
+
+- Arts in society
+- Change in culture and communities
+- Climate change, energy and resources
+- Conflict and peace
+- Development, trade and aid
+- Digital world
+- Education for all
+- Employment
+- Environment, pollution and conservation
+- Globalisation
+- Health and wellbeing
+- Law and criminality
+- Media and communication
+- Migration and urbanisation
+- Political power and action
+- Poverty and inequality
+- Social identity and inclusion
+- Sport and recreation
+- Technology, industry and innovation Transport, travel and tourism
+- Values and beliefs
+- Water, food and agriculture

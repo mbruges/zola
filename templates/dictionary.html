@@ -1,0 +1,43 @@
+{% extends "experiment-page.html" %}
+{% block content %}
+<h1 class="title" style="padding-bottom: 0.3rem; border-bottom: none">
+    {{ icon }} {{ page.title }}
+</h1>
+<div id="date-bar">
+    {% if page.date and not page.draft %}
+    <span id="date-tag">
+        {{ page.date | date(format="%-d %B %Y", locale="en_GB") }} {% else %} {%
+        endif %}
+    </span>
+</div>
+<div class="subheading">
+    {% if page.description and not page.extra.nosub %}
+    <p class="subtitle">
+        {{ page.description | markdown(inline=true) | safe }}
+    </p>
+    {% else %}
+    <p class="subtitle"></p>
+    {% endif %}
+</div>
+<div id="content" >
+<dl id='definitions'>
+    {% set textbook = get_section(path="learn/textbook/_index.md") %}
+    {% for page in textbook.pages %}
+    {% if page.extra.vocab %}
+        {% set data = page.extra.vocab -%}
+            {% for word, def in data %}
+            <dt><a href="{{ page.path }}#:~:text={{ word | trim | urlencode }}" target="_blank">{{ word }}</a></dt><dd>{{ def }}</dd>
+            {% endfor %}
+    {% endif %}
+{% endfor %}
+<style>
+a:hover::after {
+    content: " ↗";
+}dl{dt{font-weight:700;grid-column-start:1}dt::after{content:": "}dd{margin-bottom:1em;}
+</style>
+<style>
+
+
+
+</style>
+{% endblock content %}

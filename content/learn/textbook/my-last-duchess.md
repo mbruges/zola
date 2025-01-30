@@ -6,7 +6,7 @@ extra:
   keystage: ["4"]
   tags: ["poetry","pearson","literature"]
   vocab:
-    munificence: (n) great generosity
+    munificence: (n) great generosity, wealth
     trifling: (adj) unimportant, insignificant
     countenance: (n) facial expression
     approbation: (n) approval, praise

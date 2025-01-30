@@ -21,15 +21,11 @@
 </div>
 <div id="content" >
 <dl id='definitions'>
+    {% set_global entrylist = [] %}
+    {% set_global printedlist = [] %}
     {% set textbook = get_section(path="learn/textbook/_index.md") %}
-    {% for page in textbook.pages %}
-    {% if page.extra.vocab %}
-        {% set data = page.extra.vocab -%}
-            {% for word, def in data %}
-            <dt><a href="{{ page.path }}#:~:text={{ word | trim | urlencode }}" target="_blank">{{ word }}</a></dt><dd>{{ def }}</dd>
-            {% endfor %}
-    {% endif %}
-{% endfor %}
+    {% for page in textbook.pages %}{% if page.extra.vocab %}{% set data = page.extra.vocab -%}{% for word, def in data %}{% set urlEncode = word | trim | urlencode %}{% set lowerword = word | lower %}{% set entry = lowerword ~ "*<dt><a href='" ~ page.path ~ "#:~:text=" ~ urlEncode  ~ "' target='_blank'>" ~ word ~ "</a></dt><dd>" ~ def ~ "</dd>" %}{% set_global entrylist = entrylist | concat(with=entry)%}{% endfor %}{% endif %}{% endfor %}{% set_global entrylist = entrylist | sort %}{% for line in entrylist %}{% set line = line | split(pat="*")  %}{% if line.0 not in printedlist %}{{ line.1 | safe }}{% set_global printedlist = printedlist | concat(with=line.0) %}{% endif %}
+    {% endfor %}
 <style>
 a:hover::after {
     content: " ↗";

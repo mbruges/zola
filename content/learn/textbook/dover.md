@@ -5,6 +5,18 @@ extra:
   icon: ⛴️
   keystage: ["5"]
   tags: ["poetry"]
+  vocab:
+    Blair: (n) Tony Blair, UK Prime Minister '97-'07
+    alfresco: (adj) outdoors (Italian loan-word)
+    blarnies: (n) chatter, talking
+    cushy: (adj) soft, easy (Hindi loan-word)
+    ennobled: (adj) elevated to a higher class
+    grafting: (v) working hard; or attaching
+    lingoes: (n) languages, dialects
+    ministered: (adj) cared for, blessed
+    pylon: (n) structure for holding up power cables (Ancient Greek, originally 'gateway')
+    scramming: (v) scraping, scratching; or running away
+    unclocked: (adj) not seen, unnoticed
 ---
 
 *"So various, so beautiful, so new…"*[^1]

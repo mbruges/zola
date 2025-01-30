@@ -1,6 +1,5 @@
-# To use, add
+# To use, add to the template
 # {{ macros::get_defs(content=page.content, type="text") }}
-# to the template
 
 Asclepius: (n) god of medicine & doctors
 Balkans: (n) Eastern Europe, starting point of First World War

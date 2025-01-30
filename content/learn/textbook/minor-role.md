@@ -5,6 +5,15 @@ extra:
   icon: 🎭  
   keystage: ["5"]  
   tags: ["anthology","poetry"]  
+  vocab: 
+    unobtrusive: (adj) out of the way, ignorable
+    consultant: (n) senior doctor
+    Propping a spear: "a character in the background of a play is often called a 'spearcarrier'"
+    sniggers: (n) laughter at embarrassment
+    torpor: (n) doing nothing, lack of energy
+    lassitude: (n) weakness, listlessness
+    whimsical: (adj) silly, light-hearted
+    
 ---
 
 I’m best observed on stage,    
@@ -30,8 +39,8 @@ For well-meant intrusiveness.
   
 At home,  
 Thinking ahead: Bed? A good idea!  
-<tab></tab>answer the phone,  
-&emsp;&emsp;Be wary what I say to it, but grateful always;  
+answer the phone,  
+Be wary what I say to it, but grateful always;  
 Contrive meals for hunger-striker; track down  
 Whimsical soft-centred happy-all-the-way-through novels;  
 Find the cat (mysteriously reassuring);  

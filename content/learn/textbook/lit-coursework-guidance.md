@@ -5,6 +5,8 @@ extra:
   icon: 📚
   keystage: ["4"]
   tags: ["guide","coursework","literature"]
+  vocab:
+    playwright: someone who writes plays
 ---
 
 <!-- toc -->

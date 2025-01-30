@@ -58,6 +58,7 @@ extra:
       virtue:  (n) moral excellence, goodness
       wrack:  (n) ruin, destruction
       yield:  (v) give in, surrender
+      hangman: (n) executioner 
 
   icon: 🏴󠁧󠁢󠁳󠁣󠁴󠁿
   keystage: ["4"]

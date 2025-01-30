@@ -1,0 +1,9 @@
+<dl id='definitions' style="display:block !important">
+{% set data = body | split(pat="\n") | sort %}
+    {% for line in data %} {% set line = line | split(pat=": ") %}
+    <dt>{{ line[0] }}</dt><dd>{{ line[1] }}</dd>
+    {% endfor %}
+</dl>
+<style>
+dl{dt{font-weight:700;grid-column-start:1}dt::after{content:": "}dd{margin-bottom:1em;}
+</style>

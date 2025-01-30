@@ -1,7 +1,6 @@
 ---
 authors: ["Cambridge International"]
 title: "Guide to Global Perspectives Coursework"
-draft: false
 extra:
   icon: 🌐
   keystage: ["4"]
@@ -34,7 +33,8 @@ The Individual Report should be coherent and clearly structured, with arguments,
 - engage with a range of perspectives
 - analyse the causes and consequences of the issue
 - consider different courses of action to improve or resolve the issue
-- reflect on how their personal perspective on the issue has changed/developed.
+- reflect on how their personal perspective on the issue has changed/developed
+- write no more than **2000 words**
 
 Learners are expected to use sources and information to provide evidence for the arguments presented, to explain any points made and to support their conclusion answering their question.
 
@@ -43,6 +43,23 @@ The conclusion should be clear and concise and give the learner’s personal per
 In their planning, learners should select the information and sources they are going to use and note the strengths and weaknesses of each. Learners should try to use different types of sources and must refer to these in the body of their work.
 
 Learners must cite and reference all sources used and when quoting directly they must use quotation marks. They should avoid quoting extensively. Quotes count towards the word count. Learners’ own words are preferable. Learners should be advised to find a range of sources to add depth to their work. These should come from different perspectives.
+
+- Learners are presenting viewpoints and not just information.
+- Learners should be responsible for their own work and plan their Individual Report independently.
+They should negotiate time frames and deadlines with their teacher.
+- Learners should not use the work of any other learner. They should make notes while researching,
+and use their own words when they write their Individual Report. They can copy and paste website addresses used in their research. They should note the date, title and author of the article and the date they accessed it.
+- Learners should be clear that they know what is required for successful completion of the Individual Report. They may discuss aspects of their work with their teacher, but they should not expect their teacher to do any research or work for them. They should not expect written feedback or corrections on their work.
+- Learners should check that their work is complete and has been spell-checked and proofread before submitting it for assessment.
+
+## Example questions
+
+- Can the Arts improve health in communities? (Topic: Arts in society. Issue: Impact on community health.)
+- Could social media companies prevent cyber bullying? (Topic: Digital world. Issue: Cyber bullying)
+- Can globalisation lead to more equality between men and women in families? (Topic: Globalisation. Issue: Inequality in family life.)
+- Should we try to live more sustainably to prevent climate change? (Topic: Climate change. Issue: Sustainable living)
+- Can governments ensure that immigrants are integrated into local communities? (Topic: Migration / change in communities. Issue: Integration of immigrants)
+- Can Fair Trade solve global poverty? (Topic: Poverty and inequality. Issue: Impact of Fair trade)
 
 ## Team Project/Element
 

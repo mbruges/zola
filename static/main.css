@@ -374,6 +374,12 @@ hr {
     opacity: 0.8;
 }
 
+
+blockquote p {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
 blockquote,
 pre:has(code.language-quote) {
     font-family: serif;
@@ -390,6 +396,7 @@ pre:has(code.language-quote) {
 
 blockquote a {
     color: #51518a;
+    font-family: inherit;
 }
 
 blockquote p br {

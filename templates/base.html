@@ -42,7 +42,7 @@
             </div>
         </nav>
   <section class="section">
-    <div class="container" id="container">
+    <div class="container" id="container" style="scroll-margin-top: 2em;">
       {%- block content -%} {%- endblock -%}
     </div>{% if page.extra.tags %}<p id="tag-container" hidden> TAGS:{% for tag in page.extra.tags %}{{ tag }},{% endfor %}</p>{% endif %}
   </section>

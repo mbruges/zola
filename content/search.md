@@ -8,6 +8,10 @@ extra:
   nosub: true
 date: 2025-01-01
 ---
+<div id=loader>
+    <p><i>Loading search...</i><p>
+<svg fill='none' height='24' width='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><style> g { animation: rotate 2s linear infinite; transform-origin: center center; } circle { stroke-dasharray: 75,100; stroke-dashoffset: 0; animation: dash 1.5s ease-in-out infinite; stroke-linecap: round; } @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } @keyframes dash { 0% { stroke-dasharray: 1,100; stroke-dashoffset: 0; } 50% { stroke-dasharray: 44.5,100; stroke-dashoffset: -17.5; } 100% { stroke-dasharray: 44.5,100; stroke-dashoffset: -62; } } </style><g><circle cx='12' cy='12' r='10' fill='none' stroke='rgb(136, 145, 164)' stroke-width='4' /></g></svg>
+</div>
 
 <link rel="stylesheet" href="/blog-index.css">
 
@@ -63,11 +67,11 @@ function makeSearch(element) {
         // searchIcon.innerHTML = `<a id="back" href="javascript:history.back()" alt="Back to ${prevPage}" title="Back to ${prevPage}">↩</a>`;
 
         document.getElementById('footer').style.position = "absolute"
-        document.getElementById('footer').style.bottom = "2em"
+        document.getElementById('footer').style.bottom = "1em"
         document.getElementById('footer').style.left = "0%"
+        document.getElementById('loader').style.display = "none"
         prevPage = document.referrer ? document.referrer.split('/').pop() : "";
         var searchInput = document.getElementById('page-search-input')
-        
         searchInput.addEventListener('input', function() {
             makeSearch(searchInput);
         });

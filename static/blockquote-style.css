@@ -7,7 +7,7 @@ blockquote:has(a[href$="challenge"]) {
     color: black;
     border: none;
     border-left: 10px solid rgb(166, 0, 0);
-    border-radius: 0.3em;
+    border-radius: 0em;
     box-shadow: none;
 }
 
@@ -33,7 +33,7 @@ blockquote:has(a[href$="warning"]),
     color: black;
     border: none;
     border-left: 10px solid rgb(207, 173, 0);
-    border-radius: 0.3em;
+    border-radius: 0em;
     box-shadow: none;
 }
 blockquote:has(a[href$="warning"])::before,
@@ -49,7 +49,7 @@ blockquote:has(a[href$="note"]) {
     color: black;
     border: none;
     border-left: 10px solid rgb(0, 116, 178);
-    border-radius: 0.3em;
+    border-radius: 0em;
     box-shadow: none;
 }
 blockquote:has(a[href$="note"])::before {
@@ -65,7 +65,7 @@ blockquote:has(a[href$="think"]) {
     color: black;
     border: none;
     border-left: 10px solid rgb(119, 0, 152);
-    border-radius: 0.3em;
+    border-radius: 0em;
     box-shadow: none;
 }
 blockquote:has(a[href$="important"])::before {
@@ -86,7 +86,7 @@ blockquote:has(a[href$="tip"]) {
     color: black;
     border: none;
     border-left: 10px solid rgb(0, 130, 35);
-    border-radius: 0.3em;
+    border-radius: 0em;
     box-shadow: none;
 }
 blockquote:has(a[href$="tip"])::before {
@@ -102,7 +102,7 @@ blockquote:has(a[href$="task"]) {
     color: #183150;
     border: none;
     border-left: 10px solid #183150;
-    border-radius: 0.3em;
+    border-radius: 0em;
     box-shadow: none;
 }
 task,

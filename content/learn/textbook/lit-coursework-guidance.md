@@ -7,6 +7,10 @@ extra:
   tags: ["guide","coursework","literature"]
 ---
 
+<!-- toc -->
+
+> [](aside-note) The following is taken from Pearson Edexcel's online guidance. You can read the [original document here.](https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Literature/2016/Teaching%20and%20learning%20materials/support-for-writing-about-drama-as-drama-with-an-inspector-calls-examples.pdf)
+
 ## Key questions
 
 When analysing the plays, consider these questions:
@@ -69,5 +73,3 @@ Romantic drama: Romantic drama is a genre that explores the complex side of love
 Tragicomedy: A tragicomedy might be a serious drama interspersed with funny moments that periodically lighten the mood, or a drama that has a happy ending. Shakespeare’s later plays began as tragedies then turned out happily as a reconciliation occurred in acts 3 or 4.
 
 {% end %}
-
-[Original document here](https://qualifications.pearson.com/content/dam/pdf/International%20GCSE/English%20Literature/2016/Teaching%20and%20learning%20materials/support-for-writing-about-drama-as-drama-with-an-inspector-calls-examples.pdf)

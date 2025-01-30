@@ -1,5 +1,9 @@
 /* new nav, removing all JS */
 
+html {
+    scroll-padding-top: 3rem; /*accounting for nav covering content*/
+}
+
 nav {
     width: 100vw;
     max-width: 100vw;

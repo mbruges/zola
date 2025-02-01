@@ -122,7 +122,7 @@ The text is presented as cleanly as we can manage. No footnotes, no asterisks, n
 
 ![An showing The Tyger displaying annotations](/images/tyger-recording.gif)
 
-...a quick, short definition. Not enough for a dictionary, nor enough for full understanding of all the word's uses, but enough for now, to keep them going. And so they do: the mouse moves off, the definition disappears, and the learner keeps reading.
+...a quick, short definition. Not enough for a dictionary, nor enough for full understanding of all the word's uses, but enough for now, to keep them going. And so they do: the mouse moves off, the definition disappears, and the learner keeps reading. It's HTML as it was intended: a *document* markup format, leveraging the `<abbr>` [element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr) to decode phrases in an unobtrusive way.
 
 The beauty of this approach? It differentiates by design. The student isn't *obligated* to read the definition; if they can make it through the line without hovering on the word, focussing on the flow instead, then they can. 
 

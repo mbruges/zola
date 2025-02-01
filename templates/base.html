@@ -16,8 +16,8 @@
  <link rel="stylesheet" href="{{ get_url(path="main.min.css") | safe }}">
  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
-<body style="margin-top: 2.2em !important;">
-    <div id="main" style="position:relative">
+<body>
+    <div id="main">
         <nav>
             <div id="maxwidth">
             <div tabindex="1"  class="dropdown">
@@ -42,7 +42,7 @@
             </div>
         </nav>
   <section class="section">
-    <div class="container" id="container" style="scroll-margin-top: 2em;">
+    <div class="container" id="container">
       {%- block content -%} {%- endblock -%}
     </div>{% if page.extra.tags %}<p id="tag-container" hidden> TAGS:{% for tag in page.extra.tags %}{{ tag }},{% endfor %}</p>{% endif %}
   </section>

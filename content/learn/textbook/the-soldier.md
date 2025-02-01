@@ -5,6 +5,13 @@ extra:
     icon: 🪖
     keystage: ["3"]
     tags: ["poetry", "conflict"]
+    vocab:
+      concealed: (v) hidden from view  
+      blest: (adj) blessed, made holy  
+      pulse: (n) heartbeat, rhythm  
+      eternal: (adj) everlasting, unchanging  
+      gentleness: (n) softness, kindness
+
 ---
 
 <pre class="language-pre">
@@ -24,12 +31,4 @@ And think, this heart, all evil shed away,
 Her sights and sounds; dreams happy as her day;  
       And laughter, learnt of friends; and gentleness,  
             In hearts at peace, under an English heaven.  
-            
 </pre>
-
-- DEFINITIONS
-  - concealed: (v) hidden from view  
-  - blest: (adj) blessed, made holy  
-  - pulse: (n) heartbeat, rhythm  
-  - eternal: (adj) everlasting, unchanging  
-  - gentleness: (n) softness, kindness

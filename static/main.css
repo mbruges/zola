@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-:root,
-.light-mode {
+:root {
     --b: #fffce4;
     --t: #313131;
     --a: #51518a;
@@ -21,27 +20,31 @@
     list-style-type: "\2712 ";
 }
 
-body,
-html {
-    padding-top: 0em !important;
-}
-
-.main {
-    min-height: 80vh;
-}
-
 @media (prefers-color-scheme: dark) {
-    :root,
-    .dark-mode {
+    :root {
         --t: #fffce4;
         --b: #313131;
         --a: #fcf199;
     }
 }
 
-html,
-body {
+body,
+html {
+    padding-top: 0em !important;
     overflow-x: hidden;
+}
+
+#main {
+    min-height: 80vh;
+    position:relative;
+}
+
+
+#container {
+    scroll-margin-top: 2em;
+}
+body {
+    margin-top: 2.2em !important;
 }
 
 h1 {

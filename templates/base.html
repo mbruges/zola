@@ -28,7 +28,7 @@
                     <a tabindex="2" href="/blog">🗞️ Blog</a>
                     <a  tabindex="3" href="/learn">👨‍🏫 Learn</a>
                     <a tabindex="4" href="/experiments">🧪 Experiments</a>
-                    <a alt="Toggle dark mode" id="lightswitch">🌓︎</a>
+                    <a alt="Toggle dark mode" id="lightswitch" style="display:none;">🌓︎</a>
                 </div></div>
             <a href="/" class="center-el">MaxBruges.com</a>
             <div tabindex="5"  id="search-container">
@@ -73,6 +73,7 @@ document.getElementById('lightswitch').onclick = toggleNightmode;
 if (window.self !== window.top) {
     document.querySelector('nav').style.display = "none";
 }
+document.getElementById('lightswitch').style.display = "block"
 </script>
 </body>
 </html>

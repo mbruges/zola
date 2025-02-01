@@ -120,7 +120,7 @@ The digital space affords us much more freedom to choose how and when the new vo
 
 The text is presented as cleanly as we can manage. No footnotes, no asterisks, no pre-populated annotations. The only indicator that there is more information for some words is the lightly dotted line. This draws the mouse or finger of the learner, and on contact...
 
-![An showing The Tyger displaying annotations](/images/tyger-recording.gif)
+![A screen recording showing The Tyger displaying annotations](/images/tyger-recording.gif)
 
 ...a quick, short definition. Not enough for a dictionary, nor enough for full understanding of all the word's uses, but enough for now, to keep them going. And so they do: the mouse moves off, the definition disappears, and the learner keeps reading. It's HTML as it was intended: a *document* markup format, leveraging the `<abbr>` [element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr) to decode phrases in an unobtrusive way.
 

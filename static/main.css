@@ -226,7 +226,6 @@ a:active {
 a {
     color: var(--a);
     text-decoration: underline solid 1px;
-    font-family: monospace;
     font-size: 0.99em;
 }
 

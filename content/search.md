@@ -56,7 +56,7 @@ function makeSearch(element) {
                   break;
           }
           element.innerHTML = `
-            <div class="blog-details"><p> <span class="title">${item.title}  </span><span style="font-family:monospace;background:var(--a);color:var(--b);font-size:0.8em;border-radius:0em;padding:0.3em">${section}</span><br></p><div class="description"><p class="truncate" style="-webkit-line-clamp: 1;"><b> ${item.description} </b> ${item.body.slice(0,300)} <span class="read-on-container" style="padding-left:2em;"><i class="read-on">click to read ⇝</i></span></p></div></div>`;
+            <div class="blog-details"><p> <span class="title">${item.title}  </span><span style="font-family:monospace;background:var(--a);color:var(--b);font-size:0.8em;border-radius:0em;padding:0.3em">${section}</span><br></p><div class="description"><p class="truncate" style="-webkit-line-clamp: 1;"><b> ${item.description} </b> ${item.body.slice(0,300)} <span class="read-on-container" style="padding-left:2em;"><a href="${item.id}" class="read-on">click to read ⇝</a></span></p></div></div>`;
           resultsDiv.appendChild(element);
           index++
       });

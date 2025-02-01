@@ -23,11 +23,10 @@
         class="blog-card flex"
         onclick="location.href='{{ page.permalink | safe }}';"
         data-pubdate="{{ page.date }}"
-        onmouseenter=""
     >
         <div class="blog-icon">{{ icon }}</div>
         <div class="blog-details">
-        <p class="">
+        <p>
             <span class="title">{{ page.title }} </span
             >{% if  now - pub  < 1200000 %} <span class="tag">New</span>{% endif %}<br />
         <div class="description">
@@ -35,10 +34,15 @@
                     >{{ page.date | date(format="%-d %b %y", locale="en_GB") }}
                     ~</span
                     ><b>{{ description | safe }} </b>{{ blurb }}
-                <span class="read-on-container"><i class="read-on">read more ⇝</i></span></p></div>
-        </p>
+                <span class="read-on-container"><a class="read-on" href="{{ page.permalink | safe }}">read more ⇝</a></span></p></div>
+        </a>
         </div>
     </div>
     <hr class="card-hr" />
     {% endfor %}</ul>
+<script>
+document.querySelectorAll('.blog-card').forEach(function(card) {
+    card.style.cursor = 'pointer';
+});
+</script>
 {% endblock content %}

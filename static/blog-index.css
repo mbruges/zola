@@ -15,6 +15,7 @@
 
 .blog-icon {
     font-size: 5vh;
+    min-width: 5.1vh;
     overflow: hidden;
     text-align: center;
 }
@@ -92,7 +93,7 @@ hr.card-hr {
     margin: none;
     padding: none;
     display: inline-block;
-    min-width: 12em;
+    min-width: 9em;
     background: linear-gradient(to right, transparent, var(--b) 50%);
     padding-left: 7em;
     text-align: right;
@@ -102,6 +103,8 @@ hr.card-hr {
     opacity: 0.7em;
     font-weight: 600;
     color: var(--a);
+    z-index:999;
+    pointer-events: auto;
 }
 
 #list-of-posts {

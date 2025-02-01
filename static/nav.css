@@ -17,6 +17,7 @@ nav {
     background: var(--b);
     padding: 0px;
     overscroll-behavior: none !important;
+    font-family:monospace;
 }
 
 nav .center-el {

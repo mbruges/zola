@@ -79,7 +79,6 @@ function toggleFilter(buttonElem){
     <div
         class="blog-card flex"
         onclick="location.href='{{ page.permalink | safe }}';"
-        onmouseenter=""
         {% if page.extra.tags %}
         data-tags="{% for tag in page.extra.tags%}{{tag}} {% endfor %}"
         {% endif %}
@@ -94,7 +93,7 @@ function toggleFilter(buttonElem){
             ><br />
         <div class="description">
                 <p class="truncate" style="-webkit-line-clamp:2 !important;">{% if page.authors %}<b>by {{ page.authors[0] | safe }} </b>{% endif %}{{ blurb }}
-                <span class="read-on-container"><i class="read-on">read more ⇝</i></span></p></div
+                <span class="read-on-container"><a class="read-on" href="{{ page.permalink | safe }}">read more ⇝</a></span></p></div
             >
         </p>
         </div>

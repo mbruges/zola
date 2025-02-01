@@ -418,8 +418,8 @@ blockquote blockquote {
     position: relative;
     display: flex;
     margin-right: 1px;
-    margin-bottom: -1em;
-    margin-top: -20px;
+    margin-top: 0.4em;
+    margin-bottom:0.2em;
     padding-bottom: -0px;
     color: rgba(0, 0, 0, 0.705);
     height: fit-content;

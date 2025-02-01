@@ -21,6 +21,7 @@ extra:
 
 *"So various, so beautiful, so new…"*[^1]
 
+<pre class="language-pre">
 Stowed in the sea to invade
 the lash alfresco of a diesel-breeze
 ratcheting speed into the tide, with brunt
@@ -49,6 +50,7 @@ our sundry others, Blair’d in the cash
 of our beeswax’d cars, our crash clothes, free,
 we raise our charged glasses over unparasol’d tables
 East, babbling our lingoes, flecked by the chalk of Britannia!
+</pre>
 
 [^1]: Matthew Arnold, ‘Dover Beach’
 

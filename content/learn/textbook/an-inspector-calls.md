@@ -1,7 +1,6 @@
 ---
 authors: ["J B Priestley"]
 title: "An Inspector Calls"
-draft: false
 extra:
   icon: 🕵️‍♂️
   keystage: ["4"]
@@ -10,6 +9,7 @@ extra:
       Balkans:  (n) Eastern Europe, starting point of First World War
       Honours List:  (n) awards given to honourable people by Government
       Infirmary:  (n) emergency room of hospital
+      Bernard Shaws: (n) famous, socialist-leaning writer
       Pitiful:  (adj) very sad, weak
       bluff:  (v) trick through lying
       capital:  (n) money, investments
@@ -21,23 +21,32 @@ extra:
       evening dress:  (n) smart, formal clothes
       evidence:  (n) proof of something
       fiddlesticks:  (n) Nonsense! Ridiculous!
-      foreman:  (n) leader of workmen
+      foreman:  (n) leader of workers
       hoax:  (n) a trick, joke
       hysterical:  (n) over-emotional
       impertinent:  (adj) without respect for status
       inquiry:  (n) asking questions
-      knighthood:  (n) special title, 'Sir', for honourable people
+      knighthood:  (n) special title - Sir - for honourable people
+      landed: (adj) old and rich family with land
+      magistrate: (n) legal official, like a judge
       officious:  (adj) overly-focussed on doing job
       part:  (v) to separate, end a conflict
       pessimistic:  (adj) negative, expecting bad things
       pile:  (n) large post used to hold up piers, buildings
       portentous:  (adj) pompous, full of himself
+      port: (n) expensive after-dinner drink
       prominent:  (adj) important
+      prosperous: (adj) rich, successful
       proof:  (n) evidence or demonstration of truth
       prosperity:  (n) wealth, success
-      provincial:  (adj) slightly unsophisticated, lower-class
-      scandal:  (n) bad event that shocks people, damages reputation
-      throat:  (n) front part of the neck
+      provincial:  (adj) slightly unsophisticated - lower-class
+      scandal:  (n) bad event that shocks people - damages reputation
+      squiffy: (adj) slang for drunk
+      sacked: (v) fired, kicked out of job
+      toast: (n) short speech celebrating something during formal dinner
+      tantalus: (n) expensive container for alcohol
+      The governor: (n) slang term for boss or father
+      assertive: (adj) confident, direct       
 ---
 
 ## Act One
@@ -201,7 +210,7 @@ extra:
 
 *(As Mrs Birling shows signs of interrupting.)*
 
-**BIRLING:** Yes, my dear, I know – I’m talking too much. But you youngsters just remember what I Said. We can't let these Bernard Shaws and H.G.Wellses do all the talking. We hard-headed practical business men must say something sometime. And we don't guess – we've had experience - and we know.
+**BIRLING:** Yes, my dear, I know – I’m talking too much. But you youngsters just remember what I said. We can't let these Bernard Shaws and H.G.Wellses do all the talking. We hard-headed practical business men must say something sometime. And we don't guess – we've had experience - and we know.
 
 **MRS BIRLING:** *(rising. The others rise)* Yes, of course, dear. Well don't keep Gerald in here too long. Eric – I want you a minute.
 

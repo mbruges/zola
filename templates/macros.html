@@ -5,7 +5,11 @@
     {% set_global inc_words = [] %}
     {% for word, def in data %}
         {% if content is containing(word) %}
-            {% set abbr = "<abbr class=def data-title='" ~ word ~ "_DEF_HERE'>" ~ word ~ "</abbr>" %}
+            {% if def | length > 24 %}
+                {% set abbr = "<abbr class='def dbl' data-title='" ~ word ~ "_DEF_HERE'>" ~ word ~ "</abbr>" %}
+            {% else %}
+                {% set abbr = "<abbr class=def data-title='" ~ word ~ "_DEF_HERE'>" ~ word ~ "</abbr>" %}
+            {% endif %}
             {% set_global content = content | regex_replace(pattern='\b' ~ word ~ '\b', rep=abbr) %}
         {% endif %}
     {% endfor %}

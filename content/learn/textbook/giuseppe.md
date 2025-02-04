@@ -3,14 +3,14 @@ title: "Giuseppe"
 authors: ["Roderick Ford"]
 extra:
     vocab:
-        burial:  (n) act of placing a dead body in the ground
+        bougainvillea:  (n) a bright, colourful flowering plant
         butchered:  (v) to kill and prepare for food
         captive:  (adj) kept confined or restrained
         mermaid:  (n) mythical sea creature, woman-fish
-        proof:  (n) evidence or demonstration of truth
         roe:  (n) fish eggs, considered a delicacy
-        throat:  (n) front part of the neck
         wedding ring:  (n) symbolic ring of marriage
+        fishmonger: (n) someone who sells fish
+        aquarium: (n) zoo for fish
 
     icon: 🧜
     keystage: ["5"]
@@ -50,4 +50,3 @@ Starvation forgives men many things,
 my uncle, the aquarium keeper, said,  
 but couldn’t look me in the eye,  
 for which I thank God.
-

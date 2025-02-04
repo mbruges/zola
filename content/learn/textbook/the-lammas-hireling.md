@@ -6,7 +6,8 @@ extra:
         confession: (n) admitting sins, telling truths
         elf-shot: (n) supernatural illness, often a curse
         muckle: (adj) much, a large amount
-        stark-naked: (adj) completely bare, exposed
+        stark-naked: (adj) nude, bare, exposed
+        heifers: (n) female milking cow
 
     icon: 🐮
     keystage: ["5"]
@@ -39,4 +40,3 @@ splash. Now my herd’s elf-shot. I don’t dream
 but spend my nights casting ball from half-crowns  
 and my days here. Bless me Father for I have sinned.  
 It has been an hour since my last confession.
-

@@ -2,7 +2,7 @@
 title: LibrarAIn
 description: "An AI-powered Librarian"
 date: 2025-02-10
-draft: true
+draft: false
 extra:
   icon: 💳
   buttontext: Visit the Librarian
@@ -30,3 +30,4 @@ extra:
 > The format of the extracted data appears to be a MARC (Machine-Readable Cataloging) record, which is commonly used in libraries for cataloging bibliographic information. Each line generally contains specific metadata fields, and various indicators or codes that signify data about books, such as titles, authors, publication details, subjects, and more.
 - Installed a [marc-to-json tool](https://github.com/ubleipzig/marctools#marctojson)
 - Write a python script to extract the key data from the MARC.json
+- Started to build a chromadb for embedding

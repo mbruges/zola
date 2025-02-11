@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <title>Virtual Librarian</title>
+    <style>
+        #loading {
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="padding-left: 0.5em;padding-right: 0.5em;">
+          <ul>
+            <li><img style="max-height: 3em; padding:none;" src="/images/rab_logo.png"></img><a href="https://www.reptonalbarsha.org/"><strong style="font-family:serif;padding-left: 1em;">Repton Al Barsha</strong></a></li>
+          </ul>
+          <ul>
+            <li><a style="cursor:pointer" id="about-link" class="contrast">About</a></li>
+            <li><a href="mailto:mbruges@reptonalbarsha.org" class="contrast">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main class="container" aria-busy="false" id="mainContent" style="max-width:600px">
+        <h1>Ask the Virtual Librarian 📚</h1>
+
+        <form id="queryForm">
+                    <input type="text" id="queryInput" placeholder="What would you like to read about?" required>
+                    <button id="sub-button" type="submit" style="min-width:8em">Search</button>
+                </form>
+                <div id="result" class="center" style="visibility: hidden;">
+                    <h4 style="display:block;text-align:center;margin-left:auto;margin-right:auto">How about...</h4>
+                    <article>
+                    <h3 id="bookTitle"></h3>
+                    <i id="bookAuthor"></i>
+                    <p id="bookReason" style="text-align:left"></p>
+                    <hr>
+                    <mark id="location-container" style="display:block;text-align:center;margin-left:auto;margin-right:auto">Look for it in section <kbd  id="libLocation" style="font-size:1.3em;"></kbd></mark>
+                    </article>
+                </div>
+
+        <script>
+                const form = document.getElementById('queryForm');
+                const button = document.getElementById('sub-button');
+                const resultDiv = document.getElementById('result');
+                const bookTitle = document.getElementById('bookTitle');
+                const bookAuthor = document.getElementById('bookAuthor');
+                const bookReason = document.getElementById('bookReason');
+                const libLocation = document.getElementById('libLocation');
+                const mainContent = document.getElementById('mainContent');
+
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    document.getElementById("location-container").style.display = "block"
+                    const query = document.getElementById('queryInput').value;
+                    button.setAttribute('aria-busy', 'true');
+                    button.innerText = ""
+                    resultDiv.style.visibility = 'hidden';
+                    try {
+                    const response = await fetch(`https://api.mxb.fyi/librarian?query=${encodeURIComponent(query)}`);
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    const data = await response.json();
+
+                    button.innerText = "Search again"
+                    bookTitle.textContent = data.title;
+                    bookReason.textContent = data.reason;
+                    bookAuthor.textContent = "by " + data.author;
+                    let initial = data.author.replace("by","").trim().split(' ')[1].charAt(0).toUpperCase();
+                    libLocation.textContent = initial
+                    }
+                    catch (error) {
+                      console.log("Something went wrong")
+                      console.log(error)
+                      bookTitle.textContent = "Oh dear, something went wrong.";
+                      bookReason.textContent = "";
+                      bookAuthor.textContent = "Try again in a minute";
+                      document.getElementById("location-container").style.display = "none"
+                    } finally {
+                      button.setAttribute('aria-busy', 'false');
+                      resultDiv.style.visibility = 'visible';
+                      document.getElementById('queryInput').value = ""
+                    }
+                });
+            </script>
+
+        </div>
+
+    </main>
+
+    <dialog id="about">
+      <article>
+        <header>
+          <button aria-label="Close" rel="prev" onclick="document.getElementById('about').close()"></button>
+          <h3>
+            About our <strong>Virtual Librarian</strong>
+          </h3>
+        </header>
+        <p>
+        The Repton Al Barsha Virtual Librarian is an exciting experiment in using <kbd>AI</kbd> to make finding a book easier than ever before.
+        <h4> How it works </h4>
+        <p>The Virtual Librarian searches through our Library database, finding books based on the reader's interest.</p>
+        <p>Unlike traditional search, the Virtual Librarian uses <strong>Large Language Models</strong> to look for words and topics <i>related</i> to the search term - not just exact matches. Try it out!</p>
+        <p>
+          <b>Want to know more? Email <a href="mailto:mbruges@reptonalbarsha.org">mbruges@reptonalbarsha.org</a> 📧</b>
+        </p>
+      </article>
+    </dialog>
+    <script>
+    const aboutLink = document.getElementById('about-link');
+    const aboutDialog = document.getElementById('about');
+
+    aboutLink.addEventListener('click', () => {
+        aboutDialog.showModal();
+    });</script>
+</body>
+</html>

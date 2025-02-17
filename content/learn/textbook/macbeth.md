@@ -75,6 +75,10 @@ extra:
     .scenedesc {
         font-style:italic;
     }
+    
+    .char-name {
+        font-weight: bold;
+    }
 </style>
 
 <div class="chapter">
@@ -266,54 +270,54 @@ The Ghost of Banquo and several other Apparitions.
 <span class="charname">Witches</span>.</p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 When shall we three meet again?<br/>
 In thunder, lightning, or in rain?
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 When the hurlyburly’s done,<br/>
 When the battle’s lost and won.
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 That will be ere the set of sun.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Where the place?
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Upon the heath.
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 There to meet with Macbeth.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 I come, Graymalkin!
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Paddock calls.
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 Anon.
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Fair is foul, and foul is fair:<br/>
 Hover through the fog and filthy air.
 </p>
@@ -329,14 +333,14 @@ Malcolm, Donalbain, Lennox,</span> with Attendants, meeting a bleeding
 
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 What bloody man is that? He can report,<br/>
 As seemeth by his plight, of the revolt<br/>
 The newest state.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 This is the sergeant<br/>
 Who, like a good and hardy soldier, fought<br/>
 ’Gainst my captivity.—Hail, brave friend!<br/>
@@ -345,7 +349,7 @@ As thou didst leave it.
 </p>
 
 <p class="drama">
-SOLDIER.<br/>
+<span class="char-name">SOLDIER</span><br/>
 Doubtful it stood;<br/>
 As two spent swimmers that do cling together<br/>
 And choke their art. The merciless Macdonwald<br/>
@@ -366,12 +370,12 @@ And fix’d his head upon our battlements.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 O valiant cousin! worthy gentleman!
 </p>
 
 <p class="drama">
-SOLDIER.<br/>
+<span class="char-name">SOLDIER</span><br/>
 As whence the sun ’gins his reflection<br/>
 Shipwracking storms and direful thunders break,<br/>
 So from that spring, whence comfort seem’d to come<br/>
@@ -384,13 +388,13 @@ Began a fresh assault.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 Dismay’d not this<br/>
 Our captains, Macbeth and Banquo?
 </p>
 
 <p class="drama">
-SOLDIER.<br/>
+<span class="char-name">SOLDIER</span><br/>
 Yes;<br/>
 As sparrows eagles, or the hare the lion.<br/>
 If I say sooth, I must report they were<br/>
@@ -404,7 +408,7 @@ But I am faint, my gashes cry for help.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 So well thy words become thee as thy wounds:<br/>
 They smack of honour both.—Go, get him surgeons.
 </p>
@@ -419,28 +423,28 @@ Who comes here?
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 The worthy Thane of Ross.
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 What a haste looks through his eyes! So should he look<br/>
 That seems to speak things strange.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 God save the King!
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 Whence cam’st thou, worthy thane?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 From Fife, great King,<br/>
 Where the Norweyan banners flout the sky<br/>
 And fan our people cold.<br/>
@@ -455,12 +459,12 @@ The victory fell on us.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 Great happiness!
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 That now<br/>
 Sweno, the Norways’ king, craves composition;<br/>
 Nor would we deign him burial of his men<br/>
@@ -469,19 +473,19 @@ Ten thousand dollars to our general use.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 No more that Thane of Cawdor shall deceive<br/>
 Our bosom interest. Go pronounce his present death,<br/>
 And with his former title greet Macbeth.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 I’ll see it done.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 What he hath lost, noble Macbeth hath won.
 </p>
 
@@ -493,22 +497,22 @@ What he hath lost, noble Macbeth hath won.
 <p class="scenedesc">Thunder. Enter the three <span class="charname">Witches</span>.</p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Where hast thou been, sister?
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Killing swine.
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 Sister, where thou?
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 A sailor’s wife had chestnuts in her lap,<br/>
 And mounch’d, and mounch’d, and mounch’d. “Give me,” quoth I.<br/>
 “Aroint thee, witch!” the rump-fed ronyon cries.<br/>
@@ -519,22 +523,22 @@ I’ll do, I’ll do, and I’ll do.
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 I’ll give thee a wind.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Th’art kind.
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 And I another.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 I myself have all the other,<br/>
 And the very ports they blow,<br/>
 All the quarters that they know<br/>
@@ -551,12 +555,12 @@ Look what I have.
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Show me, show me.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Here I have a pilot’s thumb,<br/>
 Wrack’d as homeward he did come.
 </p>
@@ -564,13 +568,13 @@ Wrack’d as homeward he did come.
 <p class="right">[<i>Drum within.</i>]</p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 A drum, a drum!<br/>
 Macbeth doth come.
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 The Weird Sisters, hand in hand,<br/>
 Posters of the sea and land,<br/>
 Thus do go about, about:<br/>
@@ -583,12 +587,12 @@ Peace!—the charm’s wound up.
 <span class="charname">Banquo</span>.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 So foul and fair a day I have not seen.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 How far is’t call’d to Forres?—What are these,<br/>
 So wither’d, and so wild in their attire,<br/>
 That look not like the inhabitants o’ th’ earth,<br/>
@@ -601,27 +605,27 @@ That you are so.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Speak, if you can;—what are you?
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 All hail, Macbeth! hail to thee, Thane of Glamis!
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 All hail, Macbeth! hail to thee, Thane of Cawdor!
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 All hail, Macbeth! that shalt be king hereafter!
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Good sir, why do you start and seem to fear<br/>
 Things that do sound so fair?—I’ th’ name of truth,<br/>
 Are ye fantastical, or that indeed<br/>
@@ -636,43 +640,43 @@ Your favours nor your hate.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Hail!
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Hail!
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 Hail!
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Lesser than Macbeth, and greater.
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Not so happy, yet much happier.
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 Thou shalt get kings, though thou be none:<br/>
 So all hail, Macbeth and Banquo!
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Banquo and Macbeth, all hail!
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Stay, you imperfect speakers, tell me more.<br/>
 By Sinel’s death I know I am Thane of Glamis;<br/>
 But how of Cawdor? The Thane of Cawdor lives,<br/>
@@ -687,42 +691,42 @@ With such prophetic greeting?—Speak, I charge you.
 <p class="right">[<i><span class="charname">Witches</span> vanish.</i>]</p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 The earth hath bubbles, as the water has,<br/>
 And these are of them. Whither are they vanish’d?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Into the air; and what seem’d corporal,<br/>
 Melted as breath into the wind.<br/>
 Would they had stay’d!
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Were such things here as we do speak about?<br/>
 Or have we eaten on the insane root<br/>
 That takes the reason prisoner?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Your children shall be kings.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 You shall be king.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 And Thane of Cawdor too; went it not so?
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 To the selfsame tune and words. Who’s here?
 </p>
 
@@ -730,7 +734,7 @@ To the selfsame tune and words. Who’s here?
 <span class="charname">Angus</span>.</p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 The King hath happily receiv’d, Macbeth,<br/>
 The news of thy success, and when he reads<br/>
 Thy personal venture in the rebels’ fight,<br/>
@@ -746,7 +750,7 @@ And pour’d them down before him.
 </p>
 
 <p class="drama">
-ANGUS.<br/>
+<span class="char-name">ANGUS</span><br/>
 We are sent<br/>
 To give thee from our royal master thanks;<br/>
 Only to herald thee into his sight,<br/>
@@ -754,7 +758,7 @@ Not pay thee.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 And, for an earnest of a greater honour,<br/>
 He bade me, from him, call thee Thane of Cawdor:<br/>
 In which addition, hail, most worthy thane,<br/>
@@ -762,18 +766,18 @@ For it is thine.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 What, can the devil speak true?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 The Thane of Cawdor lives: why do you dress me<br/>
 In borrow’d robes?
 </p>
 
 <p class="drama">
-ANGUS.<br/>
+<span class="char-name">ANGUS</span><br/>
 Who was the Thane lives yet,<br/>
 But under heavy judgement bears that life<br/>
 Which he deserves to lose. Whether he was combin’d<br/>
@@ -785,7 +789,7 @@ Have overthrown him.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 [<i>Aside.</i>] Glamis, and Thane of Cawdor:<br/>
 The greatest is behind. [<i>To Ross and Angus.</i>] Thanks for your pains.<br/>
 [<i>To Banquo.</i>] Do you not hope your children shall be kings,<br/>
@@ -794,7 +798,7 @@ Promis’d no less to them?
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 That, trusted home,<br/>
 Might yet enkindle you unto the crown,<br/>
 Besides the Thane of Cawdor. But ’tis strange:<br/>
@@ -806,7 +810,7 @@ Cousins, a word, I pray you.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 [<i>Aside.</i>] Two truths are told,<br/>
 As happy prologues to the swelling act<br/>
 Of the imperial theme.—I thank you, gentlemen.—<br/>
@@ -826,36 +830,36 @@ And nothing is but what is not.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Look, how our partner’s rapt.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 [<i>Aside.</i>] If chance will have me king, why, chance may crown me<br/>
 Without my stir.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 New honours come upon him,<br/>
 Like our strange garments, cleave not to their mould<br/>
 But with the aid of use.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 [<i>Aside.</i>] Come what come may,<br/>
 Time and the hour runs through the roughest day.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Worthy Macbeth, we stay upon your leisure.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Give me your favour. My dull brain was wrought<br/>
 With things forgotten. Kind gentlemen, your pains<br/>
 Are register’d where every day I turn<br/>
@@ -866,12 +870,12 @@ Our free hearts each to other.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Very gladly.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Till then, enough.—Come, friends.
 </p>
 
@@ -884,13 +888,13 @@ Till then, enough.—Come, friends.
 Donalbain, Lennox</span> and Attendants.</p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 Is execution done on Cawdor? Are not<br/>
 Those in commission yet return’d?
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 My liege,<br/>
 They are not yet come back. But I have spoke<br/>
 With one that saw him die, who did report,<br/>
@@ -904,7 +908,7 @@ As ’twere a careless trifle.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 There’s no art<br/>
 To find the mind’s construction in the face:<br/>
 He was a gentleman on whom I built<br/>
@@ -926,7 +930,7 @@ More is thy due than more than all can pay.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 The service and the loyalty I owe,<br/>
 In doing it, pays itself. Your Highness’ part<br/>
 Is to receive our duties: and our duties<br/>
@@ -936,7 +940,7 @@ Safe toward your love and honour.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 Welcome hither:<br/>
 I have begun to plant thee, and will labour<br/>
 To make thee full of growing.—Noble Banquo,<br/>
@@ -946,13 +950,13 @@ And hold thee to my heart.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 There if I grow,<br/>
 The harvest is your own.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 My plenteous joys,<br/>
 Wanton in fulness, seek to hide themselves<br/>
 In drops of sorrow.—Sons, kinsmen, thanes,<br/>
@@ -967,7 +971,7 @@ And bind us further to you.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 The rest is labour, which is not us’d for you:<br/>
 I’ll be myself the harbinger, and make joyful<br/>
 The hearing of my wife with your approach;<br/>
@@ -975,12 +979,12 @@ So, humbly take my leave.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 My worthy Cawdor!
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 [<i>Aside.</i>] The Prince of Cumberland!—That is a step<br/>
 On which I must fall down, or else o’erleap,<br/>
 For in my way it lies. Stars, hide your fires!<br/>
@@ -992,7 +996,7 @@ Which the eye fears, when it is done, to see.
 <p class="right">[<i>Exit.</i>]</p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 True, worthy Banquo! He is full so valiant;<br/>
 And in his commendations I am fed.<br/>
 It is a banquet to me. Let’s after him,<br/>
@@ -1009,7 +1013,7 @@ It is a peerless kinsman.
 a letter.</p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 “They met me in the day of success; and I have learned by the
 perfect’st report they have more in them than mortal knowledge. When I
 burned in desire to question them further, they made themselves air, into which
@@ -1048,19 +1052,19 @@ What is your tidings?
 </p>
 
 <p class="drama">
-MESSENGER.<br/>
+<span class="char-name">MESSENGER</span><br/>
 The King comes here tonight.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Thou’rt mad to say it.<br/>
 Is not thy master with him? who, were’t so,<br/>
 Would have inform’d for preparation.
 </p>
 
 <p class="drama">
-MESSENGER.<br/>
+<span class="char-name">MESSENGER</span><br/>
 So please you, it is true. Our thane is coming.<br/>
 One of my fellows had the speed of him,<br/>
 Who, almost dead for breath, had scarcely more<br/>
@@ -1068,7 +1072,7 @@ Than would make up his message.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Give him tending.<br/>
 He brings great news.
 </p>
@@ -1106,23 +1110,23 @@ The future in the instant.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 My dearest love,<br/>
 Duncan comes here tonight.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 And when goes hence?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Tomorrow, as he purposes.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 O, never<br/>
 Shall sun that morrow see!<br/>
 Your face, my thane, is as a book where men<br/>
@@ -1137,12 +1141,12 @@ Give solely sovereign sway and masterdom.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 We will speak further.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Only look up clear;<br/>
 To alter favour ever is to fear.<br/>
 Leave all the rest to me.
@@ -1159,14 +1163,14 @@ Leave all the rest to me.
 Banquo, Lennox, Macduff, Ross, Angus</span> and Attendants.</p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 This castle hath a pleasant seat. The air<br/>
 Nimbly and sweetly recommends itself<br/>
 Unto our gentle senses.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 This guest of summer,<br/>
 The temple-haunting martlet, does approve,<br/>
 By his loved mansionry, that the heaven’s breath<br/>
@@ -1180,7 +1184,7 @@ The air is delicate.
 <p class="scenedesc">Enter <span class="charname">Lady Macbeth</span>.</p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 See, see, our honour’d hostess!—<br/>
 The love that follows us sometime is our trouble,<br/>
 Which still we thank as love. Herein I teach you<br/>
@@ -1189,7 +1193,7 @@ And thank us for your trouble.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 All our service,<br/>
 In every point twice done, and then done double,<br/>
 Were poor and single business to contend<br/>
@@ -1200,7 +1204,7 @@ We rest your hermits.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 Where’s the Thane of Cawdor?<br/>
 We cours’d him at the heels, and had a purpose<br/>
 To be his purveyor: but he rides well;<br/>
@@ -1210,7 +1214,7 @@ We are your guest tonight.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Your servants ever<br/>
 Have theirs, themselves, and what is theirs, in compt,<br/>
 To make their audit at your Highness’ pleasure,<br/>
@@ -1218,7 +1222,7 @@ Still to return your own.
 </p>
 
 <p class="drama">
-DUNCAN.<br/>
+<span class="char-name">DUNCAN</span><br/>
 Give me your hand;<br/>
 Conduct me to mine host: we love him highly,<br/>
 And shall continue our graces towards him.<br/>
@@ -1235,7 +1239,7 @@ divers Servants with dishes and service. Then enter <span
 class="charname">Macbeth</span>.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 If it were done when ’tis done, then ’twere well<br/>
 It were done quickly. If th’ assassination<br/>
 Could trammel up the consequence, and catch<br/>
@@ -1273,22 +1277,22 @@ How now! what news?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 He has almost supp’d. Why have you left the chamber?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Hath he ask’d for me?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Know you not he has?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 We will proceed no further in this business:<br/>
 He hath honour’d me of late; and I have bought<br/>
 Golden opinions from all sorts of people,<br/>
@@ -1297,7 +1301,7 @@ Not cast aside so soon.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Was the hope drunk<br/>
 Wherein you dress’d yourself? Hath it slept since?<br/>
 And wakes it now, to look so green and pale<br/>
@@ -1312,14 +1316,14 @@ Like the poor cat i’ th’ adage?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Pr’ythee, peace!<br/>
 I dare do all that may become a man;<br/>
 Who dares do more is none.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 What beast was’t, then,<br/>
 That made you break this enterprise to me?<br/>
 When you durst do it, then you were a man;<br/>
@@ -1336,12 +1340,12 @@ Have done to this.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 If we should fail?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 We fail?<br/>
 But screw your courage to the sticking-place,<br/>
 And we’ll not fail. When Duncan is asleep<br/>
@@ -1359,7 +1363,7 @@ Of our great quell?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Bring forth men-children only;<br/>
 For thy undaunted mettle should compose<br/>
 Nothing but males. Will it not be receiv’d,<br/>
@@ -1369,14 +1373,14 @@ That they have done’t?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Who dares receive it other,<br/>
 As we shall make our griefs and clamour roar<br/>
 Upon his death?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I am settled, and bend up<br/>
 Each corporal agent to this terrible feat.<br/>
 Away, and mock the time with fairest show:<br/>
@@ -1398,27 +1402,27 @@ False face must hide what the false heart doth know.
 <span class="charname">Fleance</span> with a torch before him.</p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 How goes the night, boy?
 </p>
 
 <p class="drama">
-FLEANCE.<br/>
+<span class="char-name">FLEANCE</span><br/>
 The moon is down; I have not heard the clock.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 And she goes down at twelve.
 </p>
 
 <p class="drama">
-FLEANCE.<br/>
+<span class="char-name">FLEANCE</span><br/>
 I take’t, ’tis later, sir.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Hold, take my sword.—There’s husbandry in heaven;<br/>
 Their candles are all out. Take thee that too.<br/>
 A heavy summons lies like lead upon me,<br/>
@@ -1435,12 +1439,12 @@ Give me my sword.—Who’s there?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 A friend.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 What, sir, not yet at rest? The King’s abed:<br/>
 He hath been in unusual pleasure and<br/>
 Sent forth great largess to your offices.<br/>
@@ -1450,21 +1454,21 @@ In measureless content.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Being unprepar’d,<br/>
 Our will became the servant to defect,<br/>
 Which else should free have wrought.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 All’s well.<br/>
 I dreamt last night of the three Weird Sisters:<br/>
 To you they have show’d some truth.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I think not of them:<br/>
 Yet, when we can entreat an hour to serve,<br/>
 We would spend it in some words upon that business,<br/>
@@ -1472,18 +1476,18 @@ If you would grant the time.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 At your kind’st leisure.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 If you shall cleave to my consent, when ’tis,<br/>
 It shall make honour for you.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 So I lose none<br/>
 In seeking to augment it, but still keep<br/>
 My bosom franchis’d, and allegiance clear,<br/>
@@ -1491,12 +1495,12 @@ I shall be counsell’d.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Good repose the while!
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Thanks, sir: the like to you.
 </p>
 
@@ -1504,7 +1508,7 @@ Thanks, sir: the like to you.
 <span class="charname">Fleance</span>.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Go bid thy mistress, when my drink is ready,<br/>
 She strike upon the bell. Get thee to bed.
 </p>
@@ -1559,7 +1563,7 @@ That summons thee to heaven or to hell.
 <p class="scenedesc">Enter <span class="charname">Lady Macbeth</span>.</p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 That which hath made them drunk hath made me bold:<br/>
 What hath quench’d them hath given me fire.—Hark!—Peace!<br/>
 It was the owl that shriek’d, the fatal bellman,<br/>
@@ -1571,12 +1575,12 @@ Whether they live or die.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 [<i>Within.</i>] Who’s there?—what, ho!
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Alack! I am afraid they have awak’d,<br/>
 And ’tis not done. Th’ attempt and not the deed<br/>
 Confounds us.—Hark!—I laid their daggers ready;<br/>
@@ -1587,60 +1591,60 @@ My father as he slept, I had done’t.—My husband!
 <p class="scenedesc">Enter <span class="charname">Macbeth</span>.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I have done the deed.—Didst thou not hear a noise?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 I heard the owl scream and the crickets cry.<br/>
 Did not you speak?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 When?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Now.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 As I descended?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Ay.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Hark!—Who lies i’ th’ second chamber?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Donalbain.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 This is a sorry sight.
 </p>
 
 <p class="right">[<i>Looking on his hands.</i>]</p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 A foolish thought, to say a sorry sight.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 There’s one did laugh in’s sleep, and one cried,
 “Murder!”<br/>
 That they did wake each other: I stood and heard them.<br/>
@@ -1649,12 +1653,12 @@ Again to sleep.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 There are two lodg’d together.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 One cried, “God bless us!” and, “Amen,” the other,<br/>
 As they had seen me with these hangman’s hands.<br/>
 List’ning their fear, I could not say “Amen,”<br/>
@@ -1662,25 +1666,25 @@ When they did say, “God bless us.”
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Consider it not so deeply.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 But wherefore could not I pronounce “Amen”?<br/>
 I had most need of blessing, and “Amen”<br/>
 Stuck in my throat.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 These deeds must not be thought<br/>
 After these ways; so, it will make us mad.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Methought I heard a voice cry, “Sleep no more!<br/>
 Macbeth does murder sleep,”—the innocent sleep;<br/>
 Sleep that knits up the ravell’d sleave of care,<br/>
@@ -1690,19 +1694,19 @@ Chief nourisher in life’s feast.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 What do you mean?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Still it cried, “Sleep no more!” to all the house:<br/>
 “Glamis hath murder’d sleep, and therefore Cawdor<br/>
 Shall sleep no more. Macbeth shall sleep no more!”
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Who was it that thus cried? Why, worthy thane,<br/>
 You do unbend your noble strength to think<br/>
 So brainsickly of things. Go get some water,<br/>
@@ -1713,14 +1717,14 @@ The sleepy grooms with blood.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I’ll go no more:<br/>
 I am afraid to think what I have done;<br/>
 Look on’t again I dare not.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Infirm of purpose!<br/>
 Give me the daggers. The sleeping and the dead<br/>
 Are but as pictures. ’Tis the eye of childhood<br/>
@@ -1732,7 +1736,7 @@ For it must seem their guilt.
 <p class="right">[<i>Exit. Knocking within.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Whence is that knocking?<br/>
 How is’t with me, when every noise appals me?<br/>
 What hands are here? Ha, they pluck out mine eyes!<br/>
@@ -1745,7 +1749,7 @@ Making the green one red.
 <p class="scenedesc">Enter <span class="charname">Lady Macbeth</span>.</p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 My hands are of your color, but I shame<br/>
 To wear a heart so white. [<i>Knocking within.</i>] I hear knocking<br/>
 At the south entry:—retire we to our chamber.<br/>
@@ -1758,7 +1762,7 @@ So poorly in your thoughts.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 To know my deed, ’twere best not know myself. [<i>Knocking within.</i>]<br/>
 Wake Duncan with thy knocking! I would thou couldst!
 </p>
@@ -1772,7 +1776,7 @@ Wake Duncan with thy knocking! I would thou couldst!
 within.</p>
 
 <p class="drama">
-PORTER.<br/>
+<span class="char-name">PORTER</span><br/>
 Here’s a knocking indeed! If a man were porter of hell gate, he should
 have old turning the key. [<i>Knocking.</i>] Knock, knock, knock. Who’s
 there, i’ th’ name of Belzebub? Here’s a farmer that hanged
@@ -1797,24 +1801,24 @@ remember the porter.
 <span class="charname">Lennox</span>.</p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Was it so late, friend, ere you went to bed,<br/>
 That you do lie so late?
 </p>
 
 <p class="drama">
-PORTER.<br/>
+<span class="char-name">PORTER</span><br/>
 Faith, sir, we were carousing till the second cock; and drink, sir, is a great
 provoker of three things.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 What three things does drink especially provoke?
 </p>
 
 <p class="drama">
-PORTER.<br/>
+<span class="char-name">PORTER</span><br/>
 Marry, sir, nose-painting, sleep, and urine. Lechery, sir, it provokes and
 unprovokes; it provokes the desire, but it takes away the performance.
 Therefore much drink may be said to be an equivocator with lechery: it makes
@@ -1824,19 +1828,19 @@ equivocates him in a sleep, and giving him the lie, leaves him.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 I believe drink gave thee the lie last night.
 </p>
 
 <p class="drama">
-PORTER.<br/>
+<span class="char-name">PORTER</span><br/>
 That it did, sir, i’ the very throat on me; but I requited him for his
 lie; and (I think) being too strong for him, though he took up my legs
 sometime, yet I made a shift to cast him.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Is thy master stirring?<br/>
 </p>
 
@@ -1847,50 +1851,50 @@ Our knocking has awak’d him; here he comes.
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Good morrow, noble sir!
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Good morrow, both!
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Is the King stirring, worthy thane?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Not yet.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 He did command me to call timely on him.<br/>
 I have almost slipp’d the hour.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I’ll bring you to him.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 I know this is a joyful trouble to you;<br/>
 But yet ’tis one.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 The labour we delight in physics pain.<br/>
 This is the door.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 I’ll make so bold to call.<br/>
 For ’tis my limited service.
 </p>
@@ -1898,17 +1902,17 @@ For ’tis my limited service.
 <p class="right">[<i>Exit <span class="charname">Macduff</span>.</i>]</p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Goes the King hence today?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 He does. He did appoint so.
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 The night has been unruly: where we lay,<br/>
 Our chimneys were blown down and, as they say,<br/>
 Lamentings heard i’ th’ air, strange screams of death,<br/>
@@ -1920,12 +1924,12 @@ Was feverous, and did shake.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 ’Twas a rough night.
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 My young remembrance cannot parallel<br/>
 A fellow to it.
 </p>
@@ -1933,7 +1937,7 @@ A fellow to it.
 <p class="scenedesc">Enter <span class="charname">Macduff</span>.</p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 O horror, horror, horror!<br/>
 Tongue nor heart cannot conceive nor name thee!
 </p>
@@ -1944,7 +1948,7 @@ What’s the matter?
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Confusion now hath made his masterpiece!<br/>
 Most sacrilegious murder hath broke ope<br/>
 The Lord’s anointed temple, and stole thence<br/>
@@ -1952,17 +1956,17 @@ The life o’ th’ building.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 What is’t you say? the life?
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Mean you his majesty?
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Approach the chamber, and destroy your sight<br/>
 With a new Gorgon. Do not bid me speak.<br/>
 See, and then speak yourselves.
@@ -1987,14 +1991,14 @@ To countenance this horror!
 <p class="scenedesc">Enter <span class="charname">Lady Macbeth</span>.</p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 What’s the business,<br/>
 That such a hideous trumpet calls to parley<br/>
 The sleepers of the house? Speak, speak!
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 O gentle lady,<br/>
 ’Tis not for you to hear what I can speak:<br/>
 The repetition, in a woman’s ear,<br/>
@@ -2009,13 +2013,13 @@ Our royal master’s murder’d!
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Woe, alas!<br/>
 What, in our house?
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Too cruel anywhere.—<br/>
 Dear Duff, I pr’ythee, contradict thyself,<br/>
 And say it is not so.
@@ -2025,7 +2029,7 @@ And say it is not so.
 <span class="charname">Lennox</span> with <span class="charname">Ross</span>.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Had I but died an hour before this chance,<br/>
 I had liv’d a blessed time; for, from this instant<br/>
 There’s nothing serious in mortality.<br/>
@@ -2038,29 +2042,29 @@ Is left this vault to brag of.
 <span class="charname">Donalbain</span>.</p>
 
 <p class="drama">
-DONALBAIN.<br/>
+<span class="char-name">DONALBAIN</span><br/>
 What is amiss?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 You are, and do not know’t:<br/>
 The spring, the head, the fountain of your blood<br/>
 Is stopp’d; the very source of it is stopp’d.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Your royal father’s murder’d.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 O, by whom?
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Those of his chamber, as it seem’d, had done’t:<br/>
 Their hands and faces were all badg’d with blood;<br/>
 So were their daggers, which, unwip’d, we found<br/>
@@ -2069,18 +2073,18 @@ No man’s life was to be trusted with them.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 O, yet I do repent me of my fury,<br/>
 That I did kill them.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Wherefore did you so?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Who can be wise, amaz’d, temperate, and furious,<br/>
 Loyal and neutral, in a moment? No man:<br/>
 Th’ expedition of my violent love<br/>
@@ -2095,36 +2099,36 @@ Courage to make’s love known?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Help me hence, ho!
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Look to the lady.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Why do we hold our tongues,<br/>
 That most may claim this argument for ours?
 </p>
 
 <p class="drama">
-DONALBAIN.<br/>
+<span class="char-name">DONALBAIN</span><br/>
 What should be spoken here, where our fate,<br/>
 Hid in an auger hole, may rush, and seize us?<br/>
 Let’s away. Our tears are not yet brew’d.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Nor our strong sorrow<br/>
 Upon the foot of motion.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Look to the lady:—
 </p>
 
@@ -2141,23 +2145,23 @@ Of treasonous malice.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 And so do I.
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 So all.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Let’s briefly put on manly readiness,<br/>
 And meet i’ th’ hall together.
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Well contented.
 </p>
 
@@ -2165,14 +2169,14 @@ Well contented.
 <span class="charname">Donalbain</span>.</i>]</p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 What will you do? Let’s not consort with them:<br/>
 To show an unfelt sorrow is an office<br/>
 Which the false man does easy. I’ll to England.
 </p>
 
 <p class="drama">
-DONALBAIN.<br/>
+<span class="char-name">DONALBAIN</span><br/>
 To Ireland, I. Our separated fortune<br/>
 Shall keep us both the safer. Where we are,<br/>
 There’s daggers in men’s smiles: the near in blood,<br/>
@@ -2180,7 +2184,7 @@ The nearer bloody.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 This murderous shaft that’s shot<br/>
 Hath not yet lighted; and our safest way<br/>
 Is to avoid the aim. Therefore to horse;<br/>
@@ -2198,7 +2202,7 @@ Which steals itself, when there’s no mercy left.
 <span class="charname">Old Man</span>.</p>
 
 <p class="drama">
-OLD MAN.<br/>
+<span class="char-name">OLD MAN</span><br/>
 Threescore and ten I can remember well,<br/>
 Within the volume of which time I have seen<br/>
 Hours dreadful and things strange, but this sore night<br/>
@@ -2206,7 +2210,7 @@ Hath trifled former knowings.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Ha, good father,<br/>
 Thou seest the heavens, as troubled with man’s act,<br/>
 Threatens his bloody stage: by the clock ’tis day,<br/>
@@ -2217,7 +2221,7 @@ When living light should kiss it?
 </p>
 
 <p class="drama">
-OLD MAN.<br/>
+<span class="char-name">OLD MAN</span><br/>
 ’Tis unnatural,<br/>
 Even like the deed that’s done. On Tuesday last,<br/>
 A falcon, towering in her pride of place,<br/>
@@ -2225,7 +2229,7 @@ Was by a mousing owl hawk’d at and kill’d.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 And Duncan’s horses (a thing most strange and certain)<br/>
 Beauteous and swift, the minions of their race,<br/>
 Turn’d wild in nature, broke their stalls, flung out,<br/>
@@ -2234,12 +2238,12 @@ War with mankind.
 </p>
 
 <p class="drama">
-OLD MAN.<br/>
+<span class="char-name">OLD MAN</span><br/>
 ’Tis said they eat each other.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 They did so; to the amazement of mine eyes,<br/>
 That look’d upon’t.<br/>
 Here comes the good Macduff.
@@ -2252,28 +2256,28 @@ How goes the world, sir, now?
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Why, see you not?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Is’t known who did this more than bloody deed?
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Those that Macbeth hath slain.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Alas, the day!<br/>
 What good could they pretend?
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 They were suborn’d.<br/>
 Malcolm and Donalbain, the King’s two sons,<br/>
 Are stol’n away and fled; which puts upon them<br/>
@@ -2281,7 +2285,7 @@ Suspicion of the deed.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 ’Gainst nature still:<br/>
 Thriftless ambition, that will ravin up<br/>
 Thine own life’s means!—Then ’tis most like<br/>
@@ -2289,51 +2293,51 @@ The sovereignty will fall upon Macbeth.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 He is already nam’d; and gone to Scone<br/>
 To be invested.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Where is Duncan’s body?
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Carried to Colmekill,<br/>
 The sacred storehouse of his predecessors,<br/>
 And guardian of their bones.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Will you to Scone?
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 No, cousin, I’ll to Fife.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Well, I will thither.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Well, may you see things well done there. Adieu!<br/>
 Lest our old robes sit easier than our new!
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Farewell, father.
 </p>
 
 <p class="drama">
-OLD MAN.<br/>
+<span class="char-name">OLD MAN</span><br/>
 God’s benison go with you; and with those<br/>
 That would make good of bad, and friends of foes!
 </p>
@@ -2352,7 +2356,7 @@ That would make good of bad, and friends of foes!
 <p class="scenedesc">Enter <span class="charname">Banquo</span>.</p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Thou hast it now, King, Cawdor, Glamis, all,<br/>
 As the Weird Women promis’d; and, I fear,<br/>
 Thou play’dst most foully for’t; yet it was said<br/>
@@ -2370,25 +2374,25 @@ as King, <span class="charname">Lady Macbeth</span> as Queen;
 <span class="charname">Lennox, Ross,</span> Lords, and Attendants.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Here’s our chief guest.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 If he had been forgotten,<br/>
 It had been as a gap in our great feast,<br/>
 And all-thing unbecoming.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Tonight we hold a solemn supper, sir,<br/>
 And I’ll request your presence.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Let your Highness<br/>
 Command upon me, to the which my duties<br/>
 Are with a most indissoluble tie<br/>
@@ -2396,17 +2400,17 @@ For ever knit.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Ride you this afternoon?
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Ay, my good lord.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 We should have else desir’d your good advice<br/>
 (Which still hath been both grave and prosperous)<br/>
 In this day’s council; but we’ll take tomorrow.<br/>
@@ -2414,7 +2418,7 @@ Is’t far you ride?
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 As far, my lord, as will fill up the time<br/>
 ’Twixt this and supper: go not my horse the better,<br/>
 I must become a borrower of the night,<br/>
@@ -2422,17 +2426,17 @@ For a dark hour or twain.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Fail not our feast.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 My lord, I will not.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 We hear our bloody cousins are bestow’d<br/>
 In England and in Ireland; not confessing<br/>
 Their cruel parricide, filling their hearers<br/>
@@ -2443,12 +2447,12 @@ Till you return at night. Goes Fleance with you?
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 Ay, my good lord: our time does call upon’s.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I wish your horses swift and sure of foot;<br/>
 And so I do commend you to their backs.<br/>
 Farewell.—
@@ -2472,12 +2476,12 @@ Our pleasure?
 </p>
 
 <p class="drama">
-SERVANT.<br/>
+<span class="char-name">SERVANT</span><br/>
 They are, my lord, without the palace gate.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Bring them before us.
 </p>
 
@@ -2525,12 +2529,12 @@ Was it not yesterday we spoke together?
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 It was, so please your Highness.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Well then, now<br/>
 Have you consider’d of my speeches? Know<br/>
 That it was he, in the times past, which held you<br/>
@@ -2544,12 +2548,12 @@ Say, “Thus did Banquo.”
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 You made it known to us.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I did so; and went further, which is now<br/>
 Our point of second meeting. Do you find<br/>
 Your patience so predominant in your nature,<br/>
@@ -2560,12 +2564,12 @@ And beggar’d yours forever?
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 We are men, my liege.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Ay, in the catalogue ye go for men;<br/>
 As hounds, and greyhounds, mongrels, spaniels, curs,<br/>
 Shoughs, water-rugs, and demi-wolves are clept<br/>
@@ -2586,7 +2590,7 @@ Which in his death were perfect.
 </p>
 
 <p class="drama">
-SECOND MURDERER.<br/>
+<span class="char-name">SECOND MURDERER</span><br/>
 I am one, my liege,<br/>
 Whom the vile blows and buffets of the world<br/>
 Hath so incens’d that I am reckless what<br/>
@@ -2594,7 +2598,7 @@ I do to spite the world.
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 And I another,<br/>
 So weary with disasters, tugg’d with fortune,<br/>
 That I would set my life on any chance,<br/>
@@ -2602,18 +2606,18 @@ To mend it or be rid on’t.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Both of you<br/>
 Know Banquo was your enemy.
 </p>
 
 <p class="drama">
-BOTH MURDERERS.<br/>
+<span class="char-name">BOTH MURDERERS</span><br/>
 True, my lord.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 So is he mine; and in such bloody distance,<br/>
 That every minute of his being thrusts<br/>
 Against my near’st of life; and though I could<br/>
@@ -2628,18 +2632,18 @@ For sundry weighty reasons.
 </p>
 
 <p class="drama">
-SECOND MURDERER.<br/>
+<span class="char-name">SECOND MURDERER</span><br/>
 We shall, my lord,<br/>
 Perform what you command us.
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 Though our lives—
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Your spirits shine through you. Within this hour at most,<br/>
 I will advise you where to plant yourselves,<br/>
 Acquaint you with the perfect spy o’ th’ time,<br/>
@@ -2655,12 +2659,12 @@ I’ll come to you anon.
 </p>
 
 <p class="drama">
-BOTH MURDERERS.<br/>
+<span class="char-name">BOTH MURDERERS</span><br/>
 We are resolv’d, my lord.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I’ll call upon you straight: abide within.
 </p>
 
@@ -2680,30 +2684,30 @@ If it find heaven, must find it out tonight.
 <span class="charname">Servant</span>.</p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Is Banquo gone from court?
 </p>
 
 <p class="drama">
-SERVANT.<br/>
+<span class="char-name">SERVANT</span><br/>
 Ay, madam, but returns again tonight.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Say to the King, I would attend his leisure<br/>
 For a few words.
 </p>
 
 <p class="drama">
-SERVANT.<br/>
+<span class="char-name">SERVANT</span><br/>
 Madam, I will.
 </p>
 
 <p class="right">[<i>Exit.</i>]</p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Naught’s had, all’s spent,<br/>
 Where our desire is got without content:<br/>
 ’Tis safer to be that which we destroy,<br/>
@@ -2721,7 +2725,7 @@ Should be without regard: what’s done is done.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 We have scorch’d the snake, not kill’d it.<br/>
 She’ll close, and be herself; whilst our poor malice<br/>
 Remains in danger of her former tooth.<br/>
@@ -2740,14 +2744,14 @@ Can touch him further.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Come on,<br/>
 Gently my lord, sleek o’er your rugged looks;<br/>
 Be bright and jovial among your guests tonight.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 So shall I, love; and so, I pray, be you.<br/>
 Let your remembrance apply to Banquo;<br/>
 Present him eminence, both with eye and tongue:<br/>
@@ -2758,23 +2762,23 @@ Disguising what they are.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 You must leave this.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 O, full of scorpions is my mind, dear wife!<br/>
 Thou know’st that Banquo, and his Fleance, lives.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 But in them nature’s copy’s not eterne.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 There’s comfort yet; they are assailable.<br/>
 Then be thou jocund. Ere the bat hath flown<br/>
 His cloister’d flight, ere to black Hecate’s summons<br/>
@@ -2784,12 +2788,12 @@ A deed of dreadful note.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 What’s to be done?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Be innocent of the knowledge, dearest chuck,<br/>
 Till thou applaud the deed. Come, seeling night,<br/>
 Scarf up the tender eye of pitiful day,<br/>
@@ -2812,24 +2816,24 @@ So, pr’ythee, go with me.
 <p class="scenedesc">Enter three <span class="charname">Murderers</span>.</p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 But who did bid thee join with us?
 </p>
 
 <p class="drama">
-THIRD MURDERER.<br/>
+<span class="char-name">THIRD MURDERER</span><br/>
 Macbeth.
 </p>
 
 <p class="drama">
-SECOND MURDERER.<br/>
+<span class="char-name">SECOND MURDERER</span><br/>
 He needs not our mistrust; since he delivers<br/>
 Our offices and what we have to do<br/>
 To the direction just.
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 Then stand with us.<br/>
 The west yet glimmers with some streaks of day.<br/>
 Now spurs the lated traveller apace,<br/>
@@ -2838,29 +2842,29 @@ The subject of our watch.
 </p>
 
 <p class="drama">
-THIRD MURDERER.<br/>
+<span class="char-name">THIRD MURDERER</span><br/>
 Hark! I hear horses.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 [<i>Within.</i>] Give us a light there, ho!
 </p>
 
 <p class="drama">
-SECOND MURDERER.<br/>
+<span class="char-name">SECOND MURDERER</span><br/>
 Then ’tis he; the rest<br/>
 That are within the note of expectation<br/>
 Already are i’ th’ court.
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 His horses go about.
 </p>
 
 <p class="drama">
-THIRD MURDERER.<br/>
+<span class="char-name">THIRD MURDERER</span><br/>
 Almost a mile; but he does usually,<br/>
 So all men do, from hence to the palace gate<br/>
 Make it their walk.
@@ -2870,34 +2874,34 @@ Make it their walk.
 <span class="charname">Fleance</span> with a torch.</p>
 
 <p class="drama">
-SECOND MURDERER.<br/>
+<span class="char-name">SECOND MURDERER</span><br/>
 A light, a light!
 </p>
 
 <p class="drama">
-THIRD MURDERER.<br/>
+<span class="char-name">THIRD MURDERER</span><br/>
 ’Tis he.
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 Stand to’t.
 </p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 It will be rain tonight.
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 Let it come down.
 </p>
 
 <p class="right">[<i>Assaults <span class="charname">Banquo</span>.</i>]</p>
 
 <p class="drama">
-BANQUO.<br/>
+<span class="char-name">BANQUO</span><br/>
 O, treachery! Fly, good Fleance, fly, fly, fly!<br/>
 Thou mayst revenge—O slave!
 </p>
@@ -2905,27 +2909,27 @@ Thou mayst revenge—O slave!
 <p class="right">[<i>Dies. <span class="charname">Fleance</span> escapes.</i>]</p>
 
 <p class="drama">
-THIRD MURDERER.<br/>
+<span class="char-name">THIRD MURDERER</span><br/>
 Who did strike out the light?
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 Was’t not the way?
 </p>
 
 <p class="drama">
-THIRD MURDERER.<br/>
+<span class="char-name">THIRD MURDERER</span><br/>
 There’s but one down: the son is fled.
 </p>
 
 <p class="drama">
-SECOND MURDERER.<br/>
+<span class="char-name">SECOND MURDERER</span><br/>
 We have lost best half of our affair.
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 Well, let’s away, and say how much is done.
 </p>
 
@@ -2938,18 +2942,18 @@ Well, let’s away, and say how much is done.
 Lady Macbeth, Ross, Lennox,</span> Lords and Attendants.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 You know your own degrees, sit down. At first<br/>
 And last the hearty welcome.
 </p>
 
 <p class="drama">
-LORDS.<br/>
+<span class="char-name">LORDS</span><br/>
 Thanks to your Majesty.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Ourself will mingle with society,<br/>
 And play the humble host.<br/>
 Our hostess keeps her state; but, in best time,<br/>
@@ -2957,7 +2961,7 @@ We will require her welcome.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Pronounce it for me, sir, to all our friends;<br/>
 For my heart speaks they are welcome.
 </p>
@@ -2965,7 +2969,7 @@ For my heart speaks they are welcome.
 <p class="scenedesc">Enter first <span class="charname">Murderer</span> to the door.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 See, they encounter thee with their hearts’ thanks.<br/>
 Both sides are even: here I’ll sit i’ th’ midst.
 </p>
@@ -2976,36 +2980,36 @@ The table round. There’s blood upon thy face.
 </p>
 
 <p class="drama">
-MURDERER.<br/>
+<span class="char-name">MURDERER</span><br/>
 ’Tis Banquo’s then.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 ’Tis better thee without than he within.<br/>
 Is he dispatch’d?
 </p>
 
 <p class="drama">
-MURDERER.<br/>
+<span class="char-name">MURDERER</span><br/>
 My lord, his throat is cut. That I did for him.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Thou art the best o’ th’ cut-throats;<br/>
 Yet he’s good that did the like for Fleance:<br/>
 If thou didst it, thou art the nonpareil.
 </p>
 
 <p class="drama">
-MURDERER.<br/>
+<span class="char-name">MURDERER</span><br/>
 Most royal sir,<br/>
 Fleance is ’scap’d.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Then comes my fit again: I had else been perfect;<br/>
 Whole as the marble, founded as the rock,<br/>
 As broad and general as the casing air:<br/>
@@ -3014,14 +3018,14 @@ To saucy doubts and fears. But Banquo’s safe?
 </p>
 
 <p class="drama">
-MURDERER.<br/>
+<span class="char-name">MURDERER</span><br/>
 Ay, my good lord. Safe in a ditch he bides,<br/>
 With twenty trenched gashes on his head;<br/>
 The least a death to nature.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Thanks for that.<br/>
 There the grown serpent lies; the worm that’s fled<br/>
 Hath nature that in time will venom breed,<br/>
@@ -3032,7 +3036,7 @@ We’ll hear, ourselves, again.
 <p class="right">[<i>Exit <span class="charname">Murderer</span>.</i>]</p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 My royal lord,<br/>
 You do not give the cheer: the feast is sold<br/>
 That is not often vouch’d, while ’tis a-making,<br/>
@@ -3044,19 +3048,19 @@ Meeting were bare without it.
 <p class="scenedesc">The Ghost of Banquo rises, and sits in Macbeth’s place.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Sweet remembrancer!—<br/>
 Now, good digestion wait on appetite,<br/>
 And health on both!
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 May’t please your Highness sit.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Here had we now our country’s honour roof’d,<br/>
 Were the grac’d person of our Banquo present;<br/>
 Who may I rather challenge for unkindness<br/>
@@ -3064,55 +3068,55 @@ Than pity for mischance!
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 His absence, sir,<br/>
 Lays blame upon his promise. Please’t your Highness<br/>
 To grace us with your royal company?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 The table’s full.
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Here is a place reserv’d, sir.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Where?
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Here, my good lord. What is’t that moves your Highness?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Which of you have done this?
 </p>
 
 <p class="drama">
-LORDS.<br/>
+<span class="char-name">LORDS</span><br/>
 What, my good lord?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Thou canst not say I did it. Never shake<br/>
 Thy gory locks at me.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Gentlemen, rise; his Highness is not well.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Sit, worthy friends. My lord is often thus,<br/>
 And hath been from his youth: pray you, keep seat;<br/>
 The fit is momentary; upon a thought<br/>
@@ -3122,13 +3126,13 @@ Feed, and regard him not.—Are you a man?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Ay, and a bold one, that dare look on that<br/>
 Which might appal the devil.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 O proper stuff!<br/>
 This is the very painting of your fear:<br/>
 This is the air-drawn dagger which you said,<br/>
@@ -3141,7 +3145,7 @@ You look but on a stool.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Pr’ythee, see there!<br/>
 Behold! look! lo! how say you?<br/>
 Why, what care I? If thou canst nod, speak too.—<br/>
@@ -3153,22 +3157,22 @@ Shall be the maws of kites.
 <p class="right">[<i>Ghost disappears.</i>]</p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 What, quite unmann’d in folly?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 If I stand here, I saw him.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Fie, for shame!
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Blood hath been shed ere now, i’ th’ olden time,<br/>
 Ere humane statute purg’d the gentle weal;<br/>
 Ay, and since too, murders have been perform’d<br/>
@@ -3181,13 +3185,13 @@ Than such a murder is.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 My worthy lord,<br/>
 Your noble friends do lack you.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I do forget.—<br/>
 Do not muse at me, my most worthy friends.<br/>
 I have a strange infirmity, which is nothing<br/>
@@ -3206,12 +3210,12 @@ And all to all.
 </p>
 
 <p class="drama">
-LORDS.<br/>
+<span class="char-name">LORDS</span><br/>
 Our duties, and the pledge.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Avaunt! and quit my sight! let the earth hide thee!<br/>
 Thy bones are marrowless, thy blood is cold;<br/>
 Thou hast no speculation in those eyes<br/>
@@ -3219,14 +3223,14 @@ Which thou dost glare with!
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Think of this, good peers,<br/>
 But as a thing of custom: ’tis no other,<br/>
 Only it spoils the pleasure of the time.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 What man dare, I dare:<br/>
 Approach thou like the rugged Russian bear,<br/>
 The arm’d rhinoceros, or th’ Hyrcan tiger;<br/>
@@ -3246,13 +3250,13 @@ I am a man again.—Pray you, sit still.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 You have displaced the mirth, broke the good meeting<br/>
 With most admir’d disorder.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Can such things be,<br/>
 And overcome us like a summer’s cloud,<br/>
 Without our special wonder? You make me strange<br/>
@@ -3263,12 +3267,12 @@ When mine are blanch’d with fear.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 What sights, my lord?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 I pray you, speak not; he grows worse and worse;<br/>
 Question enrages him. At once, good night:—<br/>
 Stand not upon the order of your going,<br/>
@@ -3276,20 +3280,20 @@ But go at once.
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Good night; and better health<br/>
 Attend his Majesty!
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 A kind good night to all!
 </p>
 
 <p class="right">[<i>Exeunt all Lords and Attendants.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 It will have blood, they say, blood will have blood.<br/>
 Stones have been known to move, and trees to speak;<br/>
 Augurs, and understood relations, have<br/>
@@ -3298,23 +3302,23 @@ The secret’st man of blood.—What is the night?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Almost at odds with morning, which is which.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 How say’st thou, that Macduff denies his person<br/>
 At our great bidding?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Did you send to him, sir?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I hear it by the way; but I will send.<br/>
 There’s not a one of them but in his house<br/>
 I keep a servant fee’d. I will tomorrow<br/>
@@ -3329,12 +3333,12 @@ Which must be acted ere they may be scann’d.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 You lack the season of all natures, sleep.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Come, we’ll to sleep. My strange and self-abuse<br/>
 Is the initiate fear that wants hard use.<br/>
 We are yet but young in deed.
@@ -3349,12 +3353,12 @@ We are yet but young in deed.
 meeting <span class="charname">Hecate</span>.</p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Why, how now, Hecate? you look angerly.
 </p>
 
 <p class="drama">
-HECATE.<br/>
+<span class="char-name">HECATE</span><br/>
 Have I not reason, beldams as you are,<br/>
 Saucy and overbold? How did you dare<br/>
 To trade and traffic with Macbeth<br/>
@@ -3399,7 +3403,7 @@ Sits in a foggy cloud and stays for me.
 <p class="right">[<i>Exit.</i>]</p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Come, let’s make haste; she’ll soon be back again.
 </p>
 
@@ -3412,7 +3416,7 @@ Come, let’s make haste; she’ll soon be back again.
 <span class="charname">Lord</span>.</p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 My former speeches have but hit your thoughts,<br/>
 Which can interpret farther: only, I say,<br/>
 Thing’s have been strangely borne. The gracious Duncan<br/>
@@ -3440,7 +3444,7 @@ Where he bestows himself?
 </p>
 
 <p class="drama">
-LORD.<br/>
+<span class="char-name">LORD</span><br/>
 The son of Duncan,<br/>
 From whom this tyrant holds the due of birth,<br/>
 Lives in the English court and is receiv’d<br/>
@@ -3460,12 +3464,12 @@ Prepares for some attempt of war.
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Sent he to Macduff?
 </p>
 
 <p class="drama">
-LORD.<br/>
+<span class="char-name">LORD</span><br/>
 He did: and with an absolute “Sir, not I,”<br/>
 The cloudy messenger turns me his back,<br/>
 And hums, as who should say, “You’ll rue the time<br/>
@@ -3473,7 +3477,7 @@ That clogs me with this answer.”
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 And that well might<br/>
 Advise him to a caution, t’ hold what distance<br/>
 His wisdom can provide. Some holy angel<br/>
@@ -3484,7 +3488,7 @@ Under a hand accurs’d!
 </p>
 
 <p class="drama">
-LORD.<br/>
+<span class="char-name">LORD</span><br/>
 I’ll send my prayers with him.
 </p>
 
@@ -3502,22 +3506,22 @@ I’ll send my prayers with him.
 <p class="scenedesc">Thunder. Enter the three <span class="charname">Witches</span>.</p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Thrice the brinded cat hath mew’d.
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Thrice, and once the hedge-pig whin’d.
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 Harpier cries:—’Tis time, ’tis time.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Round about the cauldron go;<br/>
 In the poison’d entrails throw.—<br/>
 Toad, that under cold stone<br/>
@@ -3527,13 +3531,13 @@ Boil thou first i’ th’ charmed pot!
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Double, double, toil and trouble;<br/>
 Fire, burn; and cauldron, bubble.
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Fillet of a fenny snake,<br/>
 In the cauldron boil and bake;<br/>
 Eye of newt, and toe of frog,<br/>
@@ -3545,13 +3549,13 @@ Like a hell-broth boil and bubble.
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Double, double, toil and trouble;<br/>
 Fire, burn; and cauldron, bubble.
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 Scale of dragon, tooth of wolf,<br/>
 Witch’s mummy, maw and gulf<br/>
 Of the ravin’d salt-sea shark,<br/>
@@ -3568,13 +3572,13 @@ For th’ ingredients of our cauldron.
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Double, double, toil and trouble;<br/>
 Fire, burn; and cauldron, bubble.
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Cool it with a baboon’s blood.<br/>
 Then the charm is firm and good.
 </p>
@@ -3582,7 +3586,7 @@ Then the charm is firm and good.
 <p class="scenedesc">Enter <span class="charname">Hecate</span>.</p>
 
 <p class="drama">
-HECATE.<br/>
+<span class="char-name">HECATE</span><br/>
 O, well done! I commend your pains,<br/>
 And everyone shall share i’ th’ gains.<br/>
 And now about the cauldron sing,<br/>
@@ -3595,7 +3599,7 @@ Enchanting all that you put in.
 <p class="right">[<i>Exit <span class="charname">Hecate</span>.</i>]</p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 By the pricking of my thumbs,<br/>
 Something wicked this way comes.<br/>
 Open, locks,<br/>
@@ -3605,18 +3609,18 @@ Whoever knocks!
 <p class="scenedesc">Enter <span class="charname">Macbeth</span>.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 How now, you secret, black, and midnight hags!<br/>
 What is’t you do?
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 A deed without a name.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I conjure you, by that which you profess,<br/>
 (Howe’er you come to know it) answer me:<br/>
 Though you untie the winds, and let them fight<br/>
@@ -3632,33 +3636,33 @@ To what I ask you.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Speak.
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Demand.
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 We’ll answer.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Say, if thou’dst rather hear it from our mouths,<br/>
 Or from our masters?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Call ’em, let me see ’em.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Pour in sow’s blood, that hath eaten<br/>
 Her nine farrow; grease that’s sweaten<br/>
 From the murderer’s gibbet throw<br/>
@@ -3666,7 +3670,7 @@ Into the flame.
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Come, high or low;<br/>
 Thyself and office deftly show!
 </p>
@@ -3674,18 +3678,18 @@ Thyself and office deftly show!
 <p class="right">[<i>Thunder. An Apparition of an armed Head rises.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Tell me, thou unknown power,—
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 He knows thy thought:<br/>
 Hear his speech, but say thou naught.
 </p>
 
 <p class="drama">
-APPARITION.<br/>
+<span class="char-name">APPARITION</span><br/>
 Macbeth! Macbeth! Macbeth! Beware Macduff;<br/>
 Beware the Thane of Fife.—Dismiss me.—Enough.
 </p>
@@ -3693,13 +3697,13 @@ Beware the Thane of Fife.—Dismiss me.—Enough.
 <p class="right">[<i>Descends.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Whate’er thou art, for thy good caution, thanks;<br/>
 Thou hast harp’d my fear aright.—But one word more.
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 He will not be commanded. Here’s another,<br/>
 More potent than the first.
 </p>
@@ -3707,17 +3711,17 @@ More potent than the first.
 <p class="right">[<i>Thunder. An Apparition of a bloody Child rises.</i>]</p>
 
 <p class="drama">
-APPARITION.<br/>
+<span class="char-name">APPARITION</span><br/>
 Macbeth! Macbeth! Macbeth!
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Had I three ears, I’d hear thee.
 </p>
 
 <p class="drama">
-APPARITION.<br/>
+<span class="char-name">APPARITION</span><br/>
 Be bloody, bold, and resolute. Laugh to scorn<br/>
 The power of man, for none of woman born<br/>
 Shall harm Macbeth.
@@ -3726,7 +3730,7 @@ Shall harm Macbeth.
 <p class="right">[<i>Descends.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Then live, Macduff: what need I fear of thee?<br/>
 But yet I’ll make assurance double sure,<br/>
 And take a bond of fate. Thou shalt not live;<br/>
@@ -3745,12 +3749,12 @@ And top of sovereignty?
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Listen, but speak not to’t.
 </p>
 
 <p class="drama">
-APPARITION.<br/>
+<span class="char-name">APPARITION</span><br/>
 Be lion-mettled, proud, and take no care<br/>
 Who chafes, who frets, or where conspirers are:<br/>
 Macbeth shall never vanquish’d be, until<br/>
@@ -3761,7 +3765,7 @@ Shall come against him.
 <p class="right">[<i>Descends.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 That will never be:<br/>
 Who can impress the forest; bid the tree<br/>
 Unfix his earth-bound root? Sweet bodements, good!<br/>
@@ -3775,12 +3779,12 @@ Reign in this kingdom?
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Seek to know no more.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I will be satisfied: deny me this,<br/>
 And an eternal curse fall on you! Let me know.<br/>
 Why sinks that cauldron? and what noise is this?
@@ -3789,22 +3793,22 @@ Why sinks that cauldron? and what noise is this?
 <p class="right">[<i>Hautboys.</i>]</p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Show!
 </p>
 
 <p class="drama">
-SECOND WITCH.<br/>
+<span class="char-name">SECOND WITCH</span><br/>
 Show!
 </p>
 
 <p class="drama">
-THIRD WITCH.<br/>
+<span class="char-name">THIRD WITCH</span><br/>
 Show!
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Show his eyes, and grieve his heart;<br/>
 Come like shadows, so depart!
 </p>
@@ -3813,7 +3817,7 @@ Come like shadows, so depart!
 last with a glass in his hand; Banquo following.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Thou are too like the spirit of Banquo. Down!<br/>
 Thy crown does sear mine eyeballs:—and thy hair,<br/>
 Thou other gold-bound brow, is like the first.<br/>
@@ -3830,7 +3834,7 @@ And points at them for his.—What! is this so?
 </p>
 
 <p class="drama">
-FIRST WITCH.<br/>
+<span class="char-name">FIRST WITCH</span><br/>
 Ay, sir, all this is so:—but why<br/>
 Stands Macbeth thus amazedly?—<br/>
 Come, sisters, cheer we up his sprites,<br/>
@@ -3844,7 +3848,7 @@ Our duties did his welcome pay.
 <p class="right">[<i>Music. The Witches dance, and vanish.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Where are they? Gone?—Let this pernicious hour<br/>
 Stand aye accursed in the calendar!—<br/>
 Come in, without there!
@@ -3853,55 +3857,55 @@ Come in, without there!
 <p class="scenedesc">Enter <span class="charname">Lennox</span>.</p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 What’s your Grace’s will?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Saw you the Weird Sisters?
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 No, my lord.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Came they not by you?
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 No, indeed, my lord.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Infected be the air whereon they ride;<br/>
 And damn’d all those that trust them!—I did hear<br/>
 The galloping of horse: who was’t came by?
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 ’Tis two or three, my lord, that bring you word<br/>
 Macduff is fled to England.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Fled to England!
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Ay, my good lord.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Time, thou anticipat’st my dread exploits:<br/>
 The flighty purpose never is o’ertook<br/>
 Unless the deed go with it. From this moment<br/>
@@ -3926,30 +3930,30 @@ Come, bring me where they are.
 <span class="charname">Son</span> and <span class="charname">Ross</span>.</p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 What had he done, to make him fly the land?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 You must have patience, madam.
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 He had none:<br/>
 His flight was madness: when our actions do not,<br/>
 Our fears do make us traitors.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 You know not<br/>
 Whether it was his wisdom or his fear.
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Wisdom! to leave his wife, to leave his babes,<br/>
 His mansion, and his titles, in a place<br/>
 From whence himself does fly? He loves us not:<br/>
@@ -3962,7 +3966,7 @@ So runs against all reason.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 My dearest coz,<br/>
 I pray you, school yourself: but, for your husband,<br/>
 He is noble, wise, judicious, and best knows<br/>
@@ -3979,12 +3983,12 @@ Blessing upon you!
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Father’d he is, and yet he’s fatherless.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 I am so much a fool, should I stay longer,<br/>
 It would be my disgrace and your discomfort:<br/>
 I take my leave at once.
@@ -3993,140 +3997,140 @@ I take my leave at once.
 <p class="right">[<i>Exit.</i>]</p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Sirrah, your father’s dead.<br/>
 And what will you do now? How will you live?
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 As birds do, mother.
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 What, with worms and flies?
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 With what I get, I mean; and so do they.
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Poor bird! thou’dst never fear the net nor lime,<br/>
 The pit-fall nor the gin.
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 Why should I, mother? Poor birds they are not set for.<br/>
 My father is not dead, for all your saying.
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Yes, he is dead: how wilt thou do for a father?
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 Nay, how will you do for a husband?
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Why, I can buy me twenty at any market.
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 Then you’ll buy ’em to sell again.
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Thou speak’st with all thy wit;<br/>
 And yet, i’ faith, with wit enough for thee.
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 Was my father a traitor, mother?
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Ay, that he was.
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 What is a traitor?
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Why, one that swears and lies.
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 And be all traitors that do so?
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Every one that does so is a traitor, and must be hanged.
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 And must they all be hanged that swear and lie?
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Every one.
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 Who must hang them?
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Why, the honest men.
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 Then the liars and swearers are fools: for there are liars and swearers enow to
 beat the honest men and hang up them.
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Now, God help thee, poor monkey! But how wilt thou do for a father?
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 If he were dead, you’ld weep for him: if you would not, it were a good
 sign that I should quickly have a new father.
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Poor prattler, how thou talk’st!
 </p>
 
 <p class="scenedesc">Enter a <span class="charname">Messenger</span>.</p>
 
 <p class="drama">
-MESSENGER.<br/>
+<span class="char-name">MESSENGER</span><br/>
 Bless you, fair dame! I am not to you known,<br/>
 Though in your state of honour I am perfect.<br/>
 I doubt some danger does approach you nearly:<br/>
@@ -4141,7 +4145,7 @@ I dare abide no longer.
 <p class="right">[<i>Exit.</i>]</p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 Whither should I fly?<br/>
 I have done no harm. But I remember now<br/>
 I am in this earthly world, where to do harm<br/>
@@ -4154,28 +4158,28 @@ To say I have done no harm? What are these faces?
 <p class="scenedesc">Enter <span class="charname">Murderers</span>.</p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 Where is your husband?
 </p>
 
 <p class="drama">
-LADY MACDUFF.<br/>
+<span class="char-name">LADY MACDUFF</span><br/>
 I hope, in no place so unsanctified<br/>
 Where such as thou mayst find him.
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 He’s a traitor.
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 Thou liest, thou shag-ear’d villain!
 </p>
 
 <p class="drama">
-FIRST MURDERER.<br/>
+<span class="char-name">FIRST MURDERER</span><br/>
 What, you egg!
 </p>
 
@@ -4186,7 +4190,7 @@ Young fry of treachery!
 </p>
 
 <p class="drama">
-SON.<br/>
+<span class="char-name">SON</span><br/>
 He has kill’d me, mother:<br/>
 Run away, I pray you!
 </p>
@@ -4201,13 +4205,13 @@ crying “Murder!” and pursued by the Murderers.</i>]</p>
 <span class="charname">Macduff</span>.</p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Let us seek out some desolate shade and there<br/>
 Weep our sad bosoms empty.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Let us rather<br/>
 Hold fast the mortal sword, and, like good men,<br/>
 Bestride our down-fall’n birthdom. Each new morn<br/>
@@ -4218,7 +4222,7 @@ Like syllable of dolour.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 What I believe, I’ll wail;<br/>
 What know, believe; and what I can redress,<br/>
 As I shall find the time to friend, I will.<br/>
@@ -4232,12 +4236,12 @@ To appease an angry god.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 I am not treacherous.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 But Macbeth is.<br/>
 A good and virtuous nature may recoil<br/>
 In an imperial charge. But I shall crave your pardon.<br/>
@@ -4248,12 +4252,12 @@ Yet grace must still look so.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 I have lost my hopes.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Perchance even there where I did find my doubts.<br/>
 Why in that rawness left you wife and child,<br/>
 Those precious motives, those strong knots of love,<br/>
@@ -4264,7 +4268,7 @@ Whatever I shall think.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Bleed, bleed, poor country!<br/>
 Great tyranny, lay thou thy basis sure,<br/>
 For goodness dare not check thee! wear thou thy wrongs;<br/>
@@ -4275,7 +4279,7 @@ And the rich East to boot.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Be not offended:<br/>
 I speak not as in absolute fear of you.<br/>
 I think our country sinks beneath the yoke;<br/>
@@ -4292,12 +4296,12 @@ By him that shall succeed.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 What should he be?
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 It is myself I mean; in whom I know<br/>
 All the particulars of vice so grafted<br/>
 That, when they shall be open’d, black Macbeth<br/>
@@ -4307,14 +4311,14 @@ With my confineless harms.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Not in the legions<br/>
 Of horrid hell can come a devil more damn’d<br/>
 In evils to top Macbeth.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 I grant him bloody,<br/>
 Luxurious, avaricious, false, deceitful,<br/>
 Sudden, malicious, smacking of every sin<br/>
@@ -4328,7 +4332,7 @@ Than such an one to reign.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Boundless intemperance<br/>
 In nature is a tyranny; it hath been<br/>
 Th’ untimely emptying of the happy throne,<br/>
@@ -4343,7 +4347,7 @@ Finding it so inclin’d.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 With this there grows<br/>
 In my most ill-compos’d affection such<br/>
 A staunchless avarice, that, were I king,<br/>
@@ -4356,7 +4360,7 @@ Destroying them for wealth.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 This avarice<br/>
 Sticks deeper; grows with more pernicious root<br/>
 Than summer-seeming lust; and it hath been<br/>
@@ -4367,7 +4371,7 @@ With other graces weigh’d.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 But I have none: the king-becoming graces,<br/>
 As justice, verity, temp’rance, stableness,<br/>
 Bounty, perseverance, mercy, lowliness,<br/>
@@ -4381,18 +4385,18 @@ All unity on earth.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 O Scotland, Scotland!
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 If such a one be fit to govern, speak:<br/>
 I am as I have spoken.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Fit to govern?<br/>
 No, not to live.—O nation miserable,<br/>
 With an untitled tyrant bloody-scepter’d,<br/>
@@ -4409,7 +4413,7 @@ Thy hope ends here!
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Macduff, this noble passion,<br/>
 Child of integrity, hath from my soul<br/>
 Wiped the black scruples, reconcil’d my thoughts<br/>
@@ -4437,7 +4441,7 @@ Be like our warranted quarrel. Why are you silent?
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Such welcome and unwelcome things at once<br/>
 ’Tis hard to reconcile.
 </p>
@@ -4445,12 +4449,12 @@ Such welcome and unwelcome things at once<br/>
 <p class="scenedesc">Enter a <span class="charname">Doctor</span>.</p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Well; more anon.—Comes the King forth, I pray you?
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Ay, sir. There are a crew of wretched souls<br/>
 That stay his cure: their malady convinces<br/>
 The great assay of art; but at his touch,<br/>
@@ -4459,19 +4463,19 @@ They presently amend.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 I thank you, doctor.
 </p>
 
 <p class="right">[<i>Exit <span class="charname">Doctor</span>.</i>]</p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 What’s the disease he means?
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 ’Tis call’d the evil:<br/>
 A most miraculous work in this good king;<br/>
 Which often, since my here-remain in England,<br/>
@@ -4491,38 +4495,38 @@ That speak him full of grace.
 <p class="scenedesc">Enter <span class="charname">Ross</span>.</p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 See, who comes here?
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 My countryman; but yet I know him not.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 My ever-gentle cousin, welcome hither.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 I know him now. Good God, betimes remove<br/>
 The means that makes us strangers!
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Sir, amen.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Stands Scotland where it did?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Alas, poor country,<br/>
 Almost afraid to know itself! It cannot<br/>
 Be call’d our mother, but our grave, where nothing,<br/>
@@ -4536,59 +4540,59 @@ Dying or ere they sicken.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 O, relation<br/>
 Too nice, and yet too true!
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 What’s the newest grief?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 That of an hour’s age doth hiss the speaker;<br/>
 Each minute teems a new one.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 How does my wife?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Why, well.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 And all my children?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Well too.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 The tyrant has not batter’d at their peace?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 No; they were well at peace when I did leave ’em.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Be not a niggard of your speech: how goes’t?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 When I came hither to transport the tidings,<br/>
 Which I have heavily borne, there ran a rumour<br/>
 Of many worthy fellows that were out;<br/>
@@ -4600,7 +4604,7 @@ To doff their dire distresses.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Be’t their comfort<br/>
 We are coming thither. Gracious England hath<br/>
 Lent us good Siward and ten thousand men;<br/>
@@ -4609,7 +4613,7 @@ That Christendom gives out.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Would I could answer<br/>
 This comfort with the like! But I have words<br/>
 That would be howl’d out in the desert air,<br/>
@@ -4617,39 +4621,39 @@ Where hearing should not latch them.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 What concern they?<br/>
 The general cause? or is it a fee-grief<br/>
 Due to some single breast?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 No mind that’s honest<br/>
 But in it shares some woe, though the main part<br/>
 Pertains to you alone.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 If it be mine,<br/>
 Keep it not from me, quickly let me have it.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Let not your ears despise my tongue for ever,<br/>
 Which shall possess them with the heaviest sound<br/>
 That ever yet they heard.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Humh! I guess at it.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Your castle is surpris’d; your wife and babes<br/>
 Savagely slaughter’d. To relate the manner<br/>
 Were, on the quarry of these murder’d deer,<br/>
@@ -4657,7 +4661,7 @@ To add the death of you.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Merciful heaven!—<br/>
 What, man! ne’er pull your hat upon your brows.<br/>
 Give sorrow words. The grief that does not speak<br/>
@@ -4665,36 +4669,36 @@ Whispers the o’er-fraught heart, and bids it break.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 My children too?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Wife, children, servants, all<br/>
 That could be found.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 And I must be from thence!<br/>
 My wife kill’d too?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 I have said.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Be comforted:<br/>
 Let’s make us med’cines of our great revenge,<br/>
 To cure this deadly grief.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 He has no children.—All my pretty ones?<br/>
 Did you say all?—O hell-kite!—All?<br/>
 What, all my pretty chickens and their dam<br/>
@@ -4702,12 +4706,12 @@ At one fell swoop?
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Dispute it like a man.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 I shall do so;<br/>
 But I must also feel it as a man:<br/>
 I cannot but remember such things were,<br/>
@@ -4719,13 +4723,13 @@ Fell slaughter on their souls: heaven rest them now!
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Be this the whetstone of your sword. Let grief<br/>
 Convert to anger; blunt not the heart, enrage it.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 O, I could play the woman with mine eyes,<br/>
 And braggart with my tongue!—But, gentle heavens,<br/>
 Cut short all intermission; front to front,<br/>
@@ -4735,7 +4739,7 @@ Heaven forgive him too!
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 This tune goes manly.<br/>
 Come, go we to the King. Our power is ready;<br/>
 Our lack is nothing but our leave. Macbeth<br/>
@@ -4759,13 +4763,13 @@ The night is long that never finds the day.
 <span class="charname">Waiting-Gentlewoman</span>.</p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 I have two nights watched with you, but can perceive no truth in your report.
 When was it she last walked?
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 Since his Majesty went into the field, I have seen her rise from her bed, throw
 her nightgown upon her, unlock her closet, take forth paper, fold it, write
 upon’t, read it, afterwards seal it, and again return to bed; yet all
@@ -4773,24 +4777,24 @@ this while in a most fast sleep.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 A great perturbation in nature, to receive at once the benefit of sleep, and do
 the effects of watching. In this slumbery agitation, besides her walking and
 other actual performances, what, at any time, have you heard her say?
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 That, sir, which I will not report after her.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 You may to me; and ’tis most meet you should.
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 Neither to you nor anyone; having no witness to confirm my speech.
 </p>
 
@@ -4802,49 +4806,49 @@ asleep. Observe her; stand close.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 How came she by that light?
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 Why, it stood by her: she has light by her continually; ’tis her command.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 You see, her eyes are open.
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 Ay, but their sense are shut.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 What is it she does now? Look how she rubs her hands.
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 It is an accustomed action with her, to seem thus washing her hands. I have
 known her continue in this a quarter of an hour.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Yet here’s a spot.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Hark, she speaks. I will set down what comes from her, to satisfy my
 remembrance the more strongly.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Out, damned spot! out, I say! One; two. Why, then ’tis time to
 do’t. Hell is murky! Fie, my lord, fie! a soldier, and afeard? What need
 we fear who knows it, when none can call our power to account? Yet who would
@@ -4852,73 +4856,73 @@ have thought the old man to have had so much blood in him?
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Do you mark that?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 The Thane of Fife had a wife. Where is she now?—What, will these hands
 ne’er be clean? No more o’ that, my lord, no more o’ that:
 you mar all with this starting.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Go to, go to. You have known what you should not.
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 She has spoke what she should not, I am sure of that: heaven knows what she has
 known.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Here’s the smell of the blood still: all the perfumes of Arabia will not
 sweeten this little hand. Oh, oh, oh!
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 What a sigh is there! The heart is sorely charged.
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 I would not have such a heart in my bosom for the dignity of the whole body.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Well, well, well.
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 Pray God it be, sir.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 This disease is beyond my practice: yet I have known those which have walked in
 their sleep, who have died holily in their beds.
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 Wash your hands, put on your nightgown; look not so pale. I tell you yet again,
 Banquo’s buried; he cannot come out on’s grave.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Even so?
 </p>
 
 <p class="drama">
-LADY MACBETH.<br/>
+<span class="char-name">LADY MACBETH</span><br/>
 To bed, to bed. There’s knocking at the gate. Come, come, come, come,
 give me your hand. What’s done cannot be undone. To bed, to bed, to bed.
 </p>
@@ -4926,17 +4930,17 @@ give me your hand. What’s done cannot be undone. To bed, to bed, to bed.
 <p class="right">[<i>Exit.</i>]</p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Will she go now to bed?
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 Directly.
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Foul whisp’rings are abroad. Unnatural deeds<br/>
 Do breed unnatural troubles: infected minds<br/>
 To their deaf pillows will discharge their secrets.<br/>
@@ -4949,7 +4953,7 @@ I think, but dare not speak.
 </p>
 
 <p class="drama">
-GENTLEWOMAN.<br/>
+<span class="char-name">GENTLEWOMAN</span><br/>
 Good night, good doctor.
 </p>
 
@@ -4962,7 +4966,7 @@ Good night, good doctor.
 Caithness, Angus, Lennox</span> and Soldiers.</p>
 
 <p class="drama">
-MENTEITH.<br/>
+<span class="char-name">MENTEITH</span><br/>
 The English power is near, led on by Malcolm,<br/>
 His uncle Siward, and the good Macduff.<br/>
 Revenges burn in them; for their dear causes<br/>
@@ -4971,18 +4975,18 @@ Excite the mortified man.
 </p>
 
 <p class="drama">
-ANGUS.<br/>
+<span class="char-name">ANGUS</span><br/>
 Near Birnam wood<br/>
 Shall we well meet them. That way are they coming.
 </p>
 
 <p class="drama">
-CAITHNESS.<br/>
+<span class="char-name">CAITHNESS</span><br/>
 Who knows if Donalbain be with his brother?
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 For certain, sir, he is not. I have a file<br/>
 Of all the gentry: there is Siward’s son<br/>
 And many unrough youths, that even now<br/>
@@ -4990,12 +4994,12 @@ Protest their first of manhood.
 </p>
 
 <p class="drama">
-MENTEITH.<br/>
+<span class="char-name">MENTEITH</span><br/>
 What does the tyrant?
 </p>
 
 <p class="drama">
-CAITHNESS.<br/>
+<span class="char-name">CAITHNESS</span><br/>
 Great Dunsinane he strongly fortifies.<br/>
 Some say he’s mad; others, that lesser hate him,<br/>
 Do call it valiant fury: but, for certain,<br/>
@@ -5004,7 +5008,7 @@ Within the belt of rule.
 </p>
 
 <p class="drama">
-ANGUS.<br/>
+<span class="char-name">ANGUS</span><br/>
 Now does he feel<br/>
 His secret murders sticking on his hands;<br/>
 Now minutely revolts upbraid his faith-breach;<br/>
@@ -5015,7 +5019,7 @@ Upon a dwarfish thief.
 </p>
 
 <p class="drama">
-MENTEITH.<br/>
+<span class="char-name">MENTEITH</span><br/>
 Who, then, shall blame<br/>
 His pester’d senses to recoil and start,<br/>
 When all that is within him does condemn<br/>
@@ -5023,7 +5027,7 @@ Itself for being there?
 </p>
 
 <p class="drama">
-CAITHNESS.<br/>
+<span class="char-name">CAITHNESS</span><br/>
 Well, march we on,<br/>
 To give obedience where ’tis truly ow’d:<br/>
 Meet we the med’cine of the sickly weal;<br/>
@@ -5032,7 +5036,7 @@ Each drop of us.
 </p>
 
 <p class="drama">
-LENNOX.<br/>
+<span class="char-name">LENNOX</span><br/>
 Or so much as it needs<br/>
 To dew the sovereign flower, and drown the weeds.<br/>
 Make we our march towards Birnam.
@@ -5047,7 +5051,7 @@ Make we our march towards Birnam.
 Attendants.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Bring me no more reports; let them fly all:<br/>
 Till Birnam wood remove to Dunsinane<br/>
 I cannot taint with fear. What’s the boy Malcolm?<br/>
@@ -5069,22 +5073,22 @@ Where gott’st thou that goose look?
 </p>
 
 <p class="drama">
-SERVANT.<br/>
+<span class="char-name">SERVANT</span><br/>
 There is ten thousand—
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Geese, villain?
 </p>
 
 <p class="drama">
-SERVANT.<br/>
+<span class="char-name">SERVANT</span><br/>
 Soldiers, sir.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Go prick thy face and over-red thy fear,<br/>
 Thou lily-liver’d boy. What soldiers, patch?<br/>
 Death of thy soul! those linen cheeks of thine<br/>
@@ -5092,12 +5096,12 @@ Are counsellors to fear. What soldiers, whey-face?
 </p>
 
 <p class="drama">
-SERVANT.<br/>
+<span class="char-name">SERVANT</span><br/>
 The English force, so please you.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Take thy face hence.
 </p>
 
@@ -5120,33 +5124,33 @@ Seyton!—
 <p class="scenedesc">Enter <span class="charname">Seyton</span>.</p>
 
 <p class="drama">
-SEYTON.<br/>
+<span class="char-name">SEYTON</span><br/>
 What’s your gracious pleasure?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 What news more?
 </p>
 
 <p class="drama">
-SEYTON.<br/>
+<span class="char-name">SEYTON</span><br/>
 All is confirm’d, my lord, which was reported.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I’ll fight till from my bones my flesh be hack’d.<br/>
 Give me my armour.
 </p>
 
 <p class="drama">
-SEYTON.<br/>
+<span class="char-name">SEYTON</span><br/>
 ’Tis not needed yet.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I’ll put it on.<br/>
 Send out more horses, skirr the country round;<br/>
 Hang those that talk of fear. Give me mine armour.—<br/>
@@ -5154,14 +5158,14 @@ How does your patient, doctor?
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Not so sick, my lord,<br/>
 As she is troubled with thick-coming fancies,<br/>
 That keep her from her rest.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Cure her of that:<br/>
 Canst thou not minister to a mind diseas’d,<br/>
 Pluck from the memory a rooted sorrow,<br/>
@@ -5172,13 +5176,13 @@ Which weighs upon the heart?
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Therein the patient<br/>
 Must minister to himself.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Throw physic to the dogs, I’ll none of it.<br/>
 Come, put mine armour on; give me my staff:<br/>
 Seyton, send out.—Doctor, the Thanes fly from me.—<br/>
@@ -5192,13 +5196,13 @@ Would scour these English hence? Hear’st thou of them?
 </p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Ay, my good lord. Your royal preparation<br/>
 Makes us hear something.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Bring it after me.—<br/>
 I will not be afraid of death and bane,<br/>
 Till Birnam forest come to Dunsinane.
@@ -5207,7 +5211,7 @@ Till Birnam forest come to Dunsinane.
 <p class="right">[<i>Exeunt all except <span class="charname">Doctor</span>.</i>]</p>
 
 <p class="drama">
-DOCTOR.<br/>
+<span class="char-name">DOCTOR</span><br/>
 Were I from Dunsinane away and clear,<br/>
 Profit again should hardly draw me here.
 </p>
@@ -5222,28 +5226,28 @@ old Siward</span> and his Son, <span class="charname">Macduff, Menteith, Caithne
 Angus, Lennox, Ross</span> and Soldiers, marching.</p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Cousins, I hope the days are near at hand<br/>
 That chambers will be safe.
 </p>
 
 <p class="drama">
-MENTEITH.<br/>
+<span class="char-name">MENTEITH</span><br/>
 We doubt it nothing.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 What wood is this before us?
 </p>
 
 <p class="drama">
-MENTEITH.<br/>
+<span class="char-name">MENTEITH</span><br/>
 The wood of Birnam.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Let every soldier hew him down a bough,<br/>
 And bear’t before him. Thereby shall we shadow<br/>
 The numbers of our host, and make discovery<br/>
@@ -5251,19 +5255,19 @@ Err in report of us.
 </p>
 
 <p class="drama">
-SOLDIERS.<br/>
+<span class="char-name">SOLDIERS</span><br/>
 It shall be done.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 We learn no other but the confident tyrant<br/>
 Keeps still in Dunsinane, and will endure<br/>
 Our setting down before’t.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 ’Tis his main hope;<br/>
 For where there is advantage to be given,<br/>
 Both more and less have given him the revolt,<br/>
@@ -5272,14 +5276,14 @@ Whose hearts are absent too.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Let our just censures<br/>
 Attend the true event, and put we on<br/>
 Industrious soldiership.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 The time approaches,<br/>
 That will with due decision make us know<br/>
 What we shall say we have, and what we owe.<br/>
@@ -5297,7 +5301,7 @@ Towards which advance the war.
 Seyton </span>and Soldiers.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Hang out our banners on the outward walls;<br/>
 The cry is still, “They come!” Our castle’s strength<br/>
 Will laugh a siege to scorn: here let them lie<br/>
@@ -5314,14 +5318,14 @@ What is that noise?
 </p>
 
 <p class="drama">
-SEYTON.<br/>
+<span class="char-name">SEYTON</span><br/>
 It is the cry of women, my good lord.
 </p>
 
 <p class="right">[<i>Exit.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I have almost forgot the taste of fears.<br/>
 The time has been, my senses would have cool’d<br/>
 To hear a night-shriek; and my fell of hair<br/>
@@ -5338,12 +5342,12 @@ Wherefore was that cry?
 </p>
 
 <p class="drama">
-SEYTON.<br/>
+<span class="char-name">SEYTON</span><br/>
 The Queen, my lord, is dead.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 She should have died hereafter.<br/>
 There would have been a time for such a word.<br/>
 Tomorrow, and tomorrow, and tomorrow,<br/>
@@ -5365,38 +5369,38 @@ Thou com’st to use thy tongue; thy story quickly.
 </p>
 
 <p class="drama">
-MESSENGER.<br/>
+<span class="char-name">MESSENGER</span><br/>
 Gracious my lord,<br/>
 I should report that which I say I saw,<br/>
 But know not how to do’t.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Well, say, sir.
 </p>
 
 <p class="drama">
-MESSENGER.<br/>
+<span class="char-name">MESSENGER</span><br/>
 As I did stand my watch upon the hill,<br/>
 I look’d toward Birnam, and anon, methought,<br/>
 The wood began to move.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Liar, and slave!
 </p>
 
 <p class="drama">
-MESSENGER.<br/>
+<span class="char-name">MESSENGER</span><br/>
 Let me endure your wrath, if’t be not so.<br/>
 Within this three mile may you see it coming;<br/>
 I say, a moving grove.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 If thou speak’st false,<br/>
 Upon the next tree shalt thou hang alive,<br/>
 Till famine cling thee: if thy speech be sooth,<br/>
@@ -5423,7 +5427,7 @@ At least we’ll die with harness on our back.
 old Siward, Macduff</span> and their Army, with boughs.</p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Now near enough. Your leafy screens throw down,<br/>
 And show like those you are.—You, worthy uncle,<br/>
 Shall with my cousin, your right noble son,<br/>
@@ -5433,14 +5437,14 @@ According to our order.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 Fare you well.—<br/>
 Do we but find the tyrant’s power tonight,<br/>
 Let us be beaten, if we cannot fight.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Make all our trumpets speak; give them all breath,<br/>
 Those clamorous harbingers of blood and death.
 </p>
@@ -5453,7 +5457,7 @@ Those clamorous harbingers of blood and death.
 <p class="scenedesc">Alarums. Enter <span class="charname">Macbeth</span>.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 They have tied me to a stake. I cannot fly,<br/>
 But, bear-like I must fight the course.—What’s he<br/>
 That was not born of woman? Such a one<br/>
@@ -5463,39 +5467,39 @@ Am I to fear, or none.
 <p class="scenedesc">Enter young <span class="charname">Siward</span>.</p>
 
 <p class="drama">
-YOUNG SIWARD.<br/>
+<span class="char-name">YOUNG SIWARD</span><br/>
 What is thy name?
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Thou’lt be afraid to hear it.
 </p>
 
 <p class="drama">
-YOUNG SIWARD.<br/>
+<span class="char-name">YOUNG SIWARD</span><br/>
 No; though thou call’st thyself a hotter name<br/>
 Than any is in hell.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 My name’s Macbeth.
 </p>
 
 <p class="drama">
-YOUNG SIWARD.<br/>
+<span class="char-name">YOUNG SIWARD</span><br/>
 The devil himself could not pronounce a title<br/>
 More hateful to mine ear.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 No, nor more fearful.
 </p>
 
 <p class="drama">
-YOUNG SIWARD.<br/>
+<span class="char-name">YOUNG SIWARD</span><br/>
 Thou liest, abhorred tyrant. With my sword<br/>
 I’ll prove the lie thou speak’st.
 </p>
@@ -5504,7 +5508,7 @@ I’ll prove the lie thou speak’st.
 is slain.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Thou wast born of woman.<br/>
 But swords I smile at, weapons laugh to scorn,<br/>
 Brandish’d by man that’s of a woman born.
@@ -5515,7 +5519,7 @@ Brandish’d by man that’s of a woman born.
 <p class="scenedesc">Alarums. Enter <span class="charname">Macduff</span>.</p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 That way the noise is.—Tyrant, show thy face!<br/>
 If thou be’st slain and with no stroke of mine,<br/>
 My wife and children’s ghosts will haunt me still.<br/>
@@ -5534,7 +5538,7 @@ And more I beg not.
 <span class="charname">Siward</span>.</p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 This way, my lord;—the castle’s gently render’d:<br/>
 The tyrant’s people on both sides do fight;<br/>
 The noble thanes do bravely in the war,<br/>
@@ -5543,13 +5547,13 @@ And little is to do.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 We have met with foes<br/>
 That strike beside us.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 Enter, sir, the castle.
 </p>
 
@@ -5561,7 +5565,7 @@ Enter, sir, the castle.
 <p class="scenedesc">Enter <span class="charname">Macbeth</span>.</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Why should I play the Roman fool, and die<br/>
 On mine own sword? whiles I see lives, the gashes<br/>
 Do better upon them.
@@ -5570,19 +5574,19 @@ Do better upon them.
 <p class="scenedesc">Enter <span class="charname">Macduff</span>.</p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Turn, hell-hound, turn!
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Of all men else I have avoided thee:<br/>
 But get thee back; my soul is too much charg’d<br/>
 With blood of thine already.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 I have no words;<br/>
 My voice is in my sword: thou bloodier villain<br/>
 Than terms can give thee out!
@@ -5591,7 +5595,7 @@ Than terms can give thee out!
 <p class="right">[<i>They fight.</i>]</p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Thou losest labour:<br/>
 As easy mayst thou the intrenchant air<br/>
 With thy keen sword impress, as make me bleed:<br/>
@@ -5601,7 +5605,7 @@ To one of woman born.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Despair thy charm;<br/>
 And let the angel whom thou still hast serv’d<br/>
 Tell thee, Macduff was from his mother’s womb<br/>
@@ -5609,7 +5613,7 @@ Untimely ripp’d.
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 Accursed be that tongue that tells me so,<br/>
 For it hath cow’d my better part of man!<br/>
 And be these juggling fiends no more believ’d,<br/>
@@ -5619,7 +5623,7 @@ And break it to our hope!—I’ll not fight with thee.
 </p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Then yield thee, coward,<br/>
 And live to be the show and gaze o’ th’ time.<br/>
 We’ll have thee, as our rarer monsters are,<br/>
@@ -5628,7 +5632,7 @@ Painted upon a pole, and underwrit,<br/>
 </p>
 
 <p class="drama">
-MACBETH.<br/>
+<span class="char-name">MACBETH</span><br/>
 I will not yield,<br/>
 To kiss the ground before young Malcolm’s feet,<br/>
 And to be baited with the rabble’s curse.<br/>
@@ -5645,23 +5649,23 @@ And damn’d be him that first cries, “Hold, enough!”
 <span class="charname">Malcolm, old Siward, Ross,</span> Thanes and Soldiers.</p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 I would the friends we miss were safe arriv’d.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 Some must go off; and yet, by these I see,<br/>
 So great a day as this is cheaply bought.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 Macduff is missing, and your noble son.
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Your son, my lord, has paid a soldier’s debt:<br/>
 He only liv’d but till he was a man;<br/>
 The which no sooner had his prowess confirm’d<br/>
@@ -5670,29 +5674,29 @@ But like a man he died.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 Then he is dead?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Ay, and brought off the field. Your cause of sorrow<br/>
 Must not be measur’d by his worth, for then<br/>
 It hath no end.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 Had he his hurts before?
 </p>
 
 <p class="drama">
-ROSS.<br/>
+<span class="char-name">ROSS</span><br/>
 Ay, on the front.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 Why then, God’s soldier be he!<br/>
 Had I as many sons as I have hairs,<br/>
 I would not wish them to a fairer death:<br/>
@@ -5700,13 +5704,13 @@ And so his knell is knoll’d.
 </p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 He’s worth more sorrow,<br/>
 And that I’ll spend for him.
 </p>
 
 <p class="drama">
-SIWARD.<br/>
+<span class="char-name">SIWARD</span><br/>
 He’s worth no more.<br/>
 They say he parted well and paid his score:<br/>
 And so, God be with him!—Here comes newer comfort.
@@ -5716,7 +5720,7 @@ And so, God be with him!—Here comes newer comfort.
 Macbeth’s head.</p>
 
 <p class="drama">
-MACDUFF.<br/>
+<span class="char-name">MACDUFF</span><br/>
 Hail, King, for so thou art. Behold, where stands<br/>
 Th’ usurper’s cursed head: the time is free.<br/>
 I see thee compass’d with thy kingdom’s pearl,<br/>
@@ -5726,14 +5730,14 @@ Hail, King of Scotland!
 </p>
 
 <p class="drama">
-ALL.<br/>
+<span class="char-name">ALL</span><br/>
 Hail, King of Scotland!
 </p>
 
 <p class="right">[<i>Flourish.</i>]</p>
 
 <p class="drama">
-MALCOLM.<br/>
+<span class="char-name">MALCOLM</span><br/>
 We shall not spend a large expense of time<br/>
 Before we reckon with your several loves,<br/>
 And make us even with you. My thanes and kinsmen,<br/>

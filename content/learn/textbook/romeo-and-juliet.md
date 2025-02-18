@@ -6,7 +6,9 @@ extra:
   keystage: ["4"]
   tags: ["drama"]
   vocab:
-    civil: (adj) connected to a city
+    civil: (adj) connected to city, OR well-behaved
+    maidenheads: (n) virginity
+    
 ---
 
 <style>
@@ -18,6 +20,10 @@ extra:
     
     .scenedesc {
         font-style:italic;
+    }
+    
+    .char-name {
+        font-weight: bold;
     }
 </style>
 
@@ -167,7 +173,7 @@ houses; Maskers, Guards, Watchmen and Attendants.
 <h3> <a id="sceneI_30.0"></a><b>THE PROLOGUE</b></h3>
 <p class="scenedesc">Enter <span class="charname">Chorus</span>.</p>
 <p class="drama">
-CHORUS.<br>
+<span class="char-name">CHORUS</span><br/>
 Two households, both alike in dignity,<br>
 In fair Verona, where we lay our scene,<br>
 From ancient grudge break to new mutiny,<br>
@@ -191,196 +197,196 @@ What here shall miss, our toil shall strive to mend.
 <p class="scenedesc">Enter <span class="charname">Sampson</span> and
 <span class="charname">Gregory</span> armed with swords and bucklers.</p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Gregory, on my word, we’ll not carry coals.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 No, for then we should be colliers.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 I mean, if we be in choler, we’ll draw.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 Ay, while you live, draw your neck out o’ the collar.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 I strike quickly, being moved.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 But thou art not quickly moved to strike.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 A dog of the house of Montague moves me.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 To move is to stir; and to be valiant is to stand:
 therefore, if thou art moved, thou runn’st away.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 A dog of that house shall move me to stand.<br>
 I will take the wall of any man or maid of Montague’s.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 That shows thee a weak slave, for the weakest goes to the wall.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 True, and therefore women, being the weaker vessels,
 are ever thrust to the wall: therefore I will push Montague’s men
 from the wall, and thrust his maids to the wall.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 The quarrel is between our masters and us their men.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 ’Tis all one, I will show myself a tyrant: when I have fought
 with the men I will be civil with the maids, I will cut off their heads.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 The heads of the maids?
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Ay, the heads of the maids, or their maidenheads; take it in what sense
 thou wilt.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 They must take it in sense that feel it.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Me they shall feel while I am able to stand:
 and ’tis known I am a pretty piece of flesh.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 ’Tis well thou art not fish; if thou hadst, thou hadst been poor
 John. Draw thy tool; here comes of the house of Montagues.
 </p>
 <p class="scenedesc">Enter <span class="charname">Abram</span> and
 <span class="charname">Balthasar</span>.</p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 My naked weapon is out: quarrel, I will back thee.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 How? Turn thy back and run?
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Fear me not.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 No, marry; I fear thee!
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Let us take the law of our sides; let them begin.
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 I will frown as I pass by, and let them take it as they
 list.</p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Nay, as they dare. I will bite my thumb at them, which is
 disgrace to them if they bear it.
 </p>
 <p class="drama">
-ABRAM.<br>
+<span class="char-name">ABRAM</span><br/>
 Do you bite your thumb at us, sir?
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 I do bite my thumb, sir.
 </p>
 <p class="drama">
-ABRAM.<br>
+<span class="char-name">ABRAM</span><br/>
 Do you bite your thumb at us, sir?
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Is the law of our side if I say ay?
 </p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 No.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 No sir, I do not bite my thumb at you, sir; but I bite my
 thumb, sir.</p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 Do you quarrel, sir?
 </p>
 <p class="drama">
-ABRAM.<br>
+<span class="char-name">ABRAM</span><br/>
 Quarrel, sir? No, sir.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 But if you do, sir, I am for you. I serve as good a man as
 you.</p>
 <p class="drama">
-ABRAM.<br>
+<span class="char-name">ABRAM</span><br/>
 No better.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Well, sir.
 </p>
 <p class="scenedesc">Enter <span class="charname">Benvolio</span>.</p>
 <p class="drama">
-GREGORY.<br>
+<span class="char-name">GREGORY</span><br/>
 Say better; here comes one of my master’s kinsmen.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Yes, better, sir.
 </p>
 <p class="drama">
-ABRAM.<br>
+<span class="char-name">ABRAM</span><br/>
 You lie.
 </p>
 <p class="drama">
-SAMPSON.<br>
+<span class="char-name">SAMPSON</span><br/>
 Draw, if you be men. Gregory, remember thy washing blow.
 </p>
 <p class="right">[<i>They fight.</i>]</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Part, fools! put up your swords, you know not what you do.
 </p>
 <p class="right">[<i>Beats down their swords.</i>]</p>
 <p class="scenedesc">Enter <span class="charname">Tybalt</span>.</p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 What, art thou drawn among these heartless hinds?<br>
 Turn thee Benvolio, look upon thy death.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 I do but keep the peace, put up thy sword,<br>
 Or manage it to part these men with me.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 What, drawn, and talk of peace? I hate the word<br>
 As I hate hell, all Montagues, and thee:<br>
 Have at thee, coward.
@@ -389,39 +395,39 @@ Have at thee, coward.
 <p class="scenedesc">Enter three or four <span class="charname">Citizens</span>
 with clubs.</p>
 <p class="drama">
-FIRST CITIZEN.<br>
+<span class="char-name">FIRST CITIZEN</span><br/>
 Clubs, bills and partisans! Strike! Beat them down!<br>
 Down with the Capulets! Down with the Montagues!
 </p>
 <p class="scenedesc">Enter <span class="charname">Capulet</span> in his gown,
 and <span class="charname">Lady Capulet</span>.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 What noise is this? Give me my long sword, ho!
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 A crutch, a crutch! Why call you for a sword?
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 My sword, I say! Old Montague is come,<br>
 And flourishes his blade in spite of me.
 </p>
 <p class="scenedesc">Enter <span class="charname">Montague</span> and his
 <span class="charname">Lady Montague</span>.</p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 Thou villain Capulet! Hold me not, let me go.
 </p>
 <p class="drama">
-LADY MONTAGUE.<br>
+<span class="char-name">LADY MONTAGUE</span><br/>
 Thou shalt not stir one foot to seek a foe.
 </p>
 <p class="scenedesc">Enter <span class="charname">Prince Escalus,</span> with
 <span class="charname">Attendants</span>.</p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Rebellious subjects, enemies to peace,<br>
 Profaners of this neighbour-stained steel,—<br>
 Will they not hear? What, ho! You men, you beasts,<br>
@@ -450,12 +456,12 @@ Once more, on pain of death, all men depart.
 <span class="charname">Attendants; Capulet, Lady Capulet, Tybalt,
 Citizens</span> and Servants.</i>]</p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 Who set this ancient quarrel new abroach?<br>
 Speak, nephew, were you by when it began?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Here were the servants of your adversary<br>
 And yours, close fighting ere I did approach.<br>
 I drew to part them, in the instant came<br>
@@ -468,12 +474,12 @@ Came more and more, and fought on part and part,<br>
 Till the Prince came, who parted either part.
 </p>
 <p class="drama">
-LADY MONTAGUE.<br>
+<span class="char-name">LADY MONTAGUE</span><br/>
 O where is Romeo, saw you him today?<br>
 Right glad I am he was not at this fray.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Madam, an hour before the worshipp’d sun<br>
 Peer’d forth the golden window of the east,<br>
 A troubled mind drave me to walk abroad,<br>
@@ -489,7 +495,7 @@ Pursu’d my humour, not pursuing his,<br>
 And gladly shunn’d who gladly fled from me.
 </p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 Many a morning hath he there been seen,<br>
 With tears augmenting the fresh morning’s dew,<br>
 Adding to clouds more clouds with his deep sighs;<br>
@@ -504,19 +510,19 @@ Black and portentous must this humour prove,<br>
 Unless good counsel may the cause remove.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 My noble uncle, do you know the cause?
 </p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 I neither know it nor can learn of him.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Have you importun’d him by any means?
 </p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 Both by myself and many other friends;<br>
 But he, his own affections’ counsellor,<br>
 Is to himself—I will not say how true—<br>
@@ -530,65 +536,65 @@ We would as willingly give cure as know.
 </p>
 <p class="scenedesc">Enter <span class="charname">Romeo</span>.</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 See, where he comes. So please you step aside;<br>
 I’ll know his grievance or be much denied.
 </p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 I would thou wert so happy by thy stay<br>
 To hear true shrift. Come, madam, let’s away,
 </p>
 <p class="right">[<i>Exeunt <span class="charname">Montague</span> and
 <span class="charname">Lady Montague</span>.</i>]</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Good morrow, cousin.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Is the day so young?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 But new struck nine.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Ay me, sad hours seem long.<br>
 Was that my father that went hence so fast?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 It was. What sadness lengthens Romeo’s hours?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Not having that which, having, makes them short.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 In love?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Out.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Of love?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Out of her favour where I am in love.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Alas that love so gentle in his view,<br>
 Should be so tyrannous and rough in proof.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Alas that love, whose view is muffled still,<br>
 Should, without eyes, see pathways to his will!<br>
 Where shall we dine? O me! What fray was here?<br>
@@ -604,19 +610,19 @@ This love feel I, that feel no love in this.<br>
 Dost thou not laugh?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 No coz, I rather weep.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Good heart, at what?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 At thy good heart’s oppression.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Why such is love’s transgression.<br>
 Griefs of mine own lie heavy in my breast,<br>
 Which thou wilt propagate to have it prest<br>
@@ -631,47 +637,47 @@ Farewell, my coz.
 </p>
 <p class="right">[<i>Going.</i>]</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Soft! I will go along:<br>
 And if you leave me so, you do me wrong.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Tut! I have lost myself; I am not here.<br>
 This is not Romeo, he’s some other where.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Tell me in sadness who is that you love?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 What, shall I groan and tell thee?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Groan! Why, no; but sadly tell me who.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Bid a sick man in sadness make his will,<br>
 A word ill urg’d to one that is so ill.<br>
 In sadness, cousin, I do love a woman.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 I aim’d so near when I suppos’d you lov’d.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 A right good markman, and she’s fair I love.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 A right fair mark, fair coz, is soonest hit.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Well, in that hit you miss: she’ll not be hit<br>
 With Cupid’s arrow, she hath Dian’s wit;<br>
 And in strong proof of chastity well arm’d,<br>
@@ -683,11 +689,11 @@ O she’s rich in beauty, only poor<br>
 That when she dies, with beauty dies her store.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Then she hath sworn that she will still live chaste?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 She hath, and in that sparing makes huge waste;<br>
 For beauty starv’d with her severity,<br>
 Cuts beauty off from all posterity.<br>
@@ -697,20 +703,20 @@ She hath forsworn to love, and in that vow<br>
 Do I live dead, that live to tell it now.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Be rul’d by me, forget to think of her.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 O teach me how I should forget to think.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 By giving liberty unto thine eyes;<br>
 Examine other beauties.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 ’Tis the way<br>
 To call hers, exquisite, in question more.<br>
 These happy masks that kiss fair ladies’ brows,<br>
@@ -723,7 +729,7 @@ Where I may read who pass’d that passing fair?<br>
 Farewell, thou canst not teach me to forget.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 I’ll pay that doctrine, or else die in debt.
 </p>
 <p class="right">[<i>Exeunt.</i>]</p>
@@ -731,19 +737,19 @@ I’ll pay that doctrine, or else die in debt.
 <p class="scenedesc">Enter <span class="charname">Capulet, Paris</span> and
 <span class="charname">Servant</span>.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 But Montague is bound as well as I,<br>
 In penalty alike; and ’tis not hard, I think,<br>
 For men so old as we to keep the peace.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Of honourable reckoning are you both,<br>
 And pity ’tis you liv’d at odds so long.<br>
 But now my lord, what say you to my suit?
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 But saying o’er what I have said before.<br>
 My child is yet a stranger in the world,<br>
 She hath not seen the change of fourteen years;<br>
@@ -751,11 +757,11 @@ Let two more summers wither in their pride<br>
 Ere we may think her ripe to be a bride.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Younger than she are happy mothers made.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 And too soon marr’d are those so early made.<br>
 The earth hath swallowed all my hopes but she,<br>
 She is the hopeful lady of my earth:<br>
@@ -785,7 +791,7 @@ My house and welcome on their pleasure stay.
 <p class="right">[<i>Exeunt <span class="charname">Capulet</span> and
 <span class="charname">Paris</span>.</i>]</p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 Find them out whose names are written here!
 It is written that the shoemaker should meddle with
 his yard and the tailor with his last, the fisher with
@@ -797,7 +803,7 @@ hath here writ. I must to the learned. In good time!
 <p class="scenedesc">Enter <span class="charname">Benvolio</span> and
 <span class="charname">Romeo</span>.</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Tut, man, one fire burns out another’s burning,<br>
 One pain is lessen’d by another’s anguish;<br>
 Turn giddy, and be holp by backward turning;<br>
@@ -806,49 +812,49 @@ Take thou some new infection to thy eye,<br>
 And the rank poison of the old will die.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Your plantain leaf is excellent for that.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 For what, I pray thee?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 For your broken shin.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Why, Romeo, art thou mad?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Not mad, but bound more than a madman is:<br>
 Shut up in prison, kept without my food,<br>
 Whipp’d and tormented and—God-den, good fellow.
 </p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 God gi’ go-den. I pray, sir, can you read?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Ay, mine own fortune in my misery.
 </p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 Perhaps you have learned it without book.<br>
 But I pray, can you read anything you see?</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Ay, If I know the letters and the language.
 </p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 Ye say honestly, rest you merry!
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Stay, fellow; I can read.
 </p>
 <p class="right">[<i>He reads the letter.</i>]</p>
@@ -867,38 +873,38 @@ Lucio and the lively Helena.<br></i>
 A fair assembly. [<i>Gives back the paper</i>] Whither should they
 come?</p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 Up.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Whither to supper?
 </p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 To our house.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Whose house?
 </p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 My master’s.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Indeed I should have ask’d you that before.
 </p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 Now I’ll tell you without asking. My master is the great rich Capulet,
 and if you be not of the house of Montagues, I pray come and crush a cup of
 wine. Rest you merry.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 At this same ancient feast of Capulet’s<br>
 Sups the fair Rosaline whom thou so lov’st;<br>
 With all the admired beauties of Verona.<br>
@@ -907,7 +913,7 @@ Compare her face with some that I shall show,<br>
 And I will make thee think thy swan a crow.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 When the devout religion of mine eye<br>
 Maintains such falsehood, then turn tears to fire;<br>
 And these who, often drown’d, could never die,<br>
@@ -916,7 +922,7 @@ One fairer than my love? The all-seeing sun<br>
 Ne’er saw her match since first the world begun.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Tut, you saw her fair, none else being by,<br>
 Herself pois’d with herself in either eye:<br>
 But in that crystal scales let there be weigh’d<br>
@@ -925,7 +931,7 @@ That I will show you shining at this feast,<br>
 And she shall scant show well that now shows best.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I’ll go along, no such sight to be shown,<br>
 But to rejoice in splendour of my own.
 </p>
@@ -934,56 +940,56 @@ But to rejoice in splendour of my own.
 <p class="scenedesc">Enter <span class="charname">Lady Capulet</span> and
 <span class="charname">Nurse</span>.</p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Nurse, where’s my daughter? Call her forth to me.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Now, by my maidenhead, at twelve year old,<br>
 I bade her come. What, lamb! What ladybird!<br>
 God forbid! Where’s this girl? What, Juliet!
 </p>
 <p class="scenedesc">Enter <span class="charname">Juliet</span>.</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 How now, who calls?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Your mother.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Madam, I am here. What is your will?
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 This is the matter. Nurse, give leave awhile,<br>
 We must talk in secret. Nurse, come back again,<br>
 I have remember’d me, thou’s hear our counsel.<br>
 Thou knowest my daughter’s of a pretty age.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Faith, I can tell her age unto an hour.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 She’s not fourteen.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 I’ll lay fourteen of my teeth,<br>
 And yet, to my teen be it spoken, I have but four,<br>
 She is not fourteen. How long is it now<br>
 To Lammas-tide?
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 A fortnight and odd days.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Even or odd, of all days in the year,<br>
 Come Lammas Eve at night shall she be fourteen.<br>
 Susan and she,—God rest all Christian souls!—<br>
@@ -1019,11 +1025,11 @@ I never should forget it. ‘Wilt thou not, Jule?’ quoth he;<br>
 And, pretty fool, it stinted, and said ‘Ay.’
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Enough of this; I pray thee hold thy peace.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Yes, madam, yet I cannot choose but laugh,<br>
 To think it should leave crying, and say ‘Ay’;<br>
 And yet I warrant it had upon it brow<br>
@@ -1034,32 +1040,32 @@ Thou wilt fall backward when thou comest to age;<br>
 Wilt thou not, Jule?’ it stinted, and said ‘Ay’.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 And stint thou too, I pray thee, Nurse, say I.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Peace, I have done. God mark thee to his grace<br>
 Thou wast the prettiest babe that e’er I nurs’d:<br>
 And I might live to see thee married once, I have my wish.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Marry, that marry is the very theme<br>
 I came to talk of. Tell me, daughter Juliet,<br>
 How stands your disposition to be married?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 It is an honour that I dream not of.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 An honour! Were not I thine only nurse,<br>
 I would say thou hadst suck’d wisdom from thy teat.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Well, think of marriage now: younger than you,<br>
 Here in Verona, ladies of esteem,<br>
 Are made already mothers. By my count<br>
@@ -1068,20 +1074,20 @@ That you are now a maid. Thus, then, in brief;<br>
 The valiant Paris seeks you for his love.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 A man, young lady! Lady, such a man<br>
 As all the world—why he’s a man of wax.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Verona’s summer hath not such a flower.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Nay, he’s a flower, in faith a very flower.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 What say you, can you love the gentleman?<br>
 This night you shall behold him at our feast;<br>
 Read o’er the volume of young Paris’ face,<br>
@@ -1100,28 +1106,28 @@ So shall you share all that he doth possess,<br>
 By having him, making yourself no less.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 No less, nay bigger. Women grow by men.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Speak briefly, can you like of Paris’ love?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I’ll look to like, if looking liking move:<br>
 But no more deep will I endart mine eye<br>
 Than your consent gives strength to make it fly.
 </p>
 <p class="scenedesc">Enter a <span class="charname">Servant</span>.</p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 Madam, the guests are come, supper served up, you
 called, my young lady asked for, the Nurse cursed
 in the pantry, and everything in extremity. I must
 hence to wait, I beseech you follow straight.</p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 We follow thee.
 </p>
 <p class="right">[<i>Exit <span class="charname">Servant</span>.</i>]</p>
@@ -1129,7 +1135,7 @@ We follow thee.
 Juliet, the County stays.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Go, girl, seek happy nights to happy days.
 </p>
 <p class="right">[<i>Exeunt.</i>]</p>
@@ -1137,12 +1143,12 @@ Go, girl, seek happy nights to happy days.
 <p class="scenedesc">Enter <span class="charname">Romeo, Mercutio, Benvolio,</span>
 with five or six <span class="charname">Maskers; Torch-bearers</span> and others.</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 What, shall this speech be spoke for our excuse?<br>
 Or shall we on without apology?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 The date is out of such prolixity:<br>
 We’ll have no Cupid hoodwink’d with a scarf,<br>
 Bearing a Tartar’s painted bow of lath,<br>
@@ -1153,44 +1159,44 @@ But let them measure us by what they will,<br>
 We’ll measure them a measure, and be gone.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Give me a torch, I am not for this ambling;<br>
 Being but heavy I will bear the light.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Nay, gentle Romeo, we must have you dance.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Not I, believe me, you have dancing shoes,<br>
 With nimble soles, I have a soul of lead<br>
 So stakes me to the ground I cannot move.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 You are a lover, borrow Cupid’s wings,<br>
 And soar with them above a common bound.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I am too sore enpierced with his shaft<br>
 To soar with his light feathers, and so bound,<br>
 I cannot bound a pitch above dull woe.<br>
 Under love’s heavy burden do I sink.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 And, to sink in it, should you burden love;<br>
 Too great oppression for a tender thing.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Is love a tender thing? It is too rough,<br>
 Too rude, too boisterous; and it pricks like thorn.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 If love be rough with you, be rough with love;<br>
 Prick love for pricking, and you beat love down.<br>
 Give me a case to put my visage in: [<i>Putting on a mask.</i>]<br>
@@ -1199,12 +1205,12 @@ What curious eye doth quote deformities?<br>
 Here are the beetle-brows shall blush for me.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Come, knock and enter; and no sooner in<br>
 But every man betake him to his legs.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 A torch for me: let wantons, light of heart,<br>
 Tickle the senseless rushes with their heels;<br>
 For I am proverb’d with a grandsire phrase,<br>
@@ -1212,54 +1218,54 @@ I’ll be a candle-holder and look on,<br>
 The game was ne’er so fair, and I am done.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Tut, dun’s the mouse, the constable’s own word:<br>
 If thou art dun, we’ll draw thee from the mire<br>
 Or save your reverence love, wherein thou stickest<br>
 Up to the ears. Come, we burn daylight, ho.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Nay, that’s not so.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 I mean sir, in delay<br>
 We waste our lights in vain, light lights by day.<br>
 Take our good meaning, for our judgment sits<br>
 Five times in that ere once in our five wits.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 And we mean well in going to this mask;<br>
 But ’tis no wit to go.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Why, may one ask?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I dreamt a dream tonight.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 And so did I.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Well what was yours?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 That dreamers often lie.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 In bed asleep, while they do dream things true.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 O, then, I see Queen Mab hath been with you.<br>
 She is the fairies’ midwife, and she comes<br>
 In shape no bigger than an agate-stone<br>
@@ -1305,12 +1311,12 @@ Making them women of good carriage:<br>
 This is she,—
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Peace, peace, Mercutio, peace,<br>
 Thou talk’st of nothing.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 True, I talk of dreams,<br>
 Which are the children of an idle brain,<br>
 Begot of nothing but vain fantasy,<br>
@@ -1321,12 +1327,12 @@ And, being anger’d, puffs away from thence,<br>
 Turning his side to the dew-dropping south.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 This wind you talk of blows us from ourselves:<br>
 Supper is done, and we shall come too late.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I fear too early: for my mind misgives<br>
 Some consequence yet hanging in the stars,<br>
 Shall bitterly begin his fearful date<br>
@@ -1337,42 +1343,42 @@ But he that hath the steerage of my course<br>
 Direct my suit. On, lusty gentlemen!
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Strike, drum.
 </p>
 <p class="right">[<i>Exeunt.</i>]</p>
 <h3> <a id="sceneI_30.5"></a><b>SCENE V. A Hall in Capulet’s House.</b></h3>
 <p class="scenedesc">Musicians waiting. Enter <span class="charname">Servants</span>.</p>
 <p class="drama">
-FIRST SERVANT.<br>
+<span class="char-name">FIRST SERVANT</span><br/>
 Where’s Potpan, that he helps not to take away?<br>
 He shift a trencher! He scrape a trencher!</p>
 <p class="drama">
-SECOND SERVANT.<br>
+<span class="char-name">SECOND SERVANT</span><br/>
 When good manners shall lie all in one or two men’s
 hands, and they unwash’d too, ’tis a foul thing.</p>
 <p class="drama">
-FIRST SERVANT.<br>
+<span class="char-name">FIRST SERVANT</span><br/>
 Away with the join-stools, remove the court-cupboard, look
 to the plate. Good thou, save me a piece of marchpane; and as
 thou loves me, let the porter let in Susan Grindstone and Nell.
 Antony and Potpan!</p>
 <p class="drama">
-SECOND SERVANT.<br>
+<span class="char-name">SECOND SERVANT</span><br/>
 Ay, boy, ready.</p>
 <p class="drama">
-FIRST SERVANT.<br>
+<span class="char-name">FIRST SERVANT</span><br/>
 You are looked for and called for, asked for
 and sought for, in the great chamber.</p>
 <p class="drama">
-SECOND SERVANT.<br>
+<span class="char-name">SECOND SERVANT</span><br/>
 We cannot be here and there too. Cheerly, boys.
 Be brisk awhile, and the longer liver take all.</p>
 <p class="right">[<i>Exeunt.</i>]</p>
 <p class="scenedesc">Enter <span class="charname">Capulet,</span> &amp;c. with
 the Guests and Gentlewomen to the Maskers.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Welcome, gentlemen, ladies that have their toes<br>
 Unplagu’d with corns will have a bout with you.<br>
 Ah my mistresses, which of you all<br>
@@ -1399,7 +1405,7 @@ Were in a mask?
 CAPULET’S COUSIN.<br>
 By’r Lady, thirty years.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 What, man, ’tis not so much, ’tis not so much:<br>
 ’Tis since the nuptial of Lucentio,<br>
 Come Pentecost as quickly as it will,<br>
@@ -1411,21 +1417,21 @@ CAPULET’S COUSIN.<br>
 His son is thirty.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Will you tell me that?<br>
 His son was but a ward two years ago.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 What lady is that, which doth enrich the hand<br>
 Of yonder knight?
 </p>
 <p class="drama">
-SERVANT.<br>
+<span class="char-name">SERVANT</span><br/>
 I know not, sir.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 O, she doth teach the torches to burn bright!<br>
 It seems she hangs upon the cheek of night<br>
 As a rich jewel in an Ethiop’s ear;<br>
@@ -1438,7 +1444,7 @@ Did my heart love till now? Forswear it, sight!<br>
 For I ne’er saw true beauty till this night.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 This by his voice, should be a Montague.<br>
 Fetch me my rapier, boy. What, dares the slave<br>
 Come hither, cover’d with an antic face,<br>
@@ -1447,26 +1453,26 @@ Now by the stock and honour of my kin,<br>
 To strike him dead I hold it not a sin.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Why how now, kinsman!<br>
 Wherefore storm you so?
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 Uncle, this is a Montague, our foe;<br>
 A villain that is hither come in spite,<br>
 To scorn at our solemnity this night.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Young Romeo, is it?
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 ’Tis he, that villain Romeo.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Content thee, gentle coz, let him alone,<br>
 A bears him like a portly gentleman;<br>
 And, to say truth, Verona brags of him<br>
@@ -1479,12 +1485,12 @@ Show a fair presence and put off these frowns,<br>
 An ill-beseeming semblance for a feast.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 It fits when such a villain is a guest:<br>
 I’ll not endure him.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 He shall be endur’d.<br>
 What, goodman boy! I say he shall, go to;<br>
 Am I the master here, or you? Go to.<br>
@@ -1493,11 +1499,11 @@ You’ll make a mutiny among my guests!<br>
 You will set cock-a-hoop, you’ll be the man!
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 Why, uncle, ’tis a shame.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Go to, go to!<br>
 You are a saucy boy. Is’t so, indeed?<br>
 This trick may chance to scathe you, I know what.<br>
@@ -1507,7 +1513,7 @@ Be quiet, or—More light, more light!—For shame!<br>
 I’ll make you quiet. What, cheerly, my hearts.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 Patience perforce with wilful choler meeting<br>
 Makes my flesh tremble in their different greeting.<br>
 I will withdraw: but this intrusion shall,<br>
@@ -1515,65 +1521,65 @@ Now seeming sweet, convert to bitter gall.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 [<i>To Juliet.</i>] If I profane with my unworthiest hand<br>
 This holy shrine, the gentle sin is this,<br>
 My lips, two blushing pilgrims, ready stand<br>
 To smooth that rough touch with a tender kiss.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Good pilgrim, you do wrong your hand too much,<br>
 Which mannerly devotion shows in this;<br>
 For saints have hands that pilgrims’ hands do touch,<br>
 And palm to palm is holy palmers’ kiss.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Have not saints lips, and holy palmers too?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Ay, pilgrim, lips that they must use in prayer.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 O, then, dear saint, let lips do what hands do:<br>
 They pray, grant thou, lest faith turn to despair.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Saints do not move, though grant for prayers’ sake.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Then move not while my prayer’s effect I take.<br>
 Thus from my lips, by thine my sin is purg’d.<br>
 [<i>Kissing her.</i>]
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Then have my lips the sin that they have took.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Sin from my lips? O trespass sweetly urg’d!<br>
 Give me my sin again.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 You kiss by the book.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Madam, your mother craves a word with you.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 What is her mother?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Marry, bachelor,<br>
 Her mother is the lady of the house,<br>
 And a good lady, and a wise and virtuous.<br>
@@ -1582,20 +1588,20 @@ I tell you, he that can lay hold of her<br>
 Shall have the chinks.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Is she a Capulet?<br>
 O dear account! My life is my foe’s debt.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Away, be gone; the sport is at the best.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Ay, so I fear; the more is my unrest.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Nay, gentlemen, prepare not to be gone,<br>
 We have a trifling foolish banquet towards.<br>
 Is it e’en so? Why then, I thank you all;<br>
@@ -1607,58 +1613,58 @@ I’ll to my rest.
 <p class="right">[<i>Exeunt all but <span class="charname">Juliet</span> and
 <span class="charname">Nurse</span>.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Come hither, Nurse. What is yond gentleman?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 The son and heir of old Tiberio.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 What’s he that now is going out of door?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Marry, that I think be young Petruchio.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 What’s he that follows here, that would not dance?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 I know not.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Go ask his name. If he be married,<br>
 My grave is like to be my wedding bed.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 His name is Romeo, and a Montague,<br>
 The only son of your great enemy.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 My only love sprung from my only hate!<br>
 Too early seen unknown, and known too late!<br>
 Prodigious birth of love it is to me,<br>
 That I must love a loathed enemy.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 What’s this? What’s this?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 A rhyme I learn’d even now<br>
 Of one I danc’d withal.
 </p>
 <p class="right">[<i>One calls within, ‘Juliet’.</i>]</p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Anon, anon!<br>
 Come let’s away, the strangers all are gone.
 </p>
@@ -1668,7 +1674,7 @@ Come let’s away, the strangers all are gone.
 <h2> <a id="sceneII_30.0"></a><b>ACT II</b></h2>
 <p class="scenedesc">Enter <span class="charname">Chorus</span>.</p>
 <p class="drama">
-CHORUS.<br>
+<span class="char-name">CHORUS</span><br/>
 Now old desire doth in his deathbed lie,<br>
 And young affection gapes to be his heir;<br>
 That fair for which love groan’d for and would die,<br>
@@ -1688,7 +1694,7 @@ Tempering extremities with extreme sweet.
 <h3> <a id="sceneII_30.1"></a><b>SCENE I. An open place adjoining Capulet’s Garden.</b></h3>
 <p class="scenedesc">Enter <span class="charname">Romeo</span>.</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Can I go forward when my heart is here?<br>
 Turn back, dull earth, and find thy centre out.
 </p>
@@ -1696,21 +1702,21 @@ Turn back, dull earth, and find thy centre out.
 <p class="scenedesc">Enter <span class="charname">Benvolio</span> and
 <span class="charname">Mercutio</span>.</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Romeo! My cousin Romeo! Romeo!
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 He is wise,<br>
 And on my life hath stol’n him home to bed.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 He ran this way, and leap’d this orchard wall:<br>
 Call, good Mercutio.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Nay, I’ll conjure too.<br>
 Romeo! Humours! Madman! Passion! Lover!<br>
 Appear thou in the likeness of a sigh,<br>
@@ -1729,11 +1735,11 @@ And the demesnes that there adjacent lie,<br>
 That in thy likeness thou appear to us.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 An if he hear thee, thou wilt anger him.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 This cannot anger him. ’Twould anger him<br>
 To raise a spirit in his mistress’ circle,<br>
 Of some strange nature, letting it there stand<br>
@@ -1743,13 +1749,13 @@ Is fair and honest, and, in his mistress’ name,<br>
 I conjure only but to raise up him.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Come, he hath hid himself among these trees<br>
 To be consorted with the humorous night.<br>
 Blind is his love, and best befits the dark.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 If love be blind, love cannot hit the mark.<br>
 Now will he sit under a medlar tree,<br>
 And wish his mistress were that kind of fruit<br>
@@ -1761,7 +1767,7 @@ This field-bed is too cold for me to sleep.<br>
 Come, shall we go?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Go then; for ’tis in vain<br>
 To seek him here that means not to be found.
 </p>
@@ -1769,7 +1775,7 @@ To seek him here that means not to be found.
 <h3> <a id="sceneII_30.2"></a><b>SCENE II. Capulet’s Garden.</b></h3>
 <p class="scenedesc">Enter <span class="charname">Romeo</span>.</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 He jests at scars that never felt a wound.
 </p>
 <p class="scenedesc"><span class="charname">Juliet</span> appears above at a window.</p>
@@ -1800,11 +1806,11 @@ O that I were a glove upon that hand,<br>
 That I might touch that cheek.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Ay me.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 She speaks.<br>
 O speak again bright angel, for thou art<br>
 As glorious to this night, being o’er my head,<br>
@@ -1815,18 +1821,18 @@ When he bestrides the lazy-puffing clouds<br>
 And sails upon the bosom of the air.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O Romeo, Romeo, wherefore art thou Romeo?<br>
 Deny thy father and refuse thy name.<br>
 Or if thou wilt not, be but sworn my love,<br>
 And I’ll no longer be a Capulet.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 [<i>Aside.</i>] Shall I hear more, or shall I speak at this?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 ’Tis but thy name that is my enemy;<br>
 Thou art thyself, though not a Montague.<br>
 What’s Montague? It is nor hand nor foot,<br>
@@ -1841,18 +1847,18 @@ And for thy name, which is no part of thee,<br>
 Take all myself.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I take thee at thy word.<br>
 Call me but love, and I’ll be new baptis’d;<br>
 Henceforth I never will be Romeo.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 What man art thou that, thus bescreen’d in night<br>
 So stumblest on my counsel?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 By a name<br>
 I know not how to tell thee who I am:<br>
 My name, dear saint, is hateful to myself,<br>
@@ -1860,56 +1866,56 @@ Because it is an enemy to thee.<br>
 Had I it written, I would tear the word.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 My ears have yet not drunk a hundred words<br>
 Of thy tongue’s utterance, yet I know the sound.<br>
 Art thou not Romeo, and a Montague?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Neither, fair maid, if either thee dislike.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 How cam’st thou hither, tell me, and wherefore?<br>
 The orchard walls are high and hard to climb,<br>
 And the place death, considering who thou art,<br>
 If any of my kinsmen find thee here.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 With love’s light wings did I o’erperch these walls,<br>
 For stony limits cannot hold love out,<br>
 And what love can do, that dares love attempt:<br>
 Therefore thy kinsmen are no stop to me.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 If they do see thee, they will murder thee.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Alack, there lies more peril in thine eye<br>
 Than twenty of their swords. Look thou but sweet,<br>
 And I am proof against their enmity.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I would not for the world they saw thee here.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I have night’s cloak to hide me from their eyes,<br>
 And but thou love me, let them find me here.<br>
 My life were better ended by their hate<br>
 Than death prorogued, wanting of thy love.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 By whose direction found’st thou out this place?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 By love, that first did prompt me to enquire;<br>
 He lent me counsel, and I lent him eyes.<br>
 I am no pilot; yet wert thou as far<br>
@@ -1917,7 +1923,7 @@ As that vast shore wash’d with the farthest sea,<br>
 I should adventure for such merchandise.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Thou knowest the mask of night is on my face,<br>
 Else would a maiden blush bepaint my cheek<br>
 For that which thou hast heard me speak tonight.<br>
@@ -1942,33 +1948,33 @@ And not impute this yielding to light love,<br>
 Which the dark night hath so discovered.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Lady, by yonder blessed moon I vow,<br>
 That tips with silver all these fruit-tree tops,—
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O swear not by the moon, th’inconstant moon,<br>
 That monthly changes in her circled orb,<br>
 Lest that thy love prove likewise variable.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 What shall I swear by?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Do not swear at all.<br>
 Or if thou wilt, swear by thy gracious self,<br>
 Which is the god of my idolatry,<br>
 And I’ll believe thee.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 If my heart’s dear love,—
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Well, do not swear. Although I joy in thee,<br>
 I have no joy of this contract tonight;<br>
 It is too rash, too unadvis’d, too sudden,<br>
@@ -1980,28 +1986,28 @@ Good night, good night. As sweet repose and rest<br>
 Come to thy heart as that within my breast.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 O wilt thou leave me so unsatisfied?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 What satisfaction canst thou have tonight?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Th’exchange of thy love’s faithful vow for mine.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I gave thee mine before thou didst request it;<br>
 And yet I would it were to give again.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Would’st thou withdraw it? For what purpose, love?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 But to be frank and give it thee again.<br>
 And yet I wish but for the thing I have;<br>
 My bounty is as boundless as the sea,<br>
@@ -2014,14 +2020,14 @@ Stay but a little, I will come again.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 O blessed, blessed night. I am afeard,<br>
 Being in night, all this is but a dream,<br>
 Too flattering sweet to be substantial.
 </p>
 <p class="scenedesc">Enter <span class="charname">Juliet</span> above.</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Three words, dear Romeo, and good night indeed.<br>
 If that thy bent of love be honourable,<br>
 Thy purpose marriage, send me word tomorrow,<br>
@@ -2031,35 +2037,35 @@ And all my fortunes at thy foot I’ll lay<br>
 And follow thee my lord throughout the world.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 [<i>Within.</i>] Madam.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I come, anon.— But if thou meanest not well,<br>
 I do beseech thee,—
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 [<i>Within.</i>] Madam.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 By and by I come—<br>
 To cease thy strife and leave me to my grief.<br>
 Tomorrow will I send.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 So thrive my soul,—
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 A thousand times good night.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 A thousand times the worse, to want thy light.<br>
 Love goes toward love as schoolboys from their books,<br>
 But love from love, towards school with heavy looks.
@@ -2067,7 +2073,7 @@ But love from love, towards school with heavy looks.
 <p class="right">[<i>Retiring slowly.</i>]</p>
 <p class="scenedesc">Re-enter <span class="charname">Juliet,</span> above.</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Hist! Romeo, hist! O for a falconer’s voice<br>
 To lure this tassel-gentle back again.<br>
 Bondage is hoarse and may not speak aloud,<br>
@@ -2076,49 +2082,49 @@ And make her airy tongue more hoarse than mine<br>
 With repetition of my Romeo’s name.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 It is my soul that calls upon my name.<br>
 How silver-sweet sound lovers’ tongues by night,<br>
 Like softest music to attending ears.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Romeo.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 My dear?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 What o’clock tomorrow<br>
 Shall I send to thee?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 By the hour of nine.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I will not fail. ’Tis twenty years till then.<br>
 I have forgot why I did call thee back.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Let me stand here till thou remember it.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I shall forget, to have thee still stand there,<br>
 Remembering how I love thy company.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 And I’ll still stay, to have thee still forget,<br>
 Forgetting any other home but this.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 ’Tis almost morning; I would have thee gone,<br>
 And yet no farther than a wanton’s bird,<br>
 That lets it hop a little from her hand,<br>
@@ -2127,11 +2133,11 @@ And with a silk thread plucks it back again,<br>
 So loving-jealous of his liberty.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I would I were thy bird.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Sweet, so would I:<br>
 Yet I should kill thee with much cherishing.<br>
 Good night, good night. Parting is such sweet sorrow<br>
@@ -2139,7 +2145,7 @@ That I shall say good night till it be morrow.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Sleep dwell upon thine eyes, peace in thy breast.<br>
 Would I were sleep and peace, so sweet to rest.<br>
 Hence will I to my ghostly Sire’s cell,<br>
@@ -2150,7 +2156,7 @@ His help to crave and my dear hap to tell.
 <p class="scenedesc">Enter <span class="charname">Friar Lawrence</span>
 with a basket.</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 The grey-ey’d morn smiles on the frowning night,<br>
 Chequering the eastern clouds with streaks of light;<br>
 And fleckled darkness like a drunkard reels<br>
@@ -2186,11 +2192,11 @@ And where the worser is predominant,<br>
 Full soon the canker death eats up that plant.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Good morrow, father.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Benedicite!<br>
 What early tongue so sweet saluteth me?<br>
 Young son, it argues a distemper’d head<br>
@@ -2205,24 +2211,24 @@ Or if not so, then here I hit it right,<br>
 Our Romeo hath not been in bed tonight.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 That last is true; the sweeter rest was mine.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 God pardon sin. Wast thou with Rosaline?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 With Rosaline, my ghostly father? No.<br>
 I have forgot that name, and that name’s woe.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 That’s my good son. But where hast thou been then?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I’ll tell thee ere thou ask it me again.<br>
 I have been feasting with mine enemy,<br>
 Where on a sudden one hath wounded me<br>
@@ -2232,12 +2238,12 @@ I bear no hatred, blessed man; for lo,<br>
 My intercession likewise steads my foe.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Be plain, good son, and homely in thy drift;<br>
 Riddling confession finds but riddling shrift.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Then plainly know my heart’s dear love is set<br>
 On the fair daughter of rich Capulet.<br>
 As mine on hers, so hers is set on mine;<br>
@@ -2248,7 +2254,7 @@ I’ll tell thee as we pass; but this I pray,<br>
 That thou consent to marry us today.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Holy Saint Francis! What a change is here!<br>
 Is Rosaline, that thou didst love so dear,<br>
 So soon forsaken? Young men’s love then lies<br>
@@ -2267,30 +2273,30 @@ And art thou chang’d? Pronounce this sentence then,<br>
 Women may fall, when there’s no strength in men.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Thou chidd’st me oft for loving Rosaline.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 For doting, not for loving, pupil mine.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 And bad’st me bury love.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Not in a grave<br>
 To lay one in, another out to have.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I pray thee chide me not, her I love now<br>
 Doth grace for grace and love for love allow.<br>
 The other did not so.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 O, she knew well<br>
 Thy love did read by rote, that could not spell.<br>
 But come young waverer, come go with me,<br>
@@ -2299,11 +2305,11 @@ For this alliance may so happy prove,<br>
 To turn your households’ rancour to pure love.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 O let us hence; I stand on sudden haste.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Wisely and slow; they stumble that run fast.
 </p>
 <p class="right">[<i>Exeunt.</i>]</p>
@@ -2311,52 +2317,52 @@ Wisely and slow; they stumble that run fast.
 <p class="scenedesc">Enter <span class="charname">Benvolio</span> and
 <span class="charname">Mercutio</span>.</p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Where the devil should this Romeo be? Came he not home tonight?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Not to his father’s; I spoke with his man.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Why, that same pale hard-hearted wench, that Rosaline, torments him so that he
 will sure run mad.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Tybalt, the kinsman to old Capulet, hath sent a letter to his father’s
 house.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 A challenge, on my life.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Romeo will answer it.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Any man that can write may answer a letter.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Nay, he will answer the letter’s master, how he
 dares, being dared.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Alas poor Romeo, he is already dead, stabbed with a white wench’s black
 eye; run through the ear with a love song, the very pin of his heart cleft with
 the blind bow-boy’s butt-shaft. And is he a man to encounter Tybalt?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Why, what is Tybalt?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 More than Prince of cats. O, he’s the courageous captain of compliments.
 He fights as you sing prick-song, keeps time, distance, and proportion. He
 rests his minim rest, one, two, and the third in your bosom: the very butcher
@@ -2365,11 +2371,11 @@ of the first and second cause. Ah, the immortal passado, the punto reverso, the
 hay.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 The what?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 The pox of such antic lisping, affecting phantasies; these new tuners of
 accent. By Jesu, a very good blade, a very tall man, a very good whore. Why, is
 not this a lamentable thing, grandsire, that we should be thus afflicted with
@@ -2379,11 +2385,11 @@ bones, their bones!
 </p>
 <p class="scenedesc">Enter <span class="charname">Romeo</span>.</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Here comes Romeo, here comes Romeo!
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Without his roe, like a dried herring. O flesh, flesh, how art thou fishified!
 Now is he for the numbers that Petrarch flowed in. Laura, to his lady, was but
 a kitchen wench,—marry, she had a better love to berhyme her: Dido a
@@ -2393,217 +2399,217 @@ French salutation to your French slop. You gave us the counterfeit fairly last
 night.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Good morrow to you both. What counterfeit did I give you?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 The slip sir, the slip; can you not conceive?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Pardon, good Mercutio, my business was great, and in such a case as mine a man
 may strain courtesy.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 That’s as much as to say, such a case as yours constrains a man to bow in
 the hams.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Meaning, to curtsy.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Thou hast most kindly hit it.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 A most courteous exposition.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Nay, I am the very pink of courtesy.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Pink for flower.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Right.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Why, then is my pump well flowered.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Sure wit, follow me this jest now, till thou hast worn out thy pump, that when
 the single sole of it is worn, the jest may remain after the wearing, solely
 singular.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 O single-soled jest, solely singular for the singleness!
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Come between us, good Benvolio; my wits faint.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Swits and spurs, swits and spurs; or I’ll cry a match.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Nay, if thy wits run the wild-goose chase, I am done. For thou hast more of the
 wild-goose in one of thy wits, than I am sure, I have in my whole five. Was I
 with you there for the goose?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Thou wast never with me for anything, when thou wast not there for the goose.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 I will bite thee by the ear for that jest.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Nay, good goose, bite not.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Thy wit is a very bitter sweeting, it is a most sharp sauce.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 And is it not then well served in to a sweet goose?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 O here’s a wit of cheveril, that stretches from an inch narrow to an ell
 broad.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I stretch it out for that word broad, which added to the goose, proves thee far
 and wide a broad goose.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Why, is not this better now than groaning for love? Now art thou sociable, now
 art thou Romeo; now art thou what thou art, by art as well as by nature. For
 this drivelling love is like a great natural, that runs lolling up and down to
 hide his bauble in a hole.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Stop there, stop there.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Thou desirest me to stop in my tale against the hair.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Thou wouldst else have made thy tale large.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 O, thou art deceived; I would have made it short, for I was come to the whole
 depth of my tale, and meant indeed to occupy the argument no longer.
 </p>
 <p class="scenedesc">Enter <span class="charname">Nurse</span> and
 <span class="charname">Peter</span>.</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Here’s goodly gear!<br>
 A sail, a sail!
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Two, two; a shirt and a smock.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Peter!
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 Anon.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 My fan, Peter.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Good Peter, to hide her face; for her fan’s the fairer face.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 God ye good morrow, gentlemen.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 God ye good-den, fair gentlewoman.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Is it good-den?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 ’Tis no less, I tell ye; for the bawdy hand of the dial is now upon the
 prick of noon.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Out upon you! What a man are you?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 One, gentlewoman, that God hath made for himself to mar.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 By my troth, it is well said; for himself to mar, quoth a? Gentlemen, can any
 of you tell me where I may find the young Romeo?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I can tell you: but young Romeo will be older when you have found him than he
 was when you sought him. I am the youngest of that name, for fault of a worse.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 You say well.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Yea, is the worst well? Very well took, i’faith; wisely, wisely.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 If you be he, sir, I desire some confidence with you.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 She will endite him to some supper.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 A bawd, a bawd, a bawd! So ho!
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 What hast thou found?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 No hare, sir; unless a hare, sir, in a lenten pie, that is something stale
 and hoar ere it be spent.<br>
 [<i>Sings.</i>]<br>
@@ -2616,26 +2622,26 @@ and hoar ere it be spent.<br>
 Romeo, will you come to your father’s? We’ll to dinner thither.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I will follow you.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Farewell, ancient lady; farewell, lady, lady, lady.
 </p>
 <p class="right">[<i>Exeunt <span class="charname">Mercutio</span> and
 <span class="charname">Benvolio</span>.</i>]</p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 I pray you, sir, what saucy merchant was this that was so full of his ropery?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 A gentleman, Nurse, that loves to hear himself talk, and will speak more in a
 minute than he will stand to in a month.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 And a speak anything against me, I’ll take him down, and a were lustier
 than he is, and twenty such Jacks. And if I cannot, I’ll find those that
 shall. Scurvy knave! I am none of his flirt-gills; I am none of his
@@ -2643,13 +2649,13 @@ skains-mates.—And thou must stand by too and suffer every knave to use me
 at his pleasure!
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 I saw no man use you at his pleasure; if I had, my weapon should quickly have
 been out. I warrant you, I dare draw as soon as another man, if I see occasion
 in a good quarrel, and the law on my side.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Now, afore God, I am so vexed that every part about me quivers. Scurvy knave.
 Pray you, sir, a word: and as I told you, my young lady bid me enquire you out;
 what she bade me say, I will keep to myself. But first let me tell ye, if ye
@@ -2659,44 +2665,44 @@ you should deal double with her, truly it were an ill thing to be offered to
 any gentlewoman, and very weak dealing.
 </p>
 <p class="drama">
-ROMEO.<br>Nurse, commend me to thy lady and mistress. I protest unto
+<span class="char-name">ROMEO</span><br/>Nurse, commend me to thy lady and mistress. I protest unto
 thee,—
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Good heart, and i’faith I will tell her as much. Lord, Lord, she will be
 a joyful woman.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 What wilt thou tell her, Nurse? Thou dost not mark me.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 I will tell her, sir, that you do protest, which, as I take it, is a
 gentlemanlike offer.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Bid her devise<br>
 Some means to come to shrift this afternoon,<br>
 And there she shall at Friar Lawrence’ cell<br>
 Be shriv’d and married. Here is for thy pains.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 No truly, sir; not a penny.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Go to; I say you shall.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 This afternoon, sir? Well, she shall be there.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 And stay, good Nurse, behind the abbey wall.<br>
 Within this hour my man shall be with thee,<br>
 And bring thee cords made like a tackled stair,<br>
@@ -2706,24 +2712,24 @@ Farewell, be trusty, and I’ll quit thy pains;<br>
 Farewell; commend me to thy mistress.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Now God in heaven bless thee. Hark you, sir.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 What say’st thou, my dear Nurse?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Is your man secret? Did you ne’er hear say,<br>
 Two may keep counsel, putting one away?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I warrant thee my man’s as true as steel.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Well, sir, my mistress is the sweetest lady. Lord, Lord! When ’twas a
 little prating thing,—O, there is a nobleman in town, one Paris, that
 would fain lay knife aboard; but she, good soul, had as lief see a toad, a very
@@ -2733,37 +2739,37 @@ any clout in the versal world. Doth not rosemary and Romeo begin both with a
 letter?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Ay, Nurse; what of that? Both with an R.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Ah, mocker! That’s the dog’s name. R is for the—no, I know it
 begins with some other letter, and she hath the prettiest sententious of it, of
 you and rosemary, that it would do you good to hear it.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Commend me to thy lady.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Ay, a thousand times. Peter!
 </p>
 <p class="right">[<i>Exit <span class="charname">Romeo</span>.</i>]</p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 Anon.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Before and apace.
 </p>
 <p class="right">[<i>Exeunt.</i>]</p>
 <h3> <a id="sceneII_30.5"></a><b>SCENE V. Capulet’s Garden.</b></h3>
 <p class="scenedesc">Enter <span class="charname">Juliet</span>.</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 The clock struck nine when I did send the Nurse,<br>
 In half an hour she promised to return.<br>
 Perchance she cannot meet him. That’s not so.<br>
@@ -2789,34 +2795,34 @@ O God, she comes. O honey Nurse, what news?<br>
 Hast thou met with him? Send thy man away.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Peter, stay at the gate.
 </p>
 <p class="right">[<i>Exit <span class="charname">Peter</span>.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Now, good sweet Nurse,—O Lord, why look’st thou sad?<br>
 Though news be sad, yet tell them merrily;<br>
 If good, thou sham’st the music of sweet news<br>
 By playing it to me with so sour a face.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 I am aweary, give me leave awhile;<br>
 Fie, how my bones ache! What a jaunt have I had!
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I would thou hadst my bones, and I thy news:<br>
 Nay come, I pray thee speak; good, good Nurse, speak.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Jesu, what haste? Can you not stay a while?
 Do you not see that I am out of breath?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 How art thou out of breath, when thou hast breath<br>
 To say to me that thou art out of breath?<br>
 The excuse that thou dost make in this delay<br>
@@ -2826,7 +2832,7 @@ Say either, and I’ll stay the circumstance.<br>
 Let me be satisfied, is’t good or bad?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Well, you have made a simple choice; you know not how to choose a man. Romeo?
 No, not he. Though his face be better than any man’s, yet his leg excels
 all men’s, and for a hand and a foot, and a body, though they be not to
@@ -2835,12 +2841,12 @@ I’ll warrant him as gentle as a lamb. Go thy ways, wench, serve God.
 What, have you dined at home?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 No, no. But all this did I know before.<br>
 What says he of our marriage? What of that?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Lord, how my head aches! What a head have I!<br>
 It beats as it would fall in twenty pieces.<br>
 My back o’ t’other side,—O my back, my back!<br>
@@ -2848,44 +2854,44 @@ Beshrew your heart for sending me about<br>
 To catch my death with jauncing up and down.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I’faith, I am sorry that thou art not well.<br>
 Sweet, sweet, sweet Nurse, tell me, what says my love?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Your love says like an honest gentleman,<br>
 And a courteous, and a kind, and a handsome,<br>
 And I warrant a virtuous,—Where is your mother?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Where is my mother? Why, she is within.<br>
 Where should she be? How oddly thou repliest.<br>
 ‘Your love says, like an honest gentleman,<br>
 ‘Where is your mother?’
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 O God’s lady dear,<br>
 Are you so hot? Marry, come up, I trow.<br>
 Is this the poultice for my aching bones?<br>
 Henceforward do your messages yourself.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Here’s such a coil. Come, what says Romeo?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Have you got leave to go to shrift today?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I have.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Then hie you hence to Friar Lawrence’ cell;<br>
 There stays a husband to make you a wife.<br>
 Now comes the wanton blood up in your cheeks,<br>
@@ -2898,7 +2904,7 @@ But you shall bear the burden soon at night.<br>
 Go. I’ll to dinner; hie you to the cell.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Hie to high fortune! Honest Nurse, farewell.
 </p>
 <p class="right">[<i>Exeunt.</i>]</p>
@@ -2906,12 +2912,12 @@ Hie to high fortune! Honest Nurse, farewell.
 <p class="scenedesc">Enter <span class="charname">Friar Lawrence</span> and
 <span class="charname">Romeo</span>.</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 So smile the heavens upon this holy act<br>
 That after-hours with sorrow chide us not.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Amen, amen, but come what sorrow can,<br>
 It cannot countervail the exchange of joy<br>
 That one short minute gives me in her sight.<br>
@@ -2920,7 +2926,7 @@ Then love-devouring death do what he dare,<br>
 It is enough I may but call her mine.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 These violent delights have violent ends,<br>
 And in their triumph die; like fire and powder,<br>
 Which as they kiss consume. The sweetest honey<br>
@@ -2938,19 +2944,19 @@ That idles in the wanton summer air<br>
 And yet not fall; so light is vanity.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Good even to my ghostly confessor.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Romeo shall thank thee, daughter, for us both.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 As much to him, else is his thanks too much.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Ah, Juliet, if the measure of thy joy<br>
 Be heap’d like mine, and that thy skill be more<br>
 To blazon it, then sweeten with thy breath<br>
@@ -2959,7 +2965,7 @@ Unfold the imagin’d happiness that both<br>
 Receive in either by this dear encounter.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Conceit more rich in matter than in words,<br>
 Brags of his substance, not of ornament.<br>
 They are but beggars that can count their worth;<br>
@@ -2967,7 +2973,7 @@ But my true love is grown to such excess,<br>
 I cannot sum up sum of half my wealth.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Come, come with me, and we will make short work,<br>
 For, by your leaves, you shall not stay alone<br>
 Till holy church incorporate two in one.
@@ -2980,34 +2986,34 @@ Till holy church incorporate two in one.
 <p class="scenedesc">Enter <span class="charname">Mercutio, Benvolio, Page</span> and
 <span class="charname">Servants</span>.</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 I pray thee, good Mercutio, let’s retire:<br>
 The day is hot, the Capulets abroad,<br>
 And if we meet, we shall not scape a brawl,<br>
 For now these hot days, is the mad blood stirring.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Thou art like one of these fellows that, when he enters the confines of a
 tavern, claps me his sword upon the table, and says ‘God send me no need
 of thee!’ and by the operation of the second cup draws him on the drawer,
 when indeed there is no need.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Am I like such a fellow?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Come, come, thou art as hot a Jack in thy mood as any in Italy; and as soon
 moved to be moody, and as soon moody to be moved.
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 And what to?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Nay, an there were two such, we should have none shortly, for one would kill
 the other. Thou? Why, thou wilt quarrel with a man that hath a hair more or a
 hair less in his beard than thou hast. Thou wilt quarrel with a man for
@@ -3021,93 +3027,93 @@ another for tying his new shoes with an old riband? And yet thou wilt tutor me
 from quarrelling!
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 And I were so apt to quarrel as thou art, any man should buy the fee simple of
 my life for an hour and a quarter.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 The fee simple! O simple!
 </p>
 <p class="scenedesc">Enter <span class="charname">Tybalt</span> and others.</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 By my head, here comes the Capulets.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 By my heel, I care not.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 Follow me close, for I will speak to them.<br>
 Gentlemen, good-den: a word with one of you.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 And but one word with one of us? Couple it with something; make it a word and
 a blow.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 You shall find me apt enough to that, sir, and you will give me occasion.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Could you not take some occasion without giving?
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 Mercutio, thou consortest with Romeo.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Consort? What, dost thou make us minstrels? And thou make minstrels of us, look
 to hear nothing but discords. Here’s my fiddlestick, here’s that
 shall make you dance. Zounds, consort!
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 We talk here in the public haunt of men.<br>
 Either withdraw unto some private place,<br>
 And reason coldly of your grievances,<br>
 Or else depart; here all eyes gaze on us.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Men’s eyes were made to look, and let them gaze.<br>
 I will not budge for no man’s pleasure, I.
 </p>
 <p class="scenedesc">Enter <span class="charname">Romeo</span>.</p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 Well, peace be with you, sir, here comes my man.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 But I’ll be hanged, sir, if he wear your livery.<br>
 Marry, go before to field, he’ll be your follower;<br>
 Your worship in that sense may call him man.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 Romeo, the love I bear thee can afford<br>
 No better term than this: Thou art a villain.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Tybalt, the reason that I have to love thee<br>
 Doth much excuse the appertaining rage<br>
 To such a greeting. Villain am I none;<br>
 Therefore farewell; I see thou know’st me not.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 Boy, this shall not excuse the injuries<br>
 That thou hast done me, therefore turn and draw.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I do protest I never injur’d thee,<br>
 But love thee better than thou canst devise<br>
 Till thou shalt know the reason of my love.<br>
@@ -3115,37 +3121,37 @@ And so good Capulet, which name I tender<br>
 As dearly as mine own, be satisfied.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 O calm, dishonourable, vile submission!<br>
 [<i>Draws.</i>] Alla stoccata carries it away.<br>
 Tybalt, you rat-catcher, will you walk?
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 What wouldst thou have with me?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Good King of Cats, nothing but one of your nine lives; that I mean to make bold
 withal, and, as you shall use me hereafter, dry-beat the rest of the eight.
 Will you pluck your sword out of his pilcher by the ears? Make haste, lest mine
 be about your ears ere it be out.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 [<i>Drawing.</i>] I am for you.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Gentle Mercutio, put thy rapier up.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Come, sir, your passado.
 </p>
 <p class="right">[<i>They fight.</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Draw, Benvolio; beat down their weapons.<br>
 Gentlemen, for shame, forbear this outrage,<br>
 Tybalt, Mercutio, the Prince expressly hath<br>
@@ -3155,27 +3161,27 @@ Hold, Tybalt! Good Mercutio!
 <p class="right">[<i>Exeunt <span class="charname">Tybalt</span> with his
 Partizans.</i>]</p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 I am hurt.<br>
 A plague o’ both your houses. I am sped.<br>
 Is he gone, and hath nothing?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 What, art thou hurt?
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Ay, ay, a scratch, a scratch. Marry, ’tis enough.<br>
 Where is my page? Go villain, fetch a surgeon.
 </p>
 <p class="right">[<i>Exit <span class="charname">Page</span>.</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Courage, man; the hurt cannot be much.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 No, ’tis not so deep as a well, nor so wide as a church door, but
 ’tis enough, ’twill serve. Ask for me tomorrow, and you shall find
 me a grave man. I am peppered, I warrant, for this world. A plague o’
@@ -3184,11 +3190,11 @@ death. A braggart, a rogue, a villain, that fights by the book of
 arithmetic!—Why the devil came you between us? I was hurt under your arm.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I thought all for the best.
 </p>
 <p class="drama">
-MERCUTIO.<br>
+<span class="char-name">MERCUTIO</span><br/>
 Help me into some house, Benvolio,<br>
 Or I shall faint. A plague o’ both your houses.<br>
 They have made worms’ meat of me.<br>
@@ -3197,7 +3203,7 @@ I have it, and soundly too. Your houses!
 <p class="right">[<i>Exeunt <span class="charname">Mercutio</span> and
 <span class="charname">Benvolio</span>.</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 This gentleman, the Prince’s near ally,<br>
 My very friend, hath got his mortal hurt<br>
 In my behalf; my reputation stain’d<br>
@@ -3208,23 +3214,23 @@ And in my temper soften’d valour’s steel.
 </p>
 <p class="scenedesc">Re-enter <span class="charname">Benvolio</span>.</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 O Romeo, Romeo, brave Mercutio’s dead,<br>
 That gallant spirit hath aspir’d the clouds,<br>
 Which too untimely here did scorn the earth.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 This day’s black fate on mo days doth depend;<br>
 This but begins the woe others must end.
 </p>
 <p class="scenedesc">Re-enter <span class="charname">Tybalt</span>.</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Here comes the furious Tybalt back again.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Again in triumph, and Mercutio slain?<br>
 Away to heaven respective lenity,<br>
 And fire-ey’d fury be my conduct now!<br>
@@ -3235,43 +3241,43 @@ Staying for thine to keep him company.<br>
 Either thou or I, or both, must go with him.
 </p>
 <p class="drama">
-TYBALT.<br>
+<span class="char-name">TYBALT</span><br/>
 Thou wretched boy, that didst consort him here,<br>
 Shalt with him hence.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 This shall determine that.
 </p>
 <p class="right">[<i>They fight; <span class="charname">Tybalt</span> falls.</i>]</p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Romeo, away, be gone!<br>
 The citizens are up, and Tybalt slain.<br>
 Stand not amaz’d. The Prince will doom thee death<br>
 If thou art taken. Hence, be gone, away!
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 O, I am fortune’s fool!
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Why dost thou stay?
 </p>
 <p class="right">[<i>Exit <span class="charname">Romeo</span>.</i>]</p>
 <p class="scenedesc">Enter <span class="charname">Citizens</span>.</p>
 <p class="drama">
-FIRST CITIZEN.<br>
+<span class="char-name">FIRST CITIZEN</span><br/>
 Which way ran he that kill’d Mercutio?<br>
 Tybalt, that murderer, which way ran he?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 There lies that Tybalt.
 </p>
 <p class="drama">
-FIRST CITIZEN.<br>
+<span class="char-name">FIRST CITIZEN</span><br/>
 Up, sir, go with me.<br>
 I charge thee in the Prince’s name obey.
 </p>
@@ -3279,18 +3285,18 @@ I charge thee in the Prince’s name obey.
 <span class="charname">Montague, Capulet,</span> their
 <span class="charname">Wives</span> and others.</p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Where are the vile beginners of this fray?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 O noble Prince, I can discover all<br>
 The unlucky manage of this fatal brawl.<br>
 There lies the man, slain by young Romeo,<br>
 That slew thy kinsman, brave Mercutio.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Tybalt, my cousin! O my brother’s child!<br>
 O Prince! O husband! O, the blood is spill’d<br>
 Of my dear kinsman! Prince, as thou art true,<br>
@@ -3298,11 +3304,11 @@ For blood of ours shed blood of Montague.<br>
 O cousin, cousin.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Benvolio, who began this bloody fray?
 </p>
 <p class="drama">
-BENVOLIO.<br>
+<span class="char-name">BENVOLIO</span><br/>
 Tybalt, here slain, whom Romeo’s hand did slay;<br>
 Romeo, that spoke him fair, bid him bethink<br>
 How nice the quarrel was, and urg’d withal<br>
@@ -3329,7 +3335,7 @@ And as he fell did Romeo turn and fly.<br>
 This is the truth, or let Benvolio die.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 He is a kinsman to the Montague.<br>
 Affection makes him false, he speaks not true.<br>
 Some twenty of them fought in this black strife,<br>
@@ -3338,18 +3344,18 @@ I beg for justice, which thou, Prince, must give;<br>
 Romeo slew Tybalt, Romeo must not live.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Romeo slew him, he slew Mercutio.<br>
 Who now the price of his dear blood doth owe?
 </p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 Not Romeo, Prince, he was Mercutio’s friend;<br>
 His fault concludes but what the law should end,<br>
 The life of Tybalt.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 And for that offence<br>
 Immediately we do exile him hence.<br>
 I have an interest in your hate’s proceeding,<br>
@@ -3367,7 +3373,7 @@ Mercy but murders, pardoning those that kill.
 <h3> <a id="sceneIII_30.2"></a><b>SCENE II. A Room in Capulet’s House.</b></h3>
 <p class="scenedesc">Enter <span class="charname">Juliet</span>.</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Gallop apace, you fiery-footed steeds,<br>
 Towards Phoebus’ lodging. Such a waggoner<br>
 As Phaeton would whip you to the west<br>
@@ -3408,32 +3414,32 @@ Now, Nurse, what news? What hast thou there?<br>
 The cords that Romeo bid thee fetch?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Ay, ay, the cords.
 </p>
 <p class="right">[<i>Throws them down.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Ay me, what news? Why dost thou wring thy hands?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Ah, well-a-day, he’s dead, he’s dead, he’s dead!<br>
 We are undone, lady, we are undone.<br>
 Alack the day, he’s gone, he’s kill’d, he’s dead.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Can heaven be so envious?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Romeo can,<br>
 Though heaven cannot. O Romeo, Romeo.<br>
 Who ever would have thought it? Romeo!
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 What devil art thou, that dost torment me thus?<br>
 This torture should be roar’d in dismal hell.<br>
 Hath Romeo slain himself? Say thou but Ay,<br>
@@ -3445,7 +3451,7 @@ If he be slain, say Ay; or if not, No.<br>
 Brief sounds determine of my weal or woe.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 I saw the wound, I saw it with mine eyes,<br>
 God save the mark!—here on his manly breast.<br>
 A piteous corse, a bloody piteous corse;<br>
@@ -3453,20 +3459,20 @@ Pale, pale as ashes, all bedaub’d in blood,<br>
 All in gore-blood. I swounded at the sight.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O, break, my heart. Poor bankrout, break at once.<br>
 To prison, eyes; ne’er look on liberty.<br>
 Vile earth to earth resign; end motion here,<br>
 And thou and Romeo press one heavy bier.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 O Tybalt, Tybalt, the best friend I had.<br>
 O courteous Tybalt, honest gentleman!<br>
 That ever I should live to see thee dead.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 What storm is this that blows so contrary?<br>
 Is Romeo slaughter’d and is Tybalt dead?<br>
 My dearest cousin, and my dearer lord?<br>
@@ -3474,20 +3480,20 @@ Then dreadful trumpet sound the general doom,<br>
 For who is living, if those two are gone?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Tybalt is gone, and Romeo banished,<br>
 Romeo that kill’d him, he is banished.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O God! Did Romeo’s hand shed Tybalt’s blood?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 It did, it did; alas the day, it did.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O serpent heart, hid with a flowering face!<br>
 Did ever dragon keep so fair a cave?<br>
 Beautiful tyrant, fiend angelical,<br>
@@ -3503,7 +3509,7 @@ So fairly bound? O, that deceit should dwell<br>
 In such a gorgeous palace.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 There’s no trust,<br>
 No faith, no honesty in men. All perjur’d,<br>
 All forsworn, all naught, all dissemblers.<br>
@@ -3512,7 +3518,7 @@ These griefs, these woes, these sorrows make me old.<br>
 Shame come to Romeo.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Blister’d be thy tongue<br>
 For such a wish! He was not born to shame.<br>
 Upon his brow shame is asham’d to sit;<br>
@@ -3521,11 +3527,11 @@ Sole monarch of the universal earth.<br>
 O, what a beast was I to chide at him!
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Will you speak well of him that kill’d your cousin?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Shall I speak ill of him that is my husband?<br>
 Ah, poor my lord, what tongue shall smooth thy name,<br>
 When I thy three-hours’ wife have mangled it?<br>
@@ -3559,12 +3565,12 @@ In that word’s death, no words can that woe sound.<br>
 Where is my father and my mother, Nurse?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Weeping and wailing over Tybalt’s corse.<br>
 Will you go to them? I will bring you thither.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Wash they his wounds with tears. Mine shall be spent,<br>
 When theirs are dry, for Romeo’s banishment.<br>
 Take up those cords. Poor ropes, you are beguil’d,<br>
@@ -3575,14 +3581,14 @@ Come cords, come Nurse, I’ll to my wedding bed,<br>
 And death, not Romeo, take my maidenhead.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Hie to your chamber. I’ll find Romeo<br>
 To comfort you. I wot well where he is.<br>
 Hark ye, your Romeo will be here at night.<br>
 I’ll to him, he is hid at Lawrence’ cell.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O find him, give this ring to my true knight,<br>
 And bid him come to take his last farewell.
 </p>
@@ -3590,46 +3596,46 @@ And bid him come to take his last farewell.
 <h3> <a id="sceneIII_30.3"></a><b>SCENE III. Friar Lawrence’s cell.</b></h3>
 <p class="scenedesc">Enter <span class="charname">Friar Lawrence</span>.</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Romeo, come forth; come forth, thou fearful man.<br>
 Affliction is enanmour’d of thy parts<br>
 And thou art wedded to calamity.
 </p>
 <p class="scenedesc">Enter <span class="charname">Romeo</span>.</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Father, what news? What is the Prince’s doom?<br>
 What sorrow craves acquaintance at my hand,<br>
 That I yet know not?
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Too familiar<br>
 Is my dear son with such sour company.<br>
 I bring thee tidings of the Prince’s doom.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 What less than doomsday is the Prince’s doom?
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 A gentler judgment vanish’d from his lips,<br>
 Not body’s death, but body’s banishment.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Ha, banishment? Be merciful, say death;<br>
 For exile hath more terror in his look,<br>
 Much more than death. Do not say banishment.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Hence from Verona art thou banished.<br>
 Be patient, for the world is broad and wide.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 There is no world without Verona walls,<br>
 But purgatory, torture, hell itself.<br>
 Hence banished is banish’d from the world,<br>
@@ -3639,7 +3645,7 @@ Thou cutt’st my head off with a golden axe,<br>
 And smilest upon the stroke that murders me.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 O deadly sin, O rude unthankfulness!<br>
 Thy fault our law calls death, but the kind Prince,<br>
 Taking thy part, hath brush’d aside the law,<br>
@@ -3647,7 +3653,7 @@ And turn’d that black word death to banishment.<br>
 This is dear mercy, and thou see’st it not.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 ’Tis torture, and not mercy. Heaven is here<br>
 Where Juliet lives, and every cat and dog,<br>
 And little mouse, every unworthy thing,<br>
@@ -3673,40 +3679,40 @@ A sin-absolver, and my friend profess’d,<br>
 To mangle me with that word banished?
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Thou fond mad man, hear me speak a little,
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 O, thou wilt speak again of banishment.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 I’ll give thee armour to keep off that word,<br>
 Adversity’s sweet milk, philosophy,<br>
 To comfort thee, though thou art banished.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Yet banished? Hang up philosophy.<br>
 Unless philosophy can make a Juliet,<br>
 Displant a town, reverse a Prince’s doom,<br>
 It helps not, it prevails not, talk no more.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 O, then I see that mad men have no ears.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 How should they, when that wise men have no eyes?
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Let me dispute with thee of thy estate.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Thou canst not speak of that thou dost not feel.<br>
 Wert thou as young as I, Juliet thy love,<br>
 An hour but married, Tybalt murdered,<br>
@@ -3717,17 +3723,17 @@ Taking the measure of an unmade grave.
 </p>
 <p class="right">[<i>Knocking within.</i>]</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Arise; one knocks. Good Romeo, hide thyself.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Not I, unless the breath of heartsick groans<br>
 Mist-like infold me from the search of eyes.
 </p>
 <p class="right">[<i>Knocking.</i>]</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Hark, how they knock!—Who’s there?—Romeo, arise,<br>
 Thou wilt be taken.—Stay awhile.—Stand up.
 </p>
@@ -3740,26 +3746,26 @@ What simpleness is this.—I come, I come.
 <p class="drama">
 Who knocks so hard? Whence come you, what’s your will?</p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 [<i>Within.</i>] Let me come in, and you shall know my errand.<br>
 I come from Lady Juliet.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Welcome then.
 </p>
 <p class="scenedesc">Enter <span class="charname">Nurse</span>.</p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 O holy Friar, O, tell me, holy Friar,<br>
 Where is my lady’s lord, where’s Romeo?
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 There on the ground, with his own tears made drunk.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 O, he is even in my mistress’ case.<br>
 Just in her case! O woeful sympathy!<br>
 Piteous predicament. Even so lies she,<br>
@@ -3769,15 +3775,15 @@ For Juliet’s sake, for her sake, rise and stand.<br>
 Why should you fall into so deep an O?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Nurse.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Ah sir, ah sir, death’s the end of all.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Spakest thou of Juliet? How is it with her?<br>
 Doth not she think me an old murderer,<br>
 Now I have stain’d the childhood of our joy<br>
@@ -3786,14 +3792,14 @@ Where is she? And how doth she? And what says<br>
 My conceal’d lady to our cancell’d love?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 O, she says nothing, sir, but weeps and weeps;<br>
 And now falls on her bed, and then starts up,<br>
 And Tybalt calls, and then on Romeo cries,<br>
 And then down falls again.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 As if that name,<br>
 Shot from the deadly level of a gun,<br>
 Did murder her, as that name’s cursed hand<br>
@@ -3804,7 +3810,7 @@ The hateful mansion.
 </p>
 <p class="right">[<i>Drawing his sword.</i>]</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Hold thy desperate hand.<br>
 Art thou a man? Thy form cries out thou art.<br>
 Thy tears are womanish, thy wild acts denote<br>
@@ -3858,27 +3864,27 @@ Which heavy sorrow makes them apt unto.<br>
 Romeo is coming.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 O Lord, I could have stay’d here all the night<br>
 To hear good counsel. O, what learning is!<br>
 My lord, I’ll tell my lady you will come.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Do so, and bid my sweet prepare to chide.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Here sir, a ring she bid me give you, sir.<br>
 Hie you, make haste, for it grows very late.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 How well my comfort is reviv’d by this.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Go hence, good night, and here stands all your state:<br>
 Either be gone before the watch be set,<br>
 Or by the break of day disguis’d from hence.<br>
@@ -3888,7 +3894,7 @@ Every good hap to you that chances here.<br>
 Give me thy hand; ’tis late; farewell; good night.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 But that a joy past joy calls out on me,<br>
 It were a grief so brief to part with thee.<br>
 Farewell.
@@ -3898,7 +3904,7 @@ Farewell.
 <p class="scenedesc">Enter <span class="charname">Capulet, Lady Capulet</span> and
 <span class="charname">Paris</span>.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Things have fallen out, sir, so unluckily<br>
 That we have had no time to move our daughter.<br>
 Look you, she lov’d her kinsman Tybalt dearly,<br>
@@ -3908,17 +3914,17 @@ I promise you, but for your company,<br>
 I would have been abed an hour ago.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 These times of woe afford no tune to woo.<br>
 Madam, good night. Commend me to your daughter.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 I will, and know her mind early tomorrow;<br>
 Tonight she’s mew’d up to her heaviness.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Sir Paris, I will make a desperate tender<br>
 Of my child’s love. I think she will be rul’d<br>
 In all respects by me; nay more, I doubt it not.<br>
@@ -3928,11 +3934,11 @@ And bid her, mark you me, on Wednesday next,<br>
 But, soft, what day is this?
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Monday, my lord.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Monday! Ha, ha! Well, Wednesday is too soon,<br>
 A Thursday let it be; a Thursday, tell her,<br>
 She shall be married to this noble earl.<br>
@@ -3945,11 +3951,11 @@ Therefore we’ll have some half a dozen friends,<br>
 And there an end. But what say you to Thursday?
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 My lord, I would that Thursday were tomorrow.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Well, get you gone. A Thursday be it then.<br>
 Go you to Juliet ere you go to bed,<br>
 Prepare her, wife, against this wedding day.<br>
@@ -3963,7 +3969,7 @@ Garden.</b></h3>
 <p class="scenedesc">Enter <span class="charname">Romeo</span> and
 <span class="charname">Juliet</span>.</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Wilt thou be gone? It is not yet near day.<br>
 It was the nightingale, and not the lark,<br>
 That pierc’d the fearful hollow of thine ear;<br>
@@ -3971,7 +3977,7 @@ Nightly she sings on yond pomegranate tree.<br>
 Believe me, love, it was the nightingale.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 It was the lark, the herald of the morn,<br>
 No nightingale. Look, love, what envious streaks<br>
 Do lace the severing clouds in yonder east.<br>
@@ -3980,7 +3986,7 @@ Stands tiptoe on the misty mountain tops.<br>
 I must be gone and live, or stay and die.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Yond light is not daylight, I know it, I.<br>
 It is some meteor that the sun exhales<br>
 To be to thee this night a torchbearer<br>
@@ -3988,7 +3994,7 @@ And light thee on thy way to Mantua.<br>
 Therefore stay yet, thou need’st not to be gone.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Let me be ta’en, let me be put to death,<br>
 I am content, so thou wilt have it so.<br>
 I’ll say yon grey is not the morning’s eye,<br>
@@ -4000,7 +4006,7 @@ Come, death, and welcome. Juliet wills it so.<br>
 How is’t, my soul? Let’s talk. It is not day.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 It is, it is! Hie hence, be gone, away.<br>
 It is the lark that sings so out of tune,<br>
 Straining harsh discords and unpleasing sharps.<br>
@@ -4013,35 +4019,35 @@ Hunting thee hence with hunt’s-up to the day.<br>
 O now be gone, more light and light it grows.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 More light and light, more dark and dark our woes.
 </p>
 <p class="scenedesc">Enter <span class="charname">Nurse</span>.</p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Madam.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Nurse?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Your lady mother is coming to your chamber.<br>
 The day is broke, be wary, look about.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Then, window, let day in, and let life out.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Farewell, farewell, one kiss, and I’ll descend.
 </p>
 <p class="right">[<i>Descends.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Art thou gone so? Love, lord, ay husband, friend,<br>
 I must hear from thee every day in the hour,<br>
 For in a minute there are many days.<br>
@@ -4049,35 +4055,35 @@ O, by this count I shall be much in years<br>
 Ere I again behold my Romeo.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Farewell!<br>
 I will omit no opportunity<br>
 That may convey my greetings, love, to thee.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O thinkest thou we shall ever meet again?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I doubt it not, and all these woes shall serve<br>
 For sweet discourses in our time to come.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O God! I have an ill-divining soul!<br>
 Methinks I see thee, now thou art so low,<br>
 As one dead in the bottom of a tomb.<br>
 Either my eyesight fails, or thou look’st pale.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 And trust me, love, in my eye so do you.<br>
 Dry sorrow drinks our blood. Adieu, adieu.
 </p>
 <p class="right">[<i>Exit below.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O Fortune, Fortune! All men call thee fickle,<br>
 If thou art fickle, what dost thou with him<br>
 That is renown’d for faith? Be fickle, Fortune;<br>
@@ -4085,26 +4091,26 @@ For then, I hope thou wilt not keep him long<br>
 But send him back.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 [<i>Within.</i>] Ho, daughter, are you up?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Who is’t that calls? Is it my lady mother?<br>
 Is she not down so late, or up so early?<br>
 What unaccustom’d cause procures her hither?
 </p>
 <p class="scenedesc">Enter <span class="charname">Lady Capulet</span>.</p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Why, how now, Juliet?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Madam, I am not well.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Evermore weeping for your cousin’s death?<br>
 What, wilt thou wash him from his grave with tears?<br>
 And if thou couldst, thou couldst not make him live.<br>
@@ -4112,49 +4118,49 @@ Therefore have done: some grief shows much of love,<br>
 But much of grief shows still some want of wit.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Yet let me weep for such a feeling loss.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 So shall you feel the loss, but not the friend<br>
 Which you weep for.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Feeling so the loss,<br>
 I cannot choose but ever weep the friend.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Well, girl, thou weep’st not so much for his death<br>
 As that the villain lives which slaughter’d him.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 What villain, madam?
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 That same villain Romeo.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Villain and he be many miles asunder.<br>
 God pardon him. I do, with all my heart.<br>
 And yet no man like he doth grieve my heart.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 That is because the traitor murderer lives.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Ay madam, from the reach of these my hands.<br>
 Would none but I might venge my cousin’s death.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 We will have vengeance for it, fear thou not.<br>
 Then weep no more. I’ll send to one in Mantua,<br>
 Where that same banish’d runagate doth live,<br>
@@ -4163,7 +4169,7 @@ That he shall soon keep Tybalt company:<br>
 And then I hope thou wilt be satisfied.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Indeed I never shall be satisfied<br>
 With Romeo till I behold him—dead—<br>
 Is my poor heart so for a kinsman vex’d.<br>
@@ -4176,35 +4182,35 @@ To wreak the love I bore my cousin<br>
 Upon his body that hath slaughter’d him.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Find thou the means, and I’ll find such a man.<br>
 But now I’ll tell thee joyful tidings, girl.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 And joy comes well in such a needy time.<br>
 What are they, I beseech your ladyship?
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Well, well, thou hast a careful father, child;<br>
 One who to put thee from thy heaviness,<br>
 Hath sorted out a sudden day of joy,<br>
 That thou expects not, nor I look’d not for.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Madam, in happy time, what day is that?
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Marry, my child, early next Thursday morn<br>
 The gallant, young, and noble gentleman,<br>
 The County Paris, at Saint Peter’s Church,<br>
 Shall happily make thee there a joyful bride.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Now by Saint Peter’s Church, and Peter too,<br>
 He shall not make me there a joyful bride.<br>
 I wonder at this haste, that I must wed<br>
@@ -4215,14 +4221,14 @@ It shall be Romeo, whom you know I hate,<br>
 Rather than Paris. These are news indeed.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Here comes your father, tell him so yourself,<br>
 And see how he will take it at your hands.
 </p>
 <p class="scenedesc">Enter <span class="charname">Capulet</span> and
 <span class="charname">Nurse</span>.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 When the sun sets, the air doth drizzle dew;<br>
 But for the sunset of my brother’s son<br>
 It rains downright.<br>
@@ -4238,12 +4244,12 @@ Thy tempest-tossed body. How now, wife?<br>
 Have you deliver’d to her our decree?
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Ay, sir; but she will none, she gives you thanks.<br>
 I would the fool were married to her grave.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Soft. Take me with you, take me with you, wife.<br>
 How, will she none? Doth she not give us thanks?<br>
 Is she not proud? Doth she not count her blest,<br>
@@ -4251,13 +4257,13 @@ Unworthy as she is, that we have wrought<br>
 So worthy a gentleman to be her bridegroom?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Not proud you have, but thankful that you have.<br>
 Proud can I never be of what I hate;<br>
 But thankful even for hate that is meant love.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 How now, how now, chopp’d logic? What is this?<br>
 Proud, and, I thank you, and I thank you not;<br>
 And yet not proud. Mistress minion you,<br>
@@ -4269,16 +4275,16 @@ Out, you green-sickness carrion! Out, you baggage!<br>
 You tallow-face!
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Fie, fie! What, are you mad?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Good father, I beseech you on my knees,<br>
 Hear me with patience but to speak a word.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Hang thee young baggage, disobedient wretch!<br>
 I tell thee what,—get thee to church a Thursday,<br>
 Or never after look me in the face.<br>
@@ -4290,39 +4296,39 @@ And that we have a curse in having her.<br>
 Out on her, hilding.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 God in heaven bless her.<br>
 You are to blame, my lord, to rate her so.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 And why, my lady wisdom? Hold your tongue,<br>
 Good prudence; smatter with your gossips, go.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 I speak no treason.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 O God ye good-en!
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 May not one speak?
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Peace, you mumbling fool!<br>
 Utter your gravity o’er a gossip’s bowl,<br>
 For here we need it not.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 You are too hot.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 God’s bread, it makes me mad!<br>
 Day, night, hour, ride, time, work, play,<br>
 Alone, in company, still my care hath been<br>
@@ -4347,7 +4353,7 @@ Trust to’t, bethink you, I’ll not be forsworn.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Is there no pity sitting in the clouds,<br>
 That sees into the bottom of my grief?<br>
 O sweet my mother, cast me not away,<br>
@@ -4356,13 +4362,13 @@ Or, if you do not, make the bridal bed<br>
 In that dim monument where Tybalt lies.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Talk not to me, for I’ll not speak a word.<br>
 Do as thou wilt, for I have done with thee.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O God! O Nurse, how shall this be prevented?<br>
 My husband is on earth, my faith in heaven.<br>
 How shall that faith return again to earth,<br>
@@ -4374,7 +4380,7 @@ What say’st thou? Hast thou not a word of joy?<br>
 Some comfort, Nurse.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Faith, here it is.<br>
 Romeo is banished; and all the world to nothing<br>
 That he dares ne’er come back to challenge you.<br>
@@ -4391,36 +4397,36 @@ Your first is dead, or ’twere as good he were,<br>
 As living here and you no use of him.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Speakest thou from thy heart?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 And from my soul too,<br>
 Or else beshrew them both.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Amen.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 What?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Well, thou hast comforted me marvellous much.<br>
 Go in, and tell my lady I am gone,<br>
 Having displeas’d my father, to Lawrence’ cell,<br>
 To make confession and to be absolv’d.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Marry, I will; and this is wisely done.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Ancient damnation! O most wicked fiend!<br>
 Is it more sin to wish me thus forsworn,<br>
 Or to dispraise my lord with that same tongue<br>
@@ -4438,21 +4444,21 @@ If all else fail, myself have power to die.
 <p class="scenedesc">Enter <span class="charname">Friar Lawrence</span> and
 <span class="charname">Paris</span>.</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 On Thursday, sir? The time is very short.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 My father Capulet will have it so;<br>
 And I am nothing slow to slack his haste.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 You say you do not know the lady’s mind.<br>
 Uneven is the course; I like it not.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Immoderately she weeps for Tybalt’s death,<br>
 And therefore have I little talk’d of love;<br>
 For Venus smiles not in a house of tears.<br>
@@ -4465,110 +4471,110 @@ May be put from her by society.<br>
 Now do you know the reason of this haste.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 [<i>Aside.</i>] I would I knew not why it should be slow’d.—<br>
 Look, sir, here comes the lady toward my cell.
 </p>
 <p class="scenedesc">Enter <span class="charname">Juliet</span>.</p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Happily met, my lady and my wife!
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 That may be, sir, when I may be a wife.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 That may be, must be, love, on Thursday next.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 What must be shall be.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 That’s a certain text.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Come you to make confession to this father?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 To answer that, I should confess to you.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Do not deny to him that you love me.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I will confess to you that I love him.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 So will ye, I am sure, that you love me.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 If I do so, it will be of more price,<br>
 Being spoke behind your back than to your face.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Poor soul, thy face is much abus’d with tears.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 The tears have got small victory by that;<br>
 For it was bad enough before their spite.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Thou wrong’st it more than tears with that report.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 That is no slander, sir, which is a truth,<br>
 And what I spake, I spake it to my face.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Thy face is mine, and thou hast slander’d it.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 It may be so, for it is not mine own.<br>
 Are you at leisure, holy father, now,<br>
 Or shall I come to you at evening mass?
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 My leisure serves me, pensive daughter, now.—<br>
 My lord, we must entreat the time alone.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 God shield I should disturb devotion!—<br>
 Juliet, on Thursday early will I rouse ye,<br>
 Till then, adieu; and keep this holy kiss.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O shut the door, and when thou hast done so,<br>
 Come weep with me, past hope, past cure, past help!
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 O Juliet, I already know thy grief;<br>
 It strains me past the compass of my wits.<br>
 I hear thou must, and nothing may prorogue it,<br>
 On Thursday next be married to this County.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Tell me not, Friar, that thou hear’st of this,<br>
 Unless thou tell me how I may prevent it.<br>
 If in thy wisdom, thou canst give no help,<br>
@@ -4589,7 +4595,7 @@ Be not so long to speak. I long to die,<br>
 If what thou speak’st speak not of remedy.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Hold, daughter. I do spy a kind of hope,<br>
 Which craves as desperate an execution<br>
 As that is desperate which we would prevent.<br>
@@ -4601,7 +4607,7 @@ That cop’st with death himself to scape from it.<br>
 And if thou dar’st, I’ll give thee remedy.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O, bid me leap, rather than marry Paris,<br>
 From off the battlements of yonder tower,<br>
 Or walk in thievish ways, or bid me lurk<br>
@@ -4616,7 +4622,7 @@ And I will do it without fear or doubt,<br>
 To live an unstain’d wife to my sweet love.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Hold then. Go home, be merry, give consent<br>
 To marry Paris. Wednesday is tomorrow;<br>
 Tomorrow night look that thou lie alone,<br>
@@ -4651,17 +4657,17 @@ If no inconstant toy nor womanish fear<br>
 Abate thy valour in the acting it.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Give me, give me! O tell not me of fear!
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Hold; get you gone, be strong and prosperous<br>
 In this resolve. I’ll send a friar with speed<br>
 To Mantua, with my letters to thy lord.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Love give me strength, and strength shall help afford.<br>
 Farewell, dear father.
 </p>
@@ -4670,26 +4676,26 @@ Farewell, dear father.
 <p class="scenedesc">Enter <span class="charname">Capulet, Lady Capulet, Nurse</span>
 and <span class="charname">Servants</span>.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 So many guests invite as here are writ.
 </p>
 <p class="right">[<i>Exit <span class="charname">first Servant</span>.</i>]</p>
 <p class="drama">
 Sirrah, go hire me twenty cunning cooks.</p>
 <p class="drama">
-SECOND SERVANT.<br>
+<span class="char-name">SECOND SERVANT</span><br/>
 You shall have none ill, sir; for I’ll try if they can
 lick their fingers.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 How canst thou try them so?
 </p>
 <p class="drama">
-SECOND SERVANT.<br>
+<span class="char-name">SECOND SERVANT</span><br/>
 Marry, sir, ’tis an ill cook that cannot lick his own fingers;
 therefore he that cannot lick his fingers goes not with me.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Go, begone.
 </p>
 <p class="right">[<i>Exit <span class="charname">second Servant</span>.</i>]</p>
@@ -4698,25 +4704,25 @@ We shall be much unfurnish’d for this time.<br>
 What, is my daughter gone to Friar Lawrence?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Ay, forsooth.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Well, he may chance to do some good on her.<br>
 A peevish self-will’d harlotry it is.
 </p>
 <p class="scenedesc">Enter <span class="charname">Juliet</span>.</p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 See where she comes from shrift with merry look.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 How now, my headstrong. Where have you been gadding?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Where I have learnt me to repent the sin<br>
 Of disobedient opposition<br>
 To you and your behests; and am enjoin’d<br>
@@ -4725,18 +4731,18 @@ To beg your pardon. Pardon, I beseech you.<br>
 Henceforward I am ever rul’d by you.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Send for the County, go tell him of this.<br>
 I’ll have this knot knit up tomorrow morning.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 I met the youthful lord at Lawrence’ cell,<br>
 And gave him what becomed love I might,<br>
 Not stepping o’er the bounds of modesty.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Why, I am glad on’t. This is well. Stand up.<br>
 This is as’t should be. Let me see the County.<br>
 Ay, marry. Go, I say, and fetch him hither.<br>
@@ -4744,28 +4750,28 @@ Now afore God, this reverend holy Friar,<br>
 All our whole city is much bound to him.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Nurse, will you go with me into my closet,<br>
 To help me sort such needful ornaments<br>
 As you think fit to furnish me tomorrow?
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 No, not till Thursday. There is time enough.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Go, Nurse, go with her. We’ll to church tomorrow.
 </p>
 <p class="right">[<i>Exeunt <span class="charname">Juliet</span> and
 <span class="charname">Nurse</span>.</i>]</p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 We shall be short in our provision,<br>
 ’Tis now near night.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Tush, I will stir about,<br>
 And all things shall be well, I warrant thee, wife.<br>
 Go thou to Juliet, help to deck up her.<br>
@@ -4781,7 +4787,7 @@ Since this same wayward girl is so reclaim’d.
 <p class="scenedesc">Enter <span class="charname">Juliet</span> and
 <span class="charname">Nurse</span>.</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Ay, those attires are best. But, gentle Nurse,<br>
 I pray thee leave me to myself tonight;<br>
 For I have need of many orisons<br>
@@ -4790,11 +4796,11 @@ Which, well thou know’st, is cross and full of sin.
 </p>
 <p class="scenedesc">Enter <span class="charname">Lady Capulet</span>.</p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 What, are you busy, ho? Need you my help?
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 No, madam; we have cull’d such necessaries<br>
 As are behoveful for our state tomorrow.<br>
 So please you, let me now be left alone,<br>
@@ -4803,14 +4809,14 @@ For I am sure you have your hands full all<br>
 In this so sudden business.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Good night.<br>
 Get thee to bed and rest, for thou hast need.
 </p>
 <p class="right">[<i>Exeunt <span class="charname">Lady Capulet</span> and
 <span class="charname">Nurse</span>.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Farewell. God knows when we shall meet again.<br>
 I have a faint cold fear thrills through my veins<br>
 That almost freezes up the heat of life.<br>
@@ -4865,41 +4871,41 @@ Romeo, Romeo, Romeo, here’s drink! I drink to thee.
 <p class="scenedesc">Enter <span class="charname">Lady Capulet</span> and
 <span class="charname">Nurse</span>.</p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Hold, take these keys and fetch more spices, Nurse.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 They call for dates and quinces in the pastry.
 </p>
 <p class="scenedesc">Enter <span class="charname">Capulet</span>.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Come, stir, stir, stir! The second cock hath crow’d,<br>
 The curfew bell hath rung, ’tis three o’clock.<br>
 Look to the bak’d meats, good Angelica;<br>
 Spare not for cost.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Go, you cot-quean, go,<br>
 Get you to bed; faith, you’ll be sick tomorrow<br>
 For this night’s watching.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 No, not a whit. What! I have watch’d ere now<br>
 All night for lesser cause, and ne’er been sick.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Ay, you have been a mouse-hunt in your time;<br>
 But I will watch you from such watching now.
 </p>
 <p class="right">[<i>Exeunt <span class="charname">Lady Capulet</span> and
 <span class="charname">Nurse</span>.</i>]</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 A jealous-hood, a jealous-hood!
 </p>
 <p class="scenedesc">Enter <span class="charname">Servants,</span> with spits,
@@ -4908,11 +4914,11 @@ logs and baskets.</p>
 Now, fellow, what’s there?
 </p>
 <p class="drama">
-FIRST SERVANT.<br>
+<span class="char-name">FIRST SERVANT</span><br/>
 Things for the cook, sir; but I know not what.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Make haste, make haste.
 </p>
 <p class="right">[<i>Exit <span class="charname">First Servant</span>.</i>]</p>
@@ -4921,13 +4927,13 @@ Make haste, make haste.
 Call Peter, he will show thee where they are.
 </p>
 <p class="drama">
-SECOND SERVANT.<br>
+<span class="char-name">SECOND SERVANT</span><br/>
 I have a head, sir, that will find out logs<br>
 And never trouble Peter for the matter.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Mass and well said; a merry whoreson, ha.<br>
 Thou shalt be loggerhead.—Good faith, ’tis day.<br>
 The County will be here with music straight,<br>
@@ -4948,7 +4954,7 @@ Make haste I say.
 <h3> <a id="sceneIV_30.5"></a><b>SCENE V. Juliet’s Chamber; Juliet on the bed.</b></h3>
 <p class="scenedesc">Enter <span class="charname">Nurse</span>.</p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Mistress! What, mistress! Juliet! Fast, I warrant her, she.<br>
 Why, lamb, why, lady, fie, you slug-abed!<br>
 Why, love, I say! Madam! Sweetheart! Why, bride!<br>
@@ -4968,42 +4974,42 @@ Some aqua vitae, ho! My lord! My lady!
 </p>
 <p class="scenedesc">Enter <span class="charname">Lady Capulet</span>.</p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 What noise is here?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 O lamentable day!
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 What is the matter?
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Look, look! O heavy day!
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 O me, O me! My child, my only life.<br>
 Revive, look up, or I will die with thee.<br>
 Help, help! Call help.
 </p>
 <p class="scenedesc">Enter <span class="charname">Capulet</span>.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 For shame, bring Juliet forth, her lord is come.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 She’s dead, deceas’d, she’s dead; alack the day!
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Alack the day, she’s dead, she’s dead, she’s dead!
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Ha! Let me see her. Out alas! She’s cold,<br>
 Her blood is settled and her joints are stiff.<br>
 Life and these lips have long been separated.<br>
@@ -5011,26 +5017,26 @@ Death lies on her like an untimely frost<br>
 Upon the sweetest flower of all the field.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 O lamentable day!
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 O woful time!
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Death, that hath ta’en her hence to make me wail,<br>
 Ties up my tongue and will not let me speak.
 </p>
 <p class="scenedesc">Enter <span class="charname">Friar Lawrence</span> and
 <span class="charname">Paris</span> with Musicians.</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Come, is the bride ready to go to church?
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Ready to go, but never to return.<br>
 O son, the night before thy wedding day<br>
 Hath death lain with thy bride. There she lies,<br>
@@ -5040,12 +5046,12 @@ My daughter he hath wedded. I will die<br>
 And leave him all; life, living, all is death’s.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Have I thought long to see this morning’s face,<br>
 And doth it give me such a sight as this?
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 Accurs’d, unhappy, wretched, hateful day.<br>
 Most miserable hour that e’er time saw<br>
 In lasting labour of his pilgrimage.<br>
@@ -5054,7 +5060,7 @@ But one thing to rejoice and solace in,<br>
 And cruel death hath catch’d it from my sight.
 </p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 O woe! O woeful, woeful, woeful day.<br>
 Most lamentable day, most woeful day<br>
 That ever, ever, I did yet behold!<br>
@@ -5063,14 +5069,14 @@ Never was seen so black a day as this.<br>
 O woeful day, O woeful day.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Beguil’d, divorced, wronged, spited, slain.<br>
 Most detestable death, by thee beguil’d,<br>
 By cruel, cruel thee quite overthrown.<br>
 O love! O life! Not life, but love in death!
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 Despis’d, distressed, hated, martyr’d, kill’d.<br>
 Uncomfortable time, why cam’st thou now<br>
 To murder, murder our solemnity?<br>
@@ -5079,7 +5085,7 @@ Dead art thou. Alack, my child is dead,<br>
 And with my child my joys are buried.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Peace, ho, for shame. Confusion’s cure lives not<br>
 In these confusions. Heaven and yourself<br>
 Had part in this fair maid, now heaven hath all,<br>
@@ -5101,7 +5107,7 @@ For though fond nature bids us all lament,<br>
 Yet nature’s tears are reason’s merriment.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 All things that we ordained festival<br>
 Turn from their office to black funeral:<br>
 Our instruments to melancholy bells,<br>
@@ -5111,7 +5117,7 @@ Our bridal flowers serve for a buried corse,<br>
 And all things change them to the contrary.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Sir, go you in, and, madam, go with him,<br>
 And go, Sir Paris, everyone prepare<br>
 To follow this fair corse unto her grave.<br>
@@ -5121,76 +5127,76 @@ Move them no more by crossing their high will.
 <p class="right">[<i>Exeunt <span class="charname">Capulet, Lady Capulet, Paris</span>
 and <span class="charname">Friar</span>.</i>]</p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 Faith, we may put up our pipes and be gone.</p>
 <p class="drama">
-NURSE.<br>
+<span class="char-name">NURSE</span><br/>
 Honest good fellows, ah, put up, put up,<br>
 For well you know this is a pitiful case.
 </p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 Ay, by my troth, the case may be amended.</p>
 <p class="right">[<i>Exit <span class="charname">Nurse</span>.</i>]</p>
 <p class="scenedesc">Enter <span class="charname">Peter</span>.</p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 Musicians, O, musicians, ‘Heart’s ease,’
 ‘Heart’s ease’, O, and you will have me live, play
 ‘Heart’s ease.’
 </p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 Why ‘Heart’s ease’?
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 O musicians, because my heart itself plays ‘My heart is
 full’. O play me some merry dump to comfort me.
 </p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 Not a dump we, ’tis no time to play now.
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 You will not then?
 </p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 No.</p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 I will then give it you soundly.
 </p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 What will you give us?
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 No money, on my faith, but the gleek! I will give you the
 minstrel.
 </p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 Then will I give you the serving-creature.
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 Then will I lay the serving-creature’s dagger on your pate. I will carry
 no crotchets. I’ll re you, I’ll fa you. Do you note me?
 </p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 And you re us and fa us, you note us.
 </p>
 <p class="drama">
-SECOND MUSICIAN.<br>
+<span class="char-name">SECOND MUSICIAN</span><br/>
 Pray you put up your dagger, and put out your wit.
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 Then have at you with my wit. I will dry-beat you with an
 iron wit, and put up my iron dagger. Answer me like men.<br>
     ‘When griping griefs the heart doth wound,<br>
@@ -5200,27 +5206,27 @@ Why ‘silver sound’? Why ‘music with her silver sound’?
 What say you, Simon Catling?
 </p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 Marry, sir, because silver hath a sweet sound.
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 Prates. What say you, Hugh Rebeck?
 </p>
 <p class="drama">
-SECOND MUSICIAN.<br>
+<span class="char-name">SECOND MUSICIAN</span><br/>
 I say ‘silver sound’ because musicians sound for silver.
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 Prates too! What say you, James Soundpost?
 </p>
 <p class="drama">
-THIRD MUSICIAN.<br>
+<span class="char-name">THIRD MUSICIAN</span><br/>
 Faith, I know not what to say.
 </p>
 <p class="drama">
-PETER.<br>
+<span class="char-name">PETER</span><br/>
 O, I cry you mercy, you are the singer. I will say for you. It is ‘music
 with her silver sound’ because musicians have no gold for sounding.<br>
       ‘Then music with her silver sound<br>
@@ -5228,11 +5234,11 @@ with her silver sound’ because musicians have no gold for sounding.<br>
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-FIRST MUSICIAN.<br>
+<span class="char-name">FIRST MUSICIAN</span><br/>
 What a pestilent knave is this same!
 </p>
 <p class="drama">
-SECOND MUSICIAN.<br>
+<span class="char-name">SECOND MUSICIAN</span><br/>
 Hang him, Jack. Come, we’ll in here, tarry for the mourners, and stay
 dinner.
 </p>
@@ -5243,7 +5249,7 @@ dinner.
 <h3> <b>SCENE I. Mantua. A Street.</b></h3>
 <p class="scenedesc">Enter <span class="charname">Romeo</span>.</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 If I may trust the flattering eye of sleep,<br>
 My dreams presage some joyful news at hand.<br>
 My bosom’s lord sits lightly in his throne;<br>
@@ -5265,7 +5271,7 @@ How fares my Juliet? That I ask again;<br>
 For nothing can be ill if she be well.
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 Then she is well, and nothing can be ill.<br>
 Her body sleeps in Capel’s monument,<br>
 And her immortal part with angels lives.<br>
@@ -5275,29 +5281,29 @@ O pardon me for bringing these ill news,<br>
 Since you did leave it for my office, sir.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Is it even so? Then I defy you, stars!<br>
 Thou know’st my lodging. Get me ink and paper,<br>
 And hire post-horses. I will hence tonight.
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 I do beseech you sir, have patience.<br>
 Your looks are pale and wild, and do import<br>
 Some misadventure.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Tush, thou art deceiv’d.<br>
 Leave me, and do the thing I bid thee do.<br>
 Hast thou no letters to me from the Friar?
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 No, my good lord.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 No matter. Get thee gone,<br>
 And hire those horses. I’ll be with thee straight.
 </p>
@@ -5330,11 +5336,11 @@ What, ho! Apothecary!
 </p>
 <p class="scenedesc">Enter <span class="charname">Apothecary</span>.</p>
 <p class="drama">
-APOTHECARY.<br>
+<span class="char-name">APOTHECARY</span><br/>
 Who calls so loud?
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Come hither, man. I see that thou art poor.<br>
 Hold, there is forty ducats. Let me have<br>
 A dram of poison, such soon-speeding gear<br>
@@ -5345,12 +5351,12 @@ As violently as hasty powder fir’d<br>
 Doth hurry from the fatal cannon’s womb.
 </p>
 <p class="drama">
-APOTHECARY.<br>
+<span class="char-name">APOTHECARY</span><br/>
 Such mortal drugs I have, but Mantua’s law<br>
 Is death to any he that utters them.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Art thou so bare and full of wretchedness,<br>
 And fear’st to die? Famine is in thy cheeks,<br>
 Need and oppression starveth in thine eyes,<br>
@@ -5360,21 +5366,21 @@ The world affords no law to make thee rich;<br>
 Then be not poor, but break it and take this.
 </p>
 <p class="drama">
-APOTHECARY.<br>
+<span class="char-name">APOTHECARY</span><br/>
 My poverty, but not my will consents.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I pay thy poverty, and not thy will.
 </p>
 <p class="drama">
-APOTHECARY.<br>
+<span class="char-name">APOTHECARY</span><br/>
 Put this in any liquid thing you will<br>
 And drink it off; and, if you had the strength<br>
 Of twenty men, it would despatch you straight.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 There is thy gold, worse poison to men’s souls,<br>
 Doing more murder in this loathsome world<br>
 Than these poor compounds that thou mayst not sell.<br>
@@ -5387,18 +5393,18 @@ To Juliet’s grave, for there must I use thee.
 <h3> <a id="sceneV_30.2"></a><b>SCENE II. Friar Lawrence’s Cell.</b></h3>
 <p class="scenedesc">Enter <span class="charname">Friar John</span>.</p>
 <p class="drama">
-FRIAR JOHN.<br>
+<span class="char-name">FRIAR JOHN</span><br/>
 Holy Franciscan Friar! Brother, ho!
 </p>
 <p class="scenedesc">Enter <span class="charname">Friar Lawrence</span>.</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 This same should be the voice of Friar John.<br>
 Welcome from Mantua. What says Romeo?<br>
 Or, if his mind be writ, give me his letter.
 </p>
 <p class="drama">
-FRIAR JOHN.<br>
+<span class="char-name">FRIAR JOHN</span><br/>
 Going to find a barefoot brother out,<br>
 One of our order, to associate me,<br>
 Here in this city visiting the sick,<br>
@@ -5409,17 +5415,17 @@ Seal’d up the doors, and would not let us forth,<br>
 So that my speed to Mantua there was stay’d.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Who bare my letter then to Romeo?
 </p>
 <p class="drama">
-FRIAR JOHN.<br>
+<span class="char-name">FRIAR JOHN</span><br/>
 I could not send it,—here it is again,—<br>
 Nor get a messenger to bring it thee,<br>
 So fearful were they of infection.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Unhappy fortune! By my brotherhood,<br>
 The letter was not nice, but full of charge,<br>
 Of dear import, and the neglecting it<br>
@@ -5428,12 +5434,12 @@ Get me an iron crow and bring it straight<br>
 Unto my cell.
 </p>
 <p class="drama">
-FRIAR JOHN.<br>
+<span class="char-name">FRIAR JOHN</span><br/>
 Brother, I’ll go and bring it thee.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Now must I to the monument alone.<br>
 Within this three hours will fair Juliet wake.<br>
 She will beshrew me much that Romeo<br>
@@ -5447,7 +5453,7 @@ Poor living corse, clos’d in a dead man’s tomb.
 <p class="scenedesc">Enter <span class="charname">Paris,</span> and his
 <span class="charname">Page</span> bearing flowers and a torch.</p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Give me thy torch, boy. Hence and stand aloof.<br>
 Yet put it out, for I would not be seen.<br>
 Under yond yew tree lay thee all along,<br>
@@ -5459,13 +5465,13 @@ As signal that thou hear’st something approach.<br>
 Give me those flowers. Do as I bid thee, go.
 </p>
 <p class="drama">
-PAGE.<br>
+<span class="char-name">PAGE</span><br/>
 [<i>Aside.</i>] I am almost afraid to stand alone<br>
 Here in the churchyard; yet I will adventure.
 </p>
 <p class="right">[<i>Retires.</i>]</p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 Sweet flower, with flowers thy bridal bed I strew.<br>
 O woe, thy canopy is dust and stones,<br>
 Which with sweet water nightly I will dew,<br>
@@ -5475,7 +5481,7 @@ Nightly shall be to strew thy grave and weep.
 </p>
 <p class="right">[<i>The <span class="charname">Page</span> whistles.</i>]</p>
 <p class="drama">
-The boy gives warning something doth approach.<br>
+<span class="char-name">The boy gives warning something doth approach</span><br/>
 What cursed foot wanders this way tonight,<br>
 To cross my obsequies and true love’s rite?<br>
 What, with a torch! Muffle me, night, awhile.
@@ -5484,7 +5490,7 @@ What, with a torch! Muffle me, night, awhile.
 <p class="scenedesc">Enter <span class="charname">Romeo</span> and
 <span class="charname">Balthasar</span> with a torch, mattock, &amp;c.</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Give me that mattock and the wrenching iron.<br>
 Hold, take this letter; early in the morning<br>
 See thou deliver it to my lord and father.<br>
@@ -5505,22 +5511,22 @@ More fierce and more inexorable far<br>
 Than empty tigers or the roaring sea.
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 I will be gone, sir, and not trouble you.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 So shalt thou show me friendship. Take thou that.<br>
 Live, and be prosperous, and farewell, good fellow.
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 For all this same, I’ll hide me hereabout.<br>
 His looks I fear, and his intents I doubt.
 </p>
 <p class="right">[<i>Retires</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Thou detestable maw, thou womb of death,<br>
 Gorg’d with the dearest morsel of the earth,<br>
 Thus I enforce thy rotten jaws to open,
@@ -5529,7 +5535,7 @@ Thus I enforce thy rotten jaws to open,
 <p class="drama">
 And in despite, I’ll cram thee with more food.</p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 This is that banish’d haughty Montague<br>
 That murder’d my love’s cousin,—with which grief,<br>
 It is supposed, the fair creature died,—<br>
@@ -5544,7 +5550,7 @@ Condemned villain, I do apprehend thee.<br>
 Obey, and go with me, for thou must die.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 I must indeed; and therefore came I hither.<br>
 Good gentle youth, tempt not a desperate man.<br>
 Fly hence and leave me. Think upon these gone;<br>
@@ -5557,28 +5563,28 @@ Stay not, be gone, live, and hereafter say,<br>
 A madman’s mercy bid thee run away.
 </p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 I do defy thy conjuration,<br>
 And apprehend thee for a felon here.
 </p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 Wilt thou provoke me? Then have at thee, boy!
 </p>
 <p class="right">[<i>They fight.</i>]</p>
 <p class="drama">
-PAGE.<br>
+<span class="char-name">PAGE</span><br/>
 O lord, they fight! I will go call the watch.
 </p>
 <p class="right">[<i>Exit.</i>]</p>
 <p class="drama">
-PARIS.<br>
+<span class="char-name">PARIS</span><br/>
 O, I am slain! [<i>Falls.</i>] If thou be merciful,<br>
 Open the tomb, lay me with Juliet.
 </p>
 <p class="right">[<i>Dies.</i>]</p>
 <p class="drama">
-ROMEO.<br>
+<span class="char-name">ROMEO</span><br/>
 In faith, I will. Let me peruse this face.<br>
 Mercutio’s kinsman, noble County Paris!<br>
 What said my man, when my betossed soul<br>
@@ -5634,67 +5640,67 @@ Thy drugs are quick. Thus with a kiss I die.
 <p class="scenedesc">Enter, at the other end of the Churchyard,
 <span class="charname">Friar Lawrence,</span> with a lantern, crow, and spade.</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Saint Francis be my speed. How oft tonight<br>
 Have my old feet stumbled at graves? Who’s there?<br>
 Who is it that consorts, so late, the dead?
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 Here’s one, a friend, and one that knows you well.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Bliss be upon you. Tell me, good my friend,<br>
 What torch is yond that vainly lends his light<br>
 To grubs and eyeless skulls? As I discern,<br>
 It burneth in the Capels’ monument.
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 It doth so, holy sir, and there’s my master,<br>
 One that you love.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Who is it?
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 Romeo.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 How long hath he been there?
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 Full half an hour.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Go with me to the vault.
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 I dare not, sir;<br>
 My master knows not but I am gone hence,<br>
 And fearfully did menace me with death<br>
 If I did stay to look on his intents.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Stay then, I’ll go alone. Fear comes upon me.<br>
 O, much I fear some ill unlucky thing.
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 As I did sleep under this yew tree here,<br>
 I dreamt my master and another fought,<br>
 And that my master slew him.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 Romeo! [<i>Advances.</i>]<br>
 Alack, alack, what blood is this which stains<br>
 The stony entrance of this sepulchre?<br>
@@ -5710,14 +5716,14 @@ The lady stirs.
 </p>
 <p class="right">[<i><span class="charname">Juliet</span> wakes and stirs.</i>]</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 O comfortable Friar, where is my lord?<br>
 I do remember well where I should be,<br>
 And there I am. Where is my Romeo?
 </p>
 <p class="right">[<i>Noise within.</i>]</p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 I hear some noise. Lady, come from that nest<br>
 Of death, contagion, and unnatural sleep.<br>
 A greater power than we can contradict<br>
@@ -5729,7 +5735,7 @@ Stay not to question, for the watch is coming.<br>
 Come, go, good Juliet. I dare no longer stay.
 </p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Go, get thee hence, for I will not away.
 </p>
 <p class="right">[<i>Exit <span class="charname">Friar Lawrence</span>.</i>]</p>
@@ -5745,10 +5751,10 @@ To make me die with a restorative.
 <p class="drama">
 Thy lips are warm!</p>
 <p class="drama">
-FIRST WATCH.<br>
+<span class="char-name">FIRST WATCH</span><br/>
 [<i>Within.</i>] Lead, boy. Which way?</p>
 <p class="drama">
-JULIET.<br>
+<span class="char-name">JULIET</span><br/>
 Yea, noise? Then I’ll be brief. O happy dagger.
 </p>
 <p class="right">[<i>Snatching <span class="charname">Romeo’s</span>
@@ -5760,11 +5766,11 @@ body and dies.</i>]</p>
 <p class="scenedesc">Enter <span class="charname">Watch</span> with the
 <span class="charname">Page</span> of Paris.</p>
 <p class="drama">
-PAGE.<br>
+<span class="char-name">PAGE</span><br/>
 This is the place. There, where the torch doth burn.
 </p>
 <p class="drama">
-FIRST WATCH.<br>
+<span class="char-name">FIRST WATCH</span><br/>
 The ground is bloody. Search about the churchyard.<br>
 Go, some of you, whoe’er you find attach.
 </p>
@@ -5785,95 +5791,95 @@ We cannot without circumstance descry.
 <p class="scenedesc">Re-enter some of the <span class="charname">Watch</span> with
 <span class="charname">Balthasar</span>.</p>
 <p class="drama">
-SECOND WATCH.<br>
+<span class="char-name">SECOND WATCH</span><br/>
 Here’s Romeo’s man. We found him in the churchyard.</p>
 <p class="drama">
-FIRST WATCH.<br>
+<span class="char-name">FIRST WATCH</span><br/>
 Hold him in safety till the Prince come hither.</p>
 <p class="scenedesc">Re-enter others of the <span class="charname">Watch</span> with
 <span class="charname">Friar Lawrence</span>.</p>
 <p class="drama">
-THIRD WATCH.<br>Here is a Friar that trembles, sighs, and weeps.<br>
+<span class="char-name">THIRD WATCH</span><br/>Here is a Friar that trembles, sighs, and weeps.<br>
 We took this mattock and this spade from him<br>
 As he was coming from this churchyard side.
 </p>
 <p class="drama">
-FIRST WATCH.<br>
+<span class="char-name">FIRST WATCH</span><br/>
 A great suspicion. Stay the Friar too.</p>
 <p class="scenedesc">Enter the <span class="charname">Prince</span> and
 <span class="charname">Attendants</span>.</p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 What misadventure is so early up,<br>
 That calls our person from our morning’s rest?
 </p>
 <p class="scenedesc">Enter <span class="charname">Capulet, Lady Capulet</span>
 and others.</p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 What should it be that they so shriek abroad?
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 O the people in the street cry Romeo,<br>
 Some Juliet, and some Paris, and all run<br>
 With open outcry toward our monument.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 What fear is this which startles in our ears?
 </p>
 <p class="drama">
-FIRST WATCH.<br>
+<span class="char-name">FIRST WATCH</span><br/>
 Sovereign, here lies the County Paris slain,<br>
 And Romeo dead, and Juliet, dead before,<br>
 Warm and new kill’d.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Search, seek, and know how this foul murder comes.
 </p>
 <p class="drama">
-FIRST WATCH.<br>
+<span class="char-name">FIRST WATCH</span><br/>
 Here is a Friar, and slaughter’d Romeo’s man,<br>
 With instruments upon them fit to open<br>
 These dead men’s tombs.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 O heaven! O wife, look how our daughter bleeds!<br>
 This dagger hath mista’en, for lo, his house<br>
 Is empty on the back of Montague,<br>
 And it mis-sheathed in my daughter’s bosom.
 </p>
 <p class="drama">
-LADY CAPULET.<br>
+<span class="char-name">LADY CAPULET</span><br/>
 O me! This sight of death is as a bell<br>
 That warns my old age to a sepulchre.
 </p>
 <p class="scenedesc">Enter <span class="charname">Montague</span> and others.</p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Come, Montague, for thou art early up,<br>
 To see thy son and heir more early down.
 </p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 Alas, my liege, my wife is dead tonight.<br>
 Grief of my son’s exile hath stopp’d her breath.<br>
 What further woe conspires against mine age?
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Look, and thou shalt see.
 </p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 O thou untaught! What manners is in this,<br>
 To press before thy father to a grave?
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Seal up the mouth of outrage for a while,<br>
 Till we can clear these ambiguities,<br>
 And know their spring, their head, their true descent,<br>
@@ -5883,7 +5889,7 @@ And let mischance be slave to patience.<br>
 Bring forth the parties of suspicion.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 I am the greatest, able to do least,<br>
 Yet most suspected, as the time and place<br>
 Doth make against me, of this direful murder.<br>
@@ -5891,11 +5897,11 @@ And here I stand, both to impeach and purge<br>
 Myself condemned and myself excus’d.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Then say at once what thou dost know in this.
 </p>
 <p class="drama">
-FRIAR LAWRENCE.<br>
+<span class="char-name">FRIAR LAWRENCE</span><br/>
 I will be brief, for my short date of breath<br>
 Is not so long as is a tedious tale.<br>
 Romeo, there dead, was husband to that Juliet,<br>
@@ -5939,12 +5945,12 @@ Be sacrific’d, some hour before his time,<br>
 Unto the rigour of severest law.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 We still have known thee for a holy man.<br>
 Where’s Romeo’s man? What can he say to this?
 </p>
 <p class="drama">
-BALTHASAR.<br>
+<span class="char-name">BALTHASAR</span><br/>
 I brought my master news of Juliet’s death,<br>
 And then in post he came from Mantua<br>
 To this same place, to this same monument.<br>
@@ -5953,13 +5959,13 @@ And threaten’d me with death, going in the vault,<br>
 If I departed not, and left him there.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 Give me the letter, I will look on it.<br>
 Where is the County’s Page that rais’d the watch?<br>
 Sirrah, what made your master in this place?
 </p>
 <p class="drama">
-PAGE.<br>
+<span class="char-name">PAGE</span><br/>
 He came with flowers to strew his lady’s grave,<br>
 And bid me stand aloof, and so I did.<br>
 Anon comes one with light to ope the tomb,<br>
@@ -5967,7 +5973,7 @@ And by and by my master drew on him,<br>
 And then I ran away to call the watch.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 This letter doth make good the Friar’s words,<br>
 Their course of love, the tidings of her death.<br>
 And here he writes that he did buy a poison<br>
@@ -5980,13 +5986,13 @@ And I, for winking at your discords too,<br>
 Have lost a brace of kinsmen. All are punish’d.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 O brother Montague, give me thy hand.<br>
 This is my daughter’s jointure, for no more<br>
 Can I demand.
 </p>
 <p class="drama">
-MONTAGUE.<br>
+<span class="char-name">MONTAGUE</span><br/>
 But I can give thee more,<br>
 For I will raise her statue in pure gold,<br>
 That whiles Verona by that name is known,<br>
@@ -5994,12 +6000,12 @@ There shall no figure at such rate be set<br>
 As that of true and faithful Juliet.
 </p>
 <p class="drama">
-CAPULET.<br>
+<span class="char-name">CAPULET</span><br/>
 As rich shall Romeo’s by his lady’s lie,<br>
 Poor sacrifices of our enmity.
 </p>
 <p class="drama">
-PRINCE.<br>
+<span class="char-name">PRINCE</span><br/>
 A glooming peace this morning with it brings;<br>
 The sun for sorrow will not show his head.<br>
 Go hence, to have more talk of these sad things.<br>

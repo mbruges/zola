@@ -1,5 +1,6 @@
 ---
 title: "iGCSE Past Papers"
+description: "Selection of past papers for iGCSE exams, Literature and Language"
 extra:
     icon: 📑
     keystage: ["4"]
@@ -23,6 +24,5 @@ Click to download the paper as PDF - mark schemes are included at the end of eac
 - [November 2023](/files/LangP1-Nov23.pdf)
 - [June 2024](/files/LangP1-June2024.pdf)
 <!-- - [November 2024](/files/LangP1-Nov2024.pdf) -->
-
 
 > [](note) These papers remain the copyright of their respective publishers.

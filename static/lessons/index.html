@@ -81,8 +81,10 @@ function refreshIframe(interval)
         }
 
         webSocket.onmessage = (event) => {
-            console.log(event.data)
-            liveURL = event.data
+            console.log("Event data: " + event.data)
+            if (event.data != "ping"){
+                liveURL = event.data
+            }
             if ((liveURL.includes("abort")) || liveURL.length == 0) {
                     noLesson()
             } else if (liveURL == 'refresh') {

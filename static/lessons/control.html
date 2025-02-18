@@ -21,11 +21,11 @@ var subURL = "wss://socket.maxbruges.com/ws?key=Martha111"
 let liveURL = 'abort'
 var currentURL = ""
 let reconnectAttempts = 0;
-const maxReconnectAttempts = 2;
+const maxReconnectAttempts = 3;
 
 function loadLessonList() {
     var lessonMenu = `<select onchange="changeLesson(this.value);" id="lessonName" value="" name="menu">\n<option value="" disabled selected>&#9776;</option>`
-    fetch('/index.txt')
+    fetch('/raw-list.txt')
     .then(response => response.text())
     .then((data) => {
         list = (data.split('\n')).sort()
@@ -55,18 +55,25 @@ function loadLessonList() {
         webSocket = new WebSocket(url);
         webSocket.onopen = () =>{
             isConnected = true
+            reconnectAttempts = 0
             let now = new Date().toLocaleTimeString()
             console.log("Connected websocket at " + now)
+            setInterval(() => {
+                console.log("Pinging, WS status: " + webSocket.readyState)
+                webSocket.send("ping")
+            }, 10000); // Ping every 10 seconds
         }
 
         webSocket.onmessage = (event) => {
+            isConnected = true
             console.log(event.data)
-            liveURL = event.data
+            if (event.data != "ping"){
+                liveURL = event.data}
             if ((liveURL.includes("abort")) || liveURL.length == 0) {
               console.log('no lesson')
               noLesson()
-            } else if (liveURL == 'refresh') {
-
+            } 
+             else if (liveURL == 'refresh') {
               console.log('Refresh request')
               document.getElementById('live-frame').contentWindow.location.reload();
             }
@@ -92,10 +99,11 @@ function loadLessonList() {
                   reconnectAttempts++;
                   setTimeout(() => {
                       setupWebSocket(subURL);
-                  }, 1000);
+                  }, 500);
               } else {
-                  console.log("Max reconnect attempts reached. Refreshing page...");
+                  console.log("Websocket status = " + webSocket.readyState + "     Max reconnect attempts reached. Refreshing page...");
                   location.reload();
+                  reconnectAttempts = 0;
               }
             };
 
@@ -105,9 +113,10 @@ function loadLessonList() {
             document.getElementById('loadingTag').innerHTML = 'Connection error 😵 <br><a onclick="window.reload()"><button>Refresh ♻️</button></a><br><a href="/list.html"><button>See lessons</button></a>'
         }
         setInterval(() => {
-            if (!isConnected) {
-                console.log("Connection is lost. Refreshing page...");
-                location.reload();
+            console.log("Websocket status: " + webSocket.readyState)
+            if (webSocket.readyState != 1) {
+                console.log("Connection is lost. Refreshing connection...");
+                setupWebSocket(subURL);
             }
         }, 5000); // Check every 5 seconds
     }

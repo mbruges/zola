@@ -50,7 +50,7 @@ section.title a:hover, section:has(h1) a:hover {
 
 /* Hiding the marker for * */div#\:\$p>svg>foreignObject>section ul:has(li[data-bespoke-marp-fragment=active]){list-style:"";padding:initial}
 
-/* And hiding containers */div#\:\$p>svg>foreignObject>section blockquote:has([data-bespoke-marp-fragment=inactive]):not(:has([data-bespoke-marp-fragment=active])){visibility:hidden}div#\:\$p>svg>foreignObject>section a code{color:inherit;text-decoration:underline solid 3pt;-webkit-text-decoration:underline solid 3pt}div#\:\$p>svg>foreignObject>section a:hover{filter:var(--hover-brightness);text-decoration:underline wavy 2pt}div#\:\$p>svg>foreignObject>section .columns,div#\:\$p>svg>foreignObject>section columns{padding-top:calc(var(--marpit-root-font-size, 1rem) * 0.1);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--marpit-root-font-size, 1rem) * 1)}div#\:\$p>svg>foreignObject>section s{text-decoration:rgb(140,0,0) solid line-through 2.5pt}div#\:\$p>svg>foreignObject>section footer{text-align:left;font-size:x-small;padding-bottom:0.1em;right:0;left:0.5;bottom:1;position:fixed;width:fit-content}div#\:\$p>svg>foreignObject>section footer:before{content:"MB 🐈‍⬛ 2024"}div#\:\$p>svg>foreignObject>section footer a{color:grey;position:fixed}div#\:\$p>svg>foreignObject>section:after{content:attr(data-marpit-pagination) ' of ' attr(data-marpit-pagination-total);font-size:x-small;padding-bottom:0.1em}div#\:\$p>svg>foreignObject>section:after{--marpit-root-font-size:x-small}div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar{-webkit-appearance:none;width:7px}div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}
+/* And hiding containers */div#\:\$p>svg>foreignObject>section blockquote:has([data-bespoke-marp-fragment=inactive]):not(:has([data-bespoke-marp-fragment=active])){visibility:hidden}div#\:\$p>svg>foreignObject>section a code{color:inherit;text-decoration:underline solid 3pt;-webkit-text-decoration:underline solid 3pt}div#\:\$p>svg>foreignObject>section a:hover{filter:var(--hover-brightness);text-decoration:underline wavy 2pt}div#\:\$p>svg>foreignObject>section .columns,div#\:\$p>svg>foreignObject>section columns{padding-top:calc(var(--marpit-root-font-size, 1rem) * 0.1);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--marpit-root-font-size, 1rem) * 1)}div#\:\$p>svg>foreignObject>section s{text-decoration:rgb(140,0,0) solid line-through 2.5pt}div#\:\$p>svg>foreignObject>section footer{text-align:left;font-size:x-small;padding-bottom:0.1em;right:0;left:0.5;bottom:1;position:fixed;width:fit-content}div#\:\$p>svg>foreignObject>section footer:before{content:"MB 🐈‍⬛ 2025"}div#\:\$p>svg>foreignObject>section footer a{color:grey;position:fixed}div#\:\$p>svg>foreignObject>section:after{content:attr(data-marpit-pagination) ' of ' attr(data-marpit-pagination-total);font-size:x-small;padding-bottom:0.1em}div#\:\$p>svg>foreignObject>section:after{--marpit-root-font-size:x-small}div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar{-webkit-appearance:none;width:7px}div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar-thumb{border-radius:4px;background-color:rgba(0,0,0,.5);box-shadow:0 0 1px rgba(255,255,255,.5)}
 
 /* PAGE QUOTE
 
@@ -71,12 +71,13 @@ I have, but making a new tag called 'scroll' which will scroll the box inside
 }*/
 /* click effect */div#\:\$p>svg>foreignObject>section a:focus>code{box-shadow:0 1px 0 2px rgba(126,126,126,0.702);transform:translateY(8px)}div#\:\$p>svg>foreignObject>section iframe[title*=video]{min-height:50dvh;width:100%;height:auto;border-radius:1em;border:5px solid var(--text)}
 
-/* Attempt at github-flavoured callout boxes*/div#\:\$p>svg>foreignObject>section .caution,div#\:\$p>svg>foreignObject>section .challenge,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=caution]),div#\:\$p>svg>foreignObject>section blockquote:has(a[href=challenge]),div#\:\$p>svg>foreignObject>section challenge{font-family:var(--font-family);background-color:rgb(252,225,225);color:black;border:none;border-left:10px solid rgb(166,0,0);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .caution:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=caution]) p:before{content:"! Caution: ";color:rgb(166,0,0);font-weight:bold}div#\:\$p>svg>foreignObject>section blockquote:has(a[href=challenge]){color:rgb(140,0,0);box-shadow:none}div#\:\$p>svg>foreignObject>section .challenge:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=challenge]) p:before,div#\:\$p>svg>foreignObject>section challenge:before{content:"CHALLENGE: ";font-weight:800}div#\:\$p>svg>foreignObject>section .warning,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=keyword]),div#\:\$p>svg>foreignObject>section blockquote:has(a[href=stretch]),div#\:\$p>svg>foreignObject>section blockquote:has(a[href=warning]){font-family:var(--font-family);background-color:rgb(255,252,220);color:rgb(91,77,7);border:none;border-left:10px solid rgb(207,173,0);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .warning:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=warning]) p:before{content:"⚠ Warning: ";color:rgb(207,173,0);font-weight:bold}div#\:\$p>svg>foreignObject>section .note,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=note]){font-family:var(--font-family);background-color:rgb(208,238,255);color:black;border:none;border-left:10px solid rgb(0,116,178);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .note:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=note]) p:before{content:"ℹ Note: ";color:rgb(0,116,178);font-weight:bold}div#\:\$p>svg>foreignObject>section .important,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=important]){font-family:var(--font-family);background-color:rgb(246,216,255);color:black;border:none;border-left:10px solid rgb(119,0,152);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .important:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=important]) p:before{content:"☛ Important: ";color:rgb(119,0,152);font-weight:bold}div#\:\$p>svg>foreignObject>section .tip,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=tip]){font-family:var(--font-family);background-color:rgb(225,255,233);color:black;border:none;border-left:10px solid rgb(0,130,35);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .tip:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=tip]) p:before{content:"✔︎ Tip: ";color:rgb(0,130,35);font-weight:bold}div#\:\$p>svg>foreignObject>section .task,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=task]),div#\:\$p>svg>foreignObject>section task{font-family:var(--font-family);background-color:#c3dbf8;color:#183150;border:none;border-left:10px solid #183150;border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .task:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=task]) p:before,div#\:\$p>svg>foreignObject>section task:before{content:"TASK: ";font-weight:800}div#\:\$p>svg>foreignObject>section:has(:is(h1,marp-h1)) .task:before,div#\:\$p>svg>foreignObject>section:has(:is(h1,marp-h1)) blockquote:has(a[href=task]) p:before,div#\:\$p>svg>foreignObject>section:has(:is(h1,marp-h1)) task:before{content:"DO NOW: "}div#\:\$p>svg>foreignObject>section blockquote:has(a[href=stretch]) p:before{content:"STRETCH: ";color:rgb(152,128,11);font-weight:800}div#\:\$p>svg>foreignObject>section blockquote:has(a[href=keyword]) p:before{content:"🔑 ";color:rgb(152,128,11);font-weight:800}div#\:\$p>svg>foreignObject>section .example,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=eg]),div#\:\$p>svg>foreignObject>section blockquote:has(a[href=example]){font-family:var(--font-family);background-color:#e7e7e7;color:#494949;border:none;border-left:10px solid #494949;border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .example:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=eg]) p:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href=example]) p:before{content:"E.g. ";font-weight:800}
+/* Attempt at github-flavoured callout boxes*/div#\:\$p>svg>foreignObject>section .caution,div#\:\$p>svg>foreignObject>section .challenge,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=caution]),div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=challenge]),div#\:\$p>svg>foreignObject>section challenge{font-family:var(--font-family);background-color:rgb(252,225,225);color:black;border:none;border-left:10px solid rgb(166,0,0);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .caution:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=caution]) p:before{content:"! Caution: ";color:rgb(166,0,0);font-weight:bold}div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=challenge]){color:rgb(140,0,0);box-shadow:none}div#\:\$p>svg>foreignObject>section .challenge:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=challenge]) p:before,div#\:\$p>svg>foreignObject>section challenge:before{content:"CHALLENGE: ";font-weight:800}div#\:\$p>svg>foreignObject>section .warning,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=keyword]),div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=stretch]),div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=warning]){font-family:var(--font-family);background-color:rgb(255,252,220);color:rgb(91,77,7);border:none;border-left:10px solid rgb(207,173,0);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .warning:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=warning]) p:before{content:"⚠ Warning: ";color:rgb(207,173,0);font-weight:bold}div#\:\$p>svg>foreignObject>section .note,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=note]){font-family:var(--font-family);background-color:rgb(208,238,255);color:black;border:none;border-left:10px solid rgb(0,116,178);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .note:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=note]) p:before{content:"ℹ Note: ";color:rgb(0,116,178);font-weight:bold}div#\:\$p>svg>foreignObject>section .important,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=important]){font-family:var(--font-family);background-color:rgb(246,216,255);color:black;border:none;border-left:10px solid rgb(119,0,152);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .important:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=important]) p:before{content:"☛ Important: ";color:rgb(119,0,152);font-weight:bold}div#\:\$p>svg>foreignObject>section .tip,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=tip]){font-family:var(--font-family);background-color:rgb(225,255,233);color:black;border:none;border-left:10px solid rgb(0,130,35);border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .tip:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=tip]) p:before{content:"✔︎ Tip: ";color:rgb(0,130,35);font-weight:bold}div#\:\$p>svg>foreignObject>section .task,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=task]),div#\:\$p>svg>foreignObject>section task{font-family:var(--font-family);background-color:#c3dbf8;color:#183150;border:none;border-left:10px solid #183150;border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .task:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=task]) p:before,div#\:\$p>svg>foreignObject>section task:before{content:"TASK: ";font-weight:800}div#\:\$p>svg>foreignObject>section:has(:is(h1,marp-h1)) .task:before,div#\:\$p>svg>foreignObject>section:has(:is(h1,marp-h1)) blockquote:has(a[href$=task]) p:before,div#\:\$p>svg>foreignObject>section:has(:is(h1,marp-h1)) task:before{content:"DO NOW: "}div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=stretch]) p:before{content:"STRETCH: ";color:rgb(152,128,11);font-weight:800}div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=keyword]) p:before{content:"🔑 ";color:rgb(152,128,11);font-weight:800}div#\:\$p>svg>foreignObject>section .example,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=eg]),div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=example]){font-family:var(--font-family);background-color:#e7e7e7;color:#494949;border:none;border-left:10px solid #494949;border-radius:0.3em;box-shadow:none}div#\:\$p>svg>foreignObject>section .example:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=eg]) p:before,div#\:\$p>svg>foreignObject>section blockquote:has(a[href$=example]) p:before{content:"E.g. ";font-weight:800}
 
 
 /* CAPTION for QUOTE
 
-By adding a nested quote, a small caption can be positioned at the bottom of the text, for attribution */div#\:\$p>svg>foreignObject>section blockquote blockquote{padding:0px;border:none;font-style:italic;box-shadow:none;font-size:0.7em;text-align:right;position:relative;display:flex;margin-right:1px;margin-bottom:-30px;margin-top:-20px;padding-bottom:-0px;color:rgba(0,0,0,0.705);height:fit-content;background:transparent}div#\:\$p>svg>foreignObject>section blockquote blockquote p:before{content:"~"!important;display:inline-block;vertical-align:top;margin-right:0.2em}div#\:\$p>svg>foreignObject>section .toc{position:relative;min-width:70%;margin-top:-5em}div#\:\$p>svg>foreignObject>section .toc :is(h3,marp-h3){width:100%;margin:0px;background:var(--text);color:var(--bg);text-align:center;margin-bottom:0.3em}div#\:\$p>svg>foreignObject>section #outer-arrow{color:var(--bg);background:var(--text);width:10%;font-size:1.5em;border-radius:var(--border-radius);margin-left:auto;margin-right:auto;padding:0.1em;text-align:center;cursor:pointer;margin-bottom:-2em}div#\:\$p>svg>foreignObject>section section#outer-arrow{--marpit-root-font-size:1.5em}div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar{width:1em}div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar-thumb,div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar-thumb:hover{background:var(--text);border-radius:8px}div#\:\$p>svg>foreignObject>section :is(pre,marp-pre):has(.language-countdown){border:none;background:black;color:white;padding:initial;max-width:16em!important;min-width:16em!important;padding:0.5em;text-align:center}div#\:\$p>svg>foreignObject>section .language-countdown{font-size:1.8em;color:white}div#\:\$p>svg>foreignObject>section section.language-countdown{--marpit-root-font-size:1.8em}div#\:\$p>svg>foreignObject>section :is(pre,marp-pre):has(.language-countdown):before{content:none}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure>figcaption{position:absolute;border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content],div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#\:\$p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style><script type="module"> 		window.onload = () =>{ 			const countdownElements = document.querySelectorAll('[class*="countdown"]'); 			if (countdownElements.length > 0) { 				import('/static/scripts.js').then(module => { 					const { updateCountdown } = module; 					for (let i = 0; i < countdownElements.length; i++) { 						updateCountdown(countdownElements[i].innerText,countdownElements[i])}}) 		}} 		</script></head><body><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="1" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+By adding a nested quote, a small caption can be positioned at the bottom of the text, for attribution */div#\:\$p>svg>foreignObject>section blockquote blockquote{padding:0px;border:none;font-style:italic;box-shadow:none;font-size:0.7em;text-align:right;position:relative;display:flex;margin-right:1px;margin-bottom:-30px;margin-top:-20px;padding-bottom:-0px;color:rgba(0,0,0,0.705);height:fit-content;background:transparent}div#\:\$p>svg>foreignObject>section blockquote blockquote p:before{content:"~"!important;display:inline-block;vertical-align:top;margin-right:0.2em}div#\:\$p>svg>foreignObject>section .toc{position:relative;min-width:70%;margin-top:-5em}div#\:\$p>svg>foreignObject>section .toc :is(h3,marp-h3){width:100%;margin:0px;background:var(--text);color:var(--bg);text-align:center;margin-bottom:0.3em}div#\:\$p>svg>foreignObject>section #outer-arrow{color:var(--bg);background:var(--text);width:10%;font-size:1.5em;border-radius:var(--border-radius);margin-left:auto;margin-right:auto;padding:0.1em;text-align:center;cursor:pointer;margin-bottom:-2em}div#\:\$p>svg>foreignObject>section section#outer-arrow{--marpit-root-font-size:1.5em}div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar{width:1em}div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar-thumb,div#\:\$p>svg>foreignObject>section ::-webkit-scrollbar-thumb:hover{background:var(--text);border-radius:8px}div#\:\$p>svg>foreignObject>section :is(pre,marp-pre):has(.language-countdown){border:none;background:black;color:white;padding:initial;max-width:16em!important;min-width:16em!important;padding:0.5em;text-align:center}div#\:\$p>svg>foreignObject>section .language-countdown{font-size:1.8em;color:white}div#\:\$p>svg>foreignObject>section section.language-countdown{--marpit-root-font-size:1.8em}div#\:\$p>svg>foreignObject>section :is(pre,marp-pre):has(.language-countdown):before{content:none}div#\:\$p>svg>foreignObject>section .mindmap,div#\:\$p>svg>foreignObject>section mindmap{height:6em;
+    /* border: 4pt solid #183150; */background:url(static/mindmap.svg) no-repeat center;background-color:#f0f8ff;padding:1em;display:flex;justify-content:center;align-items:center;text-align:center;font-size:1.2em;color:#f0f8ff}div#\:\$p>svg>foreignObject>section section.mindmap{--marpit-root-font-size:1.2em}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure>figcaption{position:absolute;border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content],div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#\:\$p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style><script type="module"> 		window.onload = () =>{ 			const countdownElements = document.querySelectorAll('[class*="countdown"]'); 			if (countdownElements.length > 0) { 				import('/static/scripts.js').then(module => { 					const { updateCountdown } = module; 					for (let i = 0; i < countdownElements.length; i++) { 						updateCountdown(countdownElements[i].innerText,countdownElements[i])}}) 		}} 		</script></head><body><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="1" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <p><blockquote class='scroll toc'><h3>Romeo and Juliet</h3><ol>
       <li><a href='#the-tragedy-of-romeo-and-juliet' target=_self>The <em>Tragedy</em> of Romeo and Juliet</a></li>
       <li><a href='#defining-tragedy' target=_self>Defining Tragedy</a></li>
@@ -90,6 +91,14 @@ By adding a nested quote, a small caption can be positioned at the bottom of the
       <li><a href='#meeting-romeo' target=_self>Meeting Romeo</a></li>
       <li><a href='#writing-about-romeo' target=_self>Writing about Romeo</a></li>
       <li><a href='#writing-about-romeo-continued' target=_self>Writing about Romeo, continued</a></li>
+      <li><a href='#reviewing-the-plot' target=_self>Reviewing the Plot</a></li>
+      <li><a href='#meeting-the-capulets' target=_self>Meeting the Capulets</a></li>
+      <li><a href='#considering-fatherhood' target=_self>Considering Fatherhood</a></li>
+      <li><a href='#meeting-juliet' target=_self>Meeting Juliet</a></li>
+      <li><a href='#at-the-party' target=_self>At the party</a></li>
+      <li><a href='#the-aftermath' target=_self>The Aftermath</a></li>
+      <li><a href='#meeting-in-secret' target=_self>Meeting in Secret</a></li>
+      <li><a href='#by-any-other-name' target=_self>By Any Other Name</a></li>
 </ol></blockquote><p id='outer-arrow'>↧</p>
 <script>
 			function scrollToBottom() {
@@ -102,7 +111,7 @@ By adding a nested quote, a small caption can be positioned at the bottom of the
 </p>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="2" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="2" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="the-tragedy-of-romeo-and-juliet">The <em>Tragedy</em> of Romeo and Juliet</h1>
 <p><strong>LO:</strong> To consider what <strong>Tragedy</strong> means in Drama, and what we can infer</p>
 <blockquote>
@@ -116,7 +125,7 @@ By adding a nested quote, a small caption can be positioned at the bottom of the
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="3" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:60%;" data-marpit-pagination-total="38" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.techhive.com/wp-content/uploads/2023/05/netflixcategoriesth.jpg?quality=50&amp;strip=all&amp;w=1024&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="40%" height="720"><section id="3" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="3" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:60%;" data-marpit-pagination-total="38" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="3" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:60%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://www.techhive.com/wp-content/uploads/2023/05/netflixcategoriesth.jpg?quality=50&amp;strip=all&amp;w=1024&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="40%" height="720"><section id="3" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="3" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:60%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="genres">Genres</h2>
 <p>In 2024, Netflix has more than 27,000 genres of film and TV available to watch.</p>
 <p>But Shakespeare's audiences in 1600 only had <em><strong>three</strong></em> genres to choose from.</p>
@@ -126,7 +135,7 @@ By adding a nested quote, a small caption can be positioned at the bottom of the
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="3" style="" data-marpit-pagination-total="38" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="4" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="3" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="4" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="the-three-genres-of-play">The Three Genres of Play</h2>
 <blockquote>
 <p><a target=_blank href="task"></a> Based on the names of the <em>genres</em>, and the emoji clues, what would you expect to see in each type of play?</p>
@@ -152,7 +161,7 @@ By adding a nested quote, a small caption can be positioned at the bottom of the
 </table>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="5" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="5" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <columns>
 <blockquote>
 <p><a target=_blank href="task"></a>  Copy down the boxes, adding your ideas. (Save <code>Tragedy</code> for later!)</p>
@@ -187,7 +196,7 @@ By adding a nested quote, a small caption can be positioned at the bottom of the
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="6" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="6" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="defining-tragedy">Defining Tragedy</h1>
 <columns>
 <blockquote>
@@ -208,7 +217,7 @@ By adding a nested quote, a small caption can be positioned at the bottom of the
 </ol>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="7" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="7" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="writing-the-rules-of-tragedy">Writing the rules of tragedy</h1>
 <blockquote>
 <p><a target=_blank href="task"></a> Based on what we know so far, write three rules for a TRAGEDY:<br />
@@ -220,7 +229,7 @@ A tragedy must...<br />
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="8" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="38" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/%CE%91%E1%BC%B1_%CE%B1%E1%BC%B6%CE%B3%CE%B5%CF%82.jpg/350px-%CE%91%E1%BC%B1_%CE%B1%E1%BC%B6%CE%B3%CE%B5%CF%82.jpg&quot;);background-size:120%;"></figure><figure style="background-image:url(&quot;https://phuulishfellow.wordpress.com/wp-content/uploads/2022/04/8199628_orig.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="8" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="8" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="38" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="8" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/%CE%91%E1%BC%B1_%CE%B1%E1%BC%B6%CE%B3%CE%B5%CF%82.jpg/350px-%CE%91%E1%BC%B1_%CE%B1%E1%BC%B6%CE%B3%CE%B5%CF%82.jpg&quot;);background-size:120%;"></figure><figure style="background-image:url(&quot;https://phuulishfellow.wordpress.com/wp-content/uploads/2022/04/8199628_orig.png&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="8" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="8" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="etymology-exploration">Etymology Exploration</h2>
 <blockquote>
 <p><strong>τραγῳδός</strong></p>
@@ -236,7 +245,7 @@ A tragedy must...<br />
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="8" style="" data-marpit-pagination-total="38" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="9" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="38" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://cdn.britannica.com/84/87984-050-7C5547FE/Detail-Roman-copy-portrait-bust-Aristotle-Greek.jpg&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="9" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="9" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="38" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="8" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="9" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://cdn.britannica.com/84/87984-050-7C5547FE/Detail-Roman-copy-portrait-bust-Aristotle-Greek.jpg&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="9" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="9" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="meet-aristotle-the-father-of-drama">Meet <a target=_blank href="https://en.wikipedia.org/wiki/Aristotle">Aristotle</a>, the father of <em>Drama</em></h2>
 <ul>
 <li>Lived in Ancient Greece, in the 4th Century BC (nearly 2000 years before Shakespeare)</li>
@@ -249,7 +258,7 @@ A tragedy must...<br />
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="9" style="" data-marpit-pagination-total="38" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="10" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:25%;" data-marpit-pagination-total="38" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://cdn.britannica.com/84/87984-050-7C5547FE/Detail-Roman-copy-portrait-bust-Aristotle-Greek.jpg&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="75%" height="720"><section id="10" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="10" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:25%;" data-marpit-pagination-total="38" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="9" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="10" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:25%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://cdn.britannica.com/84/87984-050-7C5547FE/Detail-Roman-copy-portrait-bust-Aristotle-Greek.jpg&quot;);background-size:cover;"></figure></div></section></foreignObject><foreignObject width="75%" height="720"><section id="10" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="10" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:25%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="aristotles-rules-from-the-poetics">Aristotle's Rules (from <em>The Poetics</em>)</h2>
 <blockquote>
 <p>A <strong>tragedy</strong>, then, should be:</p>
@@ -266,7 +275,7 @@ A tragedy must...<br />
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="10" style="" data-marpit-pagination-total="38" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="11" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="10" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="11" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="plenary-making-predictions">PLENARY: Making predictions</h2>
 <blockquote>
 <p><a target=_blank href="task"></a><br />
@@ -275,7 +284,7 @@ If our play this term is called <em>The <strong>Tragedy</strong> of Romeo &amp; 
 <p><img src="https://www.gutenberg.org/cache/epub/1513/pg1513.cover.medium.jpg" title='this.alt' alt="" style="width:500px;" /></p>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="12" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="12" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-url">learn.maxbruges.com
 </code></pre>
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="ngrt-test">NGRT Test</h1>
@@ -295,7 +304,7 @@ If our play this term is called <em>The <strong>Tragedy</strong> of Romeo &amp; 
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="13" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="13" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="reading-the-prologue">Reading the prologue</h1>
 <p>LO: to consider how Shakespeare opens the play</p>
 <blockquote>
@@ -309,7 +318,7 @@ If our play this term is called <em>The <strong>Tragedy</strong> of Romeo &amp; 
 </code></pre>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="14" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="14" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="pre-learning-keywords">Pre-learning keywords</h2>
 <columns>
 <blockquote>
@@ -372,7 +381,7 @@ If our play this term is called <em>The <strong>Tragedy</strong> of Romeo &amp; 
 </columns>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="15" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="15" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="the-play-begins">The Play Begins</h1>
 <blockquote>
 <p><a target=_blank href="task"></a> Finish your table of definitions and examples from last lesson.</p>
@@ -423,7 +432,7 @@ If our play this term is called <em>The <strong>Tragedy</strong> of Romeo &amp; 
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="16" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="16" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="whats-a-prologue">What's a <code>prologue</code>?</h2>
 <ul>
 <li>In Shakespeare's time, plays often began with a short speech called a <code>prologue</code></li>
@@ -435,14 +444,14 @@ If our play this term is called <em>The <strong>Tragedy</strong> of Romeo &amp; 
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="17" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:75%;" data-marpit-pagination-total="38" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://a.travel-assets.com/findyours-php/viewfinder/images/res70/340000/340577-Veneto-Italy.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="25%" height="720"><section id="17" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="17" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:75%;" data-marpit-pagination-total="38" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="17" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:75%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://a.travel-assets.com/findyours-php/viewfinder/images/res70/340000/340577-Veneto-Italy.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="25%" height="720"><section id="17" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="17" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:75%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="in-fair-verona">&quot;In Fair Verona&quot;</h2>
 <ul>
 <li>City in Italy</li>
 </ul>
 <footer> </footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="17" style="" data-marpit-pagination-total="38" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="18" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="17" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="18" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <columns>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-quote">Two households, both alike in dignity,​
 In fair Verona, where we lay our scene,​
@@ -477,7 +486,7 @@ What here shall miss, our toil shall strive to mend.​
 </columns>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="19" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="19" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="summarising">Summarising</h2>
 <blockquote>
 <p><a target=_blank href="task"></a>  Write a short paragraph explaining what the prologue tells us. Try to cover all these points:</p>
@@ -496,7 +505,7 @@ What here shall miss, our toil shall strive to mend.​
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="20" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="20" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="montagues-vs-capulets">Montagues vs Capulets</h1>
 <p>LO: to consider the opening scene of the play</p>
 <blockquote>
@@ -507,7 +516,7 @@ What here shall miss, our toil shall strive to mend.​
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="21" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="21" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="knowledge-check">Knowledge Check</h2>
 <blockquote>
 <p><a target=_blank href="task"></a> Write full sentence answers to each of these questions</p>
@@ -524,7 +533,7 @@ What here shall miss, our toil shall strive to mend.​
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="22" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:36%;" data-marpit-pagination-total="38" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;static/rj-fight.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="64%" height="720"><section id="22" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="22" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:36%;" data-marpit-pagination-total="38" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="22" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:36%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;static/rj-fight.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="64%" height="720"><section id="22" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="22" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:36%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="montagues-%E2%9A%94%EF%B8%8F-capulets">Montagues ⚔️ Capulets</h2>
 <p>&#8220;Two Households, alike in dignity...&#8221;</p>
 <blockquote>
@@ -548,7 +557,7 @@ Tybalt</p>
 </columns>
 <footer> </footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="22" style="" data-marpit-pagination-total="38" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="23" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="22" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="23" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <blockquote>
 <h2 id="scene-i-on-the-street-a-public-place">SCENE I. On the street, A public place.</h2>
 <p>Enter Sampson and Gregory armed with swords and bucklers.<br />
@@ -557,7 +566,7 @@ Enter Abraham and Balthasar</p>
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="24" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="24" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-quote">ABRAHAM: Do you bite your thumb at us, sir?  
 SAMPSON: I do bite my thumb, sir.  
 ABRAHAM: Do you bite your thumb at us, sir?  
@@ -577,7 +586,7 @@ They fight
 </code></pre>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="25" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="25" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-quote">Enter BENVOLIO  
 BENVOLIO: Part, fools! Put up your swords; you know not what you do.  
 Beats down their swords. 
@@ -593,7 +602,7 @@ They fight
 </code></pre>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="26" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="26" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="reading-the-scene">Reading the scene</h2>
 <ol>
 <li>What is happening in this scene?</li>
@@ -604,7 +613,7 @@ How is their reaction different and what does this say about their characters?</
 </ol>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="27" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="27" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="thinking-about-violence">Thinking about violence</h1>
 <p>LO: to consider the opening of the play</p>
 <blockquote>
@@ -615,7 +624,7 @@ How is their reaction different and what does this say about their characters?</
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="28" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="38" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;static/rj-fight.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="28" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="28" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="38" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="28" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;static/rj-fight.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="28" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="28" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="act-1-scene-1">Act 1, Scene 1</h2>
 <blockquote>
 <p><a target=_blank href="task"></a> Pick (atleast) 4 questions from the below and answer them, writing about the scene we read last lesson.</p>
@@ -632,18 +641,19 @@ How is their reaction different and what does this say about their characters?</
 </ol>
 <footer> </footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="28" style="" data-marpit-pagination-total="38" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="29" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="38" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://maxbruges.com/images/fencing-elizabethans.webp&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="29" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="29" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="38" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="28" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="29" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://maxbruges.com/images/fencing-elizabethans.webp&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="29" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="29" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="homework-context-of-violence">Homework: context of violence</h2>
 <p>Read the article I've uploaded to Teams and complete the questions that are attached to it.</p>
 <p><a target=_blank href="https://maxbruges.com/learn/textbook/violence-of-r-j/"><code>Homework 📄</code></a></p>
 <footer> </footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="29" style="" data-marpit-pagination-total="38" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="30" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="29" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="30" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="reading-respite">Reading Respite</h1>
 <blockquote>
 <p><a target=_blank href="task"></a> Take your <strong>reading book</strong> out of your bag, and start reading.</p>
 </blockquote>
-<h2 id="why">Why?</h2>
+<p>Don't have a book? Go to <a target=_blank href="https://maxbruges.com/experiments/open-library">here and download one</a></p>
+<h3 id="maxbrugescomexperimentsopen-library">maxbruges.com/experiments/open-library</h3>
 <blockquote>
 <p>Reading for 20 minutes a day, <em>every day</em>, will help you build your vocabulary and become a more confident English student.<br />
 You can read...</p>
@@ -658,7 +668,7 @@ You can read...</p>
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="31" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="31" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="meeting-romeo">Meeting Romeo</h1>
 <p>LO: To consider what sort of person Romeo is</p>
 <blockquote>
@@ -669,7 +679,7 @@ You can read...</p>
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="32" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="32" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="breaking-up-the-fight">Breaking up the fight</h2>
 <p>The Prince is the leader of the city, and in charge of keeping it peaceful.</p>
 <columns>
@@ -697,7 +707,7 @@ Your lives shall pay the forfeit of the peace.
 </columns>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="33" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="33" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="meeting-romeo-1">Meeting Romeo</h2>
 <p>We're going to read the scene that introduces <strong>Romeo</strong>.</p>
 <blockquote>
@@ -732,7 +742,7 @@ Your lives shall pay the forfeit of the peace.
 <p><a target=_blank href="http://maxbruges.com/learn/textbook/rj-romeo-enters/"><code>Enter Romeo</code></a></p>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="34" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="34" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="writing-about-romeo">Writing about Romeo</h1>
 <p>LO: To consider how we can analyse the language used by Shakespeare</p>
 <blockquote>
@@ -746,7 +756,7 @@ Your lives shall pay the forfeit of the peace.
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="35" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="35" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="noting-down-our-ideas">Noting down our ideas</h2>
 <blockquote>
 <p><a target=_blank href="task"></a> Use a mind map and with your partner write down all the emotions Romeo is showing here.</p>
@@ -762,7 +772,7 @@ Your lives shall pay the forfeit of the peace.
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="36" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="36" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="zooming-in">Zooming in</h2>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-quote">ROMEO:
 O brawling love! O loving hate!
@@ -774,7 +784,7 @@ Still-waking sleep, that is not what it is!
 </code></pre>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="37" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="37" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="writing-about-romeo-continued">Writing about Romeo, continued</h1>
 <p>LO: To consider how we can analyse the language used by Shakespeare</p>
 <blockquote>
@@ -782,7 +792,7 @@ Still-waking sleep, that is not what it is!
 </blockquote>
 <footer> </footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="38" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="38" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
 <h2 id="now-write-your-own-paragraph">Now, write your OWN paragraph</h2>
 <columns>
 <div>
@@ -805,6 +815,497 @@ Still-waking sleep, that is not what it is!
 <strong>EXPLAIN</strong> The use of an oxymoron suggests Romeo is feeling conflicted and confused. The noun &quot;fire&quot; has connotations of destruction, suggesting that Romeo thinks the love is dangerous. Furthermore the adjective &quot;cold&quot; suggests that this love brings no comfort to Romeo.</p>
 </blockquote>
 </columns>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="39" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="reviewing-the-plot">Reviewing the Plot</h1>
+<p>LO: To consider our understanding of what happens in the play</p>
+<blockquote>
+<p><a target=_blank href="task"></a> Based on what we read on Friday, summarise the story of the play in two sentences</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="challenge"></a> Where would you set the play if you were writing it today? Which city/country? Why?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="40" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.shicho.net%2F38%2Fwp-content%2Fuploads%2FRomeo-and-Juliet-before-Father-Lawrence-Karl-Ludwig-Friedrich-Becker.jpg&amp;f=1&amp;nofb=1&amp;ipt=2c1691f419fd3929ed7ea88f2f2d6d5dbaa41a4b17871dccb34ffd102c95e197&amp;ipo=images&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="40" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="40" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="finishing-off">Finishing off</h2>
+<blockquote>
+<p><a target=_blank href="task"></a> Complete the tasks from Friday's lesson if you haven't already</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="stretch"></a> Tackle another one of the <strong>Challenges</strong> on the sheet.</p>
+</blockquote>
+<p><a target=_blank href="https://maxbruges.com/learn/textbook/rj-summary/"><code>The worksheet (on Teams) 📃</code></a></p>
+<blockquote>
+<p><a target=_blank href="challenge"></a> Would Aristotle agree that this is a tragedy? Does it break any of his rules?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="40" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="41" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="meeting-the-capulets">Meeting the Capulets</h1>
+<blockquote>
+<p>&#8220;You should always obey your father, whatever he says.&#8221;</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="task"></a> How much do you agree with this sentence? Is it always right?</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="challenge"></a> Write your own sentence of advice for children</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="42" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<h2 id="life-for-women-in-the-time-of-shakespeare">Life for women in the time of Shakespeare</h2>
+<blockquote>
+<p>In Elizabethan times women belonged to their fathers (or their brothers if their father died), and then to their husbands. Women could not own property of their own. This is one of the reasons Queen Elizabeth I never married – she did not want to give up her power to a man.​<br />
+Women were allowed to marry from the age of 12 in Shakespeare’s time, but often only women from wealthy families would marry so young. In the play Romeo and Juliet, Juliet is 13, but her mother says by that age she was already married with a child. Many marriages were arranged for the good of the family and small children might be ‘betrothed’ to each other in order to join the families together before they were old enough to get married. Many women did not marry until their mid-20s. Men had to be able to support a household when they married.​<br />
+Women were not allowed on the stage. All the female parts in plays at the time were played by boys whose voices hadn’t broken yet – the apprentices. In several of the plays the female characters disguise themselves as men – so the audience would have seen a man pretending to be a woman pretending to be a man. This happens in Twelfth Night, As You Like It and The Merchant of Venice.​</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="task"></a> Summarise this information in four bulletpoints<br />
+<a target=_blank href="challenge"></a> How much has this changed?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="43" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fe7%2Fd4%2Fa4%2Fe7d4a481809c7df5c96ba76b4287f206.jpg&amp;f=1&amp;nofb=1&amp;ipt=d1fed48ef2a47f1eb9895cda7796ac6f0d461b24018e6a1af2630ebd5c393b71&amp;ipo=images&quot;);"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="43" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="43" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="juliets-father">Juliet's Father</h2>
+<blockquote>
+<p><a target=_blank href="task"></a> Based on what we know about men and women in Elizabethan times, what predictions can you make about Juliet's father, Capulet?<br />
+<em>&quot;I would expect Juliet's father to be...&quot;</em></p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="stretch"></a> Do the same for Paris: 'a young Nobleman, and a cousin to the Prince of Verona.'<br />
+<em>&quot;Paris would be...&quot;</em></p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="43" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="44" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-quote">CAPULET: My child is yet a stranger in the world,
+She hath not seen the change of fourteen years;
+Let two more summers wither in their pride
+Ere we may think her ripe to be a bride.
+
+PARIS: Younger than she are happy mothers made.
+
+CAPULET: And too soon marr’d are those so early made.
+The earth hath swallowed all my hopes but she,
+She is the hopeful lady of my earth:
+But woo her, gentle Paris, get her heart,
+My will to her consent is but a part;
+And she agree, within her scope of choice
+Lies my consent and fair according voice.
+</code></pre>
+<blockquote>
+<p><a target=_blank href="task"></a> What are they agreeing to?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="45" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="considering-fatherhood">Considering Fatherhood</h1>
+<p>LO: To look more closely at the character of Lord Capulet</p>
+<blockquote>
+<p><a target=_blank href="task"></a> Why <strong>should</strong> Lord Capulet make Juliet marry Paris? Why shouldn't he?<br />
+Write two sentences for each option</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="challenge"></a> Juliet is going to be 14 - should she be allowed to be involved in this conversation?</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="keyword"></a>  PATRIACHY</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-marpit-fragments="1" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="46" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<h2 id="what-is-patriachy">What is <code>Patriachy</code>?</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-pre">            P A T R I A R C H Y
+
+
+
+
+</code></pre>
+<blockquote>
+<p><a target=_blank href="challenge"></a></p>
+<ul>
+<li data-marpit-fragment="1">Based on this, what do you think <code>matriachy</code> means?</li>
+</ul>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="47" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<h2 id="annotating-the-scene">Annotating the scene</h2>
+<columns>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-quote">CAPULET: My child is yet a stranger in the world,
+She hath not seen the change of fourteen years;
+Let two more summers wither in their pride
+Ere we may think her ripe to be a bride.
+
+PARIS: Younger than she are happy mothers made.
+
+CAPULET: And too soon marr’d are those so early made.
+The earth hath swallowed all my hopes but she,
+She is the hopeful lady of my earth:
+But woo her, gentle Paris, get her heart,
+My will to her consent is but a part;
+And she agree, within her scope of choice
+Lies my consent and fair according voice.
+This night I hold an old accustom'd feast,
+Whereto I have invited many a guest,
+Such as I love; and you, among the store,
+One more, most welcome, makes my number more....
+</code></pre>
+<div>
+<blockquote>
+<p><a target=_blank href="task"></a> Answer the questions on the sheet</p>
+<ol>
+<li>What does Capulet think about Juliet?</li>
+<li>What has happened to his other children? How does that change his attitude towards Juliet?</li>
+<li>How much say does Juliet have in the marriage? What does that tell you about their society?</li>
+<li>Why do you think he is hosting a party (<code>feast</code>) and wants Paris there?</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="stretch"></a> How is Capulet's behaviour <em>patriarchal?</em></p>
+</blockquote>
+</columns>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="48" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<h2 id="plenary-summarising-lord-capulet">Plenary: Summarising Lord Capulet</h2>
+<blockquote>
+<p><a target=_blank href="task"></a> What are your first impressions of Capulet as a father?​ Write a paragraph; you can use the sentences below to start off.</p>
+</blockquote>
+<blockquote>
+<p>Capulet is someone who appears to feel....... about his daughter.<br />
+When Paris asks if Capulet has considered his proposal, Capulet responds that Juliet .....which would suggest he thinks ......<br />
+We can also see this when he says....<br />
+Capulet’s plans for Juliet mirror Elizabethan beliefs around marriage because......</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="49" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="meeting-juliet">Meeting Juliet</h1>
+<p>LO: To consider how Shakespeare introduces the character of Juliet</p>
+<blockquote>
+<p><a target=_blank href="task"></a> What were women <em>expected</em> to do and behave like in this time?</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="challenge"></a> Are you more sympathetic to Lord Capulet now than when we started?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="50" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<h2 id="what-we-expect">What we expect</h2>
+<blockquote>
+<p><a target=_blank href="task"></a> Add some ideas to this mind map, thinking about how we expect Juliet to be and behave.</p>
+</blockquote>
+<p><img src="static/mindmap.svg" title='this.alt' alt="contain" style="width:1000px;height:340px;" /></p>
+<blockquote>
+<p><a target=_blank href="stretch"></a> How will she behave with her parents?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="51" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<h2 id="reading-scene-3">Reading Scene 3</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-quote">[Enter Lady Capulet and Nurse.]
+
+LADY CAPULET: Nurse, where’s my daughter? Call her forth to me.
+
+NURSE: Now, by my maidenhead, at twelve year old,
+I bade her come. What, lamb! What ladybird!
+God forbid! Where’s this girl? What, Juliet!
+
+[Enter Juliet.]
+
+JULIET: How now, who calls?
+
+NURSE: Your mother.
+
+JULIET: Madam, I am here. What is your will?
+
+LADY CAPULET: This is the matter. Nurse, give leave awhile,
+We must talk in secret. Nurse, come back again,
+I have remember’d me, thou’s hear our counsel.
+</code></pre>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="52" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="at-the-party">At the party</h1>
+<p>LO: To consider how Shakespeare uses language to show Romeo attraction to Juliet</p>
+<blockquote>
+<p><a target=_blank href="task"></a> Finish the sentences below, summarising what we learnt about Juliet yesterday. Try to include the <strong>keyword</strong> from yesterday!</p>
+</blockquote>
+<blockquote>
+<p>In Scene 3, Shakespeare presents Juliet as being....<br />
+We can see this when Shakespeare uses the phrase....<br />
+She is also presented as....</p>
+</blockquote>
+<p><a target=_blank href="https://maxbruges.com/hangman?b2JlZGllbnQ="><code>Keyword clue 🔑</code></a></p>
+<blockquote>
+<p><a target=_blank href="stretch"></a> What do we learn about <em>Lady Capulet?</em> Add two sentences looking at how she is presented</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="53" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages6.fanpop.com%2Fimage%2Fphotos%2F35800000%2FRomeo-and-Juliet-romeo-and-juliet-2013-35804507-3000-2000.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="53" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="53" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="at-the-party-1">At the party</h2>
+
+<ul>
+<li>Lord <strong>Capulet</strong> is hosting a party for his family's friends</li>
+<li><strong>Juliet</strong> will be introduced to <strong>Paris</strong> at this party</li>
+<li><strong>Romeo</strong> and his friends have secretly entered the party</li>
+</ul>
+<blockquote>
+<p><a target=_blank href="task"></a> What would each character be <em>feeling</em> in this scene, and why?</p>
+<ul>
+<li>👧 &quot;Juliet feels..... because....&quot;</li>
+<li>🤴 &quot;Lord Capulet feels..... because....&quot;</li>
+<li>💁‍♂️ &quot;Romeo feels..... because....&quot;</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="stretch"></a> Pick one of the characters and write a short direction for an actor playing the role</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="53" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="54" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/d/d2/Pendant_%28cropped%29.jpg&quot;);"></figure><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fburning-torch_1003030-5088.jpg&amp;f=1&amp;nofb=1&amp;ipt=af026275f6418894a152b28e661d4fb4312eed342c645f8270d45ac5fc1270ea&amp;ipo=images&quot;);"></figure><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.EmRAZW4_GAm_ewmYCAEuqgHaFj%26pid%3DApi&amp;f=1&amp;ipt=65bbf6fb5a41a19691df20bb17b53731e119bcff9dc6f8d0f699e8dd85a4732d&amp;ipo=images&quot;);"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="54" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="54" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="language-of-love">Language of love</h2>
+
+<blockquote>
+<p><a target=_blank href="task"></a> Which of these images would make the best <em>simile</em> for something beautiful? Why? <strong>Discuss with your partner, then write down your choice</strong></p>
+<h3 id="jewel-%F0%9F%92%8E-torch-%F0%9F%94%A5-dove-%F0%9F%95%8A%EF%B8%8F"><code>jewel 💎</code> <code>torch 🔥</code>   <code>dove 🕊️</code></h3>
+</blockquote>
+<blockquote>
+<p>&#8220;Beauty is like a..., because it...&#8221;</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="challenge"></a> Write your own simile or metaphor</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="54" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="55" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<h2 id="love-at-first-sight">Love at first sight?</h2>
+<blockquote>
+<p><a target=_blank href="task"></a> Start our annotation by finding the <em>images</em> Romeo uses to describe Juliet <code>🕊️</code> <code>💎</code> <code>🔥</code></p>
+</blockquote>
+<blockquote>
+<p><strong>ROMEO:</strong> O, she doth teach the torches to burn bright!<br />
+It seems she hangs upon the cheek of night<br />
+As a rich jewel in an Ethiop’s ear;<br />
+Beauty too rich for use, for earth too dear!<br />
+So shows a snowy dove trooping with crows<br />
+As yonder lady o’er her fellows shows.<br />
+The measure done, I’ll watch her place of stand,<br />
+And touching hers, make blessed my rude hand.<br />
+Did my heart love till now? Forswear it, sight!<br />
+For I ne’er saw true beauty till this night.</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="56" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:60%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;static/paper.svg&quot;);"></figure></div></section></foreignObject><foreignObject width="40%" height="720"><section id="56" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="56" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:60%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="writing-up-our-paragraphs">Writing up our paragraphs</h2>
+<ul>
+<li>Point</li>
+<li>Evidence</li>
+<li>Analysis</li>
+<li>Explanation</li>
+</ul>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="56" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="57" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fichef.bbci.co.uk%2Fimages%2Fic%2F640x360%2Fp0dp331n.jpg&amp;f=1&amp;nofb=1&amp;ipt=52703ecd802215efeb9669ebb9c5059390ddd492184531bd655afb43bc2f2e6e&amp;ipo=images&quot;);"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="57" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="57" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="the-aftermath">The Aftermath</h1>
+<p>LO: To consider how the characters react to the first meeting</p>
+<blockquote>
+<p><a target=_blank href="task"></a> Read the lines below, where Romeo and Juliet react to finding out who the other is. Can you summarise their emotions? Why do they feel like this?</p>
+</blockquote>
+<blockquote>
+<p><strong>ROMEO</strong>: Is she a Capulet?<br />
+O dear account! My life is my foe’s debt.</p>
+</blockquote>
+<blockquote>
+<p><strong>JULIET</strong>: My only love sprung from my only hate!<br />
+Too early seen unknown, and known too late!<br />
+Prodigious birth of love it is to me,<br />
+That I must love a loathed enemy.</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="57" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="58" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages6.fanpop.com%2Fimage%2Fphotos%2F35800000%2FRomeo-and-Juliet-romeo-and-juliet-2013-35804507-3000-2000.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="58" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="58" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="what-happened">What happened?</h2>
+
+<blockquote>
+<p><a target=_blank href="task"></a> Put these events in order and copy them down into your books. You can <a target=_blank href="https://maxbruges.com/learn/textbook/romeo-and-juliet/#:~:text=Gentlewomen%20to%20the-,maskers.">read the scene here.</a></p>
+</blockquote>
+<columns>
+<blockquote>
+<p>Tybalt threatens to kill Romeo</p>
+</blockquote>
+<blockquote>
+<p>Romeo &amp; Juliet realise who their families are</p>
+</blockquote>
+<blockquote>
+<p>Lord Capulet hosts a party</p>
+</blockquote>
+<blockquote>
+<p>Juliet and Romeo kiss</p>
+</blockquote>
+<blockquote>
+<p>Romeo flees the party</p>
+</blockquote>
+<blockquote>
+<p>Romeo sneaks into the party</p>
+</blockquote>
+<blockquote>
+<p>Romeo spots Juliet</p>
+</blockquote>
+</columns>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="58" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="59" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;http://images5.fanpop.com/image/photos/26600000/Romeo-and-Juliet-Dancing-1968-Movie-Version-1968-romeo-and-juliet-by-franco-zeffirelli-26652018-786-472.jpg&quot;);filter:opacity(20%);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="59" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="59" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66" data-marpit-advanced-background="content">
+<h2 id="the-morning-after">The Morning After</h2>
+
+<blockquote>
+<p><a target=_blank href="task"></a> Pick one of the characters below, and write a diary entry for the day after the party</p>
+</blockquote>
+<blockquote>
+<h3 id="lord-capulet-%F0%9F%A4%B4">Lord Capulet 🤴</h3>
+</blockquote>
+<blockquote>
+<h3 id="romeo-%F0%9F%99%8B%E2%80%8D%E2%99%82%EF%B8%8F">Romeo 🙋‍♂️</h3>
+</blockquote>
+<blockquote>
+<h3 id="juliet-%F0%9F%91%A9%E2%80%8D%F0%9F%A6%B0">Juliet 👩‍🦰</h3>
+</blockquote>
+<blockquote>
+<h3 id="tybalt-%E2%9A%94%EF%B8%8F">Tybalt  ⚔️</h3>
+<blockquote>
+<p>(Juliet's cousin, hates Romeo)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="challenge"></a> Include quotes from the play itself!</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="59" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="60" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="meeting-in-secret">Meeting in Secret</h1>
+<p>LO: To consider how Shakespeare presents the development of Romeo and Juliet's relationship</p>
+<blockquote>
+<p><a target=_blank href="task"></a> Summarise what happened at Lord Capulet's party</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="challenge"></a> What <em>should</em> Romeo do now?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="61" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.britannica.com%2F00%2F3800-050-65328198%2FJuliet-Romeo-and-Olivia-Hussey-1968.jpg&amp;f=1&amp;nofb=1&amp;ipt=68d6480209c8a3f4601b3f4822774d9a9f8e533842b0d48f84a6d502e1dabaff&amp;ipo=images&quot;);"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="61" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="61" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="in-the-garden">In the garden</h2>
+<p>After the party, Romeo is desperate to see Juliet again.</p>
+<p>He sneaks into the garden of the Capulets' mansion, and hides beneath the balcony of Juliet's room.</p>
+<p><em>MERCUTIO</em> and <em>BENVOLIO</em> see him jump into the garden.</p>
+<blockquote>
+<p>BENVOLIO: he hath hid himself among these trees<br />
+To be consorted with the humorous night.<br />
+Blind is his love, and best befits the dark.</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="task"></a> Why do they think it is a <em>bad idea</em> for Romeo to do this? What are they worried about?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="61" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="62" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.zMzSvu-dCU5L8u_L_Vb_dAHaMM%26pid%3DApi&amp;f=1&amp;ipt=1e58ae0742aa706d24e4ba6478d851b67a32703dc5a1183871c0d04bd1f0e1a1&amp;ipo=images&quot;);"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="62" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="62" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="juliet-appears">Juliet appears</h2>
+<blockquote>
+<p><em>Juliet appears above at a window.</em><br />
+ROMEO: What light through yonder window breaks?<br />
+It is the east, and Juliet is the sun!</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="task"></a> Copy down the quote from Romeo.<br />
+Then: What is Romeo comparing Juliet to? Why? What does that tell us about his feelings for her?</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="stretch"></a> How does this compare to his discussion of love in Scene 1?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="62" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="63" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.britannica.com%2F00%2F3800-050-65328198%2FJuliet-Romeo-and-Olivia-Hussey-1968.jpg&amp;f=1&amp;nofb=1&amp;ipt=68d6480209c8a3f4601b3f4822774d9a9f8e533842b0d48f84a6d502e1dabaff&amp;ipo=images&quot;);"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="63" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="63" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="thinking-structurally">Thinking structurally</h2>
+<p>Shakespeare's made some interesting choices in this scene.</p>
+<blockquote>
+<p><a target=_blank href="task"></a> Discuss with your partner, and write down <em>why</em> you think he's done each of these things:</p>
+</blockquote>
+<blockquote>
+<p>&#8220;I think Shakespeare done this to... because... perhaps...&#8221;</p>
+</blockquote>
+<ol>
+<li>Shown Romeo by himself first</li>
+<li>Kept Romeo hidden from Juliet</li>
+<li>Set the scene outside in the garden</li>
+<li>Put Juliet up on a balcony and Romeo down below her</li>
+<li>Let the characters meet alone and away from anyone else</li>
+</ol>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="63" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="64" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<header class=date><script> document.write(new Date().toLocaleDateString('en-GB',{weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'})); </script></header><h1 onclick='document.documentElement.requestFullscreen()' id="by-any-other-name">By Any Other Name</h1>
+<p>LO: To consider how Shakespeare explores ideas of identity</p>
+<blockquote>
+<p><a target=_blank href="task"></a> What does your name tell people about you? What can they guess based just on what you're called?</p>
+</blockquote>
+<blockquote>
+<p><a target=_blank href="stretch"></a> If you could have a different name, which one would you choose? Why?</p>
+</blockquote>
+<footer> </footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="65" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="66" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://images.unsplash.com/photo-1569008784345-21bdc27202b9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1Njk0Mzh8MHwxfHNlYXJjaHw3fHxyb3NlfGVufDB8MHx8fDE3Mzk4NTA5NDV8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080&quot;);"><figcaption>📷 by Kelly Sikkema</figcaption></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="65" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="65" style="--footer: ;--paginate:true;--theme:rab;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="66" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="all-in-a-name">All in a name</h2>
+<blockquote>
+<p><a target=_blank href="task"></a> With your partner, discuss each of these questions and write down an answer.</p>
+</blockquote>
+<ol>
+<li>On a scale of 1-10, how important do you think a name is?</li>
+<li>Explain your decision. Why do you think names are important or unimportant?</li>
+<li>Do you think you can tell a lot about someone you have never met based on their name? Is it ever <strong>right</strong> to pre-judge?</li>
+<li>Can you hate someone based on their name?</li>
+</ol>
+<footer> </footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="65" style="" data-marpit-pagination-total="66" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-footer=" " data-paginate="true" data-theme="rab" lang="en" data-marpit-pagination="66" style="--footer: ;--paginate:true;--theme:rab;" data-marpit-pagination-total="66">
+<h2 id="reading-the-scene-1">Reading the scene</h2>
+<columns>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-quote">JULIET: O Romeo, Romeo, wherefore art thou Romeo?
+Deny thy father and refuse thy name.
+Or if thou wilt not, be but sworn my love,
+And I’ll no longer be a Capulet.
+
+ROMEO: [Aside.] Shall I hear more, or shall I speak at this?
+
+JULIET: ’Tis but thy name that is my enemy;
+Thou art thyself, though not a Montague.
+What’s Montague? It is nor hand nor foot,
+Nor arm, nor face, nor any other part
+Belonging to a man. O be some other name.
+What’s in a name? That which we call a rose
+By any other name would smell as sweet;
+So Romeo would, were he not Romeo call’d,
+Retain that dear perfection which he owes
+Without that title. Romeo, doff thy name,
+And for thy name, which is no part of thee,
+Take all myself. 
+</code></pre>
+<task>
+<ol>
+<li>Highlight ALL the names you can find in this extract (forenames and surnames).</li>
+<li>According to Juliet, what will it take for her to refuse her name as a Capulet?</li>
+<li>According to Juliet, what is a Montague NOT?</li>
+<li>'That which we call a rose by any other name would smell as sweet' - What is Juliet saying about names here?</li>
+<li>Juliet says, Romeo, doff thy name'. She is asking him to lose his name. Does Juliet think names are important or unimportant? Why?</li>
+</ol>
+</task>
+</columns>
+<blockquote>
+<p><a target=_blank href="challenge"></a> How are names seen as controlling here?</p>
+</blockquote>
 <footer> </footer>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{constructor(){super(),this.svgPreserveAspectRatio="xMinYMid meet";const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){var t,s,o,r,a;this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=null!==(t=this.shadowRoot.querySelector(`div[${e}]`))&&void 0!==t?t:void 0;const l=this.svg;this.svg=null!==(o=null===(s=this.wrapper)||void 0===s?void 0:s.querySelector(`svg[${i}]`))&&void 0!==o?o:void 0,this.svg!==l&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=null!==(a=null===(r=this.svg)||void 0===r?void 0:r.querySelector(`span[${n}]`))&&void 0!==a?a:void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){var t,e,i,n,s,o,r;let a=Math.ceil(null!==(e=null===(t=this.containerSize)||void 0===t?void 0:t.width)&&void 0!==e?e:0);const l=Math.ceil(null!==(n=null===(i=this.containerSize)||void 0===i?void 0:i.height)&&void 0!==n?n:0);void 0!==this.dataset.downscaleOnly&&(a=Math.max(a,null!==(o=null===(s=this.wrapperSize)||void 0===s?void 0:s.width)&&void 0!==o?o:0));const c=null===(r=this.svg)||void 0===r?void 0:r.querySelector(":scope > foreignObject");if(null==c||c.setAttribute("width",`${a}`),null==c||c.setAttribute("height",`${l}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${a} ${l}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=a<=0||l<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const o=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this.attachShadow({mode:"open"})}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_update(){const t=i?`<style>:host { ${i} }</style>`:"";let e="<slot></slot>";const{autoScaling:n}=this.dataset;if(void 0!==n){e=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===n?"data-downscale-only":""}>${e}</marp-auto-scaling>`}this.shadowRoot.innerHTML=t+e}};let r;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),g=Symbol();const h=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,o,r;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(r=null===(o=n.y)||void 0===o?void 0:o.baseVal.value)&&void 0!==r?r:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await h()}finally{s=!0}})();const o=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(o)};return o(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const b=Symbol(),w=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();null!=r||(r=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is")),r&&a!==HTMLElement?i||customElements.define(s,o(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,o(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[b])return e[b];const i=v({target:e}),n=()=>{i(),delete e[b]},l=Object.assign(n,{cleanup:n,update:()=>w(e)});return Object.defineProperty(e,b,{configurable:!0,value:l}),l},y=document.currentScript;w(y?y.getRootNode():document)}();

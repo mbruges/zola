@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 5 350 170" id="mindmap">
+<rect x="75" y="70" width="200" height="40" rx="20" ry="20" fill="#183150" stroke="#183150" stroke-width="2"/>
+  <line x1="89" y1="71" x2="25" y2="35" stroke="#183150" stroke-width="2"/>
+  <line x1="261" y1="71" x2="325" y2="35" stroke="#183150" stroke-width="2"/>
+<line x1="89" y1="108" x2="25" y2="155" stroke="#183150" stroke-width="2"/>
+  <line x1="261" y1="108" x2="325" y2="155" stroke="#183150" stroke-width="2"/>
+</svg>

@@ -5,6 +5,16 @@ description: "The Moor of Venice"
 extra:
   vocab:
       Behold:  (v) look!
+      ancient: (n) ensign, supporter
+      squadron: (n) group of soldiers or ships
+      prattle: (n) chatter, talk
+      preferment: (n) process of being chosen for leadership
+      knave: (n) low-status man
+      lieutenant: (n) assistant to a leader, second-in-command
+      Venetian: (a) relating to Venice
+      heathen: (n) non-Christian
+      Rhodes: (n) island between Turkey and Cyprus
+      hangman: (n) executioner
 
   icon: 🧣
   keystage: ["5"]

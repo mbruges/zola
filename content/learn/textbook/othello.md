@@ -15,32 +15,14 @@ extra:
       heathen: (n) non-Christian
       Rhodes: (n) island between Turkey and Cyprus
       hangman: (n) executioner
+      galleys: (n) warships
 
   icon: 🧣
   keystage: ["5"]
   tags: ["drama"]
 ---
 
-
-<style>
-    summary {
-        cursor: pointer;
-        font-size:1.2em;
-        font-family:monospace;
-    }
-    
-    .scenedesc {
-        font-style:italic;
-    }
-    
-    .char-name {
-        font-weight: bold;
-    }
-</style>
-
-
-
-<details><summary>Table of Contents</summary>
+<details><summary style="cursor: pointer;font-size:1.2em;font-family:monospace;">Table of Contents</summary>
 <b>SCENE: The First Act in Venice; during the rest of the Play at a Seaport in Cyprus.</b>
 <table style="">
 <tbody><tr>
@@ -123,6 +105,16 @@ BIANCA, Mistress to Cassio<br>
 Officers, Gentlemen, Messenger, Musicians, Herald, Sailor, Attendants,<br>
 </p>
 </details>
+
+<style>    
+    .scenedesc {
+        font-style:italic;
+    }
+    
+    .char-name {
+        font-weight: bold;
+    }
+</style>
 
 <div class="chapter">
 <h2> <a id="sceneI_26.1"></a><b>ACT I</b></h2>

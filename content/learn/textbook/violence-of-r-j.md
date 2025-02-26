@@ -33,7 +33,9 @@ Audiences at early performances of *Romeo & Juliet* must have watched the openin
 
 ## Questions
 
->[](task) Answer these questions in your book
+>[](task) 
+>
+>Answer these questions in your book
 
 1. How does the first scene of Romeo and Juliet mirror Shakespeare’s London?
 2. Audience at open-air theatres were predominantly made up of who?

@@ -1,6 +1,6 @@
 ---
 title: Test Page
-# date: 2001-01-01
+date: 2001-01-01
 authors: ["Max Bruges"]
 description: "Did it work?"
 draft: true
@@ -9,6 +9,9 @@ extra:
 ---
 
 Here's a test
+
+> [](task) Complete the following:
+> - A second line of the task!
 
 ## heading 1
 
@@ -19,7 +22,6 @@ And some more text
 And some more text
 
 ![dith](/images/dith-athens.webp)
-
 
 ![dith](/images/dith-max.webp)
 

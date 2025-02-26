@@ -68,7 +68,7 @@ And if *you're* reading this, academicians, keep it up. Happy hacking.
             new KeyboardEvent("keydown", { key: key }),
         );
     }
-
+    
     function toggleFullscreen() {
         let iframe = document.getElementById("lesson-view");
         let toast = iframe.contentWindow.document.getElementById("toast");

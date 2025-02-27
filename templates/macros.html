@@ -19,7 +19,7 @@
             {%- set_global content = content | safe | replace(from=word ~ "_DEF_HERE", to=def) -%}
         {% endif %}
     {% endfor %}
-    {% set_global def_list = "<dl id='definitions'>" %}
+    {% set_global def_list = "<dl id='definitions'><h3 style='margin-top: 0em;'>Key words</h3>" %}
         {% for word, def in data %}
             {% if inc_words is containing(word) %}
                 {% set_global def_list = def_list ~ "<dt>" ~ word ~ "</dt><dd>" ~ def ~ "</dd>" %}

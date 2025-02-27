@@ -132,6 +132,7 @@ textarea {
         padding: 0.5em !important;
         margin: 0.1em -0.5em 1em 1em !important;
         float: right;
+        height: auto;
     }
 
     p > img[alt*="aside"] ~ em,
@@ -191,6 +192,7 @@ h2:active .zola-anchor {
 img {
     max-height: 40vh;
     max-width: 95%;
+    height: auto;
     border-radius: 15px;
     padding: -1em;
     margin: -1em;

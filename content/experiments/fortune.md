@@ -1,6 +1,6 @@
 ---
 title: Fortune Cookie
-description: Seek cryptic wisdom from the digital sage.
+description: Seek cryptic wisdom from the [digital sage](https://en.wikipedia.org/wiki/Fortune_(Unix)).
 extra:
   icon: 🥠
   center: true

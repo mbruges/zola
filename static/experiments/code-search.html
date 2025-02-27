@@ -79,7 +79,9 @@
         function copyToClipboard(copiedElement) {
             const text = copiedElement.innerText;
             navigator.clipboard.writeText(text).then(() => {
-                alert('Test code has been copied to clipboard.\nNow go to TestWise to start the test!');
+                if (confirm('Test code has been copied to clipboard.\nTap OK to go to TestWise and start the test!')){
+                  window.open('https://www.testwise.com/platform/code', '_blank');
+                }
             });
         }
         </script>

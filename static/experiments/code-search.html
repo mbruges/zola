@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="icon" href="/images/repton-blue.png" type="image/png">
+        <meta property="og:title" content="Code Search" />
+        <meta property="og:description" content="Find your PASS code quickly and easily! Search for your name and retrieve your code." />
+        <meta property="og:image" content="/images/repton-blue.png" />
+        <meta property="og:url" content="https://www.maxbruges.com/experiments/code-search.html" />
+    <title>Code Search</title>
+    <style>
+        #loading {
+            display: none;
+            text-align: center;
+        }
+
+        code {
+            font-size:1.1em;
+            cursor:copy;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="padding-left: 0.5em;padding-right: 0.5em;">
+          <ul>
+            <li><a href="https://www.reptonalbarsha.org/"><img style="max-height: 3em; padding:none;" src="/images/repton-blue.png"></a></li>
+          </ul>
+          <ul>
+            <li><a style="cursor:pointer" id="about-link" class="contrast">Help 🙋🏼‍♀️</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main class="container" aria-busy="false" id="mainContent" style="max-width:600px">
+        <h1>Find your PASS code 🔐</h1>
+        <p>Search, tap your code to copy it, then <a target="_blank" data-tooltip="Go to TestWise" href="https://www.testwise.com/platform/code">click here to go to TestWise 🌐</a></p>
+        <form id="queryForm">
+            <input type="text" id="queryInput" placeholder="Start typing your name..." autofocus required>
+        </form>
+        <div id="result" class="center" style="visibility: hidden;">
+            <article>
+
+                <div id="results"></div>
+
+            </article>
+        </div>
+
+        <script>
+        let data = [];
+
+        fetch('/files/pass.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                data = jsonData;
+            })
+            .catch(error => console.error('Error loading data:', error));
+            const queryInput = document.getElementById('queryInput');
+            const result = document.getElementById('result');
+            const passCode = document.getElementById('results');
+
+            queryInput.addEventListener('input', function() {
+                const query = queryInput.value.toLowerCase();
+                const matched = data.filter(item =>
+                    item.name.toLowerCase().includes(query)
+                );
+
+                if (matched.length > 0 && query.length > 0) {
+                    passCode.innerHTML = matched.map(item =>
+                      `<p>${item.name} (Y${item.y}): <code data-tooltip="Click to copy" onclick="copyToClipboard(this)">${item.code}</code></p>`).join('\n');
+                    result.style.visibility = 'visible';
+                } else {
+                    result.style.visibility = 'hidden';
+                }
+            });
+        </script>
+        <script>
+        function copyToClipboard(copiedElement) {
+            const text = copiedElement.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Test code has been copied to clipboard.\nNow go to TestWise to start the test!');
+            });
+        }
+        </script>
+
+    </main>
+
+    <dialog id="about">
+      <article>
+        <header>
+          <button aria-label="Close" rel="prev" onclick="document.getElementById('about').close()"></button>
+          <h3>
+            About the <strong>PASS</strong> test
+          </h3>
+        </header>
+        <p>
+        The PASS test is a survey used to measure how you feel about school. It is designed to help teachers and students identify areas where they may need additional support or guidance.</p>
+        <p> It isn't something you can revise for, and there are no right or wrong answers. Just answer honestly!</p>
+        <p><b>Having trouble finding your PASS code? Ask your teacher for help.</b></p>
+        <p> For more information, email <a href="mailto:mbruges@reptonalbarsha.org">mbruges@reptonalbarsha.org</a> 📧</p>
+      </article>
+    </dialog>
+    <script>
+        const aboutLink = document.getElementById('about-link');
+        const aboutDialog = document.getElementById('about');
+
+        aboutLink.addEventListener('click', () => {
+            aboutDialog.showModal();
+        });
+    </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
             text-align: center;
         }
 
-        code {
+        .pass-code {
             font-size:1.1em;
             cursor:copy;
         }
@@ -35,7 +35,7 @@
     </header>
     <main class="container" aria-busy="false" id="mainContent" style="max-width:600px">
         <h1>Find your PASS code 🔐</h1>
-        <p>Search, tap your code to copy it, then <a target="_blank" data-tooltip="Go to TestWise" href="https://www.testwise.com/platform/code">click here to go to TestWise 🌐</a></p>
+        <p>Search your name, tap your <code>code</code> to copy it, then <a target="_blank" data-tooltip="Go to TestWise" href="https://www.testwise.com/platform/code">go to TestWise</a></p>
         <form id="queryForm">
             <input type="text" id="queryInput" placeholder="Start typing your name..." autofocus required>
         </form>
@@ -68,9 +68,14 @@
 
                 if (matched.length > 0 && query.length > 0) {
                     passCode.innerHTML = matched.map(item =>
-                      `<p>${item.name} (Y${item.y}): <code data-tooltip="Click to copy" onclick="copyToClipboard(this)">${item.code}</code></p>`).join('\n');
+                      `<p>${item.name} (Y${item.y}): <code data-tooltip="Click to copy" onclick="copyToClipboard(this)" class="pass-code">${item.code}</code></p>`).join('\n');
                     result.style.visibility = 'visible';
-                } else {
+                }
+                else if (query.length > 0) {
+                    passCode.innerHTML = `<i>No matches found</i>`;
+                    result.style.visibility = 'visible';
+                }
+                else {
                     result.style.visibility = 'hidden';
                 }
             });
@@ -92,14 +97,18 @@
       <article>
         <header>
           <button aria-label="Close" rel="prev" onclick="document.getElementById('about').close()"></button>
-          <h3>
-            About the <strong>PASS</strong> test
-          </h3>
         </header>
+        <h3>
+          Accessing your code
+        </h3>
+        <p>Search your name, tap your <code>code</code> to copy it to your clipboard, then <a target="_blank" data-tooltip="Go to TestWise" href="https://www.testwise.com/platform/code">go to TestWise</a> to start the test.</p>
+        <p><b>Having trouble finding your PASS code? Ask your teacher for help.</b></p>
+        <h3>
+          About the <strong>PASS</strong> test
+        </h3>
         <p>
         The PASS test is a survey used to measure how you feel about school. It is designed to help teachers and students identify areas where they may need additional support or guidance.</p>
         <p> It isn't something you can revise for, and there are no right or wrong answers. Just answer honestly!</p>
-        <p><b>Having trouble finding your PASS code? Ask your teacher for help.</b></p>
         <p> For more information, email <a href="mailto:mbruges@reptonalbarsha.org">mbruges@reptonalbarsha.org</a> 📧</p>
       </article>
     </dialog>

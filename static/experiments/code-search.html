@@ -49,8 +49,8 @@
 
         <script>
         let data = [];
-
-        fetch('/files/pass.json')
+        let cacheBuster = Date.now();
+        fetch(`/files/pass.json?cb=${cacheBuster}`)
             .then(response => response.json())
             .then(jsonData => {
                 data = jsonData;

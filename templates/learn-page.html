@@ -50,7 +50,8 @@ endif %}
         }
         {% endif %}
         iframe.src = "/lessons/" + lessonPath + '.html'
-            iframe.contentWindow.focus()
+        iframe.contentWindow.focus()
+
     }
 </script>
 <iframe
@@ -95,6 +96,13 @@ endif %}
     <button onclick="simulateKeyPress('PageDown')">></button>
 </div>
 
-<hr />
+<script>
+    //for extracting the text content of the current slide
+    window.onload = () => {
+        console.log("loaded");
+        console.log(iframe.src);
+    };
+</script>
+<br />
 <div style="font-size: 0.7em">{% include "snippets/nextprev.html" %}</div>
 {% include "snippets/cursor-party.html" %} {% endblock content %}

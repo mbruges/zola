@@ -8,14 +8,21 @@ extra:
     mayhem: (n) chaos, disorder
     pestilent: (adj) harmful, dangerous
     volatile: (adj) likely to change suddenly
-
+    bunking off: (v) skipping work
+    noiseome: (adj) smelly
+    pestilent: (adj) full of plague and disease
+    predominantly: (adv) mostly; mainly
+    rocketing inflation: (n) a rapid increase in prices and cost of living
+    artisans and apprentices: (n) young workers learning a trade
+    first quarto: (n) the first published version of Shakespeare's plays
+    prowl: (v) to move around stealthily, searching for something
   icon: 🩸
 ---
 
 The story of *Romeo & Juliet* is surely as old as time.
 
 >[](aside-note)
-> Taken from the British Library's abb on Shakespeare. [Read more.](https://www.britishlibrary.cn/en/articles/the-violence-of-romeo-and-juliet/)
+> Taken from the British Library's collection on Shakespeare. [Read more.](https://www.britishlibrary.cn/en/articles/the-violence-of-romeo-and-juliet/)
 
 The play’s first audiences, perhaps at the Curtain Theatre in Shoreditch, seem to have responded powerfully to this story of volatile emotions and passions lived to the extreme: the first quarto of 1597 refers to it being ‘often (with great applause) played publicly'.
 

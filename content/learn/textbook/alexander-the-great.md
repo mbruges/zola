@@ -7,17 +7,17 @@ extra:
   keystage: ["3"]
   tags: ["rhetoric"]
   vocab:
-    - venture: (n) difficult journey, expedition
-    - hitherto: (prep) so far, up to this point
-    - Macedon: (n) Alexander's home and kingdom
-    - perilous: (adj) full of danger
-    - Hyphasis: (n) the river that marks the border of India
-    - Hyrcanian Sea: (n) the Caspian Sea
-    - Heracles: (n) a great mythical Greek hero
-    - Ganges: (n) the major river in India
-    - renown: (n) fame, being well-known
-    - encroachment: (n) invasions, attacks
---- 
+    venture: (n) difficult journey, expedition
+    hitherto: (prep) so far, up to this point
+    Macedon: (n) Alexander's home and kingdom
+    perilous: (adj) full of danger
+    Hyphasis: (n) the river that marks the border of India
+    Hyrcanian Sea: (n) the Caspian Sea
+    Heracles: (n) a great mythical Greek hero
+    Ganges: (n) the major river in India
+    renown: (n) fame, being well-known
+    encroachment: (n) invasions, attacks
+---
 
 **I observe, gentlemen, that when I would lead you on a new venture you no longer follow me with your old spirit. I have asked you to meet me that we may come to a decision together: are we, upon my advice, to go forward, or, upon yours, to turn back?**
 

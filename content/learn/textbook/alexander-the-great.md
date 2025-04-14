@@ -9,7 +9,7 @@ extra:
   vocab:
     venture: (n) difficult journey, expedition
     hitherto: (prep) so far, up to this point
-    Macedon: (n) Alexander's home and kingdom
+    Macedon: (n) home and kingdom of Alexander
     perilous: (adj) full of danger
     Hyphasis: (n) the river that marks the border of India
     Hyrcanian Sea: (n) the Caspian Sea
@@ -22,6 +22,9 @@ extra:
 **I observe, gentlemen, that when I would lead you on a new venture you no longer follow me with your old spirit. I have asked you to meet me that we may come to a decision together: are we, upon my advice, to go forward, or, upon yours, to turn back?**
 
 If you have any complaint to make about the results of your efforts hitherto, or about myself as your commander, there is no more to say. But let me remind you: through your courage and endurance you have gained possession of Ionia, the Hellespont, both Phrygias, Cappadocia, Paphlagonia, Lydia, Caria, Lycia, Pamphylia, Phoenicia, and Egypt; the Greek part of Libya is now yours, together with much of Arabia, lowland Syria, Mesopotamia, Babylon, and Susia; Persia and Media with all the territories either formerly controlled by them or not are in your hands; you have made yourselves masters of the lands beyond the Caspian Gates, beyond the Caucasus, beyond the Tanais, of Bactria, Hyrcania, and the Hyrcanian sea; we have driven the Scythians back into the desert; and Indus and Hydaspes, Acesines and Hydraotes flow now through country which is ours. 
+
+![Map of conquests, aside](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.greekboston.com%2Fwp-content%2Fuploads%2F2020%2F01%2Fempire-alexander-the-great-2048x1004.jpg&f=1&nofb=1&ipt=f1889341964b27ea7f818ecd1f32da4b0e106fb8881bfe4a69f01d4d2b9a6972)
+*A map of Alexander's conquests, 323BC*
 
 With all that accomplished, why do you hesitate to extend the power of Macedon — *your* power — to the Hyphasis and the tribes on the other side? Are you afraid that a few natives who may still be left will offer opposition? Come, come! These natives either surrender without a blow or are caught on the run—or leave their country undefended for your taking and when we take it, we make a present of it to those who have joined us of their own free will and fight at our side.
 

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="icon" href="/images/repton-blue.png" type="image/png">
         <meta property="og:title" content="Code Search" />
-        <meta property="og:description" content="Find your PASS code quickly and easily! Search for your name and retrieve your code." />
+        <meta property="og:description" content="Find your test code quickly and easily! Search for your name and retrieve your code." />
         <meta property="og:image" content="/images/repton-blue.png" />
         <meta property="og:url" content="https://www.maxbruges.com/experiments/code-search.html" />
     <title>Code Search</title>
@@ -16,7 +16,7 @@
             text-align: center;
         }
 
-        .pass-code {
+        .test-code {
             font-size:1.1em;
             cursor:copy;
         }
@@ -34,7 +34,7 @@
         </nav>
     </header>
     <main class="container" aria-busy="false" id="mainContent" style="max-width:600px">
-        <h1>Find your PASS code 🔐</h1>
+        <h1>Find your test code 🔐</h1>
         <p>Search your name, tap your <code>code</code> to copy it, then <a target="_blank" data-tooltip="Go to TestWise" href="https://www.testwise.com/platform/code">go to TestWise</a></p>
         <form id="queryForm">
             <input type="text" id="queryInput" placeholder="Start typing your name..." autofocus required>
@@ -50,7 +50,7 @@
         <script>
         let data = [];
         let cacheBuster = Date.now();
-        fetch(`/files/pass.json?cb=${cacheBuster}`)
+        fetch(`/files/codes.json?cb=${cacheBuster}`)
             .then(response => response.json())
             .then(jsonData => {
                 data = jsonData;
@@ -58,7 +58,7 @@
             .catch(error => console.error('Error loading data:', error));
             const queryInput = document.getElementById('queryInput');
             const result = document.getElementById('result');
-            const passCode = document.getElementById('results');
+            const testCode = document.getElementById('results');
 
             queryInput.addEventListener('input', function() {
                 const query = queryInput.value.toLowerCase();
@@ -67,12 +67,12 @@
                 );
 
                 if (matched.length > 0 && query.length > 0) {
-                    passCode.innerHTML = matched.map(item =>
-                      `<p>${item.name} (Y${item.y}): <code data-tooltip="Click to copy" onclick="copyToClipboard(this)" class="pass-code">${item.code}</code></p>`).join('\n');
+                    testCode.innerHTML = matched.map(item =>
+                      `<p>${item.name} (Y${item.y}): <code data-tooltip="Click to copy" onclick="copyToClipboard(this)" class="test-code">${item.code}</code></p>`).join('\n');
                     result.style.visibility = 'visible';
                 }
                 else if (query.length > 0) {
-                    passCode.innerHTML = `<i>No matches found</i>`;
+                    testCode.innerHTML = `<i>No matches found</i>`;
                     result.style.visibility = 'visible';
                 }
                 else {
@@ -102,12 +102,12 @@
           Accessing your code
         </h3>
         <p>Search your name, tap your <code>code</code> to copy it to your clipboard, then <a target="_blank" data-tooltip="Go to TestWise" href="https://www.testwise.com/platform/code">go to TestWise</a> to start the test.</p>
-        <p><b>Having trouble finding your PASS code? Ask your teacher for help.</b></p>
+        <p><b>Having trouble finding your test code? Ask your teacher for help.</b></p>
         <h3>
-          About the <strong>PASS</strong> test
+          About the test
         </h3>
         <p>
-        The PASS test is a survey used to measure how you feel about school. It is designed to help teachers and students identify areas where they may need additional support or guidance.</p>
+        This standardised test is designed to help teachers and students identify areas where they may need additional support or guidance.</p>
         <p> It isn't something you can revise for, and there are no right or wrong answers. Just answer honestly!</p>
         <p> For more information, email <a href="mailto:mbruges@reptonalbarsha.org">mbruges@reptonalbarsha.org</a> 📧</p>
       </article>

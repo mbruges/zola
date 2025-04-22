@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <meta property="og:title" content="Lesson Search" />
+        <meta property="og:description" content="Search through recent lessons." />
+        <meta property="og:url" content="https://mxb.fyi/list.html" />
+    <title>Lesson Search</title>
+    <style>
+        #loading {
+            display: none;
+            text-align: center;
+        }
+
+        code {
+            font-size:0.7em;
+            margin: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="padding-left: 0.5em;padding-right: 0.5em;">
+          <ul>
+            <li><a href="https://learn.maxbruges.com/"><code>Go to LIVE LESSON 🔴</code></a></li>
+          </ul>
+          <ul>
+            <li><a style="cursor:pointer" id="about-link" class="contrast">Help ℹ️</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main class="container" aria-busy="false" id="mainContent" style="max-width:600px">
+        <h1>Find a lesson 👨‍🏫</h1>
+        <form id="queryForm">
+            <input type="text" id="queryInput" placeholder="Start typing to filter..." autofocus required>
+        </form>
+        <div id="result" class="center" style="visibility: hidden;">
+            <article>
+
+                <div id="results"></div>
+
+            </article>
+        </div>
+        <script>
+            let data = [];
+            fetch(`https://mxb.fyi/list.json`)
+                .then(response => response.json())
+                .then(jsonData => {
+                    data = jsonData;
+
+                    displayResults(data);
+                })
+                .catch(error => console.error('Error loading data:', error));
+
+            const queryInput = document.getElementById('queryInput');
+            const result = document.getElementById('result');
+            const testCode = document.getElementById('results');
+
+            function displayResults(dataToDisplay) {
+                const sortedData = dataToDisplay.sort((a, b) => new Date(b.date) - new Date(a.date));
+                testCode.innerHTML = sortedData.map(item =>
+                    `<p><a href="https://mxb.fyi/${item.filename}"><code>🗓️ ${new Date(item.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year:'2-digit'})}</code>${item.title}</a></p>`).join('\n');
+                result.style.visibility = 'visible';
+            }
+
+            window.onload = function() {
+                if (data.length > 0) {
+                    displayResults(data);
+                }
+            };
+
+            queryInput.addEventListener('input', function() {
+                const query = queryInput.value.toLowerCase();
+                const matched = data.filter(item => item.title.toLowerCase().includes(query));
+
+                if (matched.length > 0 && query.length > 0) {
+                    displayResults(matched);
+                } else if (query.length > 0) {
+                    testCode.innerHTML = `<i>No matches found</i>`;
+                    result.style.visibility = 'visible';
+                } else if (query.length === 0) {
+                    displayResults(data);
+                }
+                else {
+                    result.style.visibility = 'hidden';
+                }
+            });
+        </script>
+        <script>
+        function copyToClipboard(copiedElement) {
+            const text = copiedElement.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                if (confirm('Test code has been copied to clipboard.\nTap OK to go to TestWise and start the test!')){
+                  window.open('https://www.testwise.com/platform/code', '_blank');
+                }
+            });
+        }
+        </script>
+
+    </main>
+
+    <dialog id="about">
+      <article>
+        <header>
+          <button aria-label="Close" rel="prev" onclick="document.getElementById('about').close()"></button>
+        </header>
+        <h3>
+          Accessing a lesson
+        </h3>
+        <p>Search for the lesson title, then click the link to view</p>
+        <p><b>Having trouble finding a lesson? <a href="mailto:mbruges@reptonalbarsha.org">Email Mr. Bruges</a> for help.</b></p>
+        <h3>
+          About this site
+        </h3>
+        <p>
+        This is a quick list of lessons, written and taught by <a href="https://maxbruges.com/about">Mr. Bruges.</a></p>
+        <p> If you'd like to know more, email <a href="mailto:mbruges@reptonalbarsha.org">mbruges@reptonalbarsha.org</a> 📧</p>
+      </article>
+    </dialog>
+    <script>
+        const aboutLink = document.getElementById('about-link');
+        const aboutDialog = document.getElementById('about');
+
+        aboutLink.addEventListener('click', () => {
+            aboutDialog.showModal();
+        });
+    </script>
+</body>
+</html>

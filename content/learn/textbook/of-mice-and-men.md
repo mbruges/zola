@@ -1,6 +1,7 @@
 ---
 authors: ["John Steinbeck"]
 title: "Of Mice and Men"
+description: "Full text of Steinbeck's novella."
 draft: false
 extra:
   icon: 🐁
@@ -8,6 +9,9 @@ extra:
   tags: ["literature","gcse"]
 ---
 
+<span id=intro style=display:none>
+A few miles south of Soledad, the Salinas River drops in close to the hillside bank and runs deep and green. The water is warm too, for it has slipped twinkling over the yellow sands in the sunlight before reaching the narrow pool.
+</span>
     
 <script>
 

@@ -128,11 +128,12 @@ textarea {
     aside,
     blockquote:has(a[href*="aside"]),
     img[alt*="aside"] {
-        width: 40%;
         padding: 0.5em !important;
         margin: 0.1em -0.5em 1em 1em !important;
         float: right;
         height: auto;
+        min-width:auto;
+        max-width: 40%;
     }
 
     p > img[alt*="aside"] ~ em,
@@ -191,6 +192,7 @@ h2:active .zola-anchor {
 
 img {
     max-height: 40vh;
+    min-height:auto;
     max-width: 95%;
     height: auto;
     border-radius: 15px;

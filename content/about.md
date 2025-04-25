@@ -11,9 +11,12 @@ description = "It's nice to meet you."
 
 ...though unless you're *very* tenacious with your Googling, we've probably met already[^1].
 
-I built this website largely as a place to practice my coding and to learn new skills (the details of which I will bore you with [here on the blog](/blog)).  What started as some shoddily handcrafted HTML is now a slightly slicker static-site. Poke around: try some of the [experiments here](/experiments) and flick through some of my [lessons here](/learn).
+**I'm an education specialist, with a passion for using technology to transform the way we teach and learn.**
+
 
 I have been Head of English for a few years now, long enough to know that we can always be doing more to experiment and improve. Hopefully, what you find here will help you to do just that.
+
+I built this website largely as a place to practice my coding and to learn new skills (the details of which I will bore you with [here on the blog](/blog)).  What started as some shoddily handcrafted HTML is now a slightly slicker static-site. Poke around: try some of the [experiments here](/experiments) and flick through some of my [lessons here](/learn).
 
 **If you'd like to chat, you can [drop me an email 📬](mailto:hello@maxbruges.com) or find me on [LinkedIn](https://uk.linkedin.com/in/max-bruges).**
 

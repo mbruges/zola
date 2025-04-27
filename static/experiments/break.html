@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/repton-blue.png" type="image/png">
+        <meta property="og:title" content="Breaktime" />
+        <meta property="og:description" content="Is it Red Break?" />
+        <meta property="og:image" content="/images/repton-blue.png" />
+        <meta property="og:url" content="https://www.maxbruges.com/experiments/break.html" />
+    <title>Breaktime</title>
+</head>
+
+<style>
+
+body {
+    background-color:slategrey;
+    text-align: center;
+}
+h1 {
+    text-shadow: 1px 1px 0px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30pt;
+
+    color: white;
+}
+
+</style>
+
+<script>
+fetch("https://learn.maxbruges.com/files/mail.txt")
+    .then(response => response.text())
+    .then(data => {
+      console.log(data);
+      if ((data.toLowerCase().includes("red")) || (data.toLowerCase().includes("amber"))) {
+        document.getElementById('name').innerText = "RED";
+        document.body.style.backgroundColor = "red";
+      } else {
+        document.getElementById('name').innerText = "GREEN";
+        document.body.style.backgroundColor = "seagreen";
+      }
+    })
+    .catch(error => console.error('Error:', error));
+</script><script>
+
+
+
+</script>
+
+<body>
+    <h1>It's <span id="name">?</span> break</h1>
+</body>

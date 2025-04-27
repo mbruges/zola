@@ -13,6 +13,20 @@
 
 <style>
 
+.loader {
+ border: 9px solid #f3f3f3; /* Light grey */
+ border-top: 9px solid #3498db; /* Blue */
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+ animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+ 0% { transform: rotate(0deg); }
+ 100% { transform: rotate(360deg); }
+}
+
 body {
     background-color:slategrey;
     text-align: center;
@@ -31,25 +45,25 @@ h1 {
 </style>
 
 <script>
-fetch("https://learn.maxbruges.com/files/mail.txt")
+fetch("https://api.mxb.fyi/mail")
     .then(response => response.text())
     .then(data => {
       console.log(data);
+      var title = document.getElementById('title');
+      text = "?"
       if ((data.toLowerCase().includes("red")) || (data.toLowerCase().includes("amber"))) {
-        document.getElementById('name').innerText = "RED";
+        text = "RED";
         document.body.style.backgroundColor = "red";
       } else {
-        document.getElementById('name').innerText = "GREEN";
+        text = "GREEN";
         document.body.style.backgroundColor = "seagreen";
       }
+      title.className = "";
+      document.title = `${text} break`
+      title.innerHTML = `It's ${text} break`
     })
     .catch(error => console.error('Error:', error));
-</script><script>
-
-
-
 </script>
-
 <body>
-    <h1>It's <span id="name">?</span> break</h1>
+    <h1 id=title class="loader"></h1>
 </body>

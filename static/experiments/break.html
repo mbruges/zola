@@ -73,12 +73,14 @@ fetch("https://api.mxb.fyi/break")
       if ((status.toLowerCase().includes("red")) || (status.toLowerCase().includes("amber"))) {
         text = "RED";
         document.body.style.backgroundColor = "red";
+        emoji = '🔴'
       } else {
         text = "GREEN";
         document.body.style.backgroundColor = "seagreen";
+        emoji = '🟢'
       }
       title.className = "";
-      document.title = `${text} break`
+      document.title = `${emoji} ${text} break`
       title.innerHTML = `It's ${text} break`
       document.getElementById('time').innerText = `Last updated: ${timeString}`
     })

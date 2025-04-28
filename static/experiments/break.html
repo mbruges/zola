@@ -42,13 +42,19 @@ h1 {
     color: white;
 }
 
+#time {
+    color:lightgrey;
+}
+
 </style>
 
 <script>
 fetch("https://api.mxb.fyi/mail")
-    .then(response => response.text())
-    .then(data => {
-      console.log(data);
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.message);
+    date = data.date
+    data = data.message
       var title = document.getElementById('title');
       text = "?"
       if ((data.toLowerCase().includes("red")) || (data.toLowerCase().includes("amber"))) {
@@ -61,9 +67,11 @@ fetch("https://api.mxb.fyi/mail")
       title.className = "";
       document.title = `${text} break`
       title.innerHTML = `It's ${text} break`
+      document.getElementById('time').innerText = `Last updated: ${date}`
     })
     .catch(error => console.error('Error:', error));
 </script>
 <body>
     <h1 id=title class="loader"></h1>
+    <small id="time"></small>
 </body>

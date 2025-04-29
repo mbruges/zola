@@ -37,56 +37,101 @@ body {
 h1 {
     text-shadow: 1px 1px 0px black;
     position: absolute;
-    top: 50%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 30pt;
+    font-size: 10vh;
 
     color: white;
+}
+
+#modal{
+    display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);
+}
+
+#popup {
+    margin: auto; background: white; padding: 20px; width: 300px; text-align: center; position: relative; top: 50%; transform: translateY(-50%);border-radius: 10px;font-family:sans-serif;
 }
 
 #time {
     color:lightgrey;
 }
 
+#help {
+    position:absolute;
+    bottom:1em;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:12pt;
+    color:lightgrey;
+    cursor:pointer;
+}
+
 </style>
 
 <script>
-fetch("https://api.mxb.fyi/break")
-  .then(response => response.json())
-  .then(data => {
-    console.log(data.message);
-    timestamp = data.timestamp.replace('\\n','')
-    const currentTime = Math.floor(Date.now() / 1000);
-    const timeDiff = currentTime - timestamp;
-    let timeString;
-    if (timeDiff < 60) {
-      timeString = `${timeDiff} seconds ago`;
-    } else if (timeDiff < 3600) {
-      timeString = `${Math.floor(timeDiff / 60)} minutes ago`;
-    } else {
-      timeString = `${Math.floor(timeDiff / 3600)} hours ago`;
-    }
-    status = data.status
-      var title = document.getElementById('title');
-      text = "?"
-      if ((status.toLowerCase().includes("red")) || (status.toLowerCase().includes("amber"))) {
-        text = "RED";
-        document.body.style.backgroundColor = "red";
-        emoji = '🔴'
+fetchData();
+
+setInterval(fetchData, 120000); // Fetch data every 2 minutes
+
+function fetchData() {
+  fetch("https://api.mxb.fyi/break")
+    .then(response => response.json())
+    .then(data => {
+      console.log(data.message);
+      timestamp = data.timestamp.replace('\\n','')
+      const currentTime = Math.floor(Date.now() / 1000);
+      const timeDiff = currentTime - timestamp;
+      let timeString;
+      if (timeDiff < 120) {
+        timeString = `${timeDiff} seconds ago`;
+      } else if (timeDiff < 7200) {
+        timeString = `${Math.floor(timeDiff / 60)} minutes ago`;
       } else {
-        text = "GREEN";
-        document.body.style.backgroundColor = "seagreen";
-        emoji = '🟢'
+        timeString = `${Math.floor(timeDiff / 3600)} hours ago`;
       }
-      title.className = "";
-      document.title = `${emoji} ${text} break`
-      title.innerHTML = `It's ${text} break`
-      document.getElementById('time').innerText = `Last updated: ${timeString}`
-    })
-    .catch(error => console.error('Error:', error));
+      status = data.status
+        var title = document.getElementById('title');
+        text = "?"
+        if ((status.toLowerCase().includes("red")) || (status.toLowerCase().includes("amber"))) {
+          text = "RED";
+          document.body.style.backgroundColor = "red";
+          emoji = '🔴'
+        } else {
+          text = "GREEN";
+          document.body.style.backgroundColor = "seagreen";
+          emoji = '🟢'
+        }
+        title.className = "";
+        document.title = `${emoji} ${text} break`
+        document.description = `${emoji} It's ${text} break`
+        title.innerHTML = `It's ${text} break`
+        document.getElementById('time').innerText = `Last updated: ${timeString}`
+      })
+      .catch(error => console.error('Error:', error));
+}
+
 </script>
 <body>
     <h1 id=title class="loader">☀️</h1>
     <small id="time"></small>
+        <small id="help" onclick="openModal()">ℹ️</small>
+        <div id="modal">
+            <div id="popup">
+                <h2>How does this work?</h2>
+                <p>This page is generated automatically from the periodic Heat Index emails issued by the school's clinic team.</p>
+                <p>'Amber' alerts are treated as 'red' - sorry Junior School! 🌞</p>
+                <p><i> Spot an error? <a href="mailto:mbruegs@reptonalbarsha.org">email Mr. Bruges 📧</a></i></p>
+                <button onclick="closeModal()">OK</button>
+            </div>
+        </div>
+        <script>
+            function openModal() {
+                document.getElementById('modal').style.display = 'block';
+            }
+
+            function closeModal() {
+                document.getElementById('modal').style.display = 'none';
+            }
+        </script>
 </body>

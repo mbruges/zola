@@ -19,15 +19,16 @@
  border-radius: 50%; */
  width: 40px;
  height: 48px;
- animation: spin 1s linear infinite;
+ animation: pulse 1s linear infinite;
  padding:0px;
  font-family: monospace;
  margin:0px;
 }
 
-@keyframes spin {
- 0% { transform: rotate(0deg); }
- 100% { transform: rotate(360deg); }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
 }
 
 body {
@@ -120,8 +121,8 @@ function fetchData() {
             <div id="popup">
                 <h2>How does this work?</h2>
                 <p>This page is generated automatically from the periodic Heat Index emails issued by the school's clinic team.</p>
-                <p>'Amber' alerts are treated as 'red' - sorry Junior School! 🌞</p>
-                <p><i> Spot an error? <a href="mailto:mbruegs@reptonalbarsha.org">email Mr. Bruges 📧</a></i></p>
+                <small>'Amber' alerts are treated as 'red' - sorry Junior School! 🌞</small>
+                <p><i> Spot an error? <a href="mailto:mbruges@reptonalbarsha.org" aria-details="Mailto link for Mr Bruges">email Mr. Bruges 📧</a></i></p>
                 <button onclick="closeModal()">OK</button>
             </div>
         </div>

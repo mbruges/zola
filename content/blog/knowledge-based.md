@@ -41,7 +41,7 @@ Large-Language Models are going to - and should! - play a central part in their 
 
 As Ben notes above, the models are extremely good at behaving like over-confident GCSE candidates, producing fluent paragraphs that miss key information. If our students can become domain _experts_, then they can be equipped to spot when these Rumsfeldian knowledge gaps emerge, and challenge them. 
 
-To out-smart the machine is pretty awesome experience for anyone, let alone a neophyte dipping their toes into the pool of academia for the first time. What better confidence boost can there be than telling ChatGPT it's got it wrong, and having it _agree_? The best way to learn is to teach, so teach that chatbot who's boss.
+To out-smart the machine is pretty a awesome experience for anyone, let alone a neophyte dipping their toes into the pool of academia for the first time. What better confidence boost can there be than telling ChatGPT it's got it wrong, and having it _agree_? The best way to learn is to teach, so teach that chatbot who's boss.
 
 ## Gell-Mann and GPT
 
@@ -53,4 +53,4 @@ Above all, an interaction like this can pierce the veil of infallibility and tea
 
 Swap 'newspaper' and 'journalist' for ChatGPT, and you'll see exactly what Ben Thompson is driving at. Of course, Crichton's point is that we _forget_ this once we leave our domain of expertise, slipping back in to trusting the authority of fluency. 
 
-But for a brief, shining moment, our students can know how right they are, and know that these tools exist to augment their knowledge, not replace it.
+But for a brief, shining moment, our students can know how right they are, and know that these tools exist to _augment_ their knowledge, not replace it.

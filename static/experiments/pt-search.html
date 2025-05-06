@@ -17,8 +17,8 @@
         }
 
         .test-code {
-            font-size:1.1em;
-            cursor:copy;
+            font-size:1.3em;
+            cursor:pointer !important;
         }
 
         th {
@@ -30,6 +30,7 @@
             padding: 1em;
             border-radius: 5px;
             margin-bottom: 1em;
+
         }
     </style>
 </head>
@@ -78,31 +79,38 @@
                 );
 
                 if (matched.length > 0 && query.length > 2) {
-                    testCode.innerHTML = matched.map(item =>
-                      `<div class="code-container"><p style="text-align:center"><b>${item.Name}</b>(Y${item.Year})</p><table>
+                  testCode.innerHTML = matched.map(item => {
+                      let codeDisplay = `<div class="code-container"><p style="text-align:center; font-size:1.1em"><b>${item.Name}</b>(Y${item.Year})</p><table>
                           <th>Test</th>
                           <th>Code</th>
                           <tr>
                               <td>📚 English</td>
-                              <td><code data-tooltip="Click to copy" onclick="copyToClipboard('${item.PTE}')" >${item.PTE}</code></td>
+                              <td><code class=test-code data-tooltip="Click to copy" onclick="copyToClipboard('${item.PTE}')" >${item.PTE}</code></td>
                           </tr>
                           <tr>
                               <td>🧮 Maths</td>
-                              <td><code data-tooltip="Click to copy" onclick="copyToClipboard('${item.PTM}')" >${item.PTM}</code></td>
+                              <td><code class=test-code data-tooltip="Click to copy" onclick="copyToClipboard('${item.PTM}')" >${item.PTM}</code></td>
                           </tr>
-                          <tr>
-                              <td>🧪 Science</td>
-                              <td><code data-tooltip="Click to copy" onclick="copyToClipboard('${item.PTS}')" >${item.PTS}</code></td>
-                          </tr>}
-                      </table></div>`).join('\n');
+                          <!--SCIENCE-->
+                      </table></div>`;
+                      if (item.PTS){
+                        science = `<tr>
+                            <td>🧪 Science</td>
+                            <td><code class=test-code data-tooltip="Click to copy" onclick="copyToClipboard('${item.PTS}')" >${item.PTS}</code></td>
+                        </tr>`;
+                        codeDisplay = codeDisplay.replace('<!--SCIENCE-->',science);
+                      }
+                      return codeDisplay;
+                  }).join('');
                     result.style.visibility = 'visible';
                 }
                 else if (query.length > 2) {
                     testCode.innerHTML = `<i>No matches found</i>`;
                     result.style.visibility = 'visible';
                 }
-                else {
-                    result.style.visibility = 'hidden';
+                else if (query.length > 0)  {
+                  testCode.innerHTML = `<i>Keep typing your name...</i>`;
+                    result.style.visibility = 'visible';
                 }
             });
         </script>

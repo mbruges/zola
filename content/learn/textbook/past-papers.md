@@ -32,5 +32,6 @@ Click to download the paper as PDF - mark schemes are included at the end of eac
 - [June 2023 B](/files/GP1-June23B.pdf)
 - [November 2023 C](/files/GP1-Nov23C.pdf)
 - [November 2024 A](/files/GP1-Nov24A.pdf)
+- [New Specimen 2025](/files/GP1-Specimen25.pdf)
 
 > [](note) These papers remain the copyright of their respective publishers.

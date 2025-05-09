@@ -1,8 +1,8 @@
 ---
-title: 
+title:
 description: " "
 authors: ["Max Bruges"]
-# date: 2025-01-01
+# date: 20YY-MM-DD
 draft: true
 extra:
   icon: 🙈

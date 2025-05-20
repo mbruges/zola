@@ -2,6 +2,7 @@
 title: Get Text
 description: "Extract plain text from `pdf` files using the [Markitdown](https://github.com/microsoft/markitdown) library."
 date: 2024-12-21
+draft: true
 extra:
   icon: ⌨
   center: true

@@ -36,9 +36,8 @@ html {
 
 #main {
     min-height: 80vh;
-    position:relative;
+    position: relative;
 }
-
 
 #container {
     scroll-margin-top: 2em;
@@ -92,35 +91,35 @@ textarea {
     padding: 0.4rem;
 }
 
-
 .post-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border-top: 3px solid var(--a);
 }
-    .prev,
-    .next {
-        max-width: 220px;
-        min-width: 220px;
-        border: 3px solid var(--a);
-        margin-top: -3px;
-        background:var(--b);
-        text-decoration: none !important;
-        display:flex;
-        font-size: 0.9em;}
-    .next {
-        text-align: right;
-    }
-    .post-nav > a {
-        padding:0.5em !important;
-    }
+.prev,
+.next {
+    max-width: 220px;
+    min-width: 220px;
+    border: 3px solid var(--a);
+    margin-top: -3px;
+    background: var(--b);
+    text-decoration: none !important;
+    display: flex;
+    font-size: 0.9em;
+}
+.next {
+    text-align: right;
+}
+.post-nav > a {
+    padding: 0.5em !important;
+}
 @media (min-width: 680px) {
     .post-nav {
         justify-content: space-between !important;
-        }
+    }
     #back {
-        display:block !important;
+        display: block !important;
     }
 }
 
@@ -132,7 +131,7 @@ textarea {
         margin: 0.1em -0.5em 1em 1em !important;
         float: right;
         height: auto;
-        min-width:auto;
+        min-width: auto;
         max-width: 40%;
     }
 
@@ -151,7 +150,6 @@ textarea {
         text-align: center;
         opacity: 0.75;
     }
-
     aside > p {
         border: 2pt dashed var(--t) !important;
         background-color: rgba(0, 0, 0, 0.085);
@@ -192,7 +190,7 @@ h2:active .zola-anchor {
 
 img {
     max-height: 40vh;
-    min-height:auto;
+    min-height: auto;
     max-width: 95%;
     height: auto;
     border-radius: 15px;
@@ -380,7 +378,6 @@ hr {
     opacity: 0.8;
 }
 
-
 blockquote p {
     margin-top: 0.3em;
     margin-bottom: 0.3em;
@@ -426,7 +423,7 @@ blockquote blockquote {
     display: flex;
     margin-right: 1px;
     margin-top: 0.4em;
-    margin-bottom:0.2em;
+    margin-bottom: 0.2em;
     padding-bottom: -0px;
     color: rgba(0, 0, 0, 0.705);
     height: fit-content;

@@ -3,6 +3,6 @@ public/
 *.tape
 temp.*
 *.command
-*.DS_S*
+*.DS*
 .vscode
 cspell.json

@@ -117,8 +117,7 @@
 
 
         <script>
-        function copyToClipboard(copiedElement) {
-            const text = copiedElement.innerText;
+        function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
                 if (confirm('Test code has been copied to clipboard.\nTap OK to go to TestWise and start the test')){
                   window.open('https://www.testwise.com/platform/code', '_blank');

@@ -4,10 +4,10 @@ description: Curriculum Vitae
 date: 2001-01-01
 draft: true
 extra:
-  icon: " "
+  icon: ""
 ---
 
-<!-- <style>
+<style>
     body {
         max-width: 720px;
         display: block;
@@ -55,7 +55,7 @@ extra:
     }
     </style>
 
-<div style="background:rgba(240, 248, 255, 0.5);border-top:solid 1px black;"> -->
+<!-- <div style="background:rgba(240, 248, 255, 0.5);border-top:solid 1px black;"> -->
 
 <style>
 table th a {
@@ -71,12 +71,24 @@ table th a {
 
 ### [Repton Al Barsha](https://www.reptonalbarsha.org/), Dubai
 
+#### Head of Data, *August 2024 - **Present***
+
+- Led whole-school overhaul of data gathering and analysis processes to improve efficiency and accuracy
+- Improved parental communication and engagement to drive buy-in to assessment and reporting
+- Designed and implemented data-led behavioural monitoring and intervention system
+- Worked directly with Principal to prepare inspectorate and governor reports
+- Coordinated standardised testing suite to meet KHDA standards across Key Stages 1 to 5
+- Built interactive online tools and resources to provide cross-phase data insights for inspection
+- Delivered targeted CPD to senior and middle leaders to build data literacy skills
+- Worked closely with senior leadership across all phases to guide data-driven decision-making
+
+
 #### Head of English, *August 2023 - **Present***
 
-I have prepared our first GCSE cohort and laid the foundations for the next phase of expansion into A-Level, whilst improving the spiral curriculum up from Key Stage 3. I have integrated quickly and effectively with senior leadership, providing value-add beyond my department and affecting positive change across the school.
-
-- Attained departmental Very Good rating in 2024 KHDA inspection
-- Built interactive online portal to provide cross-phase data insights ahead of inspection
+- Built department to deliver first GCSE and A-Level cohorts
+- Line-managed growing team of teachers and literacy support staff
+- Designed and implement spiral curriculum up from Key Stage 3, coordinating with Junior School
+- Attained departmental 'Very Good' rating in most recent KHDA inspection
 - Rated as an Outstanding teacher by internal and BSO inspections
 - Achieved 30% increase in students attaining 120+ SAS reading scores
 - Collaborated with SLT to draft and implement School and Department Improvement Plans
@@ -103,9 +115,9 @@ Led a core department at a high-performing international school for Key Stages 3
 
 #### English Teacher & EPQ Supervisor, *August 2027 - July 2020*
 
-Developed teaching practice in a challenging environment, meeting the complex needs of students in a comprehensive setting through high-quality pedagogy.
+Developed teaching practice in a challenging, resource-constrained environment, meeting the complex needs of students in a comprehensive setting through high-quality pedagogy.
 
-- Delivered new English Literature A-Level curriculum, achieving record number of passes
+- Designed and delivered new English Literature A-Level curriculum, achieving record number of passes
 - Led whole-school CPD on vocabulary-acquisition, informed by original quantitative research
 - Produced high quality resources for Key Stages 3, 4 and 5
 - Coached extra-curricular debating team to regional success

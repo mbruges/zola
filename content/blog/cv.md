@@ -4,7 +4,7 @@ description: Curriculum Vitae
 date: 2001-01-01
 draft: true
 extra:
-  icon: ""
+  icon: "📄"
 ---
 
 <style>
@@ -71,7 +71,7 @@ table th a {
 
 ### [Repton Al Barsha](https://www.reptonalbarsha.org/), Dubai
 
-#### Head of Data, *August 2024 - **Present***
+#### Data Lead, *August 2024 - **Present***
 
 - Led whole-school overhaul of data gathering and analysis processes to improve efficiency and accuracy
 - Improved parental communication and engagement to drive buy-in to assessment and reporting
@@ -185,7 +185,7 @@ Provided pedagogical training to teachers at charity school for refugees from wa
 | ---: | :---: | :---: | :--- |
 | English Literature - A* | History - A | Drama - A | Philosophy & Ethics - A  |
 
----
+<!-- ---
 
 ## References
 
@@ -193,4 +193,4 @@ Provided pedagogical training to teachers at charity school for refugees from wa
 | :--- | :--- |
 | Repton Al Barsha, Dubai | El Alsson British International School, Cairo |
 | 📧 [zcass@reptonalbarsha.org](mailto:zcass@reptonalbarsha.org) | 📧 [rboswell@alsson.com](mailto:rboswell@alsson.com) |
-| 📞 [+97148188600](tel:+97148188600) | 📞 [+201038270800](tel:+201038270800) |
+| 📞 [+97148188600](tel:+97148188600) | 📞 [+201038270800](tel:+201038270800) | -->

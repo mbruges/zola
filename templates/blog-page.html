@@ -28,4 +28,69 @@ endif %}
 </div>
 <div id="content">{{ page.content | safe }}</div>
 
-{% include "snippets/nextprev.html" %} {% endblock content %}
+{% if page.content is containing("footnote") %}
+
+<script>
+    window.onload = function () {
+        console.log("Footnote aside function triggered");
+        var footnotes = document.querySelectorAll('li[id*="fn"]');
+        index = 1;
+        for (note of footnotes) {
+            var tag = document.querySelectorAll(`a[href*="#${note.id}"]`, note);
+            var noteClone = note.cloneNode(true);
+            noteClone = noteClone.querySelectorAll("p");
+            noteCloneDiv = document.createElement("div");
+            first = true;
+            for (element of noteClone) {
+                if (first) {
+                    element.innerHTML =
+                        `<sup>${index}</sup> ` + element.innerHTML;
+                    fist = false;
+                }
+                noteCloneDiv.appendChild(element);
+            }
+            noteCloneDiv.className = "aside-note";
+            tag[0].parentNode.insertBefore(noteCloneDiv, tag[0].nextSibling);
+            index += 1;
+        }
+    };
+</script>
+
+<style>
+    /* Aside footnotes */
+
+    .aside-note {
+        display: none;
+    }
+
+    @media (min-width: 70em) {
+        .aside-note {
+            display: flex;
+            float: right;
+            clear: right;
+            margin-right: 1%;
+            margin-right: -12em;
+            margin-top: -1em !important;
+            text-align: left;
+            width: 9em;
+            margin-top: 0.3rem;
+            margin-bottom: 0;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            position: sticky;
+            vertical-align: top;
+            overflow: visible; /* Added to ignore overflow rules */
+        }
+
+        .aside-note a[href*="fr"] {
+            display: none;
+        }
+        .footnotes {
+            display: none;
+        }
+        sup.footnote-reference > a {
+            cursor: default;
+        }
+    }
+</style>
+{% endif %} {% include "snippets/nextprev.html" %} {% endblock content %}

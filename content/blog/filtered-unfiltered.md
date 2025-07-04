@@ -12,7 +12,7 @@ extra:
 
 This [Hacker News comment](https://news.ycombinator.com/item?id=41994567) started turning a cog in my brain: are we going about LLMs all wrong, by plonking them straight in the hands of the end user?
 
-> AI, in its current state, really isn't a tool meant for an end user to interact with...  
+> AI, in its current state, really isn't a tool meant for an end user to interact with...
 > The best use cases seem to be those that don't require an end consumer to directly interact with an AI, but their journey through some process is assisted by an AI instead.
 >> [CharlieDigital, 30/10/24](https://news.ycombinator.com/user?id=CharlieDigital)
 

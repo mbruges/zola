@@ -52,9 +52,9 @@ ESC="\x1B" && echo "${ESC}!1 This is big ${ESC}@ and this is back to normal"
 
 These codes are helpfully [documented here](https://mike42.me/blog/what-is-escpos-and-how-do-i-use-it) by Mike Billington, scavenged from poorly formatted Epson documentation. Mike's guides are extremely good, and the best place to look if you get stuck on anything ESC/POS.
 
-The printer will do exactly - and *only* - what we explicitly tell it to. That means that niceties like word-wrapping need to be implemented manually, which I ended up doing through a `bash` function.  
+The printer will do exactly - and *only* - what we explicitly tell it to. That means that niceties like word-wrapping need to be implemented manually, which I ended up doing through a `bash` function.
 
-Combine this with some basic `sed` and `grep`, and we've soon got a very rudimentary desktop publisher for our printer:  
+Combine this with some basic `sed` and `grep`, and we've soon got a very rudimentary desktop publisher for our printer:
 - word-wrapped paragraphs
 - double-size font for titles (indicated with a markdown-style `#`)
 - a cut-off line at the end
@@ -70,7 +70,7 @@ The date is easy, a quick `date +"# %a %d %h %y"`, with the octothorpe at the fr
 The weather we can use the excellent [wttr.in](https://wttr.in) service:
 
 ```bash
-$ curl 'wttr.in/Dubai?format="Dubai:+%f,+%C\n"' | sed 's/°//g'  
+$ curl 'wttr.in/Dubai?format="Dubai:+%f,+%C\n"' | sed 's/°//g'
 "Dubai: +25C, Clear"
 ```
 
@@ -86,14 +86,14 @@ We start by parsing the XML data of the RSS feed, using the utl `xmllint`[^4]:
 
 ```bash
 curl -s 'https://feeds.theguardian.com/theguardian/uk/rss' \
-| xmllint --xpath '(//item/title|//item/description)[position() <= 16]' -  
+| xmllint --xpath '(//item/title|//item/description)[position() <= 16]' -
 ```
 
 This filters the feed so that it returns only the title and description for each news story. So we don't totally hammer our API (and credit card) when it comes to processing, I've limited the feed to only 16 items or stories. The Guardian occasionally includes some HTML in the descriptions, which we can strip out with:
 
 ```bash
 sed 's/href=.*&gt;//g' | sed 's/&lt;//g' \
-| sed 's/&gt;//g' | sed 's|<title>|\n<title>|g'  
+| sed 's/&gt;//g' | sed 's|<title>|\n<title>|g'
 ```
 
 We've now got a lovely, clean block of news to feed into the LLM.

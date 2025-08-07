@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <style>
+    html {
+        max-height: 99dvh;
+        max-width: 99dvh;
+        overflow:hidden;
+    }
+
     body {
         background-image: url("/images/jungle.jpg");
         background-size: cover;
         filter: brightness(120%);
+        height: 100%;
+        width: 100%;
     }</style>
     <title>Elephant March</title>
     <link
@@ -35,10 +43,10 @@
   100% { transform: translate(-100%, 0); }
 }</style>
 <body>
-    <main id="content" class="container" style="text-align: center; min-height: 90dvh; padding: 30vh;">
+    <main id="content" class="container" style="text-align: center; min-height: 90dvh; padding: 20vh;">
         <section class="hero">
         <!-- <h1>Elephant March</h1> -->
-        <button style="font-size: 3em; min-width: 30dvw;" id="audioButton" onclick="toggleAudio()">Play ▶︎</button>
+        <button style="font-size: 2.5em; min-width: 30dvw;" id="audioButton" onclick="toggleAudio()">Play ▶︎</button>
         <audio id="audio" controls hidden>
             <source src="files/ElephantMarch.mp3" type="audio/mpeg" loop>
             Your browser does not support the audio element.

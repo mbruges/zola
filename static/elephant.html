@@ -3,6 +3,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
+    <style>
+    body {
+        background-image: url("/images/jungle.jpg");
+        background-size: cover;
+        filter: brightness(120%);
+    }</style>
     <title>Elephant March</title>
     <link
       rel="stylesheet"
@@ -21,8 +27,8 @@
 .marquee p {
     font-size: 200px;
   display: inline-block;
-  padding-left: 100%;
-  animation: marquee 15s linear infinite;
+  padding-left: 1%;
+  animation: marquee 90s linear infinite;
 }
 @keyframes marquee {
   0%   { transform: translate(0, 0); }
@@ -31,7 +37,7 @@
 <body>
     <main id="content" class="container" style="text-align: center; min-height: 90dvh; padding: 30vh;">
         <section class="hero">
-        <h1>Elephant March</h1>
+        <!-- <h1>Elephant March</h1> -->
         <button style="font-size: 3em; min-width: 30dvw;" id="audioButton" onclick="toggleAudio()">Play ▶︎</button>
         <audio id="audio" controls hidden>
             <source src="files/ElephantMarch.mp3" type="audio/mpeg" loop>
@@ -45,18 +51,18 @@
               const patrol = document.getElementById('marquee')
               console.log(audio)
                 if (audio.paused) {
-                  patrol.hidden = false;
+                  patrol.style.opacity = 1;
                     audio.play();
                     audioButton.textContent = 'Pause ⏸︎';
                 } else {
-                  patrol.hidden = true;
+                  patrol.style.opacity = 0;
                     audio.pause();
                     audioButton.textContent = 'Play ▶︎';
                 }
             }
         </script>
-        <div id=marquee class="marquee" hidden>
-          <p>🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 </p>
+        <div id=marquee class="marquee" style="opacity:0">
+          <p>🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 🐘 </p>
         </div>
         </section>
     </main>

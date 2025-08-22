@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="icon" href="/images/repton-blue.png" type="image/png">
+        <meta property="og:title" content="Code Search" />
+        <meta property="og:description" content="Find your school email quickly and easily." />
+        <meta property="og:image" content="/images/repton-blue.png" />
+        <meta property="og:url" content="https://www.maxbruges.com/experiments/email-search.html" />
+    <title>Email Search</title>
+    <style>
+        #loading {
+            display: none;
+            text-align: center;
+        }
+
+        .test-code {
+            font-size:1.1em;
+            cursor:copy;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container" aria-busy="false" id="mainContent" style="max-width:900px">
+        <header>
+            <nav style="padding-left: 0.5em;padding-right: 0.5em;">
+              <ul>
+                <li><a href="https://www.reptonalbarsha.org/"><img style="max-height: 3em; padding:none;" src="/images/repton-blue.png"></a></li>
+              </ul>
+              <ul>
+                <li><a style="cursor:pointer" id="about-link" class="contrast">Help 🙋🏼‍♀️</a></li>
+              </ul>
+            </nav>
+        </header>
+        <h1>Find your school email address 📧</h1>
+        <p>Search your name, then tap your <code>email</code> to copy it. <a href="https://outlook.office365.com" target="_blank">Visit Outlook to check it works. ↗</a></p>
+        <form id="queryForm">
+            <input type="text" id="queryInput" placeholder="Start typing your name..." autofocus required>
+            <small><a onclick="document.getElementById('about').showModal()">Forgotten your password?</a></small>
+        </form>
+        <div id="result" class="center" style="visibility: hidden;">
+            <article>
+                <div id="results"></div>
+            </article>
+        </div>
+
+        <script>
+        let data = [];
+        let cacheBuster = Date.now();
+        fetch(`/files/emails.json?cb=${cacheBuster}`)
+            .then(response => response.json())
+            .then(jsonData => {
+                data = jsonData;
+            })
+            .catch(error => console.error('Error loading data:', error));
+            const queryInput = document.getElementById('queryInput');
+            const result = document.getElementById('result');
+            const testCode = document.getElementById('results');
+
+            queryInput.addEventListener('input', function() {
+                const query = queryInput.value.toLowerCase();
+                const matched = data.filter(item =>
+                    item.name.toLowerCase().includes(query)
+                );
+
+                if (matched.length > 0 && query.length > 0) {
+                    testCode.innerHTML = matched.map(item =>
+                      `<p>${item.name} (Y${item.y}): <code data-tooltip="Click to copy" onclick="copyToClipboard(this)" class="test-code">${item.address}</code></p>`).join('\n');
+                    result.style.visibility = 'visible';
+                }
+                else if (query.length > 0) {
+                    testCode.innerHTML = `<i>No matches found </i> - <a onclick="document.getElementById('about').showModal()">Help 🙋🏼‍♀️</a>`;
+                    result.style.visibility = 'visible';
+                }
+                else {
+                    result.style.visibility = 'hidden';
+                }
+            });
+        </script>
+        <script>
+        function copyToClipboard(copiedElement) {
+            const text = copiedElement.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                confirm('Email code has been copied to clipboard.');
+            });
+        }
+        </script>
+
+    </main>
+    <dialog id="about">
+
+      <article>
+        <header>
+            <i>FAQ</i>
+          <button aria-label="Close" rel="prev" onclick="document.getElementById('about').close()"></button>
+        </header>
+        <h3 id="password-note">
+            Help, I've forgotten my password! 😱
+        </h3>
+        <p>If you can't remember your password, it will need to be reset.</p>
+        <p>To do this, <b>ask your form tutor to contact Mr. Waqas in the IT Office</b>.</p>
+        <h3>
+          My name or email isn't listed here 🫥
+        </h3>
+        <p>Try typing just your first name, or last name.</p>
+        <p>If you still can't find your address, ask your teacher for help. If you're a new student, you may need to have an account created.</p>
+        <h3>
+          About your school email 📨
+        </h3>
+        <p>This email address is used to log in to all our applications, such as Teams and Showbie.</p>
+        <p> It's very important that you check it regularly, as teachers use it to share important information with you.</p>
+        <p> For more information, or if you want to learn how this website works, email <a href="mailto:mbruges@reptonalbarsha.org">Mr. Bruges</a> 📧</p>
+      </article>
+    </dialog>
+    <script>
+        const aboutLink = document.getElementById('about-link');
+        const aboutDialog = document.getElementById('about');
+
+        aboutLink.addEventListener('click', () => {
+            aboutDialog.showModal();
+        });
+    </script>
+</body>
+</html>

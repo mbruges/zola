@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
+		<!-- <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script> -->
+		<link
+			rel="icon"
+			href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E✍️%3C/text%3E%3C/svg%3E"
+			type="image/svg+xml"
+		/>
+		<title>Writer</title>
+		<link rel="stylesheet" type="text/css" href="https://sylvainpolletvillard.github.io/spell/spell.css" />
+		<style>
+			:root {
+				max-width: 90ch;
+				padding: 0.6em;
+				margin: auto;
+			}
+
+			.spell {
+				box-shadow: none;
+				font-family: sans-serif;
+			}
+			.spell-content {
+				resize: none !important;
+				height: 80vh;
+			}
+			.spell-icon::after {
+				display: none;
+			}
+
+			.spell-bar {
+				opacity: 0.2;
+				background: none !important;
+			}
+
+			.spell-bar:hover,
+			#download:hover {
+				opacity: 1;
+			}
+
+			#editor {
+				border: none;
+			}
+
+			#download {
+				background: none;
+				border: none;
+				cursor: pointer;
+			}
+
+			.spell-content div {
+				padding-top: 0.55rem;
+			}
+
+			#count-container {
+				position: absolute;
+				bottom: 1rem;
+				text-align: center;
+				opacity: 0.2;
+				left: 10px;
+				margin: 0;
+				min-width: 99vw;
+				font-family: monospace;
+				font-size: 0.7rem;
+			}
+
+			@media print {
+				:root {
+					max-width: 88vw;
+					padding-top: 2rem;
+				}
+				.count-container,
+				.spell-bar,
+				#wordcount {
+					display: none !important;
+				}
+				.spell-content {
+					display: block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="editor"></div>
+		<div id="count-container">
+			<p>W: <span id="wordcount">0</span></p>
+		</div>
+		<script>
+			function spell() {
+				let exec = (command, value = null) => document.execCommand(command, false, value);
+				let ensureHTTP = (url) => (/^https?:\//.test(url) ? url : `http://${url}`);
+				let $ = (tag, props, children = [], elm = document.createElement(tag)) =>
+					children.map((child) => child && elm.appendChild(child)) && Object.assign(elm, props);
+
+				let colorPicker = (_) => $('input', { type: 'color' });
+				let select = (options) =>
+					$(
+						'select',
+						{},
+						options.map((o) => $('option', { textContent: o })),
+					);
+
+				let buttons = {};
+				let queryState = (_) => {
+					for (let cmd in buttons) buttons[cmd].classList.toggle('selected', document.queryCommandState(cmd));
+				};
+
+				let actions = [
+					[
+						['bold'],
+						['italic'],
+						['underline'],
+						['strikeThrough'],
+						// ['subscript'],
+						['superscript'],
+					],
+					[
+						['justifyLeft'],
+						['justifyCenter'],
+						// ['justifyRight'],
+						['justifyFull'],
+						['indent'],
+						['outdent'],
+					],
+					[
+						['fontName', select(['sans-serif', 'serif', , 'monospace'])],
+						// ['fontSize', select([...Array(33)].map((_, i) => 8 + i * 2))],
+						// ['forecolor', colorPicker()],
+						// ['hilitecolor', colorPicker()],
+					].map(([cmd, input]) => [cmd, 0, Object.assign(input, { onchange: (_) => exec(cmd, input.value) })]),
+					[
+						...[1, 2, 3].map((n) => ['heading' + n, `<h${n}>`]),
+						// ['paragraph', '<p>'],
+						// ['quote', '<blockquote>'],
+						// ['code', '<pre>'],
+					].map(([title, format]) => [title, (_) => exec('formatBlock', format)]),
+					[
+						['insertOrderedList'],
+						['insertUnorderedList'],
+						// ['insertHorizontalRule']
+					],
+					[
+						['removeFormat'],
+						// ['unlink']
+					],
+					[
+						['createLink', 'link', ensureHTTP],
+						// ['insertImage','image', ensureHTTP],
+						// ['insertHTML', 'video', url => `<video controls src="${ensureHTTP(url)}">`]
+					].map(([cmd, type, t]) => [type, (url) => (url = prompt(`Enter the ${type} URL`)) && exec(cmd, t(url))]),
+					// [
+					// 	['copy'],
+					// 	['cut'],
+					// 	['paste']
+					// ],
+					[['undo'], ['redo']],
+				];
+
+				return $('div', { className: 'spell' }, [
+					$(
+						'div',
+						{ className: 'spell-bar' },
+						actions.map((bar) =>
+							$(
+								'div',
+								{ className: 'spell-zone' },
+								bar.map(
+									([cmd, onclick = (_) => exec(cmd), control]) =>
+										(buttons[cmd] = $(
+											'button',
+											{
+												className: 'spell-icon',
+												title: cmd.replace(/([^a-z])/g, ' $1').toLowerCase(),
+												onclick,
+											},
+											[$('i', { className: 'icon-' + cmd.toLowerCase() }), control],
+										)),
+								),
+							),
+						),
+					),
+					$('div', {
+						className: 'spell-content',
+						contentEditable: true,
+						onkeydown: (event) => event.which !== 9,
+						onkeyup: queryState,
+						onmouseup: queryState,
+						spellcheck: true,
+					}),
+				]);
+			}
+		</script>
+		<script>
+			document.getElementById('editor').appendChild(spell());
+
+			function download() {
+				const content = document.getElementsByClassName('spell-content')[0].innerHTML;
+				const blob = new Blob([content], { type: 'text/html' });
+				const url = URL.createObjectURL(blob);
+				const a = document.createElement('a');
+				a.href = url;
+				a.download = 'doc.html';
+				document.body.appendChild(a);
+				a.click();
+				document.body.removeChild(a);
+				URL.revokeObjectURL(url);
+			}
+
+			function wordCount(str) {
+				const words = str.trim().split(/\s+/);
+				return words[0] === '' ? 0 : words.length;
+			}
+
+			const downloadButton = `<button id="download" onclick="download('editor')">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+				  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+				  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+				</svg>
+			</button>`;
+			let zones = document.getElementsByClassName('spell-zone');
+			zones[zones.length - 1].insertAdjacentHTML('beforeend', downloadButton);
+
+			const spellContent = document.getElementsByClassName('spell-content')[0];
+			spellContent.appendChild(document.createElement('div'));
+			spellContent.addEventListener('input', () => {
+				const count = wordCount(spellContent.innerText);
+				document.getElementById('wordcount').innerText = count;
+			});
+		</script>
+		<script>
+			function revertLink(elem) {
+				var rightclick;
+				var e = window.event;
+				if (e.button == 2) {
+					e.preventDefault();
+					const text = elem.innerText;
+					const href = elem.getAttribute('href');
+					elem.outerHTML = `[${text}](${href})`;
+				}
+			}
+
+			function jumpToEnd(div) {
+				const range = document.createRange();
+				const selection = window.getSelection();
+				range.selectNodeContents(div);
+				range.collapse(false);
+				selection.removeAllRanges();
+				selection.addRange(range);
+			}
+			function mdLiveFormatting(eventKey) {
+				console.log('firing formatting');
+				const boldRegex = /\*([^\s].*?[^\s])\*/g;
+				const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+				const childDivs = spellContent.querySelectorAll('.spell-content > div');
+				childDivs.forEach((div) => {
+					if (boldRegex.test(div.innerHTML)) {
+						div.innerHTML = div.innerHTML.replace(boldRegex, '<strong>$1</strong>');
+						jumpToEnd(div);
+					}
+
+					if (linkRegex.test(div.innerHTML)) {
+						div.innerHTML = div.innerHTML.replace(linkRegex, '<a oncontextmenu="revertLink(this)" title="$2" href="$2">$1</a>');
+						jumpToEnd(div);
+					}
+
+					if (div.innerText[0] == '#') {
+						count = div.innerText.split('#').length - 1;
+						div.innerHTML = `<h${count}>` + div.innerHTML.replaceAll('#', '') + `</h${count}>`;
+						jumpToEnd(div);
+					}
+					if (div.innerText.startsWith('-') && eventKey === ' ') {
+						console.log('firing list');
+						div.innerHTML = `<ul><li>` + div.innerText.slice(2) + `</li></ul>`;
+						jumpToEnd(div);
+					}
+					if (div.innerText.startsWith('1.') && eventKey === ' ') {
+						console.log('firing list');
+						div.innerHTML = `<ol><li>` + div.innerText.slice(2) + `</li></ol>`;
+						jumpToEnd(div);
+					}
+					if (div.innerText === '---' && eventKey === 'Enter') {
+						console.log('firing hr');
+						div.innerHTML = `<hr>`;
+						// jumpToEnd(div);
+					}
+				});
+			}
+			spellContent.addEventListener('keypress', (event) => {
+				if (event.key === 'Enter' || event.key === ' ') {
+					setTimeout(() => {
+						mdLiveFormatting(event.key);
+					}, 100);
+				}
+			});
+		</script>
+	</body>
+</html>

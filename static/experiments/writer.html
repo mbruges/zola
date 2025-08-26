@@ -1,300 +1,474 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="color-scheme" content="light dark" />
-		<!-- <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script> -->
-		<link
-			rel="icon"
-			href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E✍️%3C/text%3E%3C/svg%3E"
-			type="image/svg+xml"
-		/>
-		<title>Writer</title>
-		<link rel="stylesheet" type="text/css" href="https://sylvainpolletvillard.github.io/spell/spell.css" />
-		<style>
-			:root {
-				max-width: 90ch;
-				padding: 0.6em;
-				margin: auto;
-			}
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
+        <!-- <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script> -->
+        <link
+            rel="icon"
+            href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E✍️%3C/text%3E%3C/svg%3E"
+            type="image/svg+xml"
+        />
+        <title>Writer</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://sylvainpolletvillard.github.io/spell/spell.css"
+        />
+        <style>
+            :root {
+                max-width: 90ch;
+                padding: 0.6em;
+                margin: auto;
+            }
 
-			.spell {
-				box-shadow: none;
-				font-family: sans-serif;
-			}
-			.spell-content {
-				resize: none !important;
-				height: 80vh;
-			}
-			.spell-icon::after {
-				display: none;
-			}
+            .spell {
+                box-shadow: none;
+                font-family: sans-serif;
+            }
+            .spell-content {
+                resize: none !important;
+                height: 80vh;
+                overflow: visible;
+            }
+            .spell-icon::after {
+                display: none;
+            }
 
-			.spell-bar {
-				opacity: 0.2;
-				background: none !important;
-			}
+            .spell-bar {
+                opacity: 0.2;
+                background: none;
+                border: none;
+                overflow-x: scroll;
+                display: block;
+                white-space: wrap; /* Use flexbox for alignment */
+                justify-content: center; /* Center items horizontally */
+                flex-wrap: wrap; /* Allow items to wrap */
+                width: fit-content; /* Adjust width based on content */
+                max-width: 100%;
+                height: fit-content;
+                overflow-y: clip;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 1rem;
+            }
 
-			.spell-bar:hover,
-			#download:hover {
-				opacity: 1;
-			}
+            .spell-zone {
+                display: inline-block;
+            }
 
-			#editor {
-				border: none;
-			}
+            .spell-bar:hover,
+            #download:hover {
+                opacity: 1;
+            }
 
-			#download {
-				background: none;
-				border: none;
-				cursor: pointer;
-			}
+            #editor {
+                border: none;
+            }
+            .spell-content div {
+                padding-top: 0.55rem;
+            }
 
-			.spell-content div {
-				padding-top: 0.55rem;
-			}
+            #count-container {
+                position: absolute;
+                bottom: 1rem;
+                text-align: center;
+                opacity: 0.2;
+                left: 1rem;
+                margin: 0;
+                min-width: fit-content;
+                font-family: monospace;
+                font-size: 0.7rem;
+                cursor: pointer;
+            }
 
-			#count-container {
-				position: absolute;
-				bottom: 1rem;
-				text-align: center;
-				opacity: 0.2;
-				left: 10px;
-				margin: 0;
-				min-width: 99vw;
-				font-family: monospace;
-				font-size: 0.7rem;
-			}
+            .autotitle::before {
+                display: inline-block;
+                content: attr(data-title);
+                opacity: 0.2;
+                position: relative;
+                padding-right: 0.5rem;
+                margin-left: -1.5rem;
+                font-size: 0.8rem;
+                font-family: monospace;
+                z-index: 99;
+            }
 
-			@media print {
-				:root {
-					max-width: 88vw;
-					padding-top: 2rem;
-				}
-				.count-container,
-				.spell-bar,
-				#wordcount {
-					display: none !important;
-				}
-				.spell-content {
-					display: block;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<div id="editor"></div>
-		<div id="count-container">
-			<p>W: <span id="wordcount">0</span></p>
-		</div>
-		<script>
-			function spell() {
-				let exec = (command, value = null) => document.execCommand(command, false, value);
-				let ensureHTTP = (url) => (/^https?:\//.test(url) ? url : `http://${url}`);
-				let $ = (tag, props, children = [], elm = document.createElement(tag)) =>
-					children.map((child) => child && elm.appendChild(child)) && Object.assign(elm, props);
+            input#docname {
+                border: none;
+                border-bottom: 1px solid #ccc;
+                outline: none;
+                width: 9em;
+            }
 
-				let colorPicker = (_) => $('input', { type: 'color' });
-				let select = (options) =>
-					$(
-						'select',
-						{},
-						options.map((o) => $('option', { textContent: o })),
-					);
+            @media print {
+                :root {
+                    max-width: 88vw;
+                    padding-top: 2rem;
+                }
+                .count-container,
+                .spell-bar,
+                #count-container {
+                    display: none !important;
+                }
+                .spell-content {
+                    display: block;
+                }
+                #menutoggle {
+                    position: absolute;
+                }
+            }
+        </style>
+    </head>
+    <body style="overflow-y: hidden">
+        <button id="menutoggle" onclick="toggleMenu()">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+            >
+                <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+            </svg>
+        </button>
+        <div id="editor"></div>
+        <div
+            id="count-container"
+            onclick="if (this.style.opacity == 0) { this.style.opacity = 0.2; } else { this.style.opacity = 0; }"
+        >
+            <p>W: <span id="wordcount">0</span></p>
+            <p>C: <span id="charactercount">0</span></p>
+        </div>
+        <script>
+            function spell() {
+                let exec = (command, value = null) =>
+                    document.execCommand(command, false, value);
+                let ensureHTTP = (url) =>
+                    /^https?:\//.test(url) ? url : `http://${url}`;
+                let $ = (
+                    tag,
+                    props,
+                    children = [],
+                    elm = document.createElement(tag),
+                ) =>
+                    children.map((child) => child && elm.appendChild(child)) &&
+                    Object.assign(elm, props);
 
-				let buttons = {};
-				let queryState = (_) => {
-					for (let cmd in buttons) buttons[cmd].classList.toggle('selected', document.queryCommandState(cmd));
-				};
+                let colorPicker = (_) => $("input", { type: "color" });
+                let select = (options) =>
+                    $(
+                        "select",
+                        {},
+                        options.map((o) => $("option", { textContent: o })),
+                    );
 
-				let actions = [
-					[
-						['bold'],
-						['italic'],
-						['underline'],
-						['strikeThrough'],
-						// ['subscript'],
-						['superscript'],
-					],
-					[
-						['justifyLeft'],
-						['justifyCenter'],
-						// ['justifyRight'],
-						['justifyFull'],
-						['indent'],
-						['outdent'],
-					],
-					[
-						['fontName', select(['sans-serif', 'serif', , 'monospace'])],
-						// ['fontSize', select([...Array(33)].map((_, i) => 8 + i * 2))],
-						// ['forecolor', colorPicker()],
-						// ['hilitecolor', colorPicker()],
-					].map(([cmd, input]) => [cmd, 0, Object.assign(input, { onchange: (_) => exec(cmd, input.value) })]),
-					[
-						...[1, 2, 3].map((n) => ['heading' + n, `<h${n}>`]),
-						// ['paragraph', '<p>'],
-						// ['quote', '<blockquote>'],
-						// ['code', '<pre>'],
-					].map(([title, format]) => [title, (_) => exec('formatBlock', format)]),
-					[
-						['insertOrderedList'],
-						['insertUnorderedList'],
-						// ['insertHorizontalRule']
-					],
-					[
-						['removeFormat'],
-						// ['unlink']
-					],
-					[
-						['createLink', 'link', ensureHTTP],
-						// ['insertImage','image', ensureHTTP],
-						// ['insertHTML', 'video', url => `<video controls src="${ensureHTTP(url)}">`]
-					].map(([cmd, type, t]) => [type, (url) => (url = prompt(`Enter the ${type} URL`)) && exec(cmd, t(url))]),
-					// [
-					// 	['copy'],
-					// 	['cut'],
-					// 	['paste']
-					// ],
-					[['undo'], ['redo']],
-				];
+                let buttons = {};
+                let queryState = (_) => {
+                    for (let cmd in buttons)
+                        buttons[cmd].classList.toggle(
+                            "selected",
+                            document.queryCommandState(cmd),
+                        );
+                };
 
-				return $('div', { className: 'spell' }, [
-					$(
-						'div',
-						{ className: 'spell-bar' },
-						actions.map((bar) =>
-							$(
-								'div',
-								{ className: 'spell-zone' },
-								bar.map(
-									([cmd, onclick = (_) => exec(cmd), control]) =>
-										(buttons[cmd] = $(
-											'button',
-											{
-												className: 'spell-icon',
-												title: cmd.replace(/([^a-z])/g, ' $1').toLowerCase(),
-												onclick,
-											},
-											[$('i', { className: 'icon-' + cmd.toLowerCase() }), control],
-										)),
-								),
-							),
-						),
-					),
-					$('div', {
-						className: 'spell-content',
-						contentEditable: true,
-						onkeydown: (event) => event.which !== 9,
-						onkeyup: queryState,
-						onmouseup: queryState,
-						spellcheck: true,
-					}),
-				]);
-			}
-		</script>
-		<script>
-			document.getElementById('editor').appendChild(spell());
+                let actions = [
+                    [
+                        ["bold"],
+                        ["italic"],
+                        ["underline"],
+                        ["strikeThrough"],
+                        // ['subscript'],
+                        ["superscript"],
+                    ],
+                    [
+                        ["justifyLeft"],
+                        ["justifyCenter"],
+                        // ['justifyRight'],
+                        ["justifyFull"],
+                        ["indent"],
+                        ["outdent"],
+                    ],
+                    [
+                        [
+                            "fontName",
+                            select(["sans-serif", "serif", , "monospace"]),
+                        ],
+                        // ['fontSize', select([...Array(33)].map((_, i) => 8 + i * 2))],
+                        // ['forecolor', colorPicker()],
+                        // ['hilitecolor', colorPicker()],
+                    ].map(([cmd, input]) => [
+                        cmd,
+                        0,
+                        Object.assign(input, {
+                            onchange: (_) => exec(cmd, input.value),
+                        }),
+                    ]),
+                    [
+                        ...[1, 2].map((n) => ["heading" + n, `<h${n}>`]),
+                        // ['paragraph', '<p>'],
+                        // ['quote', '<blockquote>'],
+                        // ['code', '<pre>'],
+                    ].map(([title, format]) => [
+                        title,
+                        (_) => exec("formatBlock", format),
+                    ]),
+                    [
+                        ["insertOrderedList"],
+                        ["insertUnorderedList"],
+                        // ['insertHorizontalRule']
+                    ],
+                    [
+                        ["removeFormat"],
+                        // ['unlink']
+                    ],
+                    [
+                        ["createLink", "link", ensureHTTP],
+                        // ['insertImage','image', ensureHTTP],
+                        // ['insertHTML', 'video', url => `<video controls src="${ensureHTTP(url)}">`]
+                    ].map(([cmd, type, t]) => [
+                        type,
+                        (url) =>
+                            (url = prompt(`Enter the ${type} URL`)) &&
+                            exec(cmd, t(url)),
+                    ]),
+                    // [
+                    // 	['copy'],
+                    // 	['cut'],
+                    // 	['paste']
+                    // ],
+                    [["undo"], ["redo"]],
+                ];
 
-			function download() {
-				const content = document.getElementsByClassName('spell-content')[0].innerHTML;
-				const blob = new Blob([content], { type: 'text/html' });
-				const url = URL.createObjectURL(blob);
-				const a = document.createElement('a');
-				a.href = url;
-				a.download = 'doc.html';
-				document.body.appendChild(a);
-				a.click();
-				document.body.removeChild(a);
-				URL.revokeObjectURL(url);
-			}
+                return $("div", { className: "spell" }, [
+                    $(
+                        "div",
+                        { className: "spell-bar" },
+                        actions.map((bar) =>
+                            $(
+                                "div",
+                                { className: "spell-zone" },
+                                bar.map(
+                                    ([
+                                        cmd,
+                                        onclick = (_) => exec(cmd),
+                                        control,
+                                    ]) =>
+                                        (buttons[cmd] = $(
+                                            "button",
+                                            {
+                                                className: "spell-icon",
+                                                title: cmd
+                                                    .replace(/([^a-z])/g, " $1")
+                                                    .toLowerCase(),
+                                                onclick,
+                                            },
+                                            [
+                                                $("i", {
+                                                    className:
+                                                        "icon-" +
+                                                        cmd.toLowerCase(),
+                                                }),
+                                                control,
+                                            ],
+                                        )),
+                                ),
+                            ),
+                        ),
+                    ),
+                    $("div", {
+                        className: "spell-content",
+                        contentEditable: true,
+                        onkeydown: (event) => event.which !== 9,
+                        onkeyup: queryState,
+                        onmouseup: queryState,
+                        spellcheck: true,
+                    }),
+                ]);
+            }
+        </script>
+        <script>
+            document.getElementById("editor").appendChild(spell()); //initialising the editor
+            function saveDoc() {
+                localStorage.setItem(
+                    "doc",
+                    document.getElementsByClassName("spell-content")[0]
+                        .innerHTML,
+                );
+                console.log("storing");
+            }
+            function loadDoc() {
+                content = localStorage.getItem("doc");
+                if (content.length > 0) {
+                    document.getElementsByClassName(
+                        "spell-content",
+                    )[0].innerHTML = content;
+                }
+            }
+            function download() {
+                const content =
+                    document.getElementsByClassName("spell-content")[0]
+                        .innerHTML;
+                if (content.length > 1) {
+                    const blob = new Blob([content], { type: "text/html" });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = "doc.html";
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }
+            }
 
-			function wordCount(str) {
-				const words = str.trim().split(/\s+/);
-				return words[0] === '' ? 0 : words.length;
-			}
+            function wordCount(str) {
+                const words = str.trim().split(/\s+/);
+                return [
+                    words[0] === "" ? 0 : words.length,
+                    str.replace(" ", "").length,
+                ];
+            }
 
-			const downloadButton = `<button id="download" onclick="download('editor')">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-				  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-				  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-				</svg>
+            const downloadButton = `<button id="download" class="spell-icon" onclick="download('editor')"><i class="icon-download">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down-fill" viewBox="0 0 16 16">
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m-1 4v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 11.293V7.5a.5.5 0 0 1 1 0"/>
+</svg></i>
 			</button>`;
-			let zones = document.getElementsByClassName('spell-zone');
-			zones[zones.length - 1].insertAdjacentHTML('beforeend', downloadButton);
+            const docName = `<input id=docname value="Untitled">`;
+            let zones = document.getElementsByClassName("spell-zone");
+            zones[zones.length - 1].insertAdjacentHTML(
+                "beforeend",
+                downloadButton,
+            );
 
-			const spellContent = document.getElementsByClassName('spell-content')[0];
-			spellContent.appendChild(document.createElement('div'));
-			spellContent.addEventListener('input', () => {
-				const count = wordCount(spellContent.innerText);
-				document.getElementById('wordcount').innerText = count;
-			});
-		</script>
-		<script>
-			function revertLink(elem) {
-				var rightclick;
-				var e = window.event;
-				if (e.button == 2) {
-					e.preventDefault();
-					const text = elem.innerText;
-					const href = elem.getAttribute('href');
-					elem.outerHTML = `[${text}](${href})`;
-				}
-			}
+            zones[0].insertAdjacentHTML("afterbegin", docName);
 
-			function jumpToEnd(div) {
-				const range = document.createRange();
-				const selection = window.getSelection();
-				range.selectNodeContents(div);
-				range.collapse(false);
-				selection.removeAllRanges();
-				selection.addRange(range);
-			}
-			function mdLiveFormatting(eventKey) {
-				console.log('firing formatting');
-				const boldRegex = /\*([^\s].*?[^\s])\*/g;
-				const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-				const childDivs = spellContent.querySelectorAll('.spell-content > div');
-				childDivs.forEach((div) => {
-					if (boldRegex.test(div.innerHTML)) {
-						div.innerHTML = div.innerHTML.replace(boldRegex, '<strong>$1</strong>');
-						jumpToEnd(div);
-					}
+            const spellContent =
+                document.getElementsByClassName("spell-content")[0];
+            // spellContent.setAttribute('contenteditable', 'false')
+            // spellContent.appendChild(document.createElement('div'));
+            let timeoutId;
+            spellContent.addEventListener("input", () => {
+                const count = wordCount(spellContent.innerText);
+                document.getElementById("wordcount").innerText = count[0];
+                document.getElementById("charactercount").innerText = count[1];
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    saveDoc();
+                }, 300);
+            });
 
-					if (linkRegex.test(div.innerHTML)) {
-						div.innerHTML = div.innerHTML.replace(linkRegex, '<a oncontextmenu="revertLink(this)" title="$2" href="$2">$1</a>');
-						jumpToEnd(div);
-					}
+            function revertLink(elem) {
+                var rightclick;
+                var e = window.event;
+                if (e.button == 2) {
+                    e.preventDefault();
+                    const text = elem.innerText;
+                    const href = elem.getAttribute("href");
+                    elem.outerHTML = `[${text}](${href})`;
+                }
+            }
 
-					if (div.innerText[0] == '#') {
-						count = div.innerText.split('#').length - 1;
-						div.innerHTML = `<h${count}>` + div.innerHTML.replaceAll('#', '') + `</h${count}>`;
-						jumpToEnd(div);
-					}
-					if (div.innerText.startsWith('-') && eventKey === ' ') {
-						console.log('firing list');
-						div.innerHTML = `<ul><li>` + div.innerText.slice(2) + `</li></ul>`;
-						jumpToEnd(div);
-					}
-					if (div.innerText.startsWith('1.') && eventKey === ' ') {
-						console.log('firing list');
-						div.innerHTML = `<ol><li>` + div.innerText.slice(2) + `</li></ol>`;
-						jumpToEnd(div);
-					}
-					if (div.innerText === '---' && eventKey === 'Enter') {
-						console.log('firing hr');
-						div.innerHTML = `<hr>`;
-						// jumpToEnd(div);
-					}
-				});
-			}
-			spellContent.addEventListener('keypress', (event) => {
-				if (event.key === 'Enter' || event.key === ' ') {
-					setTimeout(() => {
-						mdLiveFormatting(event.key);
-					}, 100);
-				}
-			});
-		</script>
-	</body>
+            function jumpToEnd(div) {
+                const range = document.createRange();
+                const selection = window.getSelection();
+                range.selectNodeContents(div);
+                range.collapse(false);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+            function mdLiveFormatting(eventKey) {
+                console.log("firing formatting");
+                const boldRegex = /\*([^\s].*?[^\s])\*/g;
+                const italicRegex = /\_([^\s].*?[^\s])\_/g;
+                const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+                var childDivs = spellContent.querySelectorAll(
+                    ".spell-content > div",
+                );
+                if (childDivs.length == 0) {
+                    //accouting for blank editor (I feel very clever for this)
+                    childDivs = [spellContent];
+                }
+                childDivs.forEach((div) => {
+                    if (boldRegex.test(div.innerHTML)) {
+                        div.innerHTML = div.innerHTML.replace(
+                            boldRegex,
+                            "<b>$1</b>",
+                        );
+                        jumpToEnd(div);
+                    }
+
+                    if (italicRegex.test(div.innerHTML)) {
+                        div.innerHTML = div.innerHTML.replace(
+                            italicRegex,
+                            "<i>$1</i>",
+                        );
+                        jumpToEnd(div);
+                    }
+
+                    if (linkRegex.test(div.innerHTML)) {
+                        div.innerHTML = div.innerHTML.replace(
+                            linkRegex,
+                            '<a oncontextmenu="revertLink(this)" title="$2" href="$2">$1</a>',
+                        );
+                        jumpToEnd(div);
+                    }
+
+                    if (div.innerText[0] == "#") {
+                        count = div.innerText.split("#").length - 1;
+                        console.log(div.innerHTML);
+                        div.innerHTML =
+                            `<h${count} class="autotitle"data-title="H${count}">` +
+                            div.innerHTML.replaceAll("#", "") +
+                            `</h${count}>`;
+                        jumpToEnd(div);
+                    }
+                    if (div.innerText.startsWith("-") && eventKey === " ") {
+                        console.log("firing list");
+                        div.innerHTML =
+                            `<ul><li>` + div.innerText.slice(2) + `</li></ul>`;
+                        jumpToEnd(div);
+                    }
+                    if (div.innerText.startsWith("1.") && eventKey === " ") {
+                        console.log("firing list");
+                        div.innerHTML =
+                            `<ol><li>` + div.innerText.slice(2) + `</li></ol>`;
+                        jumpToEnd(div);
+                    }
+                    if (div.innerText === "---" && eventKey === "Enter") {
+                        console.log("firing hr");
+                        div.innerHTML = `<hr>`;
+                        // jumpToEnd(div);
+                    }
+                });
+            }
+            spellContent.addEventListener("keypress", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    setTimeout(() => {
+                        mdLiveFormatting(event.key);
+                    }, 100);
+                }
+            });
+            // document.addEventListener('keydown', (event) => {
+            // // console.log('div count is ' + spellContent.querySelectorAll('.spell-content > div').length + ' innerText length is ' +spellContent.innerText.trim().length)
+            // if ((event.key === 'Backspace' || event.key === 'Delete') && (spellContent.textContent.trim() == '') && (spellContent.querySelectorAll('.spell-content > div').length < 2)) {
+            //     console.log('blocking backspace, div count is ' + spellContent.querySelectorAll('.spell-content > div').length)
+            // 	event.preventDefault();
+            // }
+            // })
+            document.addEventListener("keydown", (event) => {
+                if ((event.ctrlKey || event.metaKey) && event.key === "s") {
+                    event.preventDefault();
+                    document.getElementById("download").click();
+                }
+            });
+            loadDoc();
+        </script>
+    </body>
 </html>

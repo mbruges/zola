@@ -1,6 +1,6 @@
 ---
 title: The Open Library
-description: "A curated repository of classic texts to download freely to Kindle and other eReaders. Possible thanks to [Project Gutenberg](https://www.gutenberg.org/donate/) and [BoolBrowser](https://github.com/pgaskin/BookBrowser)"
+description: "A curated repository of classic texts to download freely to Kindle and other eReaders. Possible thanks to [Project Gutenberg](https://www.gutenberg.org/donate/) and [BookBrowser](https://github.com/pgaskin/BookBrowser)"
 date: 2022-06-10
 extra:
   icon: 📚

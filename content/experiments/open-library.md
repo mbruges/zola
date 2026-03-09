@@ -1,16 +1,16 @@
 ---
 title: The Open Library
-description: "A curated repository of classic texts to download freely to Kindle and other eReaders. Possible thanks to [Project Gutenberg](https://www.gutenberg.org/donate/)"
+description: "A curated repository of classic texts to download freely to Kindle and other eReaders. Possible thanks to [Project Gutenberg](https://www.gutenberg.org/donate/) and [BoolBrowser](https://github.com/pgaskin/BookBrowser)"
 date: 2022-06-10
 extra:
   icon: 📚
   center: true
   buttontext: Browse the collection ↗
-  link: https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link
+  link: https://books.brug.es/
 ---
 
 
-[Browse the collection ↗](https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link)
+[Browse the collection ↗](https://books.brug.es/)
 
 
-  <meta http-equiv="refresh" content="0; URL='https://drive.google.com/drive/folders/1aUTVde-LrUne3zvphTw6h1rTnVcXr0cj?usp=share_link'" />
+  <meta http-equiv="refresh" content="0; URL='https://books.brug.es/'" />

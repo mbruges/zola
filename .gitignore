@@ -6,3 +6,5 @@ temp.*
 *.DS_Store
 .vscode
 cspell.json
+DS_Store
+.DS_Store*

@@ -15,6 +15,8 @@ Way back in the dark times of Covid, I set up a [little digital library](https:/
 
 Now, with the [return to distance learning](https://gulfnews.com/uae/education/dubais-khda-issues-distance-learning-guidelines-asks-schools-to-review-system-in-two-weeks-1.500494168), it seemed as good a time as any to build a more tailored solution.
 
+![aside](/images/books-bruges.webp)
+
 Say hello to *[books.brug.es](https://books.brug.es/)*.
 
 ## New and improved
@@ -30,8 +32,6 @@ There are [lots](https://github.com/herraristotle/BookLore) [of](https://github.
 ## Checking out, tidying up
 
 [BookBrowser](https://github.com/pgaskin/BookBrowser) is, sadly, abandoned, but by all my metrics it's feature complete. Even better, it runs as a single Go binary, watching a flat directory of `.epub` files and serving up a super-simple library page, as well as a perfectly adequate in-browser eReader. 
-
-![aside](/images/books-bruges.webp)
 
 I forked it, splashed some _Mr. Bruges_ branding, then tweaked a few options to streamline the experience. The end result is the Platonic ideal of the Digital Library.
 

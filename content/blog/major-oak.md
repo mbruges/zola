@@ -10,7 +10,7 @@ extra:
 
 ![HERO The Major Oak, photographed in 1890](/images/oak-mono.webp)
 
-The [death of the Major Oak](https://www.theguardian.com/environment/2026/jun/18/most-famous-tree-world-sherwood-forest-ancient-major-oak-dies) is a sad moment (and perhaps a little on the nose as national metaphors go). However, I come not to praise the oak, but to ~bury~ weigh him: **how much carbon is sequestered in that quercious mass?** 
+The [death of the Major Oak](https://www.theguardian.com/environment/2026/jun/18/most-famous-tree-world-sherwood-forest-ancient-major-oak-dies) is a sad moment (and perhaps a little on the nose as national metaphors go). However, I come not to praise the oak, but to ~~bury~~ weigh him: **how much carbon is sequestered in that quercious mass?** 
 
 ## Weighing in
 

@@ -3,7 +3,7 @@ authors: ["Max Bruges"]
 title: Weighing the Major
 description: Measuring carbon in a national treasure, one breath at a time
 date: 2026-06-18
-draft: true
+draft: false
 extra:
   icon: 🌳
 ---
@@ -53,9 +53,11 @@ Going back to the Ecometrica paper, they estimate about 50% of a tree's mass is 
 
 What's that in real terms? 
 
-My wheezing Jag puts out about 200g of CO₂ per mile; I'd be able to drive it sixty-five round trips from Dubai to the old Major himself before exhausting that carbon stock.
+My wheezing Jag puts out about 200g of CO₂ per mile; I'd be able to drive it sixty-five round-trips from Dubai to the old Major himself before exhausting that carbon stock.
 
-Or instead: imagine you had been there to see the acorn sprout. Imagine you had sat beneath the oak boughs for every season of its millennium of life. Infinitesimally you would watch it breath in, drawing carbon from the air and into its mass, growing millimetre by millimetre. And you breathing out all that time: 360kg of CO₂ a year, from your lungs to the leaves above. 
+Or instead: imagine you had been there to see the Major's acorn sprout. Imagine you had sat beneath the boughs for every season of its millennium of life. 
+
+Infinitesimally you would watch it breathe in, drawing carbon from the air and into its mass, growing millimetre by millimetre. And you breathing out all that time: 360kg of CO₂ a year, from your lungs to the leaves above. 
 
 A thousand years; 360 tonnes out, 180 tonnes in.
 

@@ -68,7 +68,7 @@ else
 fi
 
 if [[ "$PWD" == *"/zola"* ]]; then
-    mv $new_filename ~/zola/static/images/
+    mv $new_filename ~/code/zola/static/images/
     echo "Saved to /images/$new_filename    Size: $((new_size / 1024))KB, reduced by $(((old_size - new_size) / 1024))KB"
 else
     echo "Saved to $new_filename    Size: $((new_size / 1024))KB, reduced by $(((old_size - new_size) / 1024))KB"

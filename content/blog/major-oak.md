@@ -1,7 +1,7 @@
 ---
 authors: ["Max Bruges"]
 title: Weighing the Major
-description: Measuring carbon in a national treasure, one breath at a time
+description: Measuring the carbon in a national treasure, one breath at a time
 date: 2026-06-18
 draft: false
 extra:
